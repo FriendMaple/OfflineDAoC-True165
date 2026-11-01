@@ -381,7 +381,7 @@ out everything in the never-ships list below. The new client is packaged separat
 - the server binaries (`runtime/server` and `lib/`);
 - the configs, with `AutoAccountCreation` set to **True** in `serverconfig-165.xml`;
 - the full `navmesh` and `navmesh-165`;
-- the content files (`classic-quests.json`, `classic-quest-guides.json`, `classic-otd.json`, `bot-ai-delay.json`);
+- the content files (`classic-quests.json`, `classic-quest-guides.json`, `classic-otd.json`);
 - `runtime/true165`;
 - the clean world from `database/make_clean_db.py`;
 - the new client (`new-client/`, with no `save/` folder and no `dev_mode.txt`);
