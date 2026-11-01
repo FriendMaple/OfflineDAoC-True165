@@ -74,7 +74,7 @@ func _ready() -> void:
 		loc = {"zone": zone_id, "pos": [ep.x, ep.y, ep.z], "face": float(Server.entry.face)}
 		travel = {}
 		if zone_id < 0 or not FileAccess.file_exists("res://content/zones/zone%03d/zone.json" % zone_id):
-			Server.last_error = "That place (region %d, zone %d) is not built in this client yet." % [int(Server.entry.region), zone_id]
+			Server.last_error = "That place (region %d, zone %d) is not in this client." % [int(Server.entry.region), zone_id]
 			push_error("[server] " + Server.last_error)
 			get_tree().change_scene_to_file.call_deferred(Pregame164.scene())
 			return
@@ -545,7 +545,7 @@ func _check_border() -> bool:
 		if not FileAccess.file_exists("res://content/zones/zone%03d/zone.json" % int(k)):
 			if _border_warned != str(k):
 				_border_warned = str(k)
-				PlayerData.message.emit("The way to %s is not built yet." % String(z.name), "system")
+				PlayerData.message.emit("The way to %s is not available." % String(z.name), "system")
 			break
 		travel = {"zone": int(k), "pos": [(gx - x0) * 0.025, p.y, (gy - y0) * 0.025],
 				"face": fposmod(-rad_to_deg(player.facing()), 360.0)}
@@ -692,7 +692,7 @@ func _check_exits() -> bool:
 	if not FileAccess.file_exists("res://content/zones/zone%03d/zone.json" % to) and not args.has("exit_test"):
 		if _exit_warned != String(inside.name):
 			_exit_warned = String(inside.name)
-			PlayerData.message.emit("The way to zone %d is not built yet." % to, "system")
+			PlayerData.message.emit("The way to zone %d is not available." % to, "system")
 		return false
 	if args.has("exit_test"):                            # tests/exit_probe.gd: report the jump, stay in the zone
 		print("[exit] fired ", inside.name, " -> zone ", to)
