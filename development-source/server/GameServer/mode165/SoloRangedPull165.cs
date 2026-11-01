@@ -38,6 +38,7 @@ namespace DOL.GS
             public float RangeScale = 1f;    // shrinks after a shot the server called out of range or not visible
             public bool Reposition;          // set by a failed shot: find a closer spot before trying again
             public string LastFailure = "";
+            public bool PutAwayPending;      // the shot is made: stop and take the melee weapon on the next turn
         }
 
         public const int MaximumReplans = 4;
@@ -102,6 +103,7 @@ namespace DOL.GS
             s.RangeScale = 1f;
             s.Reposition = false;
             s.LastFailure = "";
+            s.PutAwayPending = false;
             bot.WakeRecoveryRest();
             bot.StopAttack();
             bot.StopFollowing();
@@ -225,6 +227,13 @@ namespace DOL.GS
                     return true;
                 }
             }
+            if (s.PutAwayPending && now - s.ShotTick >= 300)
+            {
+                s.PutAwayPending = false;
+                bot.StopAttack();
+                if (s.UsedBow)
+                    bot.SwitchWeapon(MeleeSlot(bot, s.PreviousWeapon));
+            }
             // Shot, but the monster took no notice (nothing aggroed it): pull it the ordinary way instead of waiting.
             if (now - s.ShotTick >= 3000 && !target.InCombat && (target as GameNPC)?.TargetObject != bot)
             {
@@ -283,13 +292,14 @@ namespace DOL.GS
             Finish(bot, s, attacker == s.Target, attacker == s.Target ? "target attacked" : "another attacker");
         }
 
+        /// <summary>Records the shot. The attack is still being made when this runs (the attacker is told before the monster
+        /// is), so stopping it or putting the bow away here cancelled the shot before the monster ever heard of it
+        /// (2026-11-01 runs: hundreds of "shots" the monster never noticed). That happens on the bot's next turn.</summary>
         private static void MarkShot(GameBot bot, State s)
         {
             s.Shot = true;
             s.ShotTick = GameLoop.GameLoopTime;
-            bot.StopAttack();
-            if (s.UsedBow)
-                bot.SwitchWeapon(MeleeSlot(bot, s.PreviousWeapon));
+            s.PutAwayPending = true;
         }
 
         private static eActiveWeaponSlot MeleeSlot(GameBot bot, eActiveWeaponSlot previous)
@@ -319,7 +329,7 @@ namespace DOL.GS
                 brain.FSM.SetCurrentState(eFSMStateType.AGGRO);
             }
             Log.Info($"SOLO_RANGED_PULL_165 end bot={bot.Name} id={bot.DatabaseID} target=\"{target?.Name}\" shot={s.Shot} " +
-                     $"engage={engage} why=\"{why}\" distance={(target == null ? -1 : (int)bot.GetDistanceTo(target))} " +
+                     $"engage={engage} why=\"{why}\" last_failure=\"{s.LastFailure}\" replans={s.Replans} distance={(target == null ? -1 : (int)bot.GetDistanceTo(target))} " +
                      $"target_on_bot={(target as GameNPC)?.TargetObject == bot} target_in_combat={target?.InCombat == true} " +
                      $"target_moving={(target as GameNPC)?.IsMoving == true} bot_range={bot.attackComponent.AttackRange}");
             s.Target = null;
