@@ -9,6 +9,9 @@ hold). Its changelog has the history of everything this version inherits.
 
 - Companions: a companion whose bow is taken away in the middle of a pull switches back to its melee weapons.
 - Travel: a zone or route the client does not have now says it is not in this client or not available.
+- Controls: Mouse Look Toggle is back, as in the original client: right-click on open ground to turn mouse look on (the
+  mouse turns you with no button held), and right-click again or press Esc to turn it off. Right-clicking NPCs and
+  objects still works as before, and you can rebind it in Options > Controls.
 
 ## 0.1 (2026-11-01)
 
