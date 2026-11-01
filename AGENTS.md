@@ -20,7 +20,7 @@ The only additions to the period game are the bot and companion systems and the 
   (server) and `Server.world_mode` (client). Nothing new goes into them.
 - **One client.** The new client is the only one. The original DAoC client is not supported, and there is no DXVK.
 - **A fresh start.** Nothing transfers from Offline DAoC, and there is no progress importer.
-- **Version:** v0.1 (released 2026-11-01), early development. The launcher's version is `MainForm.DisplayVersion`, and
+- **Version:** v0.1 (released 2026-11-01). The launcher's version is `MainForm.DisplayVersion`, and
   the client's window title is `LoginScreen.GAME_TITLE` in `godot/game/login_screen.gd`.
 
 ## Layout
@@ -117,8 +117,8 @@ These are the project's rules. Follow them unless the person you work for asks o
     - In the client, check every edited script with `load_check.gd` before opening a window.
 12. **Navigation:** don't rebuild or replace navmeshes globally to fix one route without evidence.
 13. **Be honest in reports.** Report automated tests separately from in-game checks.
-14. **Keep the credits and licenses.** See [THIRD_PARTY.md](THIRD_PARTY.md), and credit fork fixes in the
-    [CHANGELOG](CHANGELOG.md).
+14. **Keep the credits and licenses.** See [THIRD_PARTY.md](THIRD_PARTY.md), and credit fork fixes under its
+    "Fork credits".
 15. **Code style:** CRLF line endings and 4-space indents in the server's C# (`.editorconfig`). Keep a file's
     existing line endings.
 

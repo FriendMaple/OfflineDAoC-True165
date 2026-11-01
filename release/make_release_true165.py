@@ -17,8 +17,7 @@ What a player ends up with comes from three places, and none of them is written 
     download-manifest.json                              the parts, their sizes and SHA-256, for the downloader
     SHA256SUMS.txt                                      every asset's SHA-256
 and <assets folder>\\baseline-<version>.sha256 is the SHA-256 of every installed file. Commit it to the repository as
-release-baselines/<version>/package.sha256: later versions are patches built against it, and the patcher checks a
-player's files against it before changing anything.
+release-baselines/<version>/package.sha256, so an install can be checked against it.
 
 Every part is a verified zip under GitHub's 2 GB limit. The downloader unpacks and deletes one part before the next, so
 an install never needs much more than the game's own size on disk. The package is checked first: no account, login,
@@ -35,7 +34,7 @@ from pathlib import Path
 
 PART_BUDGET = 1_900_000_000          # bytes of files per part (GitHub's limit is 2 GiB per asset)
 # The player docs every install gets, from the repository, at the same paths in the game folder.
-PLAYER_DOCS = ["READ ME FIRST.txt", "QUICK COMMANDS.txt", "ALL SERVER COMMANDS.txt", "CHANGELOG.md", "LICENSE",
+PLAYER_DOCS = ["READ ME FIRST.txt", "QUICK COMMANDS.txt", "ALL SERVER COMMANDS.txt", "LICENSE",
                "THIRD_PARTY.md", "docs/PLAY.md", "docs/NEW-CLIENT.md"]
 # Already-compressed formats are stored, not deflated again.
 STORED = {".png", ".jpg", ".jpeg", ".ogg", ".mp3", ".zip", ".7z", ".webp", ".ctex", ".scn", ".res", ".pck"}

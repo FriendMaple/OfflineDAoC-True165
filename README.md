@@ -17,7 +17,7 @@
 > **This is an AI-made project.** All of its code was written by AI tools (Codex, then Claude). The project owner
 > has no game development or coding experience: they directed the work and play-tested it. Expect bugs.
 >
-> **v0.1 is out, and it's an early version.** Large parts of the game haven't been played through by a person yet.
+> **v0.1 is out.** Large parts of the game haven't been played through by a person.
 > Expect bugs, and keep a backup of your save. Bug reports are welcome in [Issues](https://github.com/shadowofze/OfflineDAoC-True165/issues).
 
 # Offline DAoC True 1.65: single-player Dark Age of Camelot as of patch 1.65
@@ -177,11 +177,18 @@ is the result: the world database and the content files built from it.
 - **Forking:** you don't need permission to fork this repository and make it your own. Keep the existing
   licenses and credits ([THIRD_PARTY.md](THIRD_PARTY.md)).
 
+## Known issues in v0.1
+
+- Low-level gamebots (levels 6-9) die a lot: they start with no armour and have to buy it.
+- Gear wears at the player rate, so bots rarely need repairs early on. This is expected.
+- About 2,100 monster names drop only coin, mostly in the Shrouded Isles, where no period source recorded their loot.
+- About 133 low-confidence period merchant goods are left out, and the Darkness Falls seal stock still includes later
+  items beside the period ones.
+- Support bots don't leave combat while only their pet fights.
+- The login panel is the older one, not the period 1.64 one.
+
 ## License
 
 The server is licensed under the [GNU General Public License v3](LICENSE), like the OpenDAoC and Dawn of Light
 code it is based on. Other parts keep their own licenses; see [THIRD_PARTY.md](THIRD_PARTY.md).
 
-## Changes
-
-See the [changelog](CHANGELOG.md).

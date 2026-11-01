@@ -29,9 +29,3 @@ release page (see [docs/PLAY.md](../docs/PLAY.md)).
    in `<assets>/v<version>/`. Check every uploaded file's SHA-256 against `SHA256SUMS.txt`. Then run the downloader
    against the live release.
 6. **Baseline:** commit `<assets>/baseline-<version>.sha256` as `release-baselines/<version>/package.sha256`.
-
-## Later versions
-
-From v0.1 on, a new version is a patch against the v0.1 baseline instead of another 40 GB download, as long as a
-player's files are unchanged. World content changes ship as `runtime/true165` JSON, which the launcher applies at
-the next START SERVER while keeping every save. The patch tool isn't built yet.
