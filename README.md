@@ -23,9 +23,36 @@ Offline DAoC True 1.65 is a local, single-player Dark Age of Camelot that runs e
 recreates the game as it was at **patch 1.65** (Classic and Shrouded Isles, November 2003), and fills the world
 with gamebots that level, group, trade, craft and fight on their own.
 
-It grew out of [Offline DAoC](https://github.com/shadowofze/OfflineDAoC), which is now on hold. Both are built
-on the open-source [OpenDAoC](https://github.com/OpenDAoC/OpenDAoC-Core) server. The customizations were
-developed with AI tools (Codex, then Claude) and directed and play-tested by the project owner.
+It grew out of [Offline DAoC](https://github.com/shadowofze/OfflineDAoC), which is now on hold. The customizations
+were developed with AI tools (Codex, then Claude) and directed and play-tested by the project owner.
+
+## Built on OpenDAoC and Dawn of Light
+
+The server is a modified [OpenDAoC](https://github.com/OpenDAoC/OpenDAoC-Core), which itself grew from
+[Dawn of Light](https://github.com/Dawn-of-Light/DOLSharp) (DOL), the long-running open-source DAoC server emulator.
+Their combat, spell, item, quest and world systems are the foundation everything here is built on, and their GPL
+license and credits carry over to this project. True 1.65 adds the bot systems, the hired companions and the 1.65
+rules on top, and replaces content that freeshards added later with period data.
+
+## Built from period data
+
+The 1.65 world is rebuilt from **about 85,000 pages of period data**, collected from the public sources players
+used at the time:
+
+| Source | Pages | What it gave |
+|---|---|---|
+| Uthgard bestiary (a 1.65 recreation) | about 25,000 | monsters, items and measured drop rates from players' kill logs |
+| Allakhazam, the current site | about 24,700 | monsters, items, quests and zones, with player comments |
+| Allakhazam as it read in 2001-2004 (Wayback Machine) | about 17,000 | period item stats, monster loot, merchant stock and quest walkthroughs |
+| Camelot Warcry (Wayback Machine, 2001-2004) | about 11,600 | quest spoilers, items and news |
+| CapnBry's DAoC radar | about 6,000 | monster positions and levels from 176,970 live-server sightings |
+
+The patch 1.64 client's own data files supplied the recipe list, the class and race tables and the pre-game
+screens.
+
+Period sources come first: an item, drop or spawn stays only when the period data supports it, and nothing is
+invented unless no source exists. **The period data itself is not in this repository at this time.** What's here
+is the result: the world database and the content files built from it.
 
 ## How it differs from Offline DAoC
 
