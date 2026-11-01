@@ -29,6 +29,8 @@ most of the systems below have been tested in autonomous bot runs, but not yet b
   - Atlas event controllers, "new mob" placeholders and helper NPCs;
   - the random "ROG" item drops;
   - the Atlas daily, weekly and monthly quests (deleted from the source).
+- **Battlegrounds** as in the period game: Abermenai (15-19), Thidranki (20-24), Murdaigean (25-29) and Caledonia
+  (30-35). Cathal Valley, a post-1.65 battleground, is removed.
 - **Regions off:** the tutorial, Cathal Valley, the duplicate Summoner's Hall, the New Frontiers battlegrounds,
   Passage of Conflict and every Trials of Atlantis region.
 - **Period drops:**
@@ -42,6 +44,9 @@ most of the systems below have been tested in autonomous bot runs, but not yet b
   143 of the 227 values come from period pages; the other 84 are estimated from them. The freeshard turn-ins with no
   period source are removed: the level 11-19 "Dr" turn-ins, a stand-in for the Ghoul Hair Belt quest, a duplicate
   Giant Snow Crab Claw task, and the 10 items only they used.
+- **Kill-task items drop again:** 140 kill tasks with dated period evidence have their item back on the monster that
+  dropped it, at Uthgard's measured rate where known, otherwise 6% (the median Uthgard kill-task rate). 181 of the
+  227 kill tasks can be completed.
 - **Coin as in 1.65:** a monster carries coin or it doesn't. The chance comes from Uthgard's measured kills, and the
   amounts are unchanged.
 - **Item stats:** about 7,200 corrected to the period item pages. Invented quest rewards were replaced by the real
