@@ -27,7 +27,8 @@ most of the systems below have been tested in autonomous bot runs, but not yet b
   - Atlas master trainers, item merchants, the buff merchant, the Market Explorer, account vault keepers and
     training dummies;
   - Atlas event controllers, "new mob" placeholders and helper NPCs;
-  - the random "ROG" item drops.
+  - the random "ROG" item drops;
+  - the Atlas daily, weekly and monthly quests (deleted from the source).
 - **Regions off:** the tutorial, Cathal Valley, the duplicate Summoner's Hall, the New Frontiers battlegrounds,
   Passage of Conflict and every Trials of Atlantis region.
 - **Period drops:**
