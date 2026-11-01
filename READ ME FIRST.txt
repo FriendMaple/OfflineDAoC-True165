@@ -6,8 +6,9 @@ account, characters or bots. There's nothing to install: .NET is included in
 tools\dotnet, and no original DAoC client is needed.
 
 WHAT YOU NEED
-A 64-bit Windows 10 or 11 PC with a graphics card that supports Vulkan
-(current drivers). 16 GB RAM recommended.
+A 64-bit Windows 10 or 11 PC whose CPU supports AVX2 (the bots' navigation
+needs it; most CPUs from 2014 onward do), a graphics card that supports
+Vulkan (current drivers), and 16 GB RAM recommended.
 
 PLAY
 1. Keep this whole folder together. Don't run files from inside a ZIP.

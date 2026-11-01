@@ -5,7 +5,8 @@
 
 ## Before you start
 
-- A 64-bit Windows 10 or 11 PC.
+- A 64-bit Windows 10 or 11 PC whose CPU supports **AVX2**. The bots' navigation needs it. Most CPUs from 2014
+  onward do.
 - A graphics card that supports **Vulkan**, with current drivers. The game is developed and tested on an RTX 2060
   (6 GB).
 - 16 GB RAM recommended.

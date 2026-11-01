@@ -116,8 +116,9 @@ is the result: the world database and the content files built from it.
 There is no release yet. When v0.1 comes out, its release page here will have a downloader and step-by-step
 instructions. **Code > Download ZIP** on this page gives you the *source code*, not the playable game.
 
-What the new client needs:
-- A 64-bit Windows 10 or 11 PC.
+What you need:
+- A 64-bit Windows 10 or 11 PC whose CPU supports **AVX2** (the bots' navigation needs it). Most CPUs from 2014
+  onward do.
 - A graphics card that supports Vulkan, with current drivers. It's developed and tested on an RTX 2060 (6 GB).
 - 16 GB RAM recommended.
 - About 40 GB of free disk space for the game content and the engine. The exact figure comes with the release.
