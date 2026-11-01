@@ -245,6 +245,8 @@ namespace DOL.GS
                 Finish(bot, s, true, "not noticed");
                 return false;
             }
+            // Keep the monster's AI awake while it comes (it wakes for players it can see, for bots only near it).
+            (target as GameNPC)?.OnAutonomousBotNearby();
             // Shot: stand with the melee weapon out and let it come.
             if (bot.IsMoving)
             {

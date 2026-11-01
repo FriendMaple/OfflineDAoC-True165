@@ -3307,6 +3307,12 @@ namespace DOL.GS
 		{
 			Flags &= ~eFlags.STEALTH;
 
+			// A monster attacked by a gamebot wakes like one a player can see: from range the bot is outside the monster's
+			// aggro radius, the only other thing that woke it, so it took the aggro and never acted on it (2026-11-01 run:
+			// bow and spell pulls "never came").
+			if (ad?.Attacker is GameBot { IsAutonomousWorldBot: true } && this is not GameBot)
+				OnAutonomousBotNearby();
+
 			if (this is not GameBot && Brain is ControlledMobBrain)
 				BotBrain.NotifyNearbyGroupBots(this, ad);
 
