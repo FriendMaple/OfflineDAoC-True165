@@ -1,5 +1,5 @@
 {
- "source": "True 1.65 drops pass 2 (2026-10-31): Uthgard measured drops (realm-matched) + period Allakhazam Known Loot and item pages; estimates marked in fix/drops/REPORT.md + coin-only sweep (period comments/variants, 2026-10-31) + Uthgard-built items for coin-only monsters",
+ "source": "True 1.65 drops pass 2 (2026-10-31): Uthgard measured drops (realm-matched) + period Allakhazam Known Loot and item pages; estimates marked in fix/drops/REPORT.md + coin-only sweep (period comments/variants, 2026-10-31) + Uthgard-built items for coin-only monsters + period kill-task items restored to the monsters that dropped them (owner 2026-11-01; killtask_drops_restored.json)",
  "min_kills": 20,
  "monsters": {
   "abominable snowman": {
@@ -870,11 +870,15 @@
    ]
   },
   "apple fly": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Apple_Fly_Wings",
      20
+    ],
+    [
+     "mottled_apple_fly_wings",
+     6
     ]
    ]
   },
@@ -2326,7 +2330,7 @@
    ]
   },
   "ashmonger": {
-   "drop_count": 2,
+   "drop_count": 4,
    "items": [
     [
      "p165_drop_7005",
@@ -2386,6 +2390,10 @@
     ],
     [
      "Prickly_Horsehair_Tunic",
+     1
+    ],
+    [
+     "polished_piece_of_obsidian",
      1
     ]
    ]
@@ -2856,11 +2864,15 @@
    ]
   },
   "bananach": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "p165_drop_6982",
      4
+    ],
+    [
+     "spirit_catcher_stone",
+     8
     ]
    ]
   },
@@ -3507,7 +3519,7 @@
    ]
   },
   "bean sidhe": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Yellow_Tourmaline",
@@ -3520,6 +3532,10 @@
     [
      "p165_drop_7008",
      1
+    ],
+    [
+     "medicinal_herb",
+     6
     ]
    ]
   },
@@ -4439,7 +4455,7 @@
    ]
   },
   "boggart": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "p165_drop_6974",
@@ -4460,6 +4476,10 @@
     [
      "Chrysoberyl",
      1
+    ],
+    [
+     "sleeping_kitten",
+     14
     ]
    ]
   },
@@ -6769,7 +6789,7 @@
    ]
   },
   "centurio pilus posterior": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "p165_drop_6988",
@@ -6794,6 +6814,10 @@
     [
      "p165_drop_7001",
      1
+    ],
+    [
+     "gem_of_the_despoiled",
+     9
     ]
    ]
   },
@@ -7012,7 +7036,7 @@
    ]
   },
   "clay jotun": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Luminous_Runed_Clay_War-shield",
@@ -7036,6 +7060,10 @@
     ],
     [
      "Runed_Clay_Battle-shield",
+     1
+    ],
+    [
+     "magic_clay",
      1
     ]
    ]
@@ -8511,7 +8539,7 @@
    ]
   },
   "creeping ooze": {
-   "drop_count": 2,
+   "drop_count": 4,
    "items": [
     [
      "Luminous_Keen_Asterite_Lochaber_Axe",
@@ -8560,6 +8588,10 @@
     [
      "magic5230",
      1
+    ],
+    [
+     "jeweled_polished_skull",
+     6
     ]
    ]
   },
@@ -8591,7 +8623,7 @@
    ]
   },
   "cruach imp": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "p165_drop_7001",
@@ -8612,6 +8644,10 @@
     [
      "p165_drop_6991",
      1
+    ],
+    [
+     "red_cruach_wings",
+     8
     ]
    ]
   },
@@ -9098,7 +9134,7 @@
    ]
   },
   "cursed mora": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "p165_drop_7005",
@@ -9134,6 +9170,10 @@
     ],
     [
      "Woeful_Chain_Leggings",
+     1
+    ],
+    [
+     "scroll_of_eternal_sorrow",
      1
     ]
    ]
@@ -10372,7 +10412,7 @@
    ]
   },
   "deamhan aeir": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "p165_drop_6989",
@@ -10445,6 +10485,10 @@
     [
      "p165_drop_4716",
      1
+    ],
+    [
+     "deamhan_aeir_essence",
+     1
     ]
    ]
   },
@@ -10474,7 +10518,7 @@
    ]
   },
   "deamhan hound": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Cloak_of_Dried_Moss",
@@ -10507,15 +10551,23 @@
     [
      "Staff_of_Splinters",
      1
+    ],
+    [
+     "vial_of_deamhan_breath",
+     1
     ]
    ]
   },
   "death shroud": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Death_Shrouded_Boots",
      3
+    ],
+    [
+     "death_shroud_silk",
+     6
     ]
    ]
   },
@@ -14121,11 +14173,15 @@
    ]
   },
   "ebon skeleton": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Ebon_Skeleton_Tibia",
      20
+    ],
+    [
+     "rotted_ebon_skeleton_tibia",
+     6
     ]
    ]
   },
@@ -15519,11 +15575,15 @@
    ]
   },
   "eriu waylayer": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "p165_drop_6994",
      10
+    ],
+    [
+     "siabra_waylayer_sash",
+     7
     ]
    ]
   },
@@ -15844,7 +15904,7 @@
    ]
   },
   "faerie drake": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "p165_drop_6971",
@@ -15865,6 +15925,10 @@
     [
      "Luminescent_Gloves",
      2
+    ],
+    [
+     "faerie_drake_hide",
+     24
     ]
    ]
   },
@@ -16747,7 +16811,7 @@
    ]
   },
   "fenrir tracker": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "p165_drop_6982",
@@ -16764,6 +16828,10 @@
     [
      "Yellow_Tourmaline",
      1
+    ],
+    [
+     "fenrir_tracker_paw",
+     6
     ]
    ]
   },
@@ -16938,11 +17006,15 @@
    ]
   },
   "fire ant gatherer": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Bow_of_Flames",
      2
+    ],
+    [
+     "warm_fire_ant_larva",
+     6
     ]
    ]
   },
@@ -17580,7 +17652,7 @@
    ]
   },
   "forest viper": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Forest_Viper_Fang",
@@ -17620,6 +17692,10 @@
     ],
     [
      "Widow's_Silk_Pants",
+     1
+    ],
+    [
+     "forest_viper_venom",
      1
     ]
    ]
@@ -18880,7 +18956,7 @@
    ]
   },
   "ghoulic viper": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Belt_of_Deathly_Might",
@@ -18889,6 +18965,10 @@
     [
      "Ghoulish_Viper_Fang",
      4
+    ],
+    [
+     "ghoulic_viper_fang",
+     1
     ]
    ]
   },
@@ -18960,11 +19040,15 @@
    ]
   },
   "giant boar": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Fell_Creatures_Tooth",
      15
+    ],
+    [
+     "giant_boar_claw",
+     6
     ]
    ]
   },
@@ -18995,11 +19079,15 @@
    ]
   },
   "giant lizard": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Fell_Creatures_Tooth",
      10
+    ],
+    [
+     "giant_lizard_sinew",
+     2
     ]
    ]
   },
@@ -22306,7 +22394,7 @@
    ]
   },
   "graugach": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "p165_drop_6988",
@@ -22315,6 +22403,10 @@
     [
      "p165_drop_6989",
      1
+    ],
+    [
+     "glowing_red_eye",
+     7
     ]
    ]
   },
@@ -22523,7 +22615,7 @@
    ]
   },
   "greater boogey": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Rhodolite",
@@ -22620,6 +22712,10 @@
     [
      "tornboogeyhelm",
      1
+    ],
+    [
+     "glowing_soul_gem",
+     6
     ]
    ]
   },
@@ -22674,11 +22770,15 @@
    ]
   },
   "greater water elemental": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Water_Orb",
      20
+    ],
+    [
+     "shimmering_water_orb",
+     6
     ]
    ]
   },
@@ -23436,7 +23536,7 @@
    ]
   },
   "gurite waylayer": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "p165_drop_6994",
@@ -23477,6 +23577,10 @@
     [
      "Waylayer_Spiked_Mace",
      1
+    ],
+    [
+     "siabra_waylayer_sash",
+     6
     ]
    ]
   },
@@ -23663,7 +23767,7 @@
    ]
   },
   "hagbui runemaster": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Water_Opal",
@@ -23716,6 +23820,10 @@
     [
      "Pious_Hagbui_Cap",
      1
+    ],
+    [
+     "runemaster_sealed_pages",
+     6
     ]
    ]
   },
@@ -25474,11 +25582,15 @@
    ]
   },
   "iceberg": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Rhodolite",
      7
+    ],
+    [
+     "iceberg_tooth",
+     10
     ]
    ]
   },
@@ -25959,11 +26071,15 @@
    ]
   },
   "ire wolf": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Scythe_of_Molten_Lava",
      3
+    ],
+    [
+     "ire_wolf_claw",
+     6
     ]
    ]
   },
@@ -26273,11 +26389,15 @@
    ]
   },
   "juvenile megafelid": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Dangerous_Tooth",
      5
+    ],
+    [
+     "juvenile_megafelid_tooth",
+     6
     ]
    ]
   },
@@ -29627,7 +29747,7 @@
    ]
   },
   "lesser zephyr": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "p165_drop_4956",
@@ -29648,6 +29768,10 @@
     [
      "Eluvium_Vest",
      1
+    ],
+    [
+     "wind_swept_leaves",
+     6
     ]
    ]
   },
@@ -31843,7 +31967,7 @@
    ]
   },
   "mephitic ghoul": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Hardened_Stone_Axe",
@@ -31884,11 +32008,15 @@
     [
      "Trollish_Stone_Bracer",
      1
+    ],
+    [
+     "melted_ghoul_flesh",
+     4
     ]
    ]
   },
   "mercenary tomb raider": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "BeltOfAmpleSorrow",
@@ -31897,6 +32025,10 @@
     [
      "p165_drop_5461",
      4
+    ],
+    [
+     "stolen_signet_ring",
+     6
     ]
    ]
   },
@@ -32359,7 +32491,7 @@
    ]
   },
   "mist menace": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Bluntbender_Girdle",
@@ -32368,6 +32500,10 @@
     [
      "Matterbender_Choker",
      3
+    ],
+    [
+     "mist_water_sack",
+     6
     ]
    ]
   },
@@ -32686,7 +32822,7 @@
    ]
   },
   "moor boogey": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Rusted_Moor_Sleeves",
@@ -32763,6 +32899,10 @@
     [
      "p165_drop_3557",
      1
+    ],
+    [
+     "glowing_soul_gem",
+     6
     ]
    ]
   },
@@ -32794,7 +32934,7 @@
    ]
   },
   "moorlich": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Ancient_Lich_Tooth",
@@ -32827,6 +32967,10 @@
     [
      "restlessrobes",
      1
+    ],
+    [
+     "skin_cream",
+     6
     ]
    ]
   },
@@ -33099,7 +33243,7 @@
    ]
   },
   "morvalt streber": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Blighted_Padded_Sleeves",
@@ -33108,6 +33252,10 @@
     [
      "Runebound_Focus_Staff",
      3
+    ],
+    [
+     "morvalt_strebers_head",
+     6
     ]
    ]
   },
@@ -33274,10 +33422,14 @@
    ]
   },
   "mud crab": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Tattered_Hollowed_Chitin_Sleeves",
+     6
+    ],
+    [
+     "mud_crab_claw",
      6
     ]
    ]
@@ -33296,7 +33448,7 @@
    ]
   },
   "mud frog": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Exhumed_Shroud",
@@ -33321,6 +33473,10 @@
     [
      "Poor_Sod's_Belt",
      1
+    ],
+    [
+     "mud_frog_tongue",
+     2
     ]
    ]
   },
@@ -34220,7 +34376,7 @@
    ]
   },
   "myling": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Adroit_Belt",
@@ -34245,6 +34401,10 @@
     [
      "Willful_Jewel",
      3
+    ],
+    [
+     "myling_essence",
+     6
     ]
    ]
   },
@@ -34946,7 +35106,7 @@
    ]
   },
   "pale aurora": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Peridot",
@@ -34967,6 +35127,10 @@
     [
      "p165_drop_6982",
      1
+    ],
+    [
+     "vial_of_shimmering_essence",
+     15
     ]
    ]
   },
@@ -35116,7 +35280,7 @@
    ]
   },
   "peallaidh": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "p165_drop_6982",
@@ -35193,6 +35357,10 @@
     [
      "staffofunholydeeds",
      1
+    ],
+    [
+     "peallaidh_hide",
+     5
     ]
    ]
   },
@@ -35470,7 +35638,7 @@
    ]
   },
   "phaeghoul": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "p165_drop_6991",
@@ -35499,6 +35667,10 @@
     [
      "p165_drop_7008",
      1
+    ],
+    [
+     "phaeghoul_red_hand",
+     10
     ]
    ]
   },
@@ -35638,7 +35810,7 @@
    ]
   },
   "phantom wickerman": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Phantom_Bastard_Sword",
@@ -35647,15 +35819,23 @@
     [
      "Spun_Gold_Threaded_Cloak",
      3
+    ],
+    [
+     "darkened_terror_claw",
+     4
     ]
    ]
   },
   "pictish warrior": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Peridot",
      6
+    ],
+    [
+     "pictish_warrior_ring",
+     53
     ]
    ]
   },
@@ -39124,6 +39304,10 @@
     [
      "Luminous_Claw_of_the_Rending",
      5
+    ],
+    [
+     "scaled_fiend_heart",
+     6
     ]
    ]
   },
@@ -39722,7 +39906,7 @@
    ]
   },
   "shadowhunter she-wolf": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Fell_Creatures_Tooth",
@@ -39731,6 +39915,10 @@
     [
      "Dead_Warrior's_Pike",
      1
+    ],
+    [
+     "pristine_she-wolfpelt",
+     3
     ]
    ]
   },
@@ -39803,7 +39991,7 @@
    ]
   },
   "shard golem": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "p165_drop_6982",
@@ -39824,6 +40012,10 @@
     [
      "Yellow_Tourmaline",
      1
+    ],
+    [
+     "ice_shard",
+     6
     ]
    ]
   },
@@ -40194,7 +40386,7 @@
    ]
   },
   "siabra lookout": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "p165_drop_6982",
@@ -40211,6 +40403,10 @@
     [
      "Siabrian_Arcane_Methods",
      2
+    ],
+    [
+     "siabra_charm_ring",
+     6
     ]
    ]
   },
@@ -40466,7 +40662,7 @@
    ]
   },
   "siabra venator": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Yellow_Tourmaline",
@@ -40487,6 +40683,10 @@
     [
      "Kornerupine",
      3
+    ],
+    [
+     "siabra_charm_ring",
+     6
     ]
    ]
   },
@@ -40544,7 +40744,7 @@
    ]
   },
   "siabra wayguard": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Master_Assassin_Pendant",
@@ -40601,6 +40801,10 @@
     [
      "Rogue_Overlord_Pendant",
      1
+    ],
+    [
+     "siabra_charm_ring",
+     6
     ]
    ]
   },
@@ -43112,7 +43316,7 @@
    ]
   },
   "spectral manslayer": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "p165_drop_6982",
@@ -43137,6 +43341,10 @@
     [
      "Shimmering_Spectral_Impaler",
      1
+    ],
+    [
+     "spectral_essence",
+     8
     ]
    ]
   },
@@ -43914,7 +44122,7 @@
    ]
   },
   "spraggonale": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "p165_drop_6971",
@@ -43931,6 +44139,10 @@
     [
      "Mantle_of_Regalia",
      1
+    ],
+    [
+     "copper_moonstone_flagon",
+     4
     ]
    ]
   },
@@ -45228,7 +45440,7 @@
    ]
   },
   "svartalf foister": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Yellow_Tourmaline",
@@ -45249,6 +45461,10 @@
     [
      "Black_Sapphire",
      1
+    ],
+    [
+     "trip_string",
+     4
     ]
    ]
   },
@@ -45287,7 +45503,7 @@
    ]
   },
   "svartalf infiltrator": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Black_Sapphire",
@@ -45300,6 +45516,10 @@
     [
      "p165_drop_7008",
      3
+    ],
+    [
+     "svartalf_poison_recipe",
+     10
     ]
    ]
   },
@@ -46090,7 +46310,7 @@
    ]
   },
   "terra crab": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "2_FIE_Jewel",
@@ -46106,6 +46326,10 @@
     ],
     [
      "2_HC_Bracer",
+     1
+    ],
+    [
+     "terra_crab_claw",
      1
     ]
    ]
@@ -46193,11 +46417,15 @@
    ]
   },
   "thrawn ogre guardsman": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Bodyguards_Halberd",
      3
+    ],
+    [
+     "bronze_thrawn_ogre_thresher_spear_tip",
+     6
     ]
    ]
   },
@@ -46219,7 +46447,7 @@
    ]
   },
   "tidal sheerie": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Kelp_Bracelet",
@@ -46236,6 +46464,10 @@
     [
      "Fine_Brocade_Slippers",
      1
+    ],
+    [
+     "sack_of_grain2",
+     6
     ]
    ]
   },
@@ -48277,7 +48509,7 @@
    ]
   },
   "townsman": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "p165_drop_6994",
@@ -48333,6 +48565,10 @@
     ],
     [
      "p165_drop_6989",
+     1
+    ],
+    [
+     "key_of_the_lost",
      1
     ]
    ]
@@ -49313,11 +49549,15 @@
    ]
   },
   "umber bear": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Dangerous_Tooth",
      1
+    ],
+    [
+     "umber_bear_tooth",
+     6
     ]
    ]
   },
@@ -50150,7 +50390,7 @@
    ]
   },
   "unseelie underviewer": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Bracer_of_the_Unseelie",
@@ -50191,6 +50431,10 @@
     [
      "turquoise_leather_dye3",
      1
+    ],
+    [
+     "glowing_veined_stone",
+     6
     ]
    ]
   },
@@ -52841,7 +53085,7 @@
    ]
   },
   "werewolf warder": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Fiery_Sword",
@@ -52926,6 +53170,10 @@
     [
      "p165_drop_447",
      1
+    ],
+    [
+     "warders_ear",
+     6
     ]
    ]
   },
@@ -53498,7 +53746,7 @@
    ]
   },
   "wintery dirge": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "p165_drop_6982",
@@ -53515,6 +53763,10 @@
     [
      "Yellow_Tourmaline",
      1
+    ],
+    [
+     "frozen_teardrop",
+     3
     ]
    ]
   },
@@ -55450,7 +55702,7 @@
    ]
   },
   "bog frog": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "p165_uth_2082",
@@ -55459,6 +55711,10 @@
     [
      "p165_uth_5026",
      35
+    ],
+    [
+     "bog_frog_ear",
+     6
     ]
    ]
   },
@@ -56453,11 +56709,15 @@
    ]
   },
   "fog phantom": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "p165_uth_3314",
      48
+    ],
+    [
+     "cracked_dark_heart",
+     3
     ]
    ]
   },
@@ -56573,10 +56833,14 @@
    ]
   },
   "frost giant": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "p165_uth_1157",
+     15
+    ],
+    [
+     "ice_cold_giant_blood",
      15
     ]
    ]
@@ -57066,7 +57330,7 @@
    ]
   },
   "grovewood": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "p165_uth_914",
@@ -57075,6 +57339,10 @@
     [
      "p165_uth_1255",
      4
+    ],
+    [
+     "grovewood_bark",
+     5
     ]
    ]
   },
@@ -57543,11 +57811,15 @@
    ]
   },
   "moss monster": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "p165_uth_3444",
      4
+    ],
+    [
+     "vial_of_moss_juice",
+     11
     ]
    ]
   },
@@ -57902,7 +58174,7 @@
    ]
   },
   "rage wolf": {
-   "drop_count": 2,
+   "drop_count": 4,
    "items": [
     [
      "p165_uth_631",
@@ -57915,6 +58187,10 @@
     [
      "p165_uth_633",
      12
+    ],
+    [
+     "rage_wolf_tooth",
+     6
     ]
    ]
   },
@@ -58406,7 +58682,7 @@
    ]
   },
   "streaming wisp": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "p165_uth_163",
@@ -58415,6 +58691,10 @@
     [
      "p165_uth_164",
      64
+    ],
+    [
+     "streaming_wisp_husk",
+     6
     ]
    ]
   },
@@ -58522,7 +58802,7 @@
    ]
   },
   "swamp hopper": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "p165_uth_2079",
@@ -58531,6 +58811,10 @@
     [
      "p165_uth_3587",
      26
+    ],
+    [
+     "hopper_tongue",
+     6
     ]
    ]
   },
@@ -58690,7 +58974,7 @@
    ]
   },
   "treekeep": {
-   "drop_count": 2,
+   "drop_count": 4,
    "items": [
     [
      "p165_uth_4540",
@@ -58703,6 +58987,10 @@
     [
      "p165_uth_4885",
      47
+    ],
+    [
+     "warm_tree_sap",
+     40
     ]
    ]
   },
@@ -58734,7 +59022,7 @@
    ]
   },
   "unearthed cave bear": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "p165_uth_5166",
@@ -58755,6 +59043,10 @@
     [
      "p165_uth_5420",
      1
+    ],
+    [
+     "fine_bear_pelt",
+     15
     ]
    ]
   },
@@ -59025,11 +59317,15 @@
    ]
   },
   "white boar": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "p165_uth_2731",
      19
+    ],
+    [
+     "long_white_boar_tusk",
+     6
     ]
    ]
   },
@@ -59060,7 +59356,7 @@
    ]
   },
   "white wolf": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "p165_uth_3370",
@@ -59073,6 +59369,10 @@
     [
      "p165_uth_4354",
      4
+    ],
+    [
+     "white_wolf_fang",
+     8
     ]
    ]
   },
@@ -59258,7 +59558,7 @@
    ]
   },
   "wood rat": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "p165_uth_2252",
@@ -59266,6 +59566,10 @@
     ],
     [
      "p165_uth_7959",
+     7
+    ],
+    [
+     "wood_rat_tail",
      7
     ]
    ]
@@ -59465,6 +59769,640 @@
     [
      "p165_uth_2562",
      42
+    ]
+   ]
+  },
+  "headless footman": {
+   "drop_count": 1,
+   "items": [
+    [
+     "shredded_footmans_cloak",
+     6
+    ]
+   ]
+  },
+  "drakoran skirmisher": {
+   "drop_count": 1,
+   "items": [
+    [
+     "drakoran_skirmisher_head",
+     6
+    ]
+   ]
+  },
+  "fomorian geddon": {
+   "drop_count": 1,
+   "items": [
+    [
+     "fomorian_geddon_great_bow",
+     6
+    ]
+   ]
+  },
+  "undead apple gatherer": {
+   "drop_count": 1,
+   "items": [
+    [
+     "rotted_apple_gatherer_flesh",
+     6
+    ]
+   ]
+  },
+  "blind boogey": {
+   "drop_count": 1,
+   "items": [
+    [
+     "glowing_soul_gem",
+     6
+    ]
+   ]
+  },
+  "crafted guardian": {
+   "drop_count": 1,
+   "items": [
+    [
+     "ancient_crafted_guardian_leg",
+     6
+    ]
+   ]
+  },
+  "strangler": {
+   "drop_count": 1,
+   "items": [
+    [
+     "worn_strangler_cord",
+     6
+    ]
+   ]
+  },
+  "urchin pilferer": {
+   "drop_count": 1,
+   "items": [
+    [
+     "dark_urchin_spines",
+     6
+    ]
+   ]
+  },
+  "great boar": {
+   "drop_count": 1,
+   "items": [
+    [
+     "great_boar_hide",
+     6
+    ]
+   ]
+  },
+  "cockatrice": {
+   "drop_count": 1,
+   "items": [
+    [
+     "cockatrice_feather",
+     6
+    ]
+   ]
+  },
+  "corpse delver": {
+   "drop_count": 1,
+   "items": [
+    [
+     "rotted_corpse_delver_eye",
+     6
+    ]
+   ]
+  },
+  "tylwyth teg huntress": {
+   "drop_count": 1,
+   "items": [
+    [
+     "tylwyth_teg_huntress_wristband",
+     6
+    ]
+   ]
+  },
+  "phantom magi": {
+   "drop_count": 1,
+   "items": [
+    [
+     "ghostly_soul_shroud",
+     6
+    ]
+   ]
+  },
+  "ghoul desecrator": {
+   "drop_count": 1,
+   "items": [
+    [
+     "clawed_mummified_hand",
+     6
+    ]
+   ]
+  },
+  "pitch skeleton": {
+   "drop_count": 1,
+   "items": [
+    [
+     "crackling_pitch_skeleton_hand",
+     6
+    ]
+   ]
+  },
+  "morvalt krigsman": {
+   "drop_count": 1,
+   "items": [
+    [
+     "morvalt_obsidian_sword",
+     6
+    ]
+   ]
+  },
+  "scimitar cat": {
+   "drop_count": 1,
+   "items": [
+    [
+     "scimitar_cat_pelt",
+     6
+    ]
+   ]
+  },
+  "wading boobrie": {
+   "drop_count": 1,
+   "items": [
+    [
+     "ancey_shell",
+     6
+    ]
+   ]
+  },
+  "bobbing boobrie": {
+   "drop_count": 1,
+   "items": [
+    [
+     "mottled_boobrie_egg",
+     6
+    ]
+   ]
+  },
+  "shale golem": {
+   "drop_count": 1,
+   "items": [
+    [
+     "gold_shale",
+     6
+    ]
+   ]
+  },
+  "drowning victim": {
+   "drop_count": 1,
+   "items": [
+    [
+     "pendant of the forsaken",
+     6
+    ]
+   ]
+  },
+  "water cat": {
+   "drop_count": 1,
+   "items": [
+    [
+     "water_cat_pelt",
+     6
+    ]
+   ]
+  },
+  "griffon loner": {
+   "drop_count": 1,
+   "items": [
+    [
+     "griffin_loner_feather",
+     6
+    ]
+   ]
+  },
+  "morvalt landflyke": {
+   "drop_count": 1,
+   "items": [
+    [
+     "morvalt_landflyke_head",
+     6
+    ]
+   ]
+  },
+  "megaloceros fawn": {
+   "drop_count": 1,
+   "items": [
+    [
+     "megaloceros_fawn_claw",
+     6
+    ]
+   ]
+  },
+  "biting wind": {
+   "drop_count": 1,
+   "items": [
+    [
+     "biting_wind_eye",
+     6
+    ]
+   ]
+  },
+  "snow giant": {
+   "drop_count": 1,
+   "items": [
+    [
+     "ice_water",
+     4
+    ]
+   ]
+  },
+  "ingester": {
+   "drop_count": 1,
+   "items": [
+    [
+     "ingester_stomach",
+     6
+    ]
+   ]
+  },
+  "crater cicada": {
+   "drop_count": 1,
+   "items": [
+    [
+     "crater_cicada_leg",
+     6
+    ]
+   ]
+  },
+  "giant snowcrab": {
+   "drop_count": 1,
+   "items": [
+    [
+     "giant_snow_crab_claw",
+     10
+    ]
+   ]
+  },
+  "coral thing": {
+   "drop_count": 1,
+   "items": [
+    [
+     "coral",
+     6
+    ]
+   ]
+  },
+  "fisher grip": {
+   "drop_count": 1,
+   "items": [
+    [
+     "fisher_grip_feather",
+     6
+    ]
+   ]
+  },
+  "sjoalf worshipper": {
+   "drop_count": 1,
+   "items": [
+    [
+     "golden_chain_necklace",
+     6
+    ]
+   ]
+  },
+  "block of ice": {
+   "drop_count": 1,
+   "items": [
+    [
+     "ice_creature_corpse",
+     5
+    ]
+   ]
+  },
+  "redcap skulker": {
+   "drop_count": 1,
+   "items": [
+    [
+     "red_cap",
+     6
+    ]
+   ]
+  },
+  "washed-up skeleton": {
+   "drop_count": 1,
+   "items": [
+    [
+     "washed_up_skeleton_skull",
+     6
+    ]
+   ]
+  },
+  "ghastly albion invader": {
+   "drop_count": 1,
+   "items": [
+    [
+     "vial_of_ghastly_vapor",
+     6
+    ]
+   ]
+  },
+  "morvalt blandare": {
+   "drop_count": 1,
+   "items": [
+    [
+     "morvalt_blandere_belt",
+     6
+    ]
+   ]
+  },
+  "faraheim doe": {
+   "drop_count": 1,
+   "items": [
+    [
+     "faraheim_doe_meat",
+     6
+    ]
+   ]
+  },
+  "faraheim stag": {
+   "drop_count": 1,
+   "items": [
+    [
+     "faraheim_stag_body",
+     6
+    ]
+   ]
+  },
+  "squabbler": {
+   "drop_count": 1,
+   "items": [
+    [
+     "squabbler_eye",
+     13
+    ]
+   ]
+  },
+  "botonid tuber": {
+   "drop_count": 1,
+   "items": [
+    [
+     "botonid_claw",
+     6
+    ]
+   ]
+  },
+  "trampler": {
+   "drop_count": 1,
+   "items": [
+    [
+     "trampler_stomach",
+     6
+    ]
+   ]
+  },
+  "twisted sylvan": {
+   "drop_count": 1,
+   "items": [
+    [
+     "black_swirling_orb",
+     6
+    ]
+   ]
+  },
+  "arbordon abductor": {
+   "drop_count": 1,
+   "items": [
+    [
+     "arbordon_arm",
+     6
+    ]
+   ]
+  },
+  "tidal angler": {
+   "drop_count": 1,
+   "items": [
+    [
+     "greater_angler_tail",
+     6
+    ]
+   ]
+  },
+  "ixthiar ruinater": {
+   "drop_count": 1,
+   "items": [
+    [
+     "ixthiar_forearm",
+     6
+    ]
+   ]
+  },
+  "skimmer": {
+   "drop_count": 1,
+   "items": [
+    [
+     "skimmer_skin",
+     6
+    ]
+   ]
+  },
+  "cutthroat vines": {
+   "drop_count": 1,
+   "items": [
+    [
+     "venom_sac",
+     6
+    ]
+   ]
+  },
+  "sanidon": {
+   "drop_count": 1,
+   "items": [
+    [
+     "block_of_sanidon_sand",
+     6
+    ]
+   ]
+  },
+  "marine shriller": {
+   "drop_count": 1,
+   "items": [
+    [
+     "marine_shriller_eggs",
+     6
+    ]
+   ]
+  },
+  "ixthiar decimater": {
+   "drop_count": 1,
+   "items": [
+    [
+     "ixthiar_decimater_mandible",
+     6
+    ]
+   ]
+  },
+  "tidal anglator": {
+   "drop_count": 1,
+   "items": [
+    [
+     "tidal_angler_meat",
+     6
+    ]
+   ]
+  },
+  "gorge shriller": {
+   "drop_count": 1,
+   "items": [
+    [
+     "gorge_shriller_wing",
+     6
+    ]
+   ]
+  },
+  "ixthiar reaper": {
+   "drop_count": 2,
+   "items": [
+    [
+     "ixthiar_reaper_claw",
+     6
+    ],
+    [
+     "ixthiar_reaper_mandible",
+     6
+    ]
+   ]
+  },
+  "ixthiar broodmother": {
+   "drop_count": 1,
+   "items": [
+    [
+     "ixthiar_reaper_mandible",
+     6
+    ]
+   ]
+  },
+  "spectral briton invader": {
+   "drop_count": 1,
+   "items": [
+    [
+     "vial_of_glowing_gases",
+     14
+    ]
+   ]
+  },
+  "dusky sylvanshade": {
+   "drop_count": 1,
+   "items": [
+    [
+     "dusky_sylvanshade_head",
+     6
+    ]
+   ]
+  },
+  "soaring manta": {
+   "drop_count": 1,
+   "items": [
+    [
+     "soaring_manta_wing",
+     6
+    ]
+   ]
+  },
+  "octonid": {
+   "drop_count": 1,
+   "items": [
+    [
+     "octonid_tentacle",
+     6
+    ]
+   ]
+  },
+  "morass leech": {
+   "drop_count": 1,
+   "items": [
+    [
+     "morass_leech_blood",
+     15
+    ]
+   ]
+  },
+  "mad grazer": {
+   "drop_count": 1,
+   "items": [
+    [
+     "mad_grazer_ear",
+     6
+    ]
+   ]
+  },
+  "venomous spore": {
+   "drop_count": 1,
+   "items": [
+    [
+     "venomous_spore_poison_sac",
+     6
+    ]
+   ]
+  },
+  "orc tracking hound": {
+   "drop_count": 1,
+   "items": [
+    [
+     "orc_tracking_hound_paw",
+     6
+    ]
+   ]
+  },
+  "orc lure": {
+   "drop_count": 1,
+   "items": [
+    [
+     "spotted_orc_lure_ear",
+     6
+    ]
+   ]
+  },
+  "ecto minion": {
+   "drop_count": 1,
+   "items": [
+    [
+     "blackened_staff_of_the_minion",
+     6
+    ]
+   ]
+  },
+  "drakoran marauder": {
+   "drop_count": 1,
+   "items": [
+    [
+     "drakoran_marauder_helm",
+     6
+    ]
+   ]
+  },
+  "sioalf cultist": {
+   "drop_count": 1,
+   "items": [
+    [
+     "cultist_supplie",
+     6
+    ]
+   ]
+  },
+  "sjoalf cultist": {
+   "drop_count": 1,
+   "items": [
+    [
+     "cultist_supplie",
+     6
+    ]
+   ]
+  },
+  "tattered product": {
+   "drop_count": 1,
+   "items": [
+    [
+     "bright_illuminated_gem",
+     6
     ]
    ]
   }

@@ -1,0 +1,1178 @@
+[
+ {
+  "quest": 1,
+  "task": "Footman Cloaks XP Item",
+  "item": "shredded_footmans_cloak",
+  "monster": "Headless Footman",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 2,
+  "task": "Drakoran Skirmisher Head XP Item",
+  "item": "drakoran_skirmisher_head",
+  "monster": "Drakoran Skirmisher",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 3,
+  "task": "Fomorian Geddon Great Bow XP Item",
+  "item": "fomorian_geddon_great_bow",
+  "monster": "Fomorian Geddon",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 107,
+  "task": "Mottled Apple Fly Wings XP Item",
+  "item": "mottled_apple_fly_wings",
+  "monster": "apple fly",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 108,
+  "task": "Stolen Signet Ring XP Item",
+  "item": "stolen_signet_ring",
+  "monster": "Mercenary Tomb Raider",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 112,
+  "task": "Rotted Apple Gatherer Flesh XP Item",
+  "item": "rotted_apple_gatherer_flesh",
+  "monster": "Undead Apple Gatherer",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 113,
+  "task": "Key of the Lost XP Item",
+  "item": "key_of_the_lost",
+  "monster": "Townsman",
+  "chance": 1,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 117,
+  "task": "Glowing Soul Gem XP Item",
+  "item": "glowing_soul_gem",
+  "monster": "Moor Boogey",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 117,
+  "task": "Glowing Soul Gem XP Item",
+  "item": "glowing_soul_gem",
+  "monster": "blind boogey",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 117,
+  "task": "Glowing Soul Gem XP Item",
+  "item": "glowing_soul_gem",
+  "monster": "greater boogey",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 125,
+  "task": "Peallaidh Hide XP Item",
+  "item": "peallaidh_hide",
+  "monster": "Peallaidh",
+  "chance": 5,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 130,
+  "task": "Giant Boar Claw XP Item",
+  "item": "giant_boar_claw",
+  "monster": "Giant Boar",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 132,
+  "task": "Ancient Crafted Guardian Legs XP Item",
+  "item": "ancient_crafted_guardian_leg",
+  "monster": "Crafted Guardian",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 133,
+  "task": "Giant Lizard Sinew XP Item",
+  "item": "giant_lizard_sinew",
+  "monster": "Giant Lizard",
+  "chance": 2,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 135,
+  "task": "Worn Strangler Cord XP Item",
+  "item": "worn_strangler_cord",
+  "monster": "Strangler",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 138,
+  "task": "Dark Urchin Spines XP Item",
+  "item": "dark_urchin_spines",
+  "monster": "Urchin Pilferer",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 139,
+  "task": "Pictish Warrior Ring XP Item",
+  "item": "pictish_warrior_ring",
+  "monster": "Pictish Warrior",
+  "chance": 53,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 148,
+  "task": "Ghoulic Viper Fang XP Item",
+  "item": "ghoulic_viper_fang",
+  "monster": "Ghoulic Viper",
+  "chance": 1,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 149,
+  "task": "Great Boar Hide XP Item",
+  "item": "great_boar_hide",
+  "monster": "Great Boar",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 150,
+  "task": "Jeweled Polished Skull XP Item",
+  "item": "jeweled_polished_skull",
+  "monster": "Creeping Ooze",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 151,
+  "task": "Pristine Cockatrice Feather XP Item",
+  "item": "cockatrice_feather",
+  "monster": "Cockatrice",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 152,
+  "task": "Pristine She-wolf Pelt XP Item",
+  "item": "pristine_she-wolfpelt",
+  "monster": "Shadowhunter She-Wolf",
+  "chance": 3,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 153,
+  "task": "Scaled Fiend Heart XP Item",
+  "item": "scaled_fiend_heart",
+  "monster": "Scaled Fiend",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 154,
+  "task": "Rotted Corpse Delver Eyes XP Item",
+  "item": "rotted_corpse_delver_eye",
+  "monster": "Corpse Delver",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 156,
+  "task": "Tylwyth Teg Huntress Wristband XP Item",
+  "item": "tylwyth_teg_huntress_wristband",
+  "monster": "Tylwyth Teg Huntress",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 157,
+  "task": "Bronze Thrawn Ogre Thresher Spear Tips XP Item",
+  "item": "bronze_thrawn_ogre_thresher_spear_tip",
+  "monster": "thrawn ogre guardsman",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 159,
+  "task": "Ghostly Soul Shroud XP Item",
+  "item": "ghostly_soul_shroud",
+  "monster": "Phantom Magi",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 163,
+  "task": "Rotted Ebon Skeleton Tibia XP Item",
+  "item": "rotted_ebon_skeleton_tibia",
+  "monster": "Ebon Skeleton",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 164,
+  "task": "Sleeping Kitten XP Item",
+  "item": "sleeping_kitten",
+  "monster": "Boggart",
+  "chance": 14,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 169,
+  "task": "Skin Cream XP Item",
+  "item": "skin_cream",
+  "monster": "Moorlich",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 170,
+  "task": "Clawed Mummified Hand XP Item",
+  "item": "clawed_mummified_hand",
+  "monster": "Ghoul Desecrator",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 171,
+  "task": "Crackling Pitch Skeleton Hand XP Item",
+  "item": "crackling_pitch_skeleton_hand",
+  "monster": "Pitch Skeleton",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 201,
+  "task": "Morvalt Obsidian Sword XP Item",
+  "item": "morvalt_obsidian_sword",
+  "monster": "morvalt krigsman",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 202,
+  "task": "Scimitar Cat Pelt XP Item",
+  "item": "scimitar_cat_pelt",
+  "monster": "Scimitar Cat",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 203,
+  "task": "Ancey Shell XP Item",
+  "item": "ancey_shell",
+  "monster": "Wading Boobrie",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 204,
+  "task": "Boobrie Egg XP Item",
+  "item": "mottled_boobrie_egg",
+  "monster": "bobbing boobrie",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 205,
+  "task": "Gold Shale XP Item",
+  "item": "gold_shale",
+  "monster": "Shale Golem",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 206,
+  "task": "Pendant of the Forsaken XP Item",
+  "item": "pendant of the forsaken",
+  "monster": "Drowning Victim",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 207,
+  "task": "Warm Fire Ant Larva XP Item",
+  "item": "warm_fire_ant_larva",
+  "monster": "Fire Ant Gatherer",
+  "chance": 6,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 208,
+  "task": "Water Cat Pelt XP Item",
+  "item": "water_cat_pelt",
+  "monster": "Water Cat",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 209,
+  "task": "Warm Tree Sap XP Item",
+  "item": "warm_tree_sap",
+  "monster": "Treekeep",
+  "chance": 40,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 210,
+  "task": "Polished Obsidian XP Item",
+  "item": "polished_piece_of_obsidian",
+  "monster": "Ashmonger",
+  "chance": 1,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 211,
+  "task": "Scroll of Eternal Sorrow XP Item",
+  "item": "scroll_of_eternal_sorrow",
+  "monster": "Cursed Mora",
+  "chance": 1,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 212,
+  "task": "Mist Water Sack XP Item",
+  "item": "mist_water_sack",
+  "monster": "Mist Menace",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 213,
+  "task": "Wood Rat Tail XP Item",
+  "item": "wood_rat_tail",
+  "monster": "Wood Rat",
+  "chance": 7,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 214,
+  "task": "Griffon Loner Feathers XP Item",
+  "item": "griffin_loner_feather",
+  "monster": "Griffon Loner",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 215,
+  "task": "Morvalt Landflyke Head XP Item",
+  "item": "morvalt_landflyke_head",
+  "monster": "Morvalt Landflyke",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 216,
+  "task": "Melted Ghoul Flesh XP Item",
+  "item": "melted_ghoul_flesh",
+  "monster": "Mephitic Ghoul",
+  "chance": 4,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 218,
+  "task": "Megaloceros Fawn Claw XP Item",
+  "item": "megaloceros_fawn_claw",
+  "monster": "megaloceros fawn",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 219,
+  "task": "White Wolf Fang XP Item",
+  "item": "white_wolf_fang",
+  "monster": "White Wolf",
+  "chance": 8,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 220,
+  "task": "Biting Wind Eye XP Item",
+  "item": "biting_wind_eye",
+  "monster": "Biting Wind",
+  "chance": 6,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 222,
+  "task": "Morvalt Streber Head XP Item",
+  "item": "morvalt_strebers_head",
+  "monster": "Morvalt Streber",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 224,
+  "task": "Myling Essence XP Item",
+  "item": "myling_essence",
+  "monster": "Myling",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 226,
+  "task": "Vial Ice Water XP Item",
+  "item": "ice_water",
+  "monster": "Snow Giant",
+  "chance": 4,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 227,
+  "task": "Ingester Stomach XP Item",
+  "item": "ingester_stomach",
+  "monster": "Ingester",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 229,
+  "task": "Mud Frog Tongue XP Item",
+  "item": "mud_frog_tongue",
+  "monster": "Mud Frog",
+  "chance": 2,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 232,
+  "task": "Cicada Legs XP Item",
+  "item": "crater_cicada_leg",
+  "monster": "Crater Cicada",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 234,
+  "task": "Giant Snowcrab Claw XP Item",
+  "item": "giant_snow_crab_claw",
+  "monster": "Giant Snowcrab",
+  "chance": 10,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 239,
+  "task": "Coral XP Item",
+  "item": "coral",
+  "monster": "Coral Thing",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 240,
+  "task": "Fisher Grip Feathers XP Item",
+  "item": "fisher_grip_feather",
+  "monster": "Fisher Grip",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 241,
+  "task": "Mud Crab Claw XP Item",
+  "item": "mud_crab_claw",
+  "monster": "Mud Crab",
+  "chance": 6,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 243,
+  "task": "Golden Chain Necklace XP Item",
+  "item": "golden_chain_necklace",
+  "monster": "Sjoalf Worshipper",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 244,
+  "task": "Ice Creature Corpse XP Item",
+  "item": "ice_creature_corpse",
+  "monster": "Block of Ice",
+  "chance": 5,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 246,
+  "task": "Red Caps XP Item",
+  "item": "red_cap",
+  "monster": "Redcap Skulker",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 247,
+  "task": "Washed Up Skeleton Skull XP Item",
+  "item": "washed_up_skeleton_skull",
+  "monster": "Washed-up Skeleton",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 248,
+  "task": "Frost Giant Blood XP Item",
+  "item": "ice_cold_giant_blood",
+  "monster": "Frost Giant",
+  "chance": 15,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 252,
+  "task": "Terra Crab Claw XP Item",
+  "item": "terra_crab_claw",
+  "monster": "Terra Crab",
+  "chance": 1,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 253,
+  "task": "Warder Ear XP Item",
+  "item": "warders_ear",
+  "monster": "Werewolf Warder",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 254,
+  "task": "Fenrir Tracker Paw XP Item",
+  "item": "fenrir_tracker_paw",
+  "monster": "Fenrir Tracker",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 255,
+  "task": "Forest Viper Venom XP Item",
+  "item": "forest_viper_venom",
+  "monster": "Forest Viper",
+  "chance": 1,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 256,
+  "task": "Frozen Teardrop XP Item",
+  "item": "frozen_teardrop",
+  "monster": "Wintery Dirge",
+  "chance": 3,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 260,
+  "task": "Iceberg Tooth XP Item",
+  "item": "iceberg_tooth",
+  "monster": "Iceberg",
+  "chance": 10,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 261,
+  "task": "Vial of Shimmering Essence XP Item",
+  "item": "vial_of_shimmering_essence",
+  "monster": "Pale Aurora",
+  "chance": 15,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 263,
+  "task": "Ice Shard XP Item",
+  "item": "ice_shard",
+  "monster": "Shard Golem",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 264,
+  "task": "Magic Clay XP Item",
+  "item": "magic_clay",
+  "monster": "Clay Jotun",
+  "chance": 1,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 265,
+  "task": "Runemaster Sealed Page XP Item",
+  "item": "runemaster_sealed_pages",
+  "monster": "hagbui runemaster",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 266,
+  "task": "Vial of Ghastly Vapors XP Item",
+  "item": "vial_of_ghastly_vapor",
+  "monster": "Ghastly Albion Invader",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 269,
+  "task": "Morvalt Blandere Belt XP Item",
+  "item": "morvalt_blandere_belt",
+  "monster": "Morvalt Blandare",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 272,
+  "task": "Svartalf Poison Recipes XP Item",
+  "item": "svartalf_poison_recipe",
+  "monster": "Svartalf Infiltrator",
+  "chance": 10,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 274,
+  "task": "Faraheim Doe Meat XP Item",
+  "item": "faraheim_doe_meat",
+  "monster": "Faraheim Doe",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 275,
+  "task": "Faraheim Stag Body XP Item",
+  "item": "faraheim_stag_body",
+  "monster": "Faraheim Stag",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 277,
+  "task": "Trip String XP Item",
+  "item": "trip_string",
+  "monster": "Svartalf Foister",
+  "chance": 4,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 300,
+  "task": "Faerie Drake Hide XP Item",
+  "item": "faerie_drake_hide",
+  "monster": "Faerie Drake",
+  "chance": 24,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 301,
+  "task": "Cracked Dark Heart XP Item",
+  "item": "cracked_dark_heart",
+  "monster": "Fog Phantom",
+  "chance": 3,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 302,
+  "task": "Copper Moonstone Flagon XP Item",
+  "item": "copper_moonstone_flagon",
+  "monster": "Spraggonale",
+  "chance": 4,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 303,
+  "task": "Wind Swept Leaves XP Item",
+  "item": "wind_swept_leaves",
+  "monster": "lesser zephyr",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 304,
+  "task": "Streaming Wisp Husk XP Item",
+  "item": "streaming_wisp_husk",
+  "monster": "Streaming Wisp",
+  "chance": 6,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 305,
+  "task": "Ire Wolf Claw XP Item",
+  "item": "ire_wolf_claw",
+  "monster": "Ire Wolf",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 306,
+  "task": "Siabra Waylayer Sash XP Item",
+  "item": "siabra_waylayer_sash",
+  "monster": "eriu waylayer",
+  "chance": 7,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 306,
+  "task": "Siabra Waylayer Sash XP Item",
+  "item": "siabra_waylayer_sash",
+  "monster": "gurite waylayer",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 308,
+  "task": "Darkened Terror Claw XP Item",
+  "item": "darkened_terror_claw",
+  "monster": "Phantom Wickerman",
+  "chance": 4,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 309,
+  "task": "Squabbler Eye XP Item",
+  "item": "squabbler_eye",
+  "monster": "Squabbler",
+  "chance": 13,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 311,
+  "task": "Botonid Claw XP Item",
+  "item": "botonid_claw",
+  "monster": "Botonid Tuber",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 312,
+  "task": "Trampler Stomach XP Item",
+  "item": "trampler_stomach",
+  "monster": "Trampler",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 313,
+  "task": "Rage Wolf Tooth XP Item",
+  "item": "rage_wolf_tooth",
+  "monster": "Rage Wolf",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 314,
+  "task": "Glowing Red Eye XP Item",
+  "item": "glowing_red_eye",
+  "monster": "Graugach",
+  "chance": 7,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 315,
+  "task": "Black Swirling Orbs XP Item",
+  "item": "black_swirling_orb",
+  "monster": "Twisted Sylvan",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 316,
+  "task": "Red Cruach Wings XP Item",
+  "item": "red_cruach_wings",
+  "monster": "Cruach Imp",
+  "chance": 8,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 317,
+  "task": "Arbordon Abductor Arm XP Item",
+  "item": "arbordon_arm",
+  "monster": "Arbordon Abductor",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 318,
+  "task": "Greater Angler Tail XP Item",
+  "item": "greater_angler_tail",
+  "monster": "tidal angler",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 320,
+  "task": "Deamhan Aeir Essence XP Item",
+  "item": "deamhan_aeir_essence",
+  "monster": "Deamhan Aeir",
+  "chance": 1,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 321,
+  "task": "Ixthiar Forearm XP Item",
+  "item": "ixthiar_forearm",
+  "monster": "Ixthiar Ruinater",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 322,
+  "task": "Skimmer Skin XP Item",
+  "item": "skimmer_skin",
+  "monster": "Skimmer",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 323,
+  "task": "Juvenile Megafelid Tooth XP Item",
+  "item": "juvenile_megafelid_tooth",
+  "monster": "Juvenile Megafelid",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 324,
+  "task": "Sack of Grain XP Item",
+  "item": "sack_of_grain2",
+  "monster": "Tidal Sheerie",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 328,
+  "task": "Phaeghoul Red Hand XP Item",
+  "item": "phaeghoul_red_hand",
+  "monster": "Phaeghoul",
+  "chance": 10,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 330,
+  "task": "Venom Sac XP Item",
+  "item": "venom_sac",
+  "monster": "Cutthroat Vines",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 331,
+  "task": "Grovewood Bark XP Item",
+  "item": "grovewood_bark",
+  "monster": "Grovewood",
+  "chance": 5,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 332,
+  "task": "Glowing Veined Stone XP Item",
+  "item": "glowing_veined_stone",
+  "monster": "Unseelie Underviewer",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 333,
+  "task": "Block of Sanidon Sand XP Item",
+  "item": "block_of_sanidon_sand",
+  "monster": "Sanidon",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 334,
+  "task": "Marine Shriller Eggs XP Item",
+  "item": "marine_shriller_eggs",
+  "monster": "Marine Shriller",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 336,
+  "task": "Medicinal Herb XP Item",
+  "item": "medicinal_herb",
+  "monster": "Bean Sidhe",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 338,
+  "task": "Ixthiar Decimater Mandible XP Item",
+  "item": "ixthiar_decimater_mandible",
+  "monster": "Ixthiar Decimater",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 341,
+  "task": "Vial of Deamhan Breath XP Item",
+  "item": "vial_of_deamhan_breath",
+  "monster": "Deamhan Hound",
+  "chance": 1,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 343,
+  "task": "Spirit Catcher Stone XP Item",
+  "item": "spirit_catcher_stone",
+  "monster": "Bananach",
+  "chance": 8,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 344,
+  "task": "Vial of Moss Juice XP Item",
+  "item": "vial_of_moss_juice",
+  "monster": "Moss Monster",
+  "chance": 11,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 346,
+  "task": "Long White Boar Tusk XP Item",
+  "item": "long_white_boar_tusk",
+  "monster": "White Boar",
+  "chance": 6,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 348,
+  "task": "Tidal Angler Meat XP Item",
+  "item": "tidal_angler_meat",
+  "monster": "Tidal Anglator",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 349,
+  "task": "Umber Bear Tooth XP Item",
+  "item": "umber_bear_tooth",
+  "monster": "Umber Bear",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 350,
+  "task": "Gorge Shriller Wings XP Item",
+  "item": "gorge_shriller_wing",
+  "monster": "Gorge Shriller",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 352,
+  "task": "Ixthiar Reaper Claw XP Item",
+  "item": "ixthiar_reaper_claw",
+  "monster": "Ixthiar Reaper",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 353,
+  "task": "Ixthiar Reaper Mandible XP Item",
+  "item": "ixthiar_reaper_mandible",
+  "monster": "Ixthiar Broodmother",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 353,
+  "task": "Ixthiar Reaper Mandible XP Item",
+  "item": "ixthiar_reaper_mandible",
+  "monster": "Ixthiar Reaper",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 354,
+  "task": "Siabra Charm Ring XP Item",
+  "item": "siabra_charm_ring",
+  "monster": "siabra lookout",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 354,
+  "task": "Siabra Charm Ring XP Item",
+  "item": "siabra_charm_ring",
+  "monster": "siabra venator",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 354,
+  "task": "Siabra Charm Ring XP Item",
+  "item": "siabra_charm_ring",
+  "monster": "siabra wayguard",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 355,
+  "task": "Hopper Tongue XP Item",
+  "item": "hopper_tongue",
+  "monster": "Swamp Hopper",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 356,
+  "task": "Vial of Glowing Gasses XP Item",
+  "item": "vial_of_glowing_gases",
+  "monster": "Spectral Briton Invader",
+  "chance": 14,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 360,
+  "task": "Dusky Sylvanshade Head XP Item",
+  "item": "dusky_sylvanshade_head",
+  "monster": "Dusky Sylvanshade",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 363,
+  "task": "Soaring Manta Wing XP Item",
+  "item": "soaring_manta_wing",
+  "monster": "Soaring Manta",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 365,
+  "task": "Octonid Tentacle XP Item",
+  "item": "octonid_tentacle",
+  "monster": "Octonid",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 366,
+  "task": "Morass Leech Blood XP Item",
+  "item": "morass_leech_blood",
+  "monster": "Morass Leech",
+  "chance": 15,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 370,
+  "task": "Mad Grazer Ear XP Item",
+  "item": "mad_grazer_ear",
+  "monster": "Mad Grazer",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 371,
+  "task": "Bog Frog Ear XP Item",
+  "item": "bog_frog_ear",
+  "monster": "Bog Frog",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 372,
+  "task": "Poison Sac XP Item",
+  "item": "venomous_spore_poison_sac",
+  "monster": "Venomous Spore",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 375,
+  "task": "Fine Bear Pelt XP Item",
+  "item": "fine_bear_pelt",
+  "monster": "Unearthed Cave Bear",
+  "chance": 15,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 376,
+  "task": "Death Shroud Silk XP Item",
+  "item": "death_shroud_silk",
+  "monster": "Death Shroud",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 377,
+  "task": "Spectral Essence XP Item",
+  "item": "spectral_essence",
+  "monster": "Spectral Manslayer",
+  "chance": 8,
+  "basis": "uthgard measured"
+ },
+ {
+  "quest": 381,
+  "task": "Orc Tracking Hound Paw XP Item",
+  "item": "orc_tracking_hound_paw",
+  "monster": "Orc Tracking Hound",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 382,
+  "task": "Spotted Orc Lure Ear XP Item",
+  "item": "spotted_orc_lure_ear",
+  "monster": "Orc Lure",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 386,
+  "task": "Blackened Staff of the Minion XP Item",
+  "item": "blackened_staff_of_the_minion",
+  "monster": "ecto minion",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 387,
+  "task": "Shimmering Water Orb XP Item",
+  "item": "shimmering_water_orb",
+  "monster": "greater water elemental",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 389,
+  "task": "Drakoran Marauder Helm XP Item",
+  "item": "drakoran_marauder_helm",
+  "monster": "drakoran marauder",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 392,
+  "task": "Cultist Supplie XP Item",
+  "item": "cultist_supplie",
+  "monster": "Sioalf Cultist",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 392,
+  "task": "Cultist Supplie XP Item",
+  "item": "cultist_supplie",
+  "monster": "sjoalf cultist",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 395,
+  "task": "Bright Illuminated Gem XP Item",
+  "item": "bright_illuminated_gem",
+  "monster": "tattered product",
+  "chance": 6,
+  "basis": "estimate (median Uthgard kill-task rate 6%)"
+ },
+ {
+  "quest": 398,
+  "task": "Gem of the Despoiled XP Item",
+  "item": "gem_of_the_despoiled",
+  "monster": "centurio pilus posterior",
+  "chance": 9,
+  "basis": "uthgard measured"
+ }
+]
