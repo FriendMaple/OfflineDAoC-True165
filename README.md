@@ -14,6 +14,9 @@
 > official site: [darkageofcamelot.com](https://www.darkageofcamelot.com/).
 
 > [!IMPORTANT]
+> **This is an AI-made project.** All of its code was written by AI tools (Codex, then Claude). The project owner
+> has no game development or coding experience: they directed the work and play-tested it. Expect bugs.
+>
 > **Early development. Nothing has been released yet.** The first version will be **v0.1**. It is uncertain
 > whether or when it will come out.
 
@@ -23,8 +26,9 @@ Offline DAoC True 1.65 is a local, single-player Dark Age of Camelot that runs e
 recreates the game as it was at **patch 1.65** (Classic and Shrouded Isles, November 2003), and fills the world
 with gamebots that level, group, trade, craft and fight on their own.
 
-It grew out of [Offline DAoC](https://github.com/shadowofze/OfflineDAoC), which is now on hold. The customizations
-were developed with AI tools (Codex, then Claude) and directed and play-tested by the project owner.
+It grew out of [Offline DAoC](https://github.com/shadowofze/OfflineDAoC), which is now on hold. Everything this
+project adds to the OpenDAoC server was written by AI tools (Codex, then Claude), as was the whole new client. The
+project owner, who has no game development or coding experience, directed and play-tested it.
 
 ## Built on OpenDAoC and Dawn of Light
 
