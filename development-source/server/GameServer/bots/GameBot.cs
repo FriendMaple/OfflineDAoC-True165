@@ -385,7 +385,7 @@ namespace DOL.GS
             BotRestRecovery.ShouldAutonomousPlayerBotRecover(this, GameLoop.GameLoopTime));
 
         // ---- True 1.65 Mode: bots really sit to rest (owner 2026-10-30, plan section 21)
-        // The NPC packets carry no sit state, so the original-client chat's game.dll hook (overlay 165-overlay-0.6) seats
+        // The NPC packets carry no sit state, so the original client's game.dll hook (overlay 165-overlay-0.6) seats
         // an NPC on emote 0xF0 and stands it on 0xF1, with the same posture as a sitting player (sit down once, then
         // sit-idle). The new client maps the same ids. Sent on each change to the players who see the bot, and again by
         // SendNPCCreate to a player who first sees it seated. Normal mode never sends them (its game.dll has no hook).

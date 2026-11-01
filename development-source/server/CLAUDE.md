@@ -1,10 +1,12 @@
+> **OfflineDAoC True 1.65:** this folder is the OfflineDAoC True 1.65 server. Read the repository root `README.md` and `AGENTS.md` first: it has the project rules (period sources first, no difficulty changes, bots on player rules). These notes are the inherited OpenDAoC-Core-Bots ones; the server targets .NET 10.
+
 # CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
 
-OpenDAoC-Core-Bots is a fork of [OpenDAoC-Core](https://github.com/OpenDAoC/OpenDAoC-Core), a Dark Age of Camelot (DAoC) server emulator built on .NET 9.0. This fork adds **player-controlled bot companions** that can join groups, follow players, and execute role-based AI (melee, tank, healer, caster, ranged).
+OpenDAoC-Core-Bots is a fork of [OpenDAoC-Core](https://github.com/OpenDAoC/OpenDAoC-Core), a Dark Age of Camelot (DAoC) server emulator built on .NET 10. This fork adds **player-controlled bot companions** that can join groups, follow players, and execute role-based AI (melee, tank, healer, caster, ranged).
 
 ## Build & Run Commands
 

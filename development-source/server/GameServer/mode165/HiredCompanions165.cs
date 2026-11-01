@@ -527,7 +527,7 @@ namespace DOL.GS
             if (!IsHired(bot) || Dismissing.ContainsKey(bot.DatabaseID) || !Hired.TryGetValue(bot.DatabaseID, out var hired))
                 return;
             // Logging out breaks the group up before the quit event: a companion whose owner is gone (or going) is
-            // parked to come back at the next login, not sent to wait at the inn (new client chat test, 2026-10-30).
+            // parked to come back at the next login, not sent to wait at the inn (tested in the new client, 2026-10-30).
             NpcService.Instance.Post<OfflineHiredCompanionRecord>(h =>
             {
                 GamePlayer owner = ClientService.Instance.GetPlayerByExactName(h.OwnerName);

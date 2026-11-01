@@ -1,6 +1,6 @@
 """Writes GameServer/mode165/ClassicFigures165.cs from the client's fig3tofigmain.csv (race, gender, face, hair style ->
 classic figure model). In True 1.65 Mode the profile uses classic figures, where every face + hair style is its own model,
-so the hiring window's preview figure shows the chosen face and hair by model alone (original-client chat, 2026-10-30).
+so the hiring window's preview figure shows the chosen face and hair by model alone (tested in the original client, 2026-10-30).
 """
 import collections, csv, os, sys
 
@@ -21,7 +21,7 @@ for r in csv.reader(open(SRC, encoding="latin1")):
 # The hiring window's LOOK picker (owner 2026-10-30: "merge the buttons into one option"): the looks a PLAYER could pick
 # at character creation, from the client's figtofig3main.csv rows "<RACE> <MALE|FEMALE> n" (n = 1..12), column 2 = the
 # classic player model, in n order, each model once (Firbolg male and Valkyn female repeat one). Not every monsters.csv
-# row on the figure: those include NPC-only variants that drew as black figures (owner, old client chat 2026-10-30).
+# row on the figure: those include NPC-only variants that drew as black figures (owner, 2026-10-30).
 PLAYER_LOOKS = os.path.join(os.path.dirname(SRC), "figtofig3main.csv")
 by_name = {}
 for r in csv.reader(open(PLAYER_LOOKS, encoding="latin1")):

@@ -18,7 +18,7 @@ namespace DOL.GS.Commands
             GamePlayer player = client?.Player;
             if (player == null)
                 return;
-            // One line per button press, so a client chat can see which clicks reach the server.
+            // One line per button press, so a client developer can see which clicks reach the server.
             if (log.IsInfoEnabled)
                 log.Info($"COMPANIONUI_CMD player={player.Name} args=\"{string.Join(' ', args.Skip(1))}\"");
             if (!Classic165Mode.IsOn)

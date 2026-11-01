@@ -565,7 +565,7 @@ internal sealed partial class MainForm : Form
         _optionsStatus.Font = new Font("Georgia", 9f, FontStyle.Bold | FontStyle.Italic);
         layout.Controls.Add(_makeMeGm, 0, 1);
         layout.SetColumnSpan(_makeMeGm, 2);
-        layout.Controls.Add(OptionDescription("Applies to your account at the next server startup. (Mobs will not attack you with /gmstealth on.)"), 2, 1);
+        layout.Controls.Add(OptionDescription("Applies to your account at the next server startup. (Mobs will not attack you with /gmstealth on. Type /gmstealth off in game to turn it off.)"), 2, 1);
         _makeMeGm.CheckedChanged += async (_, _) => await SaveGmSettingAsync();
         layout.Controls.Add(_rvrAnnouncements, 0, 2);
         layout.SetColumnSpan(_rvrAnnouncements, 2);

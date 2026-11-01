@@ -1,3 +1,5 @@
+> **OfflineDAoC True 1.65:** this folder is the OfflineDAoC True 1.65 server. Read the repository root `README.md` and `AGENTS.md` first: it has the project rules (period sources first, no difficulty changes, bots on player rules). These notes are the inherited OpenDAoC-Core-Bots ones; the server targets .NET 10.
+
 # OpenDAoC
 [![Build and Release](https://github.com/OpenDAoC/OpenDAoC-Core/actions/workflows/build-and-release.yml/badge.svg)](https://github.com/OpenDAoC/OpenDAoC-Core/actions/workflows/build-and-release.yml)
 

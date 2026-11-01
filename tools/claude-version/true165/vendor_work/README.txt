@@ -1,4 +1,4 @@
-TRUE 1.65 VENDOR WORK (2026-10-31, server chat) - how the merchant stock content in runtime\true165\ was made
+TRUE 1.65 VENDOR WORK (2026-10-31) - how the merchant stock content in runtime\true165\ was made
 
 Sources: the period Allakhazam item pages and merchant pages (Wayback, <= Nov 2003; crawl complete), CapnBry positions.
 Results (copied into ..\ and runtime\true165\): add-vendoritems165, add-deaditems165, add-goodsitems165 (items),

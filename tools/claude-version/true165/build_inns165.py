@@ -2,7 +2,7 @@
 17b and 19). Development tool; the 1.65 database build (derive_true165_database.py and the launcher) only reads its
 output, as generic rows to add.
 
-Positions come from the original-client chat's inn layouts (DAOC HIATUS\\1.65 MODE CLIENT (local only)\\layouts\\
+Positions come from the inn layout files (DAOC HIATUS\\1.65 MODE CLIENT (local only)\\layouts\\
 inn_*.json, npc_spots). Every person is a copy of a real NPC of that realm (model, equipment, level, class, brain), so
 the inns use the game's own looks; only the name, title, place and heading change.
 - Names match the figure's sex, read from the client's model table (monsters.csv: "Briton Female", "Dwarf Male shop 2").

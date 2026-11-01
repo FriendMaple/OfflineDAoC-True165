@@ -12,8 +12,8 @@ namespace DOL.GS
 {
     /// <summary>
     /// True 1.65 Mode's companion hiring window (owner 2026-10-30, plan sections 17 and 17g): the server side of the window
-    /// both clients draw at a traveler's inn. Layout agreed with the original-client chat (its tools\hire_spec.py) and the
-    /// new client chat. DebugMode 0x21, fixed 128-byte body: [0]=0, [1]=0x48 'H', [2]=1 (version), [3]=op.
+    /// both clients draw at a traveler's inn. Layout shared by the original client's overlay (tools\hire_spec.py) and the
+    /// new client (TRUE 1.65 MODE HIRE WINDOW PROTOCOL.md). DebugMode 0x21, fixed 128-byte body: [0]=0, [1]=0x48 'H', [2]=1 (version), [3]=op.
     ///   op 1 open:    [4] mode (0 innkeeper, 1 healer), [5] slots used, [6] slots open, [7] next slot level (0 = all open)
     ///   op 2 close
     ///   op 3 text:    [4] slot 0..47, [5..126] ASCII, NUL-terminated, [127] = 0. Slots: 0 title, 1 race, 2 class,
@@ -50,7 +50,7 @@ namespace DOL.GS
         public static int LookCount(Design d) => Math.Max(1, ClassicFigures165.LookCount(d.Race, d.Gender == eGender.Female));
         public static readonly byte[] SlotLevels = [5, 10, 15, 20, 30, 40, 45];   // owner 2026-10-30
 
-        // The inn layouts' hire_preview spots (original-client chat, layouts\inn_*.json).
+        // The inn layouts' hire_preview spots (the inn layout files, layouts\inn_*.json).
         private static readonly Dictionary<eRealm, (ushort Region, int X, int Y, int Z, ushort Heading)> PreviewSpots = new()
         {
             [eRealm.Albion] = (1, 462058, 649949, 1816, 2686),
@@ -312,7 +312,7 @@ namespace DOL.GS
                     if (s.Problem.Length == 0)
                     {
                         d.Name = RandomName(player.Realm, d.Gender);   // ready for the next one
-                        s.Preview?.Delete();                            // hired: the figure goes (old client chat)
+                        s.Preview?.Delete();                            // hired: the figure goes
                         s.Preview = null;
                         FixLook(d);
                         SendAll(player, s);
@@ -344,7 +344,7 @@ namespace DOL.GS
             }
             FixLook(d);
             // the numbers (look, hair colour) first, then the figure: the original client builds the figure's hair from
-            // the last op 4 it has (old client chat 2026-10-30)
+            // the last op 4 it has (tested in the original client 2026-10-30)
             SendAll(player, s);
             // a figure that faded (idle, or after a hire) comes back on the next change while the hire page is open
             if (s.Preview == null && s.Mode == 0 && !OwnPreview.TryGetValue(player, out _))
@@ -410,7 +410,7 @@ namespace DOL.GS
                     state, level, (eCharacterClass)rec.ClassId, (eRace)rec.RaceId, (eGender)rec.Gender, buttons,
                     live?.ObjectID ?? 0, hired.BotId, XpPerMille(live, rec), (ushort)hired.LookModel, (byte)hired.HairColour);
                 if (live != null && live.ObjectState == GameObject.eObjectState.Active)
-                    player.Out.SendLivingEquipmentUpdate(live);   // re-skins its hair in the original client (old client chat)
+                    player.Out.SendLivingEquipmentUpdate(live);   // re-skins its hair in the original client
                 // the roster's XP bubbles (op 10 for every row, owner layout)
                 if (live != null)
                     CompanionWindows165.SendStats(player, r, live);
@@ -449,7 +449,7 @@ namespace DOL.GS
         }
 
         /// <summary>
-        /// The roster numbers (op 4 kind 1) for every hired companion, with or without the window (old client chat
+        /// The roster numbers (op 4 kind 1) for every hired companion, with or without the window (the original client,
         /// 2026-10-30: it keeps their hair colours and object ids from these). Each summoned companion's row is followed by
         /// its equipment update, which is what makes the original client re-skin a classic figure's hair.
         /// Sent at login and whenever a companion appears (summon, recall, revive).
@@ -608,7 +608,7 @@ namespace DOL.GS
                 {
                     Session session = Get(Owner);
                     // walked away (500 from where the window opened; the old client can't report its X button) or the
-                    // window gone: close it; a minute without a command: the figure alone goes (old client chat 2026-10-30)
+                    // window gone: close it; a minute without a command: the figure alone goes (tested 2026-10-30)
                     if (Owner.ObjectState != eObjectState.Active || Owner.CurrentRegionID != CurrentRegionID ||
                         !Owner.IsWithinRadius(OpenedAt, PreviewWalkAway) || session?.Preview != this)
                     {

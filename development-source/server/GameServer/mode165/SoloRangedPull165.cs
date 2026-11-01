@@ -179,6 +179,12 @@ namespace DOL.GS
                     return true;
                 }
             }
+            // Shot, but the monster took no notice (nothing aggroed it): pull it the ordinary way instead of waiting.
+            if (now - s.ShotTick >= 3000 && !target.InCombat && (target as GameNPC)?.TargetObject != bot)
+            {
+                Finish(bot, s, true, "not noticed");
+                return false;
+            }
             // Shot: stand with the melee weapon out and let it come.
             if (bot.IsMoving)
             {
@@ -203,6 +209,11 @@ namespace DOL.GS
         {
             if (actor is not GameBot bot || !States.TryGetValue(bot, out State s) || !s.Active || s.Shot ||
                 attack?.Attacker != actor || attack.Target != s.Target || !attack.CausesCombat)
+                return;
+            // Only an attack that reached the monster pulls it (a miss or a resist does; "out of range", "not visible"
+            // or "not allowed" doesn't: 2026-11-01 run, 310 of 521 pulls "shot" and the monster never noticed).
+            if (attack.AttackResult is not (eAttackResult.HitUnstyled or eAttackResult.HitStyle or eAttackResult.Missed or
+                eAttackResult.Evaded or eAttackResult.Blocked or eAttackResult.Parried or eAttackResult.Fumbled))
                 return;
             MarkShot(bot, s);
         }

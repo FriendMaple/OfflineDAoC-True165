@@ -115,7 +115,7 @@ namespace DOL.GS
 
         /// <summary>
         /// The model word an NPC create packet carries. The 1.127 client reads model = word &amp; 0x7FF and an NPC's classic
-        /// hair colour = (word &gt;&gt; 13) &amp; 7 (bits 11-12 are another flag; old client chat 2026-10-30, from the client's NPC
+        /// hair colour = (word &gt;&gt; 13) &amp; 7 (bits 11-12 are another flag; 2026-10-30, from the client's NPC
         /// create handler). In True 1.65 Mode the hire preview figure and hired companions carry their chosen hair colour
         /// there; every other NPC is sent as before.
         /// </summary>
@@ -147,7 +147,7 @@ namespace DOL.GS
         /// True when a new character of this base class and race has a class to train into at level 5: an advanced class
         /// of that base which is not disabled and allows the race. In True 1.65 Mode a base class with none is refused at
         /// creation, so nobody is stuck at level 5. Example: an Inconnu Acolyte can only become a Heretic, which is disabled.
-        /// The 1.64 client's own creation screen calls that "NOT SUPPORTED" (old client chat, 2026-10-30).
+        /// The 1.64 client's own creation screen calls that "NOT SUPPORTED" (checked in the 1.64 client, 2026-10-30).
         /// </summary>
         public static bool BaseClassHasCareer(int baseClassId, int race)
         {

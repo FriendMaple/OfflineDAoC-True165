@@ -19,7 +19,7 @@ What is installed in runtime\true165\ (and this tools\claude-version\true165\ co
 - coin165.json (build_coin165.py): per-monster coin chance, read by the server (mode165\Coin165.cs)
 
 Folders here: stats\, spawns\, drops\ (each agent's scripts, reports, csv lists; scripts were written for the
-session scratchpad, so their paths point there) and coord\ (dryrun.py = the launcher's Refresh in Python, and the
+working folder outside the repository, so their paths point there) and coord\ (dryrun.py = the launcher's Refresh in Python, and the
 ghost flag update). The old build_drops165.py made the first-pass drops165.json; don't re-run it, it would undo pass 2.
 Dry run: two refreshes on a copy of the 2026-10-31 world; the second changed nothing; quick_check ok.
 Backup of the content before this: development-source\server\deployment-backups\true165-content-before-audit-fixes-*.

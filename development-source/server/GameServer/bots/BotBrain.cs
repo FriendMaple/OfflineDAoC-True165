@@ -1896,8 +1896,14 @@ namespace DOL.AI.Brain
             long now = GameLoop.GameLoopTime;
             if (bot?.IsAutonomousWorldBot != true || bot.IsTemporaryGroupHelper || bot.IsPlayerLedGroup ||
                 bot.Group != null || !bot.IsAlive || bot.InCombat || bot.IsAttacking || bot.IsCasting || bot.IsMoving ||
-                now < _nextMerchantServiceTick || !AutonomousObjectiveAssignments.WantsBetweenTaskInventory(bot) ||
-                AutonomousObjectiveAssignments.BetweenTaskServiceExpired(bot))
+                now < _nextMerchantServiceTick)
+                return false;
+            // A shopping trip can start in the middle of a task, not only in the between-task errands (2026-11-01 run:
+            // 188 bots reached the merchant on their plan, were never served and stood there until the 15-minute
+            // watchdog): the merchant the plan names always serves the bot.
+            bool shoppingHere = arrivedMerchant != null && AutonomousWorldBotController.ShoppingPlanFor(bot)?.Merchant == arrivedMerchant;
+            if (!shoppingHere && (!AutonomousObjectiveAssignments.WantsBetweenTaskInventory(bot) ||
+                                  AutonomousObjectiveAssignments.BetweenTaskServiceExpired(bot)))
                 return false;
 
             TownErrands165.Visited(bot);     // True 1.65 Mode: one errand trip per 30 minutes (TownErrands165)

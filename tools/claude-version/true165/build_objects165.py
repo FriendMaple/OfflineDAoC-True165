@@ -1,6 +1,6 @@
 """True 1.65 Mode: the inns' server-placed objects (owner 2026-10-30).
 
-Reads the original-client chat's inn layouts (DAOC HIATUS/1.65 MODE CLIENT (local only)/layouts/inn_*.json,
+Reads the inn layout files (DAOC HIATUS/1.65 MODE CLIENT (local only)/layouts/inn_*.json,
 "server_world_objects": the Horn of Rallying on its platform, the realm banners, props) and writes
 add-objects165.json for the 1.65 database (WorldObject rows; applied by content165.apply_additions and the
 launcher's TrueMode.AddRows / Refresh). The horn gets ClassType DOL.GS.HornOfRallyingObject165, so right-clicking

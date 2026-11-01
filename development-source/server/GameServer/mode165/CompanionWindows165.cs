@@ -384,7 +384,7 @@ namespace DOL.GS
         public const int TrainerWindowBase = 200;
 
         // The original (1.127) client copies this window into a fixed buffer with no bounds checks: at most 10 sublines of
-        // 10 items each, numbered 1..10, or it crashes (old client chat, 2026-10-30: TRAIN crashed the client). Every item
+        // 10 items each, numbered 1..10, or it crashes (tested in the original client, 2026-10-30: TRAIN crashed it). Every item
         // goes out as kind 1 (ability): for kinds 2/3 the client reads the icon word as an index into its own style/spell
         // tables.
         private const int NativeMaxLines = 10, NativeMaxItems = 10;
@@ -602,7 +602,7 @@ namespace DOL.GS
                 Array.Copy(name, 0, body, 13, Math.Min(name.Length, 63));
                 Hire165.Send(player, 11, body);
             }
-            // the original client's native trainer window is no longer sent (old client chat 2026-10-30: its clean REALM
+            // the original client's native trainer window is no longer sent (tested in the original client 2026-10-30: its clean REALM
             // ABILITIES window reads the op 12 list instead)
         }
 
@@ -723,7 +723,7 @@ namespace DOL.GS
             string header = $"{rec.Name} - {rec.ClassName} {level} - {bubbles:0.0} bubbles" +
                             (bot != null ? $" - realm rank {realmLevel / 10 + 1}L{realmLevel % 10}" : string.Empty);
             Hire165.Text(player, 40, header);
-            // diagnostics for the original client's STATS button (old client chat, 2026-10-30): what slot 40 carried
+            // diagnostics for the original client's STATS button (2026-10-30): what slot 40 carried
             StatsLog.Info($"COMPANION_STATS_165 player={player.Name} row={row} summoned={bot != null} slot40=\"{header}\"");
             if (bot == null)
             {

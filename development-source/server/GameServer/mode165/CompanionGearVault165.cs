@@ -10,8 +10,8 @@ namespace DOL.GS
     /// The original client's companion gear window (True 1.65 Mode, plan 17h): the client's own house-vault item window,
     /// whose slots are one companion's worn gear in a fixed order, then its 10-slot bag. The player drags from his backpack
     /// onto it to equip the companion, and off it to take an item back, with the client's normal drag and drop; the
-    /// moves arrive as ordinary item moves and become equip / unequip here (no client code needed, original-client chat
-    /// 2026-10-30). Set as the player's ActiveInventoryObject while open.
+    /// moves arrive as ordinary item moves and become equip / unequip here (no client code needed; tested in the original
+    /// client 2026-10-30). Set as the player's ActiveInventoryObject while open.
     /// </summary>
     public sealed class CompanionGearVault165 : IGameInventoryObject
     {

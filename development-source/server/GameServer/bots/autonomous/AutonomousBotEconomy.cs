@@ -299,6 +299,11 @@ namespace DOL.GS;
             if (bot.CharacterClass?.ID == (int)eCharacterClass.Savage &&
                 BotWeaponStats.IsMeleeWeapon((eObjectType)item.Object_Type))
                 bot.EnsureBotWeaponReady();
+            // The wielded weapon is cached: re-select the active slot so a new weapon there is the one used (2026-11-01
+            // run: a Sorcerer bought an elm quarterstaff and still fought with the trimmed branch now in its bag).
+            else if (equipSlot is eInventorySlot.RightHandWeapon or eInventorySlot.LeftHandWeapon or
+                     eInventorySlot.TwoHandWeapon or eInventorySlot.DistanceWeapon && !bot.IsAttacking)
+                bot.SwitchWeapon(bot.ActiveWeaponSlot);
             MarkInventoryChanged(bot);
             bot.MarkAutonomousStateDirty();
             AutonomousBotStatusPersistence.Queue(bot, true);
