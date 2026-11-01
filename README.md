@@ -78,7 +78,7 @@ is the result: the world database and the content files built from it.
   Isles entrances where the 1.64 client puts them.
 - Base classes at character creation: you choose your class when you promote at a trainer at level 5. You spend
   your own stat points, and choose your height, face and hair. The pre-game screens follow the 1.64 client.
-- Starting gear is a weapon and a training shield, from the town your race and class start in. There are 8
+- You begin in your race and class's period starting town, with a weapon and a training shield. There are 8
   character slots per realm.
 - Crafting from the 1.64 client's recipe list, with the period success rates, hand tools and salvage.
 - Gear wears and is repaired for coin, and arrows, throwing weapons and poisons are bought or crafted.
