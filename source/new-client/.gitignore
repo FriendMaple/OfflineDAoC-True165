@@ -1,0 +1,16 @@
+# Never in the repository (GitHub chat rules 2026-10-31): converted game content, Godot caches and exports,
+# developer flags, user data.
+godot/content/
+godot/.godot/
+godot/dev_mode.txt
+*.import
+save/
+tools/godot*/
+tools/dotnet*/
+tools/realesrgan/
+pipeline/_work/
+pipeline/data/
+pipeline/client_re/
+__pycache__/
+*.exe
+*.pck
