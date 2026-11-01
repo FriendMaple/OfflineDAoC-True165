@@ -172,8 +172,55 @@ def pack(files: dict[str, Path], root: str, folder: Path, prefix: str, numbered:
     return parts
 
 
+def old_groups(old: Path, kind: str, files: dict[str, Path], baseline: dict[str, str]):
+    """The previous release's grouping of these files: [(part entry, [rel...], unchanged)]. A file new since then goes
+    into the last group (or a new one when that would pass the budget)."""
+    manifest = json.loads((old / "download-manifest.json").read_text(encoding="utf-8"))
+    prefix = manifest["RootFolder"] + "/"
+    groups, placed = [], set()
+    for part in (p for p in manifest["Parts"] if p["Kind"] == kind):
+        with zipfile.ZipFile(old / part["Name"]) as zf:
+            members = [n[len(prefix):] for n in zf.namelist() if not n.endswith("/")]
+        kept = [r for r in members if r in files]
+        same = len(kept) == len(members) and all(sha(files[r]) == baseline.get(r) for r in kept)
+        groups.append([part, kept, same])
+        placed.update(kept)
+    for rel in sorted(set(files) - placed):
+        groups[-1][1].append(rel)
+        groups[-1][2] = False
+    return manifest["RootFolder"], groups
+
+
+def pack_like(files: dict[str, Path], old: Path, kind: str, baseline: dict[str, str], folder: Path,
+              budget: int) -> tuple[list[dict], int]:
+    """Pack like the previous release: a part whose files are all unchanged is the previous zip itself (same bytes,
+    so it needn't be uploaded again); a changed part is repacked under its old name."""
+    root, groups = old_groups(old, kind, files, baseline)
+    parts, reused = [], 0
+    for part, members, same in groups:
+        if same:
+            target = folder / part["Name"]
+            target.write_bytes((old / part["Name"]).read_bytes())
+            if sha(target).upper() != part["SHA256"]:
+                raise SystemExit(f"{part['Name']}: the previous release's file is damaged")
+            parts.append({k: part[k] for k in ("Name", "Bytes", "SHA256", "UnpackedBytes", "Files")})
+            reused += 1
+            print(f"  {part['Name']}: unchanged (the uploaded file is reused)", flush=True)
+            continue
+        name = part["Name"]
+        # one group, packed under the previous name (pack() names a single group <prefix>.zip)
+        new = pack({r: files[r] for r in members}, root, folder, name[:-len(".zip")], False, 1 << 62)
+        assert new[0]["Name"] == name
+        parts.append(new[0])
+        print(f"  {name}: CHANGED, repacked", flush=True)
+    return parts, reused
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--like", type=Path, help="a previous release folder (<assets>\\v<version>) to reuse unchanged "
+                        "parts from, with --like-baseline; the parts keep its names and root folder")
+    parser.add_argument("--like-baseline", type=Path)
     parser.add_argument("--game", type=Path, required=True)
     parser.add_argument("--client", type=Path, required=True)
     parser.add_argument("--repo", type=Path, required=True, help="this repository (for the player docs)")
@@ -205,10 +252,23 @@ def main():
     root = f"OfflineDAoC-True165-v{version}"
     game = {r: p for r, p in files.items() if not r.startswith("new-client/")}
     client = {r: p for r, p in files.items() if r.startswith("new-client/")}
-    print("Packing the game...", flush=True)
-    game_parts = pack(game, root, release, f"{root}-game", False, args.part_budget)
-    print("Packing the new client...", flush=True)
-    client_parts = pack(client, root, release, f"{root}-client", True, args.part_budget)
+    if args.like:
+        old = args.like.resolve()
+        old_baseline = {}
+        for line in args.like_baseline.read_text(encoding="utf-8").splitlines():
+            digest, rel = line.split("  ", 1)
+            old_baseline[rel] = digest
+        root = json.loads((old / "download-manifest.json").read_text(encoding="utf-8"))["RootFolder"]
+        print("Packing the game like the previous release...", flush=True)
+        game_parts, g_reused = pack_like(game, old, "game", old_baseline, release, args.part_budget)
+        print("Packing the new client like the previous release...", flush=True)
+        client_parts, c_reused = pack_like(client, old, "client", old_baseline, release, args.part_budget)
+        print(f"  {g_reused + c_reused} of {len(game_parts) + len(client_parts)} parts unchanged", flush=True)
+    else:
+        print("Packing the game...", flush=True)
+        game_parts = pack(game, root, release, f"{root}-game", False, args.part_budget)
+        print("Packing the new client...", flush=True)
+        client_parts = pack(client, root, release, f"{root}-client", True, args.part_budget)
 
     manifest = {
         "Product": "Offline DAoC True 1.65",
