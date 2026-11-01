@@ -7,7 +7,9 @@ hold). Its changelog has the history of everything this version inherits.
 
 ## 0.2 (not released yet)
 
-What's coming in the next version is listed here as it's made. Nothing has changed since v0.1 yet.
+What's coming in the next version is listed here as it's made.
+
+- Companions: a companion whose bow is taken away in the middle of a pull switches back to its melee weapons.
 
 v0.2 will come as an update to v0.1, not another full download: only the files that changed are downloaded, and your
 account, characters, companions and bots stay as they are.
