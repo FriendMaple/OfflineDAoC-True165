@@ -1,5 +1,5 @@
 extends Node
-## Offline check of the Mouse Look Toggle (True 1.65 Mode): a right click on open ground switches it on, the mouse
+## Offline check of the Mouse Look Toggle (True 1.65 Mode): off by default (Options > CONTROLS switch); then a right click on open ground switches it on, the mouse
 ## then turns the character with no button held, the next right click switches it off; a right drag still only steers.
 ##   Godot --path godot -- --skip-login --zone=<id> --world-mode=1.65 --probe=mouse_look_probe
 var viewer: Node
@@ -11,7 +11,10 @@ func _ready() -> void:
 	viewer = get_tree().current_scene
 	p = viewer.player
 	var sky := Vector2(get_viewport().get_visible_rect().size.x * 0.5, 12.0)
-	print("[mouse_look] bound to: ", Keybinds.bindings.get("mouse_look", []), "  on right: ", p.mouse_look_on_right())
+	print("[mouse_look] bound to: ", Keybinds.bindings.get("mouse_look", []), "  option on: ", p.mouse_look_allowed)
+	await _click(sky, Vector2.ZERO)
+	print("[mouse_look] option OFF (the default), a right click on open ground: on=%s captured=%s (expected off)" % [p.mouse_look, Input.mouse_mode == Input.MOUSE_MODE_CAPTURED])
+	p.mouse_look_allowed = true                          # Options > CONTROLS "MOUSE LOOK TOGGLE" switched on
 	await _click(sky, Vector2.ZERO)
 	print("[mouse_look] after a right click on open ground: on=%s captured=%s" % [p.mouse_look, Input.mouse_mode == Input.MOUSE_MODE_CAPTURED])
 	var yaw0 := p.char_yaw

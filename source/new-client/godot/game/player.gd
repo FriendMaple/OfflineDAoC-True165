@@ -121,6 +121,7 @@ var _lmb_world := false                # mouse buttons pressed on the world (not
 var _rmb_world := false
 var _cursor_at := Vector2.ZERO          # where the cursor was when a mouse-look drag began
 var mouse_look := false                 # the client's Mouse Look Toggle is on: the mouse turns you, no button held
+var mouse_look_allowed := false         # Options > CONTROLS "MOUSE LOOK TOGGLE" (off by default - owner 2026-11-01)
 var grounded := false
 var _air_time := 0.0                   # seconds off the ground (the falling pose waits a moment)
 var hold_frames := 12                   # after a spawn / teleport: stand still until the floors are in the physics world
@@ -173,6 +174,7 @@ func _ready() -> void:
 	set_torch(bool(cfg.get_value("player", "torch", true)))
 	mouse_sensitivity = float(cfg.get_value("player", "mouse_sensitivity", 1.0))
 	invert_mouse = bool(cfg.get_value("player", "invert_mouse", false))
+	mouse_look_allowed = bool(cfg.get_value("player", "mouse_look_toggle", false))
 	_register_torch.call_deferred()
 
 	_pivot = Node3D.new()
@@ -725,7 +727,7 @@ func _over_window() -> bool:
 ## The client's Mouse Look Toggle (True 1.65 Mode): on, the cursor hides and moving the mouse turns the view and
 ## the character, as a held right button does; off, the cursor comes back where it was.
 func set_mouse_look(on: bool) -> void:
-	if on and (not input_enabled or dead or Server.world_mode != "1.65"):
+	if on and (not input_enabled or dead or not mouse_look_allowed or Server.world_mode != "1.65"):
 		on = false
 	if on == mouse_look:
 		return
@@ -743,7 +745,8 @@ func set_mouse_look(on: bool) -> void:
 
 ## Mouse Look Toggle is on the right mouse button (its default): the world's right click toggles it (zone_viewer).
 func mouse_look_on_right() -> bool:
-	return Server.world_mode == "1.65" and "Right Mouse" in (Keybinds.bindings.get("mouse_look", []) as Array)
+	return mouse_look_allowed and Server.world_mode == "1.65" \
+			and "Right Mouse" in (Keybinds.bindings.get("mouse_look", []) as Array)
 
 
 func _unhandled_input(event: InputEvent) -> void:

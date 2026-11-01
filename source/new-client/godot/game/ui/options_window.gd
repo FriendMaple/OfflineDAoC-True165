@@ -435,6 +435,15 @@ func _controls() -> void:
 		_save("player", "invert_mouse", v)
 		if ui and ui.player:
 			ui.player.set("invert_mouse", v)))
+	if Server.world_mode == "1.65":                    # the original's Mouse Look Toggle, off until you switch it on
+		_row("MOUSE LOOK TOGGLE", _toggle(bool(settings.get_value("player", "mouse_look_toggle", false)),
+				func(v: bool):
+			_save("player", "mouse_look_toggle", v)
+			if ui and ui.player:
+				ui.player.set("mouse_look_allowed", v)
+				if not v:
+					ui.player.call("set_mouse_look", false)))
+		_hint("ON: THE MOUSE LOOK TOGGLE KEY (RIGHT MOUSE, AS THE ORIGINAL - A RIGHT CLICK ON OPEN GROUND) HIDES THE CURSOR AND THE MOUSE TURNS YOU; PRESS IT AGAIN OR ESC TO GET THE CURSOR BACK. OFF: RIGHT CLICK ONLY STEERS AND USES THINGS.")
 	_heading("KEY CONFIGURATION")
 	# shared by every character unless this one has its own (the WoW-style override, off by default)
 	if not pregame:                                    # (no character yet on the character select screen)
