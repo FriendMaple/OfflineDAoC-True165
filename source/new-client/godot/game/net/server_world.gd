@@ -1605,8 +1605,11 @@ func _spell_effect(d: Dictionary) -> void:
 	_burst[key] = now
 	var quiet := int(d.get("no_sound", 0)) != 0                 # the server's "no sound" (a song's pulses)
 	var cast_snd: CharacterSounds = null if repeat or quiet else _sounds_of(caster)
+	# (the target held weakly: a view freed before it lands - a companion revived beside you, its old body let go - is
+	# no target, not a freed capture)
+	var target_ref: WeakRef = weakref(target) if target else null
 	var land := func():
-		var t: Node3D = target
+		var t: Node3D = target_ref.get_ref() as Node3D if target_ref else null
 		if t == null and by_oid.has(toid):
 			t = await _view_soon(toid)                     # just created (a summoned pet): its view is still loading
 		if t and is_instance_valid(t):
