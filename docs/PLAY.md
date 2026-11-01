@@ -24,7 +24,7 @@ True 1.65 is a fresh start: saves from Offline DAoC 0.37 and earlier can't be br
 
 ## 2. Play
 
-1. Open your game folder and double-click the start file. The launcher shows **VERSION 0.1**.
+1. Open your game folder and double-click **START OFFLINE DAOC TRUE 1.65.cmd**. The launcher shows **VERSION 0.1**.
 2. Click **START SERVER** and wait until it says **RUNNING**. The first start sets up the world and can take a few
    minutes.
 3. Click **ENTER REALM**. The game opens in the new client. Your own local account is created automatically the

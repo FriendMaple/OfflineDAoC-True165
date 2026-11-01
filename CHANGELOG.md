@@ -111,7 +111,8 @@ most of the systems below have been tested in autonomous bot runs, but not yet b
   and regeneration.
 - **Armour works like a player's.** Before, a bot's armour did nothing when it was hit.
 - They start with their class's period starting weapon only, buy their armour from vendors when they can afford it,
-  and plan trips for upgrades.
+  and plan trips for upgrades. A bot that walks to the merchant its plan names is served there at once, and it
+  wields a weapon it buys straight away.
 - Arrows, bolts and poisons come from their bags and are restocked on town errands.
 - Their gear wears and is repaired, for coin, by a smith or by crafting.
 - **Deaths cost them:** Constitution loss on a PvE release (once per death, at most 3 points), resurrection sickness,
@@ -121,7 +122,8 @@ most of the systems below have been tested in autonomous bot runs, but not yet b
 - About 1 in 5 bots craft: they make real recipes, gain skill, and list what they make on the Realm Exchange.
   Siegecrafters supply the siege crews.
 - Camps and pulls:
-  - solo bots pull from range;
+  - solo bots pull from range: only a shot that reaches the monster counts (a miss or a resist still does), and a
+    monster that takes no notice within 3 seconds is pulled the ordinary way;
   - camps are chosen by challenge colour;
   - grey targets are a last resort;
   - outleveled camps are left alone for 30 minutes.

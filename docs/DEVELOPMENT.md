@@ -19,8 +19,8 @@ anything.
 
 The repository holds the source and the content, not the binaries or the large generated files.
 
-**Cloning on Windows:** some server paths are long. Turn on long paths before you clone
-(`git config --global core.longpaths true`), or clone into a short folder such as `C:\src\`.
+**Cloning on Windows:** clone into a short folder, such as `C:\src\`. If Git reports "Filename too long", turn on
+long paths (`git config --global core.longpaths true`) and clone again.
 
 To get a game you can run from your clone:
 
@@ -370,6 +370,12 @@ Useful log tags:
 A release is the clean runtime folder plus the new client, as checked parts with a downloader. Nothing has been
 released yet. This is the plan the first release follows.
 
+`development-source/tools/build_release_true165.py` builds the game package from a working install: `runtime/`
+(the launcher, server, both navmesh sets, the True 1.65 content and the clean world), `tools/dotnet` (.NET 10:
+the host and the NETCore, WindowsDesktop and AspNetCore runtimes) and `START OFFLINE DAOC TRUE 1.65.cmd`. It leaves
+out everything in the never-ships list below. The new client is packaged separately into `new-client/` beside
+`runtime/`.
+
 **Ships:**
 - the launcher, with SQLite;
 - the server binaries (`runtime/server` and `lib/`);
@@ -380,8 +386,8 @@ released yet. This is the plan the first release follows.
 - the clean world from `database/make_clean_db.py`;
 - the new client (`new-client/`, with no `save/` folder and no `dev_mode.txt`);
 - a bundled .NET 10 in `tools/dotnet`;
-- one start file that sets `DOTNET_ROOT`, `DOTNET_ROOT_X64` and `DOTNET_MULTILEVEL_LOOKUP=0`, then starts
-  `runtime/OfflineDAoC.exe`.
+- `START OFFLINE DAOC TRUE 1.65.cmd`, which sets `DOTNET_ROOT`, `DOTNET_ROOT_X64` and `DOTNET_MULTILEVEL_LOOKUP=0`,
+  then starts `runtime/OfflineDAoC.exe`.
 
 **Never ships:**
 - logs, every `*.before-*` backup, `deployment-backups`, `mode-switch-backups`, `keep-relic-reset-backups`;

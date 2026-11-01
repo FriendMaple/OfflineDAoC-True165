@@ -150,8 +150,8 @@ ones marked. Both files will be in your game folder too.
   - `tools/claude-version/true165` and `runtime/true165`: the generators and the True 1.65 world content they make.
   - `database`: the clean world database.
   - `source/new-client`: the new client (Godot 4 project and its content pipeline).
-- **Cloning on Windows:** turn on long paths first (`git config --global core.longpaths true`), or clone into a
-  short folder.
+- **Cloning on Windows:** clone into a short folder, such as `C:\src\`. If Git reports "Filename too long", turn on
+  long paths (`git config --global core.longpaths true`) and clone again.
 
 ## Good to know
 
