@@ -17,9 +17,7 @@
 > **This is an AI-made project.** All of its code was written by AI tools (Codex, then Claude). The project owner
 > has no game development or coding experience: they directed the work and play-tested it. Expect bugs.
 >
-> **The v0.1 download is temporarily pulled while a bug is fixed.** A fixed version will be up soon.
->
-> **v0.1 is an early version.** Large parts of the game haven't been played through by a person yet.
+> **v0.1 is out, and it's an early version.** Large parts of the game haven't been played through by a person yet.
 > Expect bugs, and keep a backup of your save. Bug reports are welcome in [Issues](https://github.com/shadowofze/OfflineDAoC-True165/issues).
 
 # Offline DAoC True 1.65: single-player Dark Age of Camelot as of patch 1.65
@@ -33,8 +31,6 @@ project adds to the OpenDAoC server was written by AI tools (Codex, then Claude)
 project owner, who has no game development or coding experience, directed and play-tested it.
 
 ## Download and play
-
-> The download is temporarily unavailable while a bug is fixed. These steps apply again once the fixed version is up.
 
 **[Download v0.1](https://github.com/shadowofze/OfflineDAoC-True165/releases/latest)**, no Git or AI tools needed:
 
