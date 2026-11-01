@@ -379,14 +379,17 @@ namespace DOL.GS
             if (bot?.Inventory == null || changed is not (eInventorySlot.RightHandWeapon or eInventorySlot.LeftHandWeapon or
                     eInventorySlot.TwoHandWeapon or eInventorySlot.DistanceWeapon))
                 return;
-            if (bot.ActiveWeaponSlot == eActiveWeaponSlot.Distance)
-            {
-                if (changed == eInventorySlot.DistanceWeapon)
-                    bot.SwitchWeapon(eActiveWeaponSlot.Distance);
-                return;
-            }
             bool oneHand = BotWeaponStats.CanUseMelee(bot, bot.Inventory.GetItem(eInventorySlot.RightHandWeapon));
             bool twoHand = BotWeaponStats.CanUseMelee(bot, bot.Inventory.GetItem(eInventorySlot.TwoHandWeapon));
+            if (bot.ActiveWeaponSlot == eActiveWeaponSlot.Distance)
+            {
+                if (changed != eInventorySlot.DistanceWeapon)
+                    return;
+                // its bow taken away mid-pull: back to its melee weapons rather than a ranged stance with nothing
+                bot.SwitchWeapon(bot.Inventory.GetItem(eInventorySlot.DistanceWeapon) != null ? eActiveWeaponSlot.Distance
+                    : !oneHand && twoHand ? eActiveWeaponSlot.TwoHanded : eActiveWeaponSlot.Standard);
+                return;
+            }
             eActiveWeaponSlot want = bot.ActiveWeaponSlot;
             if (changed == eInventorySlot.TwoHandWeapon && twoHand)
                 want = eActiveWeaponSlot.TwoHanded;
