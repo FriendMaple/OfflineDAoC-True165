@@ -29,10 +29,10 @@ var _host_label: Label
 var _host_check := 0.0
 
 
-## The game's window title (owner 2026-10-30: 0.38 is now the only version). Set on the root window, which keeps it
+## The game's window title (owner 2026-10-31: "Offline DAoC True 1.65 v0.1" - True 1.65 is the game now). Set on the root window, which keeps it
 ## (window_set_title alone was reset to the project name); a debug Godot binary - the one the launcher runs - adds
 ## " (DEBUG)" to a Window's title, so the screen's own title is set again without it once the window has applied its own.
-const GAME_TITLE := "Offline DAoC Rebuilt v0.38"
+const GAME_TITLE := "Offline DAoC True 1.65 v0.1"
 
 
 static func set_game_title(w: Window) -> void:
@@ -359,9 +359,9 @@ func _build_panel() -> void:
 	add_child(version)
 
 
-## Top right: the version (Offline DAoC Rebuilt - the launcher runs the server).
+## Top right: the version (the window title, in capitals - the launcher runs the server).
 func _show_host() -> void:
-	_host_label.text = "OFFLINE DAOC REBUILT V0.36C"
+	_host_label.text = GAME_TITLE.to_upper()
 	_host_label.add_theme_color_override("font_color", Color(CREAM, 0.55))
 
 
