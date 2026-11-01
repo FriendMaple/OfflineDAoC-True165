@@ -39,6 +39,16 @@ namespace DOL.GS
                 !bot.IsAlive || bot.InCombat || bot.IsAttacking || bot.IsCasting || bot.IsCrowdControlled ||
                 bot.castingComponent?.HasPendingSkillRequests == true) return false;
             int level = EligibleLevel(bot.Level, bot.GetModifiedSpecLevel(Specs.Envenom));
+            // A hired companion uses the vials its player put in its bag, any kind, top to bottom (slot 1 first), on the
+            // weapons it is holding, and only on a weapon with no charges left, so no coat is wasted (owner 2026-11-01).
+            if (HiredCompanions165.IsHired(bot))
+            {
+                bool coated = false;
+                foreach (eInventorySlot slot in WieldedWeaponSlots(bot))
+                    coated |= Supplies165.CoatFromVial(bot, slot, level, _ => true, bagOrder: true);
+                if (coated) Changed(bot);
+                return coated;
+            }
             // True 1.65 Mode: only real vials from the bag, used up (Supplies165); no free coats
             if (Classic165Mode.IsOn)
             {
@@ -63,6 +73,14 @@ namespace DOL.GS
             if (changed) Changed(bot);
             return changed;
         }
+
+        /// <summary>The weapons the bot fights with now: the two-hander, or the main hand and a left-hand weapon.</summary>
+        private static IEnumerable<eInventorySlot> WieldedWeaponSlots(GameBot bot) => bot.ActiveWeaponSlot switch
+        {
+            eActiveWeaponSlot.TwoHanded => [eInventorySlot.TwoHandWeapon],
+            eActiveWeaponSlot.Standard => [eInventorySlot.RightHandWeapon, eInventorySlot.LeftHandWeapon],
+            _ => [],
+        };
 
         private static bool Apply(GameBot bot, eInventorySlot slot, Coat coat)
         {

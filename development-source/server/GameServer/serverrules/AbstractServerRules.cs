@@ -888,7 +888,9 @@ namespace DOL.GS.ServerRules
 
                 //misc
                 case eObjectType.Magical: return true;
-                case eObjectType.Shield: return living.GetAbilityLevel(Abilities.Shield) >= item.Type_Damage;
+                // every shield needs the shield skill: a size left at 0 counts as small (1), so a class without shields
+                // can't carry one (audit 2026-11-01: five tower and round shields had size 0)
+                case eObjectType.Shield: return living.GetAbilityLevel(Abilities.Shield) >= Math.Max(1, item.Type_Damage);
                 case eObjectType.Bolt: abilityCheck = Abilities.Weapon_Crossbow; break;
                 case eObjectType.Arrow: otherCheck = new string[] { Abilities.Weapon_CompositeBows, Abilities.Weapon_Longbows, Abilities.Weapon_RecurvedBows, Abilities.Weapon_Shortbows }; break;
                 case eObjectType.Poison: return living.GetModifiedSpecLevel(Specs.Envenom) > 0;

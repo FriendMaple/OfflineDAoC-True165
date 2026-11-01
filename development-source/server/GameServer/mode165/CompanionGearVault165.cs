@@ -106,7 +106,7 @@ namespace DOL.GS
             if (fromBag && Ours(toClientSlot))
                 problem = HiredCompanions165.IsBagSlot(CompanionSlot(toClientSlot))
                     ? CompanionWindows165.PutInBag(player, _bot, (int)fromClientSlot, CompanionSlot(toClientSlot))   // onto its bag
-                    : CompanionWindows165.Equip(player, _bot, (int)fromClientSlot);                                    // onto its gear
+                    : CompanionWindows165.Equip(player, _bot, (int)fromClientSlot, CompanionSlot(toClientSlot));      // onto its gear
             else if (Ours(fromClientSlot) && toBag)
                 problem = CompanionWindows165.Unequip(player, _bot, CompanionSlot(fromClientSlot), (int)toClientSlot);
             // moves inside the window: the companion wears each piece where it belongs, nothing to do

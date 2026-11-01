@@ -184,10 +184,12 @@ namespace DOL.GS
                 "gear" => null,
                 "vault" => null,
                 "pick" => Pick(player, bot, hired, Arg(3)),
-                "equip" => Equip(player, bot, Arg(3)),
+                "equip" => Equip(player, bot, Arg(3), Arg(4)),
                 "bag" => PutInBag(player, bot, Arg(3), Arg(4)),
                 "unequip" => Unequip(player, bot, Arg(3)),
-                "swap" => Unequip(player, bot, Arg(3)) ?? Equip(player, bot, Arg(4)),
+                // onto a worn slot: Equip hands the piece worn there back into the backpack slot the new one leaves (it
+                // used to take the worn piece off first, which left it off when the new one went elsewhere or to the bag)
+                "swap" => Equip(player, bot, Arg(4), Arg(3)),
                 "stats" => null,
                 "repair" => AskRepair(player, [bot]),
                 "train" => Train(bot, Arg(3)),
@@ -261,7 +263,7 @@ namespace DOL.GS
         }
 
         /// <summary>From the player's backpack onto the companion (what it was wearing there goes to the player).</summary>
-        internal static string Equip(GamePlayer player, GameBot bot, int bagSlot)
+        internal static string Equip(GamePlayer player, GameBot bot, int bagSlot, int wantedSlot = -1)
         {
             if (bagSlot is < (int)eInventorySlot.FirstBackpack or > (int)eInventorySlot.LastBackpack)
                 return "Drag an item from your backpack.";
@@ -273,6 +275,10 @@ namespace DOL.GS
             // what it can't wear goes into its bag (arrows, poisons, potions...); "bag" puts a wearable piece there too
             if (!AutonomousBotEconomy.CanWear(bot, item, out eInventorySlot slot))
                 return PutInBag(player, bot, bagSlot);
+            // the slot the player dropped it on, when it can go there (a dual wielder's second weapon, a ring's hand);
+            // otherwise the slot it belongs in (owner 2026-11-01: "not the slot I told it to")
+            if (AutonomousBotEconomy.FitsChosenSlot(bot, item, wantedSlot))
+                slot = (eInventorySlot)wantedSlot;
             // what it wore there takes the backpack slot the new item leaves
             DbInventoryItem worn = bot.Inventory.GetItem(slot);
             lock (player.Inventory.Lock)
@@ -295,6 +301,7 @@ namespace DOL.GS
                 }
             }
             Saved(player, bot, item, worn);
+            ReadyWeapons(bot, slot);
             return null;
         }
 
@@ -353,12 +360,45 @@ namespace DOL.GS
                 }
             }
             Saved(player, bot, null, item);
+            ReadyWeapons(bot, (eInventorySlot)slot);
             return null;
         }
 
         /// <summary>An item coming back from a companion as a player item (GameInventoryItem), so it wears on the player
         /// at once instead of only after a relog (audit 2026-10-31).</summary>
         private static DbInventoryItem ForPlayer(DbInventoryItem item) => item as GameInventoryItem ?? GameInventoryItem.Create(item);
+
+        /// <summary>
+        /// After the player changed a weapon slot, the companion fights with what it was just given: a two-hander given
+        /// makes it use the two-hander, a one-hander or shield given the weapon-and-shield set; a set taken away falls
+        /// back to the other one. A bow or instrument in use (a pull, a song) is left as it is; the weapon set is
+        /// re-selected so the cached weapon is the one now in the slot.
+        /// </summary>
+        private static void ReadyWeapons(GameBot bot, eInventorySlot changed)
+        {
+            if (bot?.Inventory == null || changed is not (eInventorySlot.RightHandWeapon or eInventorySlot.LeftHandWeapon or
+                    eInventorySlot.TwoHandWeapon or eInventorySlot.DistanceWeapon))
+                return;
+            if (bot.ActiveWeaponSlot == eActiveWeaponSlot.Distance)
+            {
+                if (changed == eInventorySlot.DistanceWeapon)
+                    bot.SwitchWeapon(eActiveWeaponSlot.Distance);
+                return;
+            }
+            bool oneHand = BotWeaponStats.CanUseMelee(bot, bot.Inventory.GetItem(eInventorySlot.RightHandWeapon));
+            bool twoHand = BotWeaponStats.CanUseMelee(bot, bot.Inventory.GetItem(eInventorySlot.TwoHandWeapon));
+            eActiveWeaponSlot want = bot.ActiveWeaponSlot;
+            if (changed == eInventorySlot.TwoHandWeapon && twoHand)
+                want = eActiveWeaponSlot.TwoHanded;
+            else if (changed is eInventorySlot.RightHandWeapon or eInventorySlot.LeftHandWeapon && oneHand)
+                want = eActiveWeaponSlot.Standard;
+            else if (want == eActiveWeaponSlot.TwoHanded && !twoHand && oneHand)
+                want = eActiveWeaponSlot.Standard;
+            else if (want == eActiveWeaponSlot.Standard && !oneHand && twoHand)
+                want = eActiveWeaponSlot.TwoHanded;
+            if (changed != eInventorySlot.DistanceWeapon)
+                bot.SwitchWeapon(want);
+        }
 
         private static void Saved(GamePlayer player, GameBot bot, DbInventoryItem given, DbInventoryItem returned)
         {
@@ -367,6 +407,7 @@ namespace DOL.GS
                 returned.Dirty = true;
                 GameServer.Database.SaveObject(returned);
             }
+            AutonomousBotEconomy.MoveStrayOffhandWeapon(bot);
             bot.RefreshItemBonuses();
             bot.BroadcastLivingEquipmentUpdate();
             bot.MarkAutonomousStateDirty();

@@ -179,16 +179,28 @@ namespace DOL.GS
             vial?.PoisonSpellID > 0 ? SkillBase.GetSpellByID(vial.PoisonSpellID) : null;
 
         /// <summary>Coats one weapon from the best usable vial in the bag (its own charges), using the vial up.</summary>
-        public static bool CoatFromVial(GameBot bot, eInventorySlot slot, eSpellType type, int envenomLevel)
+        public static bool CoatFromVial(GameBot bot, eInventorySlot slot, eSpellType type, int envenomLevel) =>
+            CoatFromVial(bot, slot, envenomLevel, i => PoisonSpell(i)?.SpellType == type);
+
+        /// <summary>
+        /// Coats one weapon from the best vial in the bag that <paramref name="wanted"/> accepts, with a player's rules
+        /// (GamePlayer.ApplyPoison): Envenom trained, the vial's level within both its Envenom spec and its level (the
+        /// caller's <paramref name="envenomLevel"/>), a weapon it can use, not a thrown weapon or crossbow, an
+        /// uncoated weapon. The vial's own charges; the vial is used up.
+        /// </summary>
+        public static bool CoatFromVial(GameBot bot, eInventorySlot slot, int envenomLevel, System.Func<DbInventoryItem, bool> wanted,
+            bool bagOrder = false)
         {
             DbInventoryItem weapon = bot.Inventory?.GetItem(slot);
-            if (weapon == null || weapon.PoisonCharges > 0 || !BotWeaponStats.FitsConfiguredSlot(bot, weapon, slot))
+            if (envenomLevel < 1 || weapon == null || weapon.PoisonCharges > 0 || !GamePlayer.CanPoisonWeapon(weapon.Object_Type) ||
+                !BotWeaponStats.FitsConfiguredSlot(bot, weapon, slot))
                 return false;
-            DbInventoryItem vial = bot.Inventory.AllItems
+            var vials = bot.Inventory.AllItems
                 .Where(i => i != null && i.Object_Type == (int)eObjectType.Poison && i.Level <= envenomLevel &&
                             i.SlotPosition is >= (int)eInventorySlot.FirstBackpack and <= (int)eInventorySlot.LastBackpack &&
-                            PoisonSpell(i)?.SpellType == type)
-                .OrderByDescending(i => i.Level).FirstOrDefault();
+                            PoisonSpell(i) != null && wanted(i));
+            // a companion uses its bag top to bottom (slot 1 first, owner 2026-11-01); a gamebot its best vial
+            DbInventoryItem vial = (bagOrder ? vials.OrderBy(i => i.SlotPosition) : vials.OrderByDescending(i => i.Level)).FirstOrDefault();
             if (vial == null)
                 return false;
             weapon.PoisonSpellID = vial.PoisonSpellID;

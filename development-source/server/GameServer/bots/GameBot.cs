@@ -3022,6 +3022,9 @@ namespace DOL.GS
                 AutonomousBotRegistry.Register(this);
                 AutonomousStuckWatchdog.Register(this);
             }
+            // a weapon a non-dual-wielder was given in its left hand moves to its empty main hand (2026-11-01)
+            if (!IsIntentionalWorldMove)
+                AutonomousBotEconomy.MoveStrayOffhandWeapon(this);
             return true;
         }
 

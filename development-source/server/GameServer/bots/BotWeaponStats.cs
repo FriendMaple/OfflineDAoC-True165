@@ -51,6 +51,10 @@ namespace DOL.GS
             // legally use; the weapon plan is for the class it is heading for (owner 2026-10-31).
             if (bot.IsBaseClass165 || bot.IsPeriodStarter165(item))
                 return HasConfiguredWeaponProficiency(bot, item);
+            // A hired companion's gear is the player's choice: any weapon its class can use, as for a player of that
+            // class (owner 2026-11-01); the build's weapon plan is only for what gamebots buy.
+            if (HiredCompanions165.IsHired(bot))
+                return HasConfiguredWeaponProficiency(bot, item);
 
             eObjectType type = (eObjectType)item.Object_Type;
             return MatchesBuild(spec, type);
@@ -74,7 +78,7 @@ namespace DOL.GS
             bot != null && item?.Template != null &&
             IsConfiguredMeleeWeapon(bot, item.Template) &&
             HasFunctionalMeleeStats(item) &&
-            item.LevelRequirement <= bot.Level &&
+            (item.LevelRequirement <= bot.Level || HiredCompanions165.IsHired(bot)) &&   // as a player wields it
             HasConfiguredWeaponProficiency(bot, item.Template);
 
         /// <summary>
@@ -109,7 +113,8 @@ namespace DOL.GS
                 (item.Item_Type == Slot.TWOHAND || item.Hand == 1)) return false;
             if (slot == eInventorySlot.TwoHandWeapon && item.Item_Type != Slot.TWOHAND) return false;
             // A Berserker's left-axe plan doesn't bind a Viking that hasn't been promoted, or its period starter.
-            bool leftAxePlan = bot.BotSpec?.SpecType == eSpecType.LeftAxe && !bot.IsBaseClass165 && !bot.IsPeriodStarter165(item.Template);
+            bool leftAxePlan = bot.BotSpec?.SpecType == eSpecType.LeftAxe && !bot.IsBaseClass165 && !bot.IsPeriodStarter165(item.Template) &&
+                               !HiredCompanions165.IsHired(bot);   // a companion's hands are the player's choice
             if (slot == eInventorySlot.LeftHandWeapon && leftAxePlan)
                 return item.Object_Type is (int)eObjectType.Axe or (int)eObjectType.LeftAxe;
             if (slot is eInventorySlot.RightHandWeapon or eInventorySlot.TwoHandWeapon && leftAxePlan)
