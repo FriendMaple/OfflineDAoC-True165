@@ -1,0 +1,112 @@
+{
+ "table": "Path",
+ "key": "Path_ID",
+ "reason": "True 1.65 Mode traveler's inn patrols (inn layout paths)",
+ "rows": [
+  {
+   "Path_ID": "true165_inn_alb_yard-path",
+   "PathID": "true165_inn_alb_yard",
+   "PathType": 2,
+   "RegionID": 1,
+   "LastTimeRowUpdated": "2026-10-30 00:00:00"
+  },
+  {
+   "Path_ID": "true165_inn_alb_road-path",
+   "PathID": "true165_inn_alb_road",
+   "PathType": 2,
+   "RegionID": 1,
+   "LastTimeRowUpdated": "2026-10-30 00:00:00"
+  },
+  {
+   "Path_ID": "true165_adv_2f949a26-713c-52f8-a2f3-3be13dad012a-path",
+   "PathID": "true165_adv_2f949a26-713c-52f8-a2f3-3be13dad012a",
+   "PathType": 2,
+   "RegionID": 1,
+   "LastTimeRowUpdated": "2026-10-30 00:00:00"
+  },
+  {
+   "Path_ID": "true165_adv_dbc66cd4-1aca-532c-a6e6-ba9b76bf159f-path",
+   "PathID": "true165_adv_dbc66cd4-1aca-532c-a6e6-ba9b76bf159f",
+   "PathType": 2,
+   "RegionID": 1,
+   "LastTimeRowUpdated": "2026-10-30 00:00:00"
+  },
+  {
+   "Path_ID": "true165_adv_cc6a73ba-2a6e-5674-9894-498d90435904-path",
+   "PathID": "true165_adv_cc6a73ba-2a6e-5674-9894-498d90435904",
+   "PathType": 2,
+   "RegionID": 1,
+   "LastTimeRowUpdated": "2026-10-30 00:00:00"
+  },
+  {
+   "Path_ID": "true165_inn_hib_yard-path",
+   "PathID": "true165_inn_hib_yard",
+   "PathType": 2,
+   "RegionID": 200,
+   "LastTimeRowUpdated": "2026-10-30 00:00:00"
+  },
+  {
+   "Path_ID": "true165_inn_hib_road-path",
+   "PathID": "true165_inn_hib_road",
+   "PathType": 2,
+   "RegionID": 200,
+   "LastTimeRowUpdated": "2026-10-30 00:00:00"
+  },
+  {
+   "Path_ID": "true165_adv_d7d1ff4d-ff07-565a-a83d-734ce132dd20-path",
+   "PathID": "true165_adv_d7d1ff4d-ff07-565a-a83d-734ce132dd20",
+   "PathType": 2,
+   "RegionID": 200,
+   "LastTimeRowUpdated": "2026-10-30 00:00:00"
+  },
+  {
+   "Path_ID": "true165_adv_e3a07362-a1ca-595c-9671-de1fdec85231-path",
+   "PathID": "true165_adv_e3a07362-a1ca-595c-9671-de1fdec85231",
+   "PathType": 2,
+   "RegionID": 200,
+   "LastTimeRowUpdated": "2026-10-30 00:00:00"
+  },
+  {
+   "Path_ID": "true165_adv_02afe5c8-13a3-5156-8777-b1e4cdb9c4ae-path",
+   "PathID": "true165_adv_02afe5c8-13a3-5156-8777-b1e4cdb9c4ae",
+   "PathType": 2,
+   "RegionID": 200,
+   "LastTimeRowUpdated": "2026-10-30 00:00:00"
+  },
+  {
+   "Path_ID": "true165_inn_mid_yard-path",
+   "PathID": "true165_inn_mid_yard",
+   "PathType": 2,
+   "RegionID": 100,
+   "LastTimeRowUpdated": "2026-10-30 00:00:00"
+  },
+  {
+   "Path_ID": "true165_inn_mid_road-path",
+   "PathID": "true165_inn_mid_road",
+   "PathType": 2,
+   "RegionID": 100,
+   "LastTimeRowUpdated": "2026-10-30 00:00:00"
+  },
+  {
+   "Path_ID": "true165_adv_f385e10c-266e-5a21-81b4-9e7dee36685f-path",
+   "PathID": "true165_adv_f385e10c-266e-5a21-81b4-9e7dee36685f",
+   "PathType": 2,
+   "RegionID": 100,
+   "LastTimeRowUpdated": "2026-10-30 00:00:00"
+  },
+  {
+   "Path_ID": "true165_adv_eb73f495-c735-5038-8770-9aef7922ced9-path",
+   "PathID": "true165_adv_eb73f495-c735-5038-8770-9aef7922ced9",
+   "PathType": 2,
+   "RegionID": 100,
+   "LastTimeRowUpdated": "2026-10-30 00:00:00"
+  },
+  {
+   "Path_ID": "true165_adv_61d24274-4df3-5fec-a045-df03d26e7c43-path",
+   "PathID": "true165_adv_61d24274-4df3-5fec-a045-df03d26e7c43",
+   "PathType": 2,
+   "RegionID": 100,
+   "LastTimeRowUpdated": "2026-10-30 00:00:00"
+  }
+ ]
+}

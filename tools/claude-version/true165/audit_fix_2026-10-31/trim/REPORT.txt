@@ -1,0 +1,42 @@
+TRIM OF OVER-DENSE RESTORED SPAWN GROUPS (spawns agent, owner-approved rule, 2026-10-31)
+
+Rule: in every restored monster+zone group that has CapnBry radar data, live (pre-existing, non-restored) + restored
+spawns must not exceed ceil(clusters * 1.15). Clusters = distinct CapnBry sighting positions merged within 300 units
+(same name match as the restore: case-insensitive, singular/plural; zone-local coords + zone offsets).
+- Pre-existing live rows are never dropped; only restored rows (PackageID true165-restored) are.
+- Allowed restored rows per group = max(0, cap - live). Kept first: one restored row per radar cluster not already covered
+  (no spawn within 400 units), always the closest row/cluster pair; then the remaining slots go to the rows nearest any
+  radar position (ties by Mob_ID, deterministic).
+- Groups without radar data and groups already within the cap: unchanged. Named uniques were already at 1 (none trimmed).
+- Live counts are from AUDIT\fix\coord\run5.db (post-install), every Mob row that is not true165-restored (incl. the
+  453 true165-period-new rows).
+
+Result: base AUDIT\fix\stage3\add-restoredspawns165.json 16,838 rows -> 15,761 rows; 1,077 dropped in 59 groups.
+The new file simply no longer lists them, so the launcher's stale-row step deletes them; no rule needed.
+Dropped Mob_IDs: dropped_ids.json. Per group: trimmed.csv (group, zone, clusters, cap, live_not_restored, before, after, dropped).
+
+By zone (rows dropped / groups):
+  Breifine 258 / 8          Odin's Gate 167 / 6       Yggdra Forest 164 / 6     Hadrian's Wall 99 / 1
+  Uppland 80 / 6            Snowdonia 65 / 1          Pennine Mountains 64 / 7  Lyonesse 45 / 3
+  Gotar 28 / 1              Silvermine Mts. 18 / 1    Muire Tomb 16 / 2         Emain Macha 14 / 3
+  Vanern Swamp 11 / 2       Vendo Caverns 10 / 2      Jamtland Mountains 9 / 2  Lough Derg 7 / 1
+  Muspelheim 6 / 2          Skona Ravine 6 / 3        Stonehenge Barrows 5 / 1  West Svealand 5 / 1
+Biggest: fomorian gehk Breifine 110 -> 2, albion waylayer Hadrian's Wall 163 -> 64, aged boreal cockatrice Odin's Gate
+74 -> 9, Arawnite shamaness Snowdonia 67 -> 2, ghastly Albion invader Yggdra 55 -> 10, fomorian cyclen Breifine 47 -> 2.
+
+Note for the owner: 33 trimmed groups (531 of the 1,077 rows) rest on only 1-2 radar clusters, i.e. CapnBry saw the
+monster once or twice in that zone (e.g. fomorian gehk, fomorian cyclen, ghastly Midgard invader in Breifine; Arawnite
+shamaness Snowdonia; shadowhunter Pennine; fossegrim Yggdra; lesser telamon Lyonesse). The rule cuts those to 2-3 spawns.
+That follows the approved rule, but a single sighting is thin evidence of how many there were (radar coverage was
+partial); if those zones look empty in play, these are the groups to revisit (trimmed.csv, clusters <= 2).
+
+TEST (AUDIT\fix\coord\dryrun.py, all on copies; content folder = copy of stage3 with the new file: content_trim\)
+- control: stage3 as installed on run5.db -> add-restoredspawns165: 0 inserted / 16838 updated / 0 stale.
+- run 1: trimmed content on run5.db -> 0 / 15761 / 1077 stale deleted. quick_check ok.
+  Compared with the control output (compare.py, table contents; generated LootTemplate keys/timestamps ignored):
+  only Mob (-1077 rows) and offline_true165_added (-1077 rows) differ. No other table touched.
+- run 2: trimmed content on the run-1 output -> 0 / 15761 / 0. Only difference: the 3 "Realm Exchange moves to the
+  traveler's inns" archive rows + their 3 re-adds, which happen on EVERY refresh with the installed content too (control
+  and run5 show the same 3): add-inns165.json re-inserts 3 Mob rows that the Realm Exchange package/class rule archives
+  again each time. Pre-existing churn, not from this file; worth a look by whoever owns add-inns165.json.
+The test DB copies were deleted afterwards (ctrl.txt / t1.txt / t2.txt keep the dry-run logs).

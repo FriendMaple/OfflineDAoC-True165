@@ -1,0 +1,5351 @@
+{
+ "table": "MerchantItem",
+ "key": "MerchantItem_ID",
+ "reason": "True 1.65 period merchant stock: items the period Allakhazam item pages (Wayback <= 2003-11) say a merchant sold, added to that merchant's list (vendor pass 1, 2026-10-31)",
+ "rows": [
+  {
+   "MerchantItem_ID": "p165stock-00c1e711-8d1b-4b72-8012-932d940f2567-1-0",
+   "ItemListID": "00c1e711-8d1b-4b72-8012-932d940f2567",
+   "ItemTemplateID": "steel_studded_gauntlets",
+   "PageNumber": 1,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-3c4d2e54-d2f3-4524-9176-1cb2b29b73bf-0-25",
+   "ItemListID": "3c4d2e54-d2f3-4524-9176-1cb2b29b73bf",
+   "ItemTemplateID": "fox_glove",
+   "PageNumber": 0,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-3c4d2e54-d2f3-4524-9176-1cb2b29b73bf-0-26",
+   "ItemListID": "3c4d2e54-d2f3-4524-9176-1cb2b29b73bf",
+   "ItemTemplateID": "treant_wood",
+   "PageNumber": 0,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-3c4d2e54-d2f3-4524-9176-1cb2b29b73bf-0-27",
+   "ItemListID": "3c4d2e54-d2f3-4524-9176-1cb2b29b73bf",
+   "ItemTemplateID": "silvery_faerie_hair",
+   "PageNumber": 0,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-3c4d2e54-d2f3-4524-9176-1cb2b29b73bf-0-28",
+   "ItemListID": "3c4d2e54-d2f3-4524-9176-1cb2b29b73bf",
+   "ItemTemplateID": "powdered_blood_root",
+   "PageNumber": 0,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-3c4d2e54-d2f3-4524-9176-1cb2b29b73bf-0-29",
+   "ItemListID": "3c4d2e54-d2f3-4524-9176-1cb2b29b73bf",
+   "ItemTemplateID": "powdered_ginger_root",
+   "PageNumber": 0,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-3c4d2e54-d2f3-4524-9176-1cb2b29b73bf-1-26",
+   "ItemListID": "3c4d2e54-d2f3-4524-9176-1cb2b29b73bf",
+   "ItemTemplateID": "powdered_St._Johns_wort",
+   "PageNumber": 1,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-3c4d2e54-d2f3-4524-9176-1cb2b29b73bf-1-27",
+   "ItemListID": "3c4d2e54-d2f3-4524-9176-1cb2b29b73bf",
+   "ItemTemplateID": "shard_of_a_mirror",
+   "PageNumber": 1,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-3c4d2e54-d2f3-4524-9176-1cb2b29b73bf-1-28",
+   "ItemListID": "3c4d2e54-d2f3-4524-9176-1cb2b29b73bf",
+   "ItemTemplateID": "ornate_broken_mirror",
+   "PageNumber": 1,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-4610eaee-28ec-442c-8679-498f2510529e-1-0",
+   "ItemListID": "4610eaee-28ec-442c-8679-498f2510529e",
+   "ItemTemplateID": "brocade_padded_circlet",
+   "PageNumber": 1,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-47a34894-b9aa-4620-bf21-415a23dcb85f-0-6",
+   "ItemListID": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+   "ItemTemplateID": "p165_item_3611",
+   "PageNumber": 0,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-5cfa2b91-ab15-4509-a08f-75386dda3f6c-0-9",
+   "ItemListID": "5cfa2b91-ab15-4509-a08f-75386dda3f6c",
+   "ItemTemplateID": "p165_item_4436",
+   "PageNumber": 0,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-5cfa2b91-ab15-4509-a08f-75386dda3f6c-0-10",
+   "ItemListID": "5cfa2b91-ab15-4509-a08f-75386dda3f6c",
+   "ItemTemplateID": "p165_item_4437",
+   "PageNumber": 0,
+   "SlotPosition": 10,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-7a411b91-e85e-42e7-be42-412fcfd272f5-1-0",
+   "ItemListID": "7a411b91-e85e-42e7-be42-412fcfd272f5",
+   "ItemTemplateID": "alloy_great_axe",
+   "PageNumber": 1,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-7a411b91-e85e-42e7-be42-412fcfd272f5-1-1",
+   "ItemListID": "7a411b91-e85e-42e7-be42-412fcfd272f5",
+   "ItemTemplateID": "alloy_war_axe",
+   "PageNumber": 1,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-7a411b91-e85e-42e7-be42-412fcfd272f5-1-2",
+   "ItemListID": "7a411b91-e85e-42e7-be42-412fcfd272f5",
+   "ItemTemplateID": "bronze_great_axe",
+   "PageNumber": 1,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-7a411b91-e85e-42e7-be42-412fcfd272f5-1-3",
+   "ItemListID": "7a411b91-e85e-42e7-be42-412fcfd272f5",
+   "ItemTemplateID": "bronze_war_axe",
+   "PageNumber": 1,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-7a411b91-e85e-42e7-be42-412fcfd272f5-1-4",
+   "ItemListID": "7a411b91-e85e-42e7-be42-412fcfd272f5",
+   "ItemTemplateID": "fine_alloy_great_axe",
+   "PageNumber": 1,
+   "SlotPosition": 4,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-7a411b91-e85e-42e7-be42-412fcfd272f5-1-5",
+   "ItemListID": "7a411b91-e85e-42e7-be42-412fcfd272f5",
+   "ItemTemplateID": "fine_alloy_war_axe",
+   "PageNumber": 1,
+   "SlotPosition": 5,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-7a411b91-e85e-42e7-be42-412fcfd272f5-1-6",
+   "ItemListID": "7a411b91-e85e-42e7-be42-412fcfd272f5",
+   "ItemTemplateID": "iron_great_axe",
+   "PageNumber": 1,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-7a411b91-e85e-42e7-be42-412fcfd272f5-1-7",
+   "ItemListID": "7a411b91-e85e-42e7-be42-412fcfd272f5",
+   "ItemTemplateID": "iron_war_axe",
+   "PageNumber": 1,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-7a411b91-e85e-42e7-be42-412fcfd272f5-1-8",
+   "ItemListID": "7a411b91-e85e-42e7-be42-412fcfd272f5",
+   "ItemTemplateID": "steel_great_axe",
+   "PageNumber": 1,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-7a411b91-e85e-42e7-be42-412fcfd272f5-1-9",
+   "ItemListID": "7a411b91-e85e-42e7-be42-412fcfd272f5",
+   "ItemTemplateID": "steel_war_axe",
+   "PageNumber": 1,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-93cd2d04-d5db-4754-b0b8-c976e0b65960-1-0",
+   "ItemListID": "93cd2d04-d5db-4754-b0b8-c976e0b65960",
+   "ItemTemplateID": "mithril_bill",
+   "PageNumber": 1,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-966eda39-c819-41d3-84e0-cdf9783c1999-0-20",
+   "ItemListID": "966eda39-c819-41d3-84e0-cdf9783c1999",
+   "ItemTemplateID": "Um_gem",
+   "PageNumber": 0,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-966eda39-c819-41d3-84e0-cdf9783c1999-0-21",
+   "ItemListID": "966eda39-c819-41d3-84e0-cdf9783c1999",
+   "ItemTemplateID": "Ee_gem",
+   "PageNumber": 0,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-966eda39-c819-41d3-84e0-cdf9783c1999-0-22",
+   "ItemListID": "966eda39-c819-41d3-84e0-cdf9783c1999",
+   "ItemTemplateID": "Pal_gem",
+   "PageNumber": 0,
+   "SlotPosition": 22,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-966eda39-c819-41d3-84e0-cdf9783c1999-0-23",
+   "ItemListID": "966eda39-c819-41d3-84e0-cdf9783c1999",
+   "ItemTemplateID": "Ros_gem",
+   "PageNumber": 0,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-966eda39-c819-41d3-84e0-cdf9783c1999-0-24",
+   "ItemListID": "966eda39-c819-41d3-84e0-cdf9783c1999",
+   "ItemTemplateID": "Zo_gem",
+   "PageNumber": 0,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-966eda39-c819-41d3-84e0-cdf9783c1999-0-25",
+   "ItemListID": "966eda39-c819-41d3-84e0-cdf9783c1999",
+   "ItemTemplateID": "Kath_gem",
+   "PageNumber": 0,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-966eda39-c819-41d3-84e0-cdf9783c1999-0-26",
+   "ItemListID": "966eda39-c819-41d3-84e0-cdf9783c1999",
+   "ItemTemplateID": "Ra_gem",
+   "PageNumber": 0,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-966eda39-c819-41d3-84e0-cdf9783c1999-0-27",
+   "ItemListID": "966eda39-c819-41d3-84e0-cdf9783c1999",
+   "ItemTemplateID": "leviathan_blood",
+   "PageNumber": 0,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-966eda39-c819-41d3-84e0-cdf9783c1999-0-28",
+   "ItemListID": "966eda39-c819-41d3-84e0-cdf9783c1999",
+   "ItemTemplateID": "ground_draconic_scales",
+   "PageNumber": 0,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-966eda39-c819-41d3-84e0-cdf9783c1999-0-29",
+   "ItemListID": "966eda39-c819-41d3-84e0-cdf9783c1999",
+   "ItemTemplateID": "mystic_energy",
+   "PageNumber": 0,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-96c7a1bf-51ce-4ea9-9298-685e2c836feb-0-24",
+   "ItemListID": "96c7a1bf-51ce-4ea9-9298-685e2c836feb",
+   "ItemTemplateID": "falcata",
+   "PageNumber": 0,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-96c7a1bf-51ce-4ea9-9298-685e2c836feb-0-25",
+   "ItemListID": "96c7a1bf-51ce-4ea9-9298-685e2c836feb",
+   "ItemTemplateID": "bastard_sword",
+   "PageNumber": 0,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-96c7a1bf-51ce-4ea9-9298-685e2c836feb-0-26",
+   "ItemListID": "96c7a1bf-51ce-4ea9-9298-685e2c836feb",
+   "ItemTemplateID": "ferrite_falcata",
+   "PageNumber": 0,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-96c7a1bf-51ce-4ea9-9298-685e2c836feb-0-27",
+   "ItemListID": "96c7a1bf-51ce-4ea9-9298-685e2c836feb",
+   "ItemTemplateID": "ferrite_long_sword",
+   "PageNumber": 0,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-96c7a1bf-51ce-4ea9-9298-685e2c836feb-0-28",
+   "ItemListID": "96c7a1bf-51ce-4ea9-9298-685e2c836feb",
+   "ItemTemplateID": "ferrite_bastard_sword",
+   "PageNumber": 0,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-96c7a1bf-51ce-4ea9-9298-685e2c836feb-0-29",
+   "ItemListID": "96c7a1bf-51ce-4ea9-9298-685e2c836feb",
+   "ItemTemplateID": "quartz_falcata",
+   "PageNumber": 0,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-96c7a1bf-51ce-4ea9-9298-685e2c836feb-1-12",
+   "ItemListID": "96c7a1bf-51ce-4ea9-9298-685e2c836feb",
+   "ItemTemplateID": "quartz_broadsword",
+   "PageNumber": 1,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-96c7a1bf-51ce-4ea9-9298-685e2c836feb-1-13",
+   "ItemListID": "96c7a1bf-51ce-4ea9-9298-685e2c836feb",
+   "ItemTemplateID": "quartz_long_sword",
+   "PageNumber": 1,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-96c7a1bf-51ce-4ea9-9298-685e2c836feb-1-14",
+   "ItemListID": "96c7a1bf-51ce-4ea9-9298-685e2c836feb",
+   "ItemTemplateID": "quartz_bastard_sword",
+   "PageNumber": 1,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-96c7a1bf-51ce-4ea9-9298-685e2c836feb-1-15",
+   "ItemListID": "96c7a1bf-51ce-4ea9-9298-685e2c836feb",
+   "ItemTemplateID": "dolomite_falcata",
+   "PageNumber": 1,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-96c7a1bf-51ce-4ea9-9298-685e2c836feb-1-16",
+   "ItemListID": "96c7a1bf-51ce-4ea9-9298-685e2c836feb",
+   "ItemTemplateID": "broadsword",
+   "PageNumber": 1,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-96c7a1bf-51ce-4ea9-9298-685e2c836feb-1-17",
+   "ItemListID": "96c7a1bf-51ce-4ea9-9298-685e2c836feb",
+   "ItemTemplateID": "long_sword",
+   "PageNumber": 1,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-96c7a1bf-51ce-4ea9-9298-685e2c836feb-1-18",
+   "ItemListID": "96c7a1bf-51ce-4ea9-9298-685e2c836feb",
+   "ItemTemplateID": "dolomite_broadsword",
+   "PageNumber": 1,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-96c7a1bf-51ce-4ea9-9298-685e2c836feb-1-19",
+   "ItemListID": "96c7a1bf-51ce-4ea9-9298-685e2c836feb",
+   "ItemTemplateID": "dolomite_long_sword",
+   "PageNumber": 1,
+   "SlotPosition": 19,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-96c7a1bf-51ce-4ea9-9298-685e2c836feb-1-20",
+   "ItemListID": "96c7a1bf-51ce-4ea9-9298-685e2c836feb",
+   "ItemTemplateID": "dolomite_bastard_sword",
+   "PageNumber": 1,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-96c7a1bf-51ce-4ea9-9298-685e2c836feb-1-21",
+   "ItemListID": "96c7a1bf-51ce-4ea9-9298-685e2c836feb",
+   "ItemTemplateID": "cobalt_short_sword",
+   "PageNumber": 1,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-96c7a1bf-51ce-4ea9-9298-685e2c836feb-1-22",
+   "ItemListID": "96c7a1bf-51ce-4ea9-9298-685e2c836feb",
+   "ItemTemplateID": "cobalt_falcata",
+   "PageNumber": 1,
+   "SlotPosition": 22,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-96c7a1bf-51ce-4ea9-9298-685e2c836feb-1-23",
+   "ItemListID": "96c7a1bf-51ce-4ea9-9298-685e2c836feb",
+   "ItemTemplateID": "cobalt_broadsword",
+   "PageNumber": 1,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-96c7a1bf-51ce-4ea9-9298-685e2c836feb-1-24",
+   "ItemListID": "96c7a1bf-51ce-4ea9-9298-685e2c836feb",
+   "ItemTemplateID": "cobalt_long_sword",
+   "PageNumber": 1,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-96c7a1bf-51ce-4ea9-9298-685e2c836feb-1-25",
+   "ItemListID": "96c7a1bf-51ce-4ea9-9298-685e2c836feb",
+   "ItemTemplateID": "cobalt_bastard_sword",
+   "PageNumber": 1,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-9ab94f25-0da3-42f0-abd1-189f95c64d13-0-28",
+   "ItemListID": "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+   "ItemTemplateID": "heated_distill",
+   "PageNumber": 0,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-9ab94f25-0da3-42f0-abd1-189f95c64d13-0-29",
+   "ItemListID": "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+   "ItemTemplateID": "dusty_distill",
+   "PageNumber": 0,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-9ab94f25-0da3-42f0-abd1-189f95c64d13-1-25",
+   "ItemListID": "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+   "ItemTemplateID": "earthen_distill",
+   "PageNumber": 1,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-9ab94f25-0da3-42f0-abd1-189f95c64d13-1-26",
+   "ItemListID": "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+   "ItemTemplateID": "vapor_distill",
+   "PageNumber": 1,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-9ab94f25-0da3-42f0-abd1-189f95c64d13-1-27",
+   "ItemListID": "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+   "ItemTemplateID": "watery_distill",
+   "PageNumber": 1,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-9ab94f25-0da3-42f0-abd1-189f95c64d13-1-28",
+   "ItemListID": "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+   "ItemTemplateID": "icy_distill",
+   "PageNumber": 1,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-9ab94f25-0da3-42f0-abd1-189f95c64d13-1-29",
+   "ItemListID": "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+   "ItemTemplateID": "airy_distill",
+   "PageNumber": 1,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-9ab94f25-0da3-42f0-abd1-189f95c64d13-2-26",
+   "ItemListID": "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+   "ItemTemplateID": "treant_wood",
+   "PageNumber": 2,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-9ab94f25-0da3-42f0-abd1-189f95c64d13-2-27",
+   "ItemListID": "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+   "ItemTemplateID": "faerie_boots",
+   "PageNumber": 2,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-9ab94f25-0da3-42f0-abd1-189f95c64d13-2-28",
+   "ItemListID": "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+   "ItemTemplateID": "ancient_treant_wood",
+   "PageNumber": 2,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-9ab94f25-0da3-42f0-abd1-189f95c64d13-2-29",
+   "ItemListID": "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+   "ItemTemplateID": "boiled_blood_root",
+   "PageNumber": 2,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-9ab94f25-0da3-42f0-abd1-189f95c64d13-3-20",
+   "ItemListID": "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+   "ItemTemplateID": "boiled_ginger_root",
+   "PageNumber": 3,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-9ab94f25-0da3-42f0-abd1-189f95c64d13-3-21",
+   "ItemListID": "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+   "ItemTemplateID": "boiled_St._Johns_wort",
+   "PageNumber": 3,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-9ab94f25-0da3-42f0-abd1-189f95c64d13-3-22",
+   "ItemListID": "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+   "ItemTemplateID": "dried_ginger_root",
+   "PageNumber": 3,
+   "SlotPosition": 22,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-9ab94f25-0da3-42f0-abd1-189f95c64d13-3-23",
+   "ItemListID": "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+   "ItemTemplateID": "dried_St._Johns_wort",
+   "PageNumber": 3,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-9ab94f25-0da3-42f0-abd1-189f95c64d13-3-24",
+   "ItemListID": "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+   "ItemTemplateID": "powdered_blood_root",
+   "PageNumber": 3,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-9ab94f25-0da3-42f0-abd1-189f95c64d13-3-25",
+   "ItemListID": "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+   "ItemTemplateID": "powdered_ginger_root",
+   "PageNumber": 3,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-9ab94f25-0da3-42f0-abd1-189f95c64d13-3-26",
+   "ItemListID": "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+   "ItemTemplateID": "powdered_St._Johns_wort",
+   "PageNumber": 3,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-9ab94f25-0da3-42f0-abd1-189f95c64d13-3-27",
+   "ItemListID": "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+   "ItemTemplateID": "fermented_ginger_root",
+   "PageNumber": 3,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-9ab94f25-0da3-42f0-abd1-189f95c64d13-3-28",
+   "ItemListID": "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+   "ItemTemplateID": "fermented_St._Johns_wort",
+   "PageNumber": 3,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-9ab94f25-0da3-42f0-abd1-189f95c64d13-3-29",
+   "ItemListID": "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+   "ItemTemplateID": "shard_of_a_mirror",
+   "PageNumber": 3,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-9ab94f25-0da3-42f0-abd1-189f95c64d13-4-20",
+   "ItemListID": "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+   "ItemTemplateID": "ornate_broken_mirror",
+   "PageNumber": 4,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-9ab94f25-0da3-42f0-abd1-189f95c64d13-4-21",
+   "ItemListID": "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+   "ItemTemplateID": "drop_of_mercury",
+   "PageNumber": 4,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbCabalistStaffs-0-20",
+   "ItemListID": "AlbCabalistStaffs",
+   "ItemTemplateID": "runewood_Cabalist_Staff_of_Body",
+   "PageNumber": 0,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbChainArmor-0-24",
+   "ItemListID": "AlbChainArmor",
+   "ItemTemplateID": "alloy_mail_boots",
+   "PageNumber": 0,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbChainArmor-0-25",
+   "ItemListID": "AlbChainArmor",
+   "ItemTemplateID": "alloy_mail_coif",
+   "PageNumber": 0,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbChainArmor-0-26",
+   "ItemListID": "AlbChainArmor",
+   "ItemTemplateID": "alloy_mail_gloves",
+   "PageNumber": 0,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbChainArmor-0-27",
+   "ItemListID": "AlbChainArmor",
+   "ItemTemplateID": "alloy_mail_leggings",
+   "PageNumber": 0,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbChainArmor-0-28",
+   "ItemListID": "AlbChainArmor",
+   "ItemTemplateID": "bronze_mail_boots",
+   "PageNumber": 0,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbChainArmor-0-29",
+   "ItemListID": "AlbChainArmor",
+   "ItemTemplateID": "bronze_mail_coif",
+   "PageNumber": 0,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbChainArmor-1-6",
+   "ItemListID": "AlbChainArmor",
+   "ItemTemplateID": "bronze_mail_hauberk",
+   "PageNumber": 1,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbChainArmor-1-7",
+   "ItemListID": "AlbChainArmor",
+   "ItemTemplateID": "bronze_mail_sleeves",
+   "PageNumber": 1,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbChainArmor-1-8",
+   "ItemListID": "AlbChainArmor",
+   "ItemTemplateID": "fine_alloy_mail_boots",
+   "PageNumber": 1,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbChainArmor-1-9",
+   "ItemListID": "AlbChainArmor",
+   "ItemTemplateID": "fine_alloy_mail_gloves",
+   "PageNumber": 1,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbChainArmor-1-10",
+   "ItemListID": "AlbChainArmor",
+   "ItemTemplateID": "fine_alloy_mail_leggings",
+   "PageNumber": 1,
+   "SlotPosition": 10,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbChainArmor-1-11",
+   "ItemListID": "AlbChainArmor",
+   "ItemTemplateID": "iron_mail_sleeves",
+   "PageNumber": 1,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbChainArmor-1-12",
+   "ItemListID": "AlbChainArmor",
+   "ItemTemplateID": "steel_mail_boots",
+   "PageNumber": 1,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbChainArmor-1-13",
+   "ItemListID": "AlbChainArmor",
+   "ItemTemplateID": "steel_mail_coif",
+   "PageNumber": 1,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbChainArmor-1-14",
+   "ItemListID": "AlbChainArmor",
+   "ItemTemplateID": "steel_mail_gloves",
+   "PageNumber": 1,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbChainArmor-1-15",
+   "ItemListID": "AlbChainArmor",
+   "ItemTemplateID": "steel_mail_hauberk",
+   "PageNumber": 1,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbChainArmor-1-16",
+   "ItemListID": "AlbChainArmor",
+   "ItemTemplateID": "steel_mail_sleeves",
+   "PageNumber": 1,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbInstrumentsLeatherStuddedPierce-0-20",
+   "ItemListID": "AlbInstrumentsLeatherStuddedPierce",
+   "ItemTemplateID": "steel_studded_gauntlets",
+   "PageNumber": 0,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbLeatherStuddedCrush-0-16",
+   "ItemListID": "AlbLeatherStuddedCrush",
+   "ItemTemplateID": "steel_studded_gauntlets",
+   "PageNumber": 0,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbMithrilChain-0-18",
+   "ItemListID": "AlbMithrilChain",
+   "ItemTemplateID": "Mithril_Chain_Leggings",
+   "PageNumber": 0,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbSlashCrushPierce-0-24",
+   "ItemListID": "AlbSlashCrushPierce",
+   "ItemTemplateID": "alloy_great_axe",
+   "PageNumber": 0,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbSpellAlchMerchant-0-27",
+   "ItemListID": "AlbSpellAlchMerchant",
+   "ItemTemplateID": "ground_caer_stone",
+   "PageNumber": 0,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbSpellAlchMerchant-0-28",
+   "ItemListID": "AlbSpellAlchMerchant",
+   "ItemTemplateID": "ground_blessed_undead_bone",
+   "PageNumber": 0,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbSpellAlchMerchant-0-29",
+   "ItemListID": "AlbSpellAlchMerchant",
+   "ItemTemplateID": "ground_cave_crystal",
+   "PageNumber": 0,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbStudded3-2-0",
+   "ItemListID": "AlbStudded3",
+   "ItemTemplateID": "steel_studded_gauntlets",
+   "PageNumber": 2,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbStuddedChainArmor-1-24",
+   "ItemListID": "AlbStuddedChainArmor",
+   "ItemTemplateID": "steel_studded_gauntlets",
+   "PageNumber": 1,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbTheurgistStaffs-0-20",
+   "ItemListID": "AlbTheurgistStaffs",
+   "ItemTemplateID": "heartwood_Theurgist_Staff_of_Elements",
+   "PageNumber": 0,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbTheurgistStaffs-0-21",
+   "ItemListID": "AlbTheurgistStaffs",
+   "ItemTemplateID": "ironwood_Theurgist_Staff_of_Ice",
+   "PageNumber": 0,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbTwoHanded-1-0",
+   "ItemListID": "AlbTwoHanded",
+   "ItemTemplateID": "alloy_great_axe",
+   "PageNumber": 1,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbTwoHanded-1-1",
+   "ItemListID": "AlbTwoHanded",
+   "ItemTemplateID": "alloy_war_axe",
+   "PageNumber": 1,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbTwoHanded-1-2",
+   "ItemListID": "AlbTwoHanded",
+   "ItemTemplateID": "bronze_war_axe",
+   "PageNumber": 1,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbTwoHanded-1-3",
+   "ItemListID": "AlbTwoHanded",
+   "ItemTemplateID": "fine_alloy_great_axe",
+   "PageNumber": 1,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbTwoHanded-1-4",
+   "ItemListID": "AlbTwoHanded",
+   "ItemTemplateID": "fine_alloy_war_axe",
+   "PageNumber": 1,
+   "SlotPosition": 4,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbTwoHanded-1-5",
+   "ItemListID": "AlbTwoHanded",
+   "ItemTemplateID": "iron_great_axe",
+   "PageNumber": 1,
+   "SlotPosition": 5,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbTwoHanded-1-6",
+   "ItemListID": "AlbTwoHanded",
+   "ItemTemplateID": "steel_great_axe",
+   "PageNumber": 1,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-AlbTwoHanded-1-7",
+   "ItemListID": "AlbTwoHanded",
+   "ItemTemplateID": "steel_war_axe",
+   "PageNumber": 1,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cb8f70b0-0b14-4233-b920-176264f18eb4-1-0",
+   "ItemListID": "cb8f70b0-0b14-4233-b920-176264f18eb4",
+   "ItemTemplateID": "embossed_svarlaedar_jerkin",
+   "PageNumber": 1,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cb8f70b0-0b14-4233-b920-176264f18eb4-1-1",
+   "ItemListID": "cb8f70b0-0b14-4233-b920-176264f18eb4",
+   "ItemTemplateID": "embossed_svarlaedar_leggings",
+   "PageNumber": 1,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cb8f70b0-0b14-4233-b920-176264f18eb4-1-2",
+   "ItemListID": "cb8f70b0-0b14-4233-b920-176264f18eb4",
+   "ItemTemplateID": "embossed_svarlaedar_sleeves",
+   "PageNumber": 1,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cb8f70b0-0b14-4233-b920-176264f18eb4-1-3",
+   "ItemListID": "cb8f70b0-0b14-4233-b920-176264f18eb4",
+   "ItemTemplateID": "embossed_svarlaedar_helm",
+   "PageNumber": 1,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cfdc6083-8ba0-4406-b581-4bc4498dba38-0-13",
+   "ItemListID": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+   "ItemTemplateID": "p165_item_3645",
+   "PageNumber": 0,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-Cinnie-0-11",
+   "ItemListID": "Cinnie",
+   "ItemTemplateID": "cloak",
+   "PageNumber": 0,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye1-0-19",
+   "ItemListID": "ClothDye1",
+   "ItemTemplateID": "light_green_enamel",
+   "PageNumber": 0,
+   "SlotPosition": 19,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye1-0-20",
+   "ItemListID": "ClothDye1",
+   "ItemTemplateID": "light_red_cloth_dye",
+   "PageNumber": 0,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye1-0-21",
+   "ItemListID": "ClothDye1",
+   "ItemTemplateID": "dark_blue_cloth_dye",
+   "PageNumber": 0,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye1-0-22",
+   "ItemListID": "ClothDye1",
+   "ItemTemplateID": "light_turquoise_cloth_dye",
+   "PageNumber": 0,
+   "SlotPosition": 22,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye1-0-23",
+   "ItemListID": "ClothDye1",
+   "ItemTemplateID": "light_teal_cloth_dye",
+   "PageNumber": 0,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye1-0-24",
+   "ItemListID": "ClothDye1",
+   "ItemTemplateID": "teal_cloth_dye",
+   "PageNumber": 0,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye1-0-25",
+   "ItemListID": "ClothDye1",
+   "ItemTemplateID": "turquoise_cloth_dye",
+   "PageNumber": 0,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye1-0-26",
+   "ItemListID": "ClothDye1",
+   "ItemTemplateID": "royal_blue_cloth_dye",
+   "PageNumber": 0,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye1-0-27",
+   "ItemListID": "ClothDye1",
+   "ItemTemplateID": "light_blue_cloth_dye",
+   "PageNumber": 0,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye1-0-28",
+   "ItemListID": "ClothDye1",
+   "ItemTemplateID": "royal_orange_leather_dye",
+   "PageNumber": 0,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye1-0-29",
+   "ItemListID": "ClothDye1",
+   "ItemTemplateID": "yellow_enamel",
+   "PageNumber": 0,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye1-1-0",
+   "ItemListID": "ClothDye1",
+   "ItemTemplateID": "red_cloth_dye",
+   "PageNumber": 1,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye1-1-1",
+   "ItemListID": "ClothDye1",
+   "ItemTemplateID": "blue_cloth_dye",
+   "PageNumber": 1,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye1-1-2",
+   "ItemListID": "ClothDye1",
+   "ItemTemplateID": "royal_teal_cloth_dye",
+   "PageNumber": 1,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye1-1-3",
+   "ItemListID": "ClothDye1",
+   "ItemTemplateID": "dark_teal_cloth_dye",
+   "PageNumber": 1,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye1-1-4",
+   "ItemListID": "ClothDye1",
+   "ItemTemplateID": "royal_red_cloth_dye",
+   "PageNumber": 1,
+   "SlotPosition": 4,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye1-1-5",
+   "ItemListID": "ClothDye1",
+   "ItemTemplateID": "mauve_cloth_dye",
+   "PageNumber": 1,
+   "SlotPosition": 5,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye1-1-6",
+   "ItemListID": "ClothDye1",
+   "ItemTemplateID": "rust_colored_cloth_dye",
+   "PageNumber": 1,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye1-1-7",
+   "ItemListID": "ClothDye1",
+   "ItemTemplateID": "light_purple_cloth_dye",
+   "PageNumber": 1,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye1-1-8",
+   "ItemListID": "ClothDye1",
+   "ItemTemplateID": "purple_cloth_dye",
+   "PageNumber": 1,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye1-1-9",
+   "ItemListID": "ClothDye1",
+   "ItemTemplateID": "royal_purple_cloth_dye",
+   "PageNumber": 1,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye1-1-10",
+   "ItemListID": "ClothDye1",
+   "ItemTemplateID": "dark_purple_cloth_dye",
+   "PageNumber": 1,
+   "SlotPosition": 10,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye2-0-25",
+   "ItemListID": "ClothDye2",
+   "ItemTemplateID": "light_green_cloth_dye",
+   "PageNumber": 0,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye2-0-26",
+   "ItemListID": "ClothDye2",
+   "ItemTemplateID": "royal_green_cloth_dye",
+   "PageNumber": 0,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye2-0-27",
+   "ItemListID": "ClothDye2",
+   "ItemTemplateID": "forest_green_cloth_dye",
+   "PageNumber": 0,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye2-0-28",
+   "ItemListID": "ClothDye2",
+   "ItemTemplateID": "light_brown_cloth_dye",
+   "PageNumber": 0,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye2-0-29",
+   "ItemListID": "ClothDye2",
+   "ItemTemplateID": "brown_cloth_dye",
+   "PageNumber": 0,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye2-1-0",
+   "ItemListID": "ClothDye2",
+   "ItemTemplateID": "dark_brown_cloth_dye",
+   "PageNumber": 1,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye2-1-1",
+   "ItemListID": "ClothDye2",
+   "ItemTemplateID": "dark_gray_cloth_dye",
+   "PageNumber": 1,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye2-1-2",
+   "ItemListID": "ClothDye2",
+   "ItemTemplateID": "charcoal_cloth_dye",
+   "PageNumber": 1,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye2-1-3",
+   "ItemListID": "ClothDye2",
+   "ItemTemplateID": "black_cloth_dye",
+   "PageNumber": 1,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye2-1-4",
+   "ItemListID": "ClothDye2",
+   "ItemTemplateID": "light_orange_cloth_dye",
+   "PageNumber": 1,
+   "SlotPosition": 4,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye2-1-5",
+   "ItemListID": "ClothDye2",
+   "ItemTemplateID": "orange_cloth_dye",
+   "PageNumber": 1,
+   "SlotPosition": 5,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye2-1-6",
+   "ItemListID": "ClothDye2",
+   "ItemTemplateID": "royal_orange_cloth_dye",
+   "PageNumber": 1,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye2-1-7",
+   "ItemListID": "ClothDye2",
+   "ItemTemplateID": "light_yellow_cloth_dye",
+   "PageNumber": 1,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye2-1-8",
+   "ItemListID": "ClothDye2",
+   "ItemTemplateID": "yellow_cloth_dye",
+   "PageNumber": 1,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ClothDye2-1-9",
+   "ItemListID": "ClothDye2",
+   "ItemTemplateID": "royal_yellow_cloth_dye",
+   "PageNumber": 1,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-Deverry-0-23",
+   "ItemListID": "Deverry",
+   "ItemTemplateID": "carbide_long_sword",
+   "PageNumber": 0,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-e1176b3c-7340-41a3-bf27-2af13a4e07fc-1-0",
+   "ItemListID": "e1176b3c-7340-41a3-bf27-2af13a4e07fc",
+   "ItemTemplateID": "iron_pansarkedja_hauberk",
+   "PageNumber": 1,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-EnamelDye2-0-23",
+   "ItemListID": "EnamelDye2",
+   "ItemTemplateID": "black_enamel",
+   "PageNumber": 0,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-EnamelDye3-0-17",
+   "ItemListID": "EnamelDye3",
+   "ItemTemplateID": "red_enamel4",
+   "PageNumber": 0,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-EnamelDye3-0-18",
+   "ItemListID": "EnamelDye3",
+   "ItemTemplateID": "light_blue_enamel2",
+   "PageNumber": 0,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-EnamelDye3-0-19",
+   "ItemListID": "EnamelDye3",
+   "ItemTemplateID": "blue_enamel4",
+   "PageNumber": 0,
+   "SlotPosition": 19,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-EnamelDye3-0-20",
+   "ItemListID": "EnamelDye3",
+   "ItemTemplateID": "royal_blue_enamel2",
+   "PageNumber": 0,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-EnamelDye3-0-21",
+   "ItemListID": "EnamelDye3",
+   "ItemTemplateID": "dark_blue_enamel2",
+   "PageNumber": 0,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-EnamelDye3-0-22",
+   "ItemListID": "EnamelDye3",
+   "ItemTemplateID": "light_turquoise_enamel2",
+   "PageNumber": 0,
+   "SlotPosition": 22,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-EnamelDye3-0-23",
+   "ItemListID": "EnamelDye3",
+   "ItemTemplateID": "turquoise_enamel2",
+   "PageNumber": 0,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-EnamelDye3-0-24",
+   "ItemListID": "EnamelDye3",
+   "ItemTemplateID": "royal_turquoise_enamel2",
+   "PageNumber": 0,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-EnamelDye3-0-25",
+   "ItemListID": "EnamelDye3",
+   "ItemTemplateID": "light_teal_enamel2",
+   "PageNumber": 0,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-EnamelDye3-0-26",
+   "ItemListID": "EnamelDye3",
+   "ItemTemplateID": "teal_enamel2",
+   "PageNumber": 0,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-EnamelDye3-0-27",
+   "ItemListID": "EnamelDye3",
+   "ItemTemplateID": "royal_teal_enamel2",
+   "PageNumber": 0,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-EnamelDye3-0-28",
+   "ItemListID": "EnamelDye3",
+   "ItemTemplateID": "dark_teal_enamel2",
+   "PageNumber": 0,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-EnamelDye3-0-29",
+   "ItemListID": "EnamelDye3",
+   "ItemTemplateID": "crimson_enamel2",
+   "PageNumber": 0,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-EnamelDye3-1-0",
+   "ItemListID": "EnamelDye3",
+   "ItemTemplateID": "mauve_enamel2",
+   "PageNumber": 1,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-EnamelDye3-1-1",
+   "ItemListID": "EnamelDye3",
+   "ItemTemplateID": "rust_colored_enamel",
+   "PageNumber": 1,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-EnamelDye3-1-2",
+   "ItemListID": "EnamelDye3",
+   "ItemTemplateID": "light_purple_enamel2",
+   "PageNumber": 1,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-EnamelDye3-1-3",
+   "ItemListID": "EnamelDye3",
+   "ItemTemplateID": "purple_enamel2",
+   "PageNumber": 1,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-EnamelDye3-1-4",
+   "ItemListID": "EnamelDye3",
+   "ItemTemplateID": "royal_purple_enamel2",
+   "PageNumber": 1,
+   "SlotPosition": 4,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-EnamelDye3-1-5",
+   "ItemListID": "EnamelDye3",
+   "ItemTemplateID": "dark_purple_enamel2",
+   "PageNumber": 1,
+   "SlotPosition": 5,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-EnamelDye3-1-6",
+   "ItemListID": "EnamelDye3",
+   "ItemTemplateID": "violet_enamel2",
+   "PageNumber": 1,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-0-13",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_3342",
+   "PageNumber": 0,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-0-14",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_3429",
+   "PageNumber": 0,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-0-15",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_3433",
+   "PageNumber": 0,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-0-16",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_3610",
+   "PageNumber": 0,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-0-17",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_3613",
+   "PageNumber": 0,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-HibCraftingComponents-0-6",
+   "ItemListID": "HibCraftingComponents",
+   "ItemTemplateID": "coppery_imbued_dust",
+   "PageNumber": 0,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-HibCraftingComponents-0-7",
+   "ItemListID": "HibCraftingComponents",
+   "ItemTemplateID": "coppery_enchanted_dust",
+   "PageNumber": 0,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-HibCraftingComponents-0-8",
+   "ItemListID": "HibCraftingComponents",
+   "ItemTemplateID": "silvery_imbued_dust",
+   "PageNumber": 0,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-HibCraftingComponents-0-9",
+   "ItemListID": "HibCraftingComponents",
+   "ItemTemplateID": "silvery_enchanted_dust3",
+   "PageNumber": 0,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-HibCraftingComponents-0-10",
+   "ItemListID": "HibCraftingComponents",
+   "ItemTemplateID": "silvery_glowing_dust",
+   "PageNumber": 0,
+   "SlotPosition": 10,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-HibCraftingComponents-0-11",
+   "ItemListID": "HibCraftingComponents",
+   "ItemTemplateID": "golden_imbued_dust",
+   "PageNumber": 0,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-HibCraftingComponents-0-12",
+   "ItemListID": "HibCraftingComponents",
+   "ItemTemplateID": "mithril_imbued_dust3",
+   "PageNumber": 0,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-HibCraftingComponents-0-13",
+   "ItemListID": "HibCraftingComponents",
+   "ItemTemplateID": "platinum_imbued_dust",
+   "PageNumber": 0,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-HibCraftingComponents-0-14",
+   "ItemListID": "HibCraftingComponents",
+   "ItemTemplateID": "liquid_alloy_renewal2",
+   "PageNumber": 0,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-HibCraftingComponents-0-16",
+   "ItemListID": "HibCraftingComponents",
+   "ItemTemplateID": "liquid_adamantium_renewal2",
+   "PageNumber": 0,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-HibCraftingComponents-0-20",
+   "ItemListID": "HibCraftingComponents",
+   "ItemTemplateID": "crotal_lichen",
+   "PageNumber": 0,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-HibCraftingComponents-0-21",
+   "ItemListID": "HibCraftingComponents",
+   "ItemTemplateID": "elder_bark",
+   "PageNumber": 0,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-HibCraftingComponents-0-22",
+   "ItemListID": "HibCraftingComponents",
+   "ItemTemplateID": "lichens",
+   "PageNumber": 0,
+   "SlotPosition": 22,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-HibCraftingComponents-0-23",
+   "ItemListID": "HibCraftingComponents",
+   "ItemTemplateID": "elder_berries",
+   "PageNumber": 0,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-HibCraftingComponents-0-24",
+   "ItemListID": "HibCraftingComponents",
+   "ItemTemplateID": "black_thorn_root",
+   "PageNumber": 0,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-HibCraftingComponents-0-25",
+   "ItemListID": "HibCraftingComponents",
+   "ItemTemplateID": "fermented_wode_leaf_extract",
+   "PageNumber": 0,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-HibCraftingComponents-0-26",
+   "ItemListID": "HibCraftingComponents",
+   "ItemTemplateID": "crushed_murex",
+   "PageNumber": 0,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-HibCraftingComponents-0-27",
+   "ItemListID": "HibCraftingComponents",
+   "ItemTemplateID": "boiled_bog_mire",
+   "PageNumber": 0,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-HibCraftingComponents-0-28",
+   "ItemListID": "HibCraftingComponents",
+   "ItemTemplateID": "prepared_devils_bit",
+   "PageNumber": 0,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-HibCraftingComponents-0-29",
+   "ItemListID": "HibCraftingComponents",
+   "ItemTemplateID": "crushed_sea_slugs",
+   "PageNumber": 0,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-HibCraftingComponents-1-16",
+   "ItemListID": "HibCraftingComponents",
+   "ItemTemplateID": "packet_of_crushed_glass",
+   "PageNumber": 1,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-LeatherDye1-0-17",
+   "ItemListID": "LeatherDye1",
+   "ItemTemplateID": "blue_leather_dye",
+   "PageNumber": 0,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-0-26",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "Lo_gem",
+   "PageNumber": 0,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-0-27",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "Um_gem",
+   "PageNumber": 0,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-0-28",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "On_gem",
+   "PageNumber": 0,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-0-29",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "Ee_gem",
+   "PageNumber": 0,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-1-26",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "Pal_gem",
+   "PageNumber": 1,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-1-27",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "Mon_gem",
+   "PageNumber": 1,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-1-28",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "Ros_gem",
+   "PageNumber": 1,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-1-29",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "Zo_gem",
+   "PageNumber": 1,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-2-20",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "Kath_gem",
+   "PageNumber": 2,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-2-21",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "Ra_gem",
+   "PageNumber": 2,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-2-22",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "sun_light",
+   "PageNumber": 2,
+   "SlotPosition": 22,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-2-23",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "draconic_fire",
+   "PageNumber": 2,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-2-24",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "treant_blood",
+   "PageNumber": 2,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-2-25",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "swamp_fog",
+   "PageNumber": 2,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-2-26",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "air_elemental_essence",
+   "PageNumber": 2,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-2-27",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "leviathan_blood",
+   "PageNumber": 2,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-2-28",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "heat_from_an_unearthly_pyre",
+   "PageNumber": 2,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-2-29",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "undead_ash_and_holy_water",
+   "PageNumber": 2,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-3-19",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "frost_from_a_wasteland",
+   "PageNumber": 3,
+   "SlotPosition": 19,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-3-20",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "ground_draconic_scales",
+   "PageNumber": 3,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-3-21",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "essence_of_life",
+   "PageNumber": 3,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-3-22",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "bloodied_battlefield_dirt",
+   "PageNumber": 3,
+   "SlotPosition": 22,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-3-23",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "spellcraft_kit",
+   "PageNumber": 3,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-3-24",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "giant_blood",
+   "PageNumber": 3,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-3-25",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "mystic_energy",
+   "PageNumber": 3,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-3-26",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "ground_giant_bone",
+   "PageNumber": 3,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-3-27",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "ground_vendo_bone3",
+   "PageNumber": 3,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-3-28",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "soot_from_niflheim3",
+   "PageNumber": 3,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-3-29",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "stable_eroding_catalyst",
+   "PageNumber": 3,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-4-28",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "stable_protecting_catalyst",
+   "PageNumber": 4,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemy-4-29",
+   "ItemListID": "MidAlchemy",
+   "ItemTemplateID": "concoctive_honing_catalyst",
+   "PageNumber": 4,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-0-29",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "alchemy_kit3",
+   "PageNumber": 0,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-1-25",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "mortar_and_pestle3",
+   "PageNumber": 1,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-1-26",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "poppy_seed",
+   "PageNumber": 1,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-1-27",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "peony",
+   "PageNumber": 1,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-1-28",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "black_widow_venom",
+   "PageNumber": 1,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-1-29",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "caster_oil_plant",
+   "PageNumber": 1,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-0",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "autumn_crocus",
+   "PageNumber": 2,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-1",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "distilled_anemone_venom",
+   "PageNumber": 2,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-2",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "rat_saliva",
+   "PageNumber": 2,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-3",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "narcissus",
+   "PageNumber": 2,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-4",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "henbane",
+   "PageNumber": 2,
+   "SlotPosition": 4,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-5",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "coral_snake_venom",
+   "PageNumber": 2,
+   "SlotPosition": 5,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-6",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "heated_distill",
+   "PageNumber": 2,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-7",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "dusty_distill",
+   "PageNumber": 2,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-8",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "earthen_distill",
+   "PageNumber": 2,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-9",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "vapor_distill",
+   "PageNumber": 2,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-10",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "watery_distill",
+   "PageNumber": 2,
+   "SlotPosition": 10,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-11",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "fiery_distill",
+   "PageNumber": 2,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-12",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "icy_distill",
+   "PageNumber": 2,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-13",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "airy_distill",
+   "PageNumber": 2,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-14",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "faerie_boots",
+   "PageNumber": 2,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-15",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "ancient_treant_wood",
+   "PageNumber": 2,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-16",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "boiled_blood_root",
+   "PageNumber": 2,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-17",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "boiled_ginger_root",
+   "PageNumber": 2,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-18",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "boiled_St._Johns_wort",
+   "PageNumber": 2,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-19",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "dried_blood_root",
+   "PageNumber": 2,
+   "SlotPosition": 19,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-20",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "dried_ginger_root",
+   "PageNumber": 2,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-21",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "dried_St._Johns_wort",
+   "PageNumber": 2,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-22",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "fermented_blood_root",
+   "PageNumber": 2,
+   "SlotPosition": 22,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-23",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "fermented_ginger_root",
+   "PageNumber": 2,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-24",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "fermented_St._Johns_wort",
+   "PageNumber": 2,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-25",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "drop_of_mercury",
+   "PageNumber": 2,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-26",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "yew_leaves",
+   "PageNumber": 2,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-27",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "european_spider_venom",
+   "PageNumber": 2,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-28",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "hemlock",
+   "PageNumber": 2,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-2-29",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "crushed_plague_rat_fleas",
+   "PageNumber": 2,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-3-0",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "sea_snake_venom",
+   "PageNumber": 3,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-3-1",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "common_monkshood",
+   "PageNumber": 3,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-3-2",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "adder_venom",
+   "PageNumber": 3,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-3-3",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "deadly_nightshade",
+   "PageNumber": 3,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-3-4",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "carrion_drake_saliva",
+   "PageNumber": 3,
+   "SlotPosition": 4,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-3-5",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "drop_of_troll_blood",
+   "PageNumber": 3,
+   "SlotPosition": 5,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-3-6",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "drop_of_giant_blood",
+   "PageNumber": 3,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-3-7",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "crushed_brown_focus_stone",
+   "PageNumber": 3,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-3-8",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "crushed_blue_focus_stone",
+   "PageNumber": 3,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidAlchemyComponents-3-9",
+   "ItemListID": "MidAlchemyComponents",
+   "ItemTemplateID": "crushed_red_focus_stone",
+   "PageNumber": 3,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidChainPansarkedja-1-0",
+   "ItemListID": "MidChainPansarkedja",
+   "ItemTemplateID": "iron_pansarkedja_hauberk",
+   "PageNumber": 1,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidClothworking-1-0",
+   "ItemListID": "MidClothworking",
+   "ItemTemplateID": "sewing_kit",
+   "PageNumber": 1,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidClothworking-1-1",
+   "ItemListID": "MidClothworking",
+   "ItemTemplateID": "rawhide_leather_square",
+   "PageNumber": 1,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidClothworking-1-2",
+   "ItemListID": "MidClothworking",
+   "ItemTemplateID": "tanned_leather_squares",
+   "PageNumber": 1,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidClothworking-1-3",
+   "ItemListID": "MidClothworking",
+   "ItemTemplateID": "cured_leather_squares",
+   "PageNumber": 1,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidClothworking-1-4",
+   "ItemListID": "MidClothworking",
+   "ItemTemplateID": "hard_leather_squares",
+   "PageNumber": 1,
+   "SlotPosition": 4,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidClothworking-1-5",
+   "ItemListID": "MidClothworking",
+   "ItemTemplateID": "rigid_leather_squares",
+   "PageNumber": 1,
+   "SlotPosition": 5,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidCraftingComponents2-0-5",
+   "ItemListID": "MidCraftingComponents2",
+   "ItemTemplateID": "smiths_hammer",
+   "PageNumber": 0,
+   "SlotPosition": 5,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant-0-18",
+   "ItemListID": "MidFullArmorMerchant",
+   "ItemTemplateID": "sylvan_padded_circlet",
+   "PageNumber": 0,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-24",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "iron_pansarkedja_hauberk",
+   "PageNumber": 4,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-0",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "rawhide_mjuklaedar_jerkin2",
+   "PageNumber": 4,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-1",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "rawhide_mjuklaedar_leggings2",
+   "PageNumber": 4,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-2",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "rawhide_mjuklaedar_sleeves2",
+   "PageNumber": 4,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-3",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "rawhide_mjuklaedar_gloves2",
+   "PageNumber": 4,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-4",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "rawhide_mjuklaedar_helm",
+   "PageNumber": 4,
+   "SlotPosition": 4,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-5",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "tanned_mjuklaedar_jerkin2",
+   "PageNumber": 4,
+   "SlotPosition": 5,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-6",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "tanned_mjuklaedar_sleeves2",
+   "PageNumber": 4,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-7",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "tanned_mjuklaedar_boots2",
+   "PageNumber": 4,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-8",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "tanned_mjuklaedar_gloves2",
+   "PageNumber": 4,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-9",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "tanned_mjuklaedar_helm",
+   "PageNumber": 4,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-10",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "cured_mjuklaedar_jerkin2",
+   "PageNumber": 4,
+   "SlotPosition": 10,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-11",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "cured_mjuklaedar_leggings2",
+   "PageNumber": 4,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-12",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "cured_mjuklaedar_sleeves2",
+   "PageNumber": 4,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-13",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "cured_mjuklaedar_boots2",
+   "PageNumber": 4,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-14",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "cured_mjuklaedar_gloves2",
+   "PageNumber": 4,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-15",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "cured_mjuklaedar_helm",
+   "PageNumber": 4,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-16",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "hard_mjuklaedar_jerkin2",
+   "PageNumber": 4,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-17",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "hard_mjuklaedar_leggings2",
+   "PageNumber": 4,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-18",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "hard_mjuklaedar_sleeves2",
+   "PageNumber": 4,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-19",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "hard_mjuklaedar_boots2",
+   "PageNumber": 4,
+   "SlotPosition": 19,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-20",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "hard_mjuklaedar_gloves2",
+   "PageNumber": 4,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-21",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "hard_mjuklaedar_helm",
+   "PageNumber": 4,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-22",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "rigid_mjuklaedar_jerkin2",
+   "PageNumber": 4,
+   "SlotPosition": 22,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidFullArmorMerchant2-4-23",
+   "ItemListID": "MidFullArmorMerchant2",
+   "ItemTemplateID": "rigid_mjuklaedar_boots2",
+   "PageNumber": 4,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherMjuklaedar-1-0",
+   "ItemListID": "MidLeatherMjuklaedar",
+   "ItemTemplateID": "rawhide_svarlaedar_jerkin2",
+   "PageNumber": 1,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherMjuklaedar-1-1",
+   "ItemListID": "MidLeatherMjuklaedar",
+   "ItemTemplateID": "rawhide_svarlaedar_boots2",
+   "PageNumber": 1,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherMjuklaedar-1-2",
+   "ItemListID": "MidLeatherMjuklaedar",
+   "ItemTemplateID": "rawhide_svarlaedar_gloves2",
+   "PageNumber": 1,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherMjuklaedar-1-3",
+   "ItemListID": "MidLeatherMjuklaedar",
+   "ItemTemplateID": "rawhide_svarlaedar_helm",
+   "PageNumber": 1,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherMjuklaedar-1-4",
+   "ItemListID": "MidLeatherMjuklaedar",
+   "ItemTemplateID": "tanned_svarlaedar_jerkin2",
+   "PageNumber": 1,
+   "SlotPosition": 4,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherMjuklaedar-1-5",
+   "ItemListID": "MidLeatherMjuklaedar",
+   "ItemTemplateID": "tanned_svarlaedar_leggings2",
+   "PageNumber": 1,
+   "SlotPosition": 5,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherMjuklaedar-1-6",
+   "ItemListID": "MidLeatherMjuklaedar",
+   "ItemTemplateID": "tanned_svarlaedar_boots2",
+   "PageNumber": 1,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherMjuklaedar-1-7",
+   "ItemListID": "MidLeatherMjuklaedar",
+   "ItemTemplateID": "tanned_svarlaedar_gloves2",
+   "PageNumber": 1,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherMjuklaedar-1-8",
+   "ItemListID": "MidLeatherMjuklaedar",
+   "ItemTemplateID": "tanned_svarlaedar_helm",
+   "PageNumber": 1,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherMjuklaedar-1-9",
+   "ItemListID": "MidLeatherMjuklaedar",
+   "ItemTemplateID": "cured_svarlaedar_jerkin2",
+   "PageNumber": 1,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherMjuklaedar-1-10",
+   "ItemListID": "MidLeatherMjuklaedar",
+   "ItemTemplateID": "cured_svarlaedar_sleeves2",
+   "PageNumber": 1,
+   "SlotPosition": 10,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherMjuklaedar-1-11",
+   "ItemListID": "MidLeatherMjuklaedar",
+   "ItemTemplateID": "cured_svarlaedar_gloves2",
+   "PageNumber": 1,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherMjuklaedar-1-12",
+   "ItemListID": "MidLeatherMjuklaedar",
+   "ItemTemplateID": "hard_svarlaedar_jerkin2",
+   "PageNumber": 1,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherMjuklaedar-1-13",
+   "ItemListID": "MidLeatherMjuklaedar",
+   "ItemTemplateID": "hard_svarlaedar_leggings2",
+   "PageNumber": 1,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherMjuklaedar-1-14",
+   "ItemListID": "MidLeatherMjuklaedar",
+   "ItemTemplateID": "hard_svarlaedar_gloves2",
+   "PageNumber": 1,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherMjuklaedar-1-15",
+   "ItemListID": "MidLeatherMjuklaedar",
+   "ItemTemplateID": "rigid_svarlaedar_jerkin2",
+   "PageNumber": 1,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherMjuklaedar-1-16",
+   "ItemListID": "MidLeatherMjuklaedar",
+   "ItemTemplateID": "rigid_svarlaedar_sleeves2",
+   "PageNumber": 1,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherMjuklaedar-1-17",
+   "ItemListID": "MidLeatherMjuklaedar",
+   "ItemTemplateID": "rigid_svarlaedar_helm",
+   "PageNumber": 1,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherMjuklaedar-1-18",
+   "ItemListID": "MidLeatherMjuklaedar",
+   "ItemTemplateID": "rawhide_svarlaedar_leggings2",
+   "PageNumber": 1,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherStarklaedar-1-0",
+   "ItemListID": "MidLeatherStarklaedar",
+   "ItemTemplateID": "embossed_mjuklaedar_jerkin",
+   "PageNumber": 1,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherStarklaedar-1-1",
+   "ItemListID": "MidLeatherStarklaedar",
+   "ItemTemplateID": "embossed_mjuklaedar_leggings",
+   "PageNumber": 1,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherStarklaedar-1-2",
+   "ItemListID": "MidLeatherStarklaedar",
+   "ItemTemplateID": "embossed_mjuklaedar_sleeves",
+   "PageNumber": 1,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherStarklaedar-1-3",
+   "ItemListID": "MidLeatherStarklaedar",
+   "ItemTemplateID": "embossed_mjuklaedar_boots2",
+   "PageNumber": 1,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherStarklaedar-1-4",
+   "ItemListID": "MidLeatherStarklaedar",
+   "ItemTemplateID": "embossed_mjuklaedar_gloves",
+   "PageNumber": 1,
+   "SlotPosition": 4,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherStarklaedar-1-5",
+   "ItemListID": "MidLeatherStarklaedar",
+   "ItemTemplateID": "embossed_mjuklaedar_helm",
+   "PageNumber": 1,
+   "SlotPosition": 5,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherStarklaedar-1-6",
+   "ItemListID": "MidLeatherStarklaedar",
+   "ItemTemplateID": "embossed_svarlaedar_jerkin",
+   "PageNumber": 1,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherStarklaedar-1-7",
+   "ItemListID": "MidLeatherStarklaedar",
+   "ItemTemplateID": "embossed_svarlaedar_leggings",
+   "PageNumber": 1,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherStarklaedar-1-8",
+   "ItemListID": "MidLeatherStarklaedar",
+   "ItemTemplateID": "embossed_svarlaedar_sleeves",
+   "PageNumber": 1,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherStarklaedar-1-9",
+   "ItemListID": "MidLeatherStarklaedar",
+   "ItemTemplateID": "embossed_svarlaedar_boots2",
+   "PageNumber": 1,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherStarklaedar-1-11",
+   "ItemListID": "MidLeatherStarklaedar",
+   "ItemTemplateID": "embossed_svarlaedar_gloves",
+   "PageNumber": 1,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherStarklaedar-1-10",
+   "ItemListID": "MidLeatherStarklaedar",
+   "ItemTemplateID": "embossed_svarlaedar_helm",
+   "PageNumber": 1,
+   "SlotPosition": 10,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherStarklaedar-1-12",
+   "ItemListID": "MidLeatherStarklaedar",
+   "ItemTemplateID": "embossed_starklaedar_jerkin2",
+   "PageNumber": 1,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherStarklaedar-1-13",
+   "ItemListID": "MidLeatherStarklaedar",
+   "ItemTemplateID": "embossed_starklaedar_leggings2",
+   "PageNumber": 1,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherStarklaedar-1-14",
+   "ItemListID": "MidLeatherStarklaedar",
+   "ItemTemplateID": "embossed_starklaedar_sleeves2",
+   "PageNumber": 1,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherStarklaedar-1-15",
+   "ItemListID": "MidLeatherStarklaedar",
+   "ItemTemplateID": "embossed_starklaedar_boots2",
+   "PageNumber": 1,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherStarklaedar-1-16",
+   "ItemListID": "MidLeatherStarklaedar",
+   "ItemTemplateID": "embossed_starklaedar_gloves",
+   "PageNumber": 1,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidLeatherStarklaedar-1-17",
+   "ItemListID": "MidLeatherStarklaedar",
+   "ItemTemplateID": "embossed_starklaedar_helm",
+   "PageNumber": 1,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidMetal-0-5",
+   "ItemListID": "MidMetal",
+   "ItemTemplateID": "iron_metal_bars",
+   "PageNumber": 0,
+   "SlotPosition": 5,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidMetalWoodLeather-0-24",
+   "ItemListID": "MidMetalWoodLeather",
+   "ItemTemplateID": "planing_tool3",
+   "PageNumber": 0,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidRuneSpiritBoneStaff-0-12",
+   "ItemListID": "MidRuneSpiritBoneStaff",
+   "ItemTemplateID": "ironwood_Spiritmaster_Staff_of_Suppression",
+   "PageNumber": 0,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidRuneSpiritBoneStaff-0-13",
+   "ItemListID": "MidRuneSpiritBoneStaff",
+   "ItemTemplateID": "elm_Bonedancer_Staff_of_Suppression",
+   "PageNumber": 0,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidSpellcraftMerchant-0-28",
+   "ItemListID": "MidSpellcraftMerchant",
+   "ItemTemplateID": "crow_feathers",
+   "PageNumber": 0,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidSpellcraftMerchant-0-29",
+   "ItemListID": "MidSpellcraftMerchant",
+   "ItemTemplateID": "hawk_feathers",
+   "PageNumber": 0,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidSpellcraftMerchant-1-27",
+   "ItemListID": "MidSpellcraftMerchant",
+   "ItemTemplateID": "gull_feathers",
+   "PageNumber": 1,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidSpellcraftMerchant-1-28",
+   "ItemListID": "MidSpellcraftMerchant",
+   "ItemTemplateID": "cockatrice_feathers",
+   "PageNumber": 1,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidSpellcraftMerchant-1-29",
+   "ItemListID": "MidSpellcraftMerchant",
+   "ItemTemplateID": "phoenix_feathers",
+   "PageNumber": 1,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidSpellcraftMerchant-2-0",
+   "ItemListID": "MidSpellcraftMerchant",
+   "ItemTemplateID": "planing_tool3",
+   "PageNumber": 2,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidSpellcraftMerchant-2-1",
+   "ItemListID": "MidSpellcraftMerchant",
+   "ItemTemplateID": "alchemy_kit3",
+   "PageNumber": 2,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidSpellcraftMerchant-2-2",
+   "ItemListID": "MidSpellcraftMerchant",
+   "ItemTemplateID": "mortar_and_pestle3",
+   "PageNumber": 2,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidSpiritmasterStaff-0-20",
+   "ItemListID": "MidSpiritmasterStaff",
+   "ItemTemplateID": "ironwood_Spiritmaster_Staff_of_Suppression",
+   "PageNumber": 0,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedMerchant-3-0",
+   "ItemListID": "MidStuddedMerchant",
+   "ItemTemplateID": "mithril_stelskodd_jerkin",
+   "PageNumber": 3,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedMerchant-3-1",
+   "ItemListID": "MidStuddedMerchant",
+   "ItemTemplateID": "mithril_stelskodd_leggings",
+   "PageNumber": 3,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedMerchant-3-2",
+   "ItemListID": "MidStuddedMerchant",
+   "ItemTemplateID": "mithril_stelskodd_sleeves",
+   "PageNumber": 3,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedMerchant-3-3",
+   "ItemListID": "MidStuddedMerchant",
+   "ItemTemplateID": "mithril_stelskodd_boots",
+   "PageNumber": 3,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedMerchant-3-4",
+   "ItemListID": "MidStuddedMerchant",
+   "ItemTemplateID": "mithril_stelskodd_gloves",
+   "PageNumber": 3,
+   "SlotPosition": 4,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedMerchant-3-5",
+   "ItemListID": "MidStuddedMerchant",
+   "ItemTemplateID": "mithril_stelskodd_helm",
+   "PageNumber": 3,
+   "SlotPosition": 5,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedMerchant-3-6",
+   "ItemListID": "MidStuddedMerchant",
+   "ItemTemplateID": "mithril_svarskodd_jerkin",
+   "PageNumber": 3,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedMerchant-3-7",
+   "ItemListID": "MidStuddedMerchant",
+   "ItemTemplateID": "mithril_svarskodd_leggings",
+   "PageNumber": 3,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedMerchant-3-8",
+   "ItemListID": "MidStuddedMerchant",
+   "ItemTemplateID": "mithril_svarskodd_sleeves",
+   "PageNumber": 3,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedMerchant-3-9",
+   "ItemListID": "MidStuddedMerchant",
+   "ItemTemplateID": "mithril_svarskodd_boots",
+   "PageNumber": 3,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedMerchant-3-10",
+   "ItemListID": "MidStuddedMerchant",
+   "ItemTemplateID": "mithril_svarskodd_gloves",
+   "PageNumber": 3,
+   "SlotPosition": 10,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedMerchant-3-11",
+   "ItemListID": "MidStuddedMerchant",
+   "ItemTemplateID": "mithril_svarskodd_helm",
+   "PageNumber": 3,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedMerchant-3-17",
+   "ItemListID": "MidStuddedMerchant",
+   "ItemTemplateID": "mithril_starkaskodd_jerkin",
+   "PageNumber": 3,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedMerchant-3-12",
+   "ItemListID": "MidStuddedMerchant",
+   "ItemTemplateID": "mithril_starkaskodd_leggings",
+   "PageNumber": 3,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedMerchant-3-13",
+   "ItemListID": "MidStuddedMerchant",
+   "ItemTemplateID": "mithril_starkaskodd_sleeves",
+   "PageNumber": 3,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedMerchant-3-14",
+   "ItemListID": "MidStuddedMerchant",
+   "ItemTemplateID": "mithril_starkaskodd_boots",
+   "PageNumber": 3,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedMerchant-3-15",
+   "ItemListID": "MidStuddedMerchant",
+   "ItemTemplateID": "mithril_starkaskodd_gloves",
+   "PageNumber": 3,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedMerchant-3-16",
+   "ItemListID": "MidStuddedMerchant",
+   "ItemTemplateID": "mithril_starkaskodd_helm",
+   "PageNumber": 3,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-0",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "rawhide_svarlaedar_jerkin2",
+   "PageNumber": 1,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-28",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "rawhide_svarlaedar_leggings2",
+   "PageNumber": 1,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-29",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "rawhide_svarlaedar_sleeves2",
+   "PageNumber": 1,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-1",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "rawhide_svarlaedar_boots2",
+   "PageNumber": 1,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-2",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "rawhide_svarlaedar_gloves2",
+   "PageNumber": 1,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-3",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "rawhide_svarlaedar_helm",
+   "PageNumber": 1,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-4",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "tanned_svarlaedar_jerkin2",
+   "PageNumber": 1,
+   "SlotPosition": 4,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-5",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "tanned_svarlaedar_leggings2",
+   "PageNumber": 1,
+   "SlotPosition": 5,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-6",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "tanned_svarlaedar_sleeves2",
+   "PageNumber": 1,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-7",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "tanned_svarlaedar_boots2",
+   "PageNumber": 1,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-8",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "tanned_svarlaedar_gloves2",
+   "PageNumber": 1,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-9",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "tanned_svarlaedar_helm",
+   "PageNumber": 1,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-10",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "cured_svarlaedar_jerkin2",
+   "PageNumber": 1,
+   "SlotPosition": 10,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-11",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "cured_svarlaedar_leggings2",
+   "PageNumber": 1,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-12",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "cured_svarlaedar_sleeves2",
+   "PageNumber": 1,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-13",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "cured_svarlaedar_boots2",
+   "PageNumber": 1,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-14",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "cured_svarlaedar_gloves2",
+   "PageNumber": 1,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-15",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "cured_svarlaedar_helm",
+   "PageNumber": 1,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-16",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "hard_svarlaedar_jerkin2",
+   "PageNumber": 1,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-17",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "hard_svarlaedar_leggings2",
+   "PageNumber": 1,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-18",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "hard_svarlaedar_sleeves2",
+   "PageNumber": 1,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-19",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "hard_svarlaedar_boots2",
+   "PageNumber": 1,
+   "SlotPosition": 19,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-20",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "hard_svarlaedar_gloves2",
+   "PageNumber": 1,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-21",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "hard_svarlaedar_helm",
+   "PageNumber": 1,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-22",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "rigid_svarlaedar_jerkin2",
+   "PageNumber": 1,
+   "SlotPosition": 22,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-23",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "rigid_svarlaedar_leggings2",
+   "PageNumber": 1,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-24",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "rigid_svarlaedar_sleeves2",
+   "PageNumber": 1,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-25",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "rigid_svarlaedar_boots2",
+   "PageNumber": 1,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-26",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "rigid_svarlaedar_gloves2",
+   "PageNumber": 1,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidStuddedSvarskodd-1-27",
+   "ItemListID": "MidStuddedSvarskodd",
+   "ItemTemplateID": "rigid_svarlaedar_helm",
+   "PageNumber": 1,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidThrowingArrowsPoisons-1-6",
+   "ItemListID": "MidThrowingArrowsPoisons",
+   "ItemTemplateID": "adamantium_balanced_throwing_knives",
+   "PageNumber": 1,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidThrowingArrowsPoisons-1-7",
+   "ItemListID": "MidThrowingArrowsPoisons",
+   "ItemTemplateID": "adamantium_weighted_throwing_knives",
+   "PageNumber": 1,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidThrowingArrowsPoisons-1-8",
+   "ItemListID": "MidThrowingArrowsPoisons",
+   "ItemTemplateID": "adamantium_balanced_throwing_axes",
+   "PageNumber": 1,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidThrowingArrowsPoisons-1-9",
+   "ItemListID": "MidThrowingArrowsPoisons",
+   "ItemTemplateID": "adamantium_weighted_throwing_axes",
+   "PageNumber": 1,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidThrowingArrowsPoisons-1-10",
+   "ItemListID": "MidThrowingArrowsPoisons",
+   "ItemTemplateID": "adamantium_balanced_throwing_hammers",
+   "PageNumber": 1,
+   "SlotPosition": 10,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidThrowingArrowsPoisons-1-11",
+   "ItemListID": "MidThrowingArrowsPoisons",
+   "ItemTemplateID": "adamantium_weighted_throwing_hammers",
+   "PageNumber": 1,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidThrowingArrowsPoisons-1-12",
+   "ItemListID": "MidThrowingArrowsPoisons",
+   "ItemTemplateID": "asterite_balanced_throwing_knives",
+   "PageNumber": 1,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidThrowingArrowsPoisons-1-13",
+   "ItemListID": "MidThrowingArrowsPoisons",
+   "ItemTemplateID": "asterite_balanced_throwing_axes",
+   "PageNumber": 1,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidThrowingArrowsPoisons-1-14",
+   "ItemListID": "MidThrowingArrowsPoisons",
+   "ItemTemplateID": "asterite_balanced_throwing_hammers",
+   "PageNumber": 1,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidThrowingWeapons4-1-0",
+   "ItemListID": "MidThrowingWeapons4",
+   "ItemTemplateID": "p165_item_2386",
+   "PageNumber": 1,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidThrowingWeapons4-1-1",
+   "ItemListID": "MidThrowingWeapons4",
+   "ItemTemplateID": "p165_item_2387",
+   "PageNumber": 1,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidThrowingWeapons4-1-2",
+   "ItemListID": "MidThrowingWeapons4",
+   "ItemTemplateID": "p165_item_2388",
+   "PageNumber": 1,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidThrowingWeapons4-1-3",
+   "ItemListID": "MidThrowingWeapons4",
+   "ItemTemplateID": "p165_item_2389",
+   "PageNumber": 1,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-0-24",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "bronze_dagger2",
+   "PageNumber": 0,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-0-25",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "bronze_short_sword2",
+   "PageNumber": 0,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-0-26",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "bronze_broadsword2",
+   "PageNumber": 0,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-0-27",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "bronze_longsword2",
+   "PageNumber": 0,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-0-28",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "iron_dagger2",
+   "PageNumber": 0,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-0-29",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "iron_short_sword2",
+   "PageNumber": 0,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-1-24",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "iron_longsword2",
+   "PageNumber": 1,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-1-25",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "iron_bastard_sword2",
+   "PageNumber": 1,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-1-26",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "steel_dagger2",
+   "PageNumber": 1,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-1-27",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "steel_short_sword2",
+   "PageNumber": 1,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-1-28",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "steel_broadsword2",
+   "PageNumber": 1,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-1-29",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "steel_longsword2",
+   "PageNumber": 1,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-3-15",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "steel_bastard_sword2",
+   "PageNumber": 3,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-3-16",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "alloy_dagger2",
+   "PageNumber": 3,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-3-17",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "alloy_broadsword2",
+   "PageNumber": 3,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-3-18",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "alloy_bastard_sword2",
+   "PageNumber": 3,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-3-19",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "fine_alloy_dagger2",
+   "PageNumber": 3,
+   "SlotPosition": 19,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-3-20",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "fine_alloy_short_sword2",
+   "PageNumber": 3,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-3-21",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "fine_alloy_bastard_sword2",
+   "PageNumber": 3,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-3-22",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "fine_alloy_hand_axe2",
+   "PageNumber": 3,
+   "SlotPosition": 22,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-3-23",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "fine_alloy_bearded_axe",
+   "PageNumber": 3,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-3-24",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "fine_alloy_war_axe2",
+   "PageNumber": 3,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-3-25",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "fine_alloy_spiked_axe",
+   "PageNumber": 3,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-3-26",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "fine_alloy_double-bladed_axe",
+   "PageNumber": 3,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-3-27",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "fine_alloy_small_hammer2",
+   "PageNumber": 3,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-3-28",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "fine_alloy_hammer2",
+   "PageNumber": 3,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-3-29",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "fine_alloy_war_hammer2",
+   "PageNumber": 3,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-4-11",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "fine_alloy_pick_hammer2",
+   "PageNumber": 4,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-4-12",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "fine_alloy_battle_hammer2",
+   "PageNumber": 4,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-4-13",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "alloy_battle_hammer2",
+   "PageNumber": 4,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-4-14",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "alloy_hammer2",
+   "PageNumber": 4,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-4-15",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "alloy_pick_hammer2",
+   "PageNumber": 4,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-4-16",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "alloy_small_hammer2",
+   "PageNumber": 4,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-4-17",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "alloy_war_hammer2",
+   "PageNumber": 4,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-4-18",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "bronze_pick_hammer2",
+   "PageNumber": 4,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-4-19",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "bronze_small_hammer2",
+   "PageNumber": 4,
+   "SlotPosition": 19,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-4-20",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "bronze_war_hammer2",
+   "PageNumber": 4,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-4-21",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "iron_battle_hammer2",
+   "PageNumber": 4,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-4-22",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "iron_war_hammer2",
+   "PageNumber": 4,
+   "SlotPosition": 22,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-4-23",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "steel_battle_hammer2",
+   "PageNumber": 4,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-4-24",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "steel_hammer2",
+   "PageNumber": 4,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-4-25",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "steel_pick_hammer2",
+   "PageNumber": 4,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-4-26",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "steel_small_hammer2",
+   "PageNumber": 4,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-4-27",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "steel_war_hammer2",
+   "PageNumber": 4,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-4-28",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "bronze_hand_axe2",
+   "PageNumber": 4,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant-4-29",
+   "ItemListID": "MidWeaponMerchant",
+   "ItemTemplateID": "bronze_bearded_axe",
+   "PageNumber": 4,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-0-25",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "fine_alloy_spear",
+   "PageNumber": 0,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-0-26",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "fine_alloy_long_spear",
+   "PageNumber": 0,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-0-27",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "fine_alloy_trident",
+   "PageNumber": 0,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-0-28",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "fine_alloy_lugged_spear",
+   "PageNumber": 0,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-0-29",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "fine_alloy_great_spear",
+   "PageNumber": 0,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-1-25",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "bronze_hammer2",
+   "PageNumber": 1,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-1-26",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "bronze_small_hammer2",
+   "PageNumber": 1,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-1-27",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "alloy_great_spear",
+   "PageNumber": 1,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-1-28",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "alloy_long_spear",
+   "PageNumber": 1,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-1-29",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "alloy_lugged_spear",
+   "PageNumber": 1,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-2-23",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "alloy_spear",
+   "PageNumber": 2,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-2-24",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "alloy_trident",
+   "PageNumber": 2,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-2-25",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "bronze_great_spear",
+   "PageNumber": 2,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-2-26",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "bronze_long_spear",
+   "PageNumber": 2,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-2-27",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "bronze_lugged_spear",
+   "PageNumber": 2,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-2-28",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "bronze_spear",
+   "PageNumber": 2,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-2-29",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "bronze_trident",
+   "PageNumber": 2,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-3-24",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "iron_great_spear",
+   "PageNumber": 3,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-3-25",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "iron_long_spear",
+   "PageNumber": 3,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-3-26",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "iron_lugged_spear",
+   "PageNumber": 3,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-3-27",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "iron_spear",
+   "PageNumber": 3,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-3-28",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "iron_trident",
+   "PageNumber": 3,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-3-29",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "steel_great_spear",
+   "PageNumber": 3,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-4-0",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "steel_long_spear",
+   "PageNumber": 4,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-4-1",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "steel_lugged_spear",
+   "PageNumber": 4,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-4-2",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "steel_spear",
+   "PageNumber": 4,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-MidWeaponMerchant4-4-3",
+   "ItemListID": "MidWeaponMerchant4",
+   "ItemTemplateID": "steel_trident",
+   "PageNumber": 4,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-393387fe-957f-4d58-8ef8-5be75176c6ef-0-14",
+   "ItemListID": "393387fe-957f-4d58-8ef8-5be75176c6ef",
+   "ItemTemplateID": "p165_item_3563",
+   "PageNumber": 0,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-393387fe-957f-4d58-8ef8-5be75176c6ef-0-15",
+   "ItemListID": "393387fe-957f-4d58-8ef8-5be75176c6ef",
+   "ItemTemplateID": "p165_item_3460",
+   "PageNumber": 0,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cd800515-e685-49ac-a704-f4ff958018f7-0-13",
+   "ItemListID": "cd800515-e685-49ac-a704-f4ff958018f7",
+   "ItemTemplateID": "p165_item_3291",
+   "PageNumber": 0,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cd800515-e685-49ac-a704-f4ff958018f7-0-14",
+   "ItemListID": "cd800515-e685-49ac-a704-f4ff958018f7",
+   "ItemTemplateID": "p165_item_3293",
+   "PageNumber": 0,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cd800515-e685-49ac-a704-f4ff958018f7-0-15",
+   "ItemListID": "cd800515-e685-49ac-a704-f4ff958018f7",
+   "ItemTemplateID": "p165_item_4515",
+   "PageNumber": 0,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cd800515-e685-49ac-a704-f4ff958018f7-0-16",
+   "ItemListID": "cd800515-e685-49ac-a704-f4ff958018f7",
+   "ItemTemplateID": "p165_item_4537",
+   "PageNumber": 0,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cd800515-e685-49ac-a704-f4ff958018f7-0-17",
+   "ItemListID": "cd800515-e685-49ac-a704-f4ff958018f7",
+   "ItemTemplateID": "p165_item_3292",
+   "PageNumber": 0,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cd800515-e685-49ac-a704-f4ff958018f7-0-18",
+   "ItemListID": "cd800515-e685-49ac-a704-f4ff958018f7",
+   "ItemTemplateID": "p165_item_4514",
+   "PageNumber": 0,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cd800515-e685-49ac-a704-f4ff958018f7-0-19",
+   "ItemListID": "cd800515-e685-49ac-a704-f4ff958018f7",
+   "ItemTemplateID": "p165_item_4536",
+   "PageNumber": 0,
+   "SlotPosition": 19,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cd800515-e685-49ac-a704-f4ff958018f7-0-20",
+   "ItemListID": "cd800515-e685-49ac-a704-f4ff958018f7",
+   "ItemTemplateID": "p165_item_3295",
+   "PageNumber": 0,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cd800515-e685-49ac-a704-f4ff958018f7-0-21",
+   "ItemListID": "cd800515-e685-49ac-a704-f4ff958018f7",
+   "ItemTemplateID": "p165_item_4882",
+   "PageNumber": 0,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cd800515-e685-49ac-a704-f4ff958018f7-0-22",
+   "ItemListID": "cd800515-e685-49ac-a704-f4ff958018f7",
+   "ItemTemplateID": "p165_item_3294",
+   "PageNumber": 0,
+   "SlotPosition": 22,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cd800515-e685-49ac-a704-f4ff958018f7-0-23",
+   "ItemListID": "cd800515-e685-49ac-a704-f4ff958018f7",
+   "ItemTemplateID": "p165_item_3646",
+   "PageNumber": 0,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cd800515-e685-49ac-a704-f4ff958018f7-0-24",
+   "ItemListID": "cd800515-e685-49ac-a704-f4ff958018f7",
+   "ItemTemplateID": "p165_item_4554",
+   "PageNumber": 0,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cd800515-e685-49ac-a704-f4ff958018f7-0-25",
+   "ItemListID": "cd800515-e685-49ac-a704-f4ff958018f7",
+   "ItemTemplateID": "p165_item_4566",
+   "PageNumber": 0,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cd800515-e685-49ac-a704-f4ff958018f7-0-26",
+   "ItemListID": "cd800515-e685-49ac-a704-f4ff958018f7",
+   "ItemTemplateID": "p165_item_4555",
+   "PageNumber": 0,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cd800515-e685-49ac-a704-f4ff958018f7-0-27",
+   "ItemListID": "cd800515-e685-49ac-a704-f4ff958018f7",
+   "ItemTemplateID": "p165_item_4550",
+   "PageNumber": 0,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cd800515-e685-49ac-a704-f4ff958018f7-0-28",
+   "ItemListID": "cd800515-e685-49ac-a704-f4ff958018f7",
+   "ItemTemplateID": "p165_item_4567",
+   "PageNumber": 0,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cd800515-e685-49ac-a704-f4ff958018f7-0-29",
+   "ItemListID": "cd800515-e685-49ac-a704-f4ff958018f7",
+   "ItemTemplateID": "p165_item_4551",
+   "PageNumber": 0,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cd800515-e685-49ac-a704-f4ff958018f7-1-11",
+   "ItemListID": "cd800515-e685-49ac-a704-f4ff958018f7",
+   "ItemTemplateID": "p165_item_4568",
+   "PageNumber": 1,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cd800515-e685-49ac-a704-f4ff958018f7-1-12",
+   "ItemListID": "cd800515-e685-49ac-a704-f4ff958018f7",
+   "ItemTemplateID": "p165_item_4552",
+   "PageNumber": 1,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cd800515-e685-49ac-a704-f4ff958018f7-1-13",
+   "ItemListID": "cd800515-e685-49ac-a704-f4ff958018f7",
+   "ItemTemplateID": "p165_item_4565",
+   "PageNumber": 1,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-3c20c276-a1fb-497c-b389-fe62712ea01f-0-9",
+   "ItemListID": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+   "ItemTemplateID": "p165_item_4332",
+   "PageNumber": 0,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-3c20c276-a1fb-497c-b389-fe62712ea01f-0-10",
+   "ItemListID": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+   "ItemTemplateID": "p165_item_9504",
+   "PageNumber": 0,
+   "SlotPosition": 10,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-3c20c276-a1fb-497c-b389-fe62712ea01f-0-11",
+   "ItemListID": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+   "ItemTemplateID": "p165_item_4437",
+   "PageNumber": 0,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-3c20c276-a1fb-497c-b389-fe62712ea01f-0-12",
+   "ItemListID": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+   "ItemTemplateID": "p165_item_4792",
+   "PageNumber": 0,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-3c20c276-a1fb-497c-b389-fe62712ea01f-0-13",
+   "ItemListID": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+   "ItemTemplateID": "p165_item_4436",
+   "PageNumber": 0,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-6176da0c-b08e-437f-82d3-94905473ef15-0-6",
+   "ItemListID": "6176da0c-b08e-437f-82d3-94905473ef15",
+   "ItemTemplateID": "p165_item_3497",
+   "PageNumber": 0,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-6176da0c-b08e-437f-82d3-94905473ef15-0-7",
+   "ItemListID": "6176da0c-b08e-437f-82d3-94905473ef15",
+   "ItemTemplateID": "p165_item_3547",
+   "PageNumber": 0,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-6176da0c-b08e-437f-82d3-94905473ef15-0-8",
+   "ItemListID": "6176da0c-b08e-437f-82d3-94905473ef15",
+   "ItemTemplateID": "p165_item_3495",
+   "PageNumber": 0,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-6176da0c-b08e-437f-82d3-94905473ef15-0-9",
+   "ItemListID": "6176da0c-b08e-437f-82d3-94905473ef15",
+   "ItemTemplateID": "p165_item_3546",
+   "PageNumber": 0,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-c4a7bfed-3b20-408a-a50c-17a08d98a011-0-17",
+   "ItemListID": "c4a7bfed-3b20-408a-a50c-17a08d98a011",
+   "ItemTemplateID": "p165_item_6726",
+   "PageNumber": 0,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-baced768-cbb8-4371-ad19-115563af9b01-0-6",
+   "ItemListID": "baced768-cbb8-4371-ad19-115563af9b01",
+   "ItemTemplateID": "p165_item_4973",
+   "PageNumber": 0,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-baced768-cbb8-4371-ad19-115563af9b01-0-7",
+   "ItemListID": "baced768-cbb8-4371-ad19-115563af9b01",
+   "ItemTemplateID": "p165_item_4972",
+   "PageNumber": 0,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-baced768-cbb8-4371-ad19-115563af9b01-0-8",
+   "ItemListID": "baced768-cbb8-4371-ad19-115563af9b01",
+   "ItemTemplateID": "p165_item_5021",
+   "PageNumber": 0,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-baced768-cbb8-4371-ad19-115563af9b01-0-9",
+   "ItemListID": "baced768-cbb8-4371-ad19-115563af9b01",
+   "ItemTemplateID": "p165_item_3289",
+   "PageNumber": 0,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f0e5327c-d39d-4ee2-b7a4-6ef318853e66-0-17",
+   "ItemListID": "f0e5327c-d39d-4ee2-b7a4-6ef318853e66",
+   "ItemTemplateID": "p165_item_4707",
+   "PageNumber": 0,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cfdc6083-8ba0-4406-b581-4bc4498dba38-0-14",
+   "ItemListID": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+   "ItemTemplateID": "p165_item_3642",
+   "PageNumber": 0,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cfdc6083-8ba0-4406-b581-4bc4498dba38-0-15",
+   "ItemListID": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+   "ItemTemplateID": "p165_item_3644",
+   "PageNumber": 0,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cfdc6083-8ba0-4406-b581-4bc4498dba38-0-16",
+   "ItemListID": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+   "ItemTemplateID": "p165_item_4539",
+   "PageNumber": 0,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cfdc6083-8ba0-4406-b581-4bc4498dba38-0-17",
+   "ItemListID": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+   "ItemTemplateID": "p165_item_3636",
+   "PageNumber": 0,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cfdc6083-8ba0-4406-b581-4bc4498dba38-0-18",
+   "ItemListID": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+   "ItemTemplateID": "p165_item_6950",
+   "PageNumber": 0,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cfdc6083-8ba0-4406-b581-4bc4498dba38-0-19",
+   "ItemListID": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+   "ItemTemplateID": "p165_item_4516",
+   "PageNumber": 0,
+   "SlotPosition": 19,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cfdc6083-8ba0-4406-b581-4bc4498dba38-0-20",
+   "ItemListID": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+   "ItemTemplateID": "p165_item_4538",
+   "PageNumber": 0,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cfdc6083-8ba0-4406-b581-4bc4498dba38-0-21",
+   "ItemListID": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+   "ItemTemplateID": "p165_item_4513",
+   "PageNumber": 0,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cfdc6083-8ba0-4406-b581-4bc4498dba38-0-22",
+   "ItemListID": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+   "ItemTemplateID": "p165_item_3359",
+   "PageNumber": 0,
+   "SlotPosition": 22,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cfdc6083-8ba0-4406-b581-4bc4498dba38-0-23",
+   "ItemListID": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+   "ItemTemplateID": "p165_item_3647",
+   "PageNumber": 0,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cfdc6083-8ba0-4406-b581-4bc4498dba38-0-24",
+   "ItemListID": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+   "ItemTemplateID": "p165_item_4735",
+   "PageNumber": 0,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cfdc6083-8ba0-4406-b581-4bc4498dba38-0-25",
+   "ItemListID": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+   "ItemTemplateID": "p165_item_4883",
+   "PageNumber": 0,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cfdc6083-8ba0-4406-b581-4bc4498dba38-0-26",
+   "ItemListID": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+   "ItemTemplateID": "p165_item_7951",
+   "PageNumber": 0,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cfdc6083-8ba0-4406-b581-4bc4498dba38-0-27",
+   "ItemListID": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+   "ItemTemplateID": "p165_item_4885",
+   "PageNumber": 0,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cfdc6083-8ba0-4406-b581-4bc4498dba38-0-28",
+   "ItemListID": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+   "ItemTemplateID": "p165_item_4888",
+   "PageNumber": 0,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cfdc6083-8ba0-4406-b581-4bc4498dba38-0-29",
+   "ItemListID": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+   "ItemTemplateID": "p165_item_4734",
+   "PageNumber": 0,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cfdc6083-8ba0-4406-b581-4bc4498dba38-1-11",
+   "ItemListID": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+   "ItemTemplateID": "p165_item_4886",
+   "PageNumber": 1,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-cfdc6083-8ba0-4406-b581-4bc4498dba38-1-12",
+   "ItemListID": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+   "ItemTemplateID": "p165_item_4736",
+   "PageNumber": 1,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-65cbeffd-3049-4419-bd2d-da2ea6d60ae1-0-9",
+   "ItemListID": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "ItemTemplateID": "p165_item_5631",
+   "PageNumber": 0,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-65cbeffd-3049-4419-bd2d-da2ea6d60ae1-0-10",
+   "ItemListID": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "ItemTemplateID": "p165_item_5630",
+   "PageNumber": 0,
+   "SlotPosition": 10,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-65cbeffd-3049-4419-bd2d-da2ea6d60ae1-0-11",
+   "ItemListID": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "ItemTemplateID": "p165_item_5634",
+   "PageNumber": 0,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-1c2b04e5-d839-4960-9068-2c544e12b05f-0-12",
+   "ItemListID": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+   "ItemTemplateID": "p165_item_7470",
+   "PageNumber": 0,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-1c2b04e5-d839-4960-9068-2c544e12b05f-0-13",
+   "ItemListID": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+   "ItemTemplateID": "p165_item_7463",
+   "PageNumber": 0,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-1c2b04e5-d839-4960-9068-2c544e12b05f-0-14",
+   "ItemListID": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+   "ItemTemplateID": "p165_item_7466",
+   "PageNumber": 0,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-1c2b04e5-d839-4960-9068-2c544e12b05f-0-15",
+   "ItemListID": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+   "ItemTemplateID": "p165_item_7469",
+   "PageNumber": 0,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-1c2b04e5-d839-4960-9068-2c544e12b05f-0-16",
+   "ItemListID": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+   "ItemTemplateID": "p165_item_7474",
+   "PageNumber": 0,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-1c2b04e5-d839-4960-9068-2c544e12b05f-0-17",
+   "ItemListID": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+   "ItemTemplateID": "p165_item_7477",
+   "PageNumber": 0,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-1c2b04e5-d839-4960-9068-2c544e12b05f-0-18",
+   "ItemListID": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+   "ItemTemplateID": "p165_item_7480",
+   "PageNumber": 0,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-47a34894-b9aa-4620-bf21-415a23dcb85f-0-7",
+   "ItemListID": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+   "ItemTemplateID": "p165_item_6939",
+   "PageNumber": 0,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-47a34894-b9aa-4620-bf21-415a23dcb85f-0-8",
+   "ItemListID": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+   "ItemTemplateID": "p165_item_3361",
+   "PageNumber": 0,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-47a34894-b9aa-4620-bf21-415a23dcb85f-0-9",
+   "ItemListID": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+   "ItemTemplateID": "p165_item_3342",
+   "PageNumber": 0,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-47a34894-b9aa-4620-bf21-415a23dcb85f-0-10",
+   "ItemListID": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+   "ItemTemplateID": "p165_item_3433",
+   "PageNumber": 0,
+   "SlotPosition": 10,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-47a34894-b9aa-4620-bf21-415a23dcb85f-0-11",
+   "ItemListID": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+   "ItemTemplateID": "p165_item_3429",
+   "PageNumber": 0,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-47a34894-b9aa-4620-bf21-415a23dcb85f-0-12",
+   "ItemListID": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+   "ItemTemplateID": "p165_item_3613",
+   "PageNumber": 0,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-47a34894-b9aa-4620-bf21-415a23dcb85f-0-13",
+   "ItemListID": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+   "ItemTemplateID": "p165_item_3610",
+   "PageNumber": 0,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-47a34894-b9aa-4620-bf21-415a23dcb85f-0-14",
+   "ItemListID": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+   "ItemTemplateID": "p165_item_3437",
+   "PageNumber": 0,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-47a34894-b9aa-4620-bf21-415a23dcb85f-0-15",
+   "ItemListID": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+   "ItemTemplateID": "p165_item_3340",
+   "PageNumber": 0,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-47a34894-b9aa-4620-bf21-415a23dcb85f-0-16",
+   "ItemListID": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+   "ItemTemplateID": "p165_item_3435",
+   "PageNumber": 0,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-47a34894-b9aa-4620-bf21-415a23dcb85f-0-17",
+   "ItemListID": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+   "ItemTemplateID": "p165_item_3612",
+   "PageNumber": 0,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-47a34894-b9aa-4620-bf21-415a23dcb85f-0-18",
+   "ItemListID": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+   "ItemTemplateID": "p165_item_3436",
+   "PageNumber": 0,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-47a34894-b9aa-4620-bf21-415a23dcb85f-0-19",
+   "ItemListID": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+   "ItemTemplateID": "p165_item_3432",
+   "PageNumber": 0,
+   "SlotPosition": 19,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-47a34894-b9aa-4620-bf21-415a23dcb85f-0-20",
+   "ItemListID": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+   "ItemTemplateID": "p165_item_3431",
+   "PageNumber": 0,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-47a34894-b9aa-4620-bf21-415a23dcb85f-0-21",
+   "ItemListID": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+   "ItemTemplateID": "p165_item_3430",
+   "PageNumber": 0,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f03643af-19c7-478c-97ff-a12898b7d4da-0-14",
+   "ItemListID": "f03643af-19c7-478c-97ff-a12898b7d4da",
+   "ItemTemplateID": "Accursed_Avernal_Great_Sword",
+   "PageNumber": 0,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f03643af-19c7-478c-97ff-a12898b7d4da-0-15",
+   "ItemListID": "f03643af-19c7-478c-97ff-a12898b7d4da",
+   "ItemTemplateID": "Accursed_Avernal_Bladeblocker",
+   "PageNumber": 0,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f03643af-19c7-478c-97ff-a12898b7d4da-0-16",
+   "ItemListID": "f03643af-19c7-478c-97ff-a12898b7d4da",
+   "ItemTemplateID": "2_Accursed_Avernal_Protector",
+   "PageNumber": 0,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-5cfa2b91-ab15-4509-a08f-75386dda3f6c-0-8",
+   "ItemListID": "5cfa2b91-ab15-4509-a08f-75386dda3f6c",
+   "ItemTemplateID": "p165_item_3466",
+   "PageNumber": 0,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-5cfa2b91-ab15-4509-a08f-75386dda3f6c-0-11",
+   "ItemListID": "5cfa2b91-ab15-4509-a08f-75386dda3f6c",
+   "ItemTemplateID": "p165_item_4890",
+   "PageNumber": 0,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-ad74b204-be76-4f06-8c6f-2cf1c3032e72-0-18",
+   "ItemListID": "ad74b204-be76-4f06-8c6f-2cf1c3032e72",
+   "ItemTemplateID": "p165_item_3414",
+   "PageNumber": 0,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-09792759-ac95-43fc-b08a-b84155d4eafa-0-18",
+   "ItemListID": "09792759-ac95-43fc-b08a-b84155d4eafa",
+   "ItemTemplateID": "p165_item_6432",
+   "PageNumber": 0,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-067eddfd-b27f-4560-b5d2-761420943c53-0-6",
+   "ItemListID": "067eddfd-b27f-4560-b5d2-761420943c53",
+   "ItemTemplateID": "p165_item_7484",
+   "PageNumber": 0,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-067eddfd-b27f-4560-b5d2-761420943c53-0-7",
+   "ItemListID": "067eddfd-b27f-4560-b5d2-761420943c53",
+   "ItemTemplateID": "p165_item_7486",
+   "PageNumber": 0,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-067eddfd-b27f-4560-b5d2-761420943c53-0-8",
+   "ItemListID": "067eddfd-b27f-4560-b5d2-761420943c53",
+   "ItemTemplateID": "p165_item_7451",
+   "PageNumber": 0,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-067eddfd-b27f-4560-b5d2-761420943c53-0-9",
+   "ItemListID": "067eddfd-b27f-4560-b5d2-761420943c53",
+   "ItemTemplateID": "p165_item_4879",
+   "PageNumber": 0,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-067eddfd-b27f-4560-b5d2-761420943c53-0-10",
+   "ItemListID": "067eddfd-b27f-4560-b5d2-761420943c53",
+   "ItemTemplateID": "p165_item_7457",
+   "PageNumber": 0,
+   "SlotPosition": 10,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-067eddfd-b27f-4560-b5d2-761420943c53-0-11",
+   "ItemListID": "067eddfd-b27f-4560-b5d2-761420943c53",
+   "ItemTemplateID": "p165_item_4512",
+   "PageNumber": 0,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-677c9085-86de-4af2-8832-9ccf2dd5505e-0-13",
+   "ItemListID": "677c9085-86de-4af2-8832-9ccf2dd5505e",
+   "ItemTemplateID": "p165_item_3290",
+   "PageNumber": 0,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-0-18",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_4527",
+   "PageNumber": 0,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-0-19",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_3356",
+   "PageNumber": 0,
+   "SlotPosition": 19,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-0-20",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_4541",
+   "PageNumber": 0,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-0-21",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_4526",
+   "PageNumber": 0,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-0-22",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_4518",
+   "PageNumber": 0,
+   "SlotPosition": 22,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-0-23",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_4540",
+   "PageNumber": 0,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-0-24",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_4530",
+   "PageNumber": 0,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-0-25",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_4884",
+   "PageNumber": 0,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-0-26",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_4529",
+   "PageNumber": 0,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-0-27",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_4528",
+   "PageNumber": 0,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-0-28",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_3296",
+   "PageNumber": 0,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-0-29",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_3300",
+   "PageNumber": 0,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-1-11",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_3297",
+   "PageNumber": 1,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-1-12",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_3325",
+   "PageNumber": 1,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-1-13",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_3301",
+   "PageNumber": 1,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-1-14",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_3324",
+   "PageNumber": 1,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-1-15",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_3302",
+   "PageNumber": 1,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-1-16",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_3326",
+   "PageNumber": 1,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-1-17",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_3298",
+   "PageNumber": 1,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-f6f1b508-7a40-4863-87cc-83b48cb71bba-1-18",
+   "ItemListID": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "ItemTemplateID": "p165_item_3327",
+   "PageNumber": 1,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-d08c8326-c722-4da6-90c8-6ca5584ad413-0-6",
+   "ItemListID": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+   "ItemTemplateID": "p165_item_4817",
+   "PageNumber": 0,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-d08c8326-c722-4da6-90c8-6ca5584ad413-0-7",
+   "ItemListID": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+   "ItemTemplateID": "p165_item_4818",
+   "PageNumber": 0,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-d08c8326-c722-4da6-90c8-6ca5584ad413-0-8",
+   "ItemListID": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+   "ItemTemplateID": "p165_item_4814",
+   "PageNumber": 0,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-d08c8326-c722-4da6-90c8-6ca5584ad413-0-9",
+   "ItemListID": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+   "ItemTemplateID": "p165_item_4813",
+   "PageNumber": 0,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-d08c8326-c722-4da6-90c8-6ca5584ad413-0-10",
+   "ItemListID": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+   "ItemTemplateID": "p165_item_4815",
+   "PageNumber": 0,
+   "SlotPosition": 10,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-d08c8326-c722-4da6-90c8-6ca5584ad413-0-11",
+   "ItemListID": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+   "ItemTemplateID": "p165_item_5022",
+   "PageNumber": 0,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-d08c8326-c722-4da6-90c8-6ca5584ad413-0-12",
+   "ItemListID": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+   "ItemTemplateID": "p165_item_5023",
+   "PageNumber": 0,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-d08c8326-c722-4da6-90c8-6ca5584ad413-0-13",
+   "ItemListID": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+   "ItemTemplateID": "p165_item_4881",
+   "PageNumber": 0,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-d08c8326-c722-4da6-90c8-6ca5584ad413-0-14",
+   "ItemListID": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+   "ItemTemplateID": "p165_item_3360",
+   "PageNumber": 0,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-d08c8326-c722-4da6-90c8-6ca5584ad413-0-15",
+   "ItemListID": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+   "ItemTemplateID": "p165_item_6935",
+   "PageNumber": 0,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-d08c8326-c722-4da6-90c8-6ca5584ad413-0-16",
+   "ItemListID": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+   "ItemTemplateID": "p165_item_6937",
+   "PageNumber": 0,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-bb4bf564-c3c7-4801-8442-1abb0615dc04-0-17",
+   "ItemListID": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+   "ItemTemplateID": "p165_item_3639",
+   "PageNumber": 0,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-bb4bf564-c3c7-4801-8442-1abb0615dc04-0-18",
+   "ItemListID": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+   "ItemTemplateID": "p165_item_3675",
+   "PageNumber": 0,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-bb4bf564-c3c7-4801-8442-1abb0615dc04-0-19",
+   "ItemListID": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+   "ItemTemplateID": "p165_item_4412",
+   "PageNumber": 0,
+   "SlotPosition": 19,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-bb4bf564-c3c7-4801-8442-1abb0615dc04-0-20",
+   "ItemListID": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+   "ItemTemplateID": "p165_item_4486",
+   "PageNumber": 0,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-bb4bf564-c3c7-4801-8442-1abb0615dc04-0-21",
+   "ItemListID": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+   "ItemTemplateID": "p165_item_3673",
+   "PageNumber": 0,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-bb4bf564-c3c7-4801-8442-1abb0615dc04-0-22",
+   "ItemListID": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+   "ItemTemplateID": "p165_item_3638",
+   "PageNumber": 0,
+   "SlotPosition": 22,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-bb4bf564-c3c7-4801-8442-1abb0615dc04-0-23",
+   "ItemListID": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+   "ItemTemplateID": "p165_item_3641",
+   "PageNumber": 0,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-bb4bf564-c3c7-4801-8442-1abb0615dc04-0-24",
+   "ItemListID": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+   "ItemTemplateID": "p165_item_4489",
+   "PageNumber": 0,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-bb4bf564-c3c7-4801-8442-1abb0615dc04-0-25",
+   "ItemListID": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+   "ItemTemplateID": "p165_item_4490",
+   "PageNumber": 0,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-bb4bf564-c3c7-4801-8442-1abb0615dc04-0-26",
+   "ItemListID": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+   "ItemTemplateID": "p165_item_4410",
+   "PageNumber": 0,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-bb4bf564-c3c7-4801-8442-1abb0615dc04-0-27",
+   "ItemListID": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+   "ItemTemplateID": "p165_item_4487",
+   "PageNumber": 0,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-bb4bf564-c3c7-4801-8442-1abb0615dc04-0-28",
+   "ItemListID": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+   "ItemTemplateID": "p165_item_4488",
+   "PageNumber": 0,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-bb4bf564-c3c7-4801-8442-1abb0615dc04-0-29",
+   "ItemListID": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+   "ItemTemplateID": "p165_item_3643",
+   "PageNumber": 0,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-bb4bf564-c3c7-4801-8442-1abb0615dc04-1-11",
+   "ItemListID": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+   "ItemTemplateID": "p165_item_3640",
+   "PageNumber": 1,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-bb4bf564-c3c7-4801-8442-1abb0615dc04-1-12",
+   "ItemListID": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+   "ItemTemplateID": "p165_item_4485",
+   "PageNumber": 1,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-bb4bf564-c3c7-4801-8442-1abb0615dc04-1-13",
+   "ItemListID": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+   "ItemTemplateID": "p165_item_3676",
+   "PageNumber": 1,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-bb4bf564-c3c7-4801-8442-1abb0615dc04-1-14",
+   "ItemListID": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+   "ItemTemplateID": "p165_item_3674",
+   "PageNumber": 1,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-bb4bf564-c3c7-4801-8442-1abb0615dc04-1-15",
+   "ItemListID": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+   "ItemTemplateID": "p165_item_4411",
+   "PageNumber": 1,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-53afad0b-fd95-4cb1-89ed-a412d3d982fc-0-12",
+   "ItemListID": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+   "ItemTemplateID": "p165_item_3519",
+   "PageNumber": 0,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-53afad0b-fd95-4cb1-89ed-a412d3d982fc-0-13",
+   "ItemListID": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+   "ItemTemplateID": "p165_item_3525",
+   "PageNumber": 0,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-53afad0b-fd95-4cb1-89ed-a412d3d982fc-0-14",
+   "ItemListID": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+   "ItemTemplateID": "p165_item_3527",
+   "PageNumber": 0,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-53afad0b-fd95-4cb1-89ed-a412d3d982fc-0-15",
+   "ItemListID": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+   "ItemTemplateID": "p165_item_3577",
+   "PageNumber": 0,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-53afad0b-fd95-4cb1-89ed-a412d3d982fc-0-16",
+   "ItemListID": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+   "ItemTemplateID": "p165_item_3579",
+   "PageNumber": 0,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-53afad0b-fd95-4cb1-89ed-a412d3d982fc-0-17",
+   "ItemListID": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+   "ItemTemplateID": "p165_item_3523",
+   "PageNumber": 0,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-53afad0b-fd95-4cb1-89ed-a412d3d982fc-0-18",
+   "ItemListID": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+   "ItemTemplateID": "p165_item_3518",
+   "PageNumber": 0,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-53afad0b-fd95-4cb1-89ed-a412d3d982fc-0-19",
+   "ItemListID": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+   "ItemTemplateID": "p165_item_3521",
+   "PageNumber": 0,
+   "SlotPosition": 19,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-53afad0b-fd95-4cb1-89ed-a412d3d982fc-0-20",
+   "ItemListID": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+   "ItemTemplateID": "p165_item_3603",
+   "PageNumber": 0,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-53afad0b-fd95-4cb1-89ed-a412d3d982fc-0-21",
+   "ItemListID": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+   "ItemTemplateID": "p165_item_3528",
+   "PageNumber": 0,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-53afad0b-fd95-4cb1-89ed-a412d3d982fc-0-22",
+   "ItemListID": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+   "ItemTemplateID": "p165_item_3607",
+   "PageNumber": 0,
+   "SlotPosition": 22,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-53afad0b-fd95-4cb1-89ed-a412d3d982fc-0-23",
+   "ItemListID": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+   "ItemTemplateID": "p165_item_3606",
+   "PageNumber": 0,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-53afad0b-fd95-4cb1-89ed-a412d3d982fc-0-24",
+   "ItemListID": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+   "ItemTemplateID": "p165_item_3609",
+   "PageNumber": 0,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-53afad0b-fd95-4cb1-89ed-a412d3d982fc-0-25",
+   "ItemListID": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+   "ItemTemplateID": "p165_item_3605",
+   "PageNumber": 0,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-53afad0b-fd95-4cb1-89ed-a412d3d982fc-0-26",
+   "ItemListID": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+   "ItemTemplateID": "p165_item_3608",
+   "PageNumber": 0,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-53afad0b-fd95-4cb1-89ed-a412d3d982fc-0-27",
+   "ItemListID": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+   "ItemTemplateID": "p165_item_3580",
+   "PageNumber": 0,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-53afad0b-fd95-4cb1-89ed-a412d3d982fc-0-28",
+   "ItemListID": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+   "ItemTemplateID": "p165_item_3581",
+   "PageNumber": 0,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-53afad0b-fd95-4cb1-89ed-a412d3d982fc-0-29",
+   "ItemListID": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+   "ItemTemplateID": "p165_item_3526",
+   "PageNumber": 0,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-53afad0b-fd95-4cb1-89ed-a412d3d982fc-1-16",
+   "ItemListID": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+   "ItemTemplateID": "p165_item_3524",
+   "PageNumber": 1,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-53afad0b-fd95-4cb1-89ed-a412d3d982fc-1-17",
+   "ItemListID": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+   "ItemTemplateID": "p165_item_3520",
+   "PageNumber": 1,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-53afad0b-fd95-4cb1-89ed-a412d3d982fc-1-18",
+   "ItemListID": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+   "ItemTemplateID": "p165_item_3578",
+   "PageNumber": 1,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-53afad0b-fd95-4cb1-89ed-a412d3d982fc-1-19",
+   "ItemListID": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+   "ItemTemplateID": "p165_item_3522",
+   "PageNumber": 1,
+   "SlotPosition": 19,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165stock-53afad0b-fd95-4cb1-89ed-a412d3d982fc-1-20",
+   "ItemListID": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+   "ItemTemplateID": "p165_item_3576",
+   "PageNumber": 1,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  }
+ ]
+}

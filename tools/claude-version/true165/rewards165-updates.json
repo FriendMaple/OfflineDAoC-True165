@@ -1,0 +1,246 @@
+{
+ "_about": "True 1.65 Mode quest reward fixes (plan section 4, 'Invented quest rewards'), made 2026-10-30 from pre-1 Nov 2003 Wayback captures of the Allakhazam item pages. 'updates' are targeted, idempotent SQL statements (ItemTemplate by Id_nb; DataQuest reward lists by ID, editing only FinalRewardItemTemplates). 'remove' is empty on purpose: the statless step items are taken out of reward lists by the DataQuest updates, no row is archived or deleted.",
+ "updates": [
+  {
+   "sql": "UPDATE ItemTemplate SET DPS_AF = 13, Bonus1Type = 5, Bonus1 = 3, Bonus2Type = 10, Bonus2 = 6, Bonus3Type = 9, Bonus3 = 2, Bonus4Type = 0, Bonus4 = 0, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_alb_avalon_defender_s_boots'",
+   "reason": "1.65 invented stats replaced by the real page: Avalon Defender's Boots takes the period page values of Avalon's Defender Boots (L12, AF 13). period page spells it Avalon's Defender Boots. Period source: Allakhazam citem 5139, Wayback capture 20031013 (https://web.archive.org/web/20031013085112/http://camelot.allakhazam.com:80/item.html?citem=5139)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET DPS_AF = 26, SPD_ABS = 19, Bonus1Type = 2, Bonus1 = 3, Bonus2Type = 4, Bonus2 = 3, Bonus3Type = 10, Bonus3 = 9, Bonus4Type = 0, Bonus4 = 0, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_alb_realm_defender_boots'",
+   "reason": "1.65 invented stats replaced by the real page: Realm Defender Boots takes the period page values of Realm Defender Boots (L13, AF 26). Period source: Allakhazam citem 5073, Wayback capture 20031013 (https://web.archive.org/web/20031013075347/http://camelot.allakhazam.com:80/item.html?citem=5073)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET DPS_AF = 69, SPD_ABS = 29, Bonus1Type = 1, Bonus1 = 6, Bonus2Type = 10, Bonus2 = 12, Bonus3Type = 0, Bonus3 = 0, Bonus4Type = 0, Bonus4 = 0, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_alb_gurz'",
+   "reason": "1.65 invented stats replaced by the real page: Gurz takes the period page values of Gruz (L15, DPS 6.9 / 2.9s). period page spells it Gruz (Gurz, the Persian mace, fits the Mithra quest; name kept). Period source: Allakhazam citem 6180, Wayback capture 20030929 (https://web.archive.org/web/20030929015702/http://camelot.allakhazam.com:80/item.html?citem=6180)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET DPS_AF = 26, SPD_ABS = 19, Object_Type = 34, Bonus1Type = 1, Bonus1 = 3, Bonus2Type = 6, Bonus2 = 4, Bonus3Type = 13, Bonus3 = 2, Bonus4Type = 17, Bonus4 = 2, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_alb_sleeves_of_prestidigitation'",
+   "reason": "1.65 invented stats replaced by the real page: Sleeves of Prestidigitation takes the period page values of Sleeves of Prestidigation (L11, AF 26). period page spells it Prestidigation; studded armour per the page. Period source: Allakhazam citem 5351, Wayback capture 20031013 (https://web.archive.org/web/20031013131130/http://camelot.allakhazam.com:80/item.html?citem=5351)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Name = 'Shadowbinder''s Mantle', Bonus1Type = 49, Bonus1 = 3, Bonus2Type = 1, Bonus2 = 13, Bonus3Type = 2, Bonus3 = 13, Bonus4Type = 0, Bonus4 = 0, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_alb_snowbinder_s_mantle'",
+   "reason": "1.65 invented reward replaced by the real item: Snowbinder's Mantle -> Shadowbinder's Mantle takes the period page values of Shadowbinder's Mantle (L30). the Infiltrator cloak of Regal Nobility. Period source: Allakhazam citem 3995, Wayback capture 20030821 (https://web.archive.org/web/20030821174324/http://camelot.allakhazam.com:80/item.html?citem=3995)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Bonus1Type = 65, Bonus1 = 3, Bonus2Type = 67, Bonus2 = 3, Bonus3Type = 70, Bonus3 = 3, Bonus4Type = 5, Bonus4 = 9, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_hib_animist_bard_blademaster_champion_druid_eldritch_enchant__enchanter_s_belt_enchanter'",
+   "reason": "1.65 invented stats replaced by the real page: Enchanter's Belt takes the period page values of Enchanter's Belt (L35). same values on the second period page citem 10192. Period source: Allakhazam citem 10250, Wayback capture 20031013 (https://web.archive.org/web/20031013074700/http://camelot.allakhazam.com:80/item.html?citem=10250)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Bonus1Type = 40, Bonus1 = 3, Bonus2Type = 5, Bonus2 = 9, Bonus3Type = 90, Bonus3 = 3, Bonus4Type = 89, Bonus4 = 3, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_hib_animist_bard_blademaster_champion_druid_eldritch_enchant__valewalker_s_belt_valewalker'",
+   "reason": "1.65 invented stats replaced by the real page: Valewalker's Belt takes the period page values of Valewalker Belt (L35). period page names it Valewalker Belt. Period source: Allakhazam citem 10195, Wayback capture 20030930 (https://web.archive.org/web/20030930045020/http://camelot.allakhazam.com:80/item.html?citem=10195)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Name = 'Straw''s Belt', Bonus1Type = 2, Bonus1 = 4, Bonus2Type = 13, Bonus2 = 2, Bonus3Type = 0, Bonus3 = 0, Bonus4Type = 0, Bonus4 = 0, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_hib_belt_of_nimbleness'",
+   "reason": "1.65 invented reward replaced by the real item: Belt of Nimbleness -> Straw's Belt takes the period page values of Straw's Belt (L7). Straw's In Town choice. Period source: Allakhazam citem 3738, Wayback capture 20030818 (https://web.archive.org/web/20030818065154/http://camelot.allakhazam.com:80/item.html?citem=3738)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Name = 'Straw''s Bardic Beads', Bonus1Type = 8, Bonus1 = 4, Bonus2Type = 17, Bonus2 = 2, Bonus3Type = 0, Bonus3 = 0, Bonus4Type = 0, Bonus4 = 0, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_hib_charming_necklace'",
+   "reason": "1.65 invented reward replaced by the real item: Charming Necklace -> Straw's Bardic Beads takes the period page values of Straw's Bardic Beads (L7). Straw's In Town choice (Charisma: the Bard piece). Period source: Allakhazam citem 3741, Wayback capture 20020926 (https://web.archive.org/web/20020926163303/http://camelot.allakhazam.com:80/item.html?citem=3741)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Name = 'Straw''s Beads', Bonus1Type = 7, Bonus1 = 4, Bonus2Type = 16, Bonus2 = 2, Bonus3Type = 0, Bonus3 = 0, Bonus4Type = 0, Bonus4 = 0, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_hib_choker_of_empathetic_properties'",
+   "reason": "1.65 invented reward replaced by the real item: Choker of Empathetic Properties -> Straw's Beads takes the period page values of Straw's Beads (L7). Straw's In Town choice (Empathy: the Druid piece). Period source: Allakhazam citem 3740, Wayback capture 20030906 (https://web.archive.org/web/20030906162140/http://camelot.allakhazam.com:80/item.html?citem=3740)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET DPS_AF = 75, SPD_ABS = 54, Bonus1Type = 1, Bonus1 = 4, Bonus2Type = 13, Bonus2 = 4, Bonus3Type = 17, Bonus3 = 4, Bonus4Type = 19, Bonus4 = 4, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_hib_devastation'",
+   "reason": "1.65 invented stats replaced by the real page: Devastation takes the period page values of Devistation (L21, DPS 7.5 / 5.4s). period page spells it Devistation. Period source: Allakhazam citem 8804, Wayback capture 20030916 (https://web.archive.org/web/20030916041152/http://camelot.allakhazam.com:80/item.html?citem=8804)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET DPS_AF = 30, SPD_ABS = 19, Bonus1Type = 1, Bonus1 = 4, Bonus2Type = 9, Bonus2 = 2, Bonus3Type = 10, Bonus3 = 6, Bonus4Type = 0, Bonus4 = 0, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_hib_vine_entwined_hauberk'",
+   "reason": "1.65 invented stats replaced by the real page: Vine Entwined Hauberk takes the period page values of Vined Entwined Hauberk (L12, AF 30). period page spells it Vined Entwined Hauberk. Period source: Allakhazam citem 5432, Wayback capture 20030821 (https://web.archive.org/web/20030821174302/http://camelot.allakhazam.com:80/item.html?citem=5432)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET DPS_AF = 66, SPD_ABS = 30, Bonus1Type = 53, Bonus1 = 3, Bonus2Type = 4, Bonus2 = 3, Bonus3Type = 0, Bonus3 = 0, Bonus4Type = 0, Bonus4 = 0, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_mid_brack_s_hammer'",
+   "reason": "1.65 invented stats replaced by the real page: Brack's Hammer takes the period page values of Brack Hammer (L16, DPS 6.6 / 3.0s). period page names it Brack Hammer. Period source: Allakhazam citem 4204, Wayback capture 20030610 (https://web.archive.org/web/20030610062323/http://camelot.allakhazam.com:80/item.html?citem=4204)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Name = 'Troll''s Bite Sword', Level = 50, DPS_AF = 162, SPD_ABS = 54, Bonus1Type = 52, Bonus1 = 3, Bonus2Type = 17, Bonus2 = 6, Bonus3Type = 12, Bonus3 = 8, Bonus4Type = 10, Bonus4 = 21, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_mid_stoneheart_staff_axe_hammer_sword_hand_to_hand_1h_or_2h__stoneheart_greatsword_warrior'",
+   "reason": "1.65 invented reward replaced by the real item: Stoneheart Greatsword -> Troll's Bite Sword takes the period page values of Troll's Bite Sword (L50, DPS 16.2 / 5.4s). the Stoneheart two-handed sword. Period source: Allakhazam citem 5590, Wayback capture 20030909 (https://web.archive.org/web/20030909004111/http://camelot.allakhazam.com:80/item.html?citem=5590)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Name = 'Troll''s Fury Hammer', Level = 50, DPS_AF = 162, SPD_ABS = 40, Bonus1Type = 53, Bonus1 = 3, Bonus2Type = 11, Bonus2 = 10, Bonus3Type = 10, Bonus3 = 15, Bonus4Type = 14, Bonus4 = 8, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_mid_stoneheart_staff_axe_hammer_sword_hand_to_hand_1h_or_2h__stoneheart_hammer_thane'",
+   "reason": "1.65 invented reward replaced by the real item: Stoneheart Hammer -> Troll's Fury Hammer takes the period page values of Troll's Fury Hammer (L50, DPS 16.2 / 4.0s). the Stoneheart one-handed hammer. Period source: Allakhazam citem 6068, Wayback capture 20031020 (https://web.archive.org/web/20031020041233/http://camelot.allakhazam.com:80/item.html?citem=6068)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Name = 'Troll''s Fury Hammer', Level = 50, DPS_AF = 162, SPD_ABS = 40, Bonus1Type = 53, Bonus1 = 3, Bonus2Type = 11, Bonus2 = 10, Bonus3Type = 10, Bonus3 = 15, Bonus4Type = 14, Bonus4 = 8, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_mid_stoneheart_staff_axe_hammer_sword_hand_to_hand_1h_or_2h__stoneheart_mace_healer'",
+   "reason": "1.65 invented reward replaced by the real item: Stoneheart Mace -> Troll's Fury Hammer takes the period page values of Troll's Fury Hammer (L50, DPS 16.2 / 4.0s). the Stoneheart one-handed hammer. Period source: Allakhazam citem 6068, Wayback capture 20031020 (https://web.archive.org/web/20031020041233/http://camelot.allakhazam.com:80/item.html?citem=6068)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Name = 'Troll''s Fury Hammer', Level = 50, DPS_AF = 162, SPD_ABS = 40, Bonus1Type = 53, Bonus1 = 3, Bonus2Type = 11, Bonus2 = 10, Bonus3Type = 10, Bonus3 = 15, Bonus4Type = 14, Bonus4 = 8, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_mid_stoneheart_staff_axe_hammer_sword_hand_to_hand_1h_or_2h__stoneheart_maul_shaman'",
+   "reason": "1.65 invented reward replaced by the real item: Stoneheart Maul -> Troll's Fury Hammer takes the period page values of Troll's Fury Hammer (L50, DPS 16.2 / 4.0s). the Stoneheart one-handed hammer. Period source: Allakhazam citem 6068, Wayback capture 20031020 (https://web.archive.org/web/20031020041233/http://camelot.allakhazam.com:80/item.html?citem=6068)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Name = 'Troll''s Arm Great Axe', Level = 50, DPS_AF = 165, SPD_ABS = 55, Bonus1Type = 54, Bonus1 = 3, Bonus2Type = 12, Bonus2 = 6, Bonus3Type = 11, Bonus3 = 10, Bonus4Type = 10, Bonus4 = 18, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_mid_stoneheart_staff_axe_hammer_sword_hand_to_hand_1h_or_2h__stoneheart_great_axe_skald'",
+   "reason": "1.65 invented reward replaced by the real item: Stoneheart Great Axe -> Troll's Arm Great Axe takes the period page values of Troll's Arm Great Axe (L50, DPS 16.5 / 5.5s). the Stoneheart two-handed axe. Period source: Allakhazam citem 6321, Wayback capture 20031019 (https://web.archive.org/web/20031019050843/http://camelot.allakhazam.com:80/item.html?citem=6321)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Name = 'Troll''s War Cry Axe', Level = 50, DPS_AF = 162, SPD_ABS = 31, Bonus1Type = 54, Bonus1 = 3, Bonus2Type = 10, Bonus2 = 21, Bonus3Type = 17, Bonus3 = 8, Bonus4Type = 18, Bonus4 = 8, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_mid_stoneheart_staff_axe_hammer_sword_hand_to_hand_1h_or_2h__stoneheart_axe_berserker'",
+   "reason": "1.65 invented reward replaced by the real item: Stoneheart Axe -> Troll's War Cry Axe takes the period page values of Troll's War Cry Axe (L50, DPS 16.2 / 3.1s). the Stoneheart one-handed axe. Period source: Allakhazam citem 6065, Wayback capture 20031019 (https://web.archive.org/web/20031019164248/http://camelot.allakhazam.com:80/item.html?citem=6065)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Name = 'Troll''s Tooth Sword', Level = 50, DPS_AF = 162, SPD_ABS = 41, Bonus1Type = 52, Bonus1 = 3, Bonus2Type = 10, Bonus2 = 15, Bonus3Type = 11, Bonus3 = 10, Bonus4Type = 14, Bonus4 = 8, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_mid_stoneheart_staff_axe_hammer_sword_hand_to_hand_1h_or_2h__stoneheart_sword_hunter'",
+   "reason": "1.65 invented reward replaced by the real item: Stoneheart Sword -> Troll's Tooth Sword takes the period page values of Troll's Tooth Sword (L50, DPS 16.2 / 4.1s). the Stoneheart one-handed sword. Period source: Allakhazam citem 5591, Wayback capture 20031013 (https://web.archive.org/web/20031013084108/http://camelot.allakhazam.com:80/item.html?citem=5591)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Name = 'Troll''s Tooth Sword', Level = 50, DPS_AF = 162, SPD_ABS = 41, Bonus1Type = 52, Bonus1 = 3, Bonus2Type = 11, Bonus2 = 10, Bonus3Type = 10, Bonus3 = 15, Bonus4Type = 14, Bonus4 = 8, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_mid_stoneheart_staff_axe_hammer_sword_hand_to_hand_1h_or_2h__stoneheart_blade_shadowblade'",
+   "reason": "1.65 invented reward replaced by the real item: Stoneheart Blade -> Troll's Tooth Sword takes the period page values of Troll's Tooth Sword (L50, DPS 16.2 / 4.1s). the Stoneheart one-handed sword. Period source: Allakhazam citem 5591, Wayback capture 20031013 (https://web.archive.org/web/20031013084108/http://camelot.allakhazam.com:80/item.html?citem=5591)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Name = 'Dark Troll Bone Staff', Level = 50, DPS_AF = 162, SPD_ABS = 45, Bonus1Type = 17, Bonus1 = 12, Bonus2Type = 19, Bonus2 = 12, Bonus3Type = 10, Bonus3 = 24, Bonus4Type = 120, Bonus4 = 50, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_mid_stoneheart_staff_axe_hammer_sword_hand_to_hand_1h_or_2h__stoneheart_staff_runemaster'",
+   "reason": "1.65 invented reward replaced by the real item: Stoneheart Staff -> Dark Troll Bone Staff takes the period page values of Dark Troll Bone Staff (L50, DPS 16.2 / 4.5s). the Stoneheart staff. Period source: Allakhazam citem 5594, Wayback capture 20031013 (https://web.archive.org/web/20031013085238/http://camelot.allakhazam.com:80/item.html?citem=5594)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Name = 'Dark Troll Bone Staff', Level = 50, DPS_AF = 162, SPD_ABS = 45, Bonus1Type = 10, Bonus1 = 24, Bonus2Type = 17, Bonus2 = 12, Bonus3Type = 19, Bonus3 = 12, Bonus4Type = 120, Bonus4 = 50, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_mid_stoneheart_staff_axe_hammer_sword_hand_to_hand_1h_or_2h__stoneheart_staff_spiritmaster'",
+   "reason": "1.65 invented reward replaced by the real item: Stoneheart Staff -> Dark Troll Bone Staff takes the period page values of Dark Troll Bone Staff (L50, DPS 16.2 / 4.5s). the only Stoneheart staff with a period page (Darkness focus, no class limit); the Spiritmaster staff page (Spiritual Troll Bone Staff, citem 18843) first appears in 2004. Period source: Allakhazam citem 5594, Wayback capture 20031013 (https://web.archive.org/web/20031013085238/http://camelot.allakhazam.com:80/item.html?citem=5594)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Name = 'Dark Troll Bone Staff', Level = 50, DPS_AF = 162, SPD_ABS = 45, Bonus1Type = 10, Bonus1 = 24, Bonus2Type = 17, Bonus2 = 12, Bonus3Type = 19, Bonus3 = 12, Bonus4Type = 120, Bonus4 = 50, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_mid_stoneheart_staff_axe_hammer_sword_hand_to_hand_1h_or_2h__stoneheart_staff_bonedancer'",
+   "reason": "1.65 invented reward replaced by the real item: Stoneheart Staff -> Dark Troll Bone Staff takes the period page values of Dark Troll Bone Staff (L50, DPS 16.2 / 4.5s). the only Stoneheart staff with a period page (Darkness focus, no class limit); the Bonedancer staff pages (citems 18647, 17757) first appear in 2004. Period source: Allakhazam citem 5594, Wayback capture 20031013 (https://web.archive.org/web/20031013085238/http://camelot.allakhazam.com:80/item.html?citem=5594)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Name = 'Troll Fingers', Level = 50, DPS_AF = 162, SPD_ABS = 33, Bonus1Type = 12, Bonus1 = 8, Bonus2Type = 18, Bonus2 = 8, Bonus3Type = 10, Bonus3 = 18, Bonus4Type = 92, Bonus4 = 3, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_mid_stoneheart_staff_axe_hammer_sword_hand_to_hand_1h_or_2h__stoneheart_claw_savage'",
+   "reason": "1.65 invented reward replaced by the real item: Stoneheart Claw -> Troll Fingers takes the period page values of Troll Fingers (L50, DPS 16.2 / 3.3s). one of the two period Stoneheart hand-to-hand weapons (the other is Grip of the Troll, citem 6071); the current bonuses already copy Troll Fingers. Period source: Allakhazam citem 5655, Wayback capture 20030916 (https://web.archive.org/web/20030916035856/http://camelot.allakhazam.com:80/item.html?citem=5655)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET DPS_AF = 108, SPD_ABS = 40, Bonus1Type = 5, Bonus1 = 28, Bonus2Type = 127, Bonus2 = 26, Bonus3Type = 126, Bonus3 = 26, Bonus4Type = 124, Bonus4 = 30, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_alb_glowing_adamantium_staff_of_the_fire_tempest'",
+   "reason": "1.65 lost bonuses restored: Glowing Adamantium Staff of the Fire Tempest takes the period page values of Glowing Adamantium Staff of the Fire Tempest (L30, DPS 10.8 / 4.0s). confirms the restored skill / focus bonuses. Period source: Allakhazam citem 3558, Wayback capture 20031002 (https://web.archive.org/web/20031002234822/http://camelot.allakhazam.com:80/item.html?citem=3558)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Bonus1Type = 1, Bonus1 = 6, Bonus2Type = 33, Bonus2 = 2, Bonus3Type = 3, Bonus3 = 6, Bonus4Type = 46, Bonus4 = 3, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_alb_jewelled_skull_ring'",
+   "reason": "1.65 lost bonuses restored: Jewelled Skull Ring takes the period page values of Jewelled Skull Ring (L43). the period page differs from the later live page the DB row was built from; 1.65 takes the period page. Period source: Allakhazam citem 6000, Wayback capture 20030826 (https://web.archive.org/web/20030826020859/http://camelot.allakhazam.com:80/item.html?citem=6000)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET DPS_AF = 96, SPD_ABS = 45, Bonus1Type = 5, Bonus1 = 6, Bonus2Type = 10, Bonus2 = 6, Bonus3Type = 9, Bonus3 = 4, Bonus4Type = 124, Bonus4 = 28, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_alb_ruby_topped_staff'",
+   "reason": "1.65 lost bonuses restored: Ruby-Topped Staff takes the period page values of Ruby-Topped Staff (L26, DPS 9.6 / 4.5s). the period page differs from the later live page the DB row was built from; 1.65 takes the period page. Period source: Allakhazam citem 9409, Wayback capture 20031023 (https://web.archive.org/web/20031023125845/http://camelot.allakhazam.com:80/item.html?citem=9409)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET DPS_AF = 105, SPD_ABS = 40, Bonus1Type = 5, Bonus1 = 10, Bonus2Type = 129, Bonus2 = 26, Bonus3Type = 130, Bonus3 = 26, Bonus4Type = 132, Bonus4 = 26, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_alb_staff_of_compliance'",
+   "reason": "1.65 lost bonuses restored: Staff of Compliance takes the period page values of Staff of Compliance (L30, DPS 10.5 / 4.0s). the period page differs from the later live page the DB row was built from; 1.65 takes the period page. Period source: Allakhazam citem 4825, Wayback capture 20031009 (https://web.archive.org/web/20031009003725/http://camelot.allakhazam.com:80/item.html?citem=4825)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET DPS_AF = 141, SPD_ABS = 40, Bonus1Type = 10, Bonus1 = 33, Bonus2Type = 130, Bonus2 = 43, Bonus3Type = 129, Bonus3 = 33, Bonus4Type = 123, Bonus4 = 33, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_alb_staff_of_earth_channeling'",
+   "reason": "1.65 lost bonuses restored: Staff of Earth Channeling takes the period page values of Staff of Earth Channeling (L40, DPS 14.1 / 4.0s). confirms the restored skill / focus bonuses. Period source: Allakhazam citem 6140, Wayback capture 20031003 (https://web.archive.org/web/20031003001549/http://camelot.allakhazam.com:80/item.html?citem=6140)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET DPS_AF = 141, SPD_ABS = 40, Bonus1Type = 10, Bonus1 = 33, Bonus2Type = 127, Bonus2 = 33, Bonus3Type = 126, Bonus3 = 33, Bonus4Type = 125, Bonus4 = 33, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_alb_staff_of_the_maelstrom'",
+   "reason": "1.65 lost bonuses restored: Staff of the Maelstrom takes the period page values of Staff of the Maelstrom (L40, DPS 14.1 / 4.0s). the period page differs from the later live page the DB row was built from; 1.65 takes the period page. Period source: Allakhazam citem 4261, Wayback capture 20031023 (https://web.archive.org/web/20031023162503/http://camelot.allakhazam.com:80/item.html?citem=4261)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET DPS_AF = 105, SPD_ABS = 40, Bonus1Type = 5, Bonus1 = 10, Bonus2Type = 129, Bonus2 = 26, Bonus3Type = 130, Bonus3 = 26, Bonus4Type = 123, Bonus4 = 26, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_alb_visage_of_death'",
+   "reason": "1.65 lost bonuses restored: Visage of Death takes the period page values of Visage of Death (L30, DPS 10.5 / 4.0s). the period page differs from the later live page the DB row was built from; 1.65 takes the period page. Period source: Allakhazam citem 3996, Wayback capture 20031013 (https://web.archive.org/web/20031013085146/http://camelot.allakhazam.com:80/item.html?citem=3996)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Bonus1Type = 5, Bonus1 = 9, Bonus2Type = 9, Bonus2 = 4, Bonus3Type = 0, Bonus3 = 0, Bonus4Type = 0, Bonus4 = 0, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_hib_enchanter_s_jewel'",
+   "reason": "1.65 lost bonuses restored: Enchanter's Jewel takes the period page values of Enchanter's Jewel (L45). the period page differs from the later live page the DB row was built from; 1.65 takes the period page. Period source: Allakhazam citem 3453, Wayback capture 20031013 (https://web.archive.org/web/20031013133849/http://camelot.allakhazam.com:80/item.html?citem=3453)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Bonus1Type = 5, Bonus1 = 9, Bonus2Type = 67, Bonus2 = 3, Bonus3Type = 0, Bonus3 = 0, Bonus4Type = 0, Bonus4 = 0, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_hib_lusmorebane_s_jeweled_necklace'",
+   "reason": "1.65 lost bonuses restored: Lusmorebane's Jeweled Necklace takes the period page values of Lusmorebane's Jeweled Necklace (L30). confirms the restored skill / focus bonuses. Period source: Allakhazam citem 1787, Wayback capture 20031013 (https://web.archive.org/web/20031013103406/http://camelot.allakhazam.com:80/item.html?citem=1787)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Bonus1Type = 5, Bonus1 = 4, Bonus2Type = 65, Bonus2 = 4, Bonus3Type = 9, Bonus3 = 4, Bonus4Type = 17, Bonus4 = 6, Bonus5Type = 0, Bonus5 = 0, Bonus6Type = 0, Bonus6 = 0, Bonus7Type = 0, Bonus7 = 0, Bonus8Type = 0, Bonus8 = 0, Bonus9Type = 0, Bonus9 = 0, Bonus10Type = 0, Bonus10 = 0 WHERE Id_nb = 'cq_hib_song_of_the_sun'",
+   "reason": "1.65 lost bonuses restored: Song of the Sun takes the period page values of Song of the Sun (L48). the period page differs from the later live page the DB row was built from; 1.65 takes the period page. Period source: Allakhazam citem 7011, Wayback capture 20030916 (https://web.archive.org/web/20030916050159/http://camelot.allakhazam.com:80/item.html?citem=7011)"
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_agile_defender|', '|'), '|') WHERE ID IN (20139) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_agile_defender|%'",
+   "reason": "1.65 statless step item removed from the final reward: Agile Defender (cq_agile_defender, Item_Type 40, no bonuses) in Zrit-Zrit's Item (DataQuest ID 20139); the real item cq_mid_agile_defender stays in the same reward list (period page of the real item: Allakhazam citem 3214). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_armband|', '|'), '|') WHERE ID IN (20715, 20716, 20717, 20718, 20719, 20720) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_armband|%'",
+   "reason": "1.65 statless step item removed from the final reward: Armband (cq_armband, Item_Type 40, no bonuses) in Cad Goddeau C (DataQuest ID 20715, 20716, 20717, 20718, 20719, 20720); period quest list: Cad Goddeau C rewards Staff of Mental Domination (Allakhazam quest 235). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_berbenet_leggings|', '|'), '|') WHERE ID IN (21146) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_berbenet_leggings|%'",
+   "reason": "1.65 statless step item removed from the final reward: Berbenet Leggings (cq_berbenet_leggings, Item_Type 40, no bonuses) in Evenings Empty Blessing (DataQuest ID 21146); the real item cq_mid_berbenet_leggings stays in the same reward list (period page of the real item: Allakhazam citem 957). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_bulbous_eye|', '|'), '|') WHERE ID IN (20138) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_bulbous_eye|%'",
+   "reason": "1.65 statless step item removed from the final reward: Bulbous Eye (cq_bulbous_eye, Item_Type 40, no bonuses) in Krrrck's Torment (DataQuest ID 20138); the real item cq_mid_bulbous_eye stays in the same reward list (period page of the real item: Allakhazam citem 1346). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_crescent_crown|', '|'), '|') WHERE ID IN (21198, 21199, 21200, 21201, 21202, 21203, 21204, 21205, 21206, 21207, 21208, 21209, 21210) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_crescent_crown|%'",
+   "reason": "1.65 statless step item removed from the final reward: Crescent Crown (cq_crescent_crown, Item_Type 40, no bonuses) in Tale of Two Trolls (DataQuest ID 21198, 21199, 21200, 21201, 21202, 21203, 21204, 21205, 21206, 21207, 21208, 21209, 21210); period quest list: Tale of Two Trolls rewards Rigid Crescent Crown (Allakhazam quest 189). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_dancing_silk|', '|'), '|') WHERE ID IN (21466) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_dancing_silk|%'",
+   "reason": "1.65 statless step item removed from the final reward: Dancing Silk (cq_dancing_silk, Item_Type 40, no bonuses) in Morana's Tunic (DataQuest ID 21466); the real item cq_mid_dancing_silk stays in the same reward list (period page of the real item: Allakhazam citem 1153). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_driftspirit_cloak|', '|'), '|') WHERE ID IN (20126) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_driftspirit_cloak|%'",
+   "reason": "1.65 statless step item removed from the final reward: Driftspirit Cloak (cq_driftspirit_cloak, Item_Type 40, no bonuses) in Reach of the Shadow (DataQuest ID 20126); the real item cq_mid_driftspirit_cloak stays in the same reward list (period page of the real item: Allakhazam citem 935). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_faerie_drake_hide_shield|', '|'), '|') WHERE ID IN (21406) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_faerie_drake_hide_shield|%'",
+   "reason": "1.65 statless step item removed from the final reward: Faerie Drake Hide Shield (cq_faerie_drake_hide_shield, Item_Type 40, no bonuses) in Bria's Savior (DataQuest ID 21406); the real item cq_hib_faerie_drake_hide_shield stays in the same reward list (period page of the real item: Allakhazam citem 2224). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_faerie_ring|', '|'), '|') WHERE ID IN (20948, 20949, 20950, 20951, 20952, 20953, 20954, 20955, 20956, 20957, 20958, 20959) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_faerie_ring|%'",
+   "reason": "1.65 statless step item removed from the final reward: Faerie Ring (cq_faerie_ring, Item_Type 40, no bonuses) in Catch of the Day (DataQuest ID 20948, 20949, 20950, 20951, 20952, 20953, 20954, 20955, 20956, 20957, 20958, 20959); period quest list: Catch of the Day rewards Faerie Ring of Defense (Allakhazam quest 417). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_fagan_s_signet_ring|', '|'), '|') WHERE ID IN (20243, 20244, 20245, 20246) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_fagan_s_signet_ring|%'",
+   "reason": "1.65 statless step item removed from the final reward: Fagan's Signet Ring (cq_fagan_s_signet_ring, Item_Type 40, no bonuses) in Seek the Moonstone (DataQuest ID 20243, 20244, 20245, 20246); the real item cq_hib_fagan_s_signet_ring stays in the same reward list (period page of the real item: Allakhazam citem 1130). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_fine_sash|', '|'), '|') WHERE ID IN (20135) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_fine_sash|%'",
+   "reason": "1.65 statless step item removed from the final reward: Fine Sash (cq_fine_sash, Item_Type 40, no bonuses) in Furf's Reward (DataQuest ID 20135); the real item cq_mid_fine_sash stays in the same reward list (period page of the real item: Allakhazam citem 2493). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_flame_helm|', '|'), '|') WHERE ID IN (20129) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_flame_helm|%'",
+   "reason": "1.65 statless step item removed from the final reward: Flame Helm (cq_flame_helm, Item_Type 40, no bonuses) in Living Warning (DataQuest ID 20129); the real item cq_mid_flame_helm stays in the same reward list (period page of the real item: Allakhazam citem 1605). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_hammer_of_black_ice|', '|'), '|') WHERE ID IN (21256) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_hammer_of_black_ice|%'",
+   "reason": "1.65 statless step item removed from the final reward: Hammer of Black Ice (cq_hammer_of_black_ice, Item_Type 40, no bonuses) in Price of Excellence (DataQuest ID 21256); the real item cq_mid_hammer_of_black_ice stays in the same reward list (period page of the real item: Allakhazam citem 2495). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_helm_of_the_aki|', '|'), '|') WHERE ID IN (20375) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_helm_of_the_aki|%'",
+   "reason": "1.65 statless step item removed from the final reward: Helm of the Aki (cq_helm_of_the_aki, Item_Type 40, no bonuses) in Protect Huginfell (DataQuest ID 20375); the real item cq_mid_helm_of_the_aki stays in the same reward list (period page of the real item: Allakhazam citem 1926). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_nimh_s_curse|', '|'), '|') WHERE ID IN (20134) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_nimh_s_curse|%'",
+   "reason": "1.65 statless step item removed from the final reward: Nimh's Curse (cq_nimh_s_curse, Item_Type 40, no bonuses) in Nimh's Secret (DataQuest ID 20134); the real item cq_mid_nimh_s_curse stays in the same reward list (period page of the real item: Allakhazam citem 2315). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_poisonous_brew|', '|'), '|') WHERE ID IN (20385) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_poisonous_brew|%'",
+   "reason": "1.65 statless step item removed from the final reward: Poisonous Brew (cq_poisonous_brew, Item_Type 40, no bonuses) in Balle's Potion (DataQuest ID 20385); period quest list: Balle's Potion rewards Coin, Experience (Allakhazam quest 716). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_ring_of_illbane|', '|'), '|') WHERE ID IN (20124) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_ring_of_illbane|%'",
+   "reason": "1.65 statless step item removed from the final reward: Ring of Illbane (cq_ring_of_illbane, Item_Type 40, no bonuses) in Lover's Circle (DataQuest ID 20124); the real item cq_mid_ring_of_illbane stays in the same reward list (period page of the real item: Allakhazam citem 1381). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_second_stone|', '|'), '|') WHERE ID IN (20755) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_second_stone|%'",
+   "reason": "1.65 statless step item removed from the final reward: Second Stone (cq_second_stone, Item_Type 40, no bonuses) in The Moonstone Twin (DataQuest ID 20755); period quest list: The Moonstone Twin (level 47) rewards Coin, Experience (Allakhazam quest 341). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_shining_crown_of_insanity|', '|'), '|') WHERE ID IN (21187) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_shining_crown_of_insanity|%'",
+   "reason": "1.65 statless step item removed from the final reward: Shining Crown of Insanity (cq_shining_crown_of_insanity, Item_Type 40, no bonuses) in Better Off Buried (DataQuest ID 21187); the real item cq_mid_shining_crown_of_insanity stays in the same reward list (period page of the real item: Allakhazam citem 1205). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_stone_bracer|', '|'), '|') WHERE ID IN (20078) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_stone_bracer|%'",
+   "reason": "1.65 statless step item removed from the final reward: Stone Bracer (cq_stone_bracer, Item_Type 40, no bonuses) in Essence of Hostility (DataQuest ID 20078); the real item cq_hib_stone_bracer stays in the same reward list (period page of the real item: Allakhazam citem 1965). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_stripe_hide_helm|', '|'), '|') WHERE ID IN (20133) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_stripe_hide_helm|%'",
+   "reason": "1.65 statless step item removed from the final reward: Stripe Hide Helm (cq_stripe_hide_helm, Item_Type 40, no bonuses) in Stripe (DataQuest ID 20133); the real item cq_mid_stripe_hide_helm stays in the same reward list (period page of the real item: Allakhazam citem 1426). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_taldos_amulet|', '|'), '|') WHERE ID IN (21053) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_taldos_amulet|%'",
+   "reason": "1.65 statless step item removed from the final reward: Taldos' Amulet (cq_taldos_amulet, Item_Type 40, no bonuses) in Taldos' Amulet (DataQuest ID 21053); the real item cq_mid_taldos_amulet stays in the same reward list (period page of the real item: Allakhazam citem 1223). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_thinking_cap|', '|'), '|') WHERE ID IN (20024) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_thinking_cap|%'",
+   "reason": "1.65 statless step item removed from the final reward: Thinking Cap (cq_thinking_cap, Item_Type 40, no bonuses) in Thinking Cap (DataQuest ID 20024); the real item cq_alb_thinking_cap stays in the same reward list (period page of the real item: Allakhazam citem 972). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_toe_bone_belt|', '|'), '|') WHERE ID IN (20127) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_toe_bone_belt|%'",
+   "reason": "1.65 statless step item removed from the final reward: Toe Bone Belt (cq_toe_bone_belt, Item_Type 40, no bonuses) in Waking of the Fallen (DataQuest ID 20127); the real item cq_mid_toe_bone_belt stays in the same reward list (period page of the real item: Allakhazam citem 5214). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  },
+  {
+   "sql": "UPDATE DataQuest SET FinalRewardItemTemplates = trim(replace('|' || FinalRewardItemTemplates || '|', '|cq_woven_grass_helm|', '|'), '|') WHERE ID IN (20074) AND '|' || FinalRewardItemTemplates || '|' LIKE '%|cq_woven_grass_helm|%'",
+   "reason": "1.65 statless step item removed from the final reward: Woven Grass Helm (cq_woven_grass_helm, Item_Type 40, no bonuses) in Fearan (DataQuest ID 20074); the real item cq_hib_woven_grass_helm stays in the same reward list (period page of the real item: Allakhazam citem 2222). Only that id is taken out of FinalRewardItemTemplates; the row and the item stay."
+  }
+ ],
+ "remove": []
+}

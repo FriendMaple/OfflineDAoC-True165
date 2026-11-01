@@ -1,0 +1,49 @@
+quick_check ok
+3 | removed: Realm Exchange moves to the traveler's inns
+266 | removed: True 1.65: no freeshard drops - loot rows of items the drop audit graded REMOVE (Atlas/Phoenix-era packages AtlasXPItem/DrAtlasXPItem/atlas_orbs_item/drmed/atlas_trophys or no source at all; audit out/item_actions.json; drops agent 2026-10-31)
+131 | removed: True 1.65: no freeshard drops - loot rows of items known only from the later Allakhazam site with no player comment before 1 Nov 2003 and no period page or Uthgard record (REVIEW items, fix/drops/review_decisions.csv)
+8 | removed: True 1.65: no Atlas boss trophies (trophies/taxidermy came with Trials of Atlantis; Atlas loot)
+15 | removed: True 1.65: no freeshard drops - loot rows of items no source knows (no period Allakhazam page, no Uthgard item or drop, no live Allakhazam comment before 1 Nov 2003; drops agent list in REPORT.md)
+66 | removed: True 1.65: no Atlas timed "XP item" drop (LootTemplate Chance < 0 = one guaranteed item per player every N minutes, an Atlas freeshard mechanic); the period kill-task items keep their row and become a normal % drop (updates)
+143 | removed: True 1.65: no freeshard drops - Atlas-era loot rows (items of packages atlas_orbs_item / drmed) that no period Allakhazam page, Uthgard record or early live Allakhazam page gives to that monster (the item itself is period and stays where a source puts it)
+41 | removed: True 1.65: loot rows that point at item templates that do not exist (they never dropped; where a period page has the item, drops165.json gives the built item instead)
+216 | removed: True 1.65: dead loot-table links (Atlas XP-item hooks: LootTemplateName is an item id with no LootTemplate rows, e.g. Ghoulic Viper -> ghoulic_viper_fang)
+21 | removed: 1.65: Nisse's Lair has one roaming haunt (period-zam key 1255 comments 2002: 'she ... spawns once every 5-10 mins'; CapnBry id 283: 10 sightings, one area, lv 17-19; Uthgard one haunt): the 21 extra copies go
+0 | updated: 1.65 medallions of passage are worn on the neck (the Mythical slot is an Atlas addition)
+5562 | updated: 1.65
+9 | updated: 1.65 invented stats replaced by the real page
+16 | updated: 1.65 invented reward replaced by the real item
+10 | updated: 1.65 lost bonuses restored
+0 | updated: 1.65 statless step item removed from the final reward
+0 | updated: Moonspun Vest (Enchanter)
+0 | updated: Mystical Hauberk (Warden)
+0 | updated: Mistwoven Gloves (Eldritch)
+0 | updated: Pants of Mental Acuity (Sorcerer; SorcerorEpicLegs is the one Academy50.cs gives, SorcererEpicLegs is the duplicate row)
+0 | updated: 1.65 no zone bonuses
+37 | updated: 1.65 inn clearing
+0 | updated: 1.65 period merchant stock (vendor pass 1)
+8 | updated: 1.65 period merchant stock (vendor pass 2)
+0 | updated: 1.65 period merchants (missing merchants)
+1303 | updated: 1.65 period item stats
+435 | updated: 1.65 item stats (Uthgard)
+190 | updated: 1.65 level
+29 | updated: True 1.65
+222 | updated: 1.65 audit fix
+11626 | period drop rows added
+0/222/0 | add-deaditems165.json: inserted/updated/stale
+359/0/0 | add-dropitems165.json: inserted/updated/stale
+0/1/0 | add-epics165.json: inserted/updated/stale
+0/35/0 | add-goodsitems165.json: inserted/updated/stale
+3/57/0 | add-inns165.json: inserted/updated/stale
+0/177/0 | add-merchantgoods165.json: inserted/updated/stale
+0/422/0 | add-merchantlists165.json: inserted/updated/stale
+0/668/0 | add-merchantstock165.json: inserted/updated/stale
+0/7/0 | add-missingmerchants165.json: inserted/updated/stale
+0/191/0 | add-missingmerchantstock165.json: inserted/updated/stale
+7/0/0 | add-npctemplates165.json: inserted/updated/stale
+0/18/0 | add-objects165.json: inserted/updated/stale
+0/1071/0 | add-pathpoints165.json: inserted/updated/stale
+0/15/0 | add-paths165.json: inserted/updated/stale
+16838/0/0 | add-restoredspawns165.json: inserted/updated/stale
+1/0/0 | add-spectralprovisioner165.json: inserted/updated/stale
+0/181/0 | add-vendoritems165.json: inserted/updated/stale

@@ -1,0 +1,286 @@
+TRUE 1.65 FIX PASS - COIN-ONLY MONSTERS (coinonly agent, 2026-10-31)
+==============================================================================
+
+Owner: "check all sources that are period accurate, if nothing is found in comments etc just let it go."
+World: the post-fix dry run AUDIT/fix/coord/run1.db (read-only). Nothing live was touched.
+
+RESULT
+- coin-only spawned monsters in run1.db (Realm 0, True 1.65 regions, no service NPCs, no LootTemplate row through
+  their own table or any MobXLootTemplate link, no LootOTD row): 2021 (SI 1082, capitalised/named 677)
+- given loot from a source: 40 monsters, 79 drop rows (drops_extra.json) + 3 one-time drops (add-coinonlyotd165.json); 5 new items built from period item pages (add-coinonlyitems165.json, Id_nb p165_drop_<page key>)
+- still coin-only: 1981 (SI 1069, named 650) -> still_coin_only.csv (owner: let them go)
+- dry run (fix/coord/dryrun.py, copy of fix/stage + merged drops + my two add files, run1.db -> test1 -> test2):
+  every statement ran; loot rows pointing at a missing item: 0; LootOTD rows pointing at a missing item: 0; my rows present 79, missing 0; OTD rows present 3
+  second run changed nothing (LootTemplate, MobXLootTemplate, LootOTD, ItemTemplate, Mob ids): True
+  coin-only after the dry run: 1981
+
+FILES (fix/coinonly/)
+- drops_extra.json        drops165.json format, for the coordinator to merge into drops165.json (no name clashes)
+- add-coinonlyitems165.json  ItemTemplate rows built like build_vendoritems165.build (PackageID True165Drop)
+- add-coinonlyotd165.json    LootOTD rows (one-time drops; the launcher's add-*.json loader, key LootOTD_ID).
+                             OPTIONAL: separate file so the coordinator can drop it; OTDs are the 1.65 mechanic
+                             for these items (once per character, min level), so they are NOT % drops in drops_extra.
+- found.csv               every row: monster, item, source key + date, quote (<= 20 words), rate, rate source, estimated?
+- still_coin_only.csv     every monster left alone, with what was found but could not be used
+- scripts s1..s13 (python -I, in order); work/ = caches, hits, candidates, verdicts, build_report.json, test_result.json
+
+WHAT WAS SEARCHED (work/corpus.jsonl, one entry per dated post)
+- live_item_comment: 4191
+- live_mob_comment: 3258
+- live_quest_comment: 9934
+- live_zone_comment: 2871
+- period_item_comment: 8464
+- period_item_page: 10320
+- period_mob_comment: 2765
+- warcry: 3429
+- wayback_quest_comment: 6812
+- wayback_quest_page: 588
+  period item pages = all 10,320 Wayback captures (page text incl. "Found in"/"Dropped by" + every comment);
+  live Allakhazam = item, mob, zone, zoneinfo and quest pages (+ their comment pages), ONLY comments dated before
+  2003-11-01 (date format "Mon DD YYYY" in the post header); Warcry = captures <= 2003-11-01; Wayback Allakhazam
+  quest pages are all 2004 captures: their walkthrough text was used only as a lead, their comments only when dated
+  before 2003-11-01. Plus: Uthgard bestiary + Uthgard item-page "dropped by" lists under spelling variants, period /
+  live mob pages under spelling variants, and server loot tables under a misspelt name that no spawn uses.
+
+HOW (steps)
+1 s3: every coin-only name (+ plural/singular, "the") found in every post -> work/hits.jsonl (868 monsters had a mention).
+2 s4/s5: mention + a known item name (period page / ItemTemplate / Uthgard item) within 160 characters and a drop word;
+  item-page comments naming the monster with a drop word; item pages whose "Found in" text names the monster.
+3 every candidate read by hand (kind A/B by me; the 338 kind-C lines by two helper reviewers with strict rules,
+  their DROP/OTD verdicts re-checked by me: work/verdict_C_part*.json). Own-page mob comments with a drop word:
+  120 read by hand (work/own_mob_comments.txt).
+4 s6: every "One Time Drop" quest title -> named monster (OTD list). s8: Uthgard variants. s9: misspelt loot tables.
+  s10: period/live mob pages under spelling variants (difflib >= 0.85, realm + habitat zone must fit; rejected when
+  the server also has a separate monster of the page name, e.g. hrimthursa seer).
+5 s11: items resolved exactly like the drops agent (realm-matching template, stats vs period page, no removed /
+  REVIEW-removed / freeshard item, spelling variants >= 0.93), else built from the period item page.
+  Rates: Uthgard measured on this monster > the item's Uthgard rate on another monster > drops agent estimates
+  (named magical 15 %, raid/epic 25 %, regular magical 3 %, plain 20 %, kill-task 25 %), marked in found.csv.
+  drop_count as the drops agent: raid 4, named 2, regular 1 (2 when the rolled chances add up to 50 %+).
+
+COUNTS BY SOURCE (rows / monsters)
+- period Allakhazam mob page under a spelling variant (Known Loot): 37 rows / 12 monsters
+- period Allakhazam item page comment: 15 rows / 10 monsters
+- live Allakhazam mob page (pre-Nov-2003 comment) under a spelling variant: 10 rows / 4 monsters
+- Uthgard record under a spelling variant: 7 rows / 5 monsters
+- live Allakhazam comment dated before 2003-11-01: 6 rows / 6 monsters
+- period Allakhazam mob page comment: 3 rows / 3 monsters
+- one-time drop (period OTD page): 3 rows / 3 monsters
+- period Allakhazam item page text: 1 rows / 1 monsters
+- rows with an estimated or hand-set rate: 35 of 82
+
+WHAT WAS GIVEN (monster: items [rate %], source)
+- arachnid (regular): Shrunken Spider Necklace [1]
+    period-zam item 1800 comment 2002-01-02
+- Aroon the Urlamhai (raid): Aroon's Ancient Staff [25*], Aroon's Verdant Staff [25*]
+    live-zam mob 4682 'Aroon the Uriamhai' Known Loot, page comments from 20030525 (spelling v
+    period-zam mob 4682 'Aroon the Uriamhai' (capture 20030924) Known Loot (spelling variant o
+- Black Rixtas (named): Spider-claw Arrows [15*]
+    live-zam zone Myrkwood Forest comment 2001-11-12
+- blackthorn (regular): Blackthorn Wreath [1], Spiked Blackthorn Vest [1]
+    period-zam item 2070 comment 2002-01-21
+    period-zam item 915 comment 2001-11-07
+- bocaide (regular): Sphene [2]
+    Uthgard 1372 'bocaidhe' (Cruachan Gorge) 1/49 kills (spelling variant of the server name)
+- cave spider (regular): Flayed Hagbui Jerkin [1], Flayed Hagbui Sleeves [1]
+    live-zam mob 2416 'Cave Spider (NL)' Known Loot, page comments from 20011114 (spelling var
+- Chieftain Toca (raid): Chieftain Toca's Legs [25*]
+    live-zam quest 1810 comment 2003-10-12
+- Coimirceoir (named): Coirmirceoir's Remains [9]
+    Uthgard 4324 'coirmirceoir' (Cliffs of Moher) 3/35 kills (spelling variant of the server n
+- crafted hulk (regular): Earthborn Hooded Mantle [3*]
+    period-zam mob 4508 'Crafter Hulk' (capture 20030826) Known Loot (spelling variant of the 
+- Dremcis Fuiloltair (raid): Shadowwalker Cracked Stag Hide Gloves [25*]
+    period-zam item 8610 (capture 20030916) page text
+- Ellyl champion (named): Ellyll Hammer [15*], Kraggon Worm Boots [15*], Lustrous Gladius of the Battlelord [15*], Ancient Mirror [6], Gladius of the Battlelord [3], Bottle of Ellyll Wine [2], Ellyll Drum [2], Ellyll Flute [2], Etheric Ring [2], Kraggon Worm Greaves [2], Ellyll Lute [1], Ellyll Rapier [1], Ellyll Round Shield [1], Ellyll Sword [1], Kraggon Worm Arms [1], Kraggon Worm Breastplate [1], Kraggon Worm Gauntlets [1], Kraggon Worm Helmet [1], Radiant Moonclipper [1]
+    live-zam mob 163 'Ellyll Champion' Known Loot, page comments from 20020203 (spelling varia
+    period-zam mob 163 'Ellyll Champion' (capture 20031101) Known Loot (spelling variant of th
+- forest lion (regular): Pitted Sharp Claw [3]
+    period-zam item 1936 comment 2002-01-27
+- glopsk grattasvamp (regular): Bonedancer's Enhancement Gem [3*]
+    period-zam mob 6430 'Glopsk Gratlasvamp' (capture 20030916) Known Loot (spelling variant o
+- Grunge (named): Grunge's Remains [10*]
+    live-zam quest 221 comment 2003-06-25
+- Grunk (named): Giants Toothpick [1]
+    period-zam item 988 comment 2002-03-19
+- Grurk (named): Giants Toothpick [1]
+    period-zam item 988 comment 2002-03-19
+- Horned Cave Toad (named): Dark Crystalized Poison Sac [6]
+    period-zam item 3448 comment 2003-08-29
+- Insidious Samn (named): Click Clack Ring [15*], Insidious Sam's Tendril Belt [15*]
+    period-zam mob 6437 'Insidious Sam' (capture 20030605) Known Loot (spelling variant of the
+- Jailer Vifil (raid): Frozen Moon Claw [25*], Foe Hammer's Vest [25*], Jailor's Gloves [25*], Spiked Jailor's Gloves [25*], Tuscarian Bloodforged Hauberk [25*], Tuscarian Bloodforged Leggings [25*], Tuscarian Monitor Leggings [25*], Tuscarian Monitor Vest [25*], Luminescent Ceriac Stone [25*]
+    live-zam mob 6071 'Jailor Vifil' Known Loot, page comments from 20030625 (spelling variant
+    period-zam mob 6071 'Jailor Vifil' (capture 20030916) Known Loot (spelling variant of the 
+- Leildolf (named): Mystical Golden Scale Belt [30]
+    Uthgard 8895 'leidolf' (Malmohus) 6/11 kills (spelling variant of the server name)
+- Lydsyg (named): Skuggande Ephemeral Wing [15*]
+    period-zam mob 5952 comment 2003-05-24
+- Melancholic Fairy Queen (raid): Black Crystal Fairy Crown [25*], Blue Crystal Fairy Crown [25*], Cloak of Delusions [25*], Trident of Light [25*], Trident of Night [25*]
+    period-zam mob 3245 'Melancholy Fairy Queen' (capture 20031027) Known Loot (spelling varia
+- menacing presense (regular): Jade [29], Worn Studded Gauntlets [9]
+    Uthgard 100 'menacing presence' (Tomb of Mithra) 20/70 kills (spelling variant of the serv
+    Uthgard 100 'menacing presence' (Tomb of Mithra) 6/70 kills (spelling variant of the serve
+- Nasher (named): Jewel of Dark Beauty [1], Macabre Medallion [OTD]
+    period-zam item 1325 (capture 20031002) "Nasher One Time Drop"; Wayback zam quest 245 Min 
+    period-zam item 4098 comment 2002-10-14
+- Nogoribando (raid): Noguribando's Ring of Power [25*]
+    period-zam mob 6173 'Noguribando' (capture 20030713) Known Loot (spelling variant of the s
+- Nogud the Smasher (named): Angled Bone Bracer [OTD]
+    period-zam item 4754 (capture 20030619) "Nogud the Smasher One Time Drop", Level to Attain
+- phantom (regular): Majestic Mantle of the Eternal [1]
+    live-zam mob 405 comment 2002-07-16
+- phantom hound (regular): Gnawed Bone [35]
+    live-zam zone Vale of Mularn comment 2001-10-22
+- Royal Iceweaver (raid): Royal Iceweaver's Remains [10*]
+    period-zam mob 6075 comment 2003-07-09
+- Screak (named): Shreak's Scream Drum [5*]
+    period-zam item 7924 (capture 20030916) page text + comment 2003-09-15
+- Soulsong (named): Soulsong's Hauberk [OTD]
+    period-zam item 1569 (capture 20031027) "Soulsong One Time Drop"; Wayback zam quest 454 Mi
+- Spat (named): Spat's Remains [10*]
+    period-zam mob 2666 comment 2003-07-06
+- Stinky (named): badger cub fur [57]
+    live-zam zone Silvermine Mountains comment 2001-12-20
+- Taras Princep Praetorii (named): Vae Inimicus Armilla [5], Vae Inimicus Lochaber Axe [5]
+    Uthgard 1342 'taras princeps praetorii' (Catacombs of Cardova) 1/22 kills (spelling varian
+- The Great Gobzini (named): Arm-bone Scepter [15*]
+    period-zam item 1335 comment 2002-09-20
+- thrawn ogre goon (regular): Honed Mantle [3*]
+    period-zam mob 4511 'Thrwan Ogre Goon' (capture 20031008) Known Loot (spelling variant of 
+- Ulor se Bysen (raid): Crude Silken Cap [25*]
+    period-zam mob 4702 'Vlor se Bysen' (capture 20030821) Known Loot (spelling variant of the
+- Virilis (named): Silvered Drakescale Gauntlets [1]
+    period-zam mob 2415 'Virilus' (capture 20030829) Known Loot (spelling variant of the serve
+- werewolf lord (regular): Growling Garou Sleeves [2], Growling Garou Warhammer [1], Growling Garou Gloves [1], Growling Garou Hauberk [1], Growling Garou Leggings [1]
+    period-zam item 2932 comment 2002-06-26
+- wrath sprite (regular): Spritely Stiletto [1], Lustrous Spirit Searer [1]
+    period-zam mob 697 'Wraith Sprite' (capture 20031027) Known Loot (spelling variant of the 
+  (* = estimated or hand-set rate)
+
+JUDGEMENT CALLS
+- Spelling variants count as the same monster only when realm and zone fit and the server has no separate monster of
+  the other spelling: Aroon the Urlamhai = period "Aroon the Uriamhai"; Jailer Vifil = period "Jailor Vifil"; wrath
+  sprite = "Wraith Sprite"; Ellyl champion = "Ellyll Champion"; thrawn ogre goon = "Thrwan Ogre Goon"; Nogoribando =
+  "Noguribando"; Ulor se Bysen = "Vlor se Bysen"; Melancholic Fairy Queen = "Melancholy Fairy Queen"; Insidious Samn
+  = "Insidious Sam"; crafted hulk = "Crafter Hulk"; glopsk grattasvamp = "Glopsk Gratlasvamp"; Virilis = "Virilus";
+  Screak = "Shreak"; cave spider = "Cave Spider (NL)"; Uthgard: disembowled undead, menacing presence, cavefisher,
+  coirmirceoir, llyn chythraul, taras princeps praetorii, cavebear, bocaidhe, leidolf. Rejected: hrimthursa serac /
+  Hrimthursa Seer (both exist), aspen/oaken fellwood / Ashen Fellwood, spraggonet / Spraggon*, Galar / Uthgard gala
+  (other realm), svartalf dark forester / foister, lich-hunter / luch hunter, Storrow / Sorrow (other zone) ...
+- Jailer Vifil: the server already has his loot table, but under "Jailor Vifil" (no spawn uses it; 12 rows, 99 %).
+  I did not link that table; he gets the period Known Loot (+ the early live page items that have a period item page).
+  Coordinator may prefer renaming the table instead. Aroon the Urlamhai: same, old table "Aroon the Uriamhai".
+- "One time drops" (Grunge, Nasher, Soulsong, Nogud the Smasher) go to LootOTD with the period min level, not into
+  drops_extra. Grunge's OTD (Huge Sharpened Boar Tusk) has no template and the page could not be built (no sibling);
+  he still gets Grunge's Remains. Nasher also gets Jewel of Dark Beauty as a normal drop (2002-10-14 comment).
+- Trophy remains (Grunge's, Spat's, Royal Iceweaver's): period comments (2003-06/07) say they drop and that the
+  trophy system came with Foundations (housing, 2002/03), i.e. before Trials of Atlantis. NOTE for the coordinator:
+  the drops agent removed 8 "Atlas boss trophy" rows as ToA-era; these period comments contradict that reason for
+  remains/trophies in general (check those 8). Rate 10 % set by hand (only measurement: Uthgard Coirmirceoir's
+  Remains 3 in 35 kills).
+- Screak / Shreak's Scream Drum: rate 5 % by hand instead of the 15 % estimate (three period posters, ~40 kills, no drum).
+- Grurk and Grunk both get Giant's Toothpick (the poster killed both and does not say which dropped it).
+- phantom (Stonehenge Barrows): the poster's "Cloak of Majestic Mantel (+10 piety)" = Majestic Mantle of the Eternal
+  (period page 2779: the only such cloak, Piety +10, found in Stonehenge Barrows).
+- werewolf lord: "the Werewolf Lords are a better source for any Growling Garou armor" -> every Growling Garou period
+  item page that drops off monsters (5 items, Uthgard rates).
+- Ellyl champion gets 19 items (period + early live Known Loot of "Ellyll Champion") at Uthgard rates / 15 % estimates.
+- Virilis: period Known Loot says Silvered Drakescale Gauntlets; a 2002-05-05 comment doubts it. Kept (Known Loot is
+  the stronger period source), Uthgard rate 1 %.
+- Not used: ROG/unique items named by posters (prefix names like "Lustrous Bodybender Spear", "edgebender cloak",
+  "soul watcher quilted cap": random items, none in True 1.65), loot described without a name ("a flex weapon",
+  "2 chain hauberks", "some nice drops"), speculation ("probably drops from"), nerfed drops ("they don't drop them
+  anymore": sylvan goblin whelp / Faithbound Ring), and items that drop from a different (named or other) monster that
+  is only mentioned next to the coin-only one (placeholders of named OTDs: tawny lynx -> Tas, werewolf captain ->
+  Captain Gruff, roan stepper -> Little Star, host of the wind -> Vidalf ...).
+
+QUEST ITEMS (noted, not added: the period pages say they are quest rewards in 1.65)
+- Sulphine / Flameforged Sword (Sulphine's Demise), Yog / Yog's Iron Fist (Impossible Mission), Eugor / Vaporous Cloak
+  (Magic's Scar), Lusmorebane / Lusmorebane's Jeweled Necklace + Belt of Spryness (Traces of the Mad Changlings; 'used
+  to be a one-time drop but is not one any more'), Morra / Boneclaw Ring, Skullbone Brooch, Studded Hide (A Deed of Old),
+  Njessi / Njessi Carved Fang (Silent Death), Furf / Fine Sash (Furf's Reward), Krrrck / Bulbous Eye (Krrrck's Torment):
+  all have cq_ ClassicQuest templates on the server.
+- Saffron / Frozen Stone Helm (Prelude to War, 'Was Saffron OTD'), Ocug / Smack-bone Staff (Tomte Plot), Golga /
+  Nightsworn: NO template on the server -> the quest reward may be missing (for the quest owner, not a drop).
+- Kill-task items named by period comments but with no template (not built: drops agent rule): Malefic Tooth (savage
+  wyvern), Fomorian Bonic Scalp (fomorian bonic), Frazzled Assembley Bits (frazzled assembly), giant snowcrab claw;
+  KT pages Crafted Guardian Leg, Drakoran Skirmisher Head, Contraption Pieces, Cliff Yale Yearling Essence, Billious
+  Goo Piece (a cq_ template exists) were already listed by the drops agent.
+
+FOUND BUT NOT USABLE (named in a period source, but no ItemTemplate and no period item page to build from)
+- Urfgrat the Green: Snivel (no ItemTemplate; period page 4229 could not be built: no existing sibling item ()
+- Arakane: Web Lashed Gloves (no ItemTemplate of that name for the realm; no period item page)
+- carrion lizard: rotting carrion (no ItemTemplate of that name for the realm; no period item page)
+- carrion lizard: diseased claw (no ItemTemplate of that name for the realm; no period item page)
+- giant spider: spider silk (no ItemTemplate of that name for the realm; no period item page)
+- seithkona initiate: foul-smelling herbs (no ItemTemplate of that name for the realm; no period item page)
+- seithkona initiate: blank spellbook (no ItemTemplate of that name for the realm; no period item page)
+- seithkona initiate: initiate's bracelet (no ItemTemplate of that name for the realm; no period item page)
+- Styrimathr Ygna: captain's spyglass (no ItemTemplate of that name for the realm; no period item page)
+- Styrimathr Ygna: golden earring (no ItemTemplate of that name for the realm; no period item page)
+- yell hound: yell hound skin (no ItemTemplate of that name for the realm; no period item page)
+- yell hound: bloody canine fang (no ItemTemplate of that name for the realm; no period item page)
+- young bear: tiny pitted dagger (no ItemTemplate of that name for the realm; no period item page)
+- sett youngling: sett youngling pelt (no ItemTemplate of that name for the realm; no period item page)
+- sett youngling: pristine sett youngling pelt (no ItemTemplate of that name for the realm; no period item page)
+- bog creeper: bog creeper eye (no ItemTemplate of that name for the realm; no period item page)
+- white wolf: white wolf fur (no ItemTemplate of that name for the realm; no period item page)
+- white wolf: white wolf pelt (no ItemTemplate of that name for the realm; no period item page)
+- slinking sylvanshade: Slinking Sylvanshade Finger (no ItemTemplate of that name for the realm; no period item page)
+- chalico: chalico paw (no ItemTemplate of that name for the realm; no period item page)
+- burrowing monstrosity: burrowing monstrosity jaw (no ItemTemplate of that name for the realm; no period item page)
+- fomorian bonic: Fomorian Bonic Scalp (no ItemTemplate of that name for the realm; no period item page)
+- coral thing: Protector's Jewel (no ItemTemplate of that name for the realm; no period item page)
+- Lydsyg: Willful War Hammer (no ItemTemplate of that name for the realm; no period item page)
+- Royal Iceweaver: Royal Iceweaver Remains (no ItemTemplate of that name for the realm; no period item page)
+- frazzled assembly: Frazzled Assembly Bits (no ItemTemplate of that name for the realm; no period item page)
+- frazzled assembly: Frazzled Assembley Bits (no ItemTemplate of that name for the realm; no period item page)
+- giant snowcrab: Vial of Warm Butter-like Substance (no ItemTemplate of that name for the realm; no period item page)
+- giant snowcrab: giant snowcrab leg (no ItemTemplate of that name for the realm; no period item page)
+- young irewood: Dull Scythe (no ItemTemplate of that name for the realm; no period item page)
+- muryan: muryan carapace (no ItemTemplate of that name for the realm; no period item page)
+- young fire wyrm: fire wyrm fang (no ItemTemplate of that name for the realm; no period item page)
+- young fire wyrm: piece of polished onyx (no ItemTemplate of that name for the realm; no period item page)
+- young fire wyrm: wyrm hide (no ItemTemplate of that name for the realm; no period item page)
+- young fire wyrm: red carnelian (no ItemTemplate of that name for the realm; no period item page)
+- bilious goo: Billious Goo Piece (no ItemTemplate; period page 5299 could not be built: classic quest item (a cq_ )
+- disemboweled undead: sapphire ring (no ItemTemplate of that name for the realm; no period item page)
+- disemboweled undead: engraved pewter bowl (no ItemTemplate of that name for the realm; no period item page)
+- disemboweled undead: bottle of fetid wine (no ItemTemplate of that name for the realm; no period item page)
+- disemboweled undead: vial of foul vapors (no ItemTemplate of that name for the realm; no period item page)
+- Ellyl champion: green sapphire (no ItemTemplate of that name for the realm; no period item page)
+- Ellyl champion: gem studded stein (no ItemTemplate of that name for the realm; no period item page)
+- Ellyl champion: ellyll silken hair (no ItemTemplate of that name for the realm; no period item page)
+- menacing presense: blackened silver locket (no ItemTemplate of that name for the realm; no period item page)
+- menacing presense: forgotten silver key (no ItemTemplate of that name for the realm; no period item page)
+- menacing presense: old silver lined map case (no ItemTemplate of that name for the realm; no period item page)
+- menacing presense: spinel (no ItemTemplate of that name for the realm; no period item page)
+- cave fisher: cave fisher leg tip (no ItemTemplate of that name for the realm; no period item page)
+- Coimirceoir: beaded hobgoblin belt (no ItemTemplate of that name for the realm; no period item page)
+- Llyn Cythraul: alfanc eye (no ItemTemplate of that name for the realm; no period item page)
+- Taras Princep Praetorii: Vae Inimicus Dirk (no ItemTemplate of that name for the realm; no period item page)
+- Taras Princep Praetorii: zircon (no ItemTemplate of that name for the realm; no period item page)
+- cave bear: cave bear tooth (no ItemTemplate of that name for the realm; no period item page)
+- cave bear: pack of 20 cave bear meat (no ItemTemplate of that name for the realm; no period item page)
+- cave bear: cave bear claw (no ItemTemplate of that name for the realm; no period item page)
+- cave bear: cave bear skin (no ItemTemplate of that name for the realm; no period item page)
+- bocaide: red spinel (no ItemTemplate of that name for the realm; no period item page)
+- Grunge: Huge Sharpened Boar Tusk (OTD: no ItemTemplate; period page 2498 could not be built: no existing sibling i)
+
+THE BIG REMAINING GAP (for the coordinator / owner, not done here)
+- 305 of the 1981 still-coin-only monsters ARE measured on Uthgard in their own realm with item drops,
+  but none of those items has a usable ItemTemplate or a period Allakhazam page (mostly plain vendor loot; a few are
+  removed freeshard items)
+  (552 distinct names, e.g. large sveawolf skin (6), some copper coins (5), cave bear meat (5), pink sapphire (4), yellow diamond (4), cave bear tooth (4), cave bear skin (4), large yellow topaz (4), Spider Silk (3), boar tusk (3), raw pork (3), pristine redhound pelt (3)).
+  The drops agent listed them in fix/drops/unfilled.csv (kind "Uthgard drop"). Building them from the Uthgard item
+  pages (name + sell value; look from a sibling, like the drops agent did for period gems) would fill most of these;
+  it needs an owner decision because no period page has those items (Uthgard is a valid source per the owner).
+- The other 1676 have no item drop in any source checked: let go as the owner said.
+
+INCIDENT (fixed)
+- My first s1 run wrote its list to fix/drops/work/coin_only.json (the drops agent's file: common.py's HERE shadowed
+  mine) and s2 wrote its corpus there. Both fixed within minutes: the corpus was moved here, and coin_only.json was
+  rebuilt with the drops agent's own test_apply.coin_only() on its own final test database (restore_drops_coinonly.py):
+  same 1876 monsters / 591 named as its test_result.json, same byte size. Nothing else outside fix/coinonly/ was written.
+- test/test2.db = the second dry-run result (kept for checking; delete when done).

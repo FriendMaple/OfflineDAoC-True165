@@ -1,0 +1,1604 @@
+[
+ {
+  "page_key": 363,
+  "period_name": "Rawhide Starkalaedar Helm",
+  "list_id": "MidLeatherStarklaedar",
+  "merchant_period_name": "Morgen",
+  "world_name": "rawhide starklaedar helm",
+  "world_template_id": "rawhide_starklaedar_helm",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 369,
+  "period_name": "Tanned Starkalaedar Helm",
+  "list_id": "MidLeatherStarklaedar",
+  "merchant_period_name": "Morgen",
+  "world_name": "tanned starklaedar helm",
+  "world_template_id": "tanned_starklaedar_helm",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 375,
+  "period_name": "Cured Starkalaedar Helm",
+  "list_id": "MidLeatherStarklaedar",
+  "merchant_period_name": "Morgen",
+  "world_name": "cured starklaedar helm",
+  "world_template_id": "cured_starklaedar_helm",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 382,
+  "period_name": "Hard Starkalaedar Helm",
+  "list_id": "MidLeatherStarklaedar",
+  "merchant_period_name": "Morgen",
+  "world_name": "hard starklaedar helm",
+  "world_template_id": "hard_starklaedar_helm",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 388,
+  "period_name": "Rigid Starkalaedar Helm",
+  "list_id": "MidLeatherStarklaedar",
+  "merchant_period_name": "Morgen",
+  "world_name": "rigid starklaedar helm",
+  "world_template_id": "rigid_starklaedar_helm",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 608,
+  "period_name": "Embossed Starkalaedar Gloves",
+  "list_id": "MidFullArmorMerchant",
+  "merchant_period_name": "Hadr",
+  "world_name": "embossed starklaedar gloves",
+  "world_template_id": "embossed_starklaedar_gloves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 609,
+  "period_name": "Embossed Starkalaedar Helm",
+  "list_id": "MidFullArmorMerchant",
+  "merchant_period_name": "Hadr",
+  "world_name": "embossed starklaedar helm",
+  "world_template_id": "embossed_starklaedar_helm",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 708,
+  "period_name": "Cured Cymric Jerkin",
+  "list_id": "AlbCymricLeather",
+  "merchant_period_name": "Geor Nadren",
+  "world_name": "cured cymric leather jerkin",
+  "world_template_id": "cured_cymric_leather_jerkin",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 709,
+  "period_name": "Cured Cymric Leggings",
+  "list_id": "AlbCymricLeather",
+  "merchant_period_name": "Geor Nadren",
+  "world_name": "cured cymric leather leggings",
+  "world_template_id": "cured_cymric_leather_leggings",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 710,
+  "period_name": "Cured Cymric Sleeves",
+  "list_id": "AlbCymricLeather",
+  "merchant_period_name": "Geor Nadren",
+  "world_name": "cured cymric leather sleeves",
+  "world_template_id": "cured_cymric_leather_sleeves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 711,
+  "period_name": "Cured Cymric Gloves",
+  "list_id": "AlbCymricLeather",
+  "merchant_period_name": "Geor Nadren",
+  "world_name": "cured cymric leather gloves",
+  "world_template_id": "cured_cymric_leather_gloves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 712,
+  "period_name": "Cured Cymric Boots",
+  "list_id": "AlbCymricLeather",
+  "merchant_period_name": "Geor Nadren",
+  "world_name": "cured cymric leather boots",
+  "world_template_id": "cured_cymric_leather_boots",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 713,
+  "period_name": "Cured Cymric Helm",
+  "list_id": "AlbCymricLeather",
+  "merchant_period_name": "Geor Nadren",
+  "world_name": "cured cymric leather helm",
+  "world_template_id": "cured_cymric_leather_helm",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 714,
+  "period_name": "Hard Cymric Jerkin",
+  "list_id": "AlbCymricLeather",
+  "merchant_period_name": "Geor Nadren",
+  "world_name": "hard cymric leather jerkin",
+  "world_template_id": "hard_cymric_leather_jerkin",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 715,
+  "period_name": "Hard Cymric Leggings",
+  "list_id": "AlbCymricLeather",
+  "merchant_period_name": "Geor Nadren",
+  "world_name": "hard cymric leather leggings",
+  "world_template_id": "hard_cymric_leather_leggings",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 716,
+  "period_name": "Hard Cymric Sleeves",
+  "list_id": "AlbCymricLeather",
+  "merchant_period_name": "Geor Nadren",
+  "world_name": "hard cymric leather sleeves",
+  "world_template_id": "hard_cymric_leather_sleeves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 717,
+  "period_name": "Hard Cymric Gloves",
+  "list_id": "AlbCymricLeather",
+  "merchant_period_name": "Geor Nadren",
+  "world_name": "hard cymric leather gloves",
+  "world_template_id": "hard_cymric_leather_gloves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 718,
+  "period_name": "Hard Cymric Boots",
+  "list_id": "AlbCymricLeather",
+  "merchant_period_name": "Geor Nadren",
+  "world_name": "hard cymric leather boots",
+  "world_template_id": "hard_cymric_leather_boots",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 719,
+  "period_name": "Hard Cymric Helm",
+  "list_id": "AlbCymricLeather",
+  "merchant_period_name": "Geor Nadren",
+  "world_name": "hard cymric leather helm",
+  "world_template_id": "hard_cymric_leather_helm",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 720,
+  "period_name": "Rigid Cymric Jerkin",
+  "list_id": "AlbCymricLeather",
+  "merchant_period_name": "Geor Nadren",
+  "world_name": "rigid cymric leather jerkin",
+  "world_template_id": "rigid_cymric_leather_jerkin",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 721,
+  "period_name": "Rigid Cymric Leggings",
+  "list_id": "AlbCymricLeather",
+  "merchant_period_name": "Geor Nadren",
+  "world_name": "rigid cymric leather leggings",
+  "world_template_id": "rigid_cymric_leather_leggings",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 722,
+  "period_name": "Rigid Cymric Sleeves",
+  "list_id": "AlbCymricLeather",
+  "merchant_period_name": "Geor Nadren",
+  "world_name": "rigid cymric leather sleeves",
+  "world_template_id": "rigid_cymric_leather_sleeves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 723,
+  "period_name": "Rigid Cymric Gloves",
+  "list_id": "AlbCymricLeather",
+  "merchant_period_name": "Geor Nadren",
+  "world_name": "rigid cymric leather gloves",
+  "world_template_id": "rigid_cymric_leather_gloves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 724,
+  "period_name": "Rigid Cymric Boots",
+  "list_id": "AlbCymricLeather",
+  "merchant_period_name": "Geor Nadren",
+  "world_name": "rigid cymric leather boots",
+  "world_template_id": "rigid_cymric_leather_boots",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 725,
+  "period_name": "Rigid Cymric Helm",
+  "list_id": "AlbCymricLeather",
+  "merchant_period_name": "Geor Nadren",
+  "world_name": "rigid cymric leather helm",
+  "world_template_id": "rigid_cymric_leather_helm",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 726,
+  "period_name": "Embossed Cymric Jerkin",
+  "list_id": "AlbEmbossedLeather",
+  "merchant_period_name": "Edmee Heolstor",
+  "world_name": "embossed cymric leather jerkin",
+  "world_template_id": "embossed_cymric_leather_jerkin",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 727,
+  "period_name": "Embossed Cymric Leggings",
+  "list_id": "AlbEmbossedLeather",
+  "merchant_period_name": "Edmee Heolstor",
+  "world_name": "embossed cymric leather leggings",
+  "world_template_id": "embossed_cymric_leather_leggings",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 728,
+  "period_name": "Embossed Cymric Sleeves",
+  "list_id": "AlbEmbossedLeather",
+  "merchant_period_name": "Edmee Heolstor",
+  "world_name": "embossed cymric leather sleeves",
+  "world_template_id": "embossed_cymric_leather_sleeves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 729,
+  "period_name": "Embossed Cymric Gloves",
+  "list_id": "AlbEmbossedLeather",
+  "merchant_period_name": "Edmee Heolstor",
+  "world_name": "embossed cymric leather gloves",
+  "world_template_id": "embossed_cymric_leather_gloves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 730,
+  "period_name": "Embossed Cymric Boots",
+  "list_id": "AlbEmbossedLeather",
+  "merchant_period_name": "Edmee Heolstor",
+  "world_name": "embossed cymric leather boots",
+  "world_template_id": "embossed_cymric_leather_boots",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 731,
+  "period_name": "Embossed Cymric Helm",
+  "list_id": "AlbEmbossedLeather",
+  "merchant_period_name": "Edmee Heolstor",
+  "world_name": "embossed cymric leather helm",
+  "world_template_id": "embossed_cymric_leather_helm",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 739,
+  "period_name": "Tanned Siluric Jerkin",
+  "list_id": "AlbInstrumentsLeatherStuddedPierce",
+  "merchant_period_name": "Holt Finan",
+  "world_name": "tanned siluric leather jerkin",
+  "world_template_id": "tanned_siluric_leather_jerkin",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 740,
+  "period_name": "Tanned Siluric Leggings",
+  "list_id": "AlbInstrumentsLeatherStuddedPierce",
+  "merchant_period_name": "Holt Finan",
+  "world_name": "tanned siluric leather leggings",
+  "world_template_id": "tanned_siluric_leather_leggings",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 741,
+  "period_name": "Tanned Siluric Sleeves",
+  "list_id": "AlbInstrumentsLeatherStuddedPierce",
+  "merchant_period_name": "Holt Finan",
+  "world_name": "tanned siluric leather sleeves",
+  "world_template_id": "tanned_siluric_leather_sleeves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 742,
+  "period_name": "Tanned Siluric Gloves",
+  "list_id": "AlbInstrumentsLeatherStuddedPierce",
+  "merchant_period_name": "Holt Finan",
+  "world_name": "tanned siluric leather gloves",
+  "world_template_id": "tanned_siluric_leather_gloves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 743,
+  "period_name": "Tanned Siluric Helm",
+  "list_id": "AlbInstrumentsLeatherStuddedPierce",
+  "merchant_period_name": "Holt Finan",
+  "world_name": "tanned siluric leather helm",
+  "world_template_id": "tanned_siluric_leather_helm",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 744,
+  "period_name": "Tanned Siluric Boots",
+  "list_id": "AlbInstrumentsLeatherStuddedPierce",
+  "merchant_period_name": "Holt Finan",
+  "world_name": "tanned siluric leather boots",
+  "world_template_id": "tanned_siluric_leather_boots",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3340,
+  "period_name": "Accursed Daemon Belt",
+  "list_id": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+  "merchant_period_name": "Darbo",
+  "world_name": "Superior Accursed Daemon Belt",
+  "world_template_id": "Superior_Accursed_Daemon_Belt3",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3341,
+  "period_name": "Accursed Daemon Spiked Mace",
+  "list_id": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+  "merchant_period_name": "Godo",
+  "world_name": "Superior Accursed Demon Spiked Mace",
+  "world_template_id": "Superior_Accursed_Demon_Spiked_Mace",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3357,
+  "period_name": "Corrupted Avernal Gloves",
+  "list_id": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+  "merchant_period_name": "Wovo",
+  "world_name": "Exceptional Corrupted Avernal Gloves",
+  "world_template_id": "Exceptional_Corrupted_Avernal_Gloves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3359,
+  "period_name": "Fiendish Avernal Sleeves",
+  "list_id": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+  "merchant_period_name": "Wovo",
+  "world_name": "Exceptional Fiendish Avernal Sleeves",
+  "world_template_id": "Exceptional_Fiendish_Avernal_Sleeves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3361,
+  "period_name": "Shimmering Soultorn Robe (Hib)",
+  "list_id": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+  "merchant_period_name": "Darbo",
+  "world_name": "Superior Shimmering Soultorn Robe",
+  "world_template_id": "Superior_Shimmering_Soultorn_Robe",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3430,
+  "period_name": "Accursed Bone Belt",
+  "list_id": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+  "merchant_period_name": "Darbo",
+  "world_name": "Superior Accursed Bone Belt",
+  "world_template_id": "Superior_Accursed_Bone_Belt3",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3432,
+  "period_name": "Accursed Bone Ring",
+  "list_id": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+  "merchant_period_name": "Darbo",
+  "world_name": "Superior Accursed Bone Ring",
+  "world_template_id": "Superior_Accursed_Bone_Ring3",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3435,
+  "period_name": "Accursed Daemon Cloak",
+  "list_id": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+  "merchant_period_name": "Darbo",
+  "world_name": "Superior Accursed Daemon Cloak",
+  "world_template_id": "Superior_Accursed_Daemon_Cloak3",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3436,
+  "period_name": "Accursed Daemon Necklace",
+  "list_id": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+  "merchant_period_name": "Darbo",
+  "world_name": "Superior Accursed Daemon Necklace",
+  "world_template_id": "Superior_Accursed_Daemon_Necklace3",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3437,
+  "period_name": "Accursed Daemon Ring",
+  "list_id": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+  "merchant_period_name": "Darbo",
+  "world_name": "Superior Accursed Daemon Ring",
+  "world_template_id": "Superior_Accursed_Daemon_Ring3",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3460,
+  "period_name": "Maligned Avernal Protector",
+  "list_id": "393387fe-957f-4d58-8ef8-5be75176c6ef",
+  "merchant_period_name": "Lulo",
+  "world_name": "Exceptional Maligned Avernal Protector",
+  "world_template_id": "Exceptional_Maligned_Avernal_Protector2",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3467,
+  "period_name": "Shimmering Soultorn Gloves",
+  "list_id": "5cfa2b91-ab15-4509-a08f-75386dda3f6c",
+  "merchant_period_name": "Uvo",
+  "world_name": "Exceptional Shimmering Soultorn Gloves",
+  "world_template_id": "Exceptional_Shimmering_Soultorn_Gloves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3518,
+  "period_name": "Accursed Demon Avenger",
+  "list_id": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+  "merchant_period_name": "Godo",
+  "world_name": "Superior Accursed Demon Avenger",
+  "world_template_id": "Superior_Accursed_Demon_Avenger",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3519,
+  "period_name": "Accursed Demon Broadsword",
+  "list_id": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+  "merchant_period_name": "Godo",
+  "world_name": "Superior Accursed Demon Broadsword",
+  "world_template_id": "Superior_Accursed_Demon_Broadsword",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3520,
+  "period_name": "Accursed Demon Buckler",
+  "list_id": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+  "merchant_period_name": "Godo",
+  "world_name": "Superior Accursed Demon Buckler",
+  "world_template_id": "Superior_Accursed_Demon_Buckler",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3522,
+  "period_name": "Accursed Demon Defender",
+  "list_id": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+  "merchant_period_name": "Godo",
+  "world_name": "Superior Accursed Demon Defender",
+  "world_template_id": "Superior_Accursed_Demon_Defender",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3523,
+  "period_name": "Accursed Demon Dirk",
+  "list_id": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+  "merchant_period_name": "Godo",
+  "world_name": "Superior Accursed Demon Dirk",
+  "world_template_id": "Superior_Accursed_Demon_Dirk",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3524,
+  "period_name": "Accursed Demon Drum",
+  "list_id": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+  "merchant_period_name": "Godo",
+  "world_name": "Superior Accursed Demon Drum",
+  "world_template_id": "Superior_Accursed_Demon_Drum",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3525,
+  "period_name": "Accursed Demon Falcata",
+  "list_id": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+  "merchant_period_name": "Godo",
+  "world_name": "Superior Accursed Demon Falcata",
+  "world_template_id": "Superior_Accursed_Demon_Falcata",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3526,
+  "period_name": "Accursed Demon Flute",
+  "list_id": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+  "merchant_period_name": "Godo",
+  "world_name": "Superior Accursed Demon Flute",
+  "world_template_id": "Superior_Accursed_Demon_Flute",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3528,
+  "period_name": "Accursed Demon Long Sword",
+  "list_id": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+  "merchant_period_name": "Godo",
+  "world_name": "Superior Accursed Demon Long Sword",
+  "world_template_id": "Superior_Accursed_Demon_Long_Sword",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3576,
+  "period_name": "Accursed Demon Lute",
+  "list_id": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+  "merchant_period_name": "Godo",
+  "world_name": "Superior Accursed Demon Lute",
+  "world_template_id": "Superior_Accursed_Demon_Lute",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3577,
+  "period_name": "Accursed Demon Mace",
+  "list_id": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+  "merchant_period_name": "Godo",
+  "world_name": "Superior Accursed Demon Mace",
+  "world_template_id": "Superior_Accursed_Demon_Mace",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3578,
+  "period_name": "Accursed Demon Protector",
+  "list_id": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+  "merchant_period_name": "Godo",
+  "world_name": "Superior Accursed Demon Protector",
+  "world_template_id": "Superior_Accursed_Demon_Protector",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3579,
+  "period_name": "Accursed Demon Rapier",
+  "list_id": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+  "merchant_period_name": "Godo",
+  "world_name": "Superior Accursed Demon Rapier",
+  "world_template_id": "Superior_Accursed_Demon_Rapier",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3581,
+  "period_name": "Accursed Demon Short Bow",
+  "list_id": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+  "merchant_period_name": "Godo",
+  "world_name": "Superior Accursed Demon Short Bow",
+  "world_template_id": "Superior_Accursed_Demon_Short_Bow",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3603,
+  "period_name": "Accursed Demon Spear",
+  "list_id": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+  "merchant_period_name": "Godo",
+  "world_name": "Superior Accursed Demon Spear",
+  "world_template_id": "Superior_Accursed_Demon_Spear",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3604,
+  "period_name": "Accursed Demon Spiked Mace",
+  "list_id": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+  "merchant_period_name": "Godo",
+  "world_name": "Superior Accursed Demon Spiked Mace",
+  "world_template_id": "Superior_Accursed_Demon_Spiked_Mace",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3607,
+  "period_name": "Accursed Demon Staff of Mana",
+  "list_id": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+  "merchant_period_name": "Godo",
+  "world_name": "Superior Accursed Demon Staff of Mana",
+  "world_template_id": "Superior_Accursed_Demon_Staff_of_Mana",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3608,
+  "period_name": "Accursed Demon Staff of Mind",
+  "list_id": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+  "merchant_period_name": "Godo",
+  "world_name": "Superior Accursed Demon Staff of Mind",
+  "world_template_id": "Superior_Accursed_Demon_Staff_of_Mind",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3609,
+  "period_name": "Accursed Demon Staff of Void",
+  "list_id": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+  "merchant_period_name": "Godo",
+  "world_name": "Superior Accursed Demon Staff of Void",
+  "world_template_id": "Superior_Accursed_Demon_Staff_of_Void",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3612,
+  "period_name": "Accursed Scroll",
+  "list_id": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+  "merchant_period_name": "Darbo",
+  "world_name": "Superior Accursed Scroll",
+  "world_template_id": "Superior_Accursed_Scroll3",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3636,
+  "period_name": "Avernal Coif",
+  "list_id": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+  "merchant_period_name": "Wovo",
+  "world_name": "Exceptional Tainted Avernal Coif",
+  "world_template_id": "Exceptional_Tainted_Avernal_Coif",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3638,
+  "period_name": "Avernal Maligned Avenger",
+  "list_id": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+  "merchant_period_name": "Dano",
+  "world_name": "Exceptional Avernal Maligned Avenger",
+  "world_template_id": "Exceptional_Avernal_Maligned_Avenger",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3639,
+  "period_name": "Avernal Maligned Broadsword",
+  "list_id": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+  "merchant_period_name": "Dano",
+  "world_name": "Exceptional Avernal Maligned Broadsword",
+  "world_template_id": "Exceptional_Avernal_Maligned_Broadsword",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3640,
+  "period_name": "Avernal Maligned Buckler",
+  "list_id": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+  "merchant_period_name": "Dano",
+  "world_name": "Exceptional Avernal Maligned Buckler",
+  "world_template_id": "Exceptional_Avernal_Maligned_Buckler",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3641,
+  "period_name": "Avernal Maligned Crusher",
+  "list_id": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+  "merchant_period_name": "Dano",
+  "world_name": "Exceptional Avernal Maligned Crusher",
+  "world_template_id": "Exceptional_Avernal_Maligned_Crusher",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3642,
+  "period_name": "Avernal Boots",
+  "list_id": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+  "merchant_period_name": "Wovo",
+  "world_name": "Exceptional Avernal Boots",
+  "world_template_id": "Exceptional_Avernal_Boots",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3644,
+  "period_name": "Avernal Gloves",
+  "list_id": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+  "merchant_period_name": "Wovo",
+  "world_name": "Exceptional Corrupted Avernal Gloves",
+  "world_template_id": "Exceptional_Corrupted_Avernal_Gloves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3646,
+  "period_name": "Abysmal Hauberk (Hib)",
+  "list_id": "cd800515-e685-49ac-a704-f4ff958018f7",
+  "merchant_period_name": "Ebo",
+  "world_name": "Exquisite Abysmal Hauberk",
+  "world_template_id": "Exquisite_Abysmal_Hauberk",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3647,
+  "period_name": "Avernal Leggings (Hib)",
+  "list_id": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+  "merchant_period_name": "Wovo",
+  "world_name": "Exceptional Avernal Leggings",
+  "world_template_id": "Exceptional_Avernal_Leggings",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 3894,
+  "period_name": "Hard Siluric Gloves",
+  "list_id": "AlbLeatherSiluric",
+  "merchant_period_name": "Warren Gibson",
+  "world_name": "hard siluric leather gloves",
+  "world_template_id": "hard_siluric_leather_gloves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4332,
+  "period_name": "Avernal Plate Arms",
+  "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+  "merchant_period_name": "Debo",
+  "world_name": "Exceptional Avernal Plate Arms",
+  "world_template_id": "Exceptional_Avernal_Plate_Arms",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4354,
+  "period_name": "Aeternal Strife Gauntlets",
+  "list_id": "5cfa2b91-ab15-4509-a08f-75386dda3f6c",
+  "merchant_period_name": "Uvo",
+  "world_name": "Exceptional Eternal Strife Gauntlets",
+  "world_template_id": "Exceptional_Eternal_Strife_Gauntlets",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4355,
+  "period_name": "Aeternal Strife Helm",
+  "list_id": "5cfa2b91-ab15-4509-a08f-75386dda3f6c",
+  "merchant_period_name": "Uvo",
+  "world_name": "Exceptional Eternal Strife Helm",
+  "world_template_id": "Exceptional_Eternal_Strife_Helm",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4356,
+  "period_name": "Corrupted Avernal Helm",
+  "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+  "merchant_period_name": "Debo",
+  "world_name": "Exceptional Corrupted Avernal Helm",
+  "world_template_id": "Exceptional_Corrupted_Avernal_Helm",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4357,
+  "period_name": "Avernal Plate Boots",
+  "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+  "merchant_period_name": "Debo",
+  "world_name": "Exceptional Avernal Plate Boots",
+  "world_template_id": "Exceptional_Avernal_Plate_Boots",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4402,
+  "period_name": "Accursed Avernal Bladeblocker",
+  "list_id": "f03643af-19c7-478c-97ff-a12898b7d4da",
+  "merchant_period_name": "Tulo",
+  "world_name": "Superior Accursed Avernal Bladeblocker",
+  "world_template_id": "2_Superior_Accursed_Avernal_Bladeblocker",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4403,
+  "period_name": "Accursed Avernal Great Sword",
+  "list_id": "f03643af-19c7-478c-97ff-a12898b7d4da",
+  "merchant_period_name": "Tulo",
+  "world_name": "Superior Accursed Avernal Great Sword",
+  "world_template_id": "Superior_Accursed_Avernal_Great_Sword2",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4413,
+  "period_name": "Avernal Maligned Crossbow",
+  "list_id": "f0e5327c-d39d-4ee2-b7a4-6ef318853e66",
+  "merchant_period_name": "Pico",
+  "world_name": "Exquisite Avernal Malison Crossbow",
+  "world_template_id": "Exquisite_Avernal_Malison_Crossbow",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4565,
+  "period_name": "Diabolical Forged Vest",
+  "list_id": "cd800515-e685-49ac-a704-f4ff958018f7",
+  "merchant_period_name": "Ebo",
+  "world_name": "Exquisite Diabolical Forged Vest",
+  "world_template_id": "Exquisite_Diabolical_Forged_Vest",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4566,
+  "period_name": "Diabolical Gloves",
+  "list_id": "cd800515-e685-49ac-a704-f4ff958018f7",
+  "merchant_period_name": "Ebo",
+  "world_name": "Exquisite Diabolical Gloves",
+  "world_template_id": "Exquisite_Diabolical_Gloves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4567,
+  "period_name": "Diabolical Helm",
+  "list_id": "cd800515-e685-49ac-a704-f4ff958018f7",
+  "merchant_period_name": "Ebo",
+  "world_name": "Exquisite Diabolical Helm",
+  "world_template_id": "Exquisite_Diabolical_Helm",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4568,
+  "period_name": "Diabolical Sleeves",
+  "list_id": "cd800515-e685-49ac-a704-f4ff958018f7",
+  "merchant_period_name": "Ebo",
+  "world_name": "Exquisite Diabolical Sleeves",
+  "world_template_id": "Exquisite_Diabolical_Sleeves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4734,
+  "period_name": "Fiendishly Forged Helm",
+  "list_id": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+  "merchant_period_name": "Wovo",
+  "world_name": "Exceptional Fiendishly Forged Helm",
+  "world_template_id": "Exceptional_Fiendishly_Forged_Helm",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4735,
+  "period_name": "Fiendishly Forged Boots",
+  "list_id": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+  "merchant_period_name": "Wovo",
+  "world_name": "Exceptional Fiendishly Forged Boots",
+  "world_template_id": "Exceptional_Fiendishly_Forged_Boots",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4736,
+  "period_name": "Fiendish Vest",
+  "list_id": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+  "merchant_period_name": "Wovo",
+  "world_name": "Exceptional Fiendish Vest",
+  "world_template_id": "Exceptional_Fiendish_Vest",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4813,
+  "period_name": "Dismal Tidings Boots (Hib)",
+  "list_id": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+  "merchant_period_name": "Neno",
+  "world_name": "Exceptional Dismal Tidings Boots",
+  "world_template_id": "Exceptional_Dismal_Tidings_Boots3",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4814,
+  "period_name": "Dismal Tidings Gloves (Hib)",
+  "list_id": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+  "merchant_period_name": "Neno",
+  "world_name": "Exceptional Dismal Tidings Gloves",
+  "world_template_id": "Exceptional_Dismal_Tidings_Gloves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4815,
+  "period_name": "Dismal Tidings Helm (Hib)",
+  "list_id": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+  "merchant_period_name": "Neno",
+  "world_name": "Exceptional Dismal Tidings Helm",
+  "world_template_id": "Exceptional_Dismal_Tidings_Helm3",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4817,
+  "period_name": "Dismal Tidings Leggings (Hib)",
+  "list_id": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+  "merchant_period_name": "Neno",
+  "world_name": "Exceptional Dismal Tidings Leggings",
+  "world_template_id": "Exceptional_Dismal_Tidings_Leggings3",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4818,
+  "period_name": "Dismal Tidings Sleeves (Hib)",
+  "list_id": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+  "merchant_period_name": "Neno",
+  "world_name": "Exceptional Dismal Tidings Sleeves",
+  "world_template_id": "Exceptional_Dismal_Tidings_Sleeves3",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4879,
+  "period_name": "Entrancing Gossamer Cap",
+  "list_id": "067eddfd-b27f-4560-b5d2-761420943c53",
+  "merchant_period_name": "Yojo",
+  "world_name": "Exquisite Entrancing Gossamer Cap",
+  "world_template_id": "Exquisite_Entrancing_Gossamer_Cap",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4880,
+  "period_name": "Entrancing Shimmering Cap",
+  "list_id": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+  "merchant_period_name": "Darbo",
+  "world_name": "Superior Entrancing Shimmering Cap",
+  "world_template_id": "Superior_Entrancing_Shimmering_Cap",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4882,
+  "period_name": "Fiendish Abysmal Sleeves",
+  "list_id": "cd800515-e685-49ac-a704-f4ff958018f7",
+  "merchant_period_name": "Ebo",
+  "world_name": "Exquisite Fiendish Abysmal Sleeves",
+  "world_template_id": "Exquisite_Fiendish_Abysmal_Sleeves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4883,
+  "period_name": "Fiendish Boots",
+  "list_id": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+  "merchant_period_name": "Wovo",
+  "world_name": "Exceptional Fiendish Boots",
+  "world_template_id": "Exceptional_Fiendish_Boots",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4884,
+  "period_name": "Fiendish Daemon-forged Sleeves",
+  "list_id": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+  "merchant_period_name": "Beelo",
+  "world_name": "Superior Fiendish Daemon-forged Sleeves",
+  "world_template_id": "superior_fiendish_daemonforged_sleeves3",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4885,
+  "period_name": "Fiendish Gloves",
+  "list_id": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+  "merchant_period_name": "Wovo",
+  "world_name": "Exceptional Fiendish-forged Gloves",
+  "world_template_id": "exceptional_fiendishforged_gloves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4886,
+  "period_name": "Fiendish Leggings",
+  "list_id": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+  "merchant_period_name": "Wovo",
+  "world_name": "Exceptional Fiendish Leggings",
+  "world_template_id": "Exceptional_Fiendish_Leggings",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4887,
+  "period_name": "Shimmering Soultorn Robe (Alb)",
+  "list_id": "5cfa2b91-ab15-4509-a08f-75386dda3f6c",
+  "merchant_period_name": "Uvo",
+  "world_name": "Exceptional Shimmering Soultorn Robe",
+  "world_template_id": "Exceptional_Shimmering_Soultorn_Robe",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4888,
+  "period_name": "Fiendish-forged Gloves",
+  "list_id": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+  "merchant_period_name": "Wovo",
+  "world_name": "Exceptional Fiendish-forged Gloves",
+  "world_template_id": "exceptional_fiendishforged_gloves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4889,
+  "period_name": "Shimmering Soultorn Pants",
+  "list_id": "5cfa2b91-ab15-4509-a08f-75386dda3f6c",
+  "merchant_period_name": "Uvo",
+  "world_name": "Exceptional Shimmering Soultorn Pants",
+  "world_template_id": "Exceptional_Shimmering_Soultorn_Pants",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4972,
+  "period_name": "Warped Infernal Pants",
+  "list_id": "baced768-cbb8-4371-ad19-115563af9b01",
+  "merchant_period_name": "Iono",
+  "world_name": "Exquisite Warped Infernal Pants",
+  "world_template_id": "Exquisite_Warped_Infernal_Pants",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 4973,
+  "period_name": "Warped Infernal Vest",
+  "list_id": "baced768-cbb8-4371-ad19-115563af9b01",
+  "merchant_period_name": "Iono",
+  "world_name": "Exquisite Warped Infernal Vest",
+  "world_template_id": "Exquisite_Warped_Infernal_Vest",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 5635,
+  "period_name": "Silken Soultorn Pants (Alb)",
+  "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+  "merchant_period_name": "Kodo",
+  "world_name": "Exquisite Silken Soultorn Pants",
+  "world_template_id": "Exquisite_Silken_Soultorn_Pants",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 5743,
+  "period_name": "Silken Soultorn Gloves (Alb)",
+  "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+  "merchant_period_name": "Kodo",
+  "world_name": "Exquisite Silken Soultorn Gloves",
+  "world_template_id": "Exquisite_Silken_Soultorn_Gloves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 5744,
+  "period_name": "Silken Spirit-torn Cap",
+  "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+  "merchant_period_name": "Kodo",
+  "world_name": "Exquisite Silken Spirit-torn Cap",
+  "world_template_id": "exquisite_silken_spirittorn_cap",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 6927,
+  "period_name": "Daemon-forged Boots (Hib)",
+  "list_id": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+  "merchant_period_name": "Beelo",
+  "world_name": "Superior Daemon-forged Boots",
+  "world_template_id": "superior_daemonforged_boots3",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 6928,
+  "period_name": "Infernal Torment Jerkin (Hib)",
+  "list_id": "067eddfd-b27f-4560-b5d2-761420943c53",
+  "merchant_period_name": "Yojo",
+  "world_name": "Exquisite Infernal Torment Jerkin",
+  "world_template_id": "Exquisite_Infernal_Torment_Jerkin",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 6929,
+  "period_name": "Infernal Torment Leggings (Hib)",
+  "list_id": "067eddfd-b27f-4560-b5d2-761420943c53",
+  "merchant_period_name": "Yojo",
+  "world_name": "Exquisite Infernal Torment Leggings",
+  "world_template_id": "Exquisite_Infernal_Torment_Leggings3",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 6930,
+  "period_name": "Infernal Torment Sleeves (Hib)",
+  "list_id": "067eddfd-b27f-4560-b5d2-761420943c53",
+  "merchant_period_name": "Yojo",
+  "world_name": "Exquisite Infernal Torment Sleeves",
+  "world_template_id": "Exquisite_Infernal_Torment_Sleeves3",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 6931,
+  "period_name": "Intuitive Gossamer Cap (Hib)",
+  "list_id": "067eddfd-b27f-4560-b5d2-761420943c53",
+  "merchant_period_name": "Yojo",
+  "world_name": "Exquisite Intuitive Gossamer Cap",
+  "world_template_id": "Exquisite_Intuitive_Gossamer_Cap",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 6933,
+  "period_name": "Intuitive Shimmering Cap (Hib)",
+  "list_id": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+  "merchant_period_name": "Darbo",
+  "world_name": "Superior Intuitive Shimmering Cap",
+  "world_template_id": "Superior_Intuitive_Shimmering_Cap",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 6939,
+  "period_name": "Shimmering Soultorn Boots (Hib)",
+  "list_id": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+  "merchant_period_name": "Darbo",
+  "world_name": "Superior Shimmering Soultorn Boots",
+  "world_template_id": "Superior_Shimmering_Soultorn_Boots",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 6940,
+  "period_name": "Shimmering Soultorn Gloves (Hib)",
+  "list_id": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+  "merchant_period_name": "Darbo",
+  "world_name": "Superior Shimmering Soultorn Gloves",
+  "world_template_id": "Superior_Shimmering_Soultorn_Gloves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 6942,
+  "period_name": "Shimmering Soultorn Sleeves (Hib)",
+  "list_id": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+  "merchant_period_name": "Darbo",
+  "world_name": "Superior Shimmering Soultorn Sleeves",
+  "world_template_id": "Superior_Shimmering_Soultorn_Sleeves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 6948,
+  "period_name": "Tainted Abysmal Coif (Hib)",
+  "list_id": "cd800515-e685-49ac-a704-f4ff958018f7",
+  "merchant_period_name": "Ebo",
+  "world_name": "Exquisite Tainted Abysmal Coif",
+  "world_template_id": "Exquisite_Tainted_Abysmal_Coif",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 6949,
+  "period_name": "Tainted Abysmal Gloves (Hib)",
+  "list_id": "cd800515-e685-49ac-a704-f4ff958018f7",
+  "merchant_period_name": "Ebo",
+  "world_name": "Exquisite Tainted Abysmal Gloves",
+  "world_template_id": "Exquisite_Tainted_Abysmal_Gloves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 6950,
+  "period_name": "Tainted Avernal Coif (Hib)",
+  "list_id": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+  "merchant_period_name": "Wovo",
+  "world_name": "Exceptional Tainted Avernal Coif",
+  "world_template_id": "Exceptional_Tainted_Avernal_Coif",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 6951,
+  "period_name": "Tainted Avernal Gloves (Hib)",
+  "list_id": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+  "merchant_period_name": "Wovo",
+  "world_name": "Exceptional Tainted Avernal Gloves",
+  "world_template_id": "Exceptional_Tainted_Avernal_Gloves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 6952,
+  "period_name": "Tainted Daemon-forged Coif (Hib)",
+  "list_id": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+  "merchant_period_name": "Beelo",
+  "world_name": "Superior Daemon-forged Coif",
+  "world_template_id": "superior_daemonforged_coif3",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 6953,
+  "period_name": "Tainted Daemon-forged Gloves (Hib)",
+  "list_id": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+  "merchant_period_name": "Beelo",
+  "world_name": "Superior Tainted Daemon-forged Gloves",
+  "world_template_id": "superior_tainted_daemonforged_gloves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 6954,
+  "period_name": "Vacuous Gossamer Cap (Hib)",
+  "list_id": "067eddfd-b27f-4560-b5d2-761420943c53",
+  "merchant_period_name": "Yojo",
+  "world_name": "Exquisite Vacuous Gossamer Cap",
+  "world_template_id": "Exquisite_Vacuous_Gossamer_Cap",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 6955,
+  "period_name": "Vacuous Shimmering Cap (Hib)",
+  "list_id": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+  "merchant_period_name": "Darbo",
+  "world_name": "Superior Vacuous Shimmering Cap",
+  "world_template_id": "Superior_Vacuous_Shimmering_Cap",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7451,
+  "period_name": "Gossamer Soultorn Vest (Hib)",
+  "list_id": "067eddfd-b27f-4560-b5d2-761420943c53",
+  "merchant_period_name": "Yojo",
+  "world_name": "Exquisite Gossamer Soultorn Vest",
+  "world_template_id": "Exquisite_Gossamer_Soultorn_Vest",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7452,
+  "period_name": "Gossamer Soultorn Sleeves (Hib)",
+  "list_id": "067eddfd-b27f-4560-b5d2-761420943c53",
+  "merchant_period_name": "Yojo",
+  "world_name": "Exquisite Gossamer Soultorn Sleeves",
+  "world_template_id": "Exquisite_Gossamer_Soultorn_Sleeves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7459,
+  "period_name": "Infernal Malison Avenger (Hib)",
+  "list_id": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+  "merchant_period_name": "Horto",
+  "world_name": "Exquisite Infernal Malison Avenger",
+  "world_template_id": "Exquisite_Infernal_Malison_Avenger",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7460,
+  "period_name": "Infernal Malison Broadsword (Hib)",
+  "list_id": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+  "merchant_period_name": "Horto",
+  "world_name": "Exquisite Infernal Malison Broadsword",
+  "world_template_id": "Exquisite_Infernal_Malison_Broadsword",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7462,
+  "period_name": "Infernal Malison Crusher (Hib)",
+  "list_id": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+  "merchant_period_name": "Horto",
+  "world_name": "Exquisite Infernal Malison Crusher",
+  "world_template_id": "Exquisite_Infernal_Malison_Crusher",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7464,
+  "period_name": "Infernal Malison Dirk (Hib)",
+  "list_id": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+  "merchant_period_name": "Horto",
+  "world_name": "Exquisite Infernal Malison Dirk",
+  "world_template_id": "Exquisite_Infernal_Malison_Dirk",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7467,
+  "period_name": "Infernal Malison Hammer",
+  "list_id": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+  "merchant_period_name": "Horto",
+  "world_name": "Exquisite Infernal Malison Hammer",
+  "world_template_id": "Exquisite_Infernal_Malison_Hammer",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7468,
+  "period_name": "Brilliant Infernal Malison Long Sword (Hib)",
+  "list_id": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+  "merchant_period_name": "Horto",
+  "world_name": "Exquisite Infernal Malison Long Sword",
+  "world_template_id": "Exquisite_Infernal_Malison_Long_Sword",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7470,
+  "period_name": "Infernal Malison Mace (Hib)",
+  "list_id": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+  "merchant_period_name": "Horto",
+  "world_name": "Exquisite Infernal Malison Mace",
+  "world_template_id": "Exquisite_Infernal_Malison_Mace",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7472,
+  "period_name": "Infernal Malison Rapier (Hib)",
+  "list_id": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+  "merchant_period_name": "Horto",
+  "world_name": "Exquisite Infernal Malison Rapier",
+  "world_template_id": "Exquisite_Infernal_Malison_Rapier",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7473,
+  "period_name": "Infernal Malison Recurve Bow",
+  "list_id": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+  "merchant_period_name": "Horto",
+  "world_name": "Exquisite Infernal Malison Recurve Bow",
+  "world_template_id": "Exquisite_Infernal_Malison_Recurve_Bow",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7474,
+  "period_name": "Infernal Malison Short Bow",
+  "list_id": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+  "merchant_period_name": "Horto",
+  "world_name": "Exquisite Infernal Malison Short Bow",
+  "world_template_id": "Exquisite_Infernal_Malison_Short_Bow",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7475,
+  "period_name": "Infernal Malison Short Sword (Hib)",
+  "list_id": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+  "merchant_period_name": "Horto",
+  "world_name": "Exquisite Infernal Malison Short Sword",
+  "world_template_id": "Exquisite_Infernal_Malison_Short_Sword",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7476,
+  "period_name": "Infernal Malison Spiked Mace (Hib)",
+  "list_id": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+  "merchant_period_name": "Horto",
+  "world_name": "Exquisite Infernal Malison Spiked Mace",
+  "world_template_id": "Exquisite_Infernal_Malison_Spiked_Mace",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7477,
+  "period_name": "Infernal Malison Staff of Enchantment (Hib)",
+  "list_id": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+  "merchant_period_name": "Horto",
+  "world_name": "Exquisite Infernal Malison Staff of Enchantment",
+  "world_template_id": "Exquisite_Infernal_Malison_Staff_of_Enchantment",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7478,
+  "period_name": "Infernal Malison Staff of Light (Hib)",
+  "list_id": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+  "merchant_period_name": "Horto",
+  "world_name": "Exquisite Infernal Malison Staff of Light",
+  "world_template_id": "Exquisite_Infernal_Malison_Staff_of_Light",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7479,
+  "period_name": "Infernal Malison Staff of Mana (Hib)",
+  "list_id": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+  "merchant_period_name": "Horto",
+  "world_name": "Exquisite Infernal Malison Staff of Mana",
+  "world_template_id": "Exquisite_Infernal_Malison_Staff_of_Mana",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7480,
+  "period_name": "Infernal Malison Staff of Mind (Hib)",
+  "list_id": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+  "merchant_period_name": "Horto",
+  "world_name": "Exquisite Infernal Malison Staff of Mind",
+  "world_template_id": "Exquisite_Infernal_Malison_Staff_of_Mind",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7484,
+  "period_name": "Infernal Torment Boots (Hib)",
+  "list_id": "067eddfd-b27f-4560-b5d2-761420943c53",
+  "merchant_period_name": "Yojo",
+  "world_name": "Exquisite Infernal Torment Boots",
+  "world_template_id": "Exquisite_Infernal_Torment_Boots3",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7485,
+  "period_name": "Infernal Torment Gloves (Hib)",
+  "list_id": "067eddfd-b27f-4560-b5d2-761420943c53",
+  "merchant_period_name": "Yojo",
+  "world_name": "Exquisite Infernal Torment Gloves",
+  "world_template_id": "Exquisite_Infernal_Torment_Gloves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7486,
+  "period_name": "Infernal Torment Helm (Hib)",
+  "list_id": "067eddfd-b27f-4560-b5d2-761420943c53",
+  "merchant_period_name": "Yojo",
+  "world_name": "Exquisite Infernal Torment Helm",
+  "world_template_id": "Exquisite_Infernal_Torment_Helm3",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7950,
+  "period_name": "Fiendish-forged Sleeves",
+  "list_id": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+  "merchant_period_name": "Wovo",
+  "world_name": "Exceptional Fiendish-forged Sleeves",
+  "world_template_id": "exceptional_fiendishforged_sleeves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7951,
+  "period_name": "Fiendishly Forged Gloves",
+  "list_id": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+  "merchant_period_name": "Wovo",
+  "world_name": "Exceptional Fiendish-forged Gloves",
+  "world_template_id": "exceptional_fiendishforged_gloves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7952,
+  "period_name": "Fiendishly Forged Sleeves",
+  "list_id": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+  "merchant_period_name": "Wovo",
+  "world_name": "Exceptional Fiendish-forged Sleeves",
+  "world_template_id": "exceptional_fiendishforged_sleeves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7954,
+  "period_name": "Fuliginous Boned Boots",
+  "list_id": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+  "merchant_period_name": "Darbo",
+  "world_name": "Superior Fuliginous Boned Boots",
+  "world_template_id": "Superior_Fuliginous_Boned_Boots2",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7955,
+  "period_name": "Fuliginous Boned Helm",
+  "list_id": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+  "merchant_period_name": "Darbo",
+  "world_name": "Superior Fuliginous Boned Helm",
+  "world_template_id": "Superior_Fuliginous_Boned_Helm2",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7956,
+  "period_name": "Fuliginous Boned Jerkin",
+  "list_id": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+  "merchant_period_name": "Darbo",
+  "world_name": "Superior Fuliginous Boned Jerkin",
+  "world_template_id": "Superior_Fuliginous_Boned_Jerkin",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7957,
+  "period_name": "Fuliginous Boned Leggings",
+  "list_id": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+  "merchant_period_name": "Darbo",
+  "world_name": "Superior Fuliginous Boned Leggings",
+  "world_template_id": "Superior_Fuliginous_Boned_Leggings2",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7959,
+  "period_name": "Gossamer Soultorn Boots (Hib)",
+  "list_id": "067eddfd-b27f-4560-b5d2-761420943c53",
+  "merchant_period_name": "Yojo",
+  "world_name": "Exquisite Gossamer Soultorn Boots",
+  "world_template_id": "Exquisite_Gossamer_Soultorn_Boots",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7960,
+  "period_name": "Gossamer Soultorn Gloves (Hib)",
+  "list_id": "067eddfd-b27f-4560-b5d2-761420943c53",
+  "merchant_period_name": "Yojo",
+  "world_name": "Exquisite Gossamer Soultorn Gloves",
+  "world_template_id": "Exquisite_Gossamer_Soultorn_Gloves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7961,
+  "period_name": "Gossamer Soultorn Pants (Hib)",
+  "list_id": "067eddfd-b27f-4560-b5d2-761420943c53",
+  "merchant_period_name": "Yojo",
+  "world_name": "Exquisite Gossamer Soultorn Pants",
+  "world_template_id": "Exquisite_Gossamer_Soultorn_Pants",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 7962,
+  "period_name": "Gossamer Soultorn Robe (Hib)",
+  "list_id": "067eddfd-b27f-4560-b5d2-761420943c53",
+  "merchant_period_name": "Yojo",
+  "world_name": "Exquisite Gossamer Soultorn Robe",
+  "world_template_id": "Exquisite_Gossamer_Soultorn_Robe",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 8553,
+  "period_name": "BronzeTwo-Handed Sword",
+  "list_id": "7a411b91-e85e-42e7-be42-412fcfd272f5",
+  "merchant_period_name": "Bedamor Routh",
+  "world_name": "bronze two-handed sword",
+  "world_template_id": "bronze_two-handed_sword",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 9503,
+  "period_name": "Brilliant Avernal Malison Lochaber Axe",
+  "list_id": "f0e5327c-d39d-4ee2-b7a4-6ef318853e66",
+  "merchant_period_name": "Pico",
+  "world_name": "Exquisite Avernal Malison Lochaber Axe",
+  "world_template_id": "Exquisite_Avernal_Malison_Lochaber_Axe",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 9504,
+  "period_name": "Fiendishly Forged Chain Boots",
+  "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+  "merchant_period_name": "Debo",
+  "world_name": "Exceptional Fiendishly Forged Chain Boots",
+  "world_template_id": "Exceptional_Fiendishly_Forged_Chain_Boots",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 10165,
+  "period_name": "Avernal Malison Rapier",
+  "list_id": "f0e5327c-d39d-4ee2-b7a4-6ef318853e66",
+  "merchant_period_name": "Pico",
+  "world_name": "Exquisite Avernal Malison Rapier",
+  "world_template_id": "Exquisite_Avernal_Malison_Rapier",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 11639,
+  "period_name": "Corrupted Avernal Breastplate",
+  "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+  "merchant_period_name": "Debo",
+  "world_name": "Exceptional Corrupted Avernal Breastplate",
+  "world_template_id": "Exceptional_Corrupted_Avernal_Breastplate",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 11642,
+  "period_name": "Fiendish Gauntlets",
+  "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+  "merchant_period_name": "Debo",
+  "world_name": "Exceptional Fiendish Mercenary Gauntlets",
+  "world_template_id": "Exceptional_Fiendish_Mercenary_Gauntlets",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 11645,
+  "period_name": "Fiendishly Forged Chain Sleeves",
+  "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+  "merchant_period_name": "Debo",
+  "world_name": "Exceptional Fiendishly Forged Chain Sleeves",
+  "world_template_id": "Exceptional_Fiendishly_Forged_Chain_Sleeves",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 11647,
+  "period_name": "Fiendishly Melody Coif",
+  "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+  "merchant_period_name": "Debo",
+  "world_name": "Exceptional Fiendish Melody Coif",
+  "world_template_id": "Exceptional_Fiendish_Melody_Coif",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 11649,
+  "period_name": "Fiendish Mercenary Coif",
+  "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+  "merchant_period_name": "Debo",
+  "world_name": "Exceptional Fiendish Coif",
+  "world_template_id": "Exceptional_Fiendish_Coif",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 11650,
+  "period_name": "Fiendish Mercenary Gauntlets",
+  "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+  "merchant_period_name": "Debo",
+  "world_name": "Exceptional Fiendish Mercenary Gauntlets",
+  "world_template_id": "Exceptional_Fiendish_Mercenary_Gauntlets",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 11652,
+  "period_name": "Fiendish Soul Coif",
+  "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+  "merchant_period_name": "Debo",
+  "world_name": "Exceptional Fiendish Soul Coif",
+  "world_template_id": "Exceptional_Fiendish_Soul_Coif",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 11653,
+  "period_name": "Fiendish Soul Gauntlets",
+  "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+  "merchant_period_name": "Debo",
+  "world_name": "Exceptional Fiendish Soul Gauntlets",
+  "world_template_id": "Exceptional_Fiendish_Soul_Gauntlets",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 11654,
+  "period_name": "Fiendish Soul Hauberk",
+  "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+  "merchant_period_name": "Debo",
+  "world_name": "Exceptional Fiendish Hauberk",
+  "world_template_id": "Exceptional_Fiendish_Hauberk",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 11656,
+  "period_name": "Tainted Avernal Breastplate",
+  "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+  "merchant_period_name": "Debo",
+  "world_name": "Exceptional Tainted Avernal Breastplate",
+  "world_template_id": "Exceptional_Tainted_Avernal_Breastplate",
+  "evidence": "page stats/price equal the list item"
+ },
+ {
+  "page_key": 11657,
+  "period_name": "Tainted Avernal Gauntlets",
+  "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+  "merchant_period_name": "Debo",
+  "world_name": "Exceptional Tainted Avernal Gauntlets",
+  "world_template_id": "Exceptional_Tainted_Avernal_Gauntlets",
+  "evidence": "page stats/price equal the list item"
+ }
+]

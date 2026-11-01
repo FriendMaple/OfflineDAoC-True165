@@ -1,0 +1,634 @@
+[
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '7' WHERE NpcTemplate_ID = '7e4ed04d-dfa9-4174-ba26-a96e80db2f9f'",
+  "reason": "1.65 level: Agisthil, Black Mtns. South (NpcTemplate 12070 was '12;13' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '65-70' WHERE NpcTemplate_ID = '5352eb8f-1234-4c7d-840c-ff94d4066b17'",
+  "reason": "1.65 level: Aidon the Archwizard, Hall of the Corrupt (NpcTemplate 7721 was '75' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '36' WHERE NpcTemplate_ID = '463fc922-78b7-4fb3-bb18-aaa2afd83800'",
+  "reason": "1.65 level: Amminus pilus, Catacombs of Cardova (NpcTemplate 12888 was '38-42' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '11' WHERE NpcTemplate_ID = '95582d92-cfba-422d-b6a6-f33376b8f392'",
+  "reason": "1.65 level: Aonghas Prirerd, Campacorentin Forest (NpcTemplate 12444 was '20-22' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '48' WHERE NpcTemplate_ID = '98387966'",
+  "reason": "1.65 level: Atur, Coruscating Mine (NpcTemplate 60158136 was '52' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '55' WHERE NpcTemplate_ID = '98388433'",
+  "reason": "1.65 level: Boligar, Faraheim (NpcTemplate 60158603 was '64' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '10' WHERE NpcTemplate_ID = '98388480'",
+  "reason": "1.65 level: Boss, Silvermine Mts. (NpcTemplate 60158650 was '22' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '51' WHERE NpcTemplate_ID = 'b281bed4-0d6f-46b1-b76d-97bac9f27ce6'",
+  "reason": "1.65 level: Captain Atwell, Hall of the Corrupt (NpcTemplate 7718 was '62;63;64;65' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '49' WHERE NpcTemplate_ID = '9d4f9f87-66b6-4932-b2a9-ba34938b9b69'",
+  "reason": "1.65 level: Captain Heathyr, Hall of the Corrupt (NpcTemplate 7717 was '62;63;64;65' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '62' WHERE NpcTemplate_ID = '98389016'",
+  "reason": "1.65 level: Chthonic Knight Babyzu, Darkness Falls (NpcTemplate 60159186 was '65' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '72' WHERE NpcTemplate_ID = '98389024'",
+  "reason": "1.65 level: Chthonic Knight Haag, Darkness Falls (NpcTemplate 60159194 was '66-72' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '74' WHERE NpcTemplate_ID = '98389028'",
+  "reason": "1.65 level: Chthonic Knight Olov, Darkness Falls (NpcTemplate 60159198 was '64' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '74' WHERE NpcTemplate_ID = '98389031'",
+  "reason": "1.65 level: Chthonic Knight Tamuel, Darkness Falls (NpcTemplate 60159201 was '64' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '72' WHERE NpcTemplate_ID = '22dafbdb-9860-4163-bcf5-64ef31a490be'",
+  "reason": "1.65 level: Chthonic Knight Vosoes, Darkness Falls (NpcTemplate 60266087 was '66-72' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '64' WHERE NpcTemplate_ID = '98389034'",
+  "reason": "1.65 level: Chthonic Knight Zafan, Darkness Falls (NpcTemplate 60159204 was '67' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '12' WHERE NpcTemplate_ID = '2bbb7097-bc9b-4e82-aa54-c01c625ea76c'",
+  "reason": "1.65 level: Ciraron Webweaver, Campacorentin Forest (NpcTemplate 12454 was '22' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '28' WHERE NpcTemplate_ID = '98389478'",
+  "reason": "1.65 level: Danderpaw, Shannon Estuary (NpcTemplate 60159648 was '36' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '50' WHERE NpcTemplate_ID = '98389790'",
+  "reason": "1.65 level: Director Kobil, Darkness Falls (NpcTemplate 60159960 was '53' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '15' WHERE NpcTemplate_ID = '804dd277-ed5e-41d4-abee-2736dcafbd36'",
+  "reason": "1.65 level: Dread Lord Aryon, Avalon Marsh (NpcTemplate 12014 was '28' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '46' WHERE NpcTemplate_ID = '98389970'",
+  "reason": "1.65 level: Dreaded Ursine, Treibh Caillte (NpcTemplate 60160140 was '51' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '75' WHERE NpcTemplate_ID = '98390048'",
+  "reason": "1.65 level: Duke Harboris, Darkness Falls (NpcTemplate 60160218 was '67-75' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '75' WHERE NpcTemplate_ID = '98390049'",
+  "reason": "1.65 level: Duke Sallis, Darkness Falls (NpcTemplate 60160219 was '67-75' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '75' WHERE NpcTemplate_ID = '9c6190c7-7db5-4c77-a13b-d45a2aecb25e'",
+  "reason": "1.65 level: Duke Satori, Darkness Falls (NpcTemplate 60266077 was '67-75' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '75' WHERE NpcTemplate_ID = '98390050'",
+  "reason": "1.65 level: Duke Zepor, Darkness Falls (NpcTemplate 60160220 was '64' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '68' WHERE NpcTemplate_ID = '98390060'",
+  "reason": "1.65 level: Dura'ek the Empowered, Avalon City (NpcTemplate 60160230 was '71' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '60' WHERE NpcTemplate_ID = '98390507'",
+  "reason": "1.65 level: Faerie Queen, Cursed Forest (NpcTemplate 60160677 was '57' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '7' WHERE NpcTemplate_ID = 'e81f5a8e-0f70-417b-b587-9bdfef71bf25'",
+  "reason": "1.65 level: Frund, Black Mtns. South (NpcTemplate 12165 was '12-13' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '73' WHERE NpcTemplate_ID = '98391190'",
+  "reason": "1.65 level: Glacier Giant, Odin's Gate (NpcTemplate 60161360 was '86' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '15' WHERE NpcTemplate_ID = '8e0df1f1-6834-4302-97ec-3f496ad487bd'",
+  "reason": "1.65 level: Granddaddy Longlegs, Campacorentin Forest (NpcTemplate 12487 was '23-25' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '60' WHERE NpcTemplate_ID = '98391451'",
+  "reason": "1.65 level: Green Knight, Forest Sauvage (NpcTemplate 60161621 was '79' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '50' WHERE NpcTemplate_ID = '98391658'",
+  "reason": "1.65 level: Guardian of the Silver Hand, Coruscating Mine (NpcTemplate 60161828 was '52;50;55' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '15-18' WHERE NpcTemplate_ID = '98391754'",
+  "reason": "1.65 level: Haglion's minion, Myrkwood Forest (NpcTemplate 60161924 was '26' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '71' WHERE NpcTemplate_ID = '98392082'",
+  "reason": "1.65 level: Hugi, Raumarik (NpcTemplate 60162252 was '74' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '45-50' WHERE NpcTemplate_ID = '98392256'",
+  "reason": "1.65 level: Ingardild, Malmohus (NpcTemplate 60162426 was '55;52' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '64' WHERE NpcTemplate_ID = '98392277'",
+  "reason": "1.65 level: Inquisitor Hellos, Darkness Falls (NpcTemplate 60162447 was '59-68' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '62' WHERE NpcTemplate_ID = '98392282'",
+  "reason": "1.65 level: Inquisitor Morrian, Darkness Falls (NpcTemplate 60162452 was '65' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '8-10' WHERE NpcTemplate_ID = '98392502'",
+  "reason": "1.65 level: Jordande, Gotar (NpcTemplate 60162672 was '20' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '19' WHERE NpcTemplate_ID = '98392547'",
+  "reason": "1.65 level: Kaen Kedger, Shannon Estuary (NpcTemplate 60162717 was '34' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '40' WHERE NpcTemplate_ID = '98392740'",
+  "reason": "1.65 level: King Vian, Treibh Caillte (NpcTemplate 60162910 was '43' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '22' WHERE NpcTemplate_ID = '98392801'",
+  "reason": "1.65 level: Konung Botolf Redhands, Muspelheim (NpcTemplate 60162971 was '28' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '19' WHERE NpcTemplate_ID = '98393127'",
+  "reason": "1.65 level: Lieutenant Salurn, Myrkwood Forest (NpcTemplate 60163297 was '16' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '48' WHERE NpcTemplate_ID = '98393189'",
+  "reason": "1.65 level: Lobigan, Coruscating Mine (NpcTemplate 60163359 was '51' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '63' WHERE NpcTemplate_ID = '98394135'",
+  "reason": "1.65 level: Mutilator Laicanroth, Darkness Falls (NpcTemplate 60164305 was '67' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '62' WHERE NpcTemplate_ID = '98394138'",
+  "reason": "1.65 level: Mutilator Nianax, Darkness Falls (NpcTemplate 60164308 was '65' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '60' WHERE NpcTemplate_ID = '98394140'",
+  "reason": "1.65 level: Mutilator Okabi, Darkness Falls (NpcTemplate 60164310 was '62-65' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '68' WHERE NpcTemplate_ID = '98394146'",
+  "reason": "1.65 level: Mutilator Uxybab, Darkness Falls (NpcTemplate 60164316 was '62' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '12' WHERE NpcTemplate_ID = 'add67791-606f-41c4-8380-c31f9271629c'",
+  "reason": "1.65 level: Oaken Knight, Campacorentin Forest (NpcTemplate 12497 was '22' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '62' WHERE NpcTemplate_ID = '98394466'",
+  "reason": "1.65 level: Olen den Bartender, Trollheim (NpcTemplate 60164636 was '67' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '14' WHERE NpcTemplate_ID = 'b898d9fc-647e-466b-adc9-ff2aba8fb089'",
+  "reason": "1.65 level: Pixie Queen, Campacorentin Forest (NpcTemplate 12573 was '27' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '18' WHERE NpcTemplate_ID = '98394849'",
+  "reason": "1.65 level: Priest Thaxtix, Myrkwood Forest (NpcTemplate 60165019 was '28' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '10-11' WHERE NpcTemplate_ID = '5afeca3c-d805-4fb7-a958-822cbb935b9a'",
+  "reason": "1.65 level: Queen Major, East Svealand (NpcTemplate 60157467 was '15' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '70' WHERE NpcTemplate_ID = '98395003'",
+  "reason": "1.65 level: Raumarik Revenant, Raumarik (NpcTemplate 60165173 was '77' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '52' WHERE NpcTemplate_ID = '98395315'",
+  "reason": "1.65 level: Runil, Raumarik (NpcTemplate 60165485 was '58-60' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '9' WHERE NpcTemplate_ID = '444904cd-a6b5-4e6a-8bd6-d894113fca32'",
+  "reason": "1.65 level: Sacrificer Harish, Black Mtns. South (NpcTemplate 12213 was '15' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '3' WHERE NpcTemplate_ID = '9da04f08-388a-4a71-b237-a57072a586c7'",
+  "reason": "1.65 level: Slith, Black Mtns. South (NpcTemplate 12423532 was '7' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '24' WHERE NpcTemplate_ID = '98396087'",
+  "reason": "1.65 level: Smidget, Lough Gur (NpcTemplate 60166257 was '42;39' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '49' WHERE NpcTemplate_ID = '98396369'",
+  "reason": "1.65 level: Steinolf, Malmohus (NpcTemplate 60166539 was '55' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '61' WHERE NpcTemplate_ID = 'e4ee4df3-7120-4102-872f-46de9280bcc3'",
+  "reason": "1.65 level: Thane Dyggve, Dodens Gruva (NpcTemplate 9913 was '66' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '38' WHERE NpcTemplate_ID = '98396852'",
+  "reason": "1.65 level: Thorg, Treibh Caillte (NpcTemplate 60167022 was '42' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '14' WHERE NpcTemplate_ID = '199e8aa0-e374-4ece-b463-8763cdfc506c'",
+  "reason": "1.65 level: Thornpaw, Campacorentin Forest (NpcTemplate 12615 was '24-25' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '5' WHERE NpcTemplate_ID = '943dfa3a-5b40-41a4-9195-a2d7def3c0af'",
+  "reason": "1.65 level: Throatripper, Black Mtns. South (NpcTemplate 12233 was '11' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '38' WHERE NpcTemplate_ID = '46021eae-5443-4abf-a617-1a514a4d4758'",
+  "reason": "1.65 level: Tusker, Cornwall (NpcTemplate 12819 was '45' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '62' WHERE NpcTemplate_ID = '98397213'",
+  "reason": "1.65 level: Ulfketill, Vanern Swamp (NpcTemplate 60167383 was '65' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '18' WHERE NpcTemplate_ID = '698543d1-5b09-4d7e-b6d0-7710e9ed2de8'",
+  "reason": "1.65 level: Urfgrat the Green, Campacorentin Forest (NpcTemplate 12621 was '23-24' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '39' WHERE NpcTemplate_ID = '98397320'",
+  "reason": "1.65 level: Urtzi, Munin Sound (NpcTemplate 60167490 was '42' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '59' WHERE NpcTemplate_ID = '98397351'",
+  "reason": "1.65 level: Valmak, Faraheim (NpcTemplate 60167521 was '64' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '40' WHERE NpcTemplate_ID = '98397669'",
+  "reason": "1.65 level: Webweaver, Treibh Caillte (NpcTemplate 60167839 was '43' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '63' WHERE NpcTemplate_ID = '84bcc3a7-5816-4be2-bca6-b118de46a5d9'",
+  "reason": "1.65 level: Wrath of Mordred, Llyn Barfog (NpcTemplate 13039 was '70-74' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '30-32' WHERE NpcTemplate_ID = '38305feb-95f4-4479-9f82-c007d10d39b9'",
+  "reason": "1.65 level: aged beech, Cornwall (NpcTemplate 12877 was '38' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '40-42' WHERE NpcTemplate_ID = '98388672'",
+  "reason": "1.65 level: caer caddug knight, Avalon Isle (NpcTemplate 60158842 was '43;41;40;45;42;46;44' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '45' WHERE NpcTemplate_ID = '98388793'",
+  "reason": "1.65 level: casolith, Coruscating Mine (NpcTemplate 60158963 was '49' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '55' WHERE NpcTemplate_ID = 'chaosian'",
+  "reason": "1.65 level: chaosian, Darkness Falls (NpcTemplate 10003 was '55-60' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '40-43' WHERE NpcTemplate_ID = '98389390'",
+  "reason": "1.65 level: cursed necyomancer, Darkness Falls (NpcTemplate 60159560 was '40-58' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '9-10' WHERE NpcTemplate_ID = '2d953cbb-8957-4eba-bc2d-05659bc87003'",
+  "reason": "1.65 level: druid sacrificer, Campacorentin Forest (NpcTemplate 12468 was '20-24' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '8' WHERE NpcTemplate_ID = '8fa04b09-cc02-41fd-b104-dfb52fe404c2'",
+  "reason": "1.65 level: druid, Campacorentin Forest (NpcTemplate 12467 was '22-25' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '32' WHERE NpcTemplate_ID = 'bcb1e1c6-a8ff-44c0-af8a-cb8b692251f6'",
+  "reason": "1.65 level: dux, Catacombs of Cardova (NpcTemplate 12905 was '21' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '8' WHERE NpcTemplate_ID = '98390313'",
+  "reason": "1.65 level: enchanted luricaduane, Silvermine Mts. (NpcTemplate 60160483 was '23' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '39' WHERE NpcTemplate_ID = '98390470'",
+  "reason": "1.65 level: exiled commander, Hadrian's Wall (NpcTemplate 60160640 was '35' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '35-37' WHERE NpcTemplate_ID = '98390476'",
+  "reason": "1.65 level: experienced necyomancer, Darkness Falls (NpcTemplate 60160646 was '36-49' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '32-33' WHERE NpcTemplate_ID = '641e753f-e10a-4cbb-a590-7542ef3bbc70'",
+  "reason": "1.65 level: farmer, Lyonesse (NpcTemplate 12956 was '29-40' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '60-63' WHERE NpcTemplate_ID = '98391046'",
+  "reason": "1.65 level: gastornis, Faraheim (NpcTemplate 60161216 was '62;63;60;65;61;68;64' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '8-10' WHERE NpcTemplate_ID = 'd43fcbf6-21fd-429d-bddf-c913496a3708'",
+  "reason": "1.65 level: goblin, Black Mtns. South (NpcTemplate 12098 was '8-32' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '50-53' WHERE NpcTemplate_ID = '98391484'",
+  "reason": "1.65 level: griffman second, Delling Crater (NpcTemplate 60161654 was '52;57;50' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '17-19' WHERE NpcTemplate_ID = '98391838'",
+  "reason": "1.65 level: haunt, Nisse's Lair (NpcTemplate 60162008 was '7' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '68-70' WHERE NpcTemplate_ID = '98392052'",
+  "reason": "1.65 level: hrimthursa berg, Tuscaran Glacier (NpcTemplate 60162222 was '64-66' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '54-56' WHERE NpcTemplate_ID = '98392148'",
+  "reason": "1.65 level: iarn dwarf council, Iarnwood (NpcTemplate 60162318 was '62;54' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '73-75' WHERE NpcTemplate_ID = '98392173'",
+  "reason": "1.65 level: icebound skeleton, Tuscaran Glacier (NpcTemplate 60162343 was '63-66' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '56-58' WHERE NpcTemplate_ID = '98392580'",
+  "reason": "1.65 level: kaos krigsman, Trollheim (NpcTemplate 60162750 was '56;58;62;61;57' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '23-25' WHERE NpcTemplate_ID = '98393801'",
+  "reason": "1.65 level: merman, Shannon Estuary (NpcTemplate 60163971 was '32;30;25;35;33;34;28' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '30-31' WHERE NpcTemplate_ID = '98393808'",
+  "reason": "1.65 level: merucha, Treibh Caillte (NpcTemplate 60163978 was '41;43;40;45' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '72' WHERE NpcTemplate_ID = '4f826f4a-ef95-4ae4-86b5-2648f063c33c'",
+  "reason": "1.65 level: pale guardian, Darkness Falls (NpcTemplate 13377 was '67-72' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '47-51' WHERE NpcTemplate_ID = 'de2ba1c2-facc-4408-a5bf-a9317b5396db'",
+  "reason": "1.65 level: phantom, Stonehenge Barrows (NpcTemplate 12791 was '2' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '36-38' WHERE NpcTemplate_ID = '98395069'",
+  "reason": "1.65 level: redcap skulker, Gripklosa Mountains (NpcTemplate 60165239 was '42;39' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '50-55' WHERE NpcTemplate_ID = '98396229'",
+  "reason": "1.65 level: soultorn norse einherjar, Darkness Falls (NpcTemplate 60166399 was '45-54' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '57-61' WHERE NpcTemplate_ID = '43e078c0-4b1a-43f9-a539-6f5945e4f4f1'",
+  "reason": "1.65 level: succubus, Darkness Falls (NpcTemplate 13373 was '57-67' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '5-6' WHERE NpcTemplate_ID = '98396969'",
+  "reason": "1.65 level: tomte scavenger, East Svealand (NpcTemplate 60167139 was '10' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '48-51' WHERE NpcTemplate_ID = '98397003'",
+  "reason": "1.65 level: tormented necyomancer, Darkness Falls (NpcTemplate 60167173 was '50-55' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '59-65' WHERE NpcTemplate_ID = '30d7b30b-680d-4283-9207-020f2d048eb4'",
+  "reason": "1.65 level: umbrood warrior, Darkness Falls (NpcTemplate 13380 was '52-59' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '12-14' WHERE NpcTemplate_ID = '14faffcb-af89-4c30-98de-eea1d4899351'",
+  "reason": "1.65 level: waterlogged corpse, Isle of Glass (NpcTemplate 12239 was '6-14' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '10-11' WHERE NpcTemplate_ID = '98397695'",
+  "reason": "1.65 level: werewolf pup, Myrkwood Forest (NpcTemplate 60167865 was '20;21' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '45-47' WHERE NpcTemplate_ID = 'e8bdb2bf7532433190789aec3320040e'",
+  "reason": "1.65 level: widow claw, Hall of the Corrupt (NpcTemplate 999666155 was '40' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '45-47' WHERE NpcTemplate_ID = '43046651-4cc3-4d4a-930a-1329620d20aa'",
+  "reason": "1.65 level: widow claw, Hall of the Corrupt (NpcTemplate 7702 was '41;42;43' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET Level = '65' WHERE NpcTemplate_ID = '98397875'",
+  "reason": "1.65 level: wraith drake, Breifine (NpcTemplate 60168045 was '71;65' and replaces the Mob level); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET Level = 20 WHERE Mob_ID IN ('66773c3c-0303-5014-833a-a0e16572458f')",
+  "reason": "1.65 level: Aricoer, Cornwall; fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET Level = 45 WHERE Mob_ID IN ('b40fb462-b9f7-503c-9962-77d8723b5b03')",
+  "reason": "1.65 level: Ash, Pennine Mountains; fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET Level = 54 WHERE Mob_ID IN ('cc6816e0-e5f1-415d-aa58-f2e7a55725dc')",
+  "reason": "1.65 level: Captain Bardalph, Hall of the Corrupt; fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET Level = 58 WHERE Mob_ID IN ('a5285f25-164f-4682-a551-96c6446e4cbe')",
+  "reason": "1.65 level: Gatekeeper Dommel, Darkness Falls; fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET Level = 35 WHERE Mob_ID IN ('e898b0e9-46eb-5ad5-94b4-51b26e657a2e')",
+  "reason": "1.65 level: Little Star, Cruachan Gorge; fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET Level = 5 WHERE Mob_ID IN ('4db87d31-38fe-5279-ac5e-61668326de1e')",
+  "reason": "1.65 level: Ormgarth, Campacorentin Forest; fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET Level = 48 WHERE Mob_ID IN ('3065c8d3-51c0-410f-9443-29e1dae7880e')",
+  "reason": "1.65 level: knight, Lyonesse; fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET Level = 49 WHERE Mob_ID IN ('70c2f663-bf28-4bcd-8b4d-ab143a53d494')",
+  "reason": "1.65 level: knight, Lyonesse; fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET Level = 23 WHERE Mob_ID IN ('26dc468a-ae3c-47bb-a091-aa57b3d018e1','3b2dcdd7-2658-4813-8827-89da60732242','9acc5827-bad2-4b80-b53e-5d802eab36d2','b96f57c9-e62c-407a-9577-5686438b3b01')",
+  "reason": "1.65 level: spraggon cutter, Spraggon Den; fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET Level = 24 WHERE Mob_ID IN ('3398d81a-777f-4236-b732-6d68a0e6fe88','40dc5318-9ff2-4c65-8b64-7351526956c1','9dd5759a-2803-4a35-8716-04ea2217bd63','ccb29fca-8b30-4ea5-928b-0566386fc7ed')",
+  "reason": "1.65 level: spraggon cutter, Spraggon Den; fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET Level = 25 WHERE Mob_ID IN ('3ac56cdb-f8b7-4342-a976-0cc418c653c4','84d4569d-9575-419b-9bba-da2c4fc5d9da','a0daaa07-d365-49c5-a92a-095c402d9157','dffd56ee-7c5a-4eca-8cc4-31eff63f9716')",
+  "reason": "1.65 level: spraggon cutter, Spraggon Den; fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET Level = 57 WHERE Mob_ID IN ('897e702c-9fa1-46f0-bf02-6e6a0e620f51','c3f9de01-aa2d-4872-97a1-3e79a0aa0de5')",
+  "reason": "1.65 level: succubus, Darkness Falls; fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET Level = 58 WHERE Mob_ID IN ('8c83ca03-e0a7-420e-9a45-cb5f94d390b2')",
+  "reason": "1.65 level: succubus, Darkness Falls; fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET Level = 59 WHERE Mob_ID IN ('8cc8ec09-0f55-44d9-9192-2d9cfd2bf682')",
+  "reason": "1.65 level: succubus, Darkness Falls; fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET Level = 60 WHERE Mob_ID IN ('91acc386-4f86-4def-8a64-93836e2fe502')",
+  "reason": "1.65 level: succubus, Darkness Falls; fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET Level = 61 WHERE Mob_ID IN ('c0440c83-6eb6-4c0e-8b34-1ad732c8483d')",
+  "reason": "1.65 level: succubus, Darkness Falls; fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET Level = 49 WHERE Mob_ID IN ('d71baad8-ecb3-48ed-bbfd-d80d4e792653')",
+  "reason": "1.65 level: unseelie overman, Coruscating Mine; fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET Level = 4 WHERE Mob_ID IN ('c217f8ee-154c-401e-8bec-17f7097685f5')",
+  "reason": "1.65 level: water beetle collector, Lough Derg; fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET NPCTemplateID = 916500005 WHERE Mob_ID IN ('b1bd7b1f-9cfb-49c2-a07a-a33f54d53128')",
+  "reason": "1.65 level: Brannoc, Dartmoor gets its own NpcTemplate 916500005 (add-npctemplates165.json; the old one is shared); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET NPCTemplateID = 916500001 WHERE Mob_ID IN ('100019841','100021783','19e52ce5-7bc7-418e-9a81-726afaf7304d','28922e7a-af5b-4e7d-9386-eb25fd0c2d62','30f05e08-7887-4cfe-afa4-8056f2865970','3404738a-e440-467b-9506-513c9cd720d2','3482cde0-64b2-4593-878b-dee407751f2b','393fbf96-6583-48a9-9840-2d7a6b8e96d7','531e9f73-1e6f-43e5-98a8-da18376e693a','723de6e9-701e-4bc7-9925-1ddd64d6ba65','7cda50d9-6f3b-4f20-99dc-82c424ea399a','b1ccc9fa-fed3-4a7c-98e5-511825f58097','b4428c7e-23ef-4c32-892f-d5bd2ab09981','c1477d84-1a7e-4e41-88b5-eb9c8ea78644','cd6d7d62-a27f-441a-8adf-0e0c1d82b032','e9fb1662-2d26-4121-8ac4-cadeb9b9b42a','f2c5e650-39e4-4d48-8eaa-a9a066b41f00','f7ddc0e8-a4f8-4067-9b65-3b2115c2d189')",
+  "reason": "1.65 level: cave lion, Delling Crater gets its own NpcTemplate 916500001 (add-npctemplates165.json; the old one is shared); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET NPCTemplateID = 916500002 WHERE Mob_ID IN ('0186b13f-2925-41a7-99a5-811fe5c6a72e','08dc4e2e-8769-4b9a-944b-11905f589de7','100018496','100018895','100019610','100019803','100020303','100020340','100020395','23b212ac-7b2f-4d40-8313-11d9f0196618','288acb9c-6631-461c-833e-0bfc438aa72b','3647de50-8690-4e8a-b047-d6f5ce47d269','3b13c563-8883-4f07-b074-07bf0a06f02d','450286ae-8f24-4ce0-b271-40cd5da09fd5','585856a7-d118-4053-b529-0bb7051f3d64','621b7d37-01bf-4108-9b4c-73ee756b96ef','6a65ba45-6864-418a-a0cc-efbc15874116','6d78ee99-a6af-4cd5-99de-5eb6b042726a','7202e0b6-847d-4019-ac3b-a823675fed23','751b11ba-f93d-4062-9dfb-9e0c0ea26501','99737fdb-d279-49ae-9f51-cbf04e0b6f9d','bfc8efbe-c1e2-4096-8fd1-4cc420967fb7','cb38c789-24d2-4e8a-9795-6ddacdf4d4e4','e1ba01ab-acc9-4000-b78e-f89057727525','e3c81e30-87b3-4988-8e9b-38bf957b6751','f297c146-d5c4-46a4-b838-50016339817a','f756e64e-4d78-417a-bedf-69892ad83672')",
+  "reason": "1.65 level: cave lion, Gripklosa Mountains gets its own NpcTemplate 916500002 (add-npctemplates165.json; the old one is shared); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET NPCTemplateID = 916500006 WHERE Mob_ID IN ('62218ee8-bbfb-43f4-9666-ca5e7a99fe38')",
+  "reason": "1.65 level: goblin beastmaster, Tepok's Mine gets its own NpcTemplate 916500006 (add-npctemplates165.json; the old one is shared); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET NPCTemplateID = 916500003 WHERE Mob_ID IN ('5a073a1e-b8d5-4160-9a3c-7ef1cfccc4ad','6beeed78-e9b6-41e3-b53f-d07bdcace8a5','7f8aa271-36f5-431e-ab5f-44cc56170332','88e1ccb0-67e7-4874-a1ec-a9b0484d357d','d14d9562-d436-4dce-844e-00206dd0aff2','e589aeaf-4f61-44de-b10f-8daa8dcd2237')",
+  "reason": "1.65 level: mammoth matriarch, Gripklosa Mountains gets its own NpcTemplate 916500003 (add-npctemplates165.json; the old one is shared); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET NPCTemplateID = 916500004 WHERE Mob_ID IN ('07d5ae7b-3462-53fd-bc8f-00ba18ca530a','49b423f6-2ad1-5616-8b9f-7b8c097c6fb8','8e45683d-8693-5108-a3d9-83726c4054aa','95fbd272-1919-5355-bb5e-ef5e730ca25e','ced88bc0-04fc-5c14-bd77-0cf8edfce7de','f96801de-0c79-58c2-adb0-e0bdd126094d')",
+  "reason": "1.65 level: seithkona, Skona Ravine gets its own NpcTemplate 916500004 (add-npctemplates165.json; the old one is shared); fix\\spawns\\REPORT.md"
+ },
+ {
+  "sql": "UPDATE Mob SET RespawnInterval = 450 WHERE Mob_ID = 'c8bc4a4a-ac59-46c7-9c10-4858d071fa84'",
+  "reason": "1.65: the one Nisse's Lair haunt respawns in 5-10 minutes (period-zam key 1255 comment, Jul 2002), not 3 minutes"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = 'derganenchanter'",
+  "reason": "1.65: dergan enchanter template 30000 (replaces the Mob faction) lowers Siabra faction (period-zam key 4123)"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = '98389743'",
+  "reason": "1.65: dergan fury template 60159913 (replaces the Mob faction) lowers Siabra faction (period-zam key 603)"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = '98389747'",
+  "reason": "1.65: dergan tussler template 60159917 (replaces the Mob faction) lowers Siabra faction (period-zam key 2676)"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = '98390394'",
+  "reason": "1.65: eriu fiscere template 60160564 (replaces the Mob faction) lowers Siabra faction (period-zam key 601)"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = '98390395'",
+  "reason": "1.65: eriu henter template 60160565 (replaces the Mob faction) lowers Siabra faction (period-zam key 605)"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = '98390396'",
+  "reason": "1.65: eriu kedger template 60160566 (replaces the Mob faction) lowers Siabra faction (period-zam key 3503)"
+ },
+ {
+  "sql": "UPDATE Mob SET FactionID = 107 WHERE lower(Name) = 'far dorocha' AND Realm = 0 AND FactionID = 0 AND COALESCE(PackageID,'') <> 'true165-restored'",
+  "reason": "1.65: killing far dorocha lowers Siabra faction (period-zam key 663, capture 20030826: 'Lowers Faction with: Siabras'); Faction 107 Siabras"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = '98390548'",
+  "reason": "1.65: far dorocha template 60160718 (replaces the Mob faction) lowers Siabra faction (period-zam key 663)"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = '98390547'",
+  "reason": "1.65: far dorocha template 60160717 (replaces the Mob faction) lowers Siabra faction (period-zam key 663)"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = '98391696'",
+  "reason": "1.65: gurite assailer template 60161866 (replaces the Mob faction) lowers Siabra faction (period-zam key 597)"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = '98391695'",
+  "reason": "1.65: gurite assailer template 60161865 (replaces the Mob faction) lowers Siabra faction (period-zam key 597)"
+ },
+ {
+  "sql": "UPDATE Mob SET FactionID = 107 WHERE lower(Name) = 'gurite footpad' AND Realm = 0 AND FactionID = 0 AND COALESCE(PackageID,'') <> 'true165-restored'",
+  "reason": "1.65: killing gurite footpad lowers Siabra faction (period-zam key 602, capture 20030904: 'Lowers Faction with: Siabras'); Faction 107 Siabras"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = '98391697'",
+  "reason": "1.65: gurite footpad template 60161867 (replaces the Mob faction) lowers Siabra faction (period-zam key 602)"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = '98391698'",
+  "reason": "1.65: gurite footpad template 60161868 (replaces the Mob faction) lowers Siabra faction (period-zam key 602)"
+ },
+ {
+  "sql": "UPDATE Mob SET FactionID = 107 WHERE lower(Name) = 'gurite tempriar' AND Realm = 0 AND FactionID = 0 AND COALESCE(PackageID,'') <> 'true165-restored'",
+  "reason": "1.65: killing gurite tempriar lowers Siabra faction (period-zam key 3330, capture 20030914: 'Lowers Faction with: Siabras'); Faction 107 Siabras"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = '98391703'",
+  "reason": "1.65: gurite tempriar template 60161873 (replaces the Mob faction) lowers Siabra faction (period-zam key 3330)"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = '98391704'",
+  "reason": "1.65: gurite waylayer template 60161874 (replaces the Mob faction) lowers Siabra faction (period-zam key 3794)"
+ },
+ {
+  "sql": "UPDATE Mob SET FactionID = 107 WHERE lower(Name) = 'moheran beast' AND Realm = 0 AND FactionID = 0 AND COALESCE(PackageID,'') <> 'true165-restored'",
+  "reason": "1.65: killing moheran beast lowers Siabra faction (period-zam key 3813, capture 20031027: 'Lowers Faction with: Siabras'); Faction 107 Siabras"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = '98393964'",
+  "reason": "1.65: moheran beast template 60164134 (replaces the Mob faction) lowers Siabra faction (period-zam key 3813)"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = '98393965'",
+  "reason": "1.65: moheran distorter template 60164135 (replaces the Mob faction) lowers Siabra faction (period-zam key 599)"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = '98395775'",
+  "reason": "1.65: sheevra archer template 60165945 (replaces the Mob faction) lowers Siabra faction (period-zam key 595)"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = '98395776'",
+  "reason": "1.65: sheevra chieftain template 60165946 (replaces the Mob faction) lowers Siabra faction (period-zam key 598)"
+ },
+ {
+  "sql": "UPDATE Mob SET FactionID = 107 WHERE lower(Name) = 'sheevra miner' AND Realm = 0 AND FactionID = 0 AND COALESCE(PackageID,'') <> 'true165-restored'",
+  "reason": "1.65: killing sheevra miner lowers Siabra faction (period-zam key 608, capture 20031027: 'Lowers Faction with: Siabras'); Faction 107 Siabras"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = '98395777'",
+  "reason": "1.65: sheevra miner template 60165947 (replaces the Mob faction) lowers Siabra faction (period-zam key 608)"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = '98395778'",
+  "reason": "1.65: sheevra skirmisher template 60165948 (replaces the Mob faction) lowers Siabra faction (period-zam key 613)"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = '98395779'",
+  "reason": "1.65: sheevra swordsman template 60165949 (replaces the Mob faction) lowers Siabra faction (period-zam key 2589)"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = '98395900'",
+  "reason": "1.65: siog footpad template 60166070 (replaces the Mob faction) lowers Siabra faction (period-zam key 3517)"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = '98395901'",
+  "reason": "1.65: siog piller template 60166071 (replaces the Mob faction) lowers Siabra faction (period-zam key 610)"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = '98395906'",
+  "reason": "1.65: siog seeker template 60166076 (replaces the Mob faction) lowers Siabra faction (period-zam key 3206)"
+ },
+ {
+  "sql": "UPDATE NpcTemplate SET FactionID = 107 WHERE NpcTemplate_ID = '98397713'",
+  "reason": "1.65: whistler template 60167883 (replaces the Mob faction) lowers Siabra faction (period-zam key 2683)"
+ }
+]

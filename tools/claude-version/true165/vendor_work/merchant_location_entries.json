@@ -1,0 +1,3524 @@
+[
+ {
+  "found_in": [],
+  "pages": 198,
+  "items": [
+   {
+    "key": 6,
+    "name": "Rawhide Cruaigh Leggings",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 7,
+    "name": "Rawhide Cruaigh Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 8,
+    "name": "Rawhide Cruaigh Gloves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 9,
+    "name": "Rawhide Cruaigh Boots",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 10,
+    "name": "Rawhide Cruaigh Helm",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 12,
+    "name": "Tanned Cruaigh Leggings",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 13,
+    "name": "Tanned Cruaigh Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 14,
+    "name": "Tanned Cruaigh Gloves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 15,
+    "name": "Tanned Cruaigh Boots",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 16,
+    "name": "Tanned Cruaigh Helm",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 18,
+    "name": "Cured Cruaigh Leggings",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 19,
+    "name": "Cured Cruaigh Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 20,
+    "name": "Cured Cruaigh Gloves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 21,
+    "name": "Cured Cruaigh Boots",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 22,
+    "name": "Cured Cruaigh Helm",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 23,
+    "name": "Hard Cruaigh Jerkin",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 24,
+    "name": "Hard Cruaigh Leggings",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 25,
+    "name": "Hard Cruaigh Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 26,
+    "name": "Hard Cruaigh Gloves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 27,
+    "name": "Hard Cruaigh Boots",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 28,
+    "name": "Hard Cruaigh Helm",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 29,
+    "name": "Rigid Cruaigh Jerkin",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 30,
+    "name": "Rigid Cruaigh Leggings",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 31,
+    "name": "Rigid Cruaigh Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 32,
+    "name": "Rigid Cruaigh Gloves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 33,
+    "name": "Rigid Cruaigh Boots",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 34,
+    "name": "Rigid Cruaigh Helm",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 59,
+    "name": "Cobalt Cruanach Hauberk",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 60,
+    "name": "Cobalt Cruanach Leggings",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 61,
+    "name": "Cobalt Cruanach Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 62,
+    "name": "Cobalt Cruanach Gloves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 63,
+    "name": "Cobalt Cruanach Boots",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 64,
+    "name": "Cobalt Cruanach Coif",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 65,
+    "name": "Amber Tacuil Vest",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 66,
+    "name": "Amber Tacuil Leggings",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 67,
+    "name": "Amber Tacuil Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 68,
+    "name": "Amber Tacuil Gauntlets",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 69,
+    "name": "Amber Tacuil Boots",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 70,
+    "name": "Amber Tacuil Helm",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 71,
+    "name": "Amber Nadurtha Vest",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 72,
+    "name": "Amber Nadurtha Leggings",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 73,
+    "name": "Amber Nadurtha Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 74,
+    "name": "Amber Nadurtha Gauntlets",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 75,
+    "name": "Amber Nadurtha Boots",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 76,
+    "name": "Amber Nadurtha Helm",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 77,
+    "name": "Amber Cailiocht Vest",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 78,
+    "name": "Amber Cailiocht Leggings",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 79,
+    "name": "Amber Cailiocht Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 80,
+    "name": "Amber Cailiocht Gauntlets",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 81,
+    "name": "Amber Cailiocht Boots",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 82,
+    "name": "Amber Cailiocht Helm",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 107,
+    "name": "Carbide Cruanach Hauberk",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 108,
+    "name": "Carbide Cruanach Leggings",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 109,
+    "name": "Carbide Cruanach Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 110,
+    "name": "Carbide Cruanach Gloves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 111,
+    "name": "Carbide Cruanach Boots",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 112,
+    "name": "Carbide Cruanach Coif",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 113,
+    "name": "Carbide Dangean Hauberk",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 114,
+    "name": "Carbide Dangean Leggings",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 115,
+    "name": "Carbide Dangean Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 116,
+    "name": "Carbide Dangean Gloves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 117,
+    "name": "Carbide Dangean Boots",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 118,
+    "name": "Carbide Dangean Coif",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 119,
+    "name": "Carbide Osnadurtha",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 120,
+    "name": "Carbide Osnadurtha Leggings",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 121,
+    "name": "Carbide Osnadurtha Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 122,
+    "name": "Carbide Osnadurtha Gloves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 123,
+    "name": "Carbide Osnadurtha Boots",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 124,
+    "name": "Carbide Osnadurtha Coif",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 125,
+    "name": "Embossed Brea Jerkin",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 126,
+    "name": "Embossed Brea Leggings",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 127,
+    "name": "Embossed Brea Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 128,
+    "name": "Embossed Brea Gloves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 129,
+    "name": "Embossed Brea Boots",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 130,
+    "name": "Embossed Brea Helm",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 131,
+    "name": "Embossed Costaic Jerkin",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 132,
+    "name": "Embossed Costaic Leggings",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 133,
+    "name": "Embossed Costaic Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 134,
+    "name": "Embossed Costaic Gloves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 135,
+    "name": "Embossed Costaic Boots",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 136,
+    "name": "Embossed Costaic Helm",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 137,
+    "name": "Embossed Cruaigh Jerkin",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 138,
+    "name": "Embossed Cruaigh Leggings",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 139,
+    "name": "Embossed Cruaigh Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 140,
+    "name": "Embossed Cruaigh Gloves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 141,
+    "name": "Embossed Cruaigh Boots",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 142,
+    "name": "Embossed Cruaigh Helm",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 143,
+    "name": "Rawhide Brea Jerkin",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 144,
+    "name": "Rawhide Brea Leggings",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 148,
+    "name": "Rawhide Brea Helm",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 157,
+    "name": "Cured Brea Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 197,
+    "name": "Fossil Cailiocht Vest",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 198,
+    "name": "Fossil Cailiocht Leggings",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 199,
+    "name": "Fossil Cailiocht Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 200,
+    "name": "Fossil Cailiocht Gauntlets",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 201,
+    "name": "Fossil Cailiocht Boots",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 202,
+    "name": "Fossil Cailiocht Helm",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 260,
+    "name": "Fossil Nadurtha Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 294,
+    "name": "Osnadurtha Hauberk",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 295,
+    "name": "Osnadurtha Leggings",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 296,
+    "name": "Osnadurtha Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 297,
+    "name": "Osnadurtha Gloves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 298,
+    "name": "Osnadurtha Boots",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 299,
+    "name": "Osnadurtha Coif",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 300,
+    "name": "Ferrite Osnadurtha Hauberk",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 301,
+    "name": "Ferrite Osnadurtha Leggings",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 302,
+    "name": "Ferrite Osnadurtha Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 303,
+    "name": "Ferrite Osnadurtha Gloves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 304,
+    "name": "Ferrite Osnadurtha Boots",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 305,
+    "name": "Ferrite Osnadurtha Coif",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 306,
+    "name": "QuartzOsnadurtha Hauberk",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 307,
+    "name": "Quartz Osnadurtha Leggings",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 308,
+    "name": "Quartz Osnadurtha Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 309,
+    "name": "Quartz Osnadurtha Gloves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 310,
+    "name": "Quartz Osnadurtha Boots",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 311,
+    "name": "Quartz Osnadurtha Coif",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 312,
+    "name": "Dolomite Osnadurtha Hauberk",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 313,
+    "name": "Dolomite Osnadurtha Leggings",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 314,
+    "name": "Dolomite Osnadurtha Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 315,
+    "name": "Dolomite Osnadurtha Gloves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 316,
+    "name": "Dolomite Osnadurtha Boots",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 317,
+    "name": "Dolomite Osnadurtha Coif",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 318,
+    "name": "Cobalt Osnadurtha Hauberk",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 319,
+    "name": "Cobalt Osnadurtha Leggings",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 320,
+    "name": "Cobalt Osnadurtha Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 321,
+    "name": "Cobalt Osnadurtha Gloves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 322,
+    "name": "Cobalt Osnadurtha Boots",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 323,
+    "name": "Cobalt Osnadurtha Coif",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 324,
+    "name": "Rawhide Constaic Jerkin",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 328,
+    "name": "Rawhide Constaic Boots",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 336,
+    "name": "Cured Constaic Jerkin",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 352,
+    "name": "Rigid Constaic Helm",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 379,
+    "name": "Gloves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 404,
+    "name": "Steel Pansarkedja Boots",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 513,
+    "name": "Bronze Stelskodd Helm",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 570,
+    "name": "Gossamer Padded Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 572,
+    "name": "Gossamer Padded Cap",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 653,
+    "name": "Bronze Breastplate",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 654,
+    "name": "Bronze Plate Legs",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 655,
+    "name": "Bronze Plate Arms",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 657,
+    "name": "Bronze Plate Gauntlets",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 659,
+    "name": "Bronze Plate Boots",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 660,
+    "name": "Iron Breastplate",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 661,
+    "name": "Iron Plate Legs",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 662,
+    "name": "Iron Plate Arms",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 663,
+    "name": "Iron Plate Gauntlets",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 664,
+    "name": "Iron Plate Helm",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 665,
+    "name": "Iron Plate Boots",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 745,
+    "name": "Cured Siluric Jerkin",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 746,
+    "name": "Cured Siluric Leggings",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 747,
+    "name": "Cured Siluric Sleeves",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 748,
+    "name": "Cured Siluric Gloves",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 749,
+    "name": "Cured Siluric Helm",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 750,
+    "name": "Cured Siluric Boots",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 886,
+    "name": "Sorcerer Staff of Focus",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 2102,
+    "name": "Ferrite Broadsword",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 3415,
+    "name": "Despoiled Avernal Gauntlets",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 3416,
+    "name": "Despoiled Avernal Helm",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 3417,
+    "name": "Avernal Leggings (Mid)",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 3418,
+    "name": "Avernal Sleeves (Mid)",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 6896,
+    "name": "Standard Blunt Arrows",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 6897,
+    "name": "Standard Bodkin Arrows",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 6898,
+    "name": "Standard Broadhead Arrows",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 7234,
+    "name": "Arcanium Metal Bars",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 7235,
+    "name": "Netherium Metal Bars",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 7504,
+    "name": "Wyvernskin Heavy Thread",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 7505,
+    "name": "Silksteel Heavy Thread",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 7506,
+    "name": "Silksteel Cloth Square",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 7507,
+    "name": "Wyvernskin Cloth Square",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 7508,
+    "name": "Eldrtich Leather Square",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 7509,
+    "name": "Tempered Leather Square",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 7510,
+    "name": "Dyrwood Wooden Boards",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 7511,
+    "name": "Duskwood Wooden Boards",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 8192,
+    "name": "Other Wordly Dust",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9076,
+    "name": "Uncut Mystical Essence Jewel",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 9077,
+    "name": "Uncut Blood Essence Jewel",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 9418,
+    "name": "Extraordinary Behemoth Potion",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 9419,
+    "name": "Etched Aquamarine Eye",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 9632,
+    "name": "Bronze Hammer (Alb)",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9633,
+    "name": "Iron Hammer (Alb)",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9634,
+    "name": "Steel Hammer (Alb)",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9636,
+    "name": "Fine Alloy Hammer (Alb)",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9637,
+    "name": "Bronze Mace",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9638,
+    "name": "Iron Mace",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9639,
+    "name": "Steel Mace",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9640,
+    "name": "Alloy Mace",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9641,
+    "name": "Fine Alloy Mace",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9642,
+    "name": "Bronze Flanged Mace",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9643,
+    "name": "Alloy Flanged Mace",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9644,
+    "name": "Fine Alloy Flanged Mace",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9722,
+    "name": "Greater Avian Potion",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 11919,
+    "name": "Fine Alloy Spiked Mace",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 11920,
+    "name": "Mithril Spiked Mace",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 11925,
+    "name": "Bronze War Hammer (Alb)",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 11927,
+    "name": "Steel War Hammer (Alb)",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 11929,
+    "name": "Fine Alloy War Hammer (Alb)",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 11963,
+    "name": "Steel Battle Axe",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 11966,
+    "name": "Mithril Battle Axe",
+    "realm": "Albion",
+    "prices": []
+   }
+  ],
+  "world_lists_holding_these_items": [
+   {
+    "list_id": "hibleathermerchant",
+    "items_present": 47,
+    "npcs": [],
+    "regions": []
+   },
+   {
+    "list_id": "ermid",
+    "items_present": 47,
+    "npcs": [],
+    "regions": []
+   },
+   {
+    "list_id": "277e788e-f98f-4e16-95c1-d99e1f1e665f",
+    "items_present": 47,
+    "npcs": [],
+    "regions": []
+   },
+   {
+    "list_id": "77793021",
+    "items_present": 47,
+    "npcs": [
+     "Ermid",
+     "Varnher"
+    ],
+    "regions": [
+     "HyBrasil",
+     "Tir na Nog"
+    ]
+   },
+   {
+    "list_id": "7e3d4ea8-0e9f-4657-b27e-4fcc015072f6",
+    "items_present": 44,
+    "npcs": [],
+    "regions": []
+   },
+   {
+    "list_id": "1d8e1006-012b-465b-b4e9-328b4cc69782",
+    "items_present": 44,
+    "npcs": [],
+    "regions": []
+   }
+  ]
+ },
+ {
+  "found_in": [
+   "Arothi",
+   "Caerwent",
+   "Carlingford",
+   "Dalton",
+   "Dunshire",
+   "Eirikstaad",
+   "Kilcullen",
+   "Meath",
+   "Old Sarum",
+   "Rilan",
+   "Torrylin",
+   "Wyndham"
+  ],
+  "pages": 121,
+  "items": [
+   {
+    "key": 9166,
+    "name": "Alchemist for Hire Signpost",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9167,
+    "name": "Alchemy Materials Available Signpost",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9168,
+    "name": "Archery Target",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9169,
+    "name": "Armorcrafter for Hire Signpost",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9171,
+    "name": "Barrel",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9172,
+    "name": "Birdbath",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9173,
+    "name": "Cedar Tree",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9174,
+    "name": "Chess Table",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9175,
+    "name": "Circular Frog Fountain",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9176,
+    "name": "Circular Serpent Fountain",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9177,
+    "name": "Circular Stone Garden",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9178,
+    "name": "Clothworking for Hire Signpost",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9179,
+    "name": "Clothworking Materials Available Signpost",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9180,
+    "name": "Corn Rows with Scarecrow",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9181,
+    "name": "Corn Rows",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9182,
+    "name": "Elm Tree",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9184,
+    "name": "Extended Hoyy Shrubbery",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9183,
+    "name": "Extended Holly Hedge",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9185,
+    "name": "Extended Yew Hedge",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9186,
+    "name": "Extended Yew Shrubbery",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9187,
+    "name": "Fenced Sunflower Bed",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9188,
+    "name": "Fenced Yellow Pansy Bed",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9190,
+    "name": "Fletching Materials Available Signpost",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9191,
+    "name": "Flower Pot",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9193,
+    "name": "Granite Garden Gnome",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9194,
+    "name": "Hitching Post with Trough",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9196,
+    "name": "Holly Shrubbery",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9197,
+    "name": "Leatherworking for Hire Signpost",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9198,
+    "name": "Leatherworking Materials Available Signpost",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9199,
+    "name": "Low Hedge",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9200,
+    "name": "Low Shrubbery",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9201,
+    "name": "Marble Urn",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9203,
+    "name": "Metalworking Materials Available Signpost",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9202,
+    "name": "Metalworking for Hire Signpost",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9204,
+    "name": "Picnic Table",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9205,
+    "name": "Planter",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9206,
+    "name": "Pole-mounted Torch",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9207,
+    "name": "Pumpkin Patch",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9208,
+    "name": "Rectangular Reflecting Pool",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9209,
+    "name": "Rectangular Stone Garden",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9210,
+    "name": "Sandstone Garden Gnome",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9211,
+    "name": "Sandstone Lion Statue",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9213,
+    "name": "Siegecraft Materials Available Signpost",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9216,
+    "name": "Small Vegetable Garden",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9219,
+    "name": "Spellcrafter for Hire Signpost",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9221,
+    "name": "Square Serpent Fountain",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9224,
+    "name": "Stone Fountain",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9226,
+    "name": "Sundial",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9227,
+    "name": "Sycamore Tree",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9228,
+    "name": "Tailor for Hire Signpost",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9229,
+    "name": "Tailoring Materials Available Signpost",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9231,
+    "name": "Three-barrel Stack",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9232,
+    "name": "Two Barrels",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9234,
+    "name": "Vase of Red Roses",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9235,
+    "name": "Wagon Wheel",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9236,
+    "name": "Weaponcrafting Materials Available Signpost",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9237,
+    "name": "Weaponcrafter for Hire Signpost",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9238,
+    "name": "Whitewashed Arbor with Granite Bench",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9239,
+    "name": "Wishing Well",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9241,
+    "name": "Wooden Arbor with Wooden Bench",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9242,
+    "name": "Woodworking for Hire Signpost",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9243,
+    "name": "Woodworking Materials Available Signpost",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9244,
+    "name": "Yew Shrubbery",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9251,
+    "name": "Excavated Granite Resting Stones",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9253,
+    "name": "Extra Long Stone Tile",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9256,
+    "name": "Large Rock",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9258,
+    "name": "Large Square Stone Tile",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9259,
+    "name": "Long Pebble Tile",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9261,
+    "name": "Long Stone Wall",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9262,
+    "name": "Lot-sized Pebble Tile",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9265,
+    "name": "Moss Covered Rocks",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9266,
+    "name": "Pebble Tile",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9268,
+    "name": "Stacked Rocks",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9269,
+    "name": "Stone Tile",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9279,
+    "name": "Bar",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9280,
+    "name": "Black Bear Fur Rug",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9281,
+    "name": "Black Cushioned Chair",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9282,
+    "name": "Black Oval-back Cushioned Chair",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9283,
+    "name": "Boarskin Fur Rug",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9284,
+    "name": "Braced Wooden Chest",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9294,
+    "name": "Four Poster Bed",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9297,
+    "name": "Full Sized Bed",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9298,
+    "name": "Gilded Marble Desk",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9303,
+    "name": "Green Cushioned Chair",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9304,
+    "name": "Green Oval-back Cushioned Chair",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9307,
+    "name": "Hill Cat Fur Rug",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9310,
+    "name": "Chess Table (interior)",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9311,
+    "name": "Flower Pot (interior)",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9312,
+    "name": "Marble Urn (interior)",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9313,
+    "name": "Planter (interior)",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9315,
+    "name": "Vase of Pink Roses (interior)",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9316,
+    "name": "Vase of Red Roses (interior)",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9321,
+    "name": "Long Banquet Table",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9322,
+    "name": "Marble Bench",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9323,
+    "name": "Marble Chair",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9324,
+    "name": "Marble Throne",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9325,
+    "name": "Marble-topped Round Table",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9327,
+    "name": "Narrow Bookcase",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9328,
+    "name": "Ornate Marble Chest",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9329,
+    "name": "Padded Bench",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9330,
+    "name": "Plain Wooden Bench",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9331,
+    "name": "Plain Wooden Desk",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9333,
+    "name": "Purple Cushioned Chair",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9337,
+    "name": "Red Cushioned Chair",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9338,
+    "name": "Red Oval-back Cushioned Chair",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9343,
+    "name": "Simple Cot",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9347,
+    "name": "Solid Maple Bookcase",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9348,
+    "name": "Solid Oak Bookcase",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9349,
+    "name": "Solid Oak Desk",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9350,
+    "name": "Stack of Kegs",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9357,
+    "name": "Teal Cushioned Chair",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9360,
+    "name": "White Boar Fur Rug",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9359,
+    "name": "Teal Rectangular-back Cushioned Chair",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9363,
+    "name": "Wooden Barrel",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9364,
+    "name": "Wooden Chair",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9365,
+    "name": "Wooden Crate",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9366,
+    "name": "Wooden Round Table",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9367,
+    "name": "Wooden Stool",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9368,
+    "name": "Yellow Cushioned Chair",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9369,
+    "name": "Yellow Oval-back Cushioned Chair",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 10014,
+    "name": "Card Table",
+    "realm": "All",
+    "prices": []
+   }
+  ],
+  "world_lists_holding_these_items": [
+   {
+    "list_id": "housing_outdoor_shop",
+    "items_present": 73,
+    "npcs": [],
+    "regions": []
+   },
+   {
+    "list_id": "housing_indoor_shop",
+    "items_present": 46,
+    "npcs": [],
+    "regions": []
+   }
+  ]
+ },
+ {
+  "found_in": [
+   "Darkness Falls"
+  ],
+  "pages": 88,
+  "items": [
+   {
+    "key": 3288,
+    "name": "Infernal Black Diamond Necklace (Mid)",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 3289,
+    "name": "Infernal Black Diamond Ring (Mid)",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 3290,
+    "name": "Infernal Barbed Axe",
+    "realm": "Midgard",
+    "prices": [
+     "Purchased for 17 Diamond Seals"
+    ]
+   },
+   {
+    "key": 3291,
+    "name": "Abysmal Boots",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 3292,
+    "name": "Abysmal Coif",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 3293,
+    "name": "Abysmal Gloves",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 18 Diamond Seals"
+    ]
+   },
+   {
+    "key": 3294,
+    "name": "Abysmal Leggings",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 22 Diamond Seals"
+    ]
+   },
+   {
+    "key": 3295,
+    "name": "Abysmal Sleeves",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 20 Diamond Seals"
+    ]
+   },
+   {
+    "key": 3296,
+    "name": "Abyssal Boots",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 28 Sapphire Seals"
+    ]
+   },
+   {
+    "key": 3297,
+    "name": "Abyssal Gloves",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 28 Sapphire Seals"
+    ]
+   },
+   {
+    "key": 3298,
+    "name": "Abyssal Leggings",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 32 Sapphire Seals"
+    ]
+   },
+   {
+    "key": 3300,
+    "name": "Abyssal Shadow Gloves",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 28 Sapphire Seals"
+    ]
+   },
+   {
+    "key": 3301,
+    "name": "Abyssal Shadow Helm",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 30 Sapphire Seals"
+    ]
+   },
+   {
+    "key": 3302,
+    "name": "Abyssal Shadow Sleeves",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 30 Sapphire Seals"
+    ]
+   },
+   {
+    "key": 3324,
+    "name": "Abyssal Shadowy Helm",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 30 Sapphire Seals"
+    ]
+   },
+   {
+    "key": 3325,
+    "name": "Abyssal Shadowy Gloves",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 28 Sapphire Seals"
+    ]
+   },
+   {
+    "key": 3326,
+    "name": "Abyssal Shadowy Sleeves",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 30 Sapphire Seals"
+    ]
+   },
+   {
+    "key": 3327,
+    "name": "Abyssal Vest",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 32 Sapphire Seals"
+    ]
+   },
+   {
+    "key": 3356,
+    "name": "Corrupted Daemon-forged Gloves",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 28 Sapphire Seals from Beelo"
+    ]
+   },
+   {
+    "key": 3358,
+    "name": "Entrancing Shimmerimg Cap",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 30 Sapphire Seals from Darbo"
+    ]
+   },
+   {
+    "key": 3360,
+    "name": "Malign Scarab Bracer (Hib)",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 30 Emerald Seals from Neno"
+    ]
+   },
+   {
+    "key": 3414,
+    "name": "Avernal Hauberk (Mid)",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 3546,
+    "name": "Malign Scarab Bracer (Mid)",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 3547,
+    "name": "Gossamer Soultorn Gloves (Mid)",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 3637,
+    "name": "Avernail Coif",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 3673,
+    "name": "Avernal Maligned Dirk",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 3674,
+    "name": "Avernal Maligned Drum",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 3675,
+    "name": "Avernal Maligned Falcata",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 3676,
+    "name": "Avernal Maligned Flute",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 4409,
+    "name": "Avernal Maligned Hammer",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 4410,
+    "name": "Avernal Maligned Long Sword",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 4411,
+    "name": "Avernal Maligned Lute",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 4412,
+    "name": "Avernal Maligned Mace",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 4471,
+    "name": "Accursed Maligned Avenger",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 20 Emerald Seals"
+    ]
+   },
+   {
+    "key": 4472,
+    "name": "Accursed Maligned Crusher",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 21 Emerald Seals"
+    ]
+   },
+   {
+    "key": 4485,
+    "name": "Avernal Maligned Protector",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 30 Emerald Seals"
+    ]
+   },
+   {
+    "key": 4486,
+    "name": "Avernal Maligned Rapier",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 32 Emerald Seals"
+    ]
+   },
+   {
+    "key": 4487,
+    "name": "Avernal Maligned Recurve Bow",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 34 Emerald Seals"
+    ]
+   },
+   {
+    "key": 4488,
+    "name": "Avernal Maligned Short Bow",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 32 Emerald Seals"
+    ]
+   },
+   {
+    "key": 4489,
+    "name": "Avernal Maligned Spear",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 28 Emerald Seals"
+    ]
+   },
+   {
+    "key": 4490,
+    "name": "Avernal Maligned Spiked Mace",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 28 Emerald Seals"
+    ]
+   },
+   {
+    "key": 4499,
+    "name": "Avernal Maligned Staff of Enchantment",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 4512,
+    "name": "Avernal Necklace",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 4513,
+    "name": "Avernal Sleeves (Hib)",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 25 Emerald Seals"
+    ]
+   },
+   {
+    "key": 4514,
+    "name": "Corrupted Abysmal Coif",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 20 Diamond Seals"
+    ]
+   },
+   {
+    "key": 4515,
+    "name": "Corrupted Abysmal Gloves",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 18 Diamond Seals"
+    ]
+   },
+   {
+    "key": 4516,
+    "name": "Corrupted Avernal Coif",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 25 Emerald Seals"
+    ]
+   },
+   {
+    "key": 4517,
+    "name": "Corrupted Avernal Gloves",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 23 Emerald Seals"
+    ]
+   },
+   {
+    "key": 4518,
+    "name": "Corrupted Daemon-forged Coif",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 30 Sapphire Seals"
+    ]
+   },
+   {
+    "key": 4519,
+    "name": "Corrupted Daemon-forged Gloves",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 28 Sapphire Seals"
+    ]
+   },
+   {
+    "key": 4526,
+    "name": "Daemon-forged Coif",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 30 Sapphire Seals"
+    ]
+   },
+   {
+    "key": 4527,
+    "name": "Daemon-forged Gloves",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 28 Sapphire Seals"
+    ]
+   },
+   {
+    "key": 4528,
+    "name": "Daemon-forged Hauberk",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 32 Sapphire Seals"
+    ]
+   },
+   {
+    "key": 4529,
+    "name": "Daemon-forged Leggings",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 32 Sapphire Seals"
+    ]
+   },
+   {
+    "key": 4530,
+    "name": "Daemon-forged Sleeves",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 30 Sapphire Seals"
+    ]
+   },
+   {
+    "key": 4536,
+    "name": "Despoiled Abysmal Coif",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 20 Diamond Seals"
+    ]
+   },
+   {
+    "key": 4537,
+    "name": "Despoiled Abysmal Gloves",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 18 Diamond Seals"
+    ]
+   },
+   {
+    "key": 4538,
+    "name": "Despoiled Avernal Coif",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 25 Emerald Seals"
+    ]
+   },
+   {
+    "key": 4539,
+    "name": "Despoiled Avernal Gloves",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 23 Emerald Seals"
+    ]
+   },
+   {
+    "key": 4540,
+    "name": "Despoiled Daemon-forged Coif",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 30 Sapphire Seals"
+    ]
+   },
+   {
+    "key": 4541,
+    "name": "Despoiled Daemon-forged Gloves",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 28 Sapphire Seals"
+    ]
+   },
+   {
+    "key": 4550,
+    "name": "Diabolic Gloves",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 18 Diamond Seals"
+    ]
+   },
+   {
+    "key": 4551,
+    "name": "Diabolic Helm",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 18 Diamond Seals"
+    ]
+   },
+   {
+    "key": 4552,
+    "name": "Diabolic Sleeves",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 20 Diamond Seals"
+    ]
+   },
+   {
+    "key": 4553,
+    "name": "Diabolic Boots",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 18 Diamond Seals"
+    ]
+   },
+   {
+    "key": 4554,
+    "name": "Diabolical Forged Boots",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 18 Diamond Seals"
+    ]
+   },
+   {
+    "key": 4555,
+    "name": "Diabolical Forged Gloves",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 18 Diamond Seals"
+    ]
+   },
+   {
+    "key": 4556,
+    "name": "Diabolical Forged Leggings",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 22 Diamond Seals"
+    ]
+   },
+   {
+    "key": 4790,
+    "name": "Pyre Walkers Cloak",
+    "realm": "Albion",
+    "prices": [
+     "Purchased for 15 Diamond Seals"
+    ]
+   },
+   {
+    "key": 4791,
+    "name": "Dismal Tidings Legs (Alb)",
+    "realm": "Albion",
+    "prices": [
+     "Purchased for 26 Emerald Seals"
+    ]
+   },
+   {
+    "key": 4792,
+    "name": "Dismal Tidings Sleeves (Alb)",
+    "realm": "Albion",
+    "prices": [
+     "Purchased for 25 Emerald Seals"
+    ]
+   },
+   {
+    "key": 4987,
+    "name": "Infernal Pyre Walkers Cloak",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 5021,
+    "name": "Warped Infernal Boots",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 5629,
+    "name": "Infernal Black Diamond Necklace (Alb)",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 5630,
+    "name": "Silken Soultorn Robe",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 5631,
+    "name": "Silken Soultorn Sleeves",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 5633,
+    "name": "Infernal Black Diamond Ring (Alb)",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 5634,
+    "name": "Infernal Black Diamond Bracer",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 5636,
+    "name": "Avernal Malison Staff of Matter",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 5740,
+    "name": "Infernal Black Diamond (Alb)",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 5741,
+    "name": "Silken Soultorn Boots (Alb)",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 5742,
+    "name": "Infernal Black Diamond Belt",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 6222,
+    "name": "Brilliant Avernal Malison Great Sword",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 6432,
+    "name": "Tainted Dismal Vest",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 6555,
+    "name": "Infernal Diamond Dusted Cloak",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 6556,
+    "name": "Infernal Jewel of Venom",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 6726,
+    "name": "Accursed Avernal Protector (Alb)",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 7958,
+    "name": "Fuliginous Boned Sleeves",
+    "realm": "Hibernia",
+    "prices": []
+   }
+  ],
+  "world_lists_holding_these_items": []
+ },
+ {
+  "found_in": [
+   "Caerwent",
+   "Dalton",
+   "Old Sarum",
+   "Rilan"
+  ],
+  "pages": 25,
+  "items": [
+   {
+    "key": 9250,
+    "name": "Albion Outhouse",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9254,
+    "name": "Granite Arch",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9271,
+    "name": "Walled Granite Arch",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9274,
+    "name": "Agony of Defeat Grandiose Painting",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9275,
+    "name": "Agony of Defeat",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9276,
+    "name": "Albion Wall Map",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9277,
+    "name": "Anniogel at NIght Grandiose Painting",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9278,
+    "name": "Anniogel at NIght",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9285,
+    "name": "Bridge to Clifton Grandiose Painting",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9286,
+    "name": "Bridge to Clifton",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9287,
+    "name": "Caer Gothwaite Grandiose Painting",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9288,
+    "name": "Caer Gothwaite",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9301,
+    "name": "Gothwaite Harbor at Night Grandiose Painting",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9302,
+    "name": "Gothwaite Harbor at Night",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9308,
+    "name": "Icons of Caer Sidi Grandiose Painting",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9309,
+    "name": "Icons of Caer Sidi",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9319,
+    "name": "Large Scale Albion Wall Map",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9339,
+    "name": "Safety in the Distance Grandiose Painting",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9340,
+    "name": "Safety in the Distance",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9351,
+    "name": "Stonehenge Grandiose Painting",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9352,
+    "name": "Stonehenge",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9353,
+    "name": "Sunset at Gathwaite Harbor Grandiose Painting",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9354,
+    "name": "Sunset at Gathwaite Harbor",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9355,
+    "name": "Sunset Over Avalon Isle Grandiose Painting",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 9356,
+    "name": "Sunset Over Avalon Isle",
+    "realm": "Albion",
+    "prices": []
+   }
+  ],
+  "world_lists_holding_these_items": [
+   {
+    "list_id": "housing_indoor_shop",
+    "items_present": 2,
+    "npcs": [],
+    "regions": []
+   },
+   {
+    "list_id": "housing_outdoor_shop",
+    "items_present": 1,
+    "npcs": [],
+    "regions": []
+   }
+  ]
+ },
+ {
+  "found_in": [
+   "Dunshire",
+   "Kilcullen",
+   "Meath",
+   "Torrylin"
+  ],
+  "pages": 16,
+  "items": [
+   {
+    "key": 9255,
+    "name": "Hibernia Outhouse",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 9370,
+    "name": "Cothrom Gorge Waterfall",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 9372,
+    "name": "Forest for the Trees Grandiose Painting",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 9374,
+    "name": "Forest View Grandiose Painting",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 9375,
+    "name": "Forest View",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 9376,
+    "name": "Hibernia Wall Map",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 9377,
+    "name": "Large Scale Hibernia Wall Map",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 9378,
+    "name": "Lone Defender Grandiose Painting",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 9381,
+    "name": "Majesty of Cothrom Gorge",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 9383,
+    "name": "Memories of Tur Suil",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 9384,
+    "name": "Simplicity of the Blue Cattail Grandiose Painting",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 9385,
+    "name": "Simplicity of the Blue Cattail",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 9386,
+    "name": "Sylvan Watchers Grandiose Painting",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 9387,
+    "name": "Sylvan Watchers",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 9388,
+    "name": "Tir na Nog at Dusk Grandiose Painting",
+    "realm": "Hibernia",
+    "prices": []
+   },
+   {
+    "key": 9389,
+    "name": "Tir na Nog at Dusk",
+    "realm": "Hibernia",
+    "prices": []
+   }
+  ],
+  "world_lists_holding_these_items": [
+   {
+    "list_id": "housing_indoor_shop",
+    "items_present": 14,
+    "npcs": [],
+    "regions": []
+   },
+   {
+    "list_id": "housing_outdoor_shop",
+    "items_present": 1,
+    "npcs": [],
+    "regions": []
+   }
+  ]
+ },
+ {
+  "found_in": [
+   "Arothi",
+   "Carlingford",
+   "Eirikstaad",
+   "Wyndham"
+  ],
+  "pages": 13,
+  "items": [
+   {
+    "key": 9291,
+    "name": "Darkness Falls",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 9292,
+    "name": "Fog Over Hagall Grandiose Painting",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 9293,
+    "name": "Fog Over Hagall",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 9296,
+    "name": "Frozen Horizon",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 9299,
+    "name": "Glacial Resting Place Grandiose Painting",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 9306,
+    "name": "Hazards of Iarnvidiur's Lair Grandiose Painting",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 9326,
+    "name": "Midgard Wall Map",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 9336,
+    "name": "Queen Kula's Splendor",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 9342,
+    "name": "Sanctuary",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 9344,
+    "name": "Skyline of Jordheim Grandiose Painting",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 9361,
+    "name": "Wintery Forest Sunrise Grandiose Painting",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 9362,
+    "name": "Wintery Forest Sunrise",
+    "realm": "Midgard",
+    "prices": []
+   },
+   {
+    "key": 9631,
+    "name": "Three Defenders of Midgard Wall Tapestry",
+    "realm": "Midgard",
+    "prices": []
+   }
+  ],
+  "world_lists_holding_these_items": []
+ },
+ {
+  "found_in": [
+   "Isle of Glass"
+  ],
+  "pages": 9,
+  "items": [
+   {
+    "key": 7012,
+    "name": "Lifebane",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 7022,
+    "name": "Calabar Bean",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 7039,
+    "name": "Volatile Celeric Catalyst",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 7040,
+    "name": "Volatile Shielding Catalyst",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 7043,
+    "name": "Volatile Protecting Catalyst",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 7045,
+    "name": "Stable Firebrand Catalyst",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 7056,
+    "name": "Insidious Lethal Venom",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 7066,
+    "name": "Infectious Serum",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9679,
+    "name": "Mithral Barabed Chain",
+    "realm": "Albion",
+    "prices": []
+   }
+  ],
+  "world_lists_holding_these_items": [
+   {
+    "list_id": "albalchemy",
+    "items_present": 5,
+    "npcs": [
+     "Annete Howell",
+     "Jon Blake",
+     "Michael Thornbriar",
+     "Ylaine Barrett"
+    ],
+    "regions": [
+     "Avalon"
+    ]
+   },
+   {
+    "list_id": "ecabb583-acd0-47f1-b7ab-ac41c1892a3d",
+    "items_present": 5,
+    "npcs": [
+     "Petrus Aitken"
+    ],
+    "regions": [
+     "Avalon"
+    ]
+   },
+   {
+    "list_id": "966eda39-c819-41d3-84e0-cdf9783c1999",
+    "items_present": 5,
+    "npcs": [
+     "Alchemist Lendand",
+     "Gilbert",
+     "Saffa"
+    ],
+    "regions": [
+     "Camelot City",
+     "Tir na Nog"
+    ]
+   },
+   {
+    "list_id": "24103ba5-e129-4ec4-8c1c-860082ecbd56",
+    "items_present": 4,
+    "npcs": [],
+    "regions": []
+   },
+   {
+    "list_id": "40e628be-3fca-43af-8ff7-14a33541ff1f",
+    "items_present": 4,
+    "npcs": [],
+    "regions": []
+   },
+   {
+    "list_id": "housing_alb_potion_tincture_enchantment",
+    "items_present": 4,
+    "npcs": [],
+    "regions": []
+   }
+  ]
+ },
+ {
+  "found_in": [
+   "Camelot"
+  ],
+  "pages": 3,
+  "items": [
+   {
+    "key": 734,
+    "name": "Rawhide Siluric Leggings",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 733,
+    "name": "Rawhide Siluric Jerkin",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 735,
+    "name": "Rawhide Siluric Sleeves",
+    "realm": "Albion",
+    "prices": []
+   }
+  ],
+  "world_lists_holding_these_items": []
+ },
+ {
+  "found_in": [
+   "Caerwent",
+   "Carlingford",
+   "Dalton",
+   "Eirikstaad",
+   "Kilcullen",
+   "Meath",
+   "Rilan",
+   "Torrylin",
+   "Wyndham"
+  ],
+  "pages": 3,
+  "items": [
+   {
+    "key": 9170,
+    "name": "Armorcrafting Materials Available Signpost",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9332,
+    "name": "Plain Wooden Table",
+    "realm": "All",
+    "prices": []
+   },
+   {
+    "key": 9358,
+    "name": "Teal Oval-back Cushioned Chair",
+    "realm": "All",
+    "prices": []
+   }
+  ],
+  "world_lists_holding_these_items": [
+   {
+    "list_id": "housing_indoor_shop",
+    "items_present": 2,
+    "npcs": [],
+    "regions": []
+   },
+   {
+    "list_id": "housing_outdoor_shop",
+    "items_present": 1,
+    "npcs": [],
+    "regions": []
+   }
+  ]
+ },
+ {
+  "found_in": [
+   "Camelot",
+   "Salvages for 8 rawhide leather squares"
+  ],
+  "pages": 2,
+  "items": [
+   {
+    "key": 736,
+    "name": "Rawhide Siluric Gloves",
+    "realm": "Albion",
+    "prices": []
+   },
+   {
+    "key": 737,
+    "name": "Rawhide Siluric Boots",
+    "realm": "Albion",
+    "prices": []
+   }
+  ],
+  "world_lists_holding_these_items": []
+ },
+ {
+  "found_in": [
+   "Tir na Nog"
+  ],
+  "pages": 1,
+  "items": [
+   {
+    "key": 224,
+    "name": "Silk Woven Gloves",
+    "realm": "Hibernia",
+    "prices": []
+   }
+  ],
+  "world_lists_holding_these_items": [
+   {
+    "list_id": "hibclotharmorset",
+    "items_present": 1,
+    "npcs": [
+     "Elith"
+    ],
+    "regions": [
+     "Hibernia"
+    ]
+   },
+   {
+    "list_id": "092a12a8-2481-4876-813f-f2ff3358ba8b",
+    "items_present": 1,
+    "npcs": [],
+    "regions": []
+   },
+   {
+    "list_id": "eachann",
+    "items_present": 1,
+    "npcs": [
+     "Eachann"
+    ],
+    "regions": [
+     "Tir na Nog"
+    ]
+   },
+   {
+    "list_id": "72c6a20a-f5a0-45cc-8d83-11a415182398",
+    "items_present": 1,
+    "npcs": [
+     "Duer",
+     "Ronan"
+    ],
+    "regions": [
+     "Hibernia"
+    ]
+   },
+   {
+    "list_id": "792ae5cd-6447-432f-8140-3335f208fd86",
+    "items_present": 1,
+    "npcs": [],
+    "regions": []
+   },
+   {
+    "list_id": "sissy",
+    "items_present": 1,
+    "npcs": [],
+    "regions": []
+   }
+  ]
+ },
+ {
+  "found_in": [
+   "Camelot",
+   "Salvages for 25 rawhide leather squares"
+  ],
+  "pages": 1,
+  "items": [
+   {
+    "key": 738,
+    "name": "Rawhide Siluric Helm",
+    "realm": "Albion",
+    "prices": []
+   }
+  ],
+  "world_lists_holding_these_items": []
+ },
+ {
+  "found_in": [
+   "Darkness Falls",
+   "Large Shield"
+  ],
+  "pages": 1,
+  "items": [
+   {
+    "key": 3643,
+    "name": "Avernal Maligned Defender",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 32 Emerald Seals"
+    ]
+   }
+  ],
+  "world_lists_holding_these_items": []
+ },
+ {
+  "found_in": [
+   "Darkness Falls",
+   "Focus: Light Magic - 38 lvls"
+  ],
+  "pages": 1,
+  "items": [
+   {
+    "key": 4500,
+    "name": "Avernal Maligned Staff of Light",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 32 Emerald Seals"
+    ]
+   }
+  ],
+  "world_lists_holding_these_items": []
+ },
+ {
+  "found_in": [
+   "Darkness Falls",
+   "Focus: Mana Magic - 37 lvls"
+  ],
+  "pages": 1,
+  "items": [
+   {
+    "key": 4501,
+    "name": "Avernal Maligned Staff of Mana",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 30 Emerald Seals"
+    ]
+   }
+  ],
+  "world_lists_holding_these_items": []
+ },
+ {
+  "found_in": [
+   "Darkness Falls",
+   "Focus: Mentalism - 32 lvls"
+  ],
+  "pages": 1,
+  "items": [
+   {
+    "key": 4502,
+    "name": "Avernal Maligned Staff of Mind",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 21 Emerald Seals"
+    ]
+   }
+  ],
+  "world_lists_holding_these_items": []
+ },
+ {
+  "found_in": [
+   "Darkness Falls",
+   "Focus: Void Magic - 39 lvls"
+  ],
+  "pages": 1,
+  "items": [
+   {
+    "key": 4503,
+    "name": "Avernal Maligned Staff of Void",
+    "realm": "Hibernia",
+    "prices": [
+     "Purchased for 34 Emerald Seals"
+    ]
+   }
+  ],
+  "world_lists_holding_these_items": []
+ },
+ {
+  "found_in": [
+   "Darkness Falls",
+   "Sword is blue with a red flame."
+  ],
+  "pages": 1,
+  "items": [
+   {
+    "key": 4707,
+    "name": "Avernal Malison Longsword",
+    "realm": "Albion",
+    "prices": [
+     "Purchased for 15 Diamond Seals"
+    ]
+   }
+  ],
+  "world_lists_holding_these_items": []
+ },
+ {
+  "found_in": [
+   "Lough Derg"
+  ],
+  "pages": 1,
+  "items": [
+   {
+    "key": 8052,
+    "name": "Plain Robe (Hib)",
+    "realm": "Hibernia",
+    "prices": []
+   }
+  ],
+  "world_lists_holding_these_items": [
+   {
+    "list_id": "b31e7e15-194a-4137-8b5d-3fa11bea4d46",
+    "items_present": 1,
+    "npcs": [],
+    "regions": []
+   },
+   {
+    "list_id": "hibrobemerchant",
+    "items_present": 1,
+    "npcs": [
+     "Sarelle",
+     "Tangi"
+    ],
+    "regions": [
+     "Hibernia",
+     "HyBrasil"
+    ]
+   },
+   {
+    "list_id": "albclothleatherstuddedboned",
+    "items_present": 1,
+    "npcs": [
+     "Julienne Danior"
+    ],
+    "regions": [
+     "Avalon"
+    ]
+   },
+   {
+    "list_id": "albcloth1",
+    "items_present": 1,
+    "npcs": [
+     "Zinia Marsen"
+    ],
+    "regions": [
+     "Avalon"
+    ]
+   },
+   {
+    "list_id": "9a1ca11f-9a1a-4eef-b53b-92424b734167",
+    "items_present": 1,
+    "npcs": [],
+    "regions": []
+   },
+   {
+    "list_id": "c5b30e17-0ad7-40b5-ae98-151b7d40221f",
+    "items_present": 1,
+    "npcs": [],
+    "regions": []
+   }
+  ]
+ },
+ {
+  "found_in": [
+   "Dunshire",
+   "Kilcullen",
+   "Meath",
+   "Plains of Gwyddneau",
+   "Torrylin"
+  ],
+  "pages": 1,
+  "items": [
+   {
+    "key": 9390,
+    "name": "Twilight in the Frontier Grandiose Painting",
+    "realm": "Hibernia",
+    "prices": []
+   }
+  ],
+  "world_lists_holding_these_items": [
+   {
+    "list_id": "housing_indoor_shop",
+    "items_present": 1,
+    "npcs": [],
+    "regions": []
+   }
+  ]
+ }
+]

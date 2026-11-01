@@ -1,0 +1,76 @@
+# OfflineDAoC True 1.65 - what stays local.
+# Tracked on purpose: runtime/true165/, runtime/server/navmesh-165/, runtime/server/config/, the runtime/server/*.json
+# content files, database/ (the clean world, zipped), and all source and tools.
+
+# Build output
+bin/
+obj/
+.vs/
+*.user
+*.suo
+__pycache__/
+*.pyc
+development-source/server/Release/
+development-source/server/Debug/
+development-source/server/build/
+
+# A working install's world and saves (database/opendaoc-165.sqlite3.zip is the clean copy)
+runtime/data/
+*.db
+*.db-wal
+*.db-shm
+*.db-journal
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+!database/*.zip
+
+# Local login, test characters and run state
+account.txt
+true165-test-characters*
+runtime/server/state-165/
+runtime/server/bot-world.request
+runtime/ruleset.txt
+
+# Logs, backups and diagnostics
+logs/
+*.log
+deployment-backups/
+mode-switch-backups/
+keep-relic-reset-backups/
+*.before-*
+*before-*.json
+*.backup.json
+*.bak
+*.dmp
+*.gcdump
+
+# The full navmesh (2.1 GB) ships as a release asset; navmesh-165 (the 1.65 overrides) is tracked
+runtime/server/navmesh/
+
+# Server and launcher binaries, the bundled .NET and the web files come from building or from the release zip
+runtime/*.dll
+runtime/*.exe
+runtime/*.pdb
+runtime/*.deps.json
+runtime/*.runtimeconfig.json
+runtime/win-x64/
+runtime/runtimes/
+runtime/client-opendaoc/
+runtime/server/*.dll
+runtime/server/*.exe
+runtime/server/*.pdb
+runtime/server/*.deps.json
+runtime/server/*.runtimeconfig.json
+runtime/server/*.dll.config
+runtime/server/lib/
+runtime/server/win-x64/
+runtime/server/runtimes/
+runtime/server/scripts/
+runtime/server/languages/
+runtime/server/wwwroot/
+tools/dotnet/
+
+# The new client's converted game content and Godot's cache (DAoC client files are never shipped)
+source/new-client/godot/content/
+source/new-client/godot/.godot/

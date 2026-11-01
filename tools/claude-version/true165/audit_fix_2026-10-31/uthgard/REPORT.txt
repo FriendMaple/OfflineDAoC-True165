@@ -1,0 +1,103 @@
+TRUE 1.65 - UTHGARD PLAIN-LOOT PASS FOR THE COIN-ONLY MONSTERS (coinonly agent, 2026-10-31)
+==============================================================================
+Owner approved (via the coordinator): build the Uthgard-measured drop items of the still-coin-only monsters from
+their Uthgard item pages. World: installed content fix/stage3 + post-install DB fix/coord/run5.db (read-only).
+
+RESULT
+- coin-only spawned monsters in run5.db with realm-matched Uthgard item drops: 312 (drops agent rule: Uthgard record zone in a realm / classic part the monster lives in)
+- monsters given drops: 306, drop rows: 719 (drops_uthgard.json, drops165 format, only new monsters; none of them is in stage3/drops165.json)
+- items built: 532 (530 plain loot, 2 equipment) -> add-uthgarditems165.json (Id_nb p165_uth_<Uthgard load id>, PackageID True165Uthgard); 26 rows use an existing template instead (gems the drops agent built, Fell Day / Faded ... of the Risen / Ring of Redhands ...)
+- not built: 20 rows (not_built.csv): Uthgard 'Experience' item (XP-item turn-in mechanic, freeshard): 20
+- monsters of the gap left without items: 6 (all their items were skipped)
+- coin-only spawned monsters after the dry run: 1713
+
+DRY RUN (fix/coord/dryrun.py; folder = copy of fix/stage3 + drops_uthgard merged into drops165.json + add file;
+run5.db -> test1 -> test2)
+- run 1 / run 2 return codes: 0 / 0
+- loot rows pointing at a missing item: 0; LootOTD: 0
+- my rows present: 719, missing: 0
+- second run changed nothing (LootTemplate, MobXLootTemplate, LootOTD, ItemTemplate): True; differences: []
+- archive growth in run 2: {"Realm Exchange moves to the traveler's inns": 3} (the 3 Realm Exchange rows are the known pre-existing loop)
+- remove rules hitting my rows in run 2: none (archive growth above); the archive holds 2 OLD entries of the same monster+item pairs (savage wyvern /
+  Malefic_Tooth, Sett Dweller / Sett_Fur): the drops agent's Chance < 0 timed XP-item rows from the snapshot; my rows
+  are normal % rows (Uthgard measured), which that rule does not match.
+
+HOW
+- Uthgard drop name -> Uthgard item page of that name (AUDIT/work/items/item_sources.json, parsed from the raw
+  archive item.php?load=N pages): the page whose "Item can drop from these monsters" list names the same Uthgard
+  monster, else the lowest load id. One built item per page; plain pages with the same name AND sell value share one.
+- An existing usable ItemTemplate of the exact name (realm fits, not removed by the drops agent / stage3 rules, no
+  cq_, no freeshard package) is used instead of building.
+- Plain loot (no stats): Object_Type 0 / Item_Type 40, Realm 0 (vendor loot is realm-free, like the gems the drops
+  agent built), Level from the page, Price = Uthgard sell value x 2 (server item_sell_ratio 50, so merchants pay the
+  Uthgard value), always tradable/droppable; look (Model/Color/Extension/Weight) from the closest existing plain
+  loot item: 198 same last word (pelt->pelt), 222 shared name word, 110 nearest price (no shared word: look is a guess, marked); remains/trophies use an existing
+  remains item. Quest-credit / token / ticket items and untradable items are never used as siblings.
+- 41 built items have no Uthgard sell value: their price comes from the sibling (marked in built.csv).
+- Equipment: level, slot, object type, AF/absorb or DPS/speed, damage type, quality and bonuses from the page;
+  realm = the monster's realm; look, hand, AllowedClasses, weight, durability from the closest sibling (same object
+  type + slot + realm, shared name words, nearest level). Bonus types eProperty 99-119 / 145-256 are dropped and
+  listed (none of the built items had one). Not built: procs (the page names no spell).
+- Rates: n / max(kills, 20) of that monster's realm-matched Uthgard records, 1-100 %. drop_count: raid 4, named 2,
+  regular 1 (2 when the rolled chances add up to 50 %+), as the drops agent.
+
+JUDGEMENT CALLS
+- Uthgard 'Experience' items (20 rows, e.g. Long White Boar Tusk, Squabbler Eye, Giant Snow Crab Claw, Grovewood
+  Bark) are Uthgard's XP-item turn-in mechanic (its 'XP items' menu) = the Atlas XP-item idea the owner banned;
+  several are exactly the AtlasXPItem rows the drops agent removed. Skipped. If the owner wants them as plain
+  sellable loot instead, they are listed in not_built.csv with their load ids.
+- Vae Inimicus War Mattock (p165_uth_2749): the page shows a weapon proc (level 35) with no spell -> built without the
+  proc; Uthgard gives no sell value, so the price is the sibling's (adamantium war mattock).
+- harvestman carapace: the page says slot torso but has no type or stats -> built as plain loot.
+- Items whose plain-loot look comes only from the nearest price may look odd in the inventory (e.g. a necklace
+  shown as fish): marked "nearest price" / "shared name word" in built.csv; the coordinator can pick better models.
+
+FILES (fix/coinonly/uthgard/)
+- add-uthgarditems165.json  ItemTemplate rows (table ItemTemplate, key Id_nb)
+- drops_uthgard.json        drops165 monsters format, ONLY the new monsters/rows
+- built.csv                 item, Uthgard id, stats source, look source, price, dropped bonuses
+- not_built.csv             monster, item, Uthgard id, why
+- work/drop_rows.csv        every drop row with the measured count / kills and the Uthgard records
+- u1_gap.py, u2_build.py, u3_test.py, u4_report.py (python -I, in order); test/test2.db = second dry-run result
+
+MONSTERS AND ROWS (top 40 by rows)
+- glowing goo (named): glowing viscous goo 36%, black star diopside 7%, green tourmaline 6%, Faded Gloves of the Risen 5%, sphene 5%, chrome diopside 3%, Faded Cap of the Risen 3%, light teal enamel 3% ...
+- cavernous yeti (regular): engraved pewter bowl 5%, broken hilt 3%, crudely drawn realm map 2%, vial of foul vapors 2%, shimmering orb 1%, stack of platinum bars 1%, tattered mildewy cloak 1%, bottle of fetid wine 1% ...
+- deep wolf (regular): stack of platinum bars 4%, tattered mildewy cloak 4%, sapphire ring 4%, shimmering orb 3%, crudely drawn realm map 3%, jewelry box key 2%, engraved pewter bowl 2%, vial of foul vapors 1%
+- ghostly man-at-arms (regular): alexandrite 1%, kornerupine 1%, aquamarine beryl 1%, precious jasper 1%, yellow diamond 1%, pink sapphire 1%
+- levian-al (regular): levian-al claw 22%, slashed levian-al pelt 22%, broken levian-al claw 13%, levian-al fang 13%, flayed levian-al pelt 9%, cracked levian-al fang 4%
+- Unseelie Fairy (raid): shimmering orb 4%, stack of platinum bars 4%, crudely drawn realm map 2%, bottle of fetid wine 2%, jewelry box key 2%, shimmering Spiritbender osnadurtha sleeves 2%
+- bog creeper (regular): bog creeper eye 100%, bog creeper leg 93%, bog creeper leg tip 88%, bog creeper carapace 32%, bog creeper poison sac 32%
+- cliff beetle (regular): dried pork 100%, cliff beetle leg 100%, cliff beetle leg tip 67%, cliff beetle mandible 21%, cliff beetle carapace 14%
+- cwn annwn (regular): cwn annwn pelt 69%, sharp cwn annwn fang 31%, cwn annwn paw 30%, cracked cwn annwn claw 28%, red tipped cwn annwn ear 2%
+- huge boar (regular): huge cloven hoof 45%, huge boar hide 38%, large pig tail 21%, bloody boar tusk 12%, huge boar tusk 12%
+- ice wolf (regular): ice wolf pelt 20%, pristine ice wolf pelt 10%, luminous Bodybender starkakedja gloves 1%, luminous Bodybender padded sleeves 1%, luminous Sturdy dwarven short sword 1%
+- Lunaris primus pilus (named): small silver statue 25%, citrine 20%, Fell Day Ring 16%, Fell Day Belt 9%, garnet 9%
+- unearthed cave bear (regular): slashed bear pelt 6%, gnarled bear tooth 5%, bloodstained bear claw 4%, bloody broken bear trap 1%, supple bear pelt 1%
+- albino cave mauler (regular): large mauler tooth 88%, large mauler claw 78%, cave bear meat 69%, pristine cave mauler skin 22%
+- Arracht (named): ollipheist meat 40%, ollipheist fang 25%, ollipheist claw 15%, pristine ollipheist hide 5%
+- brush cat (regular): cat fang 86%, brush cat ear 75%, brush cat pelt 68%, brush cat paw 9%
+- callow wolverine (regular): small wolverine pelt 72%, small wolverine paw 64%, wolverine meat 54%, small wolverine tail 7%
+- cave bear (regular): cave bear meat 72%, cave bear tooth 58%, cave bear claw 37%, cave bear skin 11%
+- cave crawler (regular): crawler meat 100%, crawler fang 26%, crawler skin 12%, pristine cave crawler skin 1%
+- cave mauler (regular): cave bear meat 100%, cave bear tooth 39%, pristine cave bear skin 7%, cave bear skin 3%
+- cinder drake (regular): pile of glowing cinders 69%, flaming chunk of lava 56%, large glowing eye 27%, large yellow topaz 21%
+- cliff hanger (regular): cliff hanger leg 100%, cliff hanger leg tip 80%, cliff hanger mandible 36%, cliff hanger carapace 7%
+- cliff spider (regular): cliff spider claw 58%, cliff spider legs 50%, spider carapace 35%, cliff spider silk 33%
+- dark hound (regular): chunk of dark hound meat 51%, dark hound ear 47%, globe of black mist 43%, dark hound pelt 37%
+- faerie badger (regular): faerie badger tooth 100%, faerie badger claw 100%, faerie badger meat 88%, faerie badger pelt 15%
+- Fanged Sinach (named): sinach claw 100%, sinach meat 100%, sinach fang 58%, sinach femur 24%
+- fire giant watchman (regular): fire giant nosering 69%, belt of flames 60%, fire giant tooth 44%, fire giant scalp 20%
+- fire toad (regular): fire toad leg 50%, red carnelian 47%, flaming wart 31%, fire toad tongue 22%
+- forest runner (regular): cooked deer 65%, berry wine 65%, leather sack 65%, pouch of seeds 15%
+- frost bound bear (regular): frosty bear pelt 16%, pristine frosty bear pelt 8%, fenrir paw 2%, frosty bandages 2%
+- giant beetle (regular): giant beetle leg 100%, giant beetle leg tip 80%, giant beetle mandible 49%, giant beetle carapace 4%
+- giant tree frog (regular): giant frog eye 81%, giant frog tongue 63%, frog wart ring 40%, giant frog legs 21%
+- gnarled fellwood (regular): gilded fellwood leaves 15%, fellwood branch 8%, grimwood box 8%, gilded grimwood branch 3%
+- gray worg (regular): worg's head 32%, shredded worg skin 9%, bloodied worg skin 5%, pristine worg skin 5%
+- Grjotgard (named): cave bear tooth 79%, cave bear meat 74%, cave bear claw 38%, cave bear skin 26%
+- large luch (regular): large luch meat 100%, large luch tooth 35%, large luch claw 28%, pristine large luch hide 12%
+- lava lizard (regular): lava lizard hide 75%, lava lizard tongue 71%, hardened lava stone 61%, lizard eye 54%
+- nocuous hound (regular): hound pelt 88%, large yellow topaz 83%, gaseous pouch 80%, glowing hound eye 68%
+- noxious hound (named): hound paw 71%, hound pelt 58%, hound tail 51%, glowing hound eye 41%
+- Shade of Gunnar (named): charred golden medal 76%, charred hide belt 71%, fire opal ring 64%, charred finger bone 56%

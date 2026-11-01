@@ -1,0 +1,512 @@
+{
+ "source": "True 1.65 coin-only pass (2026-10-31): period Allakhazam item/mob page comments, early live Allakhazam comments, spelling-variant period pages and Uthgard records; see fix/coinonly/REPORT.txt",
+ "min_kills": 20,
+ "monsters": {
+  "arachnid": {
+   "drop_count": 1,
+   "items": [
+    [
+     "Shrunken_Spider_Necklace",
+     1
+    ]
+   ]
+  },
+  "Aroon the Urlamhai": {
+   "drop_count": 4,
+   "items": [
+    [
+     "Aroons_Ancient_Staff",
+     25
+    ],
+    [
+     "Aroons_Verdant_Staff",
+     25
+    ]
+   ]
+  },
+  "Black Rixtas": {
+   "drop_count": 2,
+   "items": [
+    [
+     "Spider-claw_Arrows",
+     15
+    ]
+   ]
+  },
+  "blackthorn": {
+   "drop_count": 1,
+   "items": [
+    [
+     "Blackthorn_Wreath",
+     1
+    ],
+    [
+     "Spiked_Blackthorn_Vest",
+     1
+    ]
+   ]
+  },
+  "bocaide": {
+   "drop_count": 1,
+   "items": [
+    [
+     "p165_drop_6988",
+     2
+    ]
+   ]
+  },
+  "cave spider": {
+   "drop_count": 1,
+   "items": [
+    [
+     "2_Flayed_Hagbui_Jerkin",
+     1
+    ],
+    [
+     "2_Flayed_Hagbui_Sleeves",
+     1
+    ]
+   ]
+  },
+  "Chieftain Toca": {
+   "drop_count": 4,
+   "items": [
+    [
+     "Chieftain_Tocas_Legs",
+     25
+    ]
+   ]
+  },
+  "Coimirceoir": {
+   "drop_count": 2,
+   "items": [
+    [
+     "Coirmirceoirs_Remains",
+     9
+    ]
+   ]
+  },
+  "crafted hulk": {
+   "drop_count": 1,
+   "items": [
+    [
+     "Earthborn_Hooded_Mantle",
+     3
+    ]
+   ]
+  },
+  "Dremcis Fuiloltair": {
+   "drop_count": 4,
+   "items": [
+    [
+     "p165_drop_8610",
+     25
+    ]
+   ]
+  },
+  "Ellyl champion": {
+   "drop_count": 2,
+   "items": [
+    [
+     "p165_drop_1324",
+     15
+    ],
+    [
+     "p165_drop_4903",
+     15
+    ],
+    [
+     "p165_drop_5229",
+     15
+    ],
+    [
+     "Ancient_Mirror",
+     6
+    ],
+    [
+     "Gladius_of_the_Battlelord",
+     3
+    ],
+    [
+     "Bottle_of_Ellyll_Wine",
+     2
+    ],
+    [
+     "Ellyll_Drum",
+     2
+    ],
+    [
+     "Ellyll_Flute",
+     2
+    ],
+    [
+     "Etheric_Ring",
+     2
+    ],
+    [
+     "Kraggon_Worm_Greaves",
+     2
+    ],
+    [
+     "Ellyll_Lute",
+     1
+    ],
+    [
+     "Ellyll_Rapier",
+     1
+    ],
+    [
+     "Ellyll_Round_Shield",
+     1
+    ],
+    [
+     "Ellyll_Sword",
+     1
+    ],
+    [
+     "Kraggon_Worm_Arms",
+     1
+    ],
+    [
+     "Kraggon_Worm_Breastplate",
+     1
+    ],
+    [
+     "Kraggon_Worm_Gauntlets",
+     1
+    ],
+    [
+     "Kraggon_Worm_Helmet",
+     1
+    ],
+    [
+     "Radiant_Moonclipper",
+     1
+    ]
+   ]
+  },
+  "forest lion": {
+   "drop_count": 1,
+   "items": [
+    [
+     "PittedSharpClaw",
+     3
+    ]
+   ]
+  },
+  "glopsk grattasvamp": {
+   "drop_count": 1,
+   "items": [
+    [
+     "Bonedancer's_Enhancement_Gem",
+     3
+    ]
+   ]
+  },
+  "Grunge": {
+   "drop_count": 2,
+   "items": [
+    [
+     "Grunge's_Remains",
+     10
+    ]
+   ]
+  },
+  "Grunk": {
+   "drop_count": 2,
+   "items": [
+    [
+     "GiantsToothpick",
+     1
+    ]
+   ]
+  },
+  "Grurk": {
+   "drop_count": 2,
+   "items": [
+    [
+     "GiantsToothpick",
+     1
+    ]
+   ]
+  },
+  "Horned Cave Toad": {
+   "drop_count": 2,
+   "items": [
+    [
+     "Dark_Crystalized_Poison_Sac",
+     6
+    ]
+   ]
+  },
+  "Insidious Samn": {
+   "drop_count": 2,
+   "items": [
+    [
+     "Click_Clack_Ring",
+     15
+    ],
+    [
+     "p165_drop_8142",
+     15
+    ]
+   ]
+  },
+  "Jailer Vifil": {
+   "drop_count": 4,
+   "items": [
+    [
+     "2_Frozen_Moon_Claw",
+     25
+    ],
+    [
+     "Foe_Hammer's_Vest",
+     25
+    ],
+    [
+     "Jailors_Gloves",
+     25
+    ],
+    [
+     "Spiked_Jailors_Gloves",
+     25
+    ],
+    [
+     "Tuscarian_Bloodforged_Hauberk",
+     25
+    ],
+    [
+     "Tuscarian_Bloodforged_Leggings",
+     25
+    ],
+    [
+     "Tuscarian_Monitor_Leggings",
+     25
+    ],
+    [
+     "Tuscarian_Monitor_Vest",
+     25
+    ],
+    [
+     "respec_single",
+     25
+    ]
+   ]
+  },
+  "Leildolf": {
+   "drop_count": 2,
+   "items": [
+    [
+     "Mystical_Golden_Scale_Belt",
+     30
+    ]
+   ]
+  },
+  "Lydsyg": {
+   "drop_count": 2,
+   "items": [
+    [
+     "Skuggande_Ephemeral_Wing",
+     15
+    ]
+   ]
+  },
+  "Melancholic Fairy Queen": {
+   "drop_count": 4,
+   "items": [
+    [
+     "Black_Crystal_Fairy_Crown",
+     25
+    ],
+    [
+     "Blue_Crystal_Fairy_Crown",
+     25
+    ],
+    [
+     "Cloak_of_Delusions",
+     25
+    ],
+    [
+     "Trident_of_Light",
+     25
+    ],
+    [
+     "Trident_of_Night",
+     25
+    ]
+   ]
+  },
+  "menacing presense": {
+   "drop_count": 1,
+   "items": [
+    [
+     "Jade",
+     29
+    ],
+    [
+     "Worn_Studded_Gauntlets",
+     9
+    ]
+   ]
+  },
+  "Nasher": {
+   "drop_count": 2,
+   "items": [
+    [
+     "jewelofdarkbeauty",
+     1
+    ]
+   ]
+  },
+  "Nogoribando": {
+   "drop_count": 4,
+   "items": [
+    [
+     "Noguribandos_Ring_of_Power",
+     25
+    ]
+   ]
+  },
+  "phantom": {
+   "drop_count": 1,
+   "items": [
+    [
+     "Majestic_Mantle_of_the_Eternal",
+     1
+    ]
+   ]
+  },
+  "phantom hound": {
+   "drop_count": 1,
+   "items": [
+    [
+     "Shimmering_Gnawed_Bone",
+     35
+    ]
+   ]
+  },
+  "Royal Iceweaver": {
+   "drop_count": 4,
+   "items": [
+    [
+     "Royal Iceweaver`s Remains",
+     10
+    ]
+   ]
+  },
+  "Screak": {
+   "drop_count": 2,
+   "items": [
+    [
+     "Shreaks_Scream_Drum",
+     5
+    ]
+   ]
+  },
+  "Spat": {
+   "drop_count": 2,
+   "items": [
+    [
+     "Spats_Remains",
+     10
+    ]
+   ]
+  },
+  "Stinky": {
+   "drop_count": 2,
+   "items": [
+    [
+     "badger_cub_fur",
+     57
+    ]
+   ]
+  },
+  "Taras Princep Praetorii": {
+   "drop_count": 2,
+   "items": [
+    [
+     "Vae_Inimicus_Armilla",
+     5
+    ],
+    [
+     "Vae_Inimicus_Lochaber_Axe",
+     5
+    ]
+   ]
+  },
+  "The Great Gobzini": {
+   "drop_count": 2,
+   "items": [
+    [
+     "Arm-bone_Scepter",
+     15
+    ]
+   ]
+  },
+  "thrawn ogre goon": {
+   "drop_count": 1,
+   "items": [
+    [
+     "Honed_Mantle",
+     3
+    ]
+   ]
+  },
+  "Ulor se Bysen": {
+   "drop_count": 4,
+   "items": [
+    [
+     "Crude_Silken_Cap",
+     25
+    ]
+   ]
+  },
+  "Virilis": {
+   "drop_count": 2,
+   "items": [
+    [
+     "Silvered_Drakescale_Gauntlets",
+     1
+    ]
+   ]
+  },
+  "werewolf lord": {
+   "drop_count": 1,
+   "items": [
+    [
+     "2_GG_Sleeves",
+     2
+    ],
+    [
+     "2_GGW_1hHammer",
+     1
+    ],
+    [
+     "2_GG_Gloves",
+     1
+    ],
+    [
+     "2_GG_Hauberk",
+     1
+    ],
+    [
+     "2_GG_Leggings",
+     1
+    ]
+   ]
+  },
+  "wrath sprite": {
+   "drop_count": 1,
+   "items": [
+    [
+     "Spritely_Stiletto",
+     1
+    ],
+    [
+     "p165_drop_2897",
+     1
+    ]
+   ]
+  }
+ }
+}

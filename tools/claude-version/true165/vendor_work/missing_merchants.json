@@ -1,0 +1,3563 @@
+{
+ "missing": [
+  {
+   "name": "Eileen Morton",
+   "realm": "Albion",
+   "period_role": "Instrument Merchant (period Allakhazam: \"Merchant (Instruments)\", \"Bard Instruments\")",
+   "town": "Camelot Hills (Cotswold, next to Ydenia Philpott)",
+   "coordinates": [
+    {
+     "capnbry_mob": "1586",
+     "typetag": "Instrument Merchant",
+     "zone_id": 0,
+     "zone": "Camelot Hills",
+     "zone_local": [
+      10631,
+      27415,
+      2496
+     ],
+     "Region": 1,
+     "X": 559495,
+     "Y": 510743,
+     "Z": 2496,
+     "level": 21
+    }
+   ],
+   "model_race_gender": "not in any source (CapnBry/Allakhazam/Uthgard/Warcry give none)",
+   "sold": [
+    "Ebonwood Drum",
+    "Ebonwood Flute",
+    "Ebonwood Lute",
+    "Elm Drum",
+    "Elm Flute",
+    "Elm Lute",
+    "Heartwood Drum",
+    "Heartwood Flute",
+    "Heartwood Lute",
+    "Ironwood Drum",
+    "Ironwood Flute",
+    "Ironwood Lute",
+    "Oaken Drum",
+    "Oaken Lute",
+    "Rowan Drum",
+    "Rowan Flute",
+    "Rowan Lute",
+    "Runewood Drum",
+    "Runewood Flute",
+    "Runewood Lute",
+    "Stonewood Drum",
+    "Stonewood Flute",
+    "Stonewood Lute"
+   ],
+   "evidence": [
+    "period Allakhazam mob 2138 (capture 2003-10-23): Albion, Merchant (Instruments), daatlas map #1",
+    "CapnBry mob 1586: \"Instrument Merchant\", zone 0 Camelot Hills loc 10631,27415 z2496, level 21",
+    "our world: Ydenia Philpott <Instrument Merchant> stands 114 units away; Ydenia is a separate period NPC (period Allakhazam mob 2137, CapnBry), so Eileen is a new spawn",
+    "period Allakhazam mob page Goods for Sale (20031023124452): 24 items"
+   ],
+   "placement": {
+    "kind": "new spawn (position from CapnBry, period-era radar data)",
+    "Region": 1,
+    "X": 559495,
+    "Y": 510743,
+    "Z": 2496,
+    "Heading": 0,
+    "Model": 6,
+    "Size": 52,
+    "Level": 21,
+    "Realm": 1,
+    "Name": "Eileen Morton",
+    "Guild": "Instrument Merchant",
+    "ClassType": "DOL.GS.GameMerchant",
+    "ItemsListTemplateID": "p165list_Eileen_Morton",
+    "derived": "Heading/Model/Size copied from the nearest Instrument (Ydenia Philpott, Mob_ID 666be9c5-71c0-495a-a83c-cbb604c5d0b4); model, race and gender are not in any source",
+    "source_spot": {
+     "capnbry_mob": "1586",
+     "typetag": "Instrument Merchant",
+     "zone_id": 0,
+     "zone": "Camelot Hills",
+     "zone_local": [
+      10631,
+      27415,
+      2496
+     ],
+     "Region": 1,
+     "X": 559495,
+     "Y": 510743,
+     "Z": 2496,
+     "level": 21
+    },
+    "nearest_now": [
+     {
+      "name": "Ydenia Philpott",
+      "guild": "Instrument Merchant",
+      "dist": 114
+     },
+     {
+      "name": "Daniel Edwards",
+      "guild": "",
+      "dist": 221
+     },
+     {
+      "name": "Odelia Wyman",
+      "guild": "",
+      "dist": 309
+     }
+    ]
+   },
+   "stock_list": {
+    "new_list_id": "p165list_Eileen_Morton",
+    "rows_total": 24,
+    "rows_by_confidence": {
+     "medium": 24
+    },
+    "rows": [
+     {
+      "template_id": "ebonwood_lute",
+      "page_key": 9545,
+      "item_name": "Ebonwood Lute",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 0
+     },
+     {
+      "template_id": "elm_lute",
+      "page_key": 9546,
+      "item_name": "Elm Lute",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 1
+     },
+     {
+      "template_id": "heartwood_lute",
+      "page_key": 9547,
+      "item_name": "Heartwood Lute",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 2
+     },
+     {
+      "template_id": "ironwood_lute",
+      "page_key": 9548,
+      "item_name": "Ironwood Lute",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 3
+     },
+     {
+      "template_id": "oaken_lute",
+      "page_key": 9549,
+      "item_name": "Oaken Lute",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 4
+     },
+     {
+      "template_id": "rowan_lute",
+      "page_key": 9550,
+      "item_name": "Rowan Lute",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 5
+     },
+     {
+      "template_id": "runewood_lute",
+      "page_key": 9551,
+      "item_name": "Runewood Lute",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 6
+     },
+     {
+      "template_id": "stonewood_lute",
+      "page_key": 9552,
+      "item_name": "Stonewood Lute",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 7
+     },
+     {
+      "template_id": "ebonwood_drum",
+      "page_key": 9553,
+      "item_name": "Ebonwood Drum",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 8
+     },
+     {
+      "template_id": "elm_drum",
+      "page_key": 9554,
+      "item_name": "Elm Drum",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 9
+     },
+     {
+      "template_id": "heartwood_drum",
+      "page_key": 9555,
+      "item_name": "Heartwood Drum",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 10
+     },
+     {
+      "template_id": "ironwood_drum",
+      "page_key": 9556,
+      "item_name": "Ironwood Drum",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 11
+     },
+     {
+      "template_id": "oaken_drum",
+      "page_key": 9557,
+      "item_name": "Oaken Drum",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 12
+     },
+     {
+      "template_id": "rowan_drum",
+      "page_key": 9558,
+      "item_name": "Rowan Drum",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 13
+     },
+     {
+      "template_id": "runewood_drum",
+      "page_key": 9559,
+      "item_name": "Runewood Drum",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 14
+     },
+     {
+      "template_id": "stonewood_drum",
+      "page_key": 9560,
+      "item_name": "Stonewood Drum",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 15
+     },
+     {
+      "template_id": "ebonwood_flute",
+      "page_key": 9561,
+      "item_name": "Ebonwood Flute",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 16
+     },
+     {
+      "template_id": "elm_flute",
+      "page_key": 9562,
+      "item_name": "Elm Flute",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 17
+     },
+     {
+      "template_id": "heartwood_flute",
+      "page_key": 9563,
+      "item_name": "Heartwood Flute",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 18
+     },
+     {
+      "template_id": "ironwood_flute",
+      "page_key": 9564,
+      "item_name": "Ironwood Flute",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 19
+     },
+     {
+      "template_id": "rowan_flute",
+      "page_key": 9566,
+      "item_name": "Rowan Flute",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 20
+     },
+     {
+      "template_id": "runewood_flute",
+      "page_key": 9567,
+      "item_name": "Runewood Flute",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 21
+     },
+     {
+      "template_id": "stonewood_flute",
+      "page_key": 9568,
+      "item_name": "Stonewood Flute",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 22
+     },
+     {
+      "template_id": "oaken_flute",
+      "page_key": null,
+      "item_name": "Oaken Flute",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20031023124452); no item page; template by name",
+      "prices": [],
+      "page": 0,
+      "slot": 23
+     }
+    ],
+    "sources": [
+     "period item pages",
+     "period Allakhazam mob page http://camelot.allakhazam.com:80/Mobs/search.html?cmob=2138 (20031023124452)"
+    ]
+   }
+  },
+  {
+   "name": "Madarl",
+   "realm": "Hibernia",
+   "period_role": "Merchant (period Allakhazam live: \"Cloth Dye, Cloth Armor\")",
+   "town": "Tir na Nog (by the woven-armour merchants and mage trainers)",
+   "coordinates": [
+    {
+     "capnbry_mob": "2297",
+     "typetag": "",
+     "zone_id": 209,
+     "zone": "Tir na Nog",
+     "zone_local": [
+      14867,
+      21387,
+      7198
+     ],
+     "Region": 201,
+     "X": 23059,
+     "Y": 29579,
+     "Z": 7198,
+     "level": 35
+    }
+   ],
+   "model_race_gender": "not in any source (CapnBry/Allakhazam/Uthgard/Warcry give none)",
+   "sold": [
+    "Blue Cloth Dye",
+    "Brown Cloth Dye",
+    "Cloak"
+   ],
+   "evidence": [
+    "CapnBry mob 2297: zone 209 Tir na Nog loc 14867,21387 z7198, level 35",
+    "Allakhazam live mob 6718: Tir na Nog, \"Mob No Longer Exists\" (removed after the period)",
+    "period item pages: cloth dyes, robes, cloaks"
+   ],
+   "placement": {
+    "kind": "new spawn (position from CapnBry, period-era radar data)",
+    "Region": 201,
+    "X": 23059,
+    "Y": 29579,
+    "Z": 7198,
+    "Heading": 1642,
+    "Model": 387,
+    "Size": 50,
+    "Level": 35,
+    "Realm": 3,
+    "Name": "Madarl",
+    "Guild": "Merchant",
+    "ClassType": "DOL.GS.GameMerchant",
+    "ItemsListTemplateID": "p165list_Madarl",
+    "derived": "Heading/Model/Size copied from the nearest Armor (Kinnat, Mob_ID a2f0e531-1362-45fb-97da-8adacbdf4730); model, race and gender are not in any source",
+    "source_spot": {
+     "capnbry_mob": "2297",
+     "typetag": "",
+     "zone_id": 209,
+     "zone": "Tir na Nog",
+     "zone_local": [
+      14867,
+      21387,
+      7198
+     ],
+     "Region": 201,
+     "X": 23059,
+     "Y": 29579,
+     "Z": 7198,
+     "level": 35
+    },
+    "nearest_now": [
+     {
+      "name": "Kinnat",
+      "guild": "Armor Merchant",
+      "dist": 27
+     },
+     {
+      "name": "Brianna",
+      "guild": "Weapon Merchant",
+      "dist": 99
+     },
+     {
+      "name": "Ena",
+      "guild": "Mentalist Trainer",
+      "dist": 461
+     }
+    ]
+   },
+   "stock_list": {
+    "new_list_id": "p165list_Madarl",
+    "rows_total": 3,
+    "rows_by_confidence": {
+     "medium": 2,
+     "high": 1
+    },
+    "rows": [
+     {
+      "template_id": "brown_cloth_dye3",
+      "page_key": 5518,
+      "item_name": "Brown Cloth Dye",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 0
+     },
+     {
+      "template_id": "blue_cloth_dye3",
+      "page_key": 6796,
+      "item_name": "Blue Cloth Dye",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 1
+     },
+     {
+      "template_id": "cloak",
+      "page_key": 6808,
+      "item_name": "Cloak",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 2
+     }
+    ]
+   }
+  },
+  {
+   "name": "Nealcail",
+   "realm": "Hibernia",
+   "period_role": "Merchant (cloth dyes, robes, cloaks)",
+   "town": "Tir na Nog",
+   "coordinates": [
+    {
+     "capnbry_mob": "2306",
+     "typetag": "",
+     "zone_id": 209,
+     "zone": "Tir na Nog",
+     "zone_local": [
+      16034,
+      19842,
+      7198
+     ],
+     "Region": 201,
+     "X": 24226,
+     "Y": 28034,
+     "Z": 7198,
+     "level": 35
+    }
+   ],
+   "model_race_gender": "not in any source (CapnBry/Allakhazam/Uthgard/Warcry give none)",
+   "sold": [
+    "Blue Cloth Dye",
+    "Brown Cloth Dye",
+    "Cloak"
+   ],
+   "evidence": [
+    "period Allakhazam mob 1520 (capture 2003-11-01): Hibernia Merchant, level 35, daatlas map #12",
+    "CapnBry mob 2306: zone 209 Tir na Nog loc 16034,19842 z7198, level 35",
+    "Allakhazam live: Tir na Nog, \"Mob No Longer Exists\"",
+    "period Allakhazam mob page Goods for Sale (20031101105008): 13 items"
+   ],
+   "placement": {
+    "kind": "new spawn (position from CapnBry, period-era radar data)",
+    "Region": 201,
+    "X": 24226,
+    "Y": 28034,
+    "Z": 7198,
+    "Heading": 3728,
+    "Model": 380,
+    "Size": 50,
+    "Level": 35,
+    "Realm": 3,
+    "Name": "Nealcail",
+    "Guild": "Merchant",
+    "ClassType": "DOL.GS.GameMerchant",
+    "ItemsListTemplateID": "p165list_Nealcail",
+    "derived": "Heading/Model/Size copied from the nearest Armor (Aulif, Mob_ID b3a239ab-193b-4fba-af96-0a9738eea9aa); model, race and gender are not in any source",
+    "source_spot": {
+     "capnbry_mob": "2306",
+     "typetag": "",
+     "zone_id": 209,
+     "zone": "Tir na Nog",
+     "zone_local": [
+      16034,
+      19842,
+      7198
+     ],
+     "Region": 201,
+     "X": 24226,
+     "Y": 28034,
+     "Z": 7198,
+     "level": 35
+    },
+    "nearest_now": [
+     {
+      "name": "Aulif",
+      "guild": "Armor Merchant",
+      "dist": 73
+     },
+     {
+      "name": "Aghna",
+      "guild": "Weapon Merchant",
+      "dist": 146
+     },
+     {
+      "name": "Anwar",
+      "guild": "Enchanter Trainer",
+      "dist": 461
+     }
+    ]
+   },
+   "stock_list": {
+    "new_list_id": "p165list_Nealcail",
+    "rows_total": 13,
+    "rows_by_confidence": {
+     "medium": 12,
+     "high": 1
+    },
+    "rows": [
+     {
+      "template_id": "brown_cloth_dye3",
+      "page_key": 5518,
+      "item_name": "Brown Cloth Dye",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 0
+     },
+     {
+      "template_id": "blue_cloth_dye3",
+      "page_key": 6796,
+      "item_name": "Blue Cloth Dye",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 1
+     },
+     {
+      "template_id": "cloak",
+      "page_key": 6808,
+      "item_name": "Cloak",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 2
+     },
+     {
+      "template_id": "brocade_dress_robe2",
+      "page_key": null,
+      "item_name": "Brocade Dress Robe (Hib)",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20031101105008); no item page; template by name",
+      "prices": [],
+      "page": 0,
+      "slot": 3
+     },
+     {
+      "template_id": "cloth_bleach",
+      "page_key": null,
+      "item_name": "Cloth Bleach",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20031101105008); no item page; template by name",
+      "prices": [],
+      "page": 0,
+      "slot": 4
+     },
+     {
+      "template_id": "dress_robe3",
+      "page_key": null,
+      "item_name": "Dress Robe (Hib)",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20031101105008); no item page; template by name",
+      "prices": [],
+      "page": 0,
+      "slot": 5
+     },
+     {
+      "template_id": "gossamer_dress_robe3",
+      "page_key": null,
+      "item_name": "Gossamer Dress Robe (Hib)",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20031101105008); no item page; template by name",
+      "prices": [],
+      "page": 0,
+      "slot": 6
+     },
+     {
+      "template_id": "green_cloth_dye3",
+      "page_key": null,
+      "item_name": "Green Cloth Dye",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20031101105008); no item page; template by name",
+      "prices": [],
+      "page": 0,
+      "slot": 7
+     },
+     {
+      "template_id": "linen_dress_robe3",
+      "page_key": null,
+      "item_name": "Linen Dress Robe (Hib)",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20031101105008); no item page; template by name",
+      "prices": [],
+      "page": 0,
+      "slot": 8
+     },
+     {
+      "template_id": "orange_cloth_dye3",
+      "page_key": null,
+      "item_name": "Orange Cloth Dye",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20031101105008); no item page; template by name",
+      "prices": [],
+      "page": 0,
+      "slot": 9
+     },
+     {
+      "template_id": "silk_dress_robe3",
+      "page_key": null,
+      "item_name": "Silk Dress Robe (Hib)",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20031101105008); no item page; template by name",
+      "prices": [],
+      "page": 0,
+      "slot": 10
+     },
+     {
+      "template_id": "sylvan_dress_robe3",
+      "page_key": null,
+      "item_name": "Sylvan Dress Robe (Hib)",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20031101105008); no item page; template by name",
+      "prices": [],
+      "page": 0,
+      "slot": 11
+     },
+     {
+      "template_id": "yellow_cloth_dye3",
+      "page_key": null,
+      "item_name": "Yellow Cloth Dye",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20031101105008); no item page; template by name",
+      "prices": [],
+      "page": 0,
+      "slot": 12
+     }
+    ],
+    "sources": [
+     "period item pages",
+     "period Allakhazam mob page http://camelot.allakhazam.com:80/Mobs/search.html?cmob=1520 (20031101105008)"
+    ]
+   }
+  },
+  {
+   "name": "Vinandr",
+   "realm": "Midgard",
+   "period_role": "Armor Merchant (hats/circlets; period Allakhazam \"Hats\")",
+   "town": "Mularn (Vale of Mularn)",
+   "coordinates": [
+    {
+     "capnbry_mob": "5420",
+     "typetag": "Armor Merchant",
+     "zone_id": 100,
+     "zone": "Vale of Mularn",
+     "zone_local": [
+      52148,
+      53329,
+      4719
+     ],
+     "Region": 100,
+     "X": 805812,
+     "Y": 725073,
+     "Z": 4719,
+     "level": 33
+    }
+   ],
+   "model_race_gender": "not in any source (CapnBry/Allakhazam/Uthgard/Warcry give none)",
+   "sold": [
+    "Alloy Spiked Circlet",
+    "Alloy War Circlet",
+    "Brocade Padded Circlet",
+    "Brocade Pointed Steeple Hat (Mid)",
+    "Bronze Spiked Circlet",
+    "Bronze War Circlet",
+    "Circlet Pattern",
+    "Cured Suede Circlet",
+    "Elegant Fur-Trimmed Tunic",
+    "Embossed Suede Circlet",
+    "Exquisite Fur-Trimmed Tunic",
+    "Fine Alloy Spiked Circlet",
+    "Fine Alloy War Circlet",
+    "Fur-Lined Gloves",
+    "Fur-Lined Leggings",
+    "Fur-Trimmed Boots",
+    "Fur-Trimmed Cap",
+    "Gossamer Pointed Steeple Hat (Mid)",
+    "Hard Suede Circlet",
+    "Iron Spiked Circlet",
+    "Iron War Circlet",
+    "Linen Padded Circlet",
+    "Linen Pointed Steeple Hat (Mid)",
+    "Mithril Spiked Circlet",
+    "Mithril War Circlet",
+    "Pointed Steeple Hat Pattern",
+    "Rawhide Suede Circlet",
+    "Rigid Suede Circlet",
+    "Silk Padded Circlet",
+    "Silk Pointed Steeple Hat (Mid)",
+    "Steel Spiked Circlet",
+    "Steel War Circlet",
+    "Sylvan Padded Circlet",
+    "Sylvan Pointed Steeple Hat (Mid)",
+    "Tanned Suede Circlet",
+    "Winged Helm",
+    "Wolf-Head Helm",
+    "Woolen Padded Circlet"
+   ],
+   "evidence": [
+    "period Allakhazam mob 6370 (capture 2003-07-12): Midgard Merchant, \"Hats\"",
+    "CapnBry mob 5420: \"Armor Merchant\", zone 100 Vale of Mularn loc 52148,53329 z4719, level 33",
+    "Allakhazam live mob 12562: Vale of Mularn (Mularn), level 31",
+    "period Allakhazam mob page Goods for Sale (20030712210104): 41 items"
+   ],
+   "placement": {
+    "kind": "new spawn (position from CapnBry, period-era radar data)",
+    "Region": 100,
+    "X": 805812,
+    "Y": 725073,
+    "Z": 4719,
+    "Heading": 2144,
+    "Model": 218,
+    "Size": 48,
+    "Level": 33,
+    "Realm": 2,
+    "Name": "Vinandr",
+    "Guild": "Armor Merchant",
+    "ClassType": "DOL.GS.GameMerchant",
+    "ItemsListTemplateID": "p165list_Vinandr",
+    "derived": "Heading/Model/Size copied from the nearest Armor (Asta, Mob_ID 64e8cfb8-0850-4385-b523-fed1248598fa); model, race and gender are not in any source",
+    "source_spot": {
+     "capnbry_mob": "5420",
+     "typetag": "Armor Merchant",
+     "zone_id": 100,
+     "zone": "Vale of Mularn",
+     "zone_local": [
+      52148,
+      53329,
+      4719
+     ],
+     "Region": 100,
+     "X": 805812,
+     "Y": 725073,
+     "Z": 4719,
+     "level": 33
+    },
+    "nearest_now": [
+     {
+      "name": "Asta",
+      "guild": "Armor Merchant",
+      "dist": 310
+     },
+     {
+      "name": "ambient rat",
+      "guild": "",
+      "dist": 367
+     },
+     {
+      "name": "Chieftain Guard",
+      "guild": "",
+      "dist": 675
+     }
+    ]
+   },
+   "stock_list": {
+    "new_list_id": "p165list_Vinandr",
+    "rows_total": 41,
+    "rows_by_confidence": {
+     "medium": 13,
+     "high": 24,
+     "low": 4
+    },
+    "rows": [
+     {
+      "template_id": "pointed_steeple_hat_pattern3",
+      "page_key": 8224,
+      "item_name": "Pointed Steeple Hat Pattern",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 0
+     },
+     {
+      "template_id": "alloy_spiked_circlet",
+      "page_key": 8732,
+      "item_name": "Alloy Spiked Circlet",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 1
+     },
+     {
+      "template_id": "alloy_war_circlet",
+      "page_key": 8733,
+      "item_name": "Alloy War Circlet",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 2
+     },
+     {
+      "template_id": "brocade_padded_circlet",
+      "page_key": 8734,
+      "item_name": "Brocade Padded Circlet",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 3
+     },
+     {
+      "template_id": "brocade_woven_pointed_steeple_hat3",
+      "page_key": 8735,
+      "item_name": "Brocade Pointed Steeple Hat (Mid)",
+      "confidence": "medium",
+      "note": "template name differs (spelling): \"brocade woven pointed steeple hat\"",
+      "prices": [],
+      "page": 0,
+      "slot": 4
+     },
+     {
+      "template_id": "bronze_spiked_circlet",
+      "page_key": 8736,
+      "item_name": "Bronze Spiked Circlet",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 5
+     },
+     {
+      "template_id": "bronze_war_circlet",
+      "page_key": 8737,
+      "item_name": "Bronze War Circlet",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 6
+     },
+     {
+      "template_id": "circlet_pattern",
+      "page_key": 8738,
+      "item_name": "Circlet Pattern",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 7
+     },
+     {
+      "template_id": "cured_suede_circlet",
+      "page_key": 8739,
+      "item_name": "Cured Suede Circlet",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 8
+     },
+     {
+      "template_id": "elegant_fur-trimmed_tunic",
+      "page_key": 8740,
+      "item_name": "Elegant Fur-Trimmed Tunic",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 9
+     },
+     {
+      "template_id": "embossed_suede_circlet",
+      "page_key": 8741,
+      "item_name": "Embossed Suede Circlet",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 10
+     },
+     {
+      "template_id": "exquisite_fur-trimmed_tunic",
+      "page_key": 8742,
+      "item_name": "Exquisite Fur-Trimmed Tunic",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 11
+     },
+     {
+      "template_id": "fine_alloy_spiked_circlet",
+      "page_key": 8743,
+      "item_name": "Fine Alloy Spiked Circlet",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 12
+     },
+     {
+      "template_id": "fine_alloy_war_circlet",
+      "page_key": 8744,
+      "item_name": "Fine Alloy War Circlet",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 13
+     },
+     {
+      "template_id": "fur-lined_gloves",
+      "page_key": 8745,
+      "item_name": "Fur-Lined Gloves",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 14
+     },
+     {
+      "template_id": "fur-lined_leggings",
+      "page_key": 8746,
+      "item_name": "Fur-Lined Leggings",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 15
+     },
+     {
+      "template_id": "fur-trimmed_boots",
+      "page_key": 8747,
+      "item_name": "Fur-Trimmed Boots",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 16
+     },
+     {
+      "template_id": "fur-trimmed_cap",
+      "page_key": 8748,
+      "item_name": "Fur-Trimmed Cap",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 17
+     },
+     {
+      "template_id": "gossamer_pointed_steeple_hat",
+      "page_key": 8750,
+      "item_name": "Gossamer Pointed Steeple Hat (Mid)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 18
+     },
+     {
+      "template_id": "hard_suede_circlet",
+      "page_key": 8751,
+      "item_name": "Hard Suede Circlet",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 19
+     },
+     {
+      "template_id": "iron_spiked_circlet",
+      "page_key": 8752,
+      "item_name": "Iron Spiked Circlet",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 20
+     },
+     {
+      "template_id": "iron_war_circlet",
+      "page_key": 8753,
+      "item_name": "Iron War Circlet",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 21
+     },
+     {
+      "template_id": "linen_padded_circlet",
+      "page_key": 8754,
+      "item_name": "Linen Padded Circlet",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 22
+     },
+     {
+      "template_id": "p165_item_8755",
+      "page_key": 8755,
+      "item_name": "Linen Pointed Steeple Hat (Mid)",
+      "confidence": "low",
+      "note": "NOT BUILT: planned id, the item does not exist yet",
+      "prices": [],
+      "page": 0,
+      "slot": 23
+     },
+     {
+      "template_id": "mithril_spiked_circlet",
+      "page_key": 8756,
+      "item_name": "Mithril Spiked Circlet",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 24
+     },
+     {
+      "template_id": "mithril_war_circlet",
+      "page_key": 8757,
+      "item_name": "Mithril War Circlet",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 25
+     },
+     {
+      "template_id": "rawhide_suede_circlet",
+      "page_key": 8758,
+      "item_name": "Rawhide Suede Circlet",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 26
+     },
+     {
+      "template_id": "rigid_suede_circlet",
+      "page_key": 8760,
+      "item_name": "Rigid Suede Circlet",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 27
+     },
+     {
+      "template_id": "silk_padded_circlet",
+      "page_key": 8761,
+      "item_name": "Silk Padded Circlet",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 28
+     },
+     {
+      "template_id": "p165_item_8762",
+      "page_key": 8762,
+      "item_name": "Silk Pointed Steeple Hat (Mid)",
+      "confidence": "low",
+      "note": "NOT BUILT: planned id, the item does not exist yet",
+      "prices": [],
+      "page": 0,
+      "slot": 29
+     },
+     {
+      "template_id": "steel_spiked_circlet",
+      "page_key": 8763,
+      "item_name": "Steel Spiked Circlet",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 0
+     },
+     {
+      "template_id": "steel_war_circlet",
+      "page_key": 8764,
+      "item_name": "Steel War Circlet",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 1
+     },
+     {
+      "template_id": "sylvan_padded_circlet",
+      "page_key": 8765,
+      "item_name": "Sylvan Padded Circlet",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 2
+     },
+     {
+      "template_id": "p165_item_8766",
+      "page_key": 8766,
+      "item_name": "Sylvan Pointed Steeple Hat (Mid)",
+      "confidence": "low",
+      "note": "NOT BUILT: planned id, the item does not exist yet",
+      "prices": [],
+      "page": 1,
+      "slot": 3
+     },
+     {
+      "template_id": "tanned_suede_circlet",
+      "page_key": 8768,
+      "item_name": "Tanned Suede Circlet",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 4
+     },
+     {
+      "template_id": "winged_helm",
+      "page_key": 8769,
+      "item_name": "Winged Helm",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 5
+     },
+     {
+      "template_id": "wolf-head_helm",
+      "page_key": 8770,
+      "item_name": "Wolf-Head Helm",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 6
+     },
+     {
+      "template_id": "woolen_padded_circlet",
+      "page_key": 8771,
+      "item_name": "Woolen Padded Circlet",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 7
+     },
+     {
+      "template_id": "gossamer_padded_circlet",
+      "page_key": null,
+      "item_name": "Gossamer Padded Circlet",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030712210104); no item page; template by name",
+      "prices": [],
+      "page": 1,
+      "slot": 8
+     },
+     {
+      "template_id": "resplendent_fur-trimmed_tunic",
+      "page_key": null,
+      "item_name": "Resplendent Fur-Trimmed Tunic",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030712210104); no item page; template by name",
+      "prices": [],
+      "page": 1,
+      "slot": 9
+     },
+     {
+      "template_id": null,
+      "page_key": null,
+      "item_name": "Woolen Pointed Steeple Hat (Mid)",
+      "confidence": "low",
+      "note": "from the period mob page Goods for Sale; NO ItemTemplate and no item page: item must be created first",
+      "prices": [],
+      "page": 1,
+      "slot": 10
+     }
+    ],
+    "sources": [
+     "period item pages",
+     "period Allakhazam mob page http://camelot.allakhazam.com:80/Mobs/search.html?cmob=6370 (20030712210104)"
+    ]
+   }
+  },
+  {
+   "name": "Borjal",
+   "realm": "Midgard",
+   "period_role": "Shield Merchant",
+   "town": "Bjarken (Gripklosa Mountains)",
+   "coordinates": [
+    {
+     "capnbry_mob": "3389",
+     "typetag": "Shield Merchant",
+     "zone_id": 152,
+     "zone": "Gripklosa Mountains",
+     "zone_local": [
+      9564,
+      57484,
+      4160
+     ],
+     "Region": 151,
+     "X": 288092,
+     "Y": 303244,
+     "Z": 4160,
+     "level": 50
+    }
+   ],
+   "model_race_gender": "not in any source (CapnBry/Allakhazam/Uthgard/Warcry give none)",
+   "sold": [
+    "Buckler",
+    "Elm Heater Shield",
+    "Elm Kite Shield",
+    "Elm Large Block Shield",
+    "Elm Large Round Shield",
+    "Elm Medium Round Shield",
+    "Elm Round Shield",
+    "Embossed Buckler",
+    "Embossed Large Blocking Shield",
+    "Embossed Large Round Shield",
+    "Embossed Medium Heater Shield",
+    "Hard Large Heater Shield",
+    "Hard Large Round Shield",
+    "Hard Medium Block Shield",
+    "Heartwood Heater Shield",
+    "Heartwood Round Shield",
+    "Heartwood Tower Shield",
+    "Ironwood Heater Shield",
+    "Ironwood Kite Shield",
+    "Ironwood Tower Shield",
+    "Large Block Shield",
+    "Large Heater Shield",
+    "Large Round Shield",
+    "Medium Block Shield",
+    "Medium Heater Shield",
+    "Medium Round Shield",
+    "Oaken Buckler",
+    "Oaken Kite Shield",
+    "Oaken Large Block Shield",
+    "Oaken Large Round Shield",
+    "Oaken Medium Block Shield",
+    "Oaken Medium Heater Shield",
+    "Oaken Medium Round Shield",
+    "Oaken Round Shield",
+    "Oaken Tower Shield",
+    "Rigid Buckler",
+    "Rigid Large Block Shield",
+    "Rigid Large Heater Shield",
+    "Rigid Large Round Shield",
+    "Rigid Medium Block Shield",
+    "Rigid Medium Round Shield",
+    "Rowan Heater Shield",
+    "Rowan Tower Shield",
+    "Runewood Heater Shield",
+    "Runewood Round Shield",
+    "Runewood Tower Shield"
+   ],
+   "evidence": [
+    "period Allakhazam mob 6510 (capture 2003-09-04): Midgard Merchant (Shields)",
+    "CapnBry mob 3389: \"Shield Merchant\", zone 152 Gripklosa loc 9564,57484 z4160, level 50",
+    "Allakhazam live: Gripklosa Mountains (Bjarken)",
+    "period Allakhazam mob page Goods for Sale (20030904114705): 65 items"
+   ],
+   "placement": {
+    "kind": "new spawn (position from CapnBry, period-era radar data)",
+    "Region": 151,
+    "X": 288092,
+    "Y": 303244,
+    "Z": 4160,
+    "Heading": 2961,
+    "Model": 793,
+    "Size": 50,
+    "Level": 50,
+    "Realm": 2,
+    "Name": "Borjal",
+    "Guild": "Shield Merchant",
+    "ClassType": "DOL.GS.GameMerchant",
+    "ItemsListTemplateID": "p165list_Borjal",
+    "derived": "Heading/Model/Size copied from the nearest Shield (Hammond, Mob_ID 1a9eaeee-75a5-4098-aa07-0ac8bcfa54fd); model, race and gender are not in any source",
+    "source_spot": {
+     "capnbry_mob": "3389",
+     "typetag": "Shield Merchant",
+     "zone_id": 152,
+     "zone": "Gripklosa Mountains",
+     "zone_local": [
+      9564,
+      57484,
+      4160
+     ],
+     "Region": 151,
+     "X": 288092,
+     "Y": 303244,
+     "Z": 4160,
+     "level": 50
+    },
+    "nearest_now": [
+     {
+      "name": "Hammond",
+      "guild": "Weapon Merchant",
+      "dist": 111
+     },
+     {
+      "name": "Arnie",
+      "guild": "Merchant",
+      "dist": 115
+     },
+     {
+      "name": "Darla",
+      "guild": "Weapon Merchant",
+      "dist": 163
+     }
+    ]
+   },
+   "stock_list": {
+    "new_list_id": "p165list_Borjal",
+    "rows_total": 65,
+    "rows_by_confidence": {
+     "medium": 42,
+     "high": 23
+    },
+    "rows": [
+     {
+      "template_id": "elm_kite_shield2",
+      "page_key": 2140,
+      "item_name": "Elm Kite Shield",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 0
+     },
+     {
+      "template_id": "oaken_kite_shield2",
+      "page_key": 2141,
+      "item_name": "Oaken Kite Shield",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 1
+     },
+     {
+      "template_id": "ironwood_kite_shield2",
+      "page_key": 2142,
+      "item_name": "Ironwood Kite Shield",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 2
+     },
+     {
+      "template_id": "rowan_tower_shield2",
+      "page_key": 2145,
+      "item_name": "Rowan Tower Shield",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 3
+     },
+     {
+      "template_id": "oaken_tower_shield2",
+      "page_key": 2147,
+      "item_name": "Oaken Tower Shield",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 4
+     },
+     {
+      "template_id": "ironwood_tower_shield2",
+      "page_key": 2148,
+      "item_name": "Ironwood Tower Shield",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 5
+     },
+     {
+      "template_id": "heartwood_tower_shield2",
+      "page_key": 2149,
+      "item_name": "Heartwood Tower Shield",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 6
+     },
+     {
+      "template_id": "runewood_tower_shield2",
+      "page_key": 2150,
+      "item_name": "Runewood Tower Shield",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 7
+     },
+     {
+      "template_id": "elm_round_shield2",
+      "page_key": 2152,
+      "item_name": "Elm Round Shield",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 8
+     },
+     {
+      "template_id": "oaken_round_shield2",
+      "page_key": 2153,
+      "item_name": "Oaken Round Shield",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 9
+     },
+     {
+      "template_id": "heartwood_round_shield2",
+      "page_key": 2155,
+      "item_name": "Heartwood Round Shield",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 10
+     },
+     {
+      "template_id": "runewood_round_shield2",
+      "page_key": 2156,
+      "item_name": "Runewood Round Shield",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 11
+     },
+     {
+      "template_id": "rowan_heater_shield2",
+      "page_key": 2157,
+      "item_name": "Rowan Heater Shield",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 12
+     },
+     {
+      "template_id": "elm_heater_shield2",
+      "page_key": 2158,
+      "item_name": "Elm Heater Shield",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 13
+     },
+     {
+      "template_id": "ironwood_heater_shield2",
+      "page_key": 2160,
+      "item_name": "Ironwood Heater Shield",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 14
+     },
+     {
+      "template_id": "heartwood_heater_shield2",
+      "page_key": 2161,
+      "item_name": "Heartwood Heater Shield",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 15
+     },
+     {
+      "template_id": "runewood_heater_shield2",
+      "page_key": 2162,
+      "item_name": "Runewood Heater Shield",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 16
+     },
+     {
+      "template_id": "buckler2",
+      "page_key": 10091,
+      "item_name": "Buckler",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 17
+     },
+     {
+      "template_id": "elm_large_block_shield2",
+      "page_key": 10093,
+      "item_name": "Elm Large Block Shield",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 18
+     },
+     {
+      "template_id": "elm_large_round_shield2",
+      "page_key": 10095,
+      "item_name": "Elm Large Round Shield",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 19
+     },
+     {
+      "template_id": "elm_medium_round_shield2",
+      "page_key": 10098,
+      "item_name": "Elm Medium Round Shield",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 20
+     },
+     {
+      "template_id": "embossed_buckler2",
+      "page_key": 10099,
+      "item_name": "Embossed Buckler",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 21
+     },
+     {
+      "template_id": "embossed_large_block_shield2",
+      "page_key": 10100,
+      "item_name": "Embossed Large Blocking Shield",
+      "confidence": "medium",
+      "note": "template name differs (spelling): \"embossed large block shield\"",
+      "prices": [],
+      "page": 0,
+      "slot": 22
+     },
+     {
+      "template_id": "embossed_large_round_shield2",
+      "page_key": 10102,
+      "item_name": "Embossed Large Round Shield",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 23
+     },
+     {
+      "template_id": "embossed_medium_heater_shield2",
+      "page_key": 10104,
+      "item_name": "Embossed Medium Heater Shield",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 24
+     },
+     {
+      "template_id": "hard_large_heater_shield2",
+      "page_key": 10108,
+      "item_name": "Hard Large Heater Shield",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 25
+     },
+     {
+      "template_id": "hard_large_round_shield2",
+      "page_key": 10109,
+      "item_name": "Hard Large Round Shield",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 26
+     },
+     {
+      "template_id": "hard_medium_block_shield2",
+      "page_key": 10110,
+      "item_name": "Hard Medium Block Shield",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 27
+     },
+     {
+      "template_id": "large_block_shield2",
+      "page_key": 10112,
+      "item_name": "Large Block Shield",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 28
+     },
+     {
+      "template_id": "large_heater_shield2",
+      "page_key": 10113,
+      "item_name": "Large Heater Shield",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 29
+     },
+     {
+      "template_id": "large_round_shield2",
+      "page_key": 10114,
+      "item_name": "Large Round Shield",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 0
+     },
+     {
+      "template_id": "medium_block_shield2",
+      "page_key": 10115,
+      "item_name": "Medium Block Shield",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 1
+     },
+     {
+      "template_id": "medium_heater_shield2",
+      "page_key": 10116,
+      "item_name": "Medium Heater Shield",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 2
+     },
+     {
+      "template_id": "medium_round_shield2",
+      "page_key": 10117,
+      "item_name": "Medium Round Shield",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 3
+     },
+     {
+      "template_id": "oaken_buckler2",
+      "page_key": 10118,
+      "item_name": "Oaken Buckler",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 4
+     },
+     {
+      "template_id": "oak_large_block_shield5",
+      "page_key": 10119,
+      "item_name": "Oaken Large Block Shield",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 5
+     },
+     {
+      "template_id": "oak_large_round_shield5",
+      "page_key": 10121,
+      "item_name": "Oaken Large Round Shield",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 6
+     },
+     {
+      "template_id": "oak_medium_block_shield5",
+      "page_key": 10122,
+      "item_name": "Oaken Medium Block Shield",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 7
+     },
+     {
+      "template_id": "oak_medium_heater_shield5",
+      "page_key": 10123,
+      "item_name": "Oaken Medium Heater Shield",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 8
+     },
+     {
+      "template_id": "oak_medium_round_shield5",
+      "page_key": 10124,
+      "item_name": "Oaken Medium Round Shield",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 9
+     },
+     {
+      "template_id": "rigid_buckler2",
+      "page_key": 10125,
+      "item_name": "Rigid Buckler",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 10
+     },
+     {
+      "template_id": "rigid_large_block_shield2",
+      "page_key": 10126,
+      "item_name": "Rigid Large Block Shield",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 11
+     },
+     {
+      "template_id": "rigid_large_heater_shield2",
+      "page_key": 10127,
+      "item_name": "Rigid Large Heater Shield",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 12
+     },
+     {
+      "template_id": "rigid_large_round_shield2",
+      "page_key": 10128,
+      "item_name": "Rigid Large Round Shield",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 13
+     },
+     {
+      "template_id": "rigid_medium_block_shield2",
+      "page_key": 10129,
+      "item_name": "Rigid Medium Block Shield",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 14
+     },
+     {
+      "template_id": "rigid_medium_round_shield2",
+      "page_key": 10131,
+      "item_name": "Rigid Medium Round Shield",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 15
+     },
+     {
+      "template_id": "elm_buckler2",
+      "page_key": null,
+      "item_name": "Elm Buckler",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030904114705); no item page; template by name",
+      "prices": [],
+      "page": 1,
+      "slot": 16
+     },
+     {
+      "template_id": "elm_large_heater_shield2",
+      "page_key": null,
+      "item_name": "Elm Large Heater Shield",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030904114705); no item page; template by name",
+      "prices": [],
+      "page": 1,
+      "slot": 17
+     },
+     {
+      "template_id": "elm_medium_block_shield2",
+      "page_key": null,
+      "item_name": "Elm Medium Block Shield",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030904114705); no item page; template by name",
+      "prices": [],
+      "page": 1,
+      "slot": 18
+     },
+     {
+      "template_id": "elm_medium_heater_shield2",
+      "page_key": null,
+      "item_name": "Elm Medium Heater Shield",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030904114705); no item page; template by name",
+      "prices": [],
+      "page": 1,
+      "slot": 19
+     },
+     {
+      "template_id": "elm_tower_shield2",
+      "page_key": null,
+      "item_name": "Elm Tower Shield",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030904114705); no item page; template by name",
+      "prices": [],
+      "page": 1,
+      "slot": 20
+     },
+     {
+      "template_id": "embossed_large_heater_shield2",
+      "page_key": null,
+      "item_name": "Embossed Large Heater Shield",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030904114705); no item page; template by name",
+      "prices": [],
+      "page": 1,
+      "slot": 21
+     },
+     {
+      "template_id": "embossed_medium_block_shield2",
+      "page_key": null,
+      "item_name": "Embossed Medium Block Shield",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030904114705); no item page; template by name",
+      "prices": [],
+      "page": 1,
+      "slot": 22
+     },
+     {
+      "template_id": "embossed_medium_round_shield2",
+      "page_key": null,
+      "item_name": "Embossed Medium Round Shield",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030904114705); no item page; template by name",
+      "prices": [],
+      "page": 1,
+      "slot": 23
+     },
+     {
+      "template_id": "hard_buckler2",
+      "page_key": null,
+      "item_name": "Hard Buckler",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030904114705); no item page; template by name",
+      "prices": [],
+      "page": 1,
+      "slot": 24
+     },
+     {
+      "template_id": "hard_large_block_shield2",
+      "page_key": null,
+      "item_name": "Hard Large Block Shield",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030904114705); no item page; template by name",
+      "prices": [],
+      "page": 1,
+      "slot": 25
+     },
+     {
+      "template_id": "hard_medium_round_shield2",
+      "page_key": null,
+      "item_name": "Hard Medium Round Shield",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030904114705); no item page; template by name",
+      "prices": [],
+      "page": 1,
+      "slot": 26
+     },
+     {
+      "template_id": "heartwood_kite_shield2",
+      "page_key": null,
+      "item_name": "Heartwood Kite Shield",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030904114705); no item page; template by name",
+      "prices": [],
+      "page": 1,
+      "slot": 27
+     },
+     {
+      "template_id": "ironwood_round_shield2",
+      "page_key": null,
+      "item_name": "Ironwood Round Shield",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030904114705); no item page; template by name",
+      "prices": [],
+      "page": 1,
+      "slot": 28
+     },
+     {
+      "template_id": "oaken_heater_shield2",
+      "page_key": null,
+      "item_name": "Oaken Heater Shield",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030904114705); no item page; template by name",
+      "prices": [],
+      "page": 1,
+      "slot": 29
+     },
+     {
+      "template_id": "oak_large_heater_shield2",
+      "page_key": null,
+      "item_name": "Oaken Large Heater Shield",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030904114705); no item page; template by name",
+      "prices": [],
+      "page": 2,
+      "slot": 0
+     },
+     {
+      "template_id": "rigid_medium_heater_shield2",
+      "page_key": null,
+      "item_name": "Rigid Medium Heater Shield",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030904114705); no item page; template by name",
+      "prices": [],
+      "page": 2,
+      "slot": 1
+     },
+     {
+      "template_id": "rowan_kite_shield2",
+      "page_key": null,
+      "item_name": "Rowan Kite Shield",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030904114705); no item page; template by name",
+      "prices": [],
+      "page": 2,
+      "slot": 2
+     },
+     {
+      "template_id": "rowan_round_shield2",
+      "page_key": null,
+      "item_name": "Rowan Round Shield",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030904114705); no item page; template by name",
+      "prices": [],
+      "page": 2,
+      "slot": 3
+     },
+     {
+      "template_id": "runewood_kite_shield2",
+      "page_key": null,
+      "item_name": "Runewood Kite Shield",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030904114705); no item page; template by name",
+      "prices": [],
+      "page": 2,
+      "slot": 4
+     }
+    ],
+    "sources": [
+     "period item pages",
+     "period Allakhazam mob page http://camelot.allakhazam.com:80/Mobs/search.html?cmob=6510 (20030904114705)"
+    ]
+   }
+  },
+  {
+   "name": "Royd",
+   "realm": "Midgard",
+   "period_role": "Merchant (Bounty Items: totems)",
+   "town": "Jordheim",
+   "coordinates": [
+    {
+     "capnbry_mob": "1810",
+     "typetag": "Merchant",
+     "zone_id": 120,
+     "zone": "Jordheim",
+     "zone_local": [
+      23440,
+      25549,
+      8029
+     ],
+     "Region": 101,
+     "X": 31632,
+     "Y": 33741,
+     "Z": 8029,
+     "level": 50
+    }
+   ],
+   "model_race_gender": "not in any source (CapnBry/Allakhazam/Uthgard/Warcry give none)",
+   "sold": [
+    "Carved Totem of Eir",
+    "Carved Totem of Heimdal",
+    "Carved Totem of Odin",
+    "Embossed Totem of Eir",
+    "Embossed Totem of Heimdal",
+    "Embossed Totem of Odin"
+   ],
+   "evidence": [
+    "period Allakhazam mob 2779 (capture 2003-09-23): Midgard Merchant (Bounty Items), daatlas map #2",
+    "CapnBry mob 1810: \"Merchant\", zone 120 Jordheim loc 23440,25549 z8029, level 50",
+    "Allakhazam live: Jordheim, \"Mob No Longer Exists\"",
+    "period item pages give no prices for the totems; Allakhazam calls them bounty items -> GameBountyMerchant (13 exist in our world) if the totems are bounty-point priced",
+    "period Allakhazam mob page Goods for Sale (20030923134302): 12 items"
+   ],
+   "placement": {
+    "kind": "new spawn (position from CapnBry, period-era radar data)",
+    "Region": 101,
+    "X": 31632,
+    "Y": 33741,
+    "Z": 8029,
+    "Heading": 1496,
+    "Model": 167,
+    "Size": 51,
+    "Level": 50,
+    "Realm": 2,
+    "Name": "Royd",
+    "Guild": "Merchant",
+    "ClassType": "DOL.GS.GameBountyMerchant (if the totems are bounty-point priced; prices not on the pages) else DOL.GS.GameMerchant",
+    "ItemsListTemplateID": "p165list_Royd",
+    "derived": "Heading/Model/Size copied from the nearest Merchant (Solveig, Mob_ID 434c15e0-35ae-4e11-acb6-a282822f5f8b); model, race and gender are not in any source",
+    "source_spot": {
+     "capnbry_mob": "1810",
+     "typetag": "Merchant",
+     "zone_id": 120,
+     "zone": "Jordheim",
+     "zone_local": [
+      23440,
+      25549,
+      8029
+     ],
+     "Region": 101,
+     "X": 31632,
+     "Y": 33741,
+     "Z": 8029,
+     "level": 50
+    },
+    "nearest_now": [
+     {
+      "name": "Gythja of Bragi",
+      "guild": "",
+      "dist": 405
+     },
+     {
+      "name": "Gothi of Thor",
+      "guild": "",
+      "dist": 543
+     },
+     {
+      "name": "Gythja of Odin",
+      "guild": "",
+      "dist": 582
+     }
+    ]
+   },
+   "stock_list": {
+    "new_list_id": "p165list_Royd",
+    "rows_total": 12,
+    "rows_by_confidence": {
+     "high": 6,
+     "medium": 6
+    },
+    "rows": [
+     {
+      "template_id": "Carved_Totem_of_Eir",
+      "page_key": 3540,
+      "item_name": "Carved Totem of Eir",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 0
+     },
+     {
+      "template_id": "Carved_Totem_of_Heimdal",
+      "page_key": 3541,
+      "item_name": "Carved Totem of Heimdal",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 1
+     },
+     {
+      "template_id": "Carved_Totem_of_Odin",
+      "page_key": 3542,
+      "item_name": "Carved Totem of Odin",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 2
+     },
+     {
+      "template_id": "Embossed_Totem_of_Odin",
+      "page_key": 3543,
+      "item_name": "Embossed Totem of Odin",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 3
+     },
+     {
+      "template_id": "Embossed_Totem_of_Eir",
+      "page_key": 3544,
+      "item_name": "Embossed Totem of Eir",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 4
+     },
+     {
+      "template_id": "Embossed_Totem_of_Heimdal",
+      "page_key": 3545,
+      "item_name": "Embossed Totem of Heimdal",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 5
+     },
+     {
+      "template_id": "Encrusted_Totem_of_Eir",
+      "page_key": null,
+      "item_name": "Encrusted Totem of Eir",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030923134302); no item page; template by name",
+      "prices": [],
+      "page": 0,
+      "slot": 6
+     },
+     {
+      "template_id": "Encrusted_Totem_of_Heimdal",
+      "page_key": null,
+      "item_name": "Encrusted Totem of Heimdal",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030923134302); no item page; template by name",
+      "prices": [],
+      "page": 0,
+      "slot": 7
+     },
+     {
+      "template_id": "Encrusted_Totem_of_Odin",
+      "page_key": null,
+      "item_name": "Encrusted Totem of Odin",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030923134302); no item page; template by name",
+      "prices": [],
+      "page": 0,
+      "slot": 8
+     },
+     {
+      "template_id": "Polished_Totem_of_Eir",
+      "page_key": null,
+      "item_name": "Polished Totem of Eir",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030923134302); no item page; template by name",
+      "prices": [],
+      "page": 0,
+      "slot": 9
+     },
+     {
+      "template_id": "Polished_Totem_of_Heimdal",
+      "page_key": null,
+      "item_name": "Polished Totem of Heimdal",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030923134302); no item page; template by name",
+      "prices": [],
+      "page": 0,
+      "slot": 10
+     },
+     {
+      "template_id": "Polished_Totem_of_Odin",
+      "page_key": null,
+      "item_name": "Polished Totem of Odin",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030923134302); no item page; template by name",
+      "prices": [],
+      "page": 0,
+      "slot": 11
+     }
+    ],
+    "sources": [
+     "period item pages",
+     "period Allakhazam mob page http://camelot.allakhazam.com:80/Mobs/search.html?cmob=2779 (20030923134302)"
+    ]
+   }
+  },
+  {
+   "name": "Melanaha",
+   "realm": "Hibernia",
+   "period_role": "Merchant (\"Hats\"); also a quest giver (Hats off to Molanoho!, live)",
+   "town": "Mag Mell (Lough Derg)",
+   "coordinates": [],
+   "model_race_gender": "not in any source (CapnBry/Allakhazam/Uthgard/Warcry give none)",
+   "sold": [
+    "Amber Encrusted Ivy Wreath",
+    "Antlered Helm",
+    "Bone Ivy Encrusted Ivy Wreath",
+    "Brocade Pointed Steeple Hat (Hib)",
+    "Brocade Woven Wreath",
+    "Carbide Mistletoe Spiked Wreath",
+    "Cobalt Mistletoe Spiked Wreath",
+    "Cured Suede Wreath",
+    "Elegant Moss-Trimmed Tunic",
+    "Embossed Suede Wreath",
+    "Encrusted Ivy Wreath",
+    "Entwined Leaf Hat",
+    "Exquisite Moss-Trimmed Tunic",
+    "Ferrite Mistletoe Spiked Wreath",
+    "Fossil Encrusred Ivy Wreath",
+    "Hard Suede Wreath",
+    "Linen Pointed Steeple Hat (Hib)",
+    "Linen Woven Wreath",
+    "Mistletoe Spiked Wreath",
+    "Moss-Trimmed Boots",
+    "Moss-Trimmed Gloves",
+    "Moss-Trimmed Leggings",
+    "Pointed Steeple Hat Pattern",
+    "Quartz Mistletoe Spiked Wreath",
+    "Rawhide Suede Wreath",
+    "Rigid Suede Wreath",
+    "Shell Encrusted Ivy Wreath",
+    "Silk Pointed Steeple Hat (Hib)",
+    "Silk Woven Wreath",
+    "Sylvan Pointed Steeple Hat (Hib)",
+    "Sylvan Woven Wreath",
+    "Tanned Suede Wreath",
+    "Woodsman's Hat (Hib)",
+    "Woolen Pointed Steeple Hat (Hib)",
+    "Woolen Woven Wreath",
+    "Wreath Pattern"
+   ],
+   "evidence": [
+    "period Allakhazam mob 6371 (capture 2003-09-16): Hibernia Merchant, \"Hats\"",
+    "period item pages (35): Found in Lough Derg",
+    "Allakhazam live mob 6371: Lough Derg (Mag Mell), level 35",
+    "no coordinates in any source (not in CapnBry, Uthgard or Warcry)",
+    "period Allakhazam mob page Goods for Sale (20030916063220): 41 items"
+   ],
+   "placement": {
+    "kind": "derived: town known (Mag Mell), spot unknown",
+    "Region": 200,
+    "X": 346696,
+    "Y": 489293,
+    "Z": 5209,
+    "Heading": 1809,
+    "Model": 371,
+    "Size": 50,
+    "Level": 35,
+    "Realm": 3,
+    "Name": "Melanaha",
+    "Guild": "Merchant",
+    "ClassType": "DOL.GS.GameMerchant",
+    "ItemsListTemplateID": "p165list_Melanaha",
+    "derived": "placed 80 units from Anice (Mag Mell cloth-armour seller, Mob_ID 601de167-8d9e-4038-9cda-89df83a8ca92); level 35 from Allakhazam live"
+   },
+   "stock_list": {
+    "new_list_id": "p165list_Melanaha",
+    "rows_total": 41,
+    "rows_by_confidence": {
+     "high": 19,
+     "medium": 18,
+     "low": 4
+    },
+    "rows": [
+     {
+      "template_id": "amber_encrusted_ivy_wreath",
+      "page_key": 8204,
+      "item_name": "Amber Encrusted Ivy Wreath",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 0
+     },
+     {
+      "template_id": "antlered_helm",
+      "page_key": 8205,
+      "item_name": "Antlered Helm",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 1
+     },
+     {
+      "template_id": "bone_encrusted_ivy_wreath",
+      "page_key": 8206,
+      "item_name": "Bone Ivy Encrusted Ivy Wreath",
+      "confidence": "medium",
+      "note": "template name differs (spelling): \"bone encrusted ivy wreath\"",
+      "prices": [],
+      "page": 0,
+      "slot": 2
+     },
+     {
+      "template_id": "brocade_woven_wreath",
+      "page_key": 8207,
+      "item_name": "Brocade Woven Wreath",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 3
+     },
+     {
+      "template_id": "carbide_mistletoe_spiked_wreath",
+      "page_key": 8208,
+      "item_name": "Carbide Mistletoe Spiked Wreath",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 4
+     },
+     {
+      "template_id": "cobalt_mistletoe_spiked_wreath",
+      "page_key": 8209,
+      "item_name": "Cobalt Mistletoe Spiked Wreath",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 5
+     },
+     {
+      "template_id": "cured_suede_wreath",
+      "page_key": 8210,
+      "item_name": "Cured Suede Wreath",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 6
+     },
+     {
+      "template_id": "elegant_moss-trimmed_tunic",
+      "page_key": 8212,
+      "item_name": "Elegant Moss-Trimmed Tunic",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 7
+     },
+     {
+      "template_id": "embossed_suede_wreath",
+      "page_key": 8213,
+      "item_name": "Embossed Suede Wreath",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 8
+     },
+     {
+      "template_id": "encrusted_ivy_wreath",
+      "page_key": 8214,
+      "item_name": "Encrusted Ivy Wreath",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 9
+     },
+     {
+      "template_id": "entwined_leaf_hat",
+      "page_key": 8215,
+      "item_name": "Entwined Leaf Hat",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 10
+     },
+     {
+      "template_id": "exquisite_moss-trimmed_tunic",
+      "page_key": 8216,
+      "item_name": "Exquisite Moss-Trimmed Tunic",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 11
+     },
+     {
+      "template_id": "ferrite_mistletoe_spiked_wreath",
+      "page_key": 8217,
+      "item_name": "Ferrite Mistletoe Spiked Wreath",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 12
+     },
+     {
+      "template_id": "fossil_encrusted_ivy_wreath",
+      "page_key": 8218,
+      "item_name": "Fossil Encrusred Ivy Wreath",
+      "confidence": "medium",
+      "note": "template name differs (spelling): \"fossil encrusted ivy wreath\"",
+      "prices": [],
+      "page": 0,
+      "slot": 13
+     },
+     {
+      "template_id": "hard_suede_wreath",
+      "page_key": 8220,
+      "item_name": "Hard Suede Wreath",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 14
+     },
+     {
+      "template_id": "brocade_woven_pointed_steeple_hat",
+      "page_key": 8221,
+      "item_name": "Brocade Pointed Steeple Hat (Hib)",
+      "confidence": "medium",
+      "note": "template name differs (spelling): \"brocade woven pointed steeple hat\"",
+      "prices": [],
+      "page": 0,
+      "slot": 15
+     },
+     {
+      "template_id": "p165_item_8223",
+      "page_key": 8223,
+      "item_name": "Linen Pointed Steeple Hat (Hib)",
+      "confidence": "low",
+      "note": "NOT BUILT: planned id, the item does not exist yet",
+      "prices": [],
+      "page": 0,
+      "slot": 16
+     },
+     {
+      "template_id": "pointed_steeple_hat_pattern",
+      "page_key": 8224,
+      "item_name": "Pointed Steeple Hat Pattern",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 17
+     },
+     {
+      "template_id": "p165_item_8225",
+      "page_key": 8225,
+      "item_name": "Silk Pointed Steeple Hat (Hib)",
+      "confidence": "low",
+      "note": "NOT BUILT: planned id, the item does not exist yet",
+      "prices": [],
+      "page": 0,
+      "slot": 18
+     },
+     {
+      "template_id": "p165_item_8226",
+      "page_key": 8226,
+      "item_name": "Sylvan Pointed Steeple Hat (Hib)",
+      "confidence": "low",
+      "note": "NOT BUILT: planned id, the item does not exist yet",
+      "prices": [],
+      "page": 0,
+      "slot": 19
+     },
+     {
+      "template_id": "woodsmans_hat",
+      "page_key": 8227,
+      "item_name": "Woodsman's Hat (Hib)",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 20
+     },
+     {
+      "template_id": "p165_item_8228",
+      "page_key": 8228,
+      "item_name": "Woolen Pointed Steeple Hat (Hib)",
+      "confidence": "low",
+      "note": "NOT BUILT: planned id, the item does not exist yet",
+      "prices": [],
+      "page": 0,
+      "slot": 21
+     },
+     {
+      "template_id": "wreath_pattern",
+      "page_key": 8229,
+      "item_name": "Wreath Pattern",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 22
+     },
+     {
+      "template_id": "linen_woven_wreath",
+      "page_key": 8230,
+      "item_name": "Linen Woven Wreath",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 23
+     },
+     {
+      "template_id": "mistletoe_spiked_wreath",
+      "page_key": 8231,
+      "item_name": "Mistletoe Spiked Wreath",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 24
+     },
+     {
+      "template_id": "moss-trimmed_leggings",
+      "page_key": 8232,
+      "item_name": "Moss-Trimmed Leggings",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 25
+     },
+     {
+      "template_id": "moss-trimmed_boots",
+      "page_key": 8233,
+      "item_name": "Moss-Trimmed Boots",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 26
+     },
+     {
+      "template_id": "moss-trimmed_gloves",
+      "page_key": 8234,
+      "item_name": "Moss-Trimmed Gloves",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 27
+     },
+     {
+      "template_id": "quartz_mistletoe_spiked_wreath",
+      "page_key": 8235,
+      "item_name": "Quartz Mistletoe Spiked Wreath",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 28
+     },
+     {
+      "template_id": "rawhide_suede_wreath",
+      "page_key": 8236,
+      "item_name": "Rawhide Suede Wreath",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 29
+     },
+     {
+      "template_id": "rigid_suede_wreath",
+      "page_key": 8238,
+      "item_name": "Rigid Suede Wreath",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 0
+     },
+     {
+      "template_id": "shell_encrusted_ivy_wreath",
+      "page_key": 8239,
+      "item_name": "Shell Encrusted Ivy Wreath",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 1
+     },
+     {
+      "template_id": "silk_woven_wreath",
+      "page_key": 8240,
+      "item_name": "Silk Woven Wreath",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 2
+     },
+     {
+      "template_id": "sylvan_woven_wreath",
+      "page_key": 8241,
+      "item_name": "Sylvan Woven Wreath",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 3
+     },
+     {
+      "template_id": "woolen_woven_wreath",
+      "page_key": 8242,
+      "item_name": "Woolen Woven Wreath",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 4
+     },
+     {
+      "template_id": "tanned_suede_wreath",
+      "page_key": 8243,
+      "item_name": "Tanned Suede Wreath",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 1,
+      "slot": 5
+     },
+     {
+      "template_id": "dolomite_mistletoe_spiked_wreath",
+      "page_key": null,
+      "item_name": "Dolomite Mistletoe Spiked Wreath",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030916063220); no item page; template by name",
+      "prices": [],
+      "page": 1,
+      "slot": 6
+     },
+     {
+      "template_id": "gossamer_pointed_steeple_hat",
+      "page_key": null,
+      "item_name": "Gossamer Pointed Steeple Hat (Hib)",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030916063220); no item page; template by name",
+      "prices": [],
+      "page": 1,
+      "slot": 7
+     },
+     {
+      "template_id": "gossamer_woven_wreath",
+      "page_key": null,
+      "item_name": "Gossamer Woven Wreath",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030916063220); no item page; template by name",
+      "prices": [],
+      "page": 1,
+      "slot": 8
+     },
+     {
+      "template_id": "resplendent_moss-trimmed_tunic",
+      "page_key": null,
+      "item_name": "Resplendent Moss-Trimmed Tunic",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030916063220); no item page; template by name",
+      "prices": [],
+      "page": 1,
+      "slot": 9
+     },
+     {
+      "template_id": "vine_encrusted_ivy_wreath",
+      "page_key": null,
+      "item_name": "Vine Encrusted Ivy Wreath",
+      "confidence": "medium",
+      "note": "from the period mob page Goods for Sale (20030916063220); no item page; template by name",
+      "prices": [],
+      "page": 1,
+      "slot": 10
+     }
+    ],
+    "sources": [
+     "period item pages",
+     "period Allakhazam mob page http://camelot.allakhazam.com:80/Mobs/search.html?cmob=6371 (20030916063220)"
+    ]
+   }
+  },
+  {
+   "name": "Rhodyn",
+   "realm": "Hibernia",
+   "period_role": "instrument seller (period item pages only)",
+   "town": "Lough Derg or Tir na Nog (unknown)",
+   "coordinates": [],
+   "model_race_gender": "not in any source (CapnBry/Allakhazam/Uthgard/Warcry give none)",
+   "sold": [
+    "Ebonwood Drum (Hib)",
+    "Ebonwood Flute (Hib)",
+    "Ebonwood Lute (Hib)",
+    "Heartwood Drum (Hib)",
+    "Heartwood Lute (Hib)",
+    "Ironwood Drum (Hib)",
+    "Ironwood Flute (Hib)",
+    "Oaken Drum (Hib)",
+    "Oaken Flute (Hib)",
+    "Oaken Lute (Hib)",
+    "Runewood Drum (Hib)",
+    "Runewood Flute (Hib)",
+    "Runewood Lute (Hib)",
+    "Stonewood Flute (Hib)",
+    "Stonewood Lute (Hib)"
+   ],
+   "evidence": [
+    "only the 15 period item pages (captures 2003-10-26) name Rhodyn, always together with Edsoner (Lough Derg) and Fingal (Tir na Nog), Found in Lough Derg + Tir na Nog",
+    "not in CapnBry, Allakhazam mob pages (period or live), Uthgard or Warcry; our world has Rhosyn <Instrument Merchant> in Tir na Nog (name ratio 0.83) but Rhosyn is a separate period seller on other pages"
+   ],
+   "placement": {
+    "kind": "UNPLACEABLE from sources: town is Lough Derg or Tir na Nog",
+    "options": [
+     {
+      "name": "Fingal",
+      "guild": "Instrument Merchant",
+      "mob_id": "584fe62e-9ff6-45c6-9551-c9e4fea1280a",
+      "X": 30558,
+      "Y": 34779,
+      "Z": 7711,
+      "Heading": 1321,
+      "Model": 380,
+      "Size": 50,
+      "Level": 34,
+      "list": "77793003",
+      "zone": "Tir na Nog"
+     },
+     {
+      "name": "Edsoner",
+      "guild": "Instrument Merchant",
+      "mob_id": "bef69eba-ed70-4cae-99fc-ce444f8e1fab",
+      "X": 352711,
+      "Y": 517054,
+      "Z": 5115,
+      "Heading": 1326,
+      "Model": 390,
+      "Size": 52,
+      "Level": 37,
+      "list": "hibinstruments",
+      "zone": "Lough Derg"
+     }
+    ],
+    "suggestion": "derived only: stand next to one of the co-sellers above (owner picks the town); Guild Instrument Merchant, GameMerchant, list p165list_Rhodyn"
+   },
+   "stock_list": {
+    "new_list_id": "p165list_Rhodyn",
+    "rows_total": 15,
+    "rows_by_confidence": {
+     "high": 15
+    },
+    "rows": [
+     {
+      "template_id": "ebonwood_drum3",
+      "page_key": 9016,
+      "item_name": "Ebonwood Drum (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 0
+     },
+     {
+      "template_id": "ebonwood_flute3",
+      "page_key": 9017,
+      "item_name": "Ebonwood Flute (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 1
+     },
+     {
+      "template_id": "ebonwood_lute3",
+      "page_key": 9018,
+      "item_name": "Ebonwood Lute (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 2
+     },
+     {
+      "template_id": "heartwood_drum3",
+      "page_key": 9019,
+      "item_name": "Heartwood Drum (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 3
+     },
+     {
+      "template_id": "heartwood_lute3",
+      "page_key": 9021,
+      "item_name": "Heartwood Lute (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 4
+     },
+     {
+      "template_id": "ironwood_drum3",
+      "page_key": 9022,
+      "item_name": "Ironwood Drum (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 5
+     },
+     {
+      "template_id": "ironwood_flute3",
+      "page_key": 9023,
+      "item_name": "Ironwood Flute (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 6
+     },
+     {
+      "template_id": "oaken_drum3",
+      "page_key": 9025,
+      "item_name": "Oaken Drum (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 7
+     },
+     {
+      "template_id": "oaken_flute3",
+      "page_key": 9026,
+      "item_name": "Oaken Flute (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 8
+     },
+     {
+      "template_id": "oaken_lute3",
+      "page_key": 9027,
+      "item_name": "Oaken Lute (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 9
+     },
+     {
+      "template_id": "runewood_drum3",
+      "page_key": 9028,
+      "item_name": "Runewood Drum (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 10
+     },
+     {
+      "template_id": "runewood_flute3",
+      "page_key": 9029,
+      "item_name": "Runewood Flute (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 11
+     },
+     {
+      "template_id": "runewood_lute3",
+      "page_key": 9030,
+      "item_name": "Runewood Lute (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 12
+     },
+     {
+      "template_id": "stonewood_flute3",
+      "page_key": 9032,
+      "item_name": "Stonewood Flute (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 13
+     },
+     {
+      "template_id": "stonewood_lute3",
+      "page_key": 9033,
+      "item_name": "Stonewood Lute (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 14
+     }
+    ]
+   }
+  },
+  {
+   "name": "Tempeste",
+   "realm": "Hibernia",
+   "period_role": "bow seller (period item pages only)",
+   "town": "Lough Derg or Tir na Nog (unknown)",
+   "coordinates": [],
+   "model_race_gender": "not in any source (CapnBry/Allakhazam/Uthgard/Warcry give none)",
+   "sold": [
+    "Elm Great Recurve Bow (Hib)",
+    "Elm Recurve Bow (Hib)",
+    "Elm Short Bow (Hib)",
+    "Elm Short Recurve Bow (Hib)",
+    "Heartwood Great Recurve Bow (Hib)",
+    "Heartwood Recurve Bow (Hib)",
+    "Heartwood Short Bow (Hib)",
+    "Heartwood Short Recurve Bow (Hib)",
+    "Ironwood Great Recurve Bow (Hib)",
+    "Ironwood Recurve Bow (Hib)",
+    "Ironwood Short Bow (Hib)",
+    "Ironwood Short Recurve Bow (Hib)",
+    "Oaken Great Recurve Bow (Hib)",
+    "Oaken Recurve Bow (Hib)",
+    "Oaken Short Recurve Bow",
+    "Rowan Great Recurve Bow (Hib)",
+    "Rowan Recurve Bow (Hib)",
+    "Rowan Short Bow (Hib)",
+    "Rowan Short Recurve Bow (Hib)",
+    "Runewood Short Bow (Hib)"
+   ],
+   "evidence": [
+    "only the 20 period item pages (captures 2003-10-26) name Tempeste, together with Kenzia and Briana (Tir na Nog) and Mannix (Lough Derg)",
+    "not in CapnBry, Allakhazam mob pages, Uthgard or Warcry"
+   ],
+   "placement": {
+    "kind": "UNPLACEABLE from sources: town is Lough Derg or Tir na Nog",
+    "options": [
+     {
+      "name": "Mannix",
+      "guild": "Weapon Merchant",
+      "mob_id": "2540d61f-ec0a-4503-9d6c-9ffd54faa27d",
+      "X": 346906,
+      "Y": 491973,
+      "Z": 5215,
+      "Heading": 164,
+      "Model": 354,
+      "Size": 52,
+      "Level": 35,
+      "list": "hibbowmerchant",
+      "zone": "Lough Derg"
+     },
+     {
+      "name": "Kenzia",
+      "guild": "Weapon Merchant",
+      "mob_id": "495ca705-8e9e-4f34-a874-6e05e695c7ac",
+      "X": 30468,
+      "Y": 34591,
+      "Z": 7711,
+      "Heading": 39,
+      "Model": 385,
+      "Size": 50,
+      "Level": 34,
+      "list": "hibbowmerchant",
+      "zone": "Tir na Nog"
+     },
+     {
+      "name": "Briana",
+      "guild": "Weapon Merchant",
+      "mob_id": "e6988970-a67e-4071-b48f-8bddd0cda959",
+      "X": 28066,
+      "Y": 33125,
+      "Z": 6875,
+      "Heading": 1917,
+      "Model": 388,
+      "Size": 50,
+      "Level": 1,
+      "list": "77793004",
+      "zone": "Tir na Nog"
+     }
+    ],
+    "suggestion": "derived only: stand next to one of the co-sellers above (owner picks the town); Guild Weapon Merchant, GameMerchant, list p165list_Tempeste"
+   },
+   "stock_list": {
+    "new_list_id": "p165list_Tempeste",
+    "rows_total": 20,
+    "rows_by_confidence": {
+     "high": 20
+    },
+    "rows": [
+     {
+      "template_id": "elm_great_recurve_bow3",
+      "page_key": 8100,
+      "item_name": "Elm Great Recurve Bow (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 0
+     },
+     {
+      "template_id": "elm_recurve_bow3",
+      "page_key": 8101,
+      "item_name": "Elm Recurve Bow (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 1
+     },
+     {
+      "template_id": "elm_short_bow3",
+      "page_key": 8102,
+      "item_name": "Elm Short Bow (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 2
+     },
+     {
+      "template_id": "elm_short_recurve_bow3",
+      "page_key": 8103,
+      "item_name": "Elm Short Recurve Bow (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 3
+     },
+     {
+      "template_id": "rowan_great_recurve_bow3",
+      "page_key": 8104,
+      "item_name": "Rowan Great Recurve Bow (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 4
+     },
+     {
+      "template_id": "heartwood_great_recurve_bow3",
+      "page_key": 8105,
+      "item_name": "Heartwood Great Recurve Bow (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 5
+     },
+     {
+      "template_id": "heartwood_recurve_bow3",
+      "page_key": 8106,
+      "item_name": "Heartwood Recurve Bow (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 6
+     },
+     {
+      "template_id": "heartwood_short_bow3",
+      "page_key": 8108,
+      "item_name": "Heartwood Short Bow (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 7
+     },
+     {
+      "template_id": "heartwood_short_recurve_bow3",
+      "page_key": 8109,
+      "item_name": "Heartwood Short Recurve Bow (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 8
+     },
+     {
+      "template_id": "ironwood_great_recurve_bow3",
+      "page_key": 8110,
+      "item_name": "Ironwood Great Recurve Bow (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 9
+     },
+     {
+      "template_id": "ironwood_recurve_bow3",
+      "page_key": 8111,
+      "item_name": "Ironwood Recurve Bow (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 10
+     },
+     {
+      "template_id": "ironwood_short_bow3",
+      "page_key": 8112,
+      "item_name": "Ironwood Short Bow (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 11
+     },
+     {
+      "template_id": "ironwood_short_recurve_bow3",
+      "page_key": 8113,
+      "item_name": "Ironwood Short Recurve Bow (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 12
+     },
+     {
+      "template_id": "oaken_great_recurve_bow3",
+      "page_key": 8114,
+      "item_name": "Oaken Great Recurve Bow (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 13
+     },
+     {
+      "template_id": "oaken_recurve_bow3",
+      "page_key": 8115,
+      "item_name": "Oaken Recurve Bow (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 14
+     },
+     {
+      "template_id": "oaken_short_recurve_bow3",
+      "page_key": 8117,
+      "item_name": "Oaken Short Recurve Bow",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 15
+     },
+     {
+      "template_id": "rowan_recurve_bow3",
+      "page_key": 8118,
+      "item_name": "Rowan Recurve Bow (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 16
+     },
+     {
+      "template_id": "rowan_short_bow3",
+      "page_key": 8119,
+      "item_name": "Rowan Short Bow (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 17
+     },
+     {
+      "template_id": "rowan_short_recurve_bow3",
+      "page_key": 8120,
+      "item_name": "Rowan Short Recurve Bow (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 18
+     },
+     {
+      "template_id": "runewood_short_bow3",
+      "page_key": 8123,
+      "item_name": "Runewood Short Bow (Hib)",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 19
+     }
+    ]
+   }
+  },
+  {
+   "name": "Caryan",
+   "realm": "Hibernia",
+   "period_role": "/level free-equipment NPC (weapons), added with the /level command in 1.62; not a merchant",
+   "town": "Tir na Nog, near the mage trainers (period); later Cullin's Inn",
+   "coordinates": [],
+   "model_race_gender": "not in any source (CapnBry/Allakhazam/Uthgard/Warcry give none)",
+   "sold": [
+    "Doddering Weewere Hunter's Block Shield",
+    "Doddering Weewere Hunter's Great Sword",
+    "Doddering Weewere Hunter's Hammer",
+    "Doddering Weewere Hunter's Rapier",
+    "Doddering Weewere Hunter's Spear",
+    "Doddering Weewere Hunter's Sword"
+   ],
+   "evidence": [
+    "Warcry news 2003-07-19 (period, world builder quote): level 20 /level players \"seek out Somyr and Caryan near the mage trainers\" in Tir na Nog",
+    "Warcry news 2004-09 (after period): Somyr and Caryan are in Cullins Inn",
+    "period item pages (6): \"Free item given to /level characters by Caryan in TnN\"",
+    "Allakhazam live mob 6560: \"Gives free weapons to /leveled characters\", Tir na Nog (Cullin's Inn), level 50"
+   ],
+   "placement": {
+    "kind": "derived: next to Somyr (period: \"Somyr and Caryan near the mage trainers\")",
+    "Region": 201,
+    "X": 23252,
+    "Y": 30192,
+    "Z": 7230,
+    "Realm": 3,
+    "Name": "Caryan",
+    "Guild": "",
+    "Level": 50,
+    "ClassType": "OWNER DECISION: /level free-gear giver, not a merchant",
+    "ItemsListTemplateID": null,
+    "derived": "spot = Somyr's approximate spot + 60 units; no own coordinates in any source; Z/Heading as Somyr",
+    "Heading": 2690
+   },
+   "stock_list": {
+    "new_list_id": "p165list_Caryan",
+    "rows_total": 6,
+    "rows_by_confidence": {
+     "medium": 1,
+     "high": 5
+    },
+    "rows": [
+     {
+      "template_id": "Doddering Weewere Hunter`s Block Shield",
+      "page_key": 9890,
+      "item_name": "Doddering Weewere Hunter's Block Shield",
+      "confidence": "medium",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 0
+     },
+     {
+      "template_id": "Doddering Weewere Hunter`s Great Sword",
+      "page_key": 9891,
+      "item_name": "Doddering Weewere Hunter's Great Sword",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 1
+     },
+     {
+      "template_id": "Doddering Weewere Hunter`s Hammer",
+      "page_key": 9892,
+      "item_name": "Doddering Weewere Hunter's Hammer",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 2
+     },
+     {
+      "template_id": "Doddering Weewere Hunter`s Rapier",
+      "page_key": 9893,
+      "item_name": "Doddering Weewere Hunter's Rapier",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 3
+     },
+     {
+      "template_id": "Doddering Weewere Hunter`s Spear",
+      "page_key": 9895,
+      "item_name": "Doddering Weewere Hunter's Spear",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 4
+     },
+     {
+      "template_id": "Doddering Weewere Hunter`s Sword",
+      "page_key": 9896,
+      "item_name": "Doddering Weewere Hunter's Sword",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 5
+     }
+    ]
+   }
+  },
+  {
+   "name": "Somyr",
+   "realm": "Hibernia",
+   "period_role": "/level free-equipment NPC (armour), added with /level in 1.62; not a merchant",
+   "town": "Tir na Nog, near the mage trainers (period)",
+   "coordinates": [
+    {
+     "Region": 201,
+     "X": 23192,
+     "Y": 30192,
+     "source": "period Allakhazam \"Loc 15,22\" (zone-local thousands, +-500)"
+    }
+   ],
+   "model_race_gender": "not in any source (CapnBry/Allakhazam/Uthgard/Warcry give none)",
+   "sold": [
+    "Second-hand Cruanach Coif",
+    "Second-hand Cruanach Gloves",
+    "Second-hand Cruanach Hauberk",
+    "Second-hand Cruanach Leggings",
+    "Second-hand Cruanach Sleeves"
+   ],
+   "evidence": [
+    "period Allakhazam mob 6561 (capture 2003-09-16): \"Gives free armor to /leveled characters. Loc 15,22\"",
+    "Warcry news 2003-07-19: \"Somyr and Caryan near the mage trainers\"",
+    "Loc 15,22 read as /loc thousands in zone 209 -> about 15000,22000 zone-local: right by Ena (Mentalist Trainer) and the woven merchants; 1000-unit precision only"
+   ],
+   "placement": {
+    "kind": "new spawn (approximate: period loc in thousands)",
+    "Region": 201,
+    "X": 23192,
+    "Y": 30192,
+    "Z": 7230,
+    "Heading": 2690,
+    "Model": null,
+    "Size": 50,
+    "Level": 50,
+    "Realm": 3,
+    "Name": "Somyr",
+    "Guild": "",
+    "ClassType": "OWNER DECISION: a /level free-gear giver, not a merchant (no such class found in this pass)",
+    "ItemsListTemplateID": null,
+    "derived": "Z/Heading from nearest trainer Ena; level 50 from Allakhazam live",
+    "source_spot": {
+     "Region": 201,
+     "X": 23192,
+     "Y": 30192,
+     "source": "period Allakhazam \"Loc 15,22\" (zone-local thousands, +-500)"
+    }
+   },
+   "stock_list": {
+    "new_list_id": "p165list_Somyr",
+    "rows_total": 5,
+    "rows_by_confidence": {
+     "high": 5
+    },
+    "rows": [
+     {
+      "template_id": "Second-hand Cruanach Coif",
+      "page_key": 9898,
+      "item_name": "Second-hand Cruanach Coif",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 0
+     },
+     {
+      "template_id": "Second-hand Cruanach Gloves",
+      "page_key": 9899,
+      "item_name": "Second-hand Cruanach Gloves",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 1
+     },
+     {
+      "template_id": "Second-hand Cruanach Hauberk",
+      "page_key": 9900,
+      "item_name": "Second-hand Cruanach Hauberk",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 2
+     },
+     {
+      "template_id": "Second-hand Cruanach Leggings",
+      "page_key": 9901,
+      "item_name": "Second-hand Cruanach Leggings",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 3
+     },
+     {
+      "template_id": "Second-hand Cruanach Sleeves",
+      "page_key": 9902,
+      "item_name": "Second-hand Cruanach Sleeves",
+      "confidence": "high",
+      "note": "",
+      "prices": [],
+      "page": 0,
+      "slot": 4
+     }
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "name": "Dyemaster Marna",
+   "realm": "Albion",
+   "finding": "SAME NPC AS OUR \"Dyemaster Mara\": period Marna at CapnBry zone 26 loc 27487,22873 -> Camelot 35679,31065 z8208; our Dyemaster Mara <Dye Merchant> (list EnamelDye3) stands at 35671,31141 z8208 (76 units). Period Allakhazam mob 1383: Albion Merchant (Enamel Dye).",
+   "proposal": "rename Dyemaster Mara -> Dyemaster Marna (spelling) and give her the period enamel stock (her period items vs EnamelDye3 in the stock check below); the earlier first-name match to \"Marna\" (craft components) was wrong",
+   "mob": [
+    {
+     "name": "Dyemaster Mara",
+     "guild": "Dye Merchant",
+     "mob_id": "7bc1d9e7-a75b-489b-be69-519070bd9a9b",
+     "X": 35671,
+     "Y": 31141,
+     "Z": 8208,
+     "Heading": 1459,
+     "Model": 83,
+     "Size": 50,
+     "Level": 16,
+     "list": "enameldye3"
+    }
+   ],
+   "stock_check": {
+    "period_items": 17,
+    "already_on_EnamelDye3": 17,
+    "missing": []
+   }
+  },
+  {
+   "name": "Ylaine Barret",
+   "realm": "Albion",
+   "finding": "period Allakhazam mob 4573 (2003-11-01) calls her a Quest NPC with known loot Greater Enervating Poison, Isle of Glass (Gothwaite Harbor); CapnBry 4405 \"Ylaine Barrett\" Merchant at Isle of Glass 522790,542142: same as our Ylaine Barrett (spelling).",
+   "proposal": "match confirmed (spelling): our Ylaine Barrett, list AlbAlchemy; the one item page (Greater Enervating Poison) is weak (Allakhazam lists it as loot), low confidence"
+  },
+  {
+   "name": "Dala",
+   "realm": "Albion pages",
+   "finding": "Dala is the Midgard mithril weapon merchant in Jordheim (Warcry patch 1.60 notes \"A high level (mithril) one-hand weapon shopkeeper has been added to Jordheim by name of Dala\"; CapnBry 1794 at our Dala's exact spot). The 7 Albion item pages naming her are Allakhazam listing errors.",
+   "proposal": "nothing to do"
+  },
+  {
+   "name": "Darbo",
+   "realm": "Albion page",
+   "finding": "Darbo is the Hibernian Sapphire-seal armour merchant in DF (period Allakhazam mob 2870); the 1 Albion page is a listing error.",
+   "proposal": "nothing to do"
+  },
+  {
+   "name": "Debo",
+   "realm": "Hibernia page",
+   "finding": "Debo is the Albion Emerald-seal merchant (period mob 3634; CapnBry sees him in DF and also in Camelot City); the 1 Hibernian page (Malign Scarab Cloak) is a listing error.",
+   "proposal": "nothing to do"
+  },
+  {
+   "name": "Eluned",
+   "realm": "Albion page",
+   "finding": "Eluned is the Mag Mell (Lough Derg) cloth-armour merchant (period mob 1630; CapnBry 2025 at our Eluned's spot, 20 units); the 1 Albion page is a listing error. Her Hibernian stock list is in new_lists.json (pass 2).",
+   "proposal": "nothing more"
+  }
+ ]
+}

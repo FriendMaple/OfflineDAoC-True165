@@ -1,0 +1,174 @@
+TRUE 1.65 FIX PASS - ITEM STATS (stats agent, 2026-10-31) - FINAL
+=====================================================================
+Goal: no Trials-of-Atlantis-or-later bonus types and no inflated later values on any ItemTemplate (drops, quest
+rewards, merchant items), back to true 1.65 values where a source has them. Nothing live touched: only the read-only
+snapshot AUDIT\world165_audit.db and a private copy of it were used.
+
+FILES (this folder)
+  updates_final.json   7,237 {"sql","reason"} entries for true165-rules.json "updates". FAST form:
+                       UPDATE ItemTemplate SET ... WHERE Id_nb='...'   (' doubled). THIS IS THE FILE TO INSTALL.
+  updates.json         the same 7,237 statements in the WHERE lower(Id_nb)=lower('...') form (identical result,
+                       ~107 s per refresh instead of 0.24 s; kept only for reference)
+  stats_changes.csv    item, id, source, before, after (bonuses; plus Level/Quality/DPS_AF/SPD_ABS when they
+                       change), one line per statement
+  items.json           every item in scope (7,403): scope reason, decision, source key, notes, column-by-column
+                       before/after, mobs that drop it, merchant flag, apr28_uthgard_agrees, kept_epic_dragon_types
+  report_data.json     all lists quoted below, in full
+  fix_stats.py / test_sql.py / make_report.py   builder (python -I fix_stats.py), SQL test, report numbers
+
+COORDINATOR DECISIONS APPLIED (2026-10-31)
+  1. Apr-28-2003 bulk-dated period pages where Uthgard matches the server's non-ToA bonuses EXACTLY and the page is
+     lower: Uthgard is used (321 items: 291 statements set to the Uthgard page, 30 already equal to Uthgard and need
+     none). Example: Balanced Asterite Hammer page Emp +6 Hits +12 -> Uthgard/server Emp +22 Hits +36 kept.
+     Each such item lists the period page + Uthgard values in items.json "apr28_uthgard_agrees".
+     The other 643 period-page items still on an Apr-28 page (Uthgard absent or not agreeing) keep the period page.
+  2. Acuity / All Magic Skills / All Melee Skills / All Focus on "stripped only" items: KEPT when the item drops
+     from a mob in the 1.64 SI epic dungeons or the dragon zones/lairs where pre-ToA period pages (Aug-Oct 2003) show
+     these types: Galladoria, Caer Sidi, Tuscaran Glacier, Sheeroe Hills (Cuuldurach), Malmohus (Gjalpinulva,
+     drakulv/svartalf), Dartmoor (Golestandt), Crystal Cave (Xanxicar). Mob zones from the Mob table; scripted Caer
+     Sidi / Galladoria bosses without spawns (Apocalypse, Bellum, Corrupt Primal of Water) by name. Summoner's Hall
+     (Summoner Roesia: Twinkling Tiara) and everything else (merchant / crafted / no-page / other mobs): still
+     stripped, no period page shows the types there.
+     50 items kept them (13 still get a statement for other ToA types, 37 needed no change at all):
+       Sheeroe Hills: Black Velvet-lined Armguards (3_) Acuity +24; Frigid Azure Crusher (3_) AllMagic +3;
+         Protector of Weary Souls AllMelee +3; Shield of Tornadic Fury AllMelee +3; Seolc Cap of the Void
+         AllMagic +4, Acuity +16
+       Malmohus: Ageless Bloodbound Cap Acuity +15*; Bewitched Draconic Shield AllMelee +3*; Bloodstained Silk Sash
+         Acuity +22; Brutish Brawler's Armguards AllMelee +3*; Dragonscale Bracelet AllMelee +3*; Dragon's Blood
+         Boots Acuity +24*; Dragon Singed Ebon Coif Acuity +16*; Soulbound Necklace Acuity +12; Staff of Ageless
+         Power AllMagic +3, AllFocus +50*
+       Dartmoor: Dragonscale Buckler AllMelee +3*; Fire Imbued Gloves Acuity +15, AllMagic +4; Lava Imbued Vest
+         AllMagic +3*; Ring of Arcane Gestures Acuity +24, AllMagic +5*; Robe of Stone Speaking AllMagic +3*; Wind
+         Imbued Cap AllMagic +3, Acuity +19*
+       Crystal Cave (Xanxicar): Bracer of Arcane Commands AllMagic +4; Bracer of Arcane Vigor AllMelee +4
+       Tuscaran Glacier: Brittlebone Pants AllMagic +3; Tuscarian Bloodforged Sleeves AllMelee +3
+       Caer Sidi: Defiled Sanquine Gauntlets / Greaves / Warplate AllMelee +3; Defiled Petulant Sleeves AllMagic +3;
+         Royal Thrasher Ring AllMelee +3, AllMagic +3; Sanguine Bowyers Sleeves AllMelee +3*; Vigilant Oathbinder
+         Greaves / Warplate AllMelee +3
+       Galladoria: Bladed Crystal Gauntlets AllMelee +3; Galite Cave Chitin Chestplate, Globule Covered Pants /
+         Robe / Sleeves, Rigid Razorback Boots / Jerkin, Robe of Wailing Vines, Striated Blood Vine Pants, Vine
+         Covered Boots, Virulent Sporite Leggings, Writhing Blackthorn Leggings / Robe / Sleeves AllMagic +3;
+         Phosphorescent Galite Sleeves, Rigid Razorback Leggings / Sleeves, Vine Covered Leggings AllMelee +3
+       (* = still has a statement: its other ToA types, e.g. cap bonuses / PowerPool, are removed)
+     Judgement: Malmohus drakulv/svartalf drops and Xanxicar's lair were counted as "dragon zone/lair"; the
+     coordinator may want to narrow that (Ageless Bloodbound Cap, Bloodstained Silk Sash, Dragon Singed Ebon Coif,
+     Soulbound Necklace, the two Xanxicar bracers).
+
+SCOPE (all 37,775 ItemTemplate rows scanned)
+In scope when an item has a non-zero bonus of a ToA-or-later type, or the audit listed it (later_stat_items.json
+"exceeds", item_actions.json "KEEP, FIX STATS"), or its bonuses are above its own usable period page.
+ToA-or-later types = eProperty 99-119 (Catacombs class lines 99-114, unified Archery 115, 116-119) and 145-256
+(MaxSpeed, MaxConcentration, ArmorFactor, regen amounts, Spell/Archery range, MeleeSpeed, Acuity, Catacombs focus
+157-162, AllMagic/AllMelee/AllFocus/AllDual/AllArchery, evade/block/parry chance, melee/ranged/spell/style damage,
+archery/casting speed, buff/healing/debuff effectiveness, Fatigue, PowerPool %, ResistPierce, SpellDuration, all
+stat/HP/power cap bonuses 201-211, AllSkills, crit chances, resist caps 221-229, mythical, XP/RP/BP, ExtraHP %...).
+Not later: stats, Power (9 = power POINTS), Hits (10), resists, 1.65 skills incl. Longbow 36 / Composite 68 /
+Recurve 83 / Short Bow 93, foci 120-144. Non-wearable items were touched only if they carried such a bonus.
+
+RESULT (final)
+  decision                                         items   dropped by mobs   on merchant lists
+  set to its period Allakhazam page                1,303        609               139
+  set to its Uthgard page                            435        363                16
+     (144 with no usable period page + 291 Apr-28 decision-1 items)
+  stripped only (ToA types zeroed, rest kept)      5,499         32             1,088
+  already matched its source / decision            82   (15 + 30 Apr-28 equal to Uthgard + 37 kept by decision 2)
+  left unchanged (no usable source, no later types) 84
+  STATEMENTS                                       7,237
+
+Later bonus types on the rows in scope, before -> after: Skill_Archery 98->0, Acuity 871->8, AllMagicSkills
+632->17, AllMeleeWeaponSkills 1088->10, AllFocusLevels 153->2, AllArchery 103->0, AllDual 27->0, PowerPool 585->0,
+ArmorFactor 547->0, MeleeSpeed 794->0, CastingSpeed 204->0, ArcherySpeed 26->0, MeleeDamage 516->0, SpellDamage
+234->0, StyleDamage 472->0, BuffEffectiveness 241->0, HealingEffectiveness 402->0, Fatigue 482->0, ExtraHP 47->0,
+Str..Acu cap bonuses 2861->0, MaxHealthCap 332->0, PowerPoolCap 110->0, SpellRange 107->0, ResistPierce 110->0,
+SpellDuration 117->0, Bladeturn/PieceAblative/ReactionaryStyle 269->0, Evade/Block chance 176->0, ArrowRecovery
+77->0, AllSkills 12->0. (Counts on the 37 decision-2 items that need no statement are in "before" only where they
+were counted before; all remaining Acuity/AllMagic/AllMelee/AllFocus are either on the item's own period page
+(list A, 13 items) or kept by decision 2 (50 items).) After the updates no row carries any other non-zero
+ToA-or-later bonus (tested). 166 rows still name a later type id with value 0 in an unused slot: inert, untouched.
+
+HOW VALUES WERE SET
+1. Period page (period_item_pages.jsonl via the items-agent cache work\items\item_sources.json = pageparse.parse +
+   build_vendoritems165.page_stats / map_bonuses, plus analyze.page_bonuses for alias lines). Match: same name
+   (Allakhazam tags stripped), realm equal or 0, page object type and slot equal to the row's, class restriction
+   compatible; among several pages: closest AF/DPS, then closest bonuses, then latest capture. Allakhazam "Unique
+   Item" (random item) pages never used. Set: Bonus1..10 (+types) in page order, unused slots 0/0, ExtraBonus 0/0,
+   DPS_AF/SPD_ABS (armour: Armor Factor/Absorb; weapons: DPS and Delay x10; shields/instruments untouched), Quality.
+   Mapping: "Power N pts" -> MaxMana 9 (points); Longbow/Composite Bow/Recurve Bow -> 36/68/83; "Bow N pts" (old
+   pages) -> the row's bow skill; "ALL Magic Skills" twice (dragon staves) -> AllMagicSkills + AllFocusLevels (the
+   larger line); old "Focus Bonuses: - X: N lvls" lines read from the raw page (pageparse skips them); on staves a
+   magic-line "+N pts" above 15 is focus levels.
+2. Uthgard page (raw item.php pages, same cache): same name, slot/armour type consistent, closest level. Bonuses,
+   AF/DPS/speed/absorb, Quality and Level (Uthgard's item level is a DOL level). ToA-only types never taken from
+   Uthgard.
+3. Stripped only: the row keeps its own values; every ToA-or-later bonus slot is zeroed (except decision 2). One
+   conversion: unified Skill_Archery -> the row's period bow skill (bow object type 9/15/18, else realm), 27 items
+   (report_data.json "archery_renamed"). PowerPool %, ExtraHP %, AllArchery removed, not converted.
+Never changed: spells/charges/procs, Id_nb, Name, Model, Color, Object_Type, Item_Type, Price, Bonus %,
+AllowedClasses.
+
+JUDGEMENT CALLS
+1. Item Level on period-page items: Allakhazam pages give no DOL item level ("Level to Attain" equals the DOL Level
+   on only 57% of untouched items). Left alone, except when the page moves AF/DPS so far that the old level no longer
+   fits (DOL rule cloth AF = level, other armour AF/2, weapons (DPS-1.2)/0.3; > 2 levels apart): 48 items.
+   Uthgard-sourced items take Uthgard's Level (366 items; most Apr-28 decision-1 items get Uthgard's level, which is
+   often a few levels higher, e.g. 35 -> 41).
+2. Apr-28-2003 bulk date: see decision 1.
+3. Pre-rename resist names: 47 period pages list "Earth/Wind/Dark/Light/Mana/Mind/Void Resist" (Allakhazam's 2001
+   data; no such resist in 1.65). Not used (-> Uthgard, else stripped/unchanged).
+4. Stale by their own patch note (8 pages, read by hand, not used): 4173 Sword of the Fiery Heart ("now has stat
+   increases", page lists none); 2532 Ancient Dragon Etched Coif + 2882 Wolftooth Hauberk (pac replaced, page still
+   lists Pacification); 2003 Shrunken Bear Skull (Beastcraft); 6355 Mace of the Valiant (Valor); 4596 Doomcaller (Body
+   twice); 2478 Bear Claw Talisman, 5987 Verdant Ornate Ring ("granted higher bonuses", cannot tell).
+5. Pages with no bonuses: used as "plain item" only when Uthgard also lists none (Aged Mithrian Cloth Pants, Adorned
+   Recurve Bow) or the page was edited after the bulk date with Default Bonus 0% (10 rows end with no bonuses, e.g.
+   Crafted Darksteel Composite Bow, Old Noble's Gauntlets). Not used when: bulk-dated (48 rows), Uthgard lists bonuses
+   (7), focus staff (4), jewelry slot or Default Bonus > 0% (1).
+6. ToA-looking types on an item's own pre-ToA period page are kept (list A).
+7. Same-name Atlas copies (1_, 2_, 3_, Shining_, Bright_, Brilliant_, Shimmering_ ...) carrying the period item's
+   exact in-game Name get the period item's stats (248 period-sourced rows), which can lower them a lot (Bright
+   Decaying Hammer 9.6 -> 4.8 DPS, Level 30 -> 12). Whether these copies should exist is the freeshard/drops agents'
+   call; 7 of my statements hit items marked REMOVE in item_actions.json (harmless: remove rules run before updates,
+   an UPDATE on a missing row does nothing). Real class variants (different AllowedClasses / object type) only get
+   a page that fits them (2 rows skipped).
+8. DPS: the page's "DPS:" field is used, not the "Base DPS" modifier line (Truesilver Recurve Bow: DPS 14.6,
+   "Base DPS: 3.10" = the viewer's clamped value).
+9. "Above its period page" items without later types were changed only when that page was usable (58 left alone).
+
+LISTS
+A. ToA-looking types kept because the item's own period page lists them (13): Buckler of Crystalline Mist (x2),
+   Semi-Ethereal Robe (3_), Defender of Scorched Dreams, Defiled Petulant Gloves, Diamond Spiked Vest, Ensorcelled
+   Draconic Shield, Ring of Arcane Strength, Runed Saga Etched Shield, Staff of Perfect Incantation (AllMagic +5,
+   AllFocus +50), Timeless Indigo Mail (x2), Vigilant Oathbinder's Warplate.
+B. Stripped only, dropped by mobs (32): Ageless Bloodbound Cap, Twinkling Tiara (x2, Summoner's Hall),
+   Bewitched Draconic Shield, Braided Darksteel Jerkin/Leggings/Sleeves (page says leather, server studded: not
+   matched), Brutish Brawler's Armguards, Crushed Leggings, Dragonscale Buckler, Dragonscale Bracelet, Dragon's Blood
+   Boots, Dragon Singed Ebon Coif, Frosty Glacier Skin4, Gilded Verdant Bracer (Green Knight), Glimmerspirit Short
+   Bow, Granite Seer's Pants, Hjalmar Quiver, Ircon Bound Chain Legs, Jegerskygge Bracer, Keen Asterite Large Axe,
+   Lava Imbued Vest, Living Sleeves of Black Ooze, Mystical Moonglade Sleeves, Old Headsman's Axe, Polished Sleeves
+   of Eldspar, Remadun den Laerd's Hooded Mantle (dropping mob has no spawn/zone: stripped), Ring of Arcane
+   Gestures, Robe of Stone Speaking, Sanguine Bowyers Sleeves, Staff of Ageless Power, Wind Imbued Cap.
+   Stripped-only by package: None 2917, Public_DB 1392, '' 566, dolpubdb 446, Offline50-20260904 90, Mythirians 64,
+   atlas_orbs_item 15, drmed 4, ClassicQuest 3, Offline50-20260920 2; 1,088 are on merchant lists (dolpubdb /
+   Public_DB Dragonsworn and crafted-style gear with MeleeDamage/StyleDamage/caps).
+C. Left unchanged (84): no later types and no usable source although the audit or my check said "above the page":
+   pre-rename-resist pages (Forged Darksteel Spiked Axe, Twilight-mail Gloves, Woven Silksteel Pants, Ghostly
+   Truesilver Cap/Helm, Heatstone Band, Tower of the Mind Fortress, several cq_ quest rewards), bulk-dated empty pages
+   (Tomte drops, Crusty Fur, Dried Molded, Muddied Hide, Old Silk, Richly Designed ...), the stale-note pages, 4 pages
+   with lines no server property can hold (Evade, Berserk, Abrasion, Disorientation), 19 pages rejected for another
+   object type/slot/realm (Winged Helm x5: page says cloth; Bow of the Stonewatch: page Short Bow, server Longbow).
+   Full list: report_data.json "unchanged".
+D. Spells (listed, NOT changed): 34 rows have a spell/proc their period page does not show (e.g. 10 quest weapons
+   with ProcSpellID 11106; Crush Born Sword / Battle Scourge / Deathmoon Rapier proc 32126); 52 rows lack a magical
+   ability their page lists (mostly DD procs on Atlas copies). No page proves a spell post-1.65, so none touched.
+   report_data.json "spell_not_on_page", "ability_missing".
+
+TESTS (private copy of the snapshot, test_sql.py)
+  updates_final.json: 7,237 statements, every one ran and matched exactly one row; second run changed nothing
+  (table hash equal); row count unchanged (37,775); no non-zero ToA-or-later bonus left except list A and the 50
+  decision-2 items. updates.json (lower() form) gives an identical table.
+  Speed: Id_nb is the PRIMARY KEY with COLLATE NOCASE, so WHERE Id_nb='x' is case-insensitive AND indexed:
+  all 7,237 in 0.24 s, vs ~107 s per refresh for the lower(Id_nb)=lower('x') form.
+
+NOTES FOR THE COORDINATOR
+- Pure UPDATEs on ItemTemplate, absolute values, keyed by Id_nb: idempotent, safe every refresh.
+- add-*.json runs after updates: if such a file (re)writes one of these rows, its values win on that refresh.

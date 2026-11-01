@@ -1,0 +1,8 @@
+[
+ {
+  "table": "Mob",
+  "key": "Mob_ID",
+  "where": "lower(Name) = 'haunt' AND Region = 129 AND Mob_ID <> 'c8bc4a4a-ac59-46c7-9c10-4858d071fa84'",
+  "reason": "1.65: Nisse's Lair has one roaming haunt (period-zam key 1255 comments 2002: 'she ... spawns once every 5-10 mins'; CapnBry id 283: 10 sightings, one area, lv 17-19; Uthgard one haunt): the 21 extra copies go"
+ }
+]

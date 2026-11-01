@@ -1,0 +1,7709 @@
+{
+ "unresolved": [
+  {
+   "merchant_period_name": "Torr Upton",
+   "realm": "Albion",
+   "list_id": "AlbMithrilPlate",
+   "item_name": "Mithril Full Helm (AF 50)",
+   "page_key": 695,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Torr Upton",
+   "realm": "Albion",
+   "list_id": "AlbMithrilPlate",
+   "item_name": "Mithril Full Helm (AF 54)",
+   "page_key": 3812,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Cedric",
+   "realm": "Hibernia",
+   "list_id": "HibCraftingComponents",
+   "item_name": "Liquid Arcanium Renewal",
+   "page_key": 5781,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Cedric",
+   "realm": "Hibernia",
+   "list_id": "HibCraftingComponents",
+   "item_name": "Liquid Asterium Renewal",
+   "page_key": 5779,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Cedric",
+   "realm": "Hibernia",
+   "list_id": "HibCraftingComponents",
+   "item_name": "Liquid Fine Alloy Renewal",
+   "page_key": 5776,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Cedric",
+   "realm": "Hibernia",
+   "list_id": "HibCraftingComponents",
+   "item_name": "Liquid Netherium Renewal",
+   "page_key": 5780,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Eluned",
+   "realm": "Hibernia",
+   "list_id": "p165list_Eluned",
+   "item_name": "Plain Robe",
+   "page_key": 3858,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Daracha",
+   "realm": "Hibernia",
+   "list_id": "6326d1cf-744d-475b-aa4f-5ccc9c664b09",
+   "item_name": "Svartalf Crafted Belt",
+   "page_key": 1353,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Daracha",
+   "realm": "Hibernia",
+   "list_id": "6326d1cf-744d-475b-aa4f-5ccc9c664b09",
+   "item_name": "Svartalf Crafted Necklace",
+   "page_key": 1216,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Daracha",
+   "realm": "Hibernia",
+   "list_id": "6326d1cf-744d-475b-aa4f-5ccc9c664b09",
+   "item_name": "Svartalf Crafted Ring",
+   "page_key": 1354,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Daracha",
+   "realm": "Hibernia",
+   "list_id": "6326d1cf-744d-475b-aa4f-5ccc9c664b09",
+   "item_name": "Svartalf Hair Collar",
+   "page_key": 3504,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Iago (DF)",
+   "realm": "Midgard",
+   "list_id": "6176da0c-b08e-437f-82d3-94905473ef15",
+   "item_name": "Eternal Strife Boots",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iago (DF)",
+   "realm": "Midgard",
+   "list_id": "6176da0c-b08e-437f-82d3-94905473ef15",
+   "item_name": "Eternal Strife Gloves",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iago (DF)",
+   "realm": "Midgard",
+   "list_id": "6176da0c-b08e-437f-82d3-94905473ef15",
+   "item_name": "Eternal Strife Helm",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iago (DF)",
+   "realm": "Midgard",
+   "list_id": "6176da0c-b08e-437f-82d3-94905473ef15",
+   "item_name": "Eternal Strife Jerkin",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iago (DF)",
+   "realm": "Midgard",
+   "list_id": "6176da0c-b08e-437f-82d3-94905473ef15",
+   "item_name": "Eternal Strife Leggings",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iago (DF)",
+   "realm": "Midgard",
+   "list_id": "6176da0c-b08e-437f-82d3-94905473ef15",
+   "item_name": "Eternal Strife Sleeves",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iago (DF)",
+   "realm": "Midgard",
+   "list_id": "6176da0c-b08e-437f-82d3-94905473ef15",
+   "item_name": "Gossamer Soultorn Pants (Mid)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iago (DF)",
+   "realm": "Midgard",
+   "list_id": "6176da0c-b08e-437f-82d3-94905473ef15",
+   "item_name": "Gossamer Soultorn Sleeves (Mid)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iago (DF)",
+   "realm": "Midgard",
+   "list_id": "6176da0c-b08e-437f-82d3-94905473ef15",
+   "item_name": "Tainted Soultorn Cap",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iono",
+   "realm": "Midgard",
+   "list_id": "baced768-cbb8-4371-ad19-115563af9b01",
+   "item_name": "Atramentous Ichor Boots (Mid)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iono",
+   "realm": "Midgard",
+   "list_id": "baced768-cbb8-4371-ad19-115563af9b01",
+   "item_name": "Atramentous Ichor Gloves",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iono",
+   "realm": "Midgard",
+   "list_id": "baced768-cbb8-4371-ad19-115563af9b01",
+   "item_name": "Atramentous Ichor Helm (Mid)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iono",
+   "realm": "Midgard",
+   "list_id": "baced768-cbb8-4371-ad19-115563af9b01",
+   "item_name": "Atramentous Ichor Jerkin (Mid)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iono",
+   "realm": "Midgard",
+   "list_id": "baced768-cbb8-4371-ad19-115563af9b01",
+   "item_name": "Atramentous Ichor Leggings (Mid)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iono",
+   "realm": "Midgard",
+   "list_id": "baced768-cbb8-4371-ad19-115563af9b01",
+   "item_name": "Atramentous Ichor Sleeves (Mid)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iono",
+   "realm": "Midgard",
+   "list_id": "baced768-cbb8-4371-ad19-115563af9b01",
+   "item_name": "Avernal Necklace (Mid)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iono",
+   "realm": "Midgard",
+   "list_id": "baced768-cbb8-4371-ad19-115563af9b01",
+   "item_name": "Corrupt Infernal Cap",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iono",
+   "realm": "Midgard",
+   "list_id": "baced768-cbb8-4371-ad19-115563af9b01",
+   "item_name": "Corrupted Fuliginous Boots",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iono",
+   "realm": "Midgard",
+   "list_id": "baced768-cbb8-4371-ad19-115563af9b01",
+   "item_name": "Corrupted Fuliginous Vest",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iono",
+   "realm": "Midgard",
+   "list_id": "baced768-cbb8-4371-ad19-115563af9b01",
+   "item_name": "Fuliginous Gloves",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iono",
+   "realm": "Midgard",
+   "list_id": "baced768-cbb8-4371-ad19-115563af9b01",
+   "item_name": "Fuliginous Helm",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iono",
+   "realm": "Midgard",
+   "list_id": "baced768-cbb8-4371-ad19-115563af9b01",
+   "item_name": "Fuliginous Leggings",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iono",
+   "realm": "Midgard",
+   "list_id": "baced768-cbb8-4371-ad19-115563af9b01",
+   "item_name": "Fuliginous Sleeves",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iono",
+   "realm": "Midgard",
+   "list_id": "baced768-cbb8-4371-ad19-115563af9b01",
+   "item_name": "Infernal Black Diamond (Mid)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iono",
+   "realm": "Midgard",
+   "list_id": "baced768-cbb8-4371-ad19-115563af9b01",
+   "item_name": "Infernal Diamond Dusted Cloak (Mid)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iono",
+   "realm": "Midgard",
+   "list_id": "baced768-cbb8-4371-ad19-115563af9b01",
+   "item_name": "Tainted Bonedancing Cap",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iono",
+   "realm": "Midgard",
+   "list_id": "baced768-cbb8-4371-ad19-115563af9b01",
+   "item_name": "Tainted Fuliginous Boots",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iono",
+   "realm": "Midgard",
+   "list_id": "baced768-cbb8-4371-ad19-115563af9b01",
+   "item_name": "Tainted Infernal Cap",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Iono",
+   "realm": "Midgard",
+   "list_id": "baced768-cbb8-4371-ad19-115563af9b01",
+   "item_name": "Warped Infernal Sleeves",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Neno",
+   "realm": "Hibernia",
+   "list_id": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+   "item_name": "Dismal Tidings Jerkin (Hib)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Neno",
+   "realm": "Hibernia",
+   "list_id": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+   "item_name": "Intuitive Silken Cap (Hib)",
+   "page_key": 6934,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Neno",
+   "realm": "Hibernia",
+   "list_id": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+   "item_name": "Malign Scarab Jewel (Hib)",
+   "page_key": 6936,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Neno",
+   "realm": "Hibernia",
+   "list_id": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+   "item_name": "Malign Scarab Ring (Hib)",
+   "page_key": 6938,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Neno",
+   "realm": "Hibernia",
+   "list_id": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+   "item_name": "Silken Soultorn Pants (Hib)",
+   "page_key": 6944,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Neno",
+   "realm": "Hibernia",
+   "list_id": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+   "item_name": "Silken Soultorn Robe (Hib)",
+   "page_key": 6945,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Neno",
+   "realm": "Hibernia",
+   "list_id": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+   "item_name": "Silken Soultorn Sleeves (Hib)",
+   "page_key": 6946,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Neno",
+   "realm": "Hibernia",
+   "list_id": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+   "item_name": "Vacuous Silken Cap (Hib)",
+   "page_key": 6956,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Yojo",
+   "realm": "Hibernia",
+   "list_id": "067eddfd-b27f-4560-b5d2-761420943c53",
+   "item_name": "Infernal Black Diamond (Hib)",
+   "page_key": 6890,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Yojo",
+   "realm": "Hibernia",
+   "list_id": "067eddfd-b27f-4560-b5d2-761420943c53",
+   "item_name": "Infernal Black Diamond Belt (Hib)",
+   "page_key": 7453,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Yojo",
+   "realm": "Hibernia",
+   "list_id": "067eddfd-b27f-4560-b5d2-761420943c53",
+   "item_name": "Infernal Black Diamond Bracer (Hib)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Yojo",
+   "realm": "Hibernia",
+   "list_id": "067eddfd-b27f-4560-b5d2-761420943c53",
+   "item_name": "Infernal Black Diamond Necklace (Hib)",
+   "page_key": 7455,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Yojo",
+   "realm": "Hibernia",
+   "list_id": "067eddfd-b27f-4560-b5d2-761420943c53",
+   "item_name": "Infernal Black Diamond Ring (Hib)",
+   "page_key": 7456,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Yojo",
+   "realm": "Hibernia",
+   "list_id": "067eddfd-b27f-4560-b5d2-761420943c53",
+   "item_name": "Infernal Jewel of Venom (Hib)",
+   "page_key": 7458,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Yojo",
+   "realm": "Hibernia",
+   "list_id": "067eddfd-b27f-4560-b5d2-761420943c53",
+   "item_name": "Infernal Pyre Walker's Cloak (Hib)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Darbo",
+   "realm": "Hibernia",
+   "list_id": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+   "item_name": "Shimmering Soultorn Gloves",
+   "page_key": 3467,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Darbo",
+   "realm": "Hibernia",
+   "list_id": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+   "item_name": "Shimmering Soultorn Pants (Hib)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Darbo",
+   "realm": "Hibernia",
+   "list_id": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+   "item_name": "Shimmering Soultorn Vest (Hib)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Wovo",
+   "realm": "Hibernia",
+   "list_id": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+   "item_name": "Avernal Hauberk (Hib) AF 70",
+   "page_key": 3645,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Horto",
+   "realm": "Hibernia",
+   "list_id": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+   "item_name": "Infernal Malison Buckler (Hib)",
+   "page_key": 7461,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Horto",
+   "realm": "Hibernia",
+   "list_id": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+   "item_name": "Infernal Malison Drum (Hib)",
+   "page_key": 7465,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Horto",
+   "realm": "Hibernia",
+   "list_id": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+   "item_name": "Infernal Malison Protector (Hib)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Horto",
+   "realm": "Hibernia",
+   "list_id": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+   "item_name": "Infernal Malison War Spear (Hib)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Dano",
+   "realm": "Hibernia",
+   "list_id": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+   "item_name": "Exceptional Avernal Maligned Staff of Arboreal",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Dano",
+   "realm": "Hibernia",
+   "list_id": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+   "item_name": "Exceptional Avernal Maligned Staff of Enchantment",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Dano",
+   "realm": "Hibernia",
+   "list_id": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+   "item_name": "Exceptional Avernal Maligned Staff of Verdancy",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Dano",
+   "realm": "Hibernia",
+   "list_id": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+   "item_name": "Exceptional Avernal Maligned Staff of Void",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Debo",
+   "realm": "Albion",
+   "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+   "item_name": "Corrupted Avernal Gauntlets",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Debo",
+   "realm": "Albion",
+   "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+   "item_name": "Fiendish Coif",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Debo",
+   "realm": "Albion",
+   "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+   "item_name": "Fiendish Hauberk",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Debo",
+   "realm": "Albion",
+   "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+   "item_name": "Fiendish Mercenary Hauberk",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Debo",
+   "realm": "Albion",
+   "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+   "item_name": "Fiendishly Forged Chain Legs",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Debo",
+   "realm": "Albion",
+   "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+   "item_name": "Fiendishly Melody Gauntlets",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Debo",
+   "realm": "Albion",
+   "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+   "item_name": "Fiendishly Melody Hauberk",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Debo",
+   "realm": "Albion",
+   "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+   "item_name": "Malign Scarab Belt",
+   "page_key": 3548,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Debo",
+   "realm": "Albion",
+   "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+   "item_name": "Malign Scarab Bracer (Alb)",
+   "page_key": 4438,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Debo",
+   "realm": "Albion",
+   "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+   "item_name": "Malign Scarab Cloak",
+   "page_key": 4732,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Debo",
+   "realm": "Albion",
+   "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+   "item_name": "Malign Scarab Cloak (Alb)",
+   "page_key": 11655,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Debo",
+   "realm": "Albion",
+   "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+   "item_name": "Malign Scarab Jewel",
+   "page_key": 5009,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Debo",
+   "realm": "Albion",
+   "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+   "item_name": "Malign Scarab Necklace",
+   "page_key": 5011,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Debo",
+   "realm": "Albion",
+   "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+   "item_name": "Malign Scarab Ring (Alb)",
+   "page_key": 4789,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Debo",
+   "realm": "Albion",
+   "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+   "item_name": "Tainted Avernal Helm",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Vance Calloway",
+   "realm": "Albion",
+   "list_id": "AlbMithrilPlate",
+   "item_name": "Mithril Full Helm (AF 50)",
+   "page_key": 695,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Vance Calloway",
+   "realm": "Albion",
+   "list_id": "AlbMithrilPlate",
+   "item_name": "Mithril Full Helm (AF 54)",
+   "page_key": 3812,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Vinandr",
+   "realm": "Midgard",
+   "list_id": "p165list_Vinandr",
+   "item_name": "Linen Pointed Steeple Hat (Mid)",
+   "page_key": 8755,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Vinandr",
+   "realm": "Midgard",
+   "list_id": "p165list_Vinandr",
+   "item_name": "Silk Pointed Steeple Hat (Mid)",
+   "page_key": 8762,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Vinandr",
+   "realm": "Midgard",
+   "list_id": "p165list_Vinandr",
+   "item_name": "Sylvan Pointed Steeple Hat (Mid)",
+   "page_key": 8766,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Vinandr",
+   "realm": "Midgard",
+   "list_id": "p165list_Vinandr",
+   "item_name": "Woolen Pointed Steeple Hat (Mid)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Melanaha",
+   "realm": "Hibernia",
+   "list_id": "p165list_Melanaha",
+   "item_name": "Linen Pointed Steeple Hat (Hib)",
+   "page_key": 8223,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Melanaha",
+   "realm": "Hibernia",
+   "list_id": "p165list_Melanaha",
+   "item_name": "Silk Pointed Steeple Hat (Hib)",
+   "page_key": 8225,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Melanaha",
+   "realm": "Hibernia",
+   "list_id": "p165list_Melanaha",
+   "item_name": "Sylvan Pointed Steeple Hat (Hib)",
+   "page_key": 8226,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Melanaha",
+   "realm": "Hibernia",
+   "list_id": "p165list_Melanaha",
+   "item_name": "Woolen Pointed Steeple Hat (Hib)",
+   "page_key": 8228,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "Kodo",
+   "realm": "Albion",
+   "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "item_name": "Atramentous Bile Gauntlets",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Kodo",
+   "realm": "Albion",
+   "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "item_name": "Atramentous Bile Helm",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Kodo",
+   "realm": "Albion",
+   "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "item_name": "Atramentous Ichor Boots",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Kodo",
+   "realm": "Albion",
+   "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "item_name": "Atramentous Ichor Frock",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Kodo",
+   "realm": "Albion",
+   "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "item_name": "Atramentous Ichor Gauntlets",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Kodo",
+   "realm": "Albion",
+   "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "item_name": "Atramentous Ichor Helm",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Kodo",
+   "realm": "Albion",
+   "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "item_name": "Atramentous Ichor Jerkin",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Kodo",
+   "realm": "Albion",
+   "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "item_name": "Atramentous Ichor Leggings",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Kodo",
+   "realm": "Albion",
+   "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "item_name": "Atramentous Ichor Sleeves",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Kodo",
+   "realm": "Albion",
+   "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "item_name": "Infernal Torment Boots",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Kodo",
+   "realm": "Albion",
+   "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "item_name": "Infernal Torment Gauntlets (Alb)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Kodo",
+   "realm": "Albion",
+   "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "item_name": "Infernal Torment Helm (Alb)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Kodo",
+   "realm": "Albion",
+   "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "item_name": "Infernal Torment Leggings (Alb)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Kodo",
+   "realm": "Albion",
+   "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "item_name": "Infernal Torment Sleeves (Alb)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Kodo",
+   "realm": "Albion",
+   "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "item_name": "Infernal Torment Vest (Alb)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Kodo",
+   "realm": "Albion",
+   "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "item_name": "Silken Aer Cap",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Kodo",
+   "realm": "Albion",
+   "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "item_name": "Silken Body-torn Vest",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Kodo",
+   "realm": "Albion",
+   "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "item_name": "Silken Death-torn Cap",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Kodo",
+   "realm": "Albion",
+   "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "item_name": "Silken Deathly Vest",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Kodo",
+   "realm": "Albion",
+   "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "item_name": "Silken Elemental Vest",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Kodo",
+   "realm": "Albion",
+   "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "item_name": "Silken Fyr Cap",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Kodo",
+   "realm": "Albion",
+   "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "item_name": "Silken Mind-torn Cap",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "Kodo",
+   "realm": "Albion",
+   "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "item_name": "Silken Soultorn Boots (Alb)",
+   "page_key": 5741,
+   "status": "buildable, not built (item page exists)"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Exceptional Maligned Avernal Staff of Body",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Exceptional Maligned Avernal Staff of Death",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Exceptional Maligned Avernal Staff of Earth",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Exceptional Maligned Avernal Staff of Fire",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Exceptional Maligned Avernal Staff of Matter",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Exceptional Maligned Avernal Staff of Mind",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Exceptional Maligned Avernal Staff of Painworking",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Exceptional Maligned Avernal Staff of Servitude",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Exceptional Maligned Avernal Staff of Spirit",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Barbed Whip",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Bladestopper (Alb)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Crossbow",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Defender (Alb)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Dirk",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Drum",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Flail",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Flute",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Great Hammer",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Great Sword",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Hammer",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Lochaber Axe",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Long Bow",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Longsword",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Lucerne Hammer",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Lute",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Mace",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Pike",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Protector (Alb)",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Quarterstaff",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Rapier",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Short Bow",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Short Sword",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Staff of Air",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Staff of Body",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Staff of Death",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Staff of Earth",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Staff of Fire",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Staff of Ice",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Staff of Matter",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Staff of Mind",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Staff of Painworking",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Staff of Servitude",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal Staff of Spirit",
+   "page_key": null,
+   "status": "no page"
+  },
+  {
+   "merchant_period_name": "kulo",
+   "realm": "Albion",
+   "list_id": "KuloDFMerchantList",
+   "item_name": "Maligned Avernal War Mattock",
+   "page_key": null,
+   "status": "no page"
+  }
+ ],
+ "merchants": [
+  {
+   "period_name": "Holt Finan",
+   "realm": "Albion",
+   "type": "Merchant (Instruments, Leather Armor, Piercing Weapons, Studded Armor)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20030829214725",
+   "goods": 12,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Holt Finan",
+     "City of Camelot",
+     "albinstrumentsleatherstuddedpierce"
+    ]
+   ],
+   "list_id": "AlbInstrumentsLeatherStuddedPierce",
+   "note": "",
+   "stocked": 5
+  },
+  {
+   "period_name": "Lynna Lang",
+   "realm": "Albion",
+   "type": "Merchant (Crushing Weapons, Leather Armor, Studded Armor)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20030806104155",
+   "goods": 16,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Lynna Lang",
+     "City of Camelot",
+     "albleatherstuddedcrush"
+    ]
+   ],
+   "list_id": "AlbLeatherStuddedCrush",
+   "note": "",
+   "stocked": 15
+  },
+  {
+   "period_name": "Tait Nerian",
+   "realm": "Albion",
+   "type": "Merchant (Slashing Weapons)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031003231630",
+   "goods": 22,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Tait Nerian",
+     "City of Camelot",
+     "albironsteelarmorweapons"
+    ]
+   ],
+   "list_id": "AlbIronSteelArmorWeapons",
+   "note": "",
+   "stocked": 22
+  },
+  {
+   "period_name": "Edmee Heolstor",
+   "realm": "Albion",
+   "type": "Merchant (Leather Armor)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031024033946",
+   "goods": 18,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Edmee Heolstor",
+     "City of Camelot",
+     "albembossedleather"
+    ]
+   ],
+   "list_id": "AlbEmbossedLeather",
+   "note": "",
+   "stocked": 6
+  },
+  {
+   "period_name": "Jeffrey Kenric",
+   "realm": "Albion",
+   "type": "Merchant (Plate Armor)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031024001040",
+   "goods": 12,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Jeffrey Kenric",
+     "City of Camelot",
+     "albmithrilstudded"
+    ]
+   ],
+   "list_id": "AlbMithrilStudded",
+   "note": "",
+   "stocked": 12
+  },
+  {
+   "period_name": "Lora Theomund",
+   "realm": "Albion",
+   "type": "Merchant (Plate Armor)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031023181547",
+   "goods": 18,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Lora Theomund",
+     "City of Camelot",
+     "albmithrilchain"
+    ]
+   ],
+   "list_id": "AlbMithrilChain",
+   "note": "",
+   "stocked": 18
+  },
+  {
+   "period_name": "Torr Upton",
+   "realm": "Albion",
+   "type": "Merchant (Plate Armor)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031023181539",
+   "goods": 13,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Torr Upton",
+     "City of Camelot",
+     "albmithrilplate"
+    ]
+   ],
+   "list_id": "AlbMithrilPlate",
+   "note": "",
+   "stocked": 11
+  },
+  {
+   "period_name": "Wyne Scead",
+   "realm": "Albion",
+   "type": "Merchant",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031003232239",
+   "goods": 28,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Wyne Scead",
+     "City of Camelot",
+     "albmithrilweapons"
+    ]
+   ],
+   "list_id": "AlbMithrilWeapons",
+   "note": "",
+   "stocked": 28
+  },
+  {
+   "period_name": "Meccus Yrre",
+   "realm": "Albion",
+   "type": "Merchant (Cloth Dye)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031023183833",
+   "goods": 9,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Meccus Yrre",
+     "City of Camelot",
+     "albsylvanarmor"
+    ]
+   ],
+   "list_id": "AlbSylvanArmor",
+   "note": "",
+   "stocked": 9
+  },
+  {
+   "period_name": "Geor Nadren",
+   "realm": "Albion",
+   "type": "Merchant (Leather Armor)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031023185827",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Geor Nadren",
+     "City of Camelot",
+     "albcymricleather"
+    ]
+   ],
+   "list_id": "AlbCymricLeather",
+   "note": "",
+   "stocked": 6
+  },
+  {
+   "period_name": "Warren Gibson",
+   "realm": "Albion",
+   "type": "Merchant (Leather Armor)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031023190057",
+   "goods": 12,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Warren Gibson",
+     "City of Camelot",
+     "albleathersiluric"
+    ]
+   ],
+   "list_id": "AlbLeatherSiluric",
+   "note": ""
+  },
+  {
+   "period_name": "Fuston Talgurt",
+   "realm": "Albion",
+   "type": "Merchant (Scale Armor)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031023190419",
+   "goods": 18,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Fuston Talgurt",
+     "City of Camelot",
+     "albplatescaled"
+    ]
+   ],
+   "list_id": "AlbPlateScaled",
+   "note": "",
+   "stocked": 18
+  },
+  {
+   "period_name": "Hafgan Corley",
+   "realm": "Albion",
+   "type": "Merchant (Plate Armor)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031023191034",
+   "goods": 23,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Hafgan Corley",
+     "City of Camelot",
+     "albplatealloy"
+    ]
+   ],
+   "list_id": "AlbPlateAlloy",
+   "note": "",
+   "stocked": 23
+  },
+  {
+   "period_name": "Yoren Shazra",
+   "realm": "Albion",
+   "type": "Merchant (Leather Armor)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031023191045",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Yoren Shazra",
+     "City of Camelot",
+     "albromanleather"
+    ]
+   ],
+   "list_id": "AlbRomanLeather",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Moira Camber",
+   "realm": "Albion",
+   "type": "Merchant (Polearms)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20030821195440",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Moira Camber",
+     "City of Camelot",
+     "albpolearm"
+    ]
+   ],
+   "list_id": "AlbPolearm",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Raggart Bruce",
+   "realm": "Albion",
+   "type": "Merchant (Cloth Armor)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031023192131",
+   "goods": 29,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Raggart Bruce",
+     "City of Camelot",
+     "albquiltedcloth"
+    ]
+   ],
+   "list_id": "AlbQuiltedCloth",
+   "note": "",
+   "stocked": 29
+  },
+  {
+   "period_name": "Radek Silven",
+   "realm": "Albion",
+   "type": "Merchant (Robes)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031023191108",
+   "goods": 15,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Radek Silven",
+     "City of Camelot",
+     "albclothrobes"
+    ]
+   ],
+   "list_id": "AlbClothRobes",
+   "note": "",
+   "stocked": 15
+  },
+  {
+   "period_name": "Dyemaster Edare",
+   "realm": "Albion",
+   "type": "Merchant (Cloth Dye)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031023191407",
+   "goods": 9,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Dyemaster Edare",
+     "City of Camelot",
+     "clothdye1"
+    ]
+   ],
+   "list_id": "ClothDye1",
+   "note": "",
+   "stocked": 9
+  },
+  {
+   "period_name": "Dyemaster Marna",
+   "realm": "Albion",
+   "type": "Merchant (Enamel Dye)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031023192142",
+   "goods": 17,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Dyemaster Marna",
+     "City of Camelot",
+     "enameldye3"
+    ]
+   ],
+   "list_id": "EnamelDye3",
+   "note": "",
+   "stocked": 17
+  },
+  {
+   "period_name": "Dyemaster Kael",
+   "realm": "Albion",
+   "type": "Merchant (Enamel Dye)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031023191912",
+   "goods": 2,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Dyemaster Kael",
+     "City of Camelot",
+     "enameldye2"
+    ]
+   ],
+   "list_id": "EnamelDye2",
+   "note": "",
+   "stocked": 2
+  },
+  {
+   "period_name": "Dyemaster Lendand",
+   "realm": "Albion",
+   "type": "Merchant (Leather Dye)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20030608033209",
+   "goods": 14,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Dyemaster Lendand",
+     "City of Camelot",
+     "leatherdye1"
+    ]
+   ],
+   "list_id": "LeatherDye1",
+   "note": "",
+   "stocked": 14
+  },
+  {
+   "period_name": "Dyemaster Emma",
+   "realm": "Albion",
+   "type": "Merchant (Leather Armor)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031023192404",
+   "goods": 17,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Dyemaster Emma",
+     "City of Camelot",
+     "leatherdye2"
+    ]
+   ],
+   "list_id": "LeatherDye2",
+   "note": "",
+   "stocked": 17
+  },
+  {
+   "period_name": "Lara Weathers",
+   "realm": "Albion",
+   "type": "Merchant (Studded Armor)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031023192800",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Lara Weathers",
+     "City of Camelot",
+     "albstudded3"
+    ]
+   ],
+   "list_id": "AlbStudded3",
+   "note": "",
+   "stocked": 29
+  },
+  {
+   "period_name": "Serena Muftar",
+   "realm": "Albion",
+   "type": "Merchant (Chain Armor)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031023193115",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Serena Muftar",
+     "City of Camelot",
+     "albchainarmor"
+    ]
+   ],
+   "list_id": "AlbChainArmor",
+   "note": "",
+   "stocked": 17
+  },
+  {
+   "period_name": "Ver Nuren",
+   "realm": "Albion",
+   "type": "Merchant (Shields)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031023193151",
+   "goods": 24,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Ver Nuren",
+     "City of Camelot",
+     "albshields"
+    ]
+   ],
+   "list_id": "AlbShields",
+   "note": "",
+   "stocked": 24
+  },
+  {
+   "period_name": "Brach Leof",
+   "realm": "Albion",
+   "type": "Merchant (Wood Components, Alchemy Components)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031004114022",
+   "goods": 95,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Brach Leof",
+     "City of Camelot",
+     "p165list_brach_leof"
+    ]
+   ],
+   "list_id": "p165list_Brach_Leof",
+   "note": "",
+   "stocked": 92
+  },
+  {
+   "period_name": "Ottar",
+   "realm": "Midgard",
+   "type": "Merchant (Wood Components)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030821200110",
+   "goods": 6,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Ottar",
+     "Jordheim",
+     "midmetalwoodleather"
+    ]
+   ],
+   "list_id": "MidMetalWoodLeather",
+   "note": "",
+   "stocked": 6
+  },
+  {
+   "period_name": "Darg",
+   "realm": "Midgard",
+   "type": "Merchant (Feathers)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20031101113300",
+   "goods": 5,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Darg",
+     "Jordheim",
+     "midexpensivetrade"
+    ]
+   ],
+   "list_id": "MidExpensiveTrade",
+   "note": "",
+   "stocked": 5
+  },
+  {
+   "period_name": "Dala",
+   "realm": "Midgard",
+   "type": "Merchant (Crushing Weapons, Slashing Weapons)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030904115425",
+   "goods": 8,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Dala",
+     "Jordheim",
+     "midmithrilweapons"
+    ]
+   ],
+   "list_id": "MidMithrilWeapons",
+   "note": "",
+   "stocked": 8
+  },
+  {
+   "period_name": "Uli",
+   "realm": "Midgard",
+   "type": "Merchant (Cloth Armor)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030923133119",
+   "goods": 6,
+   "match": "title_or_firstname",
+   "world_npcs": [
+    [
+     "Uli Johannsson",
+     "Jordheim",
+     "midsylvan"
+    ]
+   ],
+   "list_id": "MidSylvan",
+   "note": "",
+   "stocked": 6
+  },
+  {
+   "period_name": "Ozur",
+   "realm": "Midgard",
+   "type": "Merchant (Leather Dye)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030829221059",
+   "goods": 12,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Ozur",
+     "Jordheim",
+     "midleatherdye"
+    ]
+   ],
+   "list_id": "MidLeatherDye",
+   "note": "",
+   "stocked": 12
+  },
+  {
+   "period_name": "Ella",
+   "realm": "Midgard",
+   "type": "Merchant (Leather Dye)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030923133606",
+   "goods": 20,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Ella",
+     "Jordheim",
+     "midleatherdye2"
+    ]
+   ],
+   "list_id": "MidLeatherDye2",
+   "note": "",
+   "stocked": 20
+  },
+  {
+   "period_name": "Hakan",
+   "realm": "Midgard",
+   "type": "Merchant (Studded Armor)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030706182556",
+   "goods": 18,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Hakan",
+     "Jordheim",
+     "midstuddedmerchant"
+    ]
+   ],
+   "list_id": "MidStuddedMerchant",
+   "note": "",
+   "stocked": 17
+  },
+  {
+   "period_name": "Flosi",
+   "realm": "Midgard",
+   "type": "Merchant (Slashing Weapons)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030923133709",
+   "goods": 5,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Flosi",
+     "Jordheim",
+     "midblades"
+    ]
+   ],
+   "list_id": "MidBlades",
+   "note": "",
+   "stocked": 5
+  },
+  {
+   "period_name": "Signy",
+   "realm": "Midgard",
+   "type": "Merchant (Crushing Weapons, Slashing Weapons)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20031101113913",
+   "goods": 75,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Signy",
+     "Jordheim",
+     "p165list_signy"
+    ]
+   ],
+   "list_id": "p165list_Signy",
+   "note": "",
+   "stocked": 60
+  },
+  {
+   "period_name": "Aric",
+   "realm": "Midgard",
+   "type": "Merchant (Shields)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20031101114308",
+   "goods": 64,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Aric",
+     "Jordheim",
+     "midshields"
+    ]
+   ],
+   "list_id": "MidShields",
+   "note": "",
+   "stocked": 63
+  },
+  {
+   "period_name": "Fiora",
+   "realm": "Midgard",
+   "type": "Merchant (Leather Armor)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030923133905",
+   "goods": 18,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Fiora",
+     "Jordheim",
+     "midleatherstarklaedar"
+    ]
+   ],
+   "list_id": "MidLeatherStarklaedar",
+   "note": "",
+   "stocked": 12
+  },
+  {
+   "period_name": "Morgen",
+   "realm": "Midgard",
+   "type": "Merchant (Leather Armor)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030923133254",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Morgen",
+     "Jordheim",
+     "midleatherstarklaedar"
+    ]
+   ],
+   "list_id": "MidLeatherStarklaedar",
+   "note": "",
+   "stocked": 1
+  },
+  {
+   "period_name": "Om",
+   "realm": "Midgard",
+   "type": "Merchant (Metal Components)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030829220753",
+   "goods": 6,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Om",
+     "Jordheim",
+     "midcraftingcomponents2"
+    ]
+   ],
+   "list_id": "MidCraftingComponents2",
+   "note": "",
+   "stocked": 6
+  },
+  {
+   "period_name": "Solveig",
+   "realm": "Midgard",
+   "type": "Merchant (Enamel Dye)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030923133846",
+   "goods": 39,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Solveig",
+     "Jordheim",
+     "enameldye3"
+    ]
+   ],
+   "list_id": "EnamelDye3",
+   "note": "",
+   "stocked": 37
+  },
+  {
+   "period_name": "Falla",
+   "realm": "Midgard",
+   "type": "Merchant (Tailoring Components)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030414001653",
+   "goods": 16,
+   "match": "title_or_firstname",
+   "world_npcs": [
+    [
+     "Falla Hemingr",
+     "Jordheim",
+     "midclothworking"
+    ]
+   ],
+   "list_id": "MidClothworking",
+   "note": "",
+   "stocked": 16
+  },
+  {
+   "period_name": "Im",
+   "realm": "Midgard",
+   "type": "Merchant (Leather Armor)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030923133432",
+   "goods": 60,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Im",
+     "Jordheim",
+     "midleathermjuklaedar"
+    ]
+   ],
+   "list_id": "MidLeatherMjuklaedar",
+   "note": "",
+   "stocked": 49
+  },
+  {
+   "period_name": "Keki",
+   "realm": "Midgard",
+   "type": "Merchant (Studded Armor)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030923133950",
+   "goods": 29,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Keki",
+     "Jordheim",
+     "midstuddedstelskodd"
+    ]
+   ],
+   "list_id": "MidStuddedStelskodd",
+   "note": "",
+   "stocked": 29
+  },
+  {
+   "period_name": "Njal",
+   "realm": "Midgard",
+   "type": "Merchant (Chain Armor)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030923134156",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Njal",
+     "Jordheim",
+     "e1176b3c-7340-41a3-bf27-2af13a4e07fc"
+    ]
+   ],
+   "list_id": "e1176b3c-7340-41a3-bf27-2af13a4e07fc",
+   "note": "",
+   "stocked": 29
+  },
+  {
+   "period_name": "Gerd",
+   "realm": "Midgard",
+   "type": "Merchant (Arrows)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030414003930",
+   "goods": 20,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Gerd",
+     "Jordheim",
+     "midarrows"
+    ]
+   ],
+   "list_id": "MidArrows",
+   "note": "",
+   "stocked": 20
+  },
+  {
+   "period_name": "Hodern",
+   "realm": "Midgard",
+   "type": "Merchant (Leather Armor)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030923134228",
+   "goods": 32,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Hodern",
+     "Jordheim",
+     "midleathersvarlaedar"
+    ]
+   ],
+   "list_id": "MidLeatherSvarlaedar",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Hrapp",
+   "realm": "Midgard",
+   "type": "Merchant (Slashing Weapons)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030923134147",
+   "goods": 25,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Hrapp",
+     "Jordheim",
+     "midblades"
+    ]
+   ],
+   "list_id": "MidBlades",
+   "note": "",
+   "stocked": 25
+  },
+  {
+   "period_name": "Digby",
+   "realm": "Midgard",
+   "type": "Merchant (Shields)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030821185327",
+   "goods": 4,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Digby",
+     "Jordheim",
+     "midshields"
+    ]
+   ],
+   "list_id": "MidShields",
+   "note": "",
+   "stocked": 4
+  },
+  {
+   "period_name": "Thir",
+   "realm": "Midgard",
+   "type": "Merchant (Arrows, Bows)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030923134054",
+   "goods": 24,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Thir",
+     "Jordheim",
+     "midbows"
+    ]
+   ],
+   "list_id": "MidBows",
+   "note": "",
+   "stocked": 24
+  },
+  {
+   "period_name": "Torrad",
+   "realm": "Midgard",
+   "type": "Merchant (Cloth Armor)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030923134126",
+   "goods": 30,
+   "match": "title_or_firstname",
+   "world_npcs": [
+    [
+     "Torrad Gunderson",
+     "Jordheim",
+     "midclothpadded"
+    ]
+   ],
+   "list_id": "MidClothPadded",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Gro",
+   "realm": "Midgard",
+   "type": "Merchant (Tailoring Components)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030817172732",
+   "goods": 16,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Gro",
+     "Jordheim",
+     "midtailoring"
+    ]
+   ],
+   "list_id": "MidTailoring",
+   "note": "",
+   "stocked": 16
+  },
+  {
+   "period_name": "Alleca",
+   "realm": "Midgard",
+   "type": "Merchant (Cloth Dye)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030610085938",
+   "goods": 10,
+   "match": "title_or_firstname",
+   "world_npcs": [
+    [
+     "Alleca Gunderson",
+     "Jordheim",
+     "clothdye2"
+    ]
+   ],
+   "list_id": "ClothDye2",
+   "note": "",
+   "stocked": 10
+  },
+  {
+   "period_name": "Hyndla",
+   "realm": "Midgard",
+   "type": "Merchant (Cloth Dye)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030414013421",
+   "goods": 14,
+   "match": "title_or_firstname",
+   "world_npcs": [
+    [
+     "Hyndla Gunderson",
+     "Jordheim",
+     "clothdye1"
+    ]
+   ],
+   "list_id": "ClothDye1",
+   "note": "",
+   "stocked": 14
+  },
+  {
+   "period_name": "Maxen",
+   "realm": "Hibernia",
+   "type": "Merchant (Scale Armor)",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20031027130946",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Maxen",
+     "Tir na Nog",
+     "a30e7518-5083-4d17-b042-6e85295e4c79"
+    ]
+   ],
+   "list_id": "a30e7518-5083-4d17-b042-6e85295e4c79",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Rhosyn",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20031027083613",
+   "goods": 6,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Rhosyn",
+     "Tir na Nog",
+     "9553bfe3-067f-4301-bc07-2be38a14fa87"
+    ]
+   ],
+   "list_id": "9553bfe3-067f-4301-bc07-2be38a14fa87",
+   "note": "",
+   "stocked": 6
+  },
+  {
+   "period_name": "Eachann",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20030902020620",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Eachann",
+     "Tir na Nog",
+     "eachann"
+    ]
+   ],
+   "list_id": "Eachann",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Renny",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20030902012114",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Renny",
+     "Tir na Nog",
+     "bb05e054-32ec-4fc8-a141-42f3a8b940a4"
+    ]
+   ],
+   "list_id": "bb05e054-32ec-4fc8-a141-42f3a8b940a4",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Cragen",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20030902014709",
+   "goods": 1,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Cragen",
+     "Bog of Cullen",
+     "ac3baf9b-a21a-4894-8f70-cf6955a61688"
+    ],
+    [
+     "Cragen",
+     "Tir na Nog",
+     "cragen"
+    ]
+   ],
+   "list_id": null,
+   "note": "AMBIGUOUS: 2 lists"
+  },
+  {
+   "period_name": "Nolan",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20030119020159",
+   "goods": 24,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Nolan",
+     "Tir na Nog",
+     "nolan"
+    ]
+   ],
+   "list_id": "Nolan",
+   "note": "",
+   "stocked": 24
+  },
+  {
+   "period_name": "Seva",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20031027133517",
+   "goods": 25,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Seva",
+     "Tir na Nog",
+     "77793002"
+    ]
+   ],
+   "list_id": "77793002",
+   "note": "",
+   "stocked": 25
+  },
+  {
+   "period_name": "Adrai",
+   "realm": "Hibernia",
+   "type": "Merchant (Staves)",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20030821195723",
+   "goods": 6,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Adrai",
+     "Tir na Nog",
+     "adrai"
+    ]
+   ],
+   "list_id": "Adrai",
+   "note": "",
+   "stocked": 6
+  },
+  {
+   "period_name": "Deverry",
+   "realm": "Hibernia",
+   "type": "Merchant (Misc Weapons)",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20031027134529",
+   "goods": 23,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Deverry",
+     "Tir na Nog",
+     "deverry"
+    ]
+   ],
+   "list_id": "Deverry",
+   "note": "",
+   "stocked": 22
+  },
+  {
+   "period_name": "Dierdra",
+   "realm": "Hibernia",
+   "type": "Merchant (Cloth Dye)",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20031101103000",
+   "goods": 17,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Dierdra",
+     "Tir na Nog",
+     "clothdye1"
+    ]
+   ],
+   "list_id": "ClothDye1",
+   "note": "",
+   "stocked": 17
+  },
+  {
+   "period_name": "Kelsi",
+   "realm": "Hibernia",
+   "type": "Merchant (Arrows)",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20031101103537",
+   "goods": 24,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Kelsi",
+     "Tir na Nog",
+     "77793001"
+    ]
+   ],
+   "list_id": "77793001",
+   "note": "",
+   "stocked": 24
+  },
+  {
+   "period_name": "Sissy",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20031027084412",
+   "goods": 18,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Sissy",
+     "Tir na Nog",
+     "77793018"
+    ]
+   ],
+   "list_id": "77793018",
+   "note": "",
+   "stocked": 17
+  },
+  {
+   "period_name": "Kinnat",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20031101105007",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Kinnat",
+     "Tir na Nog",
+     "hibwovenmerchant"
+    ]
+   ],
+   "list_id": "HibWovenMerchant",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Brianna",
+   "realm": "Hibernia",
+   "type": "Merchant (Staves)",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20031101104409",
+   "goods": 20,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Brianna",
+     "Tir na Nog",
+     "hibmentaliststaffmerchant"
+    ]
+   ],
+   "list_id": "HibMentalistStaffMerchant",
+   "note": "",
+   "stocked": 20
+  },
+  {
+   "period_name": "Kedric",
+   "realm": "Hibernia",
+   "type": "Merchant (Staves)",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20031101104735",
+   "goods": 15,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Kedric",
+     "Tir na Nog",
+     "hibeldritchstaffmerchant"
+    ]
+   ],
+   "list_id": "HibEldritchStaffMerchant",
+   "note": "",
+   "stocked": 15
+  },
+  {
+   "period_name": "Kado",
+   "realm": "Hibernia",
+   "type": "Merchant (Cloth Armor)",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20031101104944",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Kado",
+     "Tir na Nog",
+     "hibwovenmerchant"
+    ]
+   ],
+   "list_id": "HibWovenMerchant",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Nealcail",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20031101105008",
+   "goods": 13,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Nealcail",
+     "Tir na Nog",
+     "p165list_nealcail"
+    ]
+   ],
+   "list_id": "p165list_Nealcail",
+   "note": "",
+   "stocked": 13
+  },
+  {
+   "period_name": "Seren",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20031101110425",
+   "goods": 25,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Seren",
+     "Tir na Nog",
+     "kelsi"
+    ]
+   ],
+   "list_id": "Kelsi",
+   "note": "",
+   "stocked": 25
+  },
+  {
+   "period_name": "Ffiara",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20031101094204",
+   "goods": 25,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Ffiara",
+     "Tir na Nog",
+     "hibtwohandmerchant"
+    ]
+   ],
+   "list_id": "HibTwohandMerchant",
+   "note": "",
+   "stocked": 20
+  },
+  {
+   "period_name": "Cedric",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20031101100215",
+   "goods": 90,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Cedric",
+     "Tir na Nog",
+     "hibcraftingcomponents"
+    ]
+   ],
+   "list_id": "HibCraftingComponents",
+   "note": "",
+   "stocked": 27
+  },
+  {
+   "period_name": "Ewen",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20031101100732",
+   "goods": 6,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Ewen",
+     "Tir na Nog",
+     "77793005"
+    ]
+   ],
+   "list_id": "77793005",
+   "note": "",
+   "stocked": 6
+  },
+  {
+   "period_name": "Saffa",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20031101101150",
+   "goods": 61,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Saffa",
+     "Tir na Nog",
+     "966eda39-c819-41d3-84e0-cdf9783c1999"
+    ]
+   ],
+   "list_id": "966eda39-c819-41d3-84e0-cdf9783c1999",
+   "note": "",
+   "stocked": 27
+  },
+  {
+   "period_name": "Baran",
+   "realm": "Hibernia",
+   "type": "Merchant (Metal Components)",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20031101101337",
+   "goods": 6,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Baran",
+     "Tir na Nog",
+     "hibmetalworkingmerchant"
+    ]
+   ],
+   "list_id": "HibMetalworkingMerchant",
+   "note": "",
+   "stocked": 5
+  },
+  {
+   "period_name": "Tomas",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20031101102502",
+   "goods": 3,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Tomas",
+     "Tir na Nog",
+     "hibcruaighmerchant"
+    ]
+   ],
+   "list_id": "HibCruaighMerchant",
+   "note": "",
+   "stocked": 3
+  },
+  {
+   "period_name": "Franseza",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20031101103058",
+   "goods": 25,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Franseza",
+     "Tir na Nog",
+     "hibbluntmerchant"
+    ]
+   ],
+   "list_id": "HibBluntMerchant",
+   "note": "",
+   "stocked": 25
+  },
+  {
+   "period_name": "Jiskarr De'Mordan",
+   "realm": "Hibernia",
+   "type": "Merchant (Thrusting Weapons, Scythe Weapons)",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20030902015308",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Jiskarr de'Mordan",
+     "Tir na Nog",
+     "5ccd8305-0306-493d-9a86-6df5e4154e76"
+    ]
+   ],
+   "list_id": "5ccd8305-0306-493d-9a86-6df5e4154e76",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Fingal",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20030902013748",
+   "goods": 6,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Fingal",
+     "Tir na Nog",
+     "77793003"
+    ]
+   ],
+   "list_id": "77793003",
+   "note": "",
+   "stocked": 6
+  },
+  {
+   "period_name": "Connor",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20031101093748",
+   "goods": 26,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Connor",
+     "Tir na Nog",
+     "hibarrowmerchant"
+    ]
+   ],
+   "list_id": "HibArrowMerchant",
+   "note": "",
+   "stocked": 26
+  },
+  {
+   "period_name": "Sian",
+   "realm": "Hibernia",
+   "type": "Merchant (Staves)",
+   "habitats": [
+    "Lough Derg"
+   ],
+   "capture": "20031101105457",
+   "goods": 6,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Sian",
+     "Lough Derg",
+     "4cea0f84-565e-459e-be8b-b3671eb494d2"
+    ]
+   ],
+   "list_id": "4cea0f84-565e-459e-be8b-b3671eb494d2",
+   "note": "",
+   "stocked": 6
+  },
+  {
+   "period_name": "Eluned",
+   "realm": "Hibernia",
+   "type": "Merchant (Cloth Armor)",
+   "habitats": [
+    "Lough Derg"
+   ],
+   "capture": "20031101110127",
+   "goods": 18,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Eluned",
+     "Lough Derg",
+     "p165list_eluned"
+    ]
+   ],
+   "list_id": "p165list_Eluned",
+   "note": "",
+   "stocked": 17
+  },
+  {
+   "period_name": "Sedric",
+   "realm": "Hibernia",
+   "type": "Merchant (Staves)",
+   "habitats": [
+    "Lough Derg"
+   ],
+   "capture": "20030821195542",
+   "goods": 20,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Sedric",
+     "Lough Derg",
+     "1f531570-85f6-4753-92b7-231a2642e8a5"
+    ]
+   ],
+   "list_id": "1f531570-85f6-4753-92b7-231a2642e8a5",
+   "note": "",
+   "stocked": 20
+  },
+  {
+   "period_name": "Wony",
+   "realm": null,
+   "type": "",
+   "habitats": [
+    "Lough Derg"
+   ],
+   "capture": "20020919212842",
+   "goods": 10,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Wony",
+     "Lough Derg",
+     "96c7a1bf-51ce-4ea9-9298-685e2c836feb"
+    ]
+   ],
+   "list_id": "96c7a1bf-51ce-4ea9-9298-685e2c836feb",
+   "note": "",
+   "stocked": 10
+  },
+  {
+   "period_name": "Cafell",
+   "realm": "Hibernia",
+   "type": "Merchant (Shields)",
+   "habitats": [
+    "Lough Derg"
+   ],
+   "capture": "20031001030954",
+   "goods": 24,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Cafell",
+     "Lough Derg",
+     "cleit"
+    ]
+   ],
+   "list_id": "Cleit",
+   "note": "",
+   "stocked": 24
+  },
+  {
+   "period_name": "Kylirean",
+   "realm": "Hibernia",
+   "type": "Merchant (Leather Armor)",
+   "habitats": [
+    "Lough Derg"
+   ],
+   "capture": "20031101093820",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Kylirean",
+     "Lough Derg",
+     "1442d7a4-157d-43e8-84b1-a6d203779de1"
+    ]
+   ],
+   "list_id": "1442d7a4-157d-43e8-84b1-a6d203779de1",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Lachlan",
+   "realm": "Hibernia",
+   "type": "Merchant (Piercing Weapons)",
+   "habitats": [
+    "Lough Derg"
+   ],
+   "capture": "20031101094557",
+   "goods": 25,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Lachlan",
+     "Lough Derg",
+     "hibpiercingmerchant"
+    ]
+   ],
+   "list_id": "HibPiercingMerchant",
+   "note": "",
+   "stocked": 25
+  },
+  {
+   "period_name": "Mannix",
+   "realm": "Hibernia",
+   "type": "Merchant (Bows)",
+   "habitats": [
+    "Lough Derg"
+   ],
+   "capture": "20031101101117",
+   "goods": 24,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Mannix",
+     "Lough Derg",
+     "hibbowmerchant"
+    ]
+   ],
+   "list_id": "HibBowMerchant",
+   "note": "",
+   "stocked": 24
+  },
+  {
+   "period_name": "Edsoner",
+   "realm": "Hibernia",
+   "type": "Merchant (Instruments)",
+   "habitats": [
+    "Lough Derg"
+   ],
+   "capture": "20030902015311",
+   "goods": 24,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Edsoner",
+     "Lough Derg",
+     "hibinstruments"
+    ]
+   ],
+   "list_id": "HibInstruments",
+   "note": "",
+   "stocked": 24
+  },
+  {
+   "period_name": "Brody",
+   "realm": "Hibernia",
+   "type": "Merchant (Leather Armor)",
+   "habitats": [
+    "Lough Derg"
+   ],
+   "capture": "20031101103507",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Brody",
+     "Lough Derg",
+     "7d7bba87-17ba-4c26-9499-a8c6dfc91758"
+    ]
+   ],
+   "list_id": "7d7bba87-17ba-4c26-9499-a8c6dfc91758",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Calder",
+   "realm": "Hibernia",
+   "type": "Merchant (Arrows)",
+   "habitats": [
+    "Lough Derg"
+   ],
+   "capture": "20030902015341",
+   "goods": 27,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Calder",
+     "Lough Derg",
+     "ad273152-ace5-4faf-b805-ac52fa59b9a1"
+    ]
+   ],
+   "list_id": "ad273152-ace5-4faf-b805-ac52fa59b9a1",
+   "note": "",
+   "stocked": 26
+  },
+  {
+   "period_name": "Rhian",
+   "realm": "Hibernia",
+   "type": "Merchant (Enamel Dye)",
+   "habitats": [
+    "Lough Derg"
+   ],
+   "capture": "20031101110323",
+   "goods": 16,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Rhian",
+     "Lough Derg",
+     "46e0501d-36a5-46bf-a504-9291795ea72c"
+    ]
+   ],
+   "list_id": "46e0501d-36a5-46bf-a504-9291795ea72c",
+   "note": "",
+   "stocked": 16
+  },
+  {
+   "period_name": "Daracha",
+   "realm": "Hibernia",
+   "type": "Merchant (Bows)",
+   "habitats": [
+    "Cliffs of Moher"
+   ],
+   "capture": "20030904115436",
+   "goods": 4,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Daracha",
+     "Cliffs of Moher",
+     "6326d1cf-744d-475b-aa4f-5ccc9c664b09"
+    ]
+   ],
+   "list_id": "6326d1cf-744d-475b-aa4f-5ccc9c664b09",
+   "note": ""
+  },
+  {
+   "period_name": "Hild",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Vale of Mularn"
+   ],
+   "capture": "20030713020344",
+   "goods": 29,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Hild",
+     "Vale of Mularn",
+     "midthrowingweapons"
+    ]
+   ],
+   "list_id": "MidThrowingWeapons",
+   "note": "",
+   "stocked": 25
+  },
+  {
+   "period_name": "Cale",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Vale of Mularn"
+   ],
+   "capture": "20031101141302",
+   "goods": 17,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Cale",
+     "Vale of Mularn",
+     "leatherdye1"
+    ]
+   ],
+   "list_id": "LeatherDye1",
+   "note": "",
+   "stocked": 17
+  },
+  {
+   "period_name": "Lene",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Vale of Mularn"
+   ],
+   "capture": "20031101141052",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Lene",
+     "Vale of Mularn",
+     "midleathermjuklaedar"
+    ]
+   ],
+   "list_id": "MidLeatherMjuklaedar",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Hrolf",
+   "realm": "Midgard",
+   "type": "Merchant (Hand to Hand, Slashing Weapons)",
+   "habitats": [
+    "Vale of Mularn"
+   ],
+   "capture": "20031101141550",
+   "goods": 73,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Hrolf",
+     "Vale of Mularn",
+     "midslashclaws"
+    ]
+   ],
+   "list_id": "MidSlashClaws",
+   "note": "",
+   "stocked": 73
+  },
+  {
+   "period_name": "Frikk",
+   "realm": "Midgard",
+   "type": "Merchant (Alchemy Components, Metal Components, Spellcrafting Components, Tailoring Components, Wood Components)",
+   "habitats": [
+    "Vale of Mularn"
+   ],
+   "capture": "20031101115023",
+   "goods": 10,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Frikk",
+     "Vale of Mularn",
+     "bbb26f74-fc78-4229-9925-78b4b5566e3c"
+    ]
+   ],
+   "list_id": "bbb26f74-fc78-4229-9925-78b4b5566e3c",
+   "note": "",
+   "stocked": 10
+  },
+  {
+   "period_name": "Fuiren",
+   "realm": "Midgard",
+   "type": "Merchant (Spears)",
+   "habitats": [
+    "Vale of Mularn"
+   ],
+   "capture": "20031101115205",
+   "goods": 25,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Fuiren",
+     "Vale of Mularn",
+     "6349d2e3-b30e-42ec-9022-274aa9cf3a1f"
+    ]
+   ],
+   "list_id": "6349d2e3-b30e-42ec-9022-274aa9cf3a1f",
+   "note": "",
+   "stocked": 25
+  },
+  {
+   "period_name": "Ime",
+   "realm": "Midgard",
+   "type": "Merchant (Shields)",
+   "habitats": [
+    "Vale of Mularn"
+   ],
+   "capture": "20031101120005",
+   "goods": 64,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Ime",
+     "Vale of Mularn",
+     "7c48f0da-1b12-4e03-83bb-dda0581808bd"
+    ]
+   ],
+   "list_id": "7c48f0da-1b12-4e03-83bb-dda0581808bd",
+   "note": "",
+   "stocked": 64
+  },
+  {
+   "period_name": "Cort",
+   "realm": "Midgard",
+   "type": "Merchant (Crushing Weapons)",
+   "habitats": [
+    "Vale of Mularn"
+   ],
+   "capture": "20031101115841",
+   "goods": 25,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Cort",
+     "Vale of Mularn",
+     "fc416b9b-d12d-4d0d-8c73-580ac6b6fe3c"
+    ]
+   ],
+   "list_id": "fc416b9b-d12d-4d0d-8c73-580ac6b6fe3c",
+   "note": "",
+   "stocked": 25
+  },
+  {
+   "period_name": "Armund",
+   "realm": "Midgard",
+   "type": "Merchant (Slashing Weapons)",
+   "habitats": [
+    "Vale of Mularn"
+   ],
+   "capture": "20031101120336",
+   "goods": 25,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Armund",
+     "Vale of Mularn",
+     "f7338dac-4c47-4c2a-ba98-ec949d751349"
+    ]
+   ],
+   "list_id": "f7338dac-4c47-4c2a-ba98-ec949d751349",
+   "note": "",
+   "stocked": 25
+  },
+  {
+   "period_name": "Dritsa",
+   "realm": "Midgard",
+   "type": "Merchant (Leather Armor)",
+   "habitats": [
+    "Vale of Mularn"
+   ],
+   "capture": "20031101111015",
+   "goods": 36,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Dritsa",
+     "Vale of Mularn",
+     "cb8f70b0-0b14-4233-b920-176264f18eb4"
+    ]
+   ],
+   "list_id": "cb8f70b0-0b14-4233-b920-176264f18eb4",
+   "note": "",
+   "stocked": 34
+  },
+  {
+   "period_name": "Erik",
+   "realm": "Midgard",
+   "type": "Merchant (Studded Armor)",
+   "habitats": [
+    "Vale of Mularn"
+   ],
+   "capture": "20031101110832",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Erik",
+     "Vale of Mularn",
+     "33bc0cf8-99b9-4fb2-9f9f-e0ed05484259"
+    ]
+   ],
+   "list_id": "33bc0cf8-99b9-4fb2-9f9f-e0ed05484259",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Bodil",
+   "realm": "Midgard",
+   "type": "Merchant (Throwing Weapons)",
+   "habitats": [
+    "Vale of Mularn"
+   ],
+   "capture": "20031101110816",
+   "goods": 29,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Bodil",
+     "Vale of Mularn",
+     "cec123a9-3eee-47a7-9b4e-2aab5ec7a992"
+    ]
+   ],
+   "list_id": "cec123a9-3eee-47a7-9b4e-2aab5ec7a992",
+   "note": "",
+   "stocked": 27
+  },
+  {
+   "period_name": "Gale",
+   "realm": "Midgard",
+   "type": "Merchant (Enamel Dye)",
+   "habitats": [
+    "Vale of Mularn"
+   ],
+   "capture": "20031101110825",
+   "goods": 22,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Gale",
+     "Vale of Mularn",
+     "d5fe79af-9e13-45c2-b053-cb43a63bf882"
+    ]
+   ],
+   "list_id": "d5fe79af-9e13-45c2-b053-cb43a63bf882",
+   "note": "",
+   "stocked": 22
+  },
+  {
+   "period_name": "Belyria",
+   "realm": "Midgard",
+   "type": "Merchant (Leather Dye)",
+   "habitats": [
+    "Vale of Mularn"
+   ],
+   "capture": "20031101112231",
+   "goods": 23,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Belyria",
+     "Vale of Mularn",
+     "4637eab9-96a5-4cdd-a8a4-4a53f25ec1ad"
+    ]
+   ],
+   "list_id": "4637eab9-96a5-4cdd-a8a4-4a53f25ec1ad",
+   "note": "",
+   "stocked": 23
+  },
+  {
+   "period_name": "Seiml",
+   "realm": "Midgard",
+   "type": "Merchant (Enamel Dye)",
+   "habitats": [
+    "Vale of Mularn"
+   ],
+   "capture": "20031101152920",
+   "goods": 17,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Seiml",
+     "Vale of Mularn",
+     "496aa217-2ec1-413f-89dd-7b9069e39097"
+    ]
+   ],
+   "list_id": "496aa217-2ec1-413f-89dd-7b9069e39097",
+   "note": "",
+   "stocked": 17
+  },
+  {
+   "period_name": "Liv",
+   "realm": "Midgard",
+   "type": "Merchant (Slashing Weapons)",
+   "habitats": [
+    "Vale of Mularn"
+   ],
+   "capture": "20031101152133",
+   "goods": 25,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Liv",
+     "Vale of Mularn",
+     "midblades"
+    ]
+   ],
+   "list_id": "MidBlades",
+   "note": "",
+   "stocked": 25
+  },
+  {
+   "period_name": "Hlif",
+   "realm": "Midgard",
+   "type": "Merchant (Slashing Weapons, Hand to Hand)",
+   "habitats": [
+    "Vale of Mularn"
+   ],
+   "capture": "20031101145150",
+   "goods": 73,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Hlif",
+     "Vale of Mularn",
+     "midaxesclaws"
+    ]
+   ],
+   "list_id": "MidAxesClaws",
+   "note": "",
+   "stocked": 73
+  },
+  {
+   "period_name": "Olof",
+   "realm": "Midgard",
+   "type": "Merchant (Crushing Weapons)",
+   "habitats": [
+    "Vale of Mularn"
+   ],
+   "capture": "20031101152216",
+   "goods": 25,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Olof",
+     "Vale of Mularn",
+     "midhammers"
+    ]
+   ],
+   "list_id": "MidHammers",
+   "note": "",
+   "stocked": 25
+  },
+  {
+   "period_name": "Bitta",
+   "realm": "Midgard",
+   "type": "Merchant (Arrows, Bows)",
+   "habitats": [
+    "Vale of Mularn"
+   ],
+   "capture": "20031101145227",
+   "goods": 24,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Bitta",
+     "Vale of Mularn",
+     "midbows"
+    ]
+   ],
+   "list_id": "MidBows",
+   "note": "",
+   "stocked": 24
+  },
+  {
+   "period_name": "Avar",
+   "realm": "Midgard",
+   "type": "Merchant (Shields)",
+   "habitats": [
+    "Vale of Mularn"
+   ],
+   "capture": "20031101145515",
+   "goods": 64,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Avar",
+     "Vale of Mularn",
+     "midshields"
+    ]
+   ],
+   "list_id": "MidShields",
+   "note": "",
+   "stocked": 64
+  },
+  {
+   "period_name": "Gerda",
+   "realm": "Midgard",
+   "type": "Merchant (Leather Armor)",
+   "habitats": [
+    "Vale of Mularn"
+   ],
+   "capture": "20031101145450",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Gerda",
+     "Vale of Mularn",
+     "midleathersvarlaedar"
+    ]
+   ],
+   "list_id": "MidLeatherSvarlaedar",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Moona",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Gotar"
+   ],
+   "capture": "20030901221910",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Moona",
+     "Gotar",
+     "midclothpadded"
+    ]
+   ],
+   "list_id": "MidClothPadded",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Grungir",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Gotar"
+   ],
+   "capture": "20030914191852",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Grungir",
+     "Gotar",
+     "midchainpansarkedja"
+    ]
+   ],
+   "list_id": "MidChainPansarkedja",
+   "note": "",
+   "stocked": 29
+  },
+  {
+   "period_name": "Dink",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Gotar"
+   ],
+   "capture": "20030914192426",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Dink",
+     "Gotar",
+     "midstuddedsvarskodd"
+    ]
+   ],
+   "list_id": "MidStuddedSvarskodd",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Tig",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Gotar"
+   ],
+   "capture": "20030914192520",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Tig",
+     "Gotar",
+     "midleathersvarlaedar"
+    ]
+   ],
+   "list_id": "MidLeatherSvarlaedar",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Rooka",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Gotar"
+   ],
+   "capture": "20030914192815",
+   "goods": 22,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Rooka",
+     "Gotar",
+     "leatherdye2"
+    ]
+   ],
+   "list_id": "LeatherDye2",
+   "note": "",
+   "stocked": 22
+  },
+  {
+   "period_name": "Hallaya",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Gotar"
+   ],
+   "capture": "20030813141506",
+   "goods": 16,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Hallaya",
+     "Gotar",
+     "leatherdye1"
+    ]
+   ],
+   "list_id": "LeatherDye1",
+   "note": "",
+   "stocked": 16
+  },
+  {
+   "period_name": "Cragg",
+   "realm": "Midgard",
+   "type": "Merchant (Arrows)",
+   "habitats": [
+    "Gotar"
+   ],
+   "capture": "20030914192703",
+   "goods": 29,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Cragg",
+     "Gotar",
+     "midarrows"
+    ]
+   ],
+   "list_id": "MidArrows",
+   "note": "",
+   "stocked": 28
+  },
+  {
+   "period_name": "Ingrid",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Myrkwood Forest"
+   ],
+   "capture": "20030914193130",
+   "goods": 28,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Ingrid",
+     "Myrkwood Forest",
+     "midarrows"
+    ]
+   ],
+   "list_id": "MidArrows",
+   "note": "",
+   "stocked": 28
+  },
+  {
+   "period_name": "Kedin",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Myrkwood Forest"
+   ],
+   "capture": "20030914193124",
+   "goods": 22,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Kedin",
+     "Myrkwood Forest",
+     "midbows"
+    ]
+   ],
+   "list_id": "MidBows",
+   "note": "",
+   "stocked": 22
+  },
+  {
+   "period_name": "Jytal",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Myrkwood Forest"
+   ],
+   "capture": "20031023124557",
+   "goods": 21,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Jytal",
+     "Myrkwood Forest",
+     "midtailoringmerchant"
+    ]
+   ],
+   "list_id": "MidTailoringMerchant",
+   "note": "",
+   "stocked": 21
+  },
+  {
+   "period_name": "Galena",
+   "realm": "Midgard",
+   "type": "Merchant (Two-Handed Weapons)",
+   "habitats": [
+    "Myrkwood Forest"
+   ],
+   "capture": "20030914194055",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Galena",
+     "Myrkwood Forest",
+     "midlargeweapons"
+    ]
+   ],
+   "list_id": "MidLargeWeapons",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Ohar",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Myrkwood Forest"
+   ],
+   "capture": "20030914194246",
+   "goods": 23,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Ohar",
+     "Myrkwood Forest",
+     "enameldye2"
+    ]
+   ],
+   "list_id": "EnamelDye2",
+   "note": "",
+   "stocked": 23
+  },
+  {
+   "period_name": "Tallya",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Myrkwood Forest"
+   ],
+   "capture": "20030704054654",
+   "goods": 16,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Tallya",
+     "Myrkwood Forest",
+     "enameldye1"
+    ]
+   ],
+   "list_id": "EnamelDye1",
+   "note": "",
+   "stocked": 16
+  },
+  {
+   "period_name": "Kaiti",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Myrkwood Forest"
+   ],
+   "capture": "20030914195229",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Kaiti",
+     "Myrkwood Forest",
+     "midclothpadded"
+    ]
+   ],
+   "list_id": "MidClothPadded",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Otkel",
+   "realm": null,
+   "type": "Merchant",
+   "habitats": [
+    "Myrkwood Forest"
+   ],
+   "capture": "20021225103627",
+   "goods": 13,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Otkel",
+     "Myrkwood Forest",
+     "midshields"
+    ]
+   ],
+   "list_id": "MidShields",
+   "note": "",
+   "stocked": 13
+  },
+  {
+   "period_name": "Serilyna",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Myrkwood Forest"
+   ],
+   "capture": "20030821195614",
+   "goods": 12,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Serilyna",
+     "Myrkwood Forest",
+     "midstaff"
+    ]
+   ],
+   "list_id": "MidStaff",
+   "note": "",
+   "stocked": 12
+  },
+  {
+   "period_name": "Stein",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Myrkwood Forest"
+   ],
+   "capture": "20030914194511",
+   "goods": 25,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Stein",
+     "Myrkwood Forest",
+     "midblades"
+    ]
+   ],
+   "list_id": "MidBlades",
+   "note": "",
+   "stocked": 25
+  },
+  {
+   "period_name": "Helga",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Myrkwood Forest"
+   ],
+   "capture": "20030914195126",
+   "goods": 25,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Helga",
+     "Myrkwood Forest",
+     "midhammers"
+    ]
+   ],
+   "list_id": "MidHammers",
+   "note": "",
+   "stocked": 25
+  },
+  {
+   "period_name": "Aki",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Myrkwood Forest"
+   ],
+   "capture": "20030428031826",
+   "goods": 13,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Aki",
+     "Myrkwood Forest",
+     "midthrowingweapons4"
+    ]
+   ],
+   "list_id": "MidThrowingWeapons4",
+   "note": "",
+   "stocked": 13
+  },
+  {
+   "period_name": "Eileen Morton",
+   "realm": "Albion",
+   "type": "Merchant (Instruments)",
+   "habitats": [
+    "Camelot Hills"
+   ],
+   "capture": "20031023124452",
+   "goods": 24,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Eileen Morton",
+     "Camelot Hills",
+     "p165list_eileen_morton"
+    ]
+   ],
+   "list_id": "p165list_Eileen_Morton",
+   "note": "",
+   "stocked": 24
+  },
+  {
+   "period_name": "Rayn Olwyc",
+   "realm": "Albion",
+   "type": "Merchant (Polearms)",
+   "habitats": [
+    "Camelot Hills"
+   ],
+   "capture": "20031004151711",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Rayn Olwyc",
+     "Camelot Hills",
+     "93cd2d04-d5db-4754-b0b8-c976e0b65960"
+    ]
+   ],
+   "list_id": "93cd2d04-d5db-4754-b0b8-c976e0b65960",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Gill Hoxley",
+   "realm": "Albion",
+   "type": "Merchant (Plate Armor)",
+   "habitats": [
+    "Camelot Hills"
+   ],
+   "capture": "20031101172157",
+   "goods": 23,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Gill Hoxley",
+     "Camelot Hills",
+     "albplatealloy"
+    ]
+   ],
+   "list_id": "AlbPlateAlloy",
+   "note": "",
+   "stocked": 23
+  },
+  {
+   "period_name": "Col Aldar",
+   "realm": "Albion",
+   "type": "Merchant (Chain Armor)",
+   "habitats": [
+    "Camelot Hills"
+   ],
+   "capture": "20030829221030",
+   "goods": 24,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Col Aldar",
+     "Camelot Hills",
+     "albchain"
+    ]
+   ],
+   "list_id": "AlbChain",
+   "note": "",
+   "stocked": 24
+  },
+  {
+   "period_name": "Ellyn Weyland",
+   "realm": "Albion",
+   "type": "Merchant (Studded Armor)",
+   "habitats": [
+    "Camelot Hills"
+   ],
+   "capture": "20030817173356",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Ellyn Weyland",
+     "Camelot Hills",
+     "00c1e711-8d1b-4b72-8012-932d940f2567"
+    ]
+   ],
+   "list_id": "00c1e711-8d1b-4b72-8012-932d940f2567",
+   "note": "",
+   "stocked": 29
+  },
+  {
+   "period_name": "Bedamor Routh",
+   "realm": "Albion",
+   "type": "Merchant (Large Weapons)",
+   "habitats": [
+    "Camelot Hills"
+   ],
+   "capture": "20031023124214",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Bedamor Routh",
+     "Camelot Hills",
+     "7a411b91-e85e-42e7-be42-412fcfd272f5"
+    ]
+   ],
+   "list_id": "7a411b91-e85e-42e7-be42-412fcfd272f5",
+   "note": "",
+   "stocked": 29
+  },
+  {
+   "period_name": "Grannis Ynos",
+   "realm": "Albion",
+   "type": "Merchant (Flexible, Slashing Weapons)",
+   "habitats": [
+    "Camelot Hills"
+   ],
+   "capture": "20030829221341",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Grannis Ynos",
+     "Camelot Hills",
+     "a64434b4-2954-4803-9e4a-190564428325"
+    ]
+   ],
+   "list_id": "a64434b4-2954-4803-9e4a-190564428325",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Dyemaster Leax",
+   "realm": "Albion",
+   "type": "Merchant (Leather Dye)",
+   "habitats": [
+    "Camelot Hills"
+   ],
+   "capture": "20030813210917",
+   "goods": 17,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Dyemaster Leax",
+     "Camelot Hills",
+     "leatherdye"
+    ]
+   ],
+   "list_id": "LeatherDye",
+   "note": "",
+   "stocked": 17
+  },
+  {
+   "period_name": "Dyemaster Wanetta",
+   "realm": "Albion",
+   "type": "Merchant (Leather Dye)",
+   "habitats": [
+    "Camelot Hills"
+   ],
+   "capture": "20030918015433",
+   "goods": 22,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Dyemaster Wanetta",
+     "Camelot Hills",
+     "leatherdye2"
+    ]
+   ],
+   "list_id": "LeatherDye2",
+   "note": "",
+   "stocked": 22
+  },
+  {
+   "period_name": "Dyemaster Octe",
+   "realm": "Albion",
+   "type": "Merchant (Enamel Dye)",
+   "habitats": [
+    "Camelot Hills"
+   ],
+   "capture": "20031101172637",
+   "goods": 23,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Dyemaster Octe",
+     "Camelot Hills",
+     "enameldye2"
+    ]
+   ],
+   "list_id": "EnamelDye2",
+   "note": "",
+   "stocked": 23
+  },
+  {
+   "period_name": "Dyemaster Edra",
+   "realm": "Albion",
+   "type": "Merchant (Enamel Dye)",
+   "habitats": [
+    "Camelot Hills"
+   ],
+   "capture": "20030709223028",
+   "goods": 17,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Dyemaster Edra",
+     "Camelot Hills",
+     "enameldye1"
+    ]
+   ],
+   "list_id": "EnamelDye1",
+   "note": "",
+   "stocked": 17
+  },
+  {
+   "period_name": "Samwell Hornly",
+   "realm": "Albion",
+   "type": "Merchant (Staves)",
+   "habitats": [
+    "Camelot Hills"
+   ],
+   "capture": "20030712210706",
+   "goods": 24,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Samwell Hornly",
+     "Camelot Hills",
+     "albstaffs"
+    ]
+   ],
+   "list_id": "AlbStaffs",
+   "note": "",
+   "stocked": 24
+  },
+  {
+   "period_name": "Jon Smythe",
+   "realm": "Albion",
+   "type": "Merchant (Robes)",
+   "habitats": [
+    "Camelot Hills"
+   ],
+   "capture": "20030829221413",
+   "goods": 17,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Jon Smythe",
+     "Camelot Hills",
+     "albclothrobes"
+    ]
+   ],
+   "list_id": "AlbClothRobes",
+   "note": "",
+   "stocked": 17
+  },
+  {
+   "period_name": "Lundeg Tranyth",
+   "realm": "Albion",
+   "type": "Merchant (Leather Armor)",
+   "habitats": [
+    "Camelot Hills"
+   ],
+   "capture": "20031101093723",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Lundeg Tranyth",
+     "Camelot Hills",
+     "0539eb7d-fd02-49b7-afc7-cc6f635177c4"
+    ]
+   ],
+   "list_id": "0539eb7d-fd02-49b7-afc7-cc6f635177c4",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Eowyln Astos",
+   "realm": "Albion",
+   "type": "Merchant (Cloth Dye)",
+   "habitats": [
+    "Camelot Hills"
+   ],
+   "capture": "20030829220551",
+   "goods": 25,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Eowyln Astos",
+     "Camelot Hills",
+     "clothdye1"
+    ]
+   ],
+   "list_id": "ClothDye1",
+   "note": "",
+   "stocked": 22
+  },
+  {
+   "period_name": "Dyemaster Alwin",
+   "realm": "Albion",
+   "type": "Merchant (Cloth Dye)",
+   "habitats": [
+    "Camelot Hills"
+   ],
+   "capture": "20031101173312",
+   "goods": 19,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Dyemaster Alwin",
+     "Camelot Hills",
+     "clothdye2"
+    ]
+   ],
+   "list_id": "ClothDye2",
+   "note": "",
+   "stocked": 18
+  },
+  {
+   "period_name": "Elvar Tambor",
+   "realm": "Albion",
+   "type": "Merchant (Thrusting Weapons)",
+   "habitats": [
+    "Camelot Hills"
+   ],
+   "capture": "20031101140010",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Elvar Tambor",
+     "Camelot Hills",
+     "albthrusting"
+    ]
+   ],
+   "list_id": "AlbThrusting",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Arleigh Penn",
+   "realm": "Albion",
+   "type": "Merchant (Cloth Dye)",
+   "habitats": [
+    "Camelot Hills"
+   ],
+   "capture": "20031101140631",
+   "goods": 25,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Arleigh Penn",
+     "Camelot Hills",
+     "bd459188-2f47-4c1c-80bb-8ced4e924de2"
+    ]
+   ],
+   "list_id": "bd459188-2f47-4c1c-80bb-8ced4e924de2",
+   "note": "",
+   "stocked": 25
+  },
+  {
+   "period_name": "Karn Graem",
+   "realm": "Albion",
+   "type": "Merchant (Plate Armor)",
+   "habitats": [
+    "Camelot Hills"
+   ],
+   "capture": "20031101140702",
+   "goods": 35,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Karn Graem",
+     "Camelot Hills",
+     "44ac972a-7aab-4d9c-8c2e-2c0fa5313c6a"
+    ]
+   ],
+   "list_id": "44ac972a-7aab-4d9c-8c2e-2c0fa5313c6a",
+   "note": "",
+   "stocked": 23
+  },
+  {
+   "period_name": "Hugh Gallen",
+   "realm": "Albion",
+   "type": "Merchant (Leather Armor)",
+   "habitats": [
+    "Camelot Hills"
+   ],
+   "capture": "20031004005116",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Hugh Gallen",
+     "Camelot Hills",
+     "0539eb7d-fd02-49b7-afc7-cc6f635177c4"
+    ]
+   ],
+   "list_id": "0539eb7d-fd02-49b7-afc7-cc6f635177c4",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Junger Gannon",
+   "realm": "Albion",
+   "type": "Merchant (Chain Armor)",
+   "habitats": [
+    "Campacorentin Forest"
+   ],
+   "capture": "20031023211808",
+   "goods": 24,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Junger Gannon",
+     "Campacorentin Forest",
+     "albchainarmor"
+    ]
+   ],
+   "list_id": "AlbChainArmor",
+   "note": "",
+   "stocked": 24
+  },
+  {
+   "period_name": "Anga Weaver",
+   "realm": "Albion",
+   "type": "Merchant (Cloth Armor)",
+   "habitats": [
+    "Avalon Marsh"
+   ],
+   "capture": "20030808180047",
+   "goods": 6,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Anga Weaver",
+     "Avalon Marsh",
+     "albquiltedcloth"
+    ]
+   ],
+   "list_id": "AlbQuiltedCloth",
+   "note": "",
+   "stocked": 6
+  },
+  {
+   "period_name": "Cudbert Dalston",
+   "realm": "Albion",
+   "type": "Merchant (Staves)",
+   "habitats": [
+    "Camelot Hills"
+   ],
+   "capture": "20031027084517",
+   "goods": 20,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Cudbert Dalston",
+     "Camelot Hills",
+     "albtheurgiststaffs"
+    ]
+   ],
+   "list_id": "AlbTheurgistStaffs",
+   "note": "",
+   "stocked": 18
+  },
+  {
+   "period_name": "John Weyland",
+   "realm": "Albion",
+   "type": "Merchant (Thrusting Weapons)",
+   "habitats": [
+    "Camelot Hills"
+   ],
+   "capture": "20031101143830",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "John Weyland",
+     "Camelot Hills",
+     "albthrusting"
+    ]
+   ],
+   "list_id": "AlbThrusting",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Darcy",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20031101104024",
+   "goods": 106,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Darcy",
+     "Tir na Nog",
+     "9ab94f25-0da3-42f0-abd1-189f95c64d13"
+    ]
+   ],
+   "list_id": "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+   "note": "",
+   "stocked": 83
+  },
+  {
+   "period_name": "Calldir Edelmar",
+   "realm": "Albion",
+   "type": "Merchant (Bounty Items)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031023184022",
+   "goods": 12,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Calldir Edelmar",
+     "City of Camelot",
+     "albbountymerchant"
+    ]
+   ],
+   "list_id": "AlbBountyMerchant",
+   "note": "",
+   "stocked": 12
+  },
+  {
+   "period_name": "Aghaistin",
+   "realm": "Hibernia",
+   "type": "Merchant (Bounty Items)",
+   "habitats": [
+    "Tir na Nog"
+   ],
+   "capture": "20031101093423",
+   "goods": 13,
+   "match": "none",
+   "world_npcs": [],
+   "list_id": null,
+   "note": ""
+  },
+  {
+   "period_name": "Royd",
+   "realm": "Midgard",
+   "type": "Merchant (Bounty Items)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030923134302",
+   "goods": 12,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Royd",
+     "Jordheim",
+     "p165list_royd"
+    ]
+   ],
+   "list_id": "p165list_Royd",
+   "note": "",
+   "stocked": 12
+  },
+  {
+   "period_name": "Tora",
+   "realm": "Midgard",
+   "type": "Merchant (Bounty Items)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030923134420",
+   "goods": 12,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Tora",
+     "Jordheim",
+     "midbptotem"
+    ]
+   ],
+   "list_id": "midBPTotem",
+   "note": "",
+   "stocked": 12
+  },
+  {
+   "period_name": "Doreen Egesa",
+   "realm": "Albion",
+   "type": "Merchant (Staves)",
+   "habitats": [
+    "Camelot Hills"
+   ],
+   "capture": "20031101094651",
+   "goods": 20,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Doreen Egesa",
+     "Camelot Hills",
+     "albwizardstaffs"
+    ]
+   ],
+   "list_id": "AlbWizardStaffs",
+   "note": "",
+   "stocked": 20
+  },
+  {
+   "period_name": "Hulo",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Darkness Falls"
+   ],
+   "capture": "20031101095903",
+   "goods": 22,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Hulo",
+     "Darkness Falls",
+     "677c9085-86de-4af2-8832-9ccf2dd5505e"
+    ]
+   ],
+   "list_id": "677c9085-86de-4af2-8832-9ccf2dd5505e",
+   "note": "",
+   "stocked": 21
+  },
+  {
+   "period_name": "Iago (DF)",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Darkness Falls"
+   ],
+   "capture": "20031101094903",
+   "goods": 32,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Iago",
+     "Darkness Falls",
+     "6176da0c-b08e-437f-82d3-94905473ef15"
+    ]
+   ],
+   "list_id": "6176da0c-b08e-437f-82d3-94905473ef15",
+   "note": "",
+   "stocked": 19
+  },
+  {
+   "period_name": "Iono",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Darkness Falls"
+   ],
+   "capture": "20031101094803",
+   "goods": 47,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Iono",
+     "Darkness Falls",
+     "baced768-cbb8-4371-ad19-115563af9b01"
+    ]
+   ],
+   "list_id": "baced768-cbb8-4371-ad19-115563af9b01",
+   "note": "",
+   "stocked": 22
+  },
+  {
+   "period_name": "Lucifo",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Darkness Falls"
+   ],
+   "capture": "20031101095006",
+   "goods": 28,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Lucifo",
+     "Darkness Falls",
+     "09792759-ac95-43fc-b08a-b84155d4eafa"
+    ]
+   ],
+   "list_id": "09792759-ac95-43fc-b08a-b84155d4eafa",
+   "note": "",
+   "stocked": 27
+  },
+  {
+   "period_name": "df-marbo.jpg",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Darkness Falls"
+   ],
+   "capture": "20031101101603",
+   "goods": 30,
+   "match": "none",
+   "world_npcs": [],
+   "list_id": null,
+   "note": ""
+  },
+  {
+   "period_name": "Orto",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Darkness Falls"
+   ],
+   "capture": "20031101100314",
+   "goods": 28,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Orto",
+     "Darkness Falls",
+     "ebbdacc7-e353-497a-9e49-008856965bf8"
+    ]
+   ],
+   "list_id": "ebbdacc7-e353-497a-9e49-008856965bf8",
+   "note": "",
+   "stocked": 28
+  },
+  {
+   "period_name": "Tulo",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Darkness Falls"
+   ],
+   "capture": "20031101101438",
+   "goods": 25,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Tulo",
+     "Darkness Falls",
+     "f03643af-19c7-478c-97ff-a12898b7d4da"
+    ]
+   ],
+   "list_id": "f03643af-19c7-478c-97ff-a12898b7d4da",
+   "note": "",
+   "stocked": 22
+  },
+  {
+   "period_name": "Thago",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Darkness Falls"
+   ],
+   "capture": "20031101101446",
+   "goods": 28,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Thago",
+     "Darkness Falls",
+     "ad74b204-be76-4f06-8c6f-2cf1c3032e72"
+    ]
+   ],
+   "list_id": "ad74b204-be76-4f06-8c6f-2cf1c3032e72",
+   "note": "",
+   "stocked": 26
+  },
+  {
+   "period_name": "Neno",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Darkness Falls"
+   ],
+   "capture": "20031101101203",
+   "goods": 42,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Neno",
+     "Darkness Falls",
+     "d08c8326-c722-4da6-90c8-6ca5584ad413"
+    ]
+   ],
+   "list_id": "d08c8326-c722-4da6-90c8-6ca5584ad413",
+   "note": "",
+   "stocked": 22
+  },
+  {
+   "period_name": "Ebo",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Darkness Falls"
+   ],
+   "capture": "20030904121804",
+   "goods": 8,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Ebo",
+     "Darkness Falls",
+     "cd800515-e685-49ac-a704-f4ff958018f7"
+    ]
+   ],
+   "list_id": "cd800515-e685-49ac-a704-f4ff958018f7",
+   "note": "",
+   "stocked": 6
+  },
+  {
+   "period_name": "Yojo",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Darkness Falls"
+   ],
+   "capture": "20030904122301",
+   "goods": 23,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Yojo",
+     "Darkness Falls",
+     "067eddfd-b27f-4560-b5d2-761420943c53"
+    ]
+   ],
+   "list_id": "067eddfd-b27f-4560-b5d2-761420943c53",
+   "note": "",
+   "stocked": 5
+  },
+  {
+   "period_name": "Darbo",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Darkness Falls"
+   ],
+   "capture": "20030904121839",
+   "goods": 25,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Darbo",
+     "Darkness Falls",
+     "47a34894-b9aa-4620-bf21-415a23dcb85f"
+    ]
+   ],
+   "list_id": "47a34894-b9aa-4620-bf21-415a23dcb85f",
+   "note": "",
+   "stocked": 12
+  },
+  {
+   "period_name": "Wovo",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Darkness Falls"
+   ],
+   "capture": "20030904122334",
+   "goods": 19,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Wovo",
+     "Darkness Falls",
+     "cfdc6083-8ba0-4406-b581-4bc4498dba38"
+    ]
+   ],
+   "list_id": "cfdc6083-8ba0-4406-b581-4bc4498dba38",
+   "note": "",
+   "stocked": 14
+  },
+  {
+   "period_name": "Godo",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Darkness Falls"
+   ],
+   "capture": "20031101102521",
+   "goods": 53,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Godo",
+     "Darkness Falls",
+     "53afad0b-fd95-4cb1-89ed-a412d3d982fc"
+    ]
+   ],
+   "list_id": "53afad0b-fd95-4cb1-89ed-a412d3d982fc",
+   "note": "",
+   "stocked": 28
+  },
+  {
+   "period_name": "Beelo",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Darkness Falls"
+   ],
+   "capture": "20030904121912",
+   "goods": 9,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Beelo",
+     "Darkness Falls",
+     "f6f1b508-7a40-4863-87cc-83b48cb71bba"
+    ]
+   ],
+   "list_id": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "note": "",
+   "stocked": 6
+  },
+  {
+   "period_name": "Horto",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Darkness Falls"
+   ],
+   "capture": "20030904122407",
+   "goods": 24,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Horto",
+     "Darkness Falls",
+     "1c2b04e5-d839-4960-9068-2c544e12b05f"
+    ]
+   ],
+   "list_id": "1c2b04e5-d839-4960-9068-2c544e12b05f",
+   "note": "",
+   "stocked": 7
+  },
+  {
+   "period_name": "Aklee Edelmar",
+   "realm": "Albion",
+   "type": "Merchant (Bounty Items)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20030810030414",
+   "goods": 12,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Aklee Edelmar",
+     "City of Camelot",
+     "albbountymerchant"
+    ]
+   ],
+   "list_id": "AlbBountyMerchant",
+   "note": "",
+   "stocked": 12
+  },
+  {
+   "period_name": "Maye Edelmar",
+   "realm": "Albion",
+   "type": "Merchant (Bounty Items)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031023191526",
+   "goods": 12,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Maye Edelmar",
+     "City of Camelot",
+     "albbountymerchant"
+    ]
+   ],
+   "list_id": "AlbBountyMerchant",
+   "note": "",
+   "stocked": 12
+  },
+  {
+   "period_name": "Nikgor",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Myrkwood Forest"
+   ],
+   "capture": "20030914193931",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Nikgor",
+     "Myrkwood Forest",
+     "midstuddedsvarskodd"
+    ]
+   ],
+   "list_id": "MidStuddedSvarskodd",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Nyden",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Myrkwood Forest"
+   ],
+   "capture": "20030914194102",
+   "goods": 32,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Nyden",
+     "Myrkwood Forest",
+     "midstuddedsvarskodd"
+    ]
+   ],
+   "list_id": "MidStuddedSvarskodd",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Lulo",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Darkness Falls"
+   ],
+   "capture": "20031101103341",
+   "goods": 25,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Lulo",
+     "Darkness Falls",
+     "393387fe-957f-4d58-8ef8-5be75176c6ef"
+    ]
+   ],
+   "list_id": "393387fe-957f-4d58-8ef8-5be75176c6ef",
+   "note": "",
+   "stocked": 22
+  },
+  {
+   "period_name": "Dano",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Darkness Falls"
+   ],
+   "capture": "20031101103641",
+   "goods": 33,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Dano",
+     "Darkness Falls",
+     "bb4bf564-c3c7-4801-8442-1abb0615dc04"
+    ]
+   ],
+   "list_id": "bb4bf564-c3c7-4801-8442-1abb0615dc04",
+   "note": "",
+   "stocked": 7
+  },
+  {
+   "period_name": "Sebil Lenut",
+   "realm": "Albion",
+   "type": "Merchant (Cloth Armor)",
+   "habitats": [
+    "Campacorentin Forest"
+   ],
+   "capture": "20031023193120",
+   "goods": 6,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Sebil Lenut",
+     "Campacorentin Forest",
+     "albquiltedcloth"
+    ]
+   ],
+   "list_id": "AlbQuiltedCloth",
+   "note": "",
+   "stocked": 6
+  },
+  {
+   "period_name": "Aaric",
+   "realm": "Midgard",
+   "type": "Merchant (Throwing Weapons)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20031101111818",
+   "goods": 18,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Aaric",
+     "Jordheim",
+     "midthrowingweapons"
+    ]
+   ],
+   "list_id": "MidThrowingWeapons",
+   "note": "",
+   "stocked": 17
+  },
+  {
+   "period_name": "Duncan Curan",
+   "realm": "Albion",
+   "type": "Merchant (Arrows)",
+   "habitats": [
+    "Llyn Barfog"
+   ],
+   "capture": "20030930210316",
+   "goods": 28,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Duncan Curan",
+     "Llyn Barfog",
+     "ad273152-ace5-4faf-b805-ac52fa59b9a1"
+    ]
+   ],
+   "list_id": "ad273152-ace5-4faf-b805-ac52fa59b9a1",
+   "note": "",
+   "stocked": 27
+  },
+  {
+   "period_name": "Cauldir Edyn",
+   "realm": "Albion",
+   "type": "Merchant (Staves)",
+   "habitats": [
+    "Camelot Hills"
+   ],
+   "capture": "20031004152611",
+   "goods": 20,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Cauldir Edyn",
+     "Camelot Hills",
+     "albsorcererstaffs"
+    ]
+   ],
+   "list_id": "AlbSorcererStaffs",
+   "note": "",
+   "stocked": 20
+  },
+  {
+   "period_name": "Pico",
+   "realm": "Albion",
+   "type": "Merchant",
+   "habitats": [
+    "Darkness Falls"
+   ],
+   "capture": "20031023173955",
+   "goods": 38,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Pico",
+     "Darkness Falls",
+     "f0e5327c-d39d-4ee2-b7a4-6ef318853e66"
+    ]
+   ],
+   "list_id": "f0e5327c-d39d-4ee2-b7a4-6ef318853e66",
+   "note": "",
+   "stocked": 34
+  },
+  {
+   "period_name": "Debo",
+   "realm": "Albion",
+   "type": "Merchant",
+   "habitats": [
+    "Darkness Falls"
+   ],
+   "capture": "20031011093104",
+   "goods": 60,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Debo",
+     "Darkness Falls",
+     "3c20c276-a1fb-497c-b389-fe62712ea01f"
+    ]
+   ],
+   "list_id": "3c20c276-a1fb-497c-b389-fe62712ea01f",
+   "note": "",
+   "stocked": 27
+  },
+  {
+   "period_name": "Anfri ap Even",
+   "realm": "Albion",
+   "type": "Merchant (Misc Weapons)",
+   "habitats": [
+    "Llyn Barfog"
+   ],
+   "capture": "20031027111009",
+   "goods": 21,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Anfri ap Even",
+     "Llyn Barfog",
+     "albslashcrushpierce"
+    ]
+   ],
+   "list_id": "AlbSlashCrushPierce",
+   "note": "",
+   "stocked": 21
+  },
+  {
+   "period_name": "Marissa Fletchet",
+   "realm": "Albion",
+   "type": "Merchant (Arrows, Bows)",
+   "habitats": [
+    "Isle of Glass"
+   ],
+   "capture": "20031101171316",
+   "goods": 20,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Marissa Fletchet",
+     "Isle of Glass",
+     "albbowsarrows"
+    ]
+   ],
+   "list_id": "AlbBowsArrows",
+   "note": "",
+   "stocked": 20
+  },
+  {
+   "period_name": "Eafa Thatcher",
+   "realm": "Albion",
+   "type": "Merchant (Cloth Dye)",
+   "habitats": [
+    "Isle of Glass"
+   ],
+   "capture": "20031011102428",
+   "goods": 10,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Eafa Thatcher",
+     "Isle of Glass",
+     "0be5b625-7a50-423b-b83b-64ebd19d01a1"
+    ]
+   ],
+   "list_id": "0be5b625-7a50-423b-b83b-64ebd19d01a1",
+   "note": "",
+   "stocked": 10
+  },
+  {
+   "period_name": "Nia Loaman",
+   "realm": "Albion",
+   "type": "Merchant (Chain Armor, Studded Armor)",
+   "habitats": [
+    "Isle of Glass"
+   ],
+   "capture": "20031004080937",
+   "goods": 12,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Nia Loaman",
+     "Isle of Glass",
+     "albstuddedchainarmor"
+    ]
+   ],
+   "list_id": "AlbStuddedChainArmor",
+   "note": "",
+   "stocked": 11
+  },
+  {
+   "period_name": "Vance Calloway",
+   "realm": "Albion",
+   "type": "Merchant (Plate Armor)",
+   "habitats": [
+    "Isle of Glass"
+   ],
+   "capture": "20030605180637",
+   "goods": 13,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Vance Calloway",
+     "Isle of Glass",
+     "albmithrilplate"
+    ]
+   ],
+   "list_id": "AlbMithrilPlate",
+   "note": "",
+   "stocked": 11
+  },
+  {
+   "period_name": "Diarlia",
+   "realm": "Hibernia",
+   "type": "Merchant (Scythe Weapons)",
+   "habitats": [
+    "Caillte Garran"
+   ],
+   "capture": "20030914193840",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Diarlia",
+     "Caillte Garran",
+     "hibscythemerchant"
+    ]
+   ],
+   "list_id": "HibScytheMerchant",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Alastar MacDonnel",
+   "realm": "Hibernia",
+   "type": "Merchant (Spellcrafting Components, Alchemy Components)",
+   "habitats": [
+    "Domnann"
+   ],
+   "capture": "20030914195732",
+   "goods": 100,
+   "match": "fuzzy",
+   "world_npcs": [
+    [
+     "Alastar MacDonnell",
+     "Domnann",
+     "77793014"
+    ]
+   ],
+   "list_id": "77793014",
+   "note": "",
+   "stocked": 100
+  },
+  {
+   "period_name": "Tiaga",
+   "realm": "Hibernia",
+   "type": "Merchant (Staves)",
+   "habitats": [
+    "Domnann"
+   ],
+   "capture": "20031022183844",
+   "goods": 86,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Tiaga",
+     "Domnann",
+     "a5b231ec-5d3a-40d7-b7b0-5a9663dd6f03"
+    ]
+   ],
+   "list_id": "a5b231ec-5d3a-40d7-b7b0-5a9663dd6f03",
+   "note": "",
+   "stocked": 86
+  },
+  {
+   "period_name": "Achae Smith",
+   "realm": "Albion",
+   "type": "Merchant (Leather Dye, Enamel Dye, Cloth Dye)",
+   "habitats": [
+    "Dales of Devwy"
+   ],
+   "capture": "20031004104614",
+   "goods": 103,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Achae Smith",
+     "Dales of Devwy",
+     "304d5c07-d58c-4de7-b2d2-1e5503c37540"
+    ]
+   ],
+   "list_id": "304d5c07-d58c-4de7-b2d2-1e5503c37540",
+   "note": "",
+   "stocked": 103
+  },
+  {
+   "period_name": "Dyemaster Philip",
+   "realm": "Albion",
+   "type": "Merchant (Cloth Armor, Enamel Dye, Leather Dye)",
+   "habitats": [
+    "Isle of Glass"
+   ],
+   "capture": "20031101155650",
+   "goods": 52,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Dyemaster Philip",
+     "Isle of Glass",
+     "cb81e6cc-df84-44a3-8c44-e94d315a5dfe"
+    ]
+   ],
+   "list_id": "cb81e6cc-df84-44a3-8c44-e94d315a5dfe",
+   "note": "",
+   "stocked": 52
+  },
+  {
+   "period_name": "Jackalyn Gordin",
+   "realm": "Albion",
+   "type": "Merchant",
+   "habitats": [
+    "Isle of Glass"
+   ],
+   "capture": "20031101144322",
+   "goods": 65,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Jackalyn Gordin",
+     "Isle of Glass",
+     "albspellalchmerchant"
+    ]
+   ],
+   "list_id": "AlbSpellAlchMerchant",
+   "note": "",
+   "stocked": 65
+  },
+  {
+   "period_name": "Kaitlyn Montgomery",
+   "realm": "Albion",
+   "type": "Merchant (Flexible, Two-Handed Weapons)",
+   "habitats": [
+    "Isle of Glass"
+   ],
+   "capture": "20031101144757",
+   "goods": 47,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Kaitlyn Montgomery",
+     "Isle of Glass",
+     "albtwohandedchains"
+    ]
+   ],
+   "list_id": "AlbTwoHandedChains",
+   "note": "",
+   "stocked": 47
+  },
+  {
+   "period_name": "Kendris",
+   "realm": "Albion",
+   "type": "Merchant (Slashing Weapons)",
+   "habitats": [
+    "Plains of Gwyddneau"
+   ],
+   "capture": "20030712183332",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Kendris",
+     "Gwyddneau",
+     ""
+    ]
+   ],
+   "list_id": null,
+   "note": ""
+  },
+  {
+   "period_name": "Laseria",
+   "realm": "Albion",
+   "type": "Merchant (Cloth Armor)",
+   "habitats": [
+    "Plains of Gwyddneau"
+   ],
+   "capture": "20030806184728",
+   "goods": 9,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Laseria",
+     "Gwyddneau",
+     "albsylvanarmor"
+    ]
+   ],
+   "list_id": "AlbSylvanArmor",
+   "note": "",
+   "stocked": 9
+  },
+  {
+   "period_name": "Natana Alceal",
+   "realm": "Albion",
+   "type": "Merchant (Studded Armor)",
+   "habitats": [
+    "Plains of Gwyddneau"
+   ],
+   "capture": "20030712211246",
+   "goods": 12,
+   "match": "fuzzy",
+   "world_npcs": [
+    [
+     "Natana Alcael",
+     "Gwyddneau",
+     "albmithrilstudded"
+    ]
+   ],
+   "list_id": "AlbMithrilStudded",
+   "note": "",
+   "stocked": 12
+  },
+  {
+   "period_name": "Raemilla",
+   "realm": "Albion",
+   "type": "Merchant (Slashing Weapons)",
+   "habitats": [
+    "Plains of Gwyddneau"
+   ],
+   "capture": "20030919161950",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Raemilla",
+     "Gwyddneau",
+     "albslashing2"
+    ]
+   ],
+   "list_id": "AlbSlashing2",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Zarassa",
+   "realm": "Albion",
+   "type": "Merchant",
+   "habitats": [
+    "Plains of Gwyddneau"
+   ],
+   "capture": "20031011155701",
+   "goods": 28,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Zarassa",
+     "Gwyddneau",
+     "albmithrilweapons"
+    ]
+   ],
+   "list_id": "AlbMithrilWeapons",
+   "note": "",
+   "stocked": 28
+  },
+  {
+   "period_name": "Forgemaster Brungar",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Delling Crater"
+   ],
+   "capture": "20030914195458",
+   "goods": 1,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Forgemaster Brungar",
+     "Delling Crater",
+     "midblades"
+    ]
+   ],
+   "list_id": "MidBlades",
+   "note": ""
+  },
+  {
+   "period_name": "Shayly Parke",
+   "realm": "Albion",
+   "type": "Merchant (Tailoring Components)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031023185429",
+   "goods": 16,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Shayly Parke",
+     "City of Camelot",
+     "p165list_shayly_parke"
+    ]
+   ],
+   "list_id": "p165list_Shayly_Parke",
+   "note": "",
+   "stocked": 14
+  },
+  {
+   "period_name": "Jacques Tole",
+   "realm": "Albion",
+   "type": "Merchant (Metal Components)",
+   "habitats": [
+    "Isle of Glass"
+   ],
+   "capture": "20031101140558",
+   "goods": 6,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Jacques Tole",
+     "Isle of Glass",
+     "albcraftcomponents"
+    ]
+   ],
+   "list_id": "AlbCraftComponents",
+   "note": "",
+   "stocked": 6
+  },
+  {
+   "period_name": "Hugh",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Domnann"
+   ],
+   "capture": "20030923141939",
+   "goods": 24,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Hugh",
+     "Domnann",
+     "hibcruanachmerchant"
+    ]
+   ],
+   "list_id": "HibCruanachMerchant",
+   "note": "",
+   "stocked": 24
+  },
+  {
+   "period_name": "Sisko",
+   "realm": "Midgard",
+   "type": "Merchant (Alchemy Components, Spellcrafting Components)",
+   "habitats": [
+    "Gripklosa Mountains"
+   ],
+   "capture": "20031004015949",
+   "goods": 100,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Sisko",
+     "Gripklosa Mountains",
+     "midspellalchmerchant2"
+    ]
+   ],
+   "list_id": "MidSpellAlchMerchant2",
+   "note": "",
+   "stocked": 100
+  },
+  {
+   "period_name": "Chelseigh Stillman",
+   "realm": "Albion",
+   "type": "Merchant (Metal Components, Alchemy Components)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031023190547",
+   "goods": 63,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Chelseigh Stillman",
+     "City of Camelot",
+     "p165list_chelseigh_stillman"
+    ]
+   ],
+   "list_id": "p165list_Chelseigh_Stillman",
+   "note": "",
+   "stocked": 58
+  },
+  {
+   "period_name": "Billy Faulkner",
+   "realm": "Albion",
+   "type": "Merchant (Alchemy Components)",
+   "habitats": [
+    "Isle of Glass"
+   ],
+   "capture": "20030813213320",
+   "goods": 37,
+   "match": "fuzzy",
+   "world_npcs": [
+    [
+     "Billy Faulklier",
+     "Isle of Glass",
+     "50132a38-a56c-4ff5-ad41-043029555c15"
+    ]
+   ],
+   "list_id": "50132a38-a56c-4ff5-ad41-043029555c15",
+   "note": "",
+   "stocked": 37
+  },
+  {
+   "period_name": "Vinandr",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Vale of Mularn"
+   ],
+   "capture": "20030712210104",
+   "goods": 41,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Vinandr",
+     "Vale of Mularn",
+     "p165list_vinandr"
+    ]
+   ],
+   "list_id": "p165list_Vinandr",
+   "note": "",
+   "stocked": 36
+  },
+  {
+   "period_name": "Melanaha",
+   "realm": "Hibernia",
+   "type": "Merchant",
+   "habitats": [
+    "Lough Derg"
+   ],
+   "capture": "20030916063220",
+   "goods": 41,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Melanaha",
+     "Lough Derg",
+     "p165list_melanaha"
+    ]
+   ],
+   "list_id": "p165list_Melanaha",
+   "note": "",
+   "stocked": 34
+  },
+  {
+   "period_name": "Holsvi Hallgrim",
+   "realm": "Midgard",
+   "type": "Merchant (Spellcrafting Components, Alchemy Components)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030904132633",
+   "goods": 134,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Holsvi Hallgrim",
+     "Jordheim",
+     "p165list_holsvi_hallgrim"
+    ]
+   ],
+   "list_id": "p165list_Holsvi_Hallgrim",
+   "note": "",
+   "stocked": 134
+  },
+  {
+   "period_name": "Kvasir",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030821204143",
+   "goods": 6,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Kvasir",
+     "Jordheim",
+     "midwood2"
+    ]
+   ],
+   "list_id": "MidWood2",
+   "note": "",
+   "stocked": 6
+  },
+  {
+   "period_name": "Jorun",
+   "realm": "Midgard",
+   "type": "Merchant (Tailoring Components)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030817174059",
+   "goods": 16,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Jorun",
+     "Jordheim",
+     "midcraftingcomponents2"
+    ]
+   ],
+   "list_id": "MidCraftingComponents2",
+   "note": "",
+   "stocked": 16
+  },
+  {
+   "period_name": "Haylei",
+   "realm": "Midgard",
+   "type": "Merchant (Feathers)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20031001002311",
+   "goods": 5,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Haylei",
+     "Jordheim",
+     "midfeathers2"
+    ]
+   ],
+   "list_id": "MidFeathers2",
+   "note": "",
+   "stocked": 5
+  },
+  {
+   "period_name": "Kkor Borson",
+   "realm": "Midgard",
+   "type": "Merchant (Metal Components)",
+   "habitats": [
+    "Jordheim"
+   ],
+   "capture": "20030901210000",
+   "goods": 6,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Kkor Borson",
+     "Jordheim",
+     "midmetal"
+    ]
+   ],
+   "list_id": "MidMetal",
+   "note": "",
+   "stocked": 6
+  },
+  {
+   "period_name": "Ola",
+   "realm": "Midgard",
+   "type": "Merchant (Throwing Weapons)",
+   "habitats": [
+    "Myrkwood Forest"
+   ],
+   "capture": "20030916063409",
+   "goods": 18,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Ola",
+     "Myrkwood Forest",
+     "midthrowingweapons3"
+    ]
+   ],
+   "list_id": "MidThrowingWeapons3",
+   "note": "",
+   "stocked": 17
+  },
+  {
+   "period_name": "Oken",
+   "realm": "Midgard",
+   "type": "Merchant (Throwing Weapons)",
+   "habitats": [
+    "Vale of Mularn"
+   ],
+   "capture": "20030918220448",
+   "goods": 15,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Oken",
+     "Vale of Mularn",
+     "midthrowingweapons2"
+    ]
+   ],
+   "list_id": "MidThrowingWeapons2",
+   "note": "",
+   "stocked": 15
+  },
+  {
+   "period_name": "Telliara",
+   "realm": "Hibernia",
+   "type": "Merchant (Scythe Weapons)",
+   "habitats": [
+    "Vigilant Rock"
+   ],
+   "capture": "20030924174320",
+   "goods": 30,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Telliara",
+     "Vigilant Rock",
+     "hibscythemerchant"
+    ]
+   ],
+   "list_id": "HibScytheMerchant",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "Arnie",
+   "realm": "Midgard",
+   "type": "Merchant (Alchemy Components, Spellcrafting Components)",
+   "habitats": [
+    "Gripklosa Mountains"
+   ],
+   "capture": "20030813221549",
+   "goods": 97,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Arnie",
+     "Gripklosa Mountains",
+     "midalchemycomponents"
+    ]
+   ],
+   "list_id": "MidAlchemyComponents",
+   "note": "",
+   "stocked": 96
+  },
+  {
+   "period_name": "Borjal",
+   "realm": "Midgard",
+   "type": "Merchant (Shields)",
+   "habitats": [
+    "Gripklosa Mountains"
+   ],
+   "capture": "20030904114705",
+   "goods": 65,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Borjal",
+     "Gripklosa Mountains",
+     "p165list_borjal"
+    ]
+   ],
+   "list_id": "p165list_Borjal",
+   "note": "",
+   "stocked": 64
+  },
+  {
+   "period_name": "Darla",
+   "realm": "Midgard",
+   "type": "Merchant (Arrows, Bows, Misc Weapons)",
+   "habitats": [
+    "Gripklosa Mountains"
+   ],
+   "capture": "20030916063447",
+   "goods": 65,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Darla",
+     "Gripklosa Mountains",
+     "b309e5ee-0c51-4f6b-980c-c50b4f808a5c"
+    ]
+   ],
+   "list_id": "b309e5ee-0c51-4f6b-980c-c50b4f808a5c",
+   "note": "",
+   "stocked": 65
+  },
+  {
+   "period_name": "Hadr",
+   "realm": "Midgard",
+   "type": "Merchant (Chain Armor, Cloth Armor, Leather Armor, Studded Armor)",
+   "habitats": [
+    "Gripklosa Mountains"
+   ],
+   "capture": "20030923141540",
+   "goods": 42,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Hadr",
+     "Gripklosa Mountains",
+     "midfullarmormerchant"
+    ]
+   ],
+   "list_id": "MidFullArmorMerchant",
+   "note": "",
+   "stocked": 36
+  },
+  {
+   "period_name": "Irma",
+   "realm": "Midgard",
+   "type": "Merchant (Metal Components, Tailoring Components, Wood Components)",
+   "habitats": [
+    "Gripklosa Mountains"
+   ],
+   "capture": "20030817174202",
+   "goods": 16,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Irma",
+     "Gripklosa Mountains",
+     "midcraftingcomponents2"
+    ]
+   ],
+   "list_id": "MidCraftingComponents2",
+   "note": "",
+   "stocked": 16
+  },
+  {
+   "period_name": "Jaana",
+   "realm": "Midgard",
+   "type": "Merchant (Staves)",
+   "habitats": [
+    "Gripklosa Mountains"
+   ],
+   "capture": "20030916075020",
+   "goods": 71,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Jaana",
+     "Gripklosa Mountains",
+     "midrunespiritbonestaff"
+    ]
+   ],
+   "list_id": "MidRuneSpiritBoneStaff",
+   "note": "",
+   "stocked": 69
+  },
+  {
+   "period_name": "Ulio",
+   "realm": "Midgard",
+   "type": "Merchant (Misc Weapons, Shields)",
+   "habitats": [
+    "Gripklosa Mountains"
+   ],
+   "capture": "20030813220341",
+   "goods": 123,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Ulio",
+     "Gripklosa Mountains",
+     "midweaponmerchant4"
+    ]
+   ],
+   "list_id": "MidWeaponMerchant4",
+   "note": "",
+   "stocked": 123
+  },
+  {
+   "period_name": "Ville",
+   "realm": "Midgard",
+   "type": "Merchant (Alchemy Components, Spellcrafting Components)",
+   "habitats": [
+    "Gripklosa Mountains"
+   ],
+   "capture": "20030902024756",
+   "goods": 33,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Ville",
+     "Gripklosa Mountains",
+     "midspellcraftmerchant"
+    ]
+   ],
+   "list_id": "MidSpellcraftMerchant",
+   "note": "",
+   "stocked": 33
+  },
+  {
+   "period_name": "Hammond",
+   "realm": "Midgard",
+   "type": "Merchant",
+   "habitats": [
+    "Gripklosa Mountains"
+   ],
+   "capture": "20030916063534",
+   "goods": 105,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Hammond",
+     "Gripklosa Mountains",
+     "midthrowingarrowspoisons"
+    ]
+   ],
+   "list_id": "MidThrowingArrowsPoisons",
+   "note": "",
+   "stocked": 98
+  },
+  {
+   "period_name": "Gremain Watford",
+   "realm": "Albion",
+   "type": "Merchant (Spellcrafting Components, Alchemy Components)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031023194112",
+   "goods": 49,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Gremain Watford",
+     "City of Camelot",
+     "p165list_gremain_watford"
+    ]
+   ],
+   "list_id": "p165list_Gremain_Watford",
+   "note": "",
+   "stocked": 43
+  },
+  {
+   "period_name": "Dare Edelmar",
+   "realm": "Albion",
+   "type": "Merchant (Bounty Items)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031023193226",
+   "goods": 12,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Dare Edelmar",
+     "City of Camelot",
+     "albbountymerchant"
+    ]
+   ],
+   "list_id": "AlbBountyMerchant",
+   "note": "",
+   "stocked": 12
+  },
+  {
+   "period_name": "Freya Edelmar",
+   "realm": "Albion",
+   "type": "Merchant (Bounty Items)",
+   "habitats": [
+    "Camelot"
+   ],
+   "capture": "20031023194642",
+   "goods": 12,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Freya Edelmar",
+     "City of Camelot",
+     "albbountymerchant"
+    ]
+   ],
+   "list_id": "AlbBountyMerchant",
+   "note": "",
+   "stocked": 12
+  },
+  {
+   "period_name": "Macilen Polden",
+   "realm": "Hibernia",
+   "type": "Merchant (Spellcrafting Components, Metal Components, Alchemy Components, Tailoring Components, Wood Components)",
+   "habitats": [
+    "Domnann"
+   ],
+   "capture": "20031101112517",
+   "goods": 28,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Macilen Polden",
+     "Domnann",
+     "hibexpensivecraftcomponents"
+    ]
+   ],
+   "list_id": "HibExpensiveCraftComponents",
+   "note": "",
+   "stocked": 28
+  },
+  {
+   "period_name": "Kodo",
+   "realm": "Albion",
+   "type": "Merchant (Leather Armor, Cloth Armor)",
+   "habitats": [
+    "Darkness Falls"
+   ],
+   "capture": "20031101112704",
+   "goods": 59,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Kodo",
+     "Darkness Falls",
+     "65cbeffd-3049-4419-bd2d-da2ea6d60ae1"
+    ]
+   ],
+   "list_id": "65cbeffd-3049-4419-bd2d-da2ea6d60ae1",
+   "note": "",
+   "stocked": 30
+  },
+  {
+   "period_name": "kulo",
+   "realm": "Albion",
+   "type": "Merchant (Misc Weapons)",
+   "habitats": [
+    "Darkness Falls"
+   ],
+   "capture": "20031101112442",
+   "goods": 70,
+   "match": "exact_or_case",
+   "world_npcs": [
+    [
+     "Kulo",
+     "Darkness Falls",
+     "kulodfmerchantlist"
+    ]
+   ],
+   "list_id": "KuloDFMerchantList",
+   "note": "",
+   "stocked": 24
+  }
+ ],
+ "different_stock": [
+  {
+   "merchant": "Holt Finan",
+   "realm": "Albion",
+   "list_id": "AlbInstrumentsLeatherStuddedPierce",
+   "list_rows": 21,
+   "rows_not_in_period_goods": 16,
+   "period_goods": 12,
+   "list_shared_with": [
+    "Holt Finan"
+   ],
+   "examples": [
+    "oaken drum",
+    "tanned siluric leather jerkin",
+    "elm drum",
+    "tanned siluric leather leggings",
+    "iron stiletto",
+    "steel stiletto",
+    "tanned siluric leather boots",
+    "oaken lute"
+   ]
+  },
+  {
+   "merchant": "Edmee Heolstor",
+   "realm": "Albion",
+   "list_id": "AlbEmbossedLeather",
+   "list_rows": 18,
+   "rows_not_in_period_goods": 12,
+   "period_goods": 18,
+   "list_shared_with": [
+    "Clan Tailor",
+    "Edmee Heolstor"
+   ],
+   "examples": [
+    "embossed siluric leather sleeves",
+    "embossed cymric leather boots",
+    "embossed cymric leather leggings",
+    "embossed siluric leather jerkin",
+    "embossed siluric leather gloves",
+    "embossed cymric leather gloves",
+    "embossed cymric leather sleeves",
+    "embossed siluric leather boots"
+   ]
+  },
+  {
+   "merchant": "Geor Nadren",
+   "realm": "Albion",
+   "list_id": "AlbCymricLeather",
+   "list_rows": 30,
+   "rows_not_in_period_goods": 24,
+   "period_goods": 30,
+   "list_shared_with": [
+    "Geor Nadren"
+   ],
+   "examples": [
+    "hard cymric leather sleeves",
+    "hard cymric leather gloves",
+    "rawhide cymric leather leggings",
+    "cured cymric leather boots",
+    "cured cymric leather helm",
+    "cured cymric leather gloves",
+    "rawhide cymric leather gloves",
+    "cured cymric leather sleeves"
+   ]
+  },
+  {
+   "merchant": "Warren Gibson",
+   "realm": "Albion",
+   "list_id": "AlbLeatherSiluric",
+   "list_rows": 30,
+   "rows_not_in_period_goods": 30,
+   "period_goods": 12,
+   "list_shared_with": [
+    "Elzbet Sable",
+    "Fost Mra",
+    "Twn ap Gusg",
+    "Warren Gibson"
+   ],
+   "examples": [
+    "rawhide siluric leather leggings",
+    "tanned siluric leather sleeves",
+    "hard siluric leather helm",
+    "rigid siluric leather helm",
+    "hard siluric leather leggings",
+    "tanned siluric leather gloves",
+    "rigid siluric leather jerkin",
+    "cured siluric leather jerkin"
+   ]
+  },
+  {
+   "merchant": "Dyemaster Edare",
+   "realm": "Albion",
+   "list_id": "ClothDye1",
+   "list_rows": 41,
+   "rows_not_in_period_goods": 32,
+   "period_goods": 9,
+   "list_shared_with": [
+    "Bjorg",
+    "Bria",
+    "Cloth 2cd Page",
+    "Cloth 2nd Page",
+    "Dierdra",
+    "Dyemaster Brun",
+    "Dyemaster Edare",
+    "Eowyln Astos",
+    "Fadia",
+    "Hyndla Gunderson",
+    "Ullaria"
+   ],
+   "examples": [
+    "royal orange cloth dye",
+    "green cloth dye",
+    "yellow cloth dye",
+    "hooded cloak",
+    "cloak",
+    "brown cloth dye",
+    "dark gray cloth dye",
+    "royal green cloth dye"
+   ]
+  },
+  {
+   "merchant": "Dyemaster Marna",
+   "realm": "Albion",
+   "list_id": "EnamelDye3",
+   "list_rows": 37,
+   "rows_not_in_period_goods": 20,
+   "period_goods": 17,
+   "list_shared_with": [
+    "Dyemaster Marna",
+    "Solveig"
+   ],
+   "examples": [
+    "red enamel",
+    "light blue enamel",
+    "blue enamel",
+    "royal blue enamel",
+    "dark blue enamel",
+    "light turquoise enamel",
+    "turquoise enamel",
+    "royal turquoise enamel"
+   ]
+  },
+  {
+   "merchant": "Dyemaster Kael",
+   "realm": "Albion",
+   "list_id": "EnamelDye2",
+   "list_rows": 24,
+   "rows_not_in_period_goods": 22,
+   "period_goods": 2,
+   "list_shared_with": [
+    "Dyemaster Kael",
+    "Dyemaster Octe",
+    "Kirsta",
+    "Lerron",
+    "Ohar"
+   ],
+   "examples": [
+    "light blue enamel",
+    "dark teal enamel",
+    "turquoise enamel",
+    "mild acid enamel remover",
+    "light red enamel",
+    "blue enamel",
+    "purple enamel",
+    "royal teal enamel"
+   ]
+  },
+  {
+   "merchant": "Lara Weathers",
+   "realm": "Albion",
+   "list_id": "AlbStudded3",
+   "list_rows": 61,
+   "rows_not_in_period_goods": 32,
+   "period_goods": 30,
+   "list_shared_with": [
+    "Lara Weathers"
+   ],
+   "examples": [
+    "bronze boned arms",
+    "steel boned boots",
+    "steel studded gauntlets",
+    "steel boned arms",
+    "fine alloy boned legs",
+    "bronze boned helm",
+    "alloy boned vest",
+    "steel boned helm"
+   ]
+  },
+  {
+   "merchant": "Serena Muftar",
+   "realm": "Albion",
+   "list_id": "AlbChainArmor",
+   "list_rows": 47,
+   "rows_not_in_period_goods": 30,
+   "period_goods": 30,
+   "list_shared_with": [
+    "Junger Gannon",
+    "Serena Muftar"
+   ],
+   "examples": [
+    "fine alloy chain legs",
+    "fine alloy chain coif",
+    "alloy chain boots",
+    "iron chain boots",
+    "mithril chain hauberk",
+    "fine alloy chain boots",
+    "mithril chain boots",
+    "fine alloy chain hauberk"
+   ]
+  },
+  {
+   "merchant": "Ver Nuren",
+   "realm": "Albion",
+   "list_id": "AlbShields",
+   "list_rows": 66,
+   "rows_not_in_period_goods": 42,
+   "period_goods": 24,
+   "list_shared_with": [
+    "Clan Maiden",
+    "Devyn Godric",
+    "Lar Rodor",
+    "Ver Nuren"
+   ],
+   "examples": [
+    "oaken large block shield",
+    "hard large block shield",
+    "rigid buckler",
+    "medium round shield",
+    "hard buckler",
+    "oaken buckler",
+    "rigid large heater shield",
+    "elm large round shield"
+   ]
+  },
+  {
+   "merchant": "Ottar",
+   "realm": "Midgard",
+   "list_id": "MidMetalWoodLeather",
+   "list_rows": 25,
+   "rows_not_in_period_goods": 19,
+   "period_goods": 6,
+   "list_shared_with": [
+    "Ottar"
+   ],
+   "examples": [
+    "adamantium metal bars",
+    "runewood wooden boards",
+    "fine alloy metal bars",
+    "ebonwood wooden boards",
+    "hard leather square",
+    "tanned leather square",
+    "asterite metal bars",
+    "rigid leather square"
+   ]
+  },
+  {
+   "merchant": "Darg",
+   "realm": "Midgard",
+   "list_id": "MidExpensiveTrade",
+   "list_rows": 32,
+   "rows_not_in_period_goods": 27,
+   "period_goods": 5,
+   "list_shared_with": [
+    "Darg",
+    "Deny",
+    "Derry"
+   ],
+   "examples": [
+    "smith's hammer",
+    "alchemy kit",
+    "duskwood wooden boards",
+    "sewing kit",
+    "alchemy kit",
+    "silksteel cloth square",
+    "wyvernskin cloth square",
+    "sewing kit"
+   ]
+  },
+  {
+   "merchant": "Dala",
+   "realm": "Midgard",
+   "list_id": "MidMithrilWeapons",
+   "list_rows": 26,
+   "rows_not_in_period_goods": 18,
+   "period_goods": 8,
+   "list_shared_with": [
+    "Dala"
+   ],
+   "examples": [
+    "mithril great axe",
+    "mithril lugged spear",
+    "mithril great sword",
+    "mithril great spear",
+    "mithril double-bladed axe",
+    "mithril bastard sword",
+    "mithril spear",
+    "mithril battle hammer"
+   ]
+  },
+  {
+   "merchant": "Uli",
+   "realm": "Midgard",
+   "list_id": "MidSylvan",
+   "list_rows": 36,
+   "rows_not_in_period_goods": 30,
+   "period_goods": 6,
+   "list_shared_with": [
+    "Uli Johannsson"
+   ],
+   "examples": [
+    "gossamer padded boots",
+    "linen padded boots",
+    "brocade padded sleeves",
+    "brocade padded cap",
+    "gossamer padded cap",
+    "woolen padded vest",
+    "silk padded boots",
+    "silk padded sleeves"
+   ]
+  },
+  {
+   "merchant": "Hakan",
+   "realm": "Midgard",
+   "list_id": "MidStuddedMerchant",
+   "list_rows": 108,
+   "rows_not_in_period_goods": 91,
+   "period_goods": 18,
+   "list_shared_with": [
+    "Blan",
+    "Brynja Torundd",
+    "Hakan",
+    "Koll Stonesmasher",
+    "Sela Gorgunsonn"
+   ],
+   "examples": [
+    "iron starkaskodd boots",
+    "bronze svarskodd helm",
+    "fine alloy stelskodd helm",
+    "fine alloy svarskodd leggings",
+    "steel starkaskodd boots",
+    "iron starkaskodd jerkin",
+    "bronze svarskodd sleeves",
+    "iron stelskodd sleeves"
+   ]
+  },
+  {
+   "merchant": "Flosi",
+   "realm": "Midgard",
+   "list_id": "MidBlades",
+   "list_rows": 25,
+   "rows_not_in_period_goods": 20,
+   "period_goods": 5,
+   "list_shared_with": [
+    "Aren",
+    "Flosi",
+    "Forgemaster Brungar",
+    "Gyda",
+    "Harald",
+    "Hrapp",
+    "Liv",
+    "Orm",
+    "Pater",
+    "Stein",
+    "Vifil",
+    "Vordn",
+    "svartalf merchant"
+   ],
+   "examples": [
+    "fine alloy dagger",
+    "iron broadsword",
+    "steel bastard sword",
+    "alloy broadsword",
+    "iron longsword",
+    "alloy short sword",
+    "steel short sword",
+    "iron dagger"
+   ]
+  },
+  {
+   "merchant": "Fiora",
+   "realm": "Midgard",
+   "list_id": "MidLeatherStarklaedar",
+   "list_rows": 48,
+   "rows_not_in_period_goods": 36,
+   "period_goods": 18,
+   "list_shared_with": [
+    "Fiora",
+    "Idona Tiu",
+    "Morgen",
+    "Pireda",
+    "Tyrn",
+    "Wulfwer"
+   ],
+   "examples": [
+    "hard starklaedar boots",
+    "rigid starklaedar jerkin",
+    "rigid starklaedar gloves",
+    "tanned starklaedar jerkin",
+    "rawhide starklaedar helm",
+    "cured starklaedar gloves",
+    "rawhide starklaedar leggings",
+    "hard starklaedar jerkin"
+   ]
+  },
+  {
+   "merchant": "Morgen",
+   "realm": "Midgard",
+   "list_id": "MidLeatherStarklaedar",
+   "list_rows": 48,
+   "rows_not_in_period_goods": 46,
+   "period_goods": 30,
+   "list_shared_with": [
+    "Fiora",
+    "Idona Tiu",
+    "Morgen",
+    "Pireda",
+    "Tyrn",
+    "Wulfwer"
+   ],
+   "examples": [
+    "hard starklaedar boots",
+    "rigid starklaedar jerkin",
+    "rigid starklaedar gloves",
+    "tanned starklaedar jerkin",
+    "rawhide starklaedar helm",
+    "cured starklaedar gloves",
+    "rawhide starklaedar leggings",
+    "hard starklaedar jerkin"
+   ]
+  },
+  {
+   "merchant": "Om",
+   "realm": "Midgard",
+   "list_id": "MidCraftingComponents2",
+   "list_rows": 48,
+   "rows_not_in_period_goods": 42,
+   "period_goods": 6,
+   "list_shared_with": [
+    "Irma",
+    "Isrod",
+    "Jorun",
+    "Om",
+    "Willamehina"
+   ],
+   "examples": [
+    "linen cloth square",
+    "planing tool",
+    "rigid leather square",
+    "spellcraft kit",
+    "planing tool",
+    "hard leather square",
+    "seamist cloth square",
+    "silk heavy thread"
+   ]
+  },
+  {
+   "merchant": "Falla",
+   "realm": "Midgard",
+   "list_id": "MidClothworking",
+   "list_rows": 36,
+   "rows_not_in_period_goods": 20,
+   "period_goods": 16,
+   "list_shared_with": [
+    "Falla Hemingr"
+   ],
+   "examples": [
+    "pair of reins",
+    "heroic armor mold",
+    "spool of triangle trim",
+    "nightshade heavy thread",
+    "cockatrice feathers",
+    "spool of square trim",
+    "sinister armor mold",
+    "spool of solid trim"
+   ]
+  },
+  {
+   "merchant": "Digby",
+   "realm": "Midgard",
+   "list_id": "MidShields",
+   "list_rows": 66,
+   "rows_not_in_period_goods": 62,
+   "period_goods": 4,
+   "list_shared_with": [
+    "Aric",
+    "Avar",
+    "Brize",
+    "Digby",
+    "Klag",
+    "Marie",
+    "Otkel",
+    "Runolf"
+   ],
+   "examples": [
+    "hard large block shield",
+    "hard medium block shield",
+    "elm large round shield",
+    "embossed medium heater shield",
+    "medium heater shield",
+    "hard medium round shield",
+    "ironwood tower shield",
+    "heartwood tower shield"
+   ]
+  },
+  {
+   "merchant": "Alleca",
+   "realm": "Midgard",
+   "list_id": "ClothDye2",
+   "list_rows": 40,
+   "rows_not_in_period_goods": 30,
+   "period_goods": 10,
+   "list_shared_with": [
+    "Alleca Gunderson",
+    "Dyemaker Bal",
+    "Dyemaster Alwin",
+    "Dyemaster Vandras",
+    "Gwendolyn Arlington",
+    "Hrin"
+   ],
+   "examples": [
+    "mauve cloth dye",
+    "rust colored cloth dye",
+    "light purple cloth dye",
+    "purple cloth dye",
+    "cloth bleach",
+    "violet cloth dye",
+    "blue cloth dye",
+    "hooded cloak"
+   ]
+  },
+  {
+   "merchant": "Hyndla",
+   "realm": "Midgard",
+   "list_id": "ClothDye1",
+   "list_rows": 41,
+   "rows_not_in_period_goods": 27,
+   "period_goods": 14,
+   "list_shared_with": [
+    "Bjorg",
+    "Bria",
+    "Cloth 2cd Page",
+    "Cloth 2nd Page",
+    "Dierdra",
+    "Dyemaster Brun",
+    "Dyemaster Edare",
+    "Eowyln Astos",
+    "Fadia",
+    "Hyndla Gunderson",
+    "Ullaria"
+   ],
+   "examples": [
+    "green cloth dye",
+    "hooded cloak",
+    "cloak",
+    "cloth bleach",
+    "black cloth dye",
+    "light green enamel",
+    "light red cloth dye",
+    "dark blue cloth dye"
+   ]
+  },
+  {
+   "merchant": "Rhosyn",
+   "realm": "Hibernia",
+   "list_id": "9553bfe3-067f-4301-bc07-2be38a14fa87",
+   "list_rows": 24,
+   "rows_not_in_period_goods": 18,
+   "period_goods": 6,
+   "list_shared_with": [
+    "Cian",
+    "Della",
+    "Edernola",
+    "Irksa",
+    "Rhosyn"
+   ],
+   "examples": [
+    "runewood flute",
+    "ironwood lute",
+    "ironwood flute",
+    "heartwood flute",
+    "ironwood drum",
+    "ebonwood lute",
+    "oaken flute",
+    "heartwood drum"
+   ]
+  },
+  {
+   "merchant": "Renny",
+   "realm": "Hibernia",
+   "list_id": "bb05e054-32ec-4fc8-a141-42f3a8b940a4",
+   "list_rows": 108,
+   "rows_not_in_period_goods": 78,
+   "period_goods": 30,
+   "list_shared_with": [
+    "Renny"
+   ],
+   "examples": [
+    "vine cailiocht leggings",
+    "amber nadurtha leggings",
+    "bone cailiocht leggings",
+    "amber nadurtha boots",
+    "bone tacuil sleeves",
+    "fossil tacuil helm",
+    "amber nadurtha gauntlets",
+    "shell cailiocht sleeves"
+   ]
+  },
+  {
+   "merchant": "Seva",
+   "realm": "Hibernia",
+   "list_id": "77793002",
+   "list_rows": 123,
+   "rows_not_in_period_goods": 98,
+   "period_goods": 25,
+   "list_shared_with": [
+    "Seva"
+   ],
+   "examples": [
+    "ferrite spear",
+    "cobalt war spear",
+    "cobalt dagger",
+    "cobalt barbed spear",
+    "quartz rapier",
+    "long spear",
+    "cobalt short spear",
+    "ferrite dirk"
+   ]
+  },
+  {
+   "merchant": "Dierdra",
+   "realm": "Hibernia",
+   "list_id": "ClothDye1",
+   "list_rows": 41,
+   "rows_not_in_period_goods": 24,
+   "period_goods": 17,
+   "list_shared_with": [
+    "Bjorg",
+    "Bria",
+    "Cloth 2cd Page",
+    "Cloth 2nd Page",
+    "Dierdra",
+    "Dyemaster Brun",
+    "Dyemaster Edare",
+    "Eowyln Astos",
+    "Fadia",
+    "Hyndla Gunderson",
+    "Ullaria"
+   ],
+   "examples": [
+    "light green cloth dye",
+    "cloth bleach",
+    "light green enamel",
+    "light red cloth dye",
+    "dark blue cloth dye",
+    "light turquoise cloth dye",
+    "light teal cloth dye",
+    "teal cloth dye"
+   ]
+  },
+  {
+   "merchant": "Sissy",
+   "realm": "Hibernia",
+   "list_id": "77793018",
+   "list_rows": 53,
+   "rows_not_in_period_goods": 36,
+   "period_goods": 18,
+   "list_shared_with": [
+    "Sissy"
+   ],
+   "examples": [
+    "silk woven pants",
+    "gossamer woven pants",
+    "woolen woven pants",
+    "gossamer woven gloves",
+    "woolen woven boots",
+    "silk woven gloves",
+    "linen woven boots",
+    "gossamer woven vest"
+   ]
+  },
+  {
+   "merchant": "Kedric",
+   "realm": "Hibernia",
+   "list_id": "HibEldritchStaffMerchant",
+   "list_rows": 40,
+   "rows_not_in_period_goods": 25,
+   "period_goods": 15,
+   "list_shared_with": [
+    "Kedric"
+   ],
+   "examples": [
+    "runewood Animist Staff of Mysticism",
+    "heartwood Animist Staff of Creeping Path",
+    "heartwood Animist Staff of Mysticism",
+    "oaken Animist Staff of Creeping Path",
+    "heartwood Eldritch Staff of Magic",
+    "elm Eldritch Staff of Void",
+    "elm Animist Staff of Creeping Path",
+    "runewood Animist Staff of Arboreal Path"
+   ]
+  },
+  {
+   "merchant": "Cedric",
+   "realm": "Hibernia",
+   "list_id": "HibCraftingComponents",
+   "list_rows": 66,
+   "rows_not_in_period_goods": 38,
+   "period_goods": 90,
+   "list_shared_with": [
+    "Cedric",
+    "Cotteltatan",
+    "Donlerricca",
+    "Ryionna"
+   ],
+   "examples": [
+    "hard leather square",
+    "spellcraft kit",
+    "sewing kit",
+    "brocade cloth square",
+    "dolomite metal bars",
+    "rigid leather square",
+    "sylvan heavy thread",
+    "tanned leather square"
+   ]
+  },
+  {
+   "merchant": "Ewen",
+   "realm": "Hibernia",
+   "list_id": "77793005",
+   "list_rows": 86,
+   "rows_not_in_period_goods": 80,
+   "period_goods": 6,
+   "list_shared_with": [
+    "Ewen"
+   ],
+   "examples": [
+    "elm Eldritch Staff of Void",
+    "oaken Eldritch Staff of Void",
+    "oaken Animist Staff of Creeping Path",
+    "runewood Enchanter Staff of Magic",
+    "ironwood Enchanter Staff of Mana",
+    "heartwood Eldritch Staff of Light",
+    "elm Eldritch Staff of Light",
+    "heartwood Mentalist Staff of Magic"
+   ]
+  },
+  {
+   "merchant": "Saffa",
+   "realm": "Hibernia",
+   "list_id": "966eda39-c819-41d3-84e0-cdf9783c1999",
+   "list_rows": 136,
+   "rows_not_in_period_goods": 109,
+   "period_goods": 61,
+   "list_shared_with": [
+    "Alchemist Lendand",
+    "Gilbert",
+    "Saffa"
+   ],
+   "examples": [
+    "stable enlightening catalyst",
+    "boiled St. John's wort",
+    "vial of troll blood",
+    "crushed blue focus stone",
+    "volatile celeric catalyst",
+    "crushed maggots",
+    "oleander",
+    "bat saliva"
+   ]
+  },
+  {
+   "merchant": "Baran",
+   "realm": "Hibernia",
+   "list_id": "HibMetalworkingMerchant",
+   "list_rows": 24,
+   "rows_not_in_period_goods": 19,
+   "period_goods": 6,
+   "list_shared_with": [
+    "Baran"
+   ],
+   "examples": [
+    "hard leather square",
+    "stonewood wooden boards",
+    "runed leather square",
+    "cured leather square",
+    "carbide metal bars",
+    "ebonwood wooden boards",
+    "heartwood wooden boards",
+    "sapphire metal bars"
+   ]
+  },
+  {
+   "merchant": "Tomas",
+   "realm": "Hibernia",
+   "list_id": "HibCruaighMerchant",
+   "list_rows": 37,
+   "rows_not_in_period_goods": 34,
+   "period_goods": 3,
+   "list_shared_with": [
+    "Arzhela",
+    "Dympna",
+    "Erruno Moraine",
+    "Tomas"
+   ],
+   "examples": [
+    "cured cruaigh sleeves",
+    "cured cruaigh helm",
+    "tanned cruaigh helm",
+    "yellow leather dye",
+    "rigid cruaigh leggings",
+    "rigid cruaigh sleeves",
+    "hard cruaigh jerkin",
+    "tanned cruaigh boots"
+   ]
+  },
+  {
+   "merchant": "Fingal",
+   "realm": "Hibernia",
+   "list_id": "77793003",
+   "list_rows": 24,
+   "rows_not_in_period_goods": 18,
+   "period_goods": 6,
+   "list_shared_with": [
+    "Fingal"
+   ],
+   "examples": [
+    "stonewood flute",
+    "heartwood drum",
+    "ironwood lute",
+    "runewood lute",
+    "stonewood drum",
+    "oaken drum",
+    "ebonwood lute",
+    "runewood drum"
+   ]
+  },
+  {
+   "merchant": "Wony",
+   "realm": null,
+   "list_id": "96c7a1bf-51ce-4ea9-9298-685e2c836feb",
+   "list_rows": 84,
+   "rows_not_in_period_goods": 74,
+   "period_goods": 10,
+   "list_shared_with": [
+    "Wony"
+   ],
+   "examples": [
+    "elm Animist Staff of Mysticism",
+    "ferrite spiked club",
+    "rough bodkin arrows",
+    "ironwood short bow",
+    "ironwood Enchanter Staff of Magic",
+    "ironwood short recurve bow",
+    "quartz great hammer",
+    "clout blunt arrows"
+   ]
+  },
+  {
+   "merchant": "Cafell",
+   "realm": "Hibernia",
+   "list_id": "Cleit",
+   "list_rows": 65,
+   "rows_not_in_period_goods": 41,
+   "period_goods": 24,
+   "list_shared_with": [
+    "Cafell"
+   ],
+   "examples": [
+    "embossed medium heater shield",
+    "oaken buckler",
+    "rigid medium heater shield",
+    "rigid medium block shield",
+    "elm large block shield",
+    "rigid buckler",
+    "oaken medium block shield",
+    "hard buckler"
+   ]
+  },
+  {
+   "merchant": "Kylirean",
+   "realm": "Hibernia",
+   "list_id": "1442d7a4-157d-43e8-84b1-a6d203779de1",
+   "list_rows": 90,
+   "rows_not_in_period_goods": 60,
+   "period_goods": 30,
+   "list_shared_with": [
+    "Kylirean",
+    "hibernia adventurer"
+   ],
+   "examples": [
+    "tacuil leggings",
+    "tacuil gauntlets",
+    "ferrite cruanach leggings",
+    "fossil tacuil boots",
+    "fossil tacuil sleeves",
+    "cruanach sleeves",
+    "quartz cruanach boots",
+    "shell tacuil boots"
+   ]
+  },
+  {
+   "merchant": "Daracha",
+   "realm": "Hibernia",
+   "list_id": "6326d1cf-744d-475b-aa4f-5ccc9c664b09",
+   "list_rows": 84,
+   "rows_not_in_period_goods": 84,
+   "period_goods": 4,
+   "list_shared_with": [
+    "Daracha"
+   ],
+   "examples": [
+    "blunt arrows",
+    "flight bodkin arrows",
+    "rough broadhead arrows",
+    "footed bodkin arrows",
+    "clout bodkin arrows",
+    "major enervating poison",
+    "oaken short bow",
+    "minor infectious serum"
+   ]
+  },
+  {
+   "merchant": "Otkel",
+   "realm": null,
+   "list_id": "MidShields",
+   "list_rows": 66,
+   "rows_not_in_period_goods": 53,
+   "period_goods": 13,
+   "list_shared_with": [
+    "Aric",
+    "Avar",
+    "Brize",
+    "Digby",
+    "Klag",
+    "Marie",
+    "Otkel",
+    "Runolf"
+   ],
+   "examples": [
+    "hard large block shield",
+    "hard medium block shield",
+    "elm large round shield",
+    "embossed medium heater shield",
+    "medium heater shield",
+    "hard medium round shield",
+    "ironwood tower shield",
+    "large block shield"
+   ]
+  },
+  {
+   "merchant": "Aki",
+   "realm": "Midgard",
+   "list_id": "MidThrowingWeapons4",
+   "list_rows": 34,
+   "rows_not_in_period_goods": 21,
+   "period_goods": 13,
+   "list_shared_with": [
+    "Aki",
+    "Carl"
+   ],
+   "examples": [
+    "fine alloy balanced throwing knives",
+    "fine alloy weighted throwing axes",
+    "alloy weighted throwing knives",
+    "steel weighted throwing hammers",
+    "steel balanced throwing hammers",
+    "alloy balanced throwing axes",
+    "steel balanced throwing axes",
+    "alloy balanced throwing knives"
+   ]
+  },
+  {
+   "merchant": "Dyemaster Alwin",
+   "realm": "Albion",
+   "list_id": "ClothDye2",
+   "list_rows": 40,
+   "rows_not_in_period_goods": 22,
+   "period_goods": 19,
+   "list_shared_with": [
+    "Alleca Gunderson",
+    "Dyemaker Bal",
+    "Dyemaster Alwin",
+    "Dyemaster Vandras",
+    "Gwendolyn Arlington",
+    "Hrin"
+   ],
+   "examples": [
+    "mauve cloth dye",
+    "light turquoise cloth dye",
+    "teal cloth dye",
+    "rust colored cloth dye",
+    "light blue cloth dye",
+    "light purple cloth dye",
+    "light teal cloth dye",
+    "purple cloth dye"
+   ]
+  },
+  {
+   "merchant": "Arleigh Penn",
+   "realm": "Albion",
+   "list_id": "bd459188-2f47-4c1c-80bb-8ced4e924de2",
+   "list_rows": 84,
+   "rows_not_in_period_goods": 56,
+   "period_goods": 25,
+   "list_shared_with": [
+    "Arleigh Penn",
+    "Dyemaster Cor"
+   ],
+   "examples": [
+    "royal green cloth dye",
+    "black leather dye",
+    "royal blue leather dye",
+    "orange cloth dye",
+    "light brown leather dye",
+    "brown cloth dye",
+    "forest green cloth dye",
+    "turquoise leather dye"
+   ]
+  },
+  {
+   "merchant": "Karn Graem",
+   "realm": "Albion",
+   "list_id": "44ac972a-7aab-4d9c-8c2e-2c0fa5313c6a",
+   "list_rows": 107,
+   "rows_not_in_period_goods": 72,
+   "period_goods": 35,
+   "list_shared_with": [
+    "Karn Graem",
+    "Sydelle Ranald"
+   ],
+   "examples": [
+    "fine alloy scaled plate boots",
+    "alloy scaled breastplate",
+    "alloy scaled plate arms",
+    "steel chain coif",
+    "alloy chain sleeves",
+    "alloy mail gloves",
+    "fine alloy scaled plate arms",
+    "steel chain hauberk"
+   ]
+  },
+  {
+   "merchant": "Anga Weaver",
+   "realm": "Albion",
+   "list_id": "AlbQuiltedCloth",
+   "list_rows": 30,
+   "rows_not_in_period_goods": 24,
+   "period_goods": 6,
+   "list_shared_with": [
+    "Anga Weaver",
+    "Bline Tengit",
+    "Erwin Holdyn",
+    "Raggart Bruce",
+    "Seamstress Marie",
+    "Sebil Lenut"
+   ],
+   "examples": [
+    "silk quilted boots",
+    "linen quilted sleeves",
+    "brocade quilted cap",
+    "silk quilted sleeves",
+    "gossamer quilted cap",
+    "linen quilted cap",
+    "linen quilted vest",
+    "brocade quilted vest"
+   ]
+  },
+  {
+   "merchant": "Ebo",
+   "realm": "Hibernia",
+   "list_id": "cd800515-e685-49ac-a704-f4ff958018f7",
+   "list_rows": 24,
+   "rows_not_in_period_goods": 16,
+   "period_goods": 8,
+   "list_shared_with": [
+    "Ebo"
+   ],
+   "examples": [
+    "Corrupted Abysmal Gloves",
+    "Abysmal Sleeves",
+    "Abysmal Gloves",
+    "Abysmal Boots",
+    "Abysmal Leggings",
+    "Diabolical Forged Gloves",
+    "Exquisite Diabolical Forged Leggings",
+    "Diabolic Sleeves"
+   ]
+  },
+  {
+   "merchant": "Beelo",
+   "realm": "Hibernia",
+   "list_id": "f6f1b508-7a40-4863-87cc-83b48cb71bba",
+   "list_rows": 29,
+   "rows_not_in_period_goods": 20,
+   "period_goods": 9,
+   "list_shared_with": [
+    "Beelo"
+   ],
+   "examples": [
+    "Daemon-forged Coif",
+    "Daemon-forged Gloves",
+    "Daemon-forged Leggings",
+    "Abyssal Leggings",
+    "Daemon-forged Sleeves",
+    "Abyssal Shadow Gloves",
+    "Daemon-forged Hauberk",
+    "Despoiled Daemon-forged Coif"
+   ]
+  },
+  {
+   "merchant": "Sebil Lenut",
+   "realm": "Albion",
+   "list_id": "AlbQuiltedCloth",
+   "list_rows": 30,
+   "rows_not_in_period_goods": 24,
+   "period_goods": 6,
+   "list_shared_with": [
+    "Anga Weaver",
+    "Bline Tengit",
+    "Erwin Holdyn",
+    "Raggart Bruce",
+    "Seamstress Marie",
+    "Sebil Lenut"
+   ],
+   "examples": [
+    "silk quilted boots",
+    "linen quilted sleeves",
+    "brocade quilted cap",
+    "silk quilted sleeves",
+    "gossamer quilted cap",
+    "linen quilted cap",
+    "linen quilted vest",
+    "brocade quilted vest"
+   ]
+  },
+  {
+   "merchant": "Aaric",
+   "realm": "Midgard",
+   "list_id": "MidThrowingWeapons",
+   "list_rows": 48,
+   "rows_not_in_period_goods": 30,
+   "period_goods": 18,
+   "list_shared_with": [
+    "Aaric",
+    "Aishhe",
+    "Canute",
+    "Delg",
+    "Harry",
+    "Hild",
+    "Wyborn"
+   ],
+   "examples": [
+    "bronze balanced throwing knives",
+    "fine alloy balanced throwing knives",
+    "alloy weighted throwing axes",
+    "steel balanced throwing knives",
+    "iron balanced throwing axes",
+    "alloy weighted throwing knives",
+    "steel weighted throwing axes",
+    "steel balanced throwing hammers"
+   ]
+  },
+  {
+   "merchant": "Marissa Fletchet",
+   "realm": "Albion",
+   "list_id": "AlbBowsArrows",
+   "list_rows": 52,
+   "rows_not_in_period_goods": 32,
+   "period_goods": 20,
+   "list_shared_with": [
+    "Clan Fletcher",
+    "Leolith",
+    "Marissa Fletchet"
+   ],
+   "examples": [
+    "rowan short bow",
+    "runewood longbow",
+    "runewood bow",
+    "footed flight bodkin arrows",
+    "heartwood hunting bow",
+    "elm hunting bow",
+    "ironwood short bow",
+    "heartwood longbow"
+   ]
+  },
+  {
+   "merchant": "Eafa Thatcher",
+   "realm": "Albion",
+   "list_id": "0be5b625-7a50-423b-b83b-64ebd19d01a1",
+   "list_rows": 25,
+   "rows_not_in_period_goods": 15,
+   "period_goods": 10,
+   "list_shared_with": [
+    "Eafa Thatcher",
+    "Reeni",
+    "Thord"
+   ],
+   "examples": [
+    "purple cloth dye",
+    "dark purple cloth dye",
+    "crimson cloth dye",
+    "mauve cloth dye",
+    "royal red cloth dye",
+    "cloth bleach",
+    "light purple cloth dye",
+    "rust colored cloth dye"
+   ]
+  },
+  {
+   "merchant": "Nia Loaman",
+   "realm": "Albion",
+   "list_id": "AlbStuddedChainArmor",
+   "list_rows": 55,
+   "rows_not_in_period_goods": 44,
+   "period_goods": 12,
+   "list_shared_with": [
+    "Nia Loaman"
+   ],
+   "examples": [
+    "alloy mail coif",
+    "iron mail hauberk",
+    "fine alloy studded legs",
+    "iron mail leggings",
+    "steel mail leggings",
+    "iron mail sleeves",
+    "iron mail boots",
+    "steel mail sleeves"
+   ]
+  },
+  {
+   "merchant": "Kaitlyn Montgomery",
+   "realm": "Albion",
+   "list_id": "AlbTwoHandedChains",
+   "list_rows": 108,
+   "rows_not_in_period_goods": 61,
+   "period_goods": 47,
+   "list_shared_with": [
+    "Kaitlyn Montgomery"
+   ],
+   "examples": [
+    "fine alloy quarterstaff",
+    "iron great sword",
+    "steel shod staff",
+    "steel great hammer",
+    "bronze quarterstaff",
+    "fine alloy great hammer",
+    "alloy great hammer",
+    "bronze great sword"
+   ]
+  },
+  {
+   "merchant": "Forgemaster Brungar",
+   "realm": "Midgard",
+   "list_id": "MidBlades",
+   "list_rows": 25,
+   "rows_not_in_period_goods": 25,
+   "period_goods": 1,
+   "list_shared_with": [
+    "Aren",
+    "Flosi",
+    "Forgemaster Brungar",
+    "Gyda",
+    "Harald",
+    "Hrapp",
+    "Liv",
+    "Orm",
+    "Pater",
+    "Stein",
+    "Vifil",
+    "Vordn",
+    "svartalf merchant"
+   ],
+   "examples": [
+    "fine alloy dagger",
+    "bronze broadsword",
+    "bronze longsword",
+    "iron broadsword",
+    "bronze dagger",
+    "steel bastard sword",
+    "bronze bastard sword",
+    "alloy broadsword"
+   ]
+  },
+  {
+   "merchant": "Jacques Tole",
+   "realm": "Albion",
+   "list_id": "AlbCraftComponents",
+   "list_rows": 50,
+   "rows_not_in_period_goods": 42,
+   "period_goods": 6,
+   "list_shared_with": [
+    "Alfu Rolby",
+    "Jacques Tole",
+    "Jes Markley",
+    "Marna",
+    "Williamiena Stokes"
+   ],
+   "examples": [
+    "gossamer cloth square",
+    "planing tool",
+    "rowan wooden boards",
+    "spellcraft kit",
+    "stonewood wooden boards",
+    "alchemy kit",
+    "elm wooden boards",
+    "rawhide leather square"
+   ]
+  },
+  {
+   "merchant": "Billy Faulkner",
+   "realm": "Albion",
+   "list_id": "50132a38-a56c-4ff5-ad41-043029555c15",
+   "list_rows": 116,
+   "rows_not_in_period_goods": 79,
+   "period_goods": 37,
+   "list_shared_with": [
+    "Billy Faulklier",
+    "Eddian Peadar"
+   ],
+   "examples": [
+    "caster oil plant",
+    "henbane",
+    "hemlock",
+    "danesweed",
+    "crushed maggots",
+    "reactive glacial catalyst",
+    "concoctive crippling catalyst",
+    "yellow iris roots"
+   ]
+  },
+  {
+   "merchant": "Jorun",
+   "realm": "Midgard",
+   "list_id": "MidCraftingComponents2",
+   "list_rows": 48,
+   "rows_not_in_period_goods": 30,
+   "period_goods": 16,
+   "list_shared_with": [
+    "Irma",
+    "Isrod",
+    "Jorun",
+    "Om",
+    "Willamehina"
+   ],
+   "examples": [
+    "planing tool",
+    "steel metal bars",
+    "spellcraft kit",
+    "planing tool",
+    "iron metal bars",
+    "seamist cloth square",
+    "spellcraft kit",
+    "alchemy kit"
+   ]
+  },
+  {
+   "merchant": "Irma",
+   "realm": "Midgard",
+   "list_id": "MidCraftingComponents2",
+   "list_rows": 48,
+   "rows_not_in_period_goods": 30,
+   "period_goods": 16,
+   "list_shared_with": [
+    "Irma",
+    "Isrod",
+    "Jorun",
+    "Om",
+    "Willamehina"
+   ],
+   "examples": [
+    "planing tool",
+    "steel metal bars",
+    "spellcraft kit",
+    "planing tool",
+    "iron metal bars",
+    "seamist cloth square",
+    "spellcraft kit",
+    "alchemy kit"
+   ]
+  }
+ ],
+ "overflow": {
+  "966eda39-c819-41d3-84e0-cdf9783c1999": 20,
+  "9ab94f25-0da3-42f0-abd1-189f95c64d13": 15
+ }
+}

@@ -1,0 +1,4 @@
+[
+ {"sql": "UPDATE Mob SET Flags = (Flags & ~28) WHERE ClassType IN ('DOL.GS.NightSpawn','DOL.GS.DaySpawn') AND (Flags & 28) = 28",
+  "reason": "1.65 audit fix: day/night spawns saved while asleep (peace, can't target, no name) wake up and can be fought again"}
+]

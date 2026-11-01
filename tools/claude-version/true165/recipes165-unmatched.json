@@ -1,0 +1,8205 @@
+{
+ "source": "tdl.irf 1.64 (research/period-data/client-1.64/ifd/tdl.irf, Aug 2003)",
+ "counts": {
+  "Alchemy": {
+   "server": 1038,
+   "matched": 846,
+   "not_in_1.64": 192,
+   "name_only_level_differs": 318
+  },
+  "Armorcraft": {
+   "server": 1470,
+   "matched": 1470,
+   "not_in_1.64": 0,
+   "name_only_level_differs": 0
+  },
+  "Metalworking": {
+   "server": 200,
+   "matched": 120,
+   "not_in_1.64": 80,
+   "name_only_level_differs": 0
+  },
+  "Spellcraft": {
+   "server": 1456,
+   "matched": 1420,
+   "not_in_1.64": 36,
+   "name_only_level_differs": 0
+  },
+  "Tailoring": {
+   "server": 1288,
+   "matched": 1288,
+   "not_in_1.64": 0,
+   "name_only_level_differs": 0
+  },
+  "Weaponcraft": {
+   "server": 1886,
+   "matched": 1886,
+   "not_in_1.64": 0,
+   "name_only_level_differs": 0
+  },
+  "Woodworking": {
+   "server": 336,
+   "matched": 306,
+   "not_in_1.64": 30,
+   "name_only_level_differs": 0
+  },
+  "Clothworking": {
+   "server": 150,
+   "matched": 120,
+   "not_in_1.64": 30,
+   "name_only_level_differs": 0
+  },
+  "Fletching": {
+   "server": 565,
+   "matched": 553,
+   "not_in_1.64": 12,
+   "name_only_level_differs": 0
+  },
+  "Leatherworking": {
+   "server": 90,
+   "matched": 90,
+   "not_in_1.64": 0,
+   "name_only_level_differs": 0
+  },
+  "total": {
+   "server": 8479,
+   "remove": 380
+  }
+ },
+ "remove": [
+  {
+   "Id_nb": "plum_leather_dye",
+   "name": "plum leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "deep_violet_leather_dye",
+   "name": "deep violet leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "bronze_gem-studded_jewelry_box2",
+   "name": "bronze gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 75,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "iron_gem-studded_jewelry_box2",
+   "name": "iron gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 175,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "steel_gem-studded_jewelry_box2",
+   "name": "steel gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 275,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "alloy_gem-studded_jewelry_box2",
+   "name": "alloy gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 375,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "fine_alloy_gem-studded_jewelry_box2",
+   "name": "fine alloy gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 475,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "mithril_gem-studded_jewelry_box2",
+   "name": "mithril gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 575,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "adamantium_gem-studded_jewelry_box2",
+   "name": "adamantium gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 675,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "asterite_gem-studded_jewelry_box2",
+   "name": "asterite gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 775,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "netherium_gem-studded_jewelry_box2",
+   "name": "netherium gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 875,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "dark_violet_leather_dye",
+   "name": "dark violet leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "arcanium_gem-studded_jewelry_box2",
+   "name": "arcanium gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 975,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "dusky_violet_leather_dye",
+   "name": "dusky violet leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "light_gold_leather_dye",
+   "name": "light gold leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dark_gold_leather_dye",
+   "name": "dark gold leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_orange_leather_dye",
+   "name": "dusky orange leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "tan_leather_dye",
+   "name": "tan leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "earthen_brown_leather_dye",
+   "name": "earthen brown leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "pale_green_leather_dye",
+   "name": "pale green leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "olive_green_leather_dye",
+   "name": "olive green leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "pale_blue_leather_dye",
+   "name": "pale blue leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "light_gray_leather_dye",
+   "name": "light gray leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "bright_rose_leather_dye",
+   "name": "rose leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_rose_leather_dye",
+   "name": "dusky rose leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "raw_brilliant_rune2",
+   "name": "raw brilliant rune",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 99,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "uncut_brilliant_rune2",
+   "name": "uncut brilliant rune",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 199,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "rough_brilliant_rune2",
+   "name": "rough brilliant rune",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 299,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "flawed_brilliant_rune2",
+   "name": "flawed brilliant rune",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 399,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "imperfect_brilliant_rune2",
+   "name": "imperfect brilliant rune",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 499,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "polished_brilliant_rune2",
+   "name": "polished brilliant rune",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 599,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "faceted_brilliant_rune2",
+   "name": "faceted brilliant rune",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 699,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "precious_brilliant_rune2",
+   "name": "precious brilliant rune",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 799,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "flawless_brilliant_rune2",
+   "name": "flawless brilliant rune",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 899,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "perfect_brilliant_rune2",
+   "name": "perfect brilliant rune",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 999,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "raw_finesse_war_rune2",
+   "name": "raw finesse war rune",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 88,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "raw_finesse_primal_rune2",
+   "name": "raw finesse primal rune",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 88,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "sage_green_leather_dye",
+   "name": "sage green leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "lime_green_leather_dye",
+   "name": "lime green leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "gray_teal_leather_dye",
+   "name": "gray teal leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "gray_blue_leather_dye",
+   "name": "gray blue leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "olive_gray_leather_dye",
+   "name": "olive gray leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "rowan_carved_souvenir_box2",
+   "name": "rowan carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 75,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "elm_carved_souvenir_box2",
+   "name": "elm carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 175,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "oaken_carved_souvenir_box2",
+   "name": "oaken carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 275,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "ironwood_carved_souvenir_box2",
+   "name": "ironwood carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 375,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "heartwood_carved_souvenir_box2",
+   "name": "heartwood carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 475,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "runewood_carved_souvenir_box2",
+   "name": "runewood carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 575,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "stonewood_carved_souvenir_box2",
+   "name": "stonewood carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 675,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "ebonwood_carved_souvenir_box2",
+   "name": "ebonwood carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 775,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "dyrwood_carved_souvenir_box2",
+   "name": "dyrwood carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 875,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "duskwood_carved_souvenir_box2",
+   "name": "duskwood carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 975,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "plum_cloth_dye3",
+   "name": "plum cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "deep_violet_cloth_dye3",
+   "name": "deep violet cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dark_violet_cloth_dye3",
+   "name": "dark violet cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_violet_cloth_dye3",
+   "name": "dusky violet cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "light_gold_cloth_dye3",
+   "name": "light gold cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dark_gold_cloth_dye3",
+   "name": "dark gold cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_orange_cloth_dye3",
+   "name": "dusky orange cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "tan_cloth_dye3",
+   "name": "tan cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "earthen_brown_cloth_dye3",
+   "name": "earthen brown cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "pale_green_cloth_dye3",
+   "name": "pale green cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "olive_green_cloth_dye3",
+   "name": "olive green cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "pale_blue_cloth_dye3",
+   "name": "pale blue cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "light_gray_cloth_dye3",
+   "name": "light gray cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "bright_rose_cloth_dye3",
+   "name": "rose cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_rose_cloth_dye3",
+   "name": "dusky rose cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "sage_green_cloth_dye3",
+   "name": "sage green cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "lime_green_cloth_dye3",
+   "name": "lime green cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "gray_teal_cloth_dye3",
+   "name": "gray teal cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "gray_blue_cloth_dye3",
+   "name": "gray blue cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "olive_gray_cloth_dye3",
+   "name": "olive gray cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "plum_leather_dye3",
+   "name": "plum leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "deep_violet_leather_dye3",
+   "name": "deep violet leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dark_violet_leather_dye3",
+   "name": "dark violet leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_violet_leather_dye3",
+   "name": "dusky violet leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "light_gold_leather_dye3",
+   "name": "light gold leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dark_gold_leather_dye3",
+   "name": "dark gold leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_orange_leather_dye3",
+   "name": "dusky orange leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "tan_leather_dye3",
+   "name": "tan leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "earthen_brown_leather_dye3",
+   "name": "earthen brown leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "pale_green_leather_dye3",
+   "name": "pale green leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "olive_green_leather_dye3",
+   "name": "olive green leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "pale_blue_leather_dye3",
+   "name": "pale blue leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "light_gray_leather_dye3",
+   "name": "light gray leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "bright_rose_leather_dye3",
+   "name": "rose leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_rose_leather_dye3",
+   "name": "dusky rose leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "sage_green_leather_dye3",
+   "name": "sage green leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "lime_green_leather_dye3",
+   "name": "lime green leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "gray_teal_leather_dye3",
+   "name": "gray teal leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "gray_blue_leather_dye3",
+   "name": "gray blue leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "olive_gray_leather_dye3",
+   "name": "olive gray leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "plum_enamel3",
+   "name": "plum enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "deep_violet_enamel3",
+   "name": "deep violet enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dark_violet_enamel3",
+   "name": "dark violet enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_violet_enamel3",
+   "name": "dusky violet enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "light_gold_enamel3",
+   "name": "light gold enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dark_gold_enamel3",
+   "name": "dark gold enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_orange_enamel3",
+   "name": "dusky orange enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "tan_enamel3",
+   "name": "tan enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "earthen_brown_enamel3",
+   "name": "earthen brown enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "pale_green_enamel3",
+   "name": "pale green enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "olive_green_enamel3",
+   "name": "olive green enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "pale_blue_enamel3",
+   "name": "pale blue enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "light_gray_enamel3",
+   "name": "light gray enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "bright_rose_enamel3",
+   "name": "rose enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_rose_enamel3",
+   "name": "dusky rose enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "sage_green_enamel3",
+   "name": "sage green enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "lime_green_enamel3",
+   "name": "lime green enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "gray_teal_enamel3",
+   "name": "gray teal enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "gray_blue_enamel3",
+   "name": "gray blue enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "olive_gray_enamel3",
+   "name": "olive gray enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "woolen_ruffled_scarf",
+   "name": "woolen ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 75,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "linen_ruffled_scarf",
+   "name": "linen ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 175,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "brocade_ruffled_scarf",
+   "name": "brocade ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 275,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "silk_ruffled_scarf",
+   "name": "silk ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 375,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "gossamer_ruffled_scarf",
+   "name": "gossamer ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 475,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "sylvan_ruffled_scarf",
+   "name": "sylvan ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 575,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "seamist_ruffled_scarf",
+   "name": "seamist ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 675,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "nightshade_ruffled_scarf",
+   "name": "nightshade ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 775,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "wyvernskin_ruffled_scarf",
+   "name": "wyvernskin ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 875,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "silksteel_ruffled_scarf",
+   "name": "silksteel ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 975,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "woolen_ruffled_scarf3",
+   "name": "woolen ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 75,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "linen_ruffled_scarf3",
+   "name": "linen ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 175,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "brocade_ruffled_scarf3",
+   "name": "brocade ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 275,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "silk_ruffled_scarf3",
+   "name": "silk ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 375,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "gossamer_ruffled_scarf3",
+   "name": "gossamer ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 475,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "sylvan_ruffled_scarf3",
+   "name": "sylvan ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 575,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "seamist_ruffled_scarf3",
+   "name": "seamist ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 675,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "nightshade_ruffled_scarf3",
+   "name": "nightshade ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 775,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "wyvernskin_ruffled_scarf3",
+   "name": "wyvernskin ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 875,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "silksteel_ruffled_scarf3",
+   "name": "silksteel ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 975,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "heartwood_harp3",
+   "name": "heartwood harp",
+   "skill": 12,
+   "craft": "Fletching",
+   "level": 525,
+   "why": "harp not in the 1.64 fletching list"
+  },
+  {
+   "Id_nb": "runewood_harp3",
+   "name": "runewood harp",
+   "skill": 12,
+   "craft": "Fletching",
+   "level": 625,
+   "why": "harp not in the 1.64 fletching list"
+  },
+  {
+   "Id_nb": "stonewood_harp3",
+   "name": "stonewood harp",
+   "skill": 12,
+   "craft": "Fletching",
+   "level": 725,
+   "why": "harp not in the 1.64 fletching list"
+  },
+  {
+   "Id_nb": "ebonwood_harp3",
+   "name": "ebonwood harp",
+   "skill": 12,
+   "craft": "Fletching",
+   "level": 825,
+   "why": "harp not in the 1.64 fletching list"
+  },
+  {
+   "Id_nb": "dyrwood_harp3",
+   "name": "dyrwood harp",
+   "skill": 12,
+   "craft": "Fletching",
+   "level": 925,
+   "why": "harp not in the 1.64 fletching list"
+  },
+  {
+   "Id_nb": "duskwood_harp3",
+   "name": "duskwood harp",
+   "skill": 12,
+   "craft": "Fletching",
+   "level": 1025,
+   "why": "harp not in the 1.64 fletching list"
+  },
+  {
+   "Id_nb": "plum_enamel",
+   "name": "plum enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "deep_violet_enamel",
+   "name": "deep violet enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dark_violet_enamel",
+   "name": "dark violet enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_violet_enamel",
+   "name": "dusky violet enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "light_gold_enamel",
+   "name": "light gold enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dark_gold_enamel",
+   "name": "dark gold enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_orange_enamel",
+   "name": "dusky orange enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "tan_enamel",
+   "name": "tan enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "earthen_brown_enamel",
+   "name": "earthen brown enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "pale_green_enamel",
+   "name": "pale green enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "olive_green_enamel",
+   "name": "olive green enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "copper_gem-studded_jewelry_box3",
+   "name": "copper gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 75,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "ferrite_gem-studded_jewelry_box3",
+   "name": "ferrite gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 175,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "quartz_gem-studded_jewelry_box3",
+   "name": "quartz gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 275,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "dolomite_gem-studded_jewelry_box3",
+   "name": "dolomite gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 375,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "cobalt_gem-studded_jewelry_box3",
+   "name": "cobalt gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 475,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "carbide_gem-studded_jewelry_box3",
+   "name": "carbide gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 575,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "sapphire_gem-studded_jewelry_box3",
+   "name": "sapphire gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 675,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "diamond_gem-studded_jewelry_box3",
+   "name": "diamond gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 775,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "netherite_gem-studded_jewelry_box3",
+   "name": "netherite gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 875,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "pale_blue_enamel",
+   "name": "pale blue enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "arcanite_gem-studded_jewelry_box3",
+   "name": "arcanite gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 975,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "leaf_small_bracket3",
+   "name": "leaf small bracket",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 0,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "bone_small_bracket3",
+   "name": "bone small bracket",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 100,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "vine_small_bracket3",
+   "name": "vine small bracket",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 200,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "shell_small_bracket3",
+   "name": "shell small bracket",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 300,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "fossil_small_bracket3",
+   "name": "fossil small bracket",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 400,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "amber_small_bracket3",
+   "name": "amber small bracket",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 500,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "coral_small_bracket3",
+   "name": "coral small bracket",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 600,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "chitin_small_bracket3",
+   "name": "chitin small bracket",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 700,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "petrified_small_bracket3",
+   "name": "petrified small bracket",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 800,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "crystalized_small_bracket3",
+   "name": "crystalized small bracket",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 900,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "leaf_roughhewn_hinge3",
+   "name": "leaf roughhewn hinge",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 50,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "bone_roughhewn_hinge3",
+   "name": "bone roughhewn hinge",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 150,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "vine_roughhewn_hinge3",
+   "name": "vine roughhewn hinge",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 250,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "shell_roughhewn_hinge3",
+   "name": "shell roughhewn hinge",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 350,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "fossil_roughhewn_hinge3",
+   "name": "fossil roughhewn hinge",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 450,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "amber_roughhewn_hinge3",
+   "name": "amber roughhewn hinge",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 550,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "coral_roughhewn_hinge3",
+   "name": "coral roughhewn hinge",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 650,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "chitin_roughhewn_hinge3",
+   "name": "chitin roughhewn hinge",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 750,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "petrified_roughhewn_hinge3",
+   "name": "petrified roughhewn hinge",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 850,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "crystalized_roughhewn_hinge3",
+   "name": "crystalized roughhewn hinge",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 950,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "leaf_embossed_jewelry_box3",
+   "name": "leaf embossed jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 25,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "bone_embossed_jewelry_box3",
+   "name": "bone embossed jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 125,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "vine_embossed_jewelry_box3",
+   "name": "vine embossed jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 225,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "shell_embossed_jewelry_box3",
+   "name": "shell embossed jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 325,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "fossil_embossed_jewelry_box3",
+   "name": "fossil embossed jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 425,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "amber_embossed_jewelry_box3",
+   "name": "amber embossed jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 525,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "coral_embossed_jewelry_box3",
+   "name": "coral embossed jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 625,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "chitin_embossed_jewelry_box3",
+   "name": "chitin embossed jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 725,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "petrified_embossed_jewelry_box3",
+   "name": "petrified embossed jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 825,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "crystalized_embossed_jewelry_box3",
+   "name": "crystalized embossed jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 925,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "leaf_small_lamp3",
+   "name": "leaf small lamp",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 75,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "bone_small_lamp3",
+   "name": "bone small lamp",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 175,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "vine_small_lamp3",
+   "name": "vine small lamp",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 275,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "shell_small_lamp3",
+   "name": "shell small lamp",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 375,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "fossil_small_lamp3",
+   "name": "fossil small lamp",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 475,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "amber_small_lamp3",
+   "name": "amber small lamp",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 575,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "coral_small_lamp3",
+   "name": "coral small lamp",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 675,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "chitin_small_lamp3",
+   "name": "chitin small lamp",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 775,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "petrified_small_lamp3",
+   "name": "petrified small lamp",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 875,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "crystalized_small_lamp3",
+   "name": "crystalized small lamp",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 975,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "leaf_ornate_lamp3",
+   "name": "leaf ornate lamp",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 75,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "bone_ornate_lamp3",
+   "name": "bone ornate lamp",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 175,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "vine_ornate_lamp3",
+   "name": "vine ornate lamp",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 275,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "shell_ornate_lamp3",
+   "name": "shell ornate lamp",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 375,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "fossil_ornate_lamp3",
+   "name": "fossil ornate lamp",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 475,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "amber_ornate_lamp3",
+   "name": "amber ornate lamp",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 575,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "coral_ornate_lamp3",
+   "name": "coral ornate lamp",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 675,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "chitin_ornate_lamp3",
+   "name": "chitin ornate lamp",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 775,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "petrified_ornate_lamp3",
+   "name": "petrified ornate lamp",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 875,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "crystalized_ornate_lamp3",
+   "name": "crystalized ornate lamp",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 975,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "light_gray_enamel",
+   "name": "light gray enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "bright_rose_enamel",
+   "name": "rose enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_rose_enamel",
+   "name": "dusky rose enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "sage_green_enamel",
+   "name": "sage green enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "lime_green_enamel",
+   "name": "lime green enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "gray_teal_enamel",
+   "name": "gray teal enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "gray_blue_enamel",
+   "name": "gray blue enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "olive_gray_enamel",
+   "name": "olive gray enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "raw_brilliant_spell_stone3",
+   "name": "raw brilliant spell stone",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 99,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "uncut_brilliant_spell_stone3",
+   "name": "uncut brilliant spell stone",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 199,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "rough_brilliant_spell_stone3",
+   "name": "rough brilliant spell stone",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 299,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "flawed_brilliant_spell_stone3",
+   "name": "flawed brilliant spell stone",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 399,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "imperfect_brilliant_spell_stone3",
+   "name": "imperfect brilliant spell stone",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 499,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "polished_brilliant_spell_stone3",
+   "name": "polished brilliant spell stone",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 599,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "faceted_brilliant_spell_stone3",
+   "name": "faceted brilliant spell stone",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 699,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "precious_brilliant_spell_stone3",
+   "name": "precious brilliant spell stone",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 799,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "flawless_brilliant_spell_stone3",
+   "name": "flawless brilliant spell stone",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 899,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "perfect_brilliant_spell_stone3",
+   "name": "perfect brilliant spell stone",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 999,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "raw_finesse_war_spell_stone3",
+   "name": "raw finesse war spell stone",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 88,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "raw_finesse_nature_spell_stone3",
+   "name": "raw finesse nature spell stone",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 88,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "rowan_carved_souvenir_box3",
+   "name": "rowan carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 75,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "elm_carved_souvenir_box3",
+   "name": "elm carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 175,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "oaken_carved_souvenir_box3",
+   "name": "oaken carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 275,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "ironwood_carved_souvenir_box3",
+   "name": "ironwood carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 375,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "heartwood_carved_souvenir_box3",
+   "name": "heartwood carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 475,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "runewood_carved_souvenir_box3",
+   "name": "runewood carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 575,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "stonewood_carved_souvenir_box3",
+   "name": "stonewood carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 675,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "ebonwood_carved_souvenir_box3",
+   "name": "ebonwood carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 775,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "dyrwood_carved_souvenir_box3",
+   "name": "dyrwood carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 875,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "duskwood_carved_souvenir_box3",
+   "name": "duskwood carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 975,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "CombinedBuffs_Barrel",
+   "name": "barrel of combined buffs",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1049,
+   "why": "combined buff/regen potion not in 1.64"
+  },
+  {
+   "Id_nb": "CombinedRegens_Barrel",
+   "name": "barrel of combined regens",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1059,
+   "why": "combined buff/regen potion not in 1.64"
+  },
+  {
+   "Id_nb": "CombinedBuffs_Barrel2",
+   "name": "barrel of combined buffs",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1049,
+   "why": "combined buff/regen potion not in 1.64"
+  },
+  {
+   "Id_nb": "CombinedRegens_Barrel2",
+   "name": "barrel of combined regens",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1059,
+   "why": "combined buff/regen potion not in 1.64"
+  },
+  {
+   "Id_nb": "CombinedBuffs_Barrel3",
+   "name": "barrel of combined buffs",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1049,
+   "why": "combined buff/regen potion not in 1.64"
+  },
+  {
+   "Id_nb": "CombinedRegens_Barrel3",
+   "name": "barrel of combined regens",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1059,
+   "why": "combined buff/regen potion not in 1.64"
+  },
+  {
+   "Id_nb": "heartwood_harp",
+   "name": "heartwood harp",
+   "skill": 12,
+   "craft": "Fletching",
+   "level": 525,
+   "why": "harp not in the 1.64 fletching list"
+  },
+  {
+   "Id_nb": "runewood_harp",
+   "name": "runewood harp",
+   "skill": 12,
+   "craft": "Fletching",
+   "level": 625,
+   "why": "harp not in the 1.64 fletching list"
+  },
+  {
+   "Id_nb": "stonewood_harp",
+   "name": "stonewood harp",
+   "skill": 12,
+   "craft": "Fletching",
+   "level": 725,
+   "why": "harp not in the 1.64 fletching list"
+  },
+  {
+   "Id_nb": "ebonwood_harp",
+   "name": "ebonwood harp",
+   "skill": 12,
+   "craft": "Fletching",
+   "level": 825,
+   "why": "harp not in the 1.64 fletching list"
+  },
+  {
+   "Id_nb": "dyrwood_harp",
+   "name": "dyrwood harp",
+   "skill": 12,
+   "craft": "Fletching",
+   "level": 925,
+   "why": "harp not in the 1.64 fletching list"
+  },
+  {
+   "Id_nb": "duskwood_harp",
+   "name": "duskwood harp",
+   "skill": 12,
+   "craft": "Fletching",
+   "level": 1025,
+   "why": "harp not in the 1.64 fletching list"
+  },
+  {
+   "Id_nb": "CombinedBuffs_Draught",
+   "name": "draught of combined buffs",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 735,
+   "why": "combined buff/regen potion not in 1.64"
+  },
+  {
+   "Id_nb": "CombinedRegens_Draught",
+   "name": "draught of combined regens",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 735,
+   "why": "combined buff/regen potion not in 1.64"
+  },
+  {
+   "Id_nb": "CombinedBuffs_Draught2",
+   "name": "draught of combined buffs",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 735,
+   "why": "combined buff/regen potion not in 1.64"
+  },
+  {
+   "Id_nb": "CombinedRegens_Draught2",
+   "name": "draught of combined regens",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 735,
+   "why": "combined buff/regen potion not in 1.64"
+  },
+  {
+   "Id_nb": "CombinedBuffs_Draught3",
+   "name": "draught of combined buffs",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 735,
+   "why": "combined buff/regen potion not in 1.64"
+  },
+  {
+   "Id_nb": "CombinedRegens_Draught3",
+   "name": "draught of combined regens",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 735,
+   "why": "combined buff/regen potion not in 1.64"
+  },
+  {
+   "Id_nb": "bronze_gem-studded_jewelry_box",
+   "name": "bronze gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 75,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "iron_gem-studded_jewelry_box",
+   "name": "iron gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 175,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "steel_gem-studded_jewelry_box",
+   "name": "steel gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 275,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "alloy_gem-studded_jewelry_box",
+   "name": "alloy gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 375,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "fine_alloy_gem-studded_jewelry_box",
+   "name": "fine alloy gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 475,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "mithril_gem-studded_jewelry_box",
+   "name": "mithril gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 575,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "adamantium_gem-studded_jewelry_box",
+   "name": "adamantium gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 675,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "asterite_gem-studded_jewelry_box",
+   "name": "asterite gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 775,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "netherium_gem-studded_jewelry_box",
+   "name": "netherium gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 875,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "arcanium_gem-studded_jewelry_box",
+   "name": "arcanium gem-studded jewelry box",
+   "skill": 6,
+   "craft": "Metalworking",
+   "level": 975,
+   "why": "metalworking item/material combination not in 1.64"
+  },
+  {
+   "Id_nb": "plum_cloth_dye",
+   "name": "plum cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "deep_violet_cloth_dye",
+   "name": "deep violet cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dark_violet_cloth_dye",
+   "name": "dark violet cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_violet_cloth_dye",
+   "name": "dusky violet cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "light_gold_cloth_dye",
+   "name": "light gold cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dark_gold_cloth_dye",
+   "name": "dark gold cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_orange_cloth_dye",
+   "name": "dusky orange cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "raw_brilliant_sigil",
+   "name": "raw brilliant sigil",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 99,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "uncut_brilliant_sigil",
+   "name": "uncut brilliant sigil",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 199,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "rough_brilliant_sigil",
+   "name": "rough brilliant sigil",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 299,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "flawed_brilliant_sigil",
+   "name": "flawed brilliant sigil",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 399,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "imperfect_brilliant_sigil",
+   "name": "imperfect brilliant sigil",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 499,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "polished_brilliant_sigil",
+   "name": "polished brilliant sigil",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 599,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "faceted_brilliant_sigil",
+   "name": "faceted brilliant sigil",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 699,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "precious_brilliant_sigil",
+   "name": "precious brilliant sigil",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 799,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "flawless_brilliant_sigil",
+   "name": "flawless brilliant sigil",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 899,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "perfect_brilliant_sigil",
+   "name": "perfect brilliant sigil",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 999,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "raw_finesse_war_sigil",
+   "name": "raw finesse war sigil",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 88,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "raw_finesse_fervor_sigil",
+   "name": "raw finesse fervor sigil",
+   "skill": 13,
+   "craft": "Spellcraft",
+   "level": 88,
+   "why": "spellcraft gem type not in 1.64 (Trials of Atlantis era gems)"
+  },
+  {
+   "Id_nb": "tan_cloth_dye",
+   "name": "tan cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "earthen_brown_cloth_dye",
+   "name": "earthen brown cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "pale_green_cloth_dye",
+   "name": "pale green cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "olive_green_cloth_dye",
+   "name": "olive green cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "pale_blue_cloth_dye",
+   "name": "pale blue cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "light_gray_cloth_dye",
+   "name": "light gray cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "bright_rose_cloth_dye",
+   "name": "rose cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_rose_cloth_dye",
+   "name": "dusky rose cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "sage_green_cloth_dye",
+   "name": "sage green cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "lime_green_cloth_dye",
+   "name": "lime green cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "gray_teal_cloth_dye",
+   "name": "gray teal cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "gray_blue_cloth_dye",
+   "name": "gray blue cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "olive_gray_cloth_dye",
+   "name": "olive gray cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "rowan_carved_souvenir_box",
+   "name": "rowan carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 75,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "elm_carved_souvenir_box",
+   "name": "elm carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 175,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "oaken_carved_souvenir_box",
+   "name": "oaken carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 275,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "ironwood_carved_souvenir_box",
+   "name": "ironwood carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 375,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "heartwood_carved_souvenir_box",
+   "name": "heartwood carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 475,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "runewood_carved_souvenir_box",
+   "name": "runewood carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 575,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "stonewood_carved_souvenir_box",
+   "name": "stonewood carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 675,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "ebonwood_carved_souvenir_box",
+   "name": "ebonwood carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 775,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "dyrwood_carved_souvenir_box",
+   "name": "dyrwood carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 875,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "duskwood_carved_souvenir_box",
+   "name": "duskwood carved souvenir box",
+   "skill": 14,
+   "craft": "Woodworking",
+   "level": 975,
+   "why": "carved souvenir box not in 1.64 (only curio box)"
+  },
+  {
+   "Id_nb": "plum_cloth_dye2",
+   "name": "plum cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "deep_violet_cloth_dye2",
+   "name": "deep violet cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dark_violet_cloth_dye2",
+   "name": "dark violet cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_violet_cloth_dye2",
+   "name": "dusky violet cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "light_gold_cloth_dye2",
+   "name": "light gold cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dark_gold_cloth_dye2",
+   "name": "dark gold cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_orange_cloth_dye2",
+   "name": "dusky orange cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "tan_cloth_dye2",
+   "name": "tan cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "earthen_brown_cloth_dye2",
+   "name": "earthen brown cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "pale_green_cloth_dye2",
+   "name": "pale green cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "olive_green_cloth_dye2",
+   "name": "olive green cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "pale_blue_cloth_dye2",
+   "name": "pale blue cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "light_gray_cloth_dye2",
+   "name": "light gray cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "bright_rose_cloth_dye2",
+   "name": "rose cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_rose_cloth_dye2",
+   "name": "dusky rose cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "sage_green_cloth_dye2",
+   "name": "sage green cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "lime_green_cloth_dye2",
+   "name": "lime green cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "gray_teal_cloth_dye2",
+   "name": "gray teal cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "gray_blue_cloth_dye2",
+   "name": "gray blue cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "olive_gray_cloth_dye2",
+   "name": "olive gray cloth dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "plum_leather_dye2",
+   "name": "plum leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "deep_violet_leather_dye2",
+   "name": "deep violet leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dark_violet_leather_dye2",
+   "name": "dark violet leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_violet_leather_dye2",
+   "name": "dusky violet leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "light_gold_leather_dye2",
+   "name": "light gold leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dark_gold_leather_dye2",
+   "name": "dark gold leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_orange_leather_dye2",
+   "name": "dusky orange leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "tan_leather_dye2",
+   "name": "tan leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "earthen_brown_leather_dye2",
+   "name": "earthen brown leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "pale_green_leather_dye2",
+   "name": "pale green leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "olive_green_leather_dye2",
+   "name": "olive green leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "pale_blue_leather_dye2",
+   "name": "pale blue leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "light_gray_leather_dye2",
+   "name": "light gray leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "bright_rose_leather_dye2",
+   "name": "rose leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_rose_leather_dye2",
+   "name": "dusky rose leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "sage_green_leather_dye2",
+   "name": "sage green leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "lime_green_leather_dye2",
+   "name": "lime green leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "gray_teal_leather_dye2",
+   "name": "gray teal leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "gray_blue_leather_dye2",
+   "name": "gray blue leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "olive_gray_leather_dye2",
+   "name": "olive gray leather dye",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "plum_enamel2",
+   "name": "plum enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "deep_violet_enamel2",
+   "name": "deep violet enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dark_violet_enamel2",
+   "name": "dark violet enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_violet_enamel2",
+   "name": "dusky violet enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "light_gold_enamel2",
+   "name": "light gold enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dark_gold_enamel2",
+   "name": "dark gold enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_orange_enamel2",
+   "name": "dusky orange enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "tan_enamel2",
+   "name": "tan enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "earthen_brown_enamel2",
+   "name": "earthen brown enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "pale_green_enamel2",
+   "name": "pale green enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "olive_green_enamel2",
+   "name": "olive green enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "pale_blue_enamel2",
+   "name": "pale blue enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "light_gray_enamel2",
+   "name": "light gray enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "bright_rose_enamel2",
+   "name": "rose enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "dusky_rose_enamel2",
+   "name": "dusky rose enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "sage_green_enamel2",
+   "name": "sage green enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "lime_green_enamel2",
+   "name": "lime green enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "gray_teal_enamel2",
+   "name": "gray teal enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "gray_blue_enamel2",
+   "name": "gray blue enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "olive_gray_enamel2",
+   "name": "olive gray enamel",
+   "skill": 4,
+   "craft": "Alchemy",
+   "level": 1069,
+   "why": "dye/enamel colour not in the 1.64 colour list (later dyes)"
+  },
+  {
+   "Id_nb": "woolen_ruffled_scarf2",
+   "name": "woolen ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 75,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "linen_ruffled_scarf2",
+   "name": "linen ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 175,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "brocade_ruffled_scarf2",
+   "name": "brocade ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 275,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "silk_ruffled_scarf2",
+   "name": "silk ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 375,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "gossamer_ruffled_scarf2",
+   "name": "gossamer ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 475,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "sylvan_ruffled_scarf2",
+   "name": "sylvan ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 575,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "seamist_ruffled_scarf2",
+   "name": "seamist ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 675,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "nightshade_ruffled_scarf2",
+   "name": "nightshade ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 775,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "wyvernskin_ruffled_scarf2",
+   "name": "wyvernskin ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 875,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  },
+  {
+   "Id_nb": "silksteel_ruffled_scarf2",
+   "name": "silksteel ruffled scarf",
+   "skill": 8,
+   "craft": "Clothworking",
+   "level": 975,
+   "why": "ruffled scarf not in 1.64 (only scarf)"
+  }
+ ],
+ "keep_but_level_differs": [
+  {
+   "Id_nb": "orange_cloth_dye",
+   "name": "orange cloth dye",
+   "skill": 4,
+   "level": 90
+  },
+  {
+   "Id_nb": "mauve_leather_dye",
+   "name": "mauve leather dye",
+   "skill": 4,
+   "level": 780
+  },
+  {
+   "Id_nb": "bright_red_leather_dye",
+   "name": "red leather dye",
+   "skill": 4,
+   "level": 1069
+  },
+  {
+   "Id_nb": "dark_brown_cloth_dye",
+   "name": "dark brown cloth dye",
+   "skill": 4,
+   "level": 100
+  },
+  {
+   "Id_nb": "royal_yellow_cloth_dye",
+   "name": "royal yellow cloth dye",
+   "skill": 4,
+   "level": 310
+  },
+  {
+   "Id_nb": "light_brown_enamel",
+   "name": "light brown enamel",
+   "skill": 4,
+   "level": 210
+  },
+  {
+   "Id_nb": "light_yellow_enamel",
+   "name": "light yellow enamel",
+   "skill": 4,
+   "level": 220
+  },
+  {
+   "Id_nb": "royal_orange_cloth_dye",
+   "name": "royal orange cloth dye",
+   "skill": 4,
+   "level": 320
+  },
+  {
+   "Id_nb": "brown_enamel",
+   "name": "brown enamel",
+   "skill": 4,
+   "level": 270
+  },
+  {
+   "Id_nb": "yellow_enamel",
+   "name": "yellow enamel",
+   "skill": 4,
+   "level": 280
+  },
+  {
+   "Id_nb": "orange_enamel",
+   "name": "orange enamel",
+   "skill": 4,
+   "level": 290
+  },
+  {
+   "Id_nb": "dark_brown_enamel",
+   "name": "dark brown enamel",
+   "skill": 4,
+   "level": 300
+  },
+  {
+   "Id_nb": "royal_yellow_enamel",
+   "name": "royal yellow enamel",
+   "skill": 4,
+   "level": 510
+  },
+  {
+   "Id_nb": "royal_orange_enamel",
+   "name": "royal orange enamel",
+   "skill": 4,
+   "level": 520
+  },
+  {
+   "Id_nb": "green_enamel",
+   "name": "green enamel",
+   "skill": 4,
+   "level": 530
+  },
+  {
+   "Id_nb": "blue_enamel",
+   "name": "blue enamel",
+   "skill": 4,
+   "level": 540
+  },
+  {
+   "Id_nb": "red_enamel",
+   "name": "red enamel",
+   "skill": 4,
+   "level": 550
+  },
+  {
+   "Id_nb": "light_teal_enamel",
+   "name": "light teal enamel",
+   "skill": 4,
+   "level": 560
+  },
+  {
+   "Id_nb": "green_cloth_dye",
+   "name": "green cloth dye",
+   "skill": 4,
+   "level": 330
+  },
+  {
+   "Id_nb": "royal_green_enamel",
+   "name": "royal green enamel",
+   "skill": 4,
+   "level": 570
+  },
+  {
+   "Id_nb": "light_brown_cloth_dye3",
+   "name": "light brown cloth dye",
+   "skill": 4,
+   "level": 10
+  },
+  {
+   "Id_nb": "light_yellow_cloth_dye3",
+   "name": "light yellow cloth dye",
+   "skill": 4,
+   "level": 20
+  },
+  {
+   "Id_nb": "light_orange_cloth_dye3",
+   "name": "light orange cloth dye",
+   "skill": 4,
+   "level": 30
+  },
+  {
+   "Id_nb": "brown_cloth_dye3",
+   "name": "brown cloth dye",
+   "skill": 4,
+   "level": 70
+  },
+  {
+   "Id_nb": "yellow_cloth_dye3",
+   "name": "yellow cloth dye",
+   "skill": 4,
+   "level": 80
+  },
+  {
+   "Id_nb": "orange_cloth_dye3",
+   "name": "orange cloth dye",
+   "skill": 4,
+   "level": 90
+  },
+  {
+   "Id_nb": "dark_brown_cloth_dye3",
+   "name": "dark brown cloth dye",
+   "skill": 4,
+   "level": 100
+  },
+  {
+   "Id_nb": "royal_yellow_cloth_dye3",
+   "name": "royal yellow cloth dye",
+   "skill": 4,
+   "level": 310
+  },
+  {
+   "Id_nb": "royal_orange_cloth_dye3",
+   "name": "royal orange cloth dye",
+   "skill": 4,
+   "level": 320
+  },
+  {
+   "Id_nb": "green_cloth_dye3",
+   "name": "green cloth dye",
+   "skill": 4,
+   "level": 330
+  },
+  {
+   "Id_nb": "blue_cloth_dye3",
+   "name": "blue cloth dye",
+   "skill": 4,
+   "level": 340
+  },
+  {
+   "Id_nb": "red_cloth_dye3",
+   "name": "red cloth dye",
+   "skill": 4,
+   "level": 350
+  },
+  {
+   "Id_nb": "light_teal_cloth_dye3",
+   "name": "light teal cloth dye",
+   "skill": 4,
+   "level": 360
+  },
+  {
+   "Id_nb": "royal_green_cloth_dye3",
+   "name": "royal green cloth dye",
+   "skill": 4,
+   "level": 370
+  },
+  {
+   "Id_nb": "teal_cloth_dye3",
+   "name": "teal cloth dye",
+   "skill": 4,
+   "level": 380
+  },
+  {
+   "Id_nb": "light_turquoise_cloth_dye3",
+   "name": "light turquoise cloth dye",
+   "skill": 4,
+   "level": 390
+  },
+  {
+   "Id_nb": "light_purple_cloth_dye3",
+   "name": "light purple cloth dye",
+   "skill": 4,
+   "level": 400
+  },
+  {
+   "Id_nb": "dark_gray_cloth_dye3",
+   "name": "dark gray cloth dye",
+   "skill": 4,
+   "level": 610
+  },
+  {
+   "Id_nb": "forest_green_cloth_dye3",
+   "name": "forest green cloth dye",
+   "skill": 4,
+   "level": 620
+  },
+  {
+   "Id_nb": "royal_teal_cloth_dye3",
+   "name": "royal teal cloth dye",
+   "skill": 4,
+   "level": 630
+  },
+  {
+   "Id_nb": "turquoise_cloth_dye3",
+   "name": "turquoise cloth dye",
+   "skill": 4,
+   "level": 640
+  },
+  {
+   "Id_nb": "purple_cloth_dye3",
+   "name": "purple cloth dye",
+   "skill": 4,
+   "level": 650
+  },
+  {
+   "Id_nb": "charcoal_cloth_dye3",
+   "name": "charcoal cloth dye",
+   "skill": 4,
+   "level": 660
+  },
+  {
+   "Id_nb": "rust_cloth_dye3",
+   "name": "rust cloth dye",
+   "skill": 4,
+   "level": 670
+  },
+  {
+   "Id_nb": "royal_blue_cloth_dye3",
+   "name": "royal blue cloth dye",
+   "skill": 4,
+   "level": 680
+  },
+  {
+   "Id_nb": "royal_red_cloth_dye3",
+   "name": "royal red cloth dye",
+   "skill": 4,
+   "level": 690
+  },
+  {
+   "Id_nb": "dark_teal_cloth_dye3",
+   "name": "dark teal cloth dye",
+   "skill": 4,
+   "level": 700
+  },
+  {
+   "Id_nb": "royal_turquoise_cloth_dye3",
+   "name": "royal turquoise cloth dye",
+   "skill": 4,
+   "level": 710
+  },
+  {
+   "Id_nb": "royal_purple_cloth_dye3",
+   "name": "royal purple cloth dye",
+   "skill": 4,
+   "level": 720
+  },
+  {
+   "Id_nb": "black_cloth_dye3",
+   "name": "black cloth dye",
+   "skill": 4,
+   "level": 730
+  },
+  {
+   "Id_nb": "dark_blue_cloth_dye3",
+   "name": "dark blue cloth dye",
+   "skill": 4,
+   "level": 740
+  },
+  {
+   "Id_nb": "crimson_cloth_dye3",
+   "name": "crimson cloth dye",
+   "skill": 4,
+   "level": 750
+  },
+  {
+   "Id_nb": "dark_purple_cloth_dye3",
+   "name": "dark purple cloth dye",
+   "skill": 4,
+   "level": 760
+  },
+  {
+   "Id_nb": "violet_cloth_dye3",
+   "name": "violet cloth dye",
+   "skill": 4,
+   "level": 770
+  },
+  {
+   "Id_nb": "mauve_cloth_dye3",
+   "name": "mauve cloth dye",
+   "skill": 4,
+   "level": 780
+  },
+  {
+   "Id_nb": "bright_red_cloth_dye3",
+   "name": "red cloth dye",
+   "skill": 4,
+   "level": 1069
+  },
+  {
+   "Id_nb": "light_orange_leather_dye3",
+   "name": "light orange leather dye",
+   "skill": 4,
+   "level": 130
+  },
+  {
+   "Id_nb": "light_green_leather_dye3",
+   "name": "light green leather dye",
+   "skill": 4,
+   "level": 140
+  },
+  {
+   "Id_nb": "light_blue_leather_dye3",
+   "name": "light blue leather dye",
+   "skill": 4,
+   "level": 150
+  },
+  {
+   "Id_nb": "light_red_leather_dye3",
+   "name": "light red leather dye",
+   "skill": 4,
+   "level": 160
+  },
+  {
+   "Id_nb": "brown_leather_dye3",
+   "name": "brown leather dye",
+   "skill": 4,
+   "level": 170
+  },
+  {
+   "Id_nb": "yellow_leather_dye3",
+   "name": "yellow leather dye",
+   "skill": 4,
+   "level": 180
+  },
+  {
+   "Id_nb": "royal_yellow_leather_dye3",
+   "name": "royal yellow leather dye",
+   "skill": 4,
+   "level": 410
+  },
+  {
+   "Id_nb": "royal_orange_leather_dye3",
+   "name": "royal orange leather dye",
+   "skill": 4,
+   "level": 420
+  },
+  {
+   "Id_nb": "green_leather_dye3",
+   "name": "green leather dye",
+   "skill": 4,
+   "level": 430
+  },
+  {
+   "Id_nb": "blue_leather_dye3",
+   "name": "blue leather dye",
+   "skill": 4,
+   "level": 440
+  },
+  {
+   "Id_nb": "red_leather_dye3",
+   "name": "red leather dye",
+   "skill": 4,
+   "level": 450
+  },
+  {
+   "Id_nb": "light_teal_leather_dye3",
+   "name": "light teal leather dye",
+   "skill": 4,
+   "level": 460
+  },
+  {
+   "Id_nb": "royal_green_leather_dye3",
+   "name": "royal green leather dye",
+   "skill": 4,
+   "level": 470
+  },
+  {
+   "Id_nb": "teal_leather_dye3",
+   "name": "teal leather dye",
+   "skill": 4,
+   "level": 480
+  },
+  {
+   "Id_nb": "light_turquoise_leather_dye3",
+   "name": "light turquoise leather dye",
+   "skill": 4,
+   "level": 490
+  },
+  {
+   "Id_nb": "light_purple_leather_dye3",
+   "name": "light purple leather dye",
+   "skill": 4,
+   "level": 500
+  },
+  {
+   "Id_nb": "dark_gray_leather_dye3",
+   "name": "dark gray leather dye",
+   "skill": 4,
+   "level": 610
+  },
+  {
+   "Id_nb": "forest_green_leather_dye3",
+   "name": "forest green leather dye",
+   "skill": 4,
+   "level": 620
+  },
+  {
+   "Id_nb": "royal_teal_leather_dye3",
+   "name": "royal teal leather dye",
+   "skill": 4,
+   "level": 630
+  },
+  {
+   "Id_nb": "turquoise_leather_dye3",
+   "name": "turquoise leather dye",
+   "skill": 4,
+   "level": 640
+  },
+  {
+   "Id_nb": "purple_leather_dye3",
+   "name": "purple leather dye",
+   "skill": 4,
+   "level": 650
+  },
+  {
+   "Id_nb": "charcoal_leather_dye3",
+   "name": "charcoal leather dye",
+   "skill": 4,
+   "level": 660
+  },
+  {
+   "Id_nb": "rust_leather_dye3",
+   "name": "rust leather dye",
+   "skill": 4,
+   "level": 670
+  },
+  {
+   "Id_nb": "royal_blue_leather_dye3",
+   "name": "royal blue leather dye",
+   "skill": 4,
+   "level": 680
+  },
+  {
+   "Id_nb": "royal_red_leather_dye3",
+   "name": "royal red leather dye",
+   "skill": 4,
+   "level": 690
+  },
+  {
+   "Id_nb": "dark_teal_leather_dye3",
+   "name": "dark teal leather dye",
+   "skill": 4,
+   "level": 700
+  },
+  {
+   "Id_nb": "royal_turquoise_leather_dye3",
+   "name": "royal turquoise leather dye",
+   "skill": 4,
+   "level": 710
+  },
+  {
+   "Id_nb": "royal_purple_leather_dye3",
+   "name": "royal purple leather dye",
+   "skill": 4,
+   "level": 720
+  },
+  {
+   "Id_nb": "black_leather_dye3",
+   "name": "black leather dye",
+   "skill": 4,
+   "level": 730
+  },
+  {
+   "Id_nb": "dark_blue_leather_dye3",
+   "name": "dark blue leather dye",
+   "skill": 4,
+   "level": 740
+  },
+  {
+   "Id_nb": "crimson_leather_dye3",
+   "name": "crimson leather dye",
+   "skill": 4,
+   "level": 750
+  },
+  {
+   "Id_nb": "dark_purple_leather_dye3",
+   "name": "dark purple leather dye",
+   "skill": 4,
+   "level": 760
+  },
+  {
+   "Id_nb": "violet_leather_dye3",
+   "name": "violet leather dye",
+   "skill": 4,
+   "level": 770
+  },
+  {
+   "Id_nb": "teal_enamel",
+   "name": "teal enamel",
+   "skill": 4,
+   "level": 580
+  },
+  {
+   "Id_nb": "mauve_leather_dye3",
+   "name": "mauve leather dye",
+   "skill": 4,
+   "level": 780
+  },
+  {
+   "Id_nb": "bright_red_leather_dye3",
+   "name": "red leather dye",
+   "skill": 4,
+   "level": 1069
+  },
+  {
+   "Id_nb": "light_brown_enamel3",
+   "name": "light brown enamel",
+   "skill": 4,
+   "level": 210
+  },
+  {
+   "Id_nb": "light_yellow_enamel3",
+   "name": "light yellow enamel",
+   "skill": 4,
+   "level": 220
+  },
+  {
+   "Id_nb": "brown_enamel3",
+   "name": "brown enamel",
+   "skill": 4,
+   "level": 270
+  },
+  {
+   "Id_nb": "yellow_enamel3",
+   "name": "yellow enamel",
+   "skill": 4,
+   "level": 280
+  },
+  {
+   "Id_nb": "orange_enamel3",
+   "name": "orange enamel",
+   "skill": 4,
+   "level": 290
+  },
+  {
+   "Id_nb": "dark_brown_enamel3",
+   "name": "dark brown enamel",
+   "skill": 4,
+   "level": 300
+  },
+  {
+   "Id_nb": "royal_yellow_enamel3",
+   "name": "royal yellow enamel",
+   "skill": 4,
+   "level": 510
+  },
+  {
+   "Id_nb": "royal_orange_enamel3",
+   "name": "royal orange enamel",
+   "skill": 4,
+   "level": 520
+  },
+  {
+   "Id_nb": "green_enamel3",
+   "name": "green enamel",
+   "skill": 4,
+   "level": 530
+  },
+  {
+   "Id_nb": "blue_enamel3",
+   "name": "blue enamel",
+   "skill": 4,
+   "level": 540
+  },
+  {
+   "Id_nb": "red_enamel3",
+   "name": "red enamel",
+   "skill": 4,
+   "level": 550
+  },
+  {
+   "Id_nb": "light_teal_enamel3",
+   "name": "light teal enamel",
+   "skill": 4,
+   "level": 560
+  },
+  {
+   "Id_nb": "royal_green_enamel3",
+   "name": "royal green enamel",
+   "skill": 4,
+   "level": 570
+  },
+  {
+   "Id_nb": "teal_enamel3",
+   "name": "teal enamel",
+   "skill": 4,
+   "level": 580
+  },
+  {
+   "Id_nb": "light_turquoise_enamel3",
+   "name": "light turquoise enamel",
+   "skill": 4,
+   "level": 590
+  },
+  {
+   "Id_nb": "light_purple_enamel3",
+   "name": "light purple enamel",
+   "skill": 4,
+   "level": 600
+  },
+  {
+   "Id_nb": "dark_gray_enamel3",
+   "name": "dark gray enamel",
+   "skill": 4,
+   "level": 610
+  },
+  {
+   "Id_nb": "forest_green_enamel3",
+   "name": "forest green enamel",
+   "skill": 4,
+   "level": 620
+  },
+  {
+   "Id_nb": "royal_teal_enamel3",
+   "name": "royal teal enamel",
+   "skill": 4,
+   "level": 630
+  },
+  {
+   "Id_nb": "turquoise_enamel3",
+   "name": "turquoise enamel",
+   "skill": 4,
+   "level": 640
+  },
+  {
+   "Id_nb": "purple_enamel3",
+   "name": "purple enamel",
+   "skill": 4,
+   "level": 650
+  },
+  {
+   "Id_nb": "charcoal_enamel3",
+   "name": "charcoal enamel",
+   "skill": 4,
+   "level": 660
+  },
+  {
+   "Id_nb": "rust_enamel3",
+   "name": "rust enamel",
+   "skill": 4,
+   "level": 670
+  },
+  {
+   "Id_nb": "royal_blue_enamel3",
+   "name": "royal blue enamel",
+   "skill": 4,
+   "level": 680
+  },
+  {
+   "Id_nb": "royal_red_enamel3",
+   "name": "royal red enamel",
+   "skill": 4,
+   "level": 690
+  },
+  {
+   "Id_nb": "dark_teal_enamel3",
+   "name": "dark teal enamel",
+   "skill": 4,
+   "level": 700
+  },
+  {
+   "Id_nb": "royal_turquoise_enamel3",
+   "name": "royal turquoise enamel",
+   "skill": 4,
+   "level": 710
+  },
+  {
+   "Id_nb": "royal_purple_enamel3",
+   "name": "royal purple enamel",
+   "skill": 4,
+   "level": 720
+  },
+  {
+   "Id_nb": "black_enamel3",
+   "name": "black enamel",
+   "skill": 4,
+   "level": 730
+  },
+  {
+   "Id_nb": "dark_blue_enamel3",
+   "name": "dark blue enamel",
+   "skill": 4,
+   "level": 740
+  },
+  {
+   "Id_nb": "crimson_enamel3",
+   "name": "crimson enamel",
+   "skill": 4,
+   "level": 750
+  },
+  {
+   "Id_nb": "dark_purple_enamel3",
+   "name": "dark purple enamel",
+   "skill": 4,
+   "level": 760
+  },
+  {
+   "Id_nb": "violet_enamel3",
+   "name": "violet enamel",
+   "skill": 4,
+   "level": 770
+  },
+  {
+   "Id_nb": "mauve_enamel3",
+   "name": "mauve enamel",
+   "skill": 4,
+   "level": 780
+  },
+  {
+   "Id_nb": "bright_red_enamel3",
+   "name": "red enamel",
+   "skill": 4,
+   "level": 1069
+  },
+  {
+   "Id_nb": "light_turquoise_enamel",
+   "name": "light turquoise enamel",
+   "skill": 4,
+   "level": 590
+  },
+  {
+   "Id_nb": "light_purple_enamel",
+   "name": "light purple enamel",
+   "skill": 4,
+   "level": 600
+  },
+  {
+   "Id_nb": "dark_gray_enamel",
+   "name": "dark gray enamel",
+   "skill": 4,
+   "level": 610
+  },
+  {
+   "Id_nb": "forest_green_enamel",
+   "name": "forest green enamel",
+   "skill": 4,
+   "level": 620
+  },
+  {
+   "Id_nb": "royal_teal_enamel",
+   "name": "royal teal enamel",
+   "skill": 4,
+   "level": 630
+  },
+  {
+   "Id_nb": "turquoise_enamel",
+   "name": "turquoise enamel",
+   "skill": 4,
+   "level": 640
+  },
+  {
+   "Id_nb": "purple_enamel",
+   "name": "purple enamel",
+   "skill": 4,
+   "level": 650
+  },
+  {
+   "Id_nb": "charcoal_enamel",
+   "name": "charcoal enamel",
+   "skill": 4,
+   "level": 660
+  },
+  {
+   "Id_nb": "blue_cloth_dye",
+   "name": "blue cloth dye",
+   "skill": 4,
+   "level": 340
+  },
+  {
+   "Id_nb": "rust_enamel",
+   "name": "rust enamel",
+   "skill": 4,
+   "level": 670
+  },
+  {
+   "Id_nb": "royal_blue_enamel",
+   "name": "royal blue enamel",
+   "skill": 4,
+   "level": 680
+  },
+  {
+   "Id_nb": "royal_red_enamel",
+   "name": "royal red enamel",
+   "skill": 4,
+   "level": 690
+  },
+  {
+   "Id_nb": "dark_teal_enamel",
+   "name": "dark teal enamel",
+   "skill": 4,
+   "level": 700
+  },
+  {
+   "Id_nb": "royal_turquoise_enamel",
+   "name": "royal turquoise enamel",
+   "skill": 4,
+   "level": 710
+  },
+  {
+   "Id_nb": "royal_purple_enamel",
+   "name": "royal purple enamel",
+   "skill": 4,
+   "level": 720
+  },
+  {
+   "Id_nb": "black_enamel",
+   "name": "black enamel",
+   "skill": 4,
+   "level": 730
+  },
+  {
+   "Id_nb": "dark_blue_enamel",
+   "name": "dark blue enamel",
+   "skill": 4,
+   "level": 740
+  },
+  {
+   "Id_nb": "crimson_enamel",
+   "name": "crimson enamel",
+   "skill": 4,
+   "level": 750
+  },
+  {
+   "Id_nb": "dark_purple_enamel",
+   "name": "dark purple enamel",
+   "skill": 4,
+   "level": 760
+  },
+  {
+   "Id_nb": "red_cloth_dye",
+   "name": "red cloth dye",
+   "skill": 4,
+   "level": 350
+  },
+  {
+   "Id_nb": "violet_enamel",
+   "name": "violet enamel",
+   "skill": 4,
+   "level": 770
+  },
+  {
+   "Id_nb": "mauve_enamel",
+   "name": "mauve enamel",
+   "skill": 4,
+   "level": 780
+  },
+  {
+   "Id_nb": "bright_red_enamel",
+   "name": "red enamel",
+   "skill": 4,
+   "level": 1069
+  },
+  {
+   "Id_nb": "light_teal_cloth_dye",
+   "name": "light teal cloth dye",
+   "skill": 4,
+   "level": 360
+  },
+  {
+   "Id_nb": "royal_green_cloth_dye",
+   "name": "royal green cloth dye",
+   "skill": 4,
+   "level": 370
+  },
+  {
+   "Id_nb": "teal_cloth_dye",
+   "name": "teal cloth dye",
+   "skill": 4,
+   "level": 380
+  },
+  {
+   "Id_nb": "light_brown_cloth_dye",
+   "name": "light brown cloth dye",
+   "skill": 4,
+   "level": 10
+  },
+  {
+   "Id_nb": "light_turquoise_cloth_dye",
+   "name": "light turquoise cloth dye",
+   "skill": 4,
+   "level": 390
+  },
+  {
+   "Id_nb": "light_purple_cloth_dye",
+   "name": "light purple cloth dye",
+   "skill": 4,
+   "level": 400
+  },
+  {
+   "Id_nb": "dark_gray_cloth_dye",
+   "name": "dark gray cloth dye",
+   "skill": 4,
+   "level": 610
+  },
+  {
+   "Id_nb": "forest_green_cloth_dye",
+   "name": "forest green cloth dye",
+   "skill": 4,
+   "level": 620
+  },
+  {
+   "Id_nb": "royal_teal_cloth_dye",
+   "name": "royal teal cloth dye",
+   "skill": 4,
+   "level": 630
+  },
+  {
+   "Id_nb": "turquoise_cloth_dye",
+   "name": "turquoise cloth dye",
+   "skill": 4,
+   "level": 640
+  },
+  {
+   "Id_nb": "purple_cloth_dye",
+   "name": "purple cloth dye",
+   "skill": 4,
+   "level": 650
+  },
+  {
+   "Id_nb": "charcoal_cloth_dye",
+   "name": "charcoal cloth dye",
+   "skill": 4,
+   "level": 660
+  },
+  {
+   "Id_nb": "rust_cloth_dye",
+   "name": "rust cloth dye",
+   "skill": 4,
+   "level": 670
+  },
+  {
+   "Id_nb": "royal_blue_cloth_dye",
+   "name": "royal blue cloth dye",
+   "skill": 4,
+   "level": 680
+  },
+  {
+   "Id_nb": "light_yellow_cloth_dye",
+   "name": "light yellow cloth dye",
+   "skill": 4,
+   "level": 20
+  },
+  {
+   "Id_nb": "royal_red_cloth_dye",
+   "name": "royal red cloth dye",
+   "skill": 4,
+   "level": 690
+  },
+  {
+   "Id_nb": "dark_teal_cloth_dye",
+   "name": "dark teal cloth dye",
+   "skill": 4,
+   "level": 700
+  },
+  {
+   "Id_nb": "royal_turquoise_cloth_dye",
+   "name": "royal turquoise cloth dye",
+   "skill": 4,
+   "level": 710
+  },
+  {
+   "Id_nb": "royal_purple_cloth_dye",
+   "name": "royal purple cloth dye",
+   "skill": 4,
+   "level": 720
+  },
+  {
+   "Id_nb": "black_cloth_dye",
+   "name": "black cloth dye",
+   "skill": 4,
+   "level": 730
+  },
+  {
+   "Id_nb": "dark_blue_cloth_dye",
+   "name": "dark blue cloth dye",
+   "skill": 4,
+   "level": 740
+  },
+  {
+   "Id_nb": "crimson_cloth_dye",
+   "name": "crimson cloth dye",
+   "skill": 4,
+   "level": 750
+  },
+  {
+   "Id_nb": "dark_purple_cloth_dye",
+   "name": "dark purple cloth dye",
+   "skill": 4,
+   "level": 760
+  },
+  {
+   "Id_nb": "violet_cloth_dye",
+   "name": "violet cloth dye",
+   "skill": 4,
+   "level": 770
+  },
+  {
+   "Id_nb": "mauve_cloth_dye",
+   "name": "mauve cloth dye",
+   "skill": 4,
+   "level": 780
+  },
+  {
+   "Id_nb": "light_orange_cloth_dye",
+   "name": "light orange cloth dye",
+   "skill": 4,
+   "level": 30
+  },
+  {
+   "Id_nb": "bright_red_cloth_dye",
+   "name": "red cloth dye",
+   "skill": 4,
+   "level": 1069
+  },
+  {
+   "Id_nb": "light_orange_leather_dye",
+   "name": "light orange leather dye",
+   "skill": 4,
+   "level": 130
+  },
+  {
+   "Id_nb": "light_green_leather_dye",
+   "name": "light green leather dye",
+   "skill": 4,
+   "level": 140
+  },
+  {
+   "Id_nb": "light_blue_leather_dye",
+   "name": "light blue leather dye",
+   "skill": 4,
+   "level": 150
+  },
+  {
+   "Id_nb": "light_red_leather_dye",
+   "name": "light red leather dye",
+   "skill": 4,
+   "level": 160
+  },
+  {
+   "Id_nb": "brown_leather_dye",
+   "name": "brown leather dye",
+   "skill": 4,
+   "level": 170
+  },
+  {
+   "Id_nb": "yellow_leather_dye",
+   "name": "yellow leather dye",
+   "skill": 4,
+   "level": 180
+  },
+  {
+   "Id_nb": "light_brown_cloth_dye2",
+   "name": "light brown cloth dye",
+   "skill": 4,
+   "level": 10
+  },
+  {
+   "Id_nb": "light_yellow_cloth_dye2",
+   "name": "light yellow cloth dye",
+   "skill": 4,
+   "level": 20
+  },
+  {
+   "Id_nb": "light_orange_cloth_dye2",
+   "name": "light orange cloth dye",
+   "skill": 4,
+   "level": 30
+  },
+  {
+   "Id_nb": "brown_cloth_dye2",
+   "name": "brown cloth dye",
+   "skill": 4,
+   "level": 70
+  },
+  {
+   "Id_nb": "yellow_cloth_dye2",
+   "name": "yellow cloth dye",
+   "skill": 4,
+   "level": 80
+  },
+  {
+   "Id_nb": "orange_cloth_dye2",
+   "name": "orange cloth dye",
+   "skill": 4,
+   "level": 90
+  },
+  {
+   "Id_nb": "dark_brown_cloth_dye2",
+   "name": "dark brown cloth dye",
+   "skill": 4,
+   "level": 100
+  },
+  {
+   "Id_nb": "royal_yellow_cloth_dye2",
+   "name": "royal yellow cloth dye",
+   "skill": 4,
+   "level": 310
+  },
+  {
+   "Id_nb": "royal_orange_cloth_dye2",
+   "name": "royal orange cloth dye",
+   "skill": 4,
+   "level": 320
+  },
+  {
+   "Id_nb": "green_cloth_dye2",
+   "name": "green cloth dye",
+   "skill": 4,
+   "level": 330
+  },
+  {
+   "Id_nb": "blue_cloth_dye2",
+   "name": "blue cloth dye",
+   "skill": 4,
+   "level": 340
+  },
+  {
+   "Id_nb": "red_cloth_dye2",
+   "name": "red cloth dye",
+   "skill": 4,
+   "level": 350
+  },
+  {
+   "Id_nb": "light_teal_cloth_dye2",
+   "name": "light teal cloth dye",
+   "skill": 4,
+   "level": 360
+  },
+  {
+   "Id_nb": "royal_green_cloth_dye2",
+   "name": "royal green cloth dye",
+   "skill": 4,
+   "level": 370
+  },
+  {
+   "Id_nb": "teal_cloth_dye2",
+   "name": "teal cloth dye",
+   "skill": 4,
+   "level": 380
+  },
+  {
+   "Id_nb": "light_turquoise_cloth_dye2",
+   "name": "light turquoise cloth dye",
+   "skill": 4,
+   "level": 390
+  },
+  {
+   "Id_nb": "light_purple_cloth_dye2",
+   "name": "light purple cloth dye",
+   "skill": 4,
+   "level": 400
+  },
+  {
+   "Id_nb": "dark_gray_cloth_dye2",
+   "name": "dark gray cloth dye",
+   "skill": 4,
+   "level": 610
+  },
+  {
+   "Id_nb": "forest_green_cloth_dye2",
+   "name": "forest green cloth dye",
+   "skill": 4,
+   "level": 620
+  },
+  {
+   "Id_nb": "royal_teal_cloth_dye2",
+   "name": "royal teal cloth dye",
+   "skill": 4,
+   "level": 630
+  },
+  {
+   "Id_nb": "turquoise_cloth_dye2",
+   "name": "turquoise cloth dye",
+   "skill": 4,
+   "level": 640
+  },
+  {
+   "Id_nb": "purple_cloth_dye2",
+   "name": "purple cloth dye",
+   "skill": 4,
+   "level": 650
+  },
+  {
+   "Id_nb": "charcoal_cloth_dye2",
+   "name": "charcoal cloth dye",
+   "skill": 4,
+   "level": 660
+  },
+  {
+   "Id_nb": "rust_cloth_dye2",
+   "name": "rust cloth dye",
+   "skill": 4,
+   "level": 670
+  },
+  {
+   "Id_nb": "royal_blue_cloth_dye2",
+   "name": "royal blue cloth dye",
+   "skill": 4,
+   "level": 680
+  },
+  {
+   "Id_nb": "royal_red_cloth_dye2",
+   "name": "royal red cloth dye",
+   "skill": 4,
+   "level": 690
+  },
+  {
+   "Id_nb": "dark_teal_cloth_dye2",
+   "name": "dark teal cloth dye",
+   "skill": 4,
+   "level": 700
+  },
+  {
+   "Id_nb": "royal_turquoise_cloth_dye2",
+   "name": "royal turquoise cloth dye",
+   "skill": 4,
+   "level": 710
+  },
+  {
+   "Id_nb": "royal_purple_cloth_dye2",
+   "name": "royal purple cloth dye",
+   "skill": 4,
+   "level": 720
+  },
+  {
+   "Id_nb": "black_cloth_dye2",
+   "name": "black cloth dye",
+   "skill": 4,
+   "level": 730
+  },
+  {
+   "Id_nb": "dark_blue_cloth_dye2",
+   "name": "dark blue cloth dye",
+   "skill": 4,
+   "level": 740
+  },
+  {
+   "Id_nb": "crimson_cloth_dye2",
+   "name": "crimson cloth dye",
+   "skill": 4,
+   "level": 750
+  },
+  {
+   "Id_nb": "dark_purple_cloth_dye2",
+   "name": "dark purple cloth dye",
+   "skill": 4,
+   "level": 760
+  },
+  {
+   "Id_nb": "violet_cloth_dye2",
+   "name": "violet cloth dye",
+   "skill": 4,
+   "level": 770
+  },
+  {
+   "Id_nb": "mauve_cloth_dye2",
+   "name": "mauve cloth dye",
+   "skill": 4,
+   "level": 780
+  },
+  {
+   "Id_nb": "bright_red_cloth_dye2",
+   "name": "red cloth dye",
+   "skill": 4,
+   "level": 1069
+  },
+  {
+   "Id_nb": "light_orange_leather_dye2",
+   "name": "light orange leather dye",
+   "skill": 4,
+   "level": 130
+  },
+  {
+   "Id_nb": "light_green_leather_dye2",
+   "name": "light green leather dye",
+   "skill": 4,
+   "level": 140
+  },
+  {
+   "Id_nb": "light_blue_leather_dye2",
+   "name": "light blue leather dye",
+   "skill": 4,
+   "level": 150
+  },
+  {
+   "Id_nb": "light_red_leather_dye2",
+   "name": "light red leather dye",
+   "skill": 4,
+   "level": 160
+  },
+  {
+   "Id_nb": "brown_leather_dye2",
+   "name": "brown leather dye",
+   "skill": 4,
+   "level": 170
+  },
+  {
+   "Id_nb": "yellow_leather_dye2",
+   "name": "yellow leather dye",
+   "skill": 4,
+   "level": 180
+  },
+  {
+   "Id_nb": "royal_yellow_leather_dye2",
+   "name": "royal yellow leather dye",
+   "skill": 4,
+   "level": 410
+  },
+  {
+   "Id_nb": "royal_orange_leather_dye2",
+   "name": "royal orange leather dye",
+   "skill": 4,
+   "level": 420
+  },
+  {
+   "Id_nb": "green_leather_dye2",
+   "name": "green leather dye",
+   "skill": 4,
+   "level": 430
+  },
+  {
+   "Id_nb": "blue_leather_dye2",
+   "name": "blue leather dye",
+   "skill": 4,
+   "level": 440
+  },
+  {
+   "Id_nb": "red_leather_dye2",
+   "name": "red leather dye",
+   "skill": 4,
+   "level": 450
+  },
+  {
+   "Id_nb": "light_teal_leather_dye2",
+   "name": "light teal leather dye",
+   "skill": 4,
+   "level": 460
+  },
+  {
+   "Id_nb": "royal_green_leather_dye2",
+   "name": "royal green leather dye",
+   "skill": 4,
+   "level": 470
+  },
+  {
+   "Id_nb": "teal_leather_dye2",
+   "name": "teal leather dye",
+   "skill": 4,
+   "level": 480
+  },
+  {
+   "Id_nb": "light_turquoise_leather_dye2",
+   "name": "light turquoise leather dye",
+   "skill": 4,
+   "level": 490
+  },
+  {
+   "Id_nb": "light_purple_leather_dye2",
+   "name": "light purple leather dye",
+   "skill": 4,
+   "level": 500
+  },
+  {
+   "Id_nb": "dark_gray_leather_dye2",
+   "name": "dark gray leather dye",
+   "skill": 4,
+   "level": 610
+  },
+  {
+   "Id_nb": "forest_green_leather_dye2",
+   "name": "forest green leather dye",
+   "skill": 4,
+   "level": 620
+  },
+  {
+   "Id_nb": "royal_teal_leather_dye2",
+   "name": "royal teal leather dye",
+   "skill": 4,
+   "level": 630
+  },
+  {
+   "Id_nb": "turquoise_leather_dye2",
+   "name": "turquoise leather dye",
+   "skill": 4,
+   "level": 640
+  },
+  {
+   "Id_nb": "purple_leather_dye2",
+   "name": "purple leather dye",
+   "skill": 4,
+   "level": 650
+  },
+  {
+   "Id_nb": "charcoal_leather_dye2",
+   "name": "charcoal leather dye",
+   "skill": 4,
+   "level": 660
+  },
+  {
+   "Id_nb": "rust_leather_dye2",
+   "name": "rust leather dye",
+   "skill": 4,
+   "level": 670
+  },
+  {
+   "Id_nb": "royal_blue_leather_dye2",
+   "name": "royal blue leather dye",
+   "skill": 4,
+   "level": 680
+  },
+  {
+   "Id_nb": "royal_red_leather_dye2",
+   "name": "royal red leather dye",
+   "skill": 4,
+   "level": 690
+  },
+  {
+   "Id_nb": "dark_teal_leather_dye2",
+   "name": "dark teal leather dye",
+   "skill": 4,
+   "level": 700
+  },
+  {
+   "Id_nb": "royal_turquoise_leather_dye2",
+   "name": "royal turquoise leather dye",
+   "skill": 4,
+   "level": 710
+  },
+  {
+   "Id_nb": "royal_purple_leather_dye2",
+   "name": "royal purple leather dye",
+   "skill": 4,
+   "level": 720
+  },
+  {
+   "Id_nb": "black_leather_dye2",
+   "name": "black leather dye",
+   "skill": 4,
+   "level": 730
+  },
+  {
+   "Id_nb": "dark_blue_leather_dye2",
+   "name": "dark blue leather dye",
+   "skill": 4,
+   "level": 740
+  },
+  {
+   "Id_nb": "crimson_leather_dye2",
+   "name": "crimson leather dye",
+   "skill": 4,
+   "level": 750
+  },
+  {
+   "Id_nb": "dark_purple_leather_dye2",
+   "name": "dark purple leather dye",
+   "skill": 4,
+   "level": 760
+  },
+  {
+   "Id_nb": "violet_leather_dye2",
+   "name": "violet leather dye",
+   "skill": 4,
+   "level": 770
+  },
+  {
+   "Id_nb": "mauve_leather_dye2",
+   "name": "mauve leather dye",
+   "skill": 4,
+   "level": 780
+  },
+  {
+   "Id_nb": "bright_red_leather_dye2",
+   "name": "red leather dye",
+   "skill": 4,
+   "level": 1069
+  },
+  {
+   "Id_nb": "light_brown_enamel2",
+   "name": "light brown enamel",
+   "skill": 4,
+   "level": 210
+  },
+  {
+   "Id_nb": "light_yellow_enamel2",
+   "name": "light yellow enamel",
+   "skill": 4,
+   "level": 220
+  },
+  {
+   "Id_nb": "brown_enamel2",
+   "name": "brown enamel",
+   "skill": 4,
+   "level": 270
+  },
+  {
+   "Id_nb": "yellow_enamel2",
+   "name": "yellow enamel",
+   "skill": 4,
+   "level": 280
+  },
+  {
+   "Id_nb": "orange_enamel2",
+   "name": "orange enamel",
+   "skill": 4,
+   "level": 290
+  },
+  {
+   "Id_nb": "dark_brown_enamel2",
+   "name": "dark brown enamel",
+   "skill": 4,
+   "level": 300
+  },
+  {
+   "Id_nb": "royal_yellow_enamel2",
+   "name": "royal yellow enamel",
+   "skill": 4,
+   "level": 510
+  },
+  {
+   "Id_nb": "royal_orange_enamel2",
+   "name": "royal orange enamel",
+   "skill": 4,
+   "level": 520
+  },
+  {
+   "Id_nb": "green_enamel2",
+   "name": "green enamel",
+   "skill": 4,
+   "level": 530
+  },
+  {
+   "Id_nb": "blue_enamel2",
+   "name": "blue enamel",
+   "skill": 4,
+   "level": 540
+  },
+  {
+   "Id_nb": "red_enamel2",
+   "name": "red enamel",
+   "skill": 4,
+   "level": 550
+  },
+  {
+   "Id_nb": "light_teal_enamel2",
+   "name": "light teal enamel",
+   "skill": 4,
+   "level": 560
+  },
+  {
+   "Id_nb": "royal_green_enamel2",
+   "name": "royal green enamel",
+   "skill": 4,
+   "level": 570
+  },
+  {
+   "Id_nb": "teal_enamel2",
+   "name": "teal enamel",
+   "skill": 4,
+   "level": 580
+  },
+  {
+   "Id_nb": "light_turquoise_enamel2",
+   "name": "light turquoise enamel",
+   "skill": 4,
+   "level": 590
+  },
+  {
+   "Id_nb": "light_purple_enamel2",
+   "name": "light purple enamel",
+   "skill": 4,
+   "level": 600
+  },
+  {
+   "Id_nb": "dark_gray_enamel2",
+   "name": "dark gray enamel",
+   "skill": 4,
+   "level": 610
+  },
+  {
+   "Id_nb": "forest_green_enamel2",
+   "name": "forest green enamel",
+   "skill": 4,
+   "level": 620
+  },
+  {
+   "Id_nb": "royal_teal_enamel2",
+   "name": "royal teal enamel",
+   "skill": 4,
+   "level": 630
+  },
+  {
+   "Id_nb": "turquoise_enamel2",
+   "name": "turquoise enamel",
+   "skill": 4,
+   "level": 640
+  },
+  {
+   "Id_nb": "purple_enamel2",
+   "name": "purple enamel",
+   "skill": 4,
+   "level": 650
+  },
+  {
+   "Id_nb": "charcoal_enamel2",
+   "name": "charcoal enamel",
+   "skill": 4,
+   "level": 660
+  },
+  {
+   "Id_nb": "rust_enamel2",
+   "name": "rust enamel",
+   "skill": 4,
+   "level": 670
+  },
+  {
+   "Id_nb": "royal_blue_enamel2",
+   "name": "royal blue enamel",
+   "skill": 4,
+   "level": 680
+  },
+  {
+   "Id_nb": "royal_red_enamel2",
+   "name": "royal red enamel",
+   "skill": 4,
+   "level": 690
+  },
+  {
+   "Id_nb": "dark_teal_enamel2",
+   "name": "dark teal enamel",
+   "skill": 4,
+   "level": 700
+  },
+  {
+   "Id_nb": "royal_turquoise_enamel2",
+   "name": "royal turquoise enamel",
+   "skill": 4,
+   "level": 710
+  },
+  {
+   "Id_nb": "royal_purple_enamel2",
+   "name": "royal purple enamel",
+   "skill": 4,
+   "level": 720
+  },
+  {
+   "Id_nb": "black_enamel2",
+   "name": "black enamel",
+   "skill": 4,
+   "level": 730
+  },
+  {
+   "Id_nb": "dark_blue_enamel2",
+   "name": "dark blue enamel",
+   "skill": 4,
+   "level": 740
+  },
+  {
+   "Id_nb": "crimson_enamel2",
+   "name": "crimson enamel",
+   "skill": 4,
+   "level": 750
+  },
+  {
+   "Id_nb": "dark_purple_enamel2",
+   "name": "dark purple enamel",
+   "skill": 4,
+   "level": 760
+  },
+  {
+   "Id_nb": "violet_enamel2",
+   "name": "violet enamel",
+   "skill": 4,
+   "level": 770
+  },
+  {
+   "Id_nb": "mauve_enamel2",
+   "name": "mauve enamel",
+   "skill": 4,
+   "level": 780
+  },
+  {
+   "Id_nb": "bright_red_enamel2",
+   "name": "red enamel",
+   "skill": 4,
+   "level": 1069
+  },
+  {
+   "Id_nb": "royal_yellow_leather_dye",
+   "name": "royal yellow leather dye",
+   "skill": 4,
+   "level": 410
+  },
+  {
+   "Id_nb": "royal_orange_leather_dye",
+   "name": "royal orange leather dye",
+   "skill": 4,
+   "level": 420
+  },
+  {
+   "Id_nb": "green_leather_dye",
+   "name": "green leather dye",
+   "skill": 4,
+   "level": 430
+  },
+  {
+   "Id_nb": "blue_leather_dye",
+   "name": "blue leather dye",
+   "skill": 4,
+   "level": 440
+  },
+  {
+   "Id_nb": "red_leather_dye",
+   "name": "red leather dye",
+   "skill": 4,
+   "level": 450
+  },
+  {
+   "Id_nb": "light_teal_leather_dye",
+   "name": "light teal leather dye",
+   "skill": 4,
+   "level": 460
+  },
+  {
+   "Id_nb": "royal_green_leather_dye",
+   "name": "royal green leather dye",
+   "skill": 4,
+   "level": 470
+  },
+  {
+   "Id_nb": "brown_cloth_dye",
+   "name": "brown cloth dye",
+   "skill": 4,
+   "level": 70
+  },
+  {
+   "Id_nb": "teal_leather_dye",
+   "name": "teal leather dye",
+   "skill": 4,
+   "level": 480
+  },
+  {
+   "Id_nb": "light_turquoise_leather_dye",
+   "name": "light turquoise leather dye",
+   "skill": 4,
+   "level": 490
+  },
+  {
+   "Id_nb": "light_purple_leather_dye",
+   "name": "light purple leather dye",
+   "skill": 4,
+   "level": 500
+  },
+  {
+   "Id_nb": "dark_gray_leather_dye",
+   "name": "dark gray leather dye",
+   "skill": 4,
+   "level": 610
+  },
+  {
+   "Id_nb": "forest_green_leather_dye",
+   "name": "forest green leather dye",
+   "skill": 4,
+   "level": 620
+  },
+  {
+   "Id_nb": "royal_teal_leather_dye",
+   "name": "royal teal leather dye",
+   "skill": 4,
+   "level": 630
+  },
+  {
+   "Id_nb": "turquoise_leather_dye",
+   "name": "turquoise leather dye",
+   "skill": 4,
+   "level": 640
+  },
+  {
+   "Id_nb": "purple_leather_dye",
+   "name": "purple leather dye",
+   "skill": 4,
+   "level": 650
+  },
+  {
+   "Id_nb": "charcoal_leather_dye",
+   "name": "charcoal leather dye",
+   "skill": 4,
+   "level": 660
+  },
+  {
+   "Id_nb": "rust_leather_dye",
+   "name": "rust leather dye",
+   "skill": 4,
+   "level": 670
+  },
+  {
+   "Id_nb": "yellow_cloth_dye",
+   "name": "yellow cloth dye",
+   "skill": 4,
+   "level": 80
+  },
+  {
+   "Id_nb": "royal_blue_leather_dye",
+   "name": "royal blue leather dye",
+   "skill": 4,
+   "level": 680
+  },
+  {
+   "Id_nb": "royal_red_leather_dye",
+   "name": "royal red leather dye",
+   "skill": 4,
+   "level": 690
+  },
+  {
+   "Id_nb": "dark_teal_leather_dye",
+   "name": "dark teal leather dye",
+   "skill": 4,
+   "level": 700
+  },
+  {
+   "Id_nb": "royal_turquoise_leather_dye",
+   "name": "royal turquoise leather dye",
+   "skill": 4,
+   "level": 710
+  },
+  {
+   "Id_nb": "royal_purple_leather_dye",
+   "name": "royal purple leather dye",
+   "skill": 4,
+   "level": 720
+  },
+  {
+   "Id_nb": "black_leather_dye",
+   "name": "black leather dye",
+   "skill": 4,
+   "level": 730
+  },
+  {
+   "Id_nb": "dark_blue_leather_dye",
+   "name": "dark blue leather dye",
+   "skill": 4,
+   "level": 740
+  },
+  {
+   "Id_nb": "crimson_leather_dye",
+   "name": "crimson leather dye",
+   "skill": 4,
+   "level": 750
+  },
+  {
+   "Id_nb": "dark_purple_leather_dye",
+   "name": "dark purple leather dye",
+   "skill": 4,
+   "level": 760
+  },
+  {
+   "Id_nb": "violet_leather_dye",
+   "name": "violet leather dye",
+   "skill": 4,
+   "level": 770
+  }
+ ],
+ "renames_kept": {
+  "lamellar gauntlets": "lamellar gloves",
+  "osnadurtha coif": "osnadurtha helm",
+  "strong elixir of speed": "strong eixir of speed",
+  "superior quilted steeple hat (Albion)": "superior pointed steeple hat",
+  "superior padded/woven steeple hat (Midgard/Hibernia)": "superior steeple hat",
+  "eroding (tinctures)": "erroding (client spelling)"
+ },
+ "missing_on_server": {
+  "Metalworking": [
+   {
+    "realm": 1,
+    "tier": "ADAM",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "ADAM",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "ALLO",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "ALLO",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "ASTE",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "ASTE",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "BRON",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "BRON",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "FALL",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "FALL",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "IRON",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "IRON",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "LE10",
+    "product": "tempered strapping",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "LEA1",
+    "product": "tempered strapping",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "LEA2",
+    "product": "tempered strapping",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "LEA3",
+    "product": "tempered strapping",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "LEA4",
+    "product": "tempered strapping",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "LEA5",
+    "product": "tempered strapping",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "LEA6",
+    "product": "tempered strapping",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "LEA7",
+    "product": "tempered strapping",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "LEA8",
+    "product": "tempered strapping",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "LEA9",
+    "product": "tempered strapping",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "ME10",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "ME10",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "MET9",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "MET9",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "MITH",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "MITH",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "STEE",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 1,
+    "tier": "STEE",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 2,
+    "tier": "ADAM",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 2,
+    "tier": "ADAM",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 2,
+    "tier": "ALLO",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 2,
+    "tier": "ALLO",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 2,
+    "tier": "ASTE",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 2,
+    "tier": "ASTE",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 2,
+    "tier": "BRON",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 2,
+    "tier": "BRON",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 2,
+    "tier": "FALL",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 2,
+    "tier": "FALL",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 2,
+    "tier": "IRON",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 2,
+    "tier": "IRON",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 2,
+    "tier": "ME10",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 2,
+    "tier": "ME10",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 2,
+    "tier": "MET9",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 2,
+    "tier": "MET9",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 2,
+    "tier": "MITH",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 2,
+    "tier": "MITH",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 2,
+    "tier": "STEE",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 2,
+    "tier": "STEE",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "OR10",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "OR10",
+    "product": "tempered scales",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "OR10",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE1",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE1",
+    "product": "tempered scales",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE1",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE2",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE2",
+    "product": "tempered scales",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE2",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE3",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE3",
+    "product": "tempered scales",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE3",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE4",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE4",
+    "product": "tempered scales",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE4",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE5",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE5",
+    "product": "tempered scales",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE5",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE6",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE6",
+    "product": "tempered scales",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE6",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE7",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE7",
+    "product": "tempered scales",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE7",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE8",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE8",
+    "product": "tempered scales",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE8",
+    "product": "tempered wire",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE9",
+    "product": "tempered metal studs",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE9",
+    "product": "tempered scales",
+    "level": 0
+   },
+   {
+    "realm": 3,
+    "tier": "ORE9",
+    "product": "tempered wire",
+    "level": 0
+   }
+  ],
+  "Leatherworking": [
+   {
+    "realm": 1,
+    "tier": "LE10",
+    "product": "saddlebag",
+    "level": 975
+   },
+   {
+    "realm": 1,
+    "tier": "LEA1",
+    "product": "saddlebag",
+    "level": 75
+   },
+   {
+    "realm": 1,
+    "tier": "LEA2",
+    "product": "saddlebag",
+    "level": 175
+   },
+   {
+    "realm": 1,
+    "tier": "LEA3",
+    "product": "saddlebag",
+    "level": 275
+   },
+   {
+    "realm": 1,
+    "tier": "LEA4",
+    "product": "saddlebag",
+    "level": 375
+   },
+   {
+    "realm": 1,
+    "tier": "LEA5",
+    "product": "saddlebag",
+    "level": 475
+   },
+   {
+    "realm": 1,
+    "tier": "LEA6",
+    "product": "saddlebag",
+    "level": 575
+   },
+   {
+    "realm": 1,
+    "tier": "LEA7",
+    "product": "saddlebag",
+    "level": 675
+   },
+   {
+    "realm": 1,
+    "tier": "LEA8",
+    "product": "saddlebag",
+    "level": 775
+   },
+   {
+    "realm": 1,
+    "tier": "LEA9",
+    "product": "saddlebag",
+    "level": 875
+   },
+   {
+    "realm": 2,
+    "tier": "LE10",
+    "product": "saddlebag",
+    "level": 975
+   },
+   {
+    "realm": 2,
+    "tier": "LEA1",
+    "product": "saddlebag",
+    "level": 75
+   },
+   {
+    "realm": 2,
+    "tier": "LEA2",
+    "product": "saddlebag",
+    "level": 175
+   },
+   {
+    "realm": 2,
+    "tier": "LEA3",
+    "product": "saddlebag",
+    "level": 275
+   },
+   {
+    "realm": 2,
+    "tier": "LEA4",
+    "product": "saddlebag",
+    "level": 375
+   },
+   {
+    "realm": 2,
+    "tier": "LEA5",
+    "product": "saddlebag",
+    "level": 475
+   },
+   {
+    "realm": 2,
+    "tier": "LEA6",
+    "product": "saddlebag",
+    "level": 575
+   },
+   {
+    "realm": 2,
+    "tier": "LEA7",
+    "product": "saddlebag",
+    "level": 675
+   },
+   {
+    "realm": 2,
+    "tier": "LEA8",
+    "product": "saddlebag",
+    "level": 775
+   },
+   {
+    "realm": 2,
+    "tier": "LEA9",
+    "product": "saddlebag",
+    "level": 875
+   },
+   {
+    "realm": 3,
+    "tier": "LE10",
+    "product": "saddlebag",
+    "level": 975
+   },
+   {
+    "realm": 3,
+    "tier": "LEA1",
+    "product": "saddlebag",
+    "level": 75
+   },
+   {
+    "realm": 3,
+    "tier": "LEA2",
+    "product": "saddlebag",
+    "level": 175
+   },
+   {
+    "realm": 3,
+    "tier": "LEA3",
+    "product": "saddlebag",
+    "level": 275
+   },
+   {
+    "realm": 3,
+    "tier": "LEA4",
+    "product": "saddlebag",
+    "level": 375
+   },
+   {
+    "realm": 3,
+    "tier": "LEA5",
+    "product": "saddlebag",
+    "level": 475
+   },
+   {
+    "realm": 3,
+    "tier": "LEA6",
+    "product": "saddlebag",
+    "level": 575
+   },
+   {
+    "realm": 3,
+    "tier": "LEA7",
+    "product": "saddlebag",
+    "level": 675
+   },
+   {
+    "realm": 3,
+    "tier": "LEA8",
+    "product": "saddlebag",
+    "level": 775
+   },
+   {
+    "realm": 3,
+    "tier": "LEA9",
+    "product": "saddlebag",
+    "level": 875
+   }
+  ],
+  "Weaponcraft": [
+   {
+    "realm": 1,
+    "tier": "IRON",
+    "product": "ram beak",
+    "level": 500
+   },
+   {
+    "realm": 1,
+    "tier": "IRON",
+    "product": "spring arms",
+    "level": 500
+   },
+   {
+    "realm": 1,
+    "tier": "IRON",
+    "product": "winding crank",
+    "level": 500
+   },
+   {
+    "realm": 1,
+    "tier": "WOO2",
+    "product": "pivot",
+    "level": 500
+   },
+   {
+    "realm": 2,
+    "tier": "BRON",
+    "product": "long sword",
+    "level": 75
+   },
+   {
+    "realm": 2,
+    "tier": "IRON",
+    "product": "ram beak",
+    "level": 500
+   },
+   {
+    "realm": 2,
+    "tier": "IRON",
+    "product": "spring arms",
+    "level": 500
+   },
+   {
+    "realm": 2,
+    "tier": "IRON",
+    "product": "winding crank",
+    "level": 500
+   },
+   {
+    "realm": 2,
+    "tier": "WOO2",
+    "product": "pivot",
+    "level": 500
+   },
+   {
+    "realm": 3,
+    "tier": "OR10",
+    "product": "exceptional stilletto",
+    "level": 1020
+   },
+   {
+    "realm": 3,
+    "tier": "OR10",
+    "product": "fortified stilletto",
+    "level": 1030
+   },
+   {
+    "realm": 3,
+    "tier": "OR10",
+    "product": "stilletto",
+    "level": 955
+   },
+   {
+    "realm": 3,
+    "tier": "ORE1",
+    "product": "stilletto",
+    "level": 55
+   },
+   {
+    "realm": 3,
+    "tier": "ORE2",
+    "product": "ram beak",
+    "level": 500
+   },
+   {
+    "realm": 3,
+    "tier": "ORE2",
+    "product": "spring arms",
+    "level": 500
+   },
+   {
+    "realm": 3,
+    "tier": "ORE2",
+    "product": "stilletto",
+    "level": 155
+   },
+   {
+    "realm": 3,
+    "tier": "ORE2",
+    "product": "winding crank",
+    "level": 500
+   },
+   {
+    "realm": 3,
+    "tier": "ORE3",
+    "product": "stilletto",
+    "level": 255
+   },
+   {
+    "realm": 3,
+    "tier": "ORE4",
+    "product": "stilletto",
+    "level": 355
+   },
+   {
+    "realm": 3,
+    "tier": "ORE5",
+    "product": "exceptional stilletto",
+    "level": 520
+   },
+   {
+    "realm": 3,
+    "tier": "ORE5",
+    "product": "fortified stilletto",
+    "level": 530
+   },
+   {
+    "realm": 3,
+    "tier": "ORE5",
+    "product": "stilletto",
+    "level": 455
+   },
+   {
+    "realm": 3,
+    "tier": "ORE6",
+    "product": "exceptional stilletto",
+    "level": 620
+   },
+   {
+    "realm": 3,
+    "tier": "ORE6",
+    "product": "fortified stilletto",
+    "level": 630
+   },
+   {
+    "realm": 3,
+    "tier": "ORE6",
+    "product": "stilletto",
+    "level": 555
+   },
+   {
+    "realm": 3,
+    "tier": "ORE7",
+    "product": "exceptional stilletto",
+    "level": 720
+   },
+   {
+    "realm": 3,
+    "tier": "ORE7",
+    "product": "fortified stilletto",
+    "level": 730
+   },
+   {
+    "realm": 3,
+    "tier": "ORE7",
+    "product": "stilletto",
+    "level": 655
+   },
+   {
+    "realm": 3,
+    "tier": "ORE8",
+    "product": "exceptional stilletto",
+    "level": 820
+   },
+   {
+    "realm": 3,
+    "tier": "ORE8",
+    "product": "fortified stilletto",
+    "level": 830
+   },
+   {
+    "realm": 3,
+    "tier": "ORE8",
+    "product": "stilletto",
+    "level": 755
+   },
+   {
+    "realm": 3,
+    "tier": "ORE9",
+    "product": "exceptional stilletto",
+    "level": 920
+   },
+   {
+    "realm": 3,
+    "tier": "ORE9",
+    "product": "fortified stilletto",
+    "level": 930
+   },
+   {
+    "realm": 3,
+    "tier": "ORE9",
+    "product": "stilletto",
+    "level": 855
+   },
+   {
+    "realm": 3,
+    "tier": "WOO2",
+    "product": "pivot",
+    "level": 500
+   }
+  ],
+  "Armorcraft": [
+   {
+    "realm": 1,
+    "tier": "IRON",
+    "product": "gimbal",
+    "level": 500
+   },
+   {
+    "realm": 1,
+    "tier": "IRON",
+    "product": "ram cladding",
+    "level": 500
+   },
+   {
+    "realm": 1,
+    "tier": "WOO2",
+    "product": "bucket",
+    "level": 500
+   },
+   {
+    "realm": 1,
+    "tier": "WOO2",
+    "product": "counterweight",
+    "level": 500
+   },
+   {
+    "realm": 2,
+    "tier": "IRON",
+    "product": "gimbal",
+    "level": 500
+   },
+   {
+    "realm": 2,
+    "tier": "IRON",
+    "product": "ram cladding",
+    "level": 500
+   },
+   {
+    "realm": 2,
+    "tier": "WOO2",
+    "product": "bucket",
+    "level": 500
+   },
+   {
+    "realm": 2,
+    "tier": "WOO2",
+    "product": "counterweight",
+    "level": 500
+   },
+   {
+    "realm": 3,
+    "tier": "ORE2",
+    "product": "gimbal",
+    "level": 500
+   },
+   {
+    "realm": 3,
+    "tier": "ORE2",
+    "product": "ram cladding",
+    "level": 500
+   },
+   {
+    "realm": 3,
+    "tier": "WOO2",
+    "product": "bucket",
+    "level": 500
+   },
+   {
+    "realm": 3,
+    "tier": "WOO2",
+    "product": "counterweight",
+    "level": 500
+   }
+  ],
+  "Tailoring": [
+   {
+    "realm": 1,
+    "tier": "CL10",
+    "product": "superior pointed steeple hat",
+    "level": 1050
+   },
+   {
+    "realm": 1,
+    "tier": "CLO5",
+    "product": "superior pointed steeple hat",
+    "level": 550
+   },
+   {
+    "realm": 1,
+    "tier": "CLO6",
+    "product": "superior pointed steeple hat",
+    "level": 650
+   },
+   {
+    "realm": 1,
+    "tier": "CLO7",
+    "product": "superior pointed steeple hat",
+    "level": 750
+   },
+   {
+    "realm": 1,
+    "tier": "CLO8",
+    "product": "superior pointed steeple hat",
+    "level": 850
+   },
+   {
+    "realm": 1,
+    "tier": "CLO9",
+    "product": "superior pointed steeple hat",
+    "level": 950
+   },
+   {
+    "realm": 1,
+    "tier": "IRON",
+    "product": "ballista trigger",
+    "level": 500
+   },
+   {
+    "realm": 1,
+    "tier": "LEA2",
+    "product": "arm cushion",
+    "level": 500
+   },
+   {
+    "realm": 1,
+    "tier": "LEA2",
+    "product": "swing harness",
+    "level": 500
+   },
+   {
+    "realm": 2,
+    "tier": "CL10",
+    "product": "superior steeple hat",
+    "level": 1050
+   },
+   {
+    "realm": 2,
+    "tier": "CLO5",
+    "product": "superior steeple hat",
+    "level": 550
+   },
+   {
+    "realm": 2,
+    "tier": "CLO6",
+    "product": "superior steeple hat",
+    "level": 650
+   },
+   {
+    "realm": 2,
+    "tier": "CLO7",
+    "product": "superior steeple hat",
+    "level": 750
+   },
+   {
+    "realm": 2,
+    "tier": "CLO8",
+    "product": "superior steeple hat",
+    "level": 850
+   },
+   {
+    "realm": 2,
+    "tier": "CLO9",
+    "product": "superior steeple hat",
+    "level": 950
+   },
+   {
+    "realm": 2,
+    "tier": "IRON",
+    "product": "ballista trigger",
+    "level": 500
+   },
+   {
+    "realm": 2,
+    "tier": "LEA2",
+    "product": "arm cushion",
+    "level": 500
+   },
+   {
+    "realm": 2,
+    "tier": "LEA2",
+    "product": "swing harness",
+    "level": 500
+   },
+   {
+    "realm": 3,
+    "tier": "CL10",
+    "product": "superior steeple hat",
+    "level": 1050
+   },
+   {
+    "realm": 3,
+    "tier": "CLO5",
+    "product": "superior steeple hat",
+    "level": 550
+   },
+   {
+    "realm": 3,
+    "tier": "CLO6",
+    "product": "superior steeple hat",
+    "level": 650
+   },
+   {
+    "realm": 3,
+    "tier": "CLO7",
+    "product": "superior steeple hat",
+    "level": 750
+   },
+   {
+    "realm": 3,
+    "tier": "CLO8",
+    "product": "superior steeple hat",
+    "level": 850
+   },
+   {
+    "realm": 3,
+    "tier": "CLO9",
+    "product": "superior steeple hat",
+    "level": 950
+   },
+   {
+    "realm": 3,
+    "tier": "LEA2",
+    "product": "arm cushion",
+    "level": 500
+   },
+   {
+    "realm": 3,
+    "tier": "LEA2",
+    "product": "swing harness",
+    "level": 500
+   },
+   {
+    "realm": 3,
+    "tier": "ORE2",
+    "product": "ballista trigger",
+    "level": 500
+   }
+  ],
+  "Fletching": [
+   {
+    "realm": 1,
+    "tier": "LEA2",
+    "product": "torsion cables",
+    "level": 500
+   },
+   {
+    "realm": 2,
+    "tier": "LEA2",
+    "product": "torsion cables",
+    "level": 500
+   },
+   {
+    "realm": 3,
+    "tier": "LEA2",
+    "product": "torsion cables",
+    "level": 500
+   }
+  ],
+  "Siegecraft": [
+   {
+    "realm": 1,
+    "tier": "GENE",
+    "product": "ball of ice",
+    "level": 18
+   },
+   {
+    "realm": 1,
+    "tier": "GENE",
+    "product": "ballista bolt",
+    "level": 10
+   },
+   {
+    "realm": 1,
+    "tier": "GENE",
+    "product": "bullet",
+    "level": 18
+   },
+   {
+    "realm": 1,
+    "tier": "GENE",
+    "product": "catapult stone",
+    "level": 10
+   },
+   {
+    "realm": 1,
+    "tier": "GENE",
+    "product": "grapeshot",
+    "level": 18
+   },
+   {
+    "realm": 1,
+    "tier": "WOO2",
+    "product": "onager",
+    "level": 1
+   },
+   {
+    "realm": 1,
+    "tier": "WOO2",
+    "product": "scorpion",
+    "level": 1
+   },
+   {
+    "realm": 1,
+    "tier": "WOO2",
+    "product": "small ram",
+    "level": 1
+   },
+   {
+    "realm": 1,
+    "tier": "WOO3",
+    "product": "ballista",
+    "level": 1
+   },
+   {
+    "realm": 1,
+    "tier": "WOO3",
+    "product": "catapult",
+    "level": 1
+   },
+   {
+    "realm": 1,
+    "tier": "WOO3",
+    "product": "ram",
+    "level": 1
+   },
+   {
+    "realm": 1,
+    "tier": "WOO4",
+    "product": "palintone",
+    "level": 1
+   },
+   {
+    "realm": 1,
+    "tier": "WOO4",
+    "product": "siege ram",
+    "level": 1
+   },
+   {
+    "realm": 1,
+    "tier": "WOO4",
+    "product": "trebuchet",
+    "level": 1
+   },
+   {
+    "realm": 2,
+    "tier": "GENE",
+    "product": "ball of ice",
+    "level": 18
+   },
+   {
+    "realm": 2,
+    "tier": "GENE",
+    "product": "ballista bolt",
+    "level": 10
+   },
+   {
+    "realm": 2,
+    "tier": "GENE",
+    "product": "bullet",
+    "level": 18
+   },
+   {
+    "realm": 2,
+    "tier": "GENE",
+    "product": "catapult stone",
+    "level": 10
+   },
+   {
+    "realm": 2,
+    "tier": "GENE",
+    "product": "grapeshot",
+    "level": 18
+   },
+   {
+    "realm": 2,
+    "tier": "WOO2",
+    "product": "onager",
+    "level": 1
+   },
+   {
+    "realm": 2,
+    "tier": "WOO2",
+    "product": "scorpion",
+    "level": 1
+   },
+   {
+    "realm": 2,
+    "tier": "WOO2",
+    "product": "small ram",
+    "level": 1
+   },
+   {
+    "realm": 2,
+    "tier": "WOO3",
+    "product": "ballista",
+    "level": 1
+   },
+   {
+    "realm": 2,
+    "tier": "WOO3",
+    "product": "catapult",
+    "level": 1
+   },
+   {
+    "realm": 2,
+    "tier": "WOO3",
+    "product": "ram",
+    "level": 1
+   },
+   {
+    "realm": 2,
+    "tier": "WOO4",
+    "product": "palintone",
+    "level": 1
+   },
+   {
+    "realm": 2,
+    "tier": "WOO4",
+    "product": "siege ram",
+    "level": 1
+   },
+   {
+    "realm": 2,
+    "tier": "WOO4",
+    "product": "trebuchet",
+    "level": 1
+   },
+   {
+    "realm": 3,
+    "tier": "GENE",
+    "product": "ball of ice",
+    "level": 18
+   },
+   {
+    "realm": 3,
+    "tier": "GENE",
+    "product": "ballista bolt",
+    "level": 10
+   },
+   {
+    "realm": 3,
+    "tier": "GENE",
+    "product": "bullet",
+    "level": 18
+   },
+   {
+    "realm": 3,
+    "tier": "GENE",
+    "product": "catapult stone",
+    "level": 10
+   },
+   {
+    "realm": 3,
+    "tier": "GENE",
+    "product": "grapeshot",
+    "level": 18
+   },
+   {
+    "realm": 3,
+    "tier": "WOO2",
+    "product": "onager",
+    "level": 1
+   },
+   {
+    "realm": 3,
+    "tier": "WOO2",
+    "product": "scorpion",
+    "level": 1
+   },
+   {
+    "realm": 3,
+    "tier": "WOO2",
+    "product": "small ram",
+    "level": 1
+   },
+   {
+    "realm": 3,
+    "tier": "WOO3",
+    "product": "ballista",
+    "level": 1
+   },
+   {
+    "realm": 3,
+    "tier": "WOO3",
+    "product": "catapult",
+    "level": 1
+   },
+   {
+    "realm": 3,
+    "tier": "WOO3",
+    "product": "ram",
+    "level": 1
+   },
+   {
+    "realm": 3,
+    "tier": "WOO4",
+    "product": "palintone",
+    "level": 1
+   },
+   {
+    "realm": 3,
+    "tier": "WOO4",
+    "product": "siege ram",
+    "level": 1
+   },
+   {
+    "realm": 3,
+    "tier": "WOO4",
+    "product": "trebuchet",
+    "level": 1
+   }
+  ],
+  "Spellcraft": [
+   {
+    "realm": 1,
+    "tier": "GEM0",
+    "product": "air sigil",
+    "level": 99
+   },
+   {
+    "realm": 1,
+    "tier": "GEM0",
+    "product": "ashen sigil",
+    "level": 99
+   },
+   {
+    "realm": 1,
+    "tier": "GEM0",
+    "product": "dust sigil",
+    "level": 99
+   },
+   {
+    "realm": 1,
+    "tier": "GEM0",
+    "product": "earth sigil",
+    "level": 99
+   },
+   {
+    "realm": 1,
+    "tier": "GEM0",
+    "product": "fire sigil",
+    "level": 99
+   },
+   {
+    "realm": 1,
+    "tier": "GEM0",
+    "product": "heat sigil",
+    "level": 99
+   },
+   {
+    "realm": 1,
+    "tier": "GEM0",
+    "product": "ice sigil",
+    "level": 99
+   },
+   {
+    "realm": 1,
+    "tier": "GEM0",
+    "product": "salt crusted sigil",
+    "level": 99
+   },
+   {
+    "realm": 1,
+    "tier": "GEM0",
+    "product": "vacuous sigil",
+    "level": 99
+   },
+   {
+    "realm": 1,
+    "tier": "GEM0",
+    "product": "vapor sigil",
+    "level": 99
+   },
+   {
+    "realm": 1,
+    "tier": "GEM0",
+    "product": "water sigil",
+    "level": 99
+   },
+   {
+    "realm": 1,
+    "tier": "GEM1",
+    "product": "air sigil",
+    "level": 199
+   },
+   {
+    "realm": 1,
+    "tier": "GEM1",
+    "product": "ashen sigil",
+    "level": 199
+   },
+   {
+    "realm": 1,
+    "tier": "GEM1",
+    "product": "dust sigil",
+    "level": 199
+   },
+   {
+    "realm": 1,
+    "tier": "GEM1",
+    "product": "earth sigil",
+    "level": 199
+   },
+   {
+    "realm": 1,
+    "tier": "GEM1",
+    "product": "fire sigil",
+    "level": 199
+   },
+   {
+    "realm": 1,
+    "tier": "GEM1",
+    "product": "heat sigil",
+    "level": 199
+   },
+   {
+    "realm": 1,
+    "tier": "GEM1",
+    "product": "ice sigil",
+    "level": 199
+   },
+   {
+    "realm": 1,
+    "tier": "GEM1",
+    "product": "salt crusted sigil",
+    "level": 199
+   },
+   {
+    "realm": 1,
+    "tier": "GEM1",
+    "product": "vacuous sigil",
+    "level": 199
+   },
+   {
+    "realm": 1,
+    "tier": "GEM1",
+    "product": "vapor sigil",
+    "level": 199
+   },
+   {
+    "realm": 1,
+    "tier": "GEM1",
+    "product": "water sigil",
+    "level": 199
+   },
+   {
+    "realm": 1,
+    "tier": "GEM2",
+    "product": "air sigil",
+    "level": 299
+   },
+   {
+    "realm": 1,
+    "tier": "GEM2",
+    "product": "ashen sigil",
+    "level": 299
+   },
+   {
+    "realm": 1,
+    "tier": "GEM2",
+    "product": "dust sigil",
+    "level": 299
+   },
+   {
+    "realm": 1,
+    "tier": "GEM2",
+    "product": "earth sigil",
+    "level": 299
+   },
+   {
+    "realm": 1,
+    "tier": "GEM2",
+    "product": "fire sigil",
+    "level": 299
+   },
+   {
+    "realm": 1,
+    "tier": "GEM2",
+    "product": "heat sigil",
+    "level": 299
+   },
+   {
+    "realm": 1,
+    "tier": "GEM2",
+    "product": "ice sigil",
+    "level": 299
+   },
+   {
+    "realm": 1,
+    "tier": "GEM2",
+    "product": "salt crusted sigil",
+    "level": 299
+   },
+   {
+    "realm": 1,
+    "tier": "GEM2",
+    "product": "vacuous sigil",
+    "level": 299
+   },
+   {
+    "realm": 1,
+    "tier": "GEM2",
+    "product": "vapor sigil",
+    "level": 299
+   },
+   {
+    "realm": 1,
+    "tier": "GEM2",
+    "product": "water sigil",
+    "level": 299
+   },
+   {
+    "realm": 1,
+    "tier": "GEM3",
+    "product": "air sigil",
+    "level": 399
+   },
+   {
+    "realm": 1,
+    "tier": "GEM3",
+    "product": "ashen sigil",
+    "level": 399
+   },
+   {
+    "realm": 1,
+    "tier": "GEM3",
+    "product": "dust sigil",
+    "level": 399
+   },
+   {
+    "realm": 1,
+    "tier": "GEM3",
+    "product": "earth sigil",
+    "level": 399
+   },
+   {
+    "realm": 1,
+    "tier": "GEM3",
+    "product": "fire sigil",
+    "level": 399
+   },
+   {
+    "realm": 1,
+    "tier": "GEM3",
+    "product": "heat sigil",
+    "level": 399
+   },
+   {
+    "realm": 1,
+    "tier": "GEM3",
+    "product": "ice sigil",
+    "level": 399
+   },
+   {
+    "realm": 1,
+    "tier": "GEM3",
+    "product": "salt crusted sigil",
+    "level": 399
+   },
+   {
+    "realm": 1,
+    "tier": "GEM3",
+    "product": "vacuous sigil",
+    "level": 399
+   },
+   {
+    "realm": 1,
+    "tier": "GEM3",
+    "product": "vapor sigil",
+    "level": 399
+   },
+   {
+    "realm": 1,
+    "tier": "GEM3",
+    "product": "water sigil",
+    "level": 399
+   },
+   {
+    "realm": 1,
+    "tier": "GEM4",
+    "product": "air sigil",
+    "level": 499
+   },
+   {
+    "realm": 1,
+    "tier": "GEM4",
+    "product": "ashen sigil",
+    "level": 499
+   },
+   {
+    "realm": 1,
+    "tier": "GEM4",
+    "product": "dust sigil",
+    "level": 499
+   },
+   {
+    "realm": 1,
+    "tier": "GEM4",
+    "product": "earth sigil",
+    "level": 499
+   },
+   {
+    "realm": 1,
+    "tier": "GEM4",
+    "product": "fire sigil",
+    "level": 499
+   },
+   {
+    "realm": 1,
+    "tier": "GEM4",
+    "product": "heat sigil",
+    "level": 499
+   },
+   {
+    "realm": 1,
+    "tier": "GEM4",
+    "product": "ice sigil",
+    "level": 499
+   },
+   {
+    "realm": 1,
+    "tier": "GEM4",
+    "product": "salt crusted sigil",
+    "level": 499
+   },
+   {
+    "realm": 1,
+    "tier": "GEM4",
+    "product": "vacuous sigil",
+    "level": 499
+   },
+   {
+    "realm": 1,
+    "tier": "GEM4",
+    "product": "vapor sigil",
+    "level": 499
+   },
+   {
+    "realm": 1,
+    "tier": "GEM4",
+    "product": "water sigil",
+    "level": 499
+   },
+   {
+    "realm": 1,
+    "tier": "GEM5",
+    "product": "air sigil",
+    "level": 599
+   },
+   {
+    "realm": 1,
+    "tier": "GEM5",
+    "product": "ashen sigil",
+    "level": 599
+   },
+   {
+    "realm": 1,
+    "tier": "GEM5",
+    "product": "dust sigil",
+    "level": 599
+   },
+   {
+    "realm": 1,
+    "tier": "GEM5",
+    "product": "earth sigil",
+    "level": 599
+   },
+   {
+    "realm": 1,
+    "tier": "GEM5",
+    "product": "fire sigil",
+    "level": 599
+   },
+   {
+    "realm": 1,
+    "tier": "GEM5",
+    "product": "heat sigil",
+    "level": 599
+   },
+   {
+    "realm": 1,
+    "tier": "GEM5",
+    "product": "ice sigil",
+    "level": 599
+   },
+   {
+    "realm": 1,
+    "tier": "GEM5",
+    "product": "salt crusted sigil",
+    "level": 599
+   },
+   {
+    "realm": 1,
+    "tier": "GEM5",
+    "product": "vacuous sigil",
+    "level": 599
+   },
+   {
+    "realm": 1,
+    "tier": "GEM5",
+    "product": "vapor sigil",
+    "level": 599
+   },
+   {
+    "realm": 1,
+    "tier": "GEM5",
+    "product": "water sigil",
+    "level": 599
+   },
+   {
+    "realm": 1,
+    "tier": "GEM6",
+    "product": "air sigil",
+    "level": 699
+   },
+   {
+    "realm": 1,
+    "tier": "GEM6",
+    "product": "ashen sigil",
+    "level": 699
+   },
+   {
+    "realm": 1,
+    "tier": "GEM6",
+    "product": "dust sigil",
+    "level": 699
+   },
+   {
+    "realm": 1,
+    "tier": "GEM6",
+    "product": "earth sigil",
+    "level": 699
+   },
+   {
+    "realm": 1,
+    "tier": "GEM6",
+    "product": "fire sigil",
+    "level": 699
+   },
+   {
+    "realm": 1,
+    "tier": "GEM6",
+    "product": "heat sigil",
+    "level": 699
+   },
+   {
+    "realm": 1,
+    "tier": "GEM6",
+    "product": "ice sigil",
+    "level": 699
+   },
+   {
+    "realm": 1,
+    "tier": "GEM6",
+    "product": "salt crusted sigil",
+    "level": 699
+   },
+   {
+    "realm": 1,
+    "tier": "GEM6",
+    "product": "vacuous sigil",
+    "level": 699
+   },
+   {
+    "realm": 1,
+    "tier": "GEM6",
+    "product": "vapor sigil",
+    "level": 699
+   },
+   {
+    "realm": 1,
+    "tier": "GEM6",
+    "product": "water sigil",
+    "level": 699
+   },
+   {
+    "realm": 1,
+    "tier": "GEM7",
+    "product": "air sigil",
+    "level": 799
+   },
+   {
+    "realm": 1,
+    "tier": "GEM7",
+    "product": "ashen sigil",
+    "level": 799
+   },
+   {
+    "realm": 1,
+    "tier": "GEM7",
+    "product": "dust sigil",
+    "level": 799
+   },
+   {
+    "realm": 1,
+    "tier": "GEM7",
+    "product": "earth sigil",
+    "level": 799
+   },
+   {
+    "realm": 1,
+    "tier": "GEM7",
+    "product": "fire sigil",
+    "level": 799
+   },
+   {
+    "realm": 1,
+    "tier": "GEM7",
+    "product": "heat sigil",
+    "level": 799
+   },
+   {
+    "realm": 1,
+    "tier": "GEM7",
+    "product": "ice sigil",
+    "level": 799
+   },
+   {
+    "realm": 1,
+    "tier": "GEM7",
+    "product": "salt crusted sigil",
+    "level": 799
+   },
+   {
+    "realm": 1,
+    "tier": "GEM7",
+    "product": "vacuous sigil",
+    "level": 799
+   },
+   {
+    "realm": 1,
+    "tier": "GEM7",
+    "product": "vapor sigil",
+    "level": 799
+   },
+   {
+    "realm": 1,
+    "tier": "GEM7",
+    "product": "water sigil",
+    "level": 799
+   },
+   {
+    "realm": 1,
+    "tier": "GEM8",
+    "product": "air sigil",
+    "level": 899
+   },
+   {
+    "realm": 1,
+    "tier": "GEM8",
+    "product": "ashen sigil",
+    "level": 899
+   },
+   {
+    "realm": 1,
+    "tier": "GEM8",
+    "product": "dust sigil",
+    "level": 899
+   },
+   {
+    "realm": 1,
+    "tier": "GEM8",
+    "product": "earth sigil",
+    "level": 899
+   },
+   {
+    "realm": 1,
+    "tier": "GEM8",
+    "product": "fire sigil",
+    "level": 899
+   },
+   {
+    "realm": 1,
+    "tier": "GEM8",
+    "product": "heat sigil",
+    "level": 899
+   },
+   {
+    "realm": 1,
+    "tier": "GEM8",
+    "product": "ice sigil",
+    "level": 899
+   },
+   {
+    "realm": 1,
+    "tier": "GEM8",
+    "product": "salt crusted sigil",
+    "level": 899
+   },
+   {
+    "realm": 1,
+    "tier": "GEM8",
+    "product": "vacuous sigil",
+    "level": 899
+   },
+   {
+    "realm": 1,
+    "tier": "GEM8",
+    "product": "vapor sigil",
+    "level": 899
+   },
+   {
+    "realm": 1,
+    "tier": "GEM8",
+    "product": "water sigil",
+    "level": 899
+   },
+   {
+    "realm": 1,
+    "tier": "GEM9",
+    "product": "air sigil",
+    "level": 999
+   },
+   {
+    "realm": 1,
+    "tier": "GEM9",
+    "product": "ashen sigil",
+    "level": 999
+   },
+   {
+    "realm": 1,
+    "tier": "GEM9",
+    "product": "dust sigil",
+    "level": 999
+   },
+   {
+    "realm": 1,
+    "tier": "GEM9",
+    "product": "earth sigil",
+    "level": 999
+   },
+   {
+    "realm": 1,
+    "tier": "GEM9",
+    "product": "fire sigil",
+    "level": 999
+   },
+   {
+    "realm": 1,
+    "tier": "GEM9",
+    "product": "heat sigil",
+    "level": 999
+   },
+   {
+    "realm": 1,
+    "tier": "GEM9",
+    "product": "ice sigil",
+    "level": 999
+   },
+   {
+    "realm": 1,
+    "tier": "GEM9",
+    "product": "salt crusted sigil",
+    "level": 999
+   },
+   {
+    "realm": 1,
+    "tier": "GEM9",
+    "product": "vacuous sigil",
+    "level": 999
+   },
+   {
+    "realm": 1,
+    "tier": "GEM9",
+    "product": "vapor sigil",
+    "level": 999
+   },
+   {
+    "realm": 1,
+    "tier": "GEM9",
+    "product": "water sigil",
+    "level": 999
+   },
+   {
+    "realm": 1,
+    "tier": "GENE",
+    "product": "crushed diamond seal dust",
+    "level": 801
+   },
+   {
+    "realm": 1,
+    "tier": "GENE",
+    "product": "etched aquamarine eye",
+    "level": 1009
+   },
+   {
+    "realm": 2,
+    "tier": "GEM0",
+    "product": "ashen rune",
+    "level": 99
+   },
+   {
+    "realm": 2,
+    "tier": "GEM0",
+    "product": "dust rune",
+    "level": 99
+   },
+   {
+    "realm": 2,
+    "tier": "GEM0",
+    "product": "heat rune",
+    "level": 99
+   },
+   {
+    "realm": 2,
+    "tier": "GEM0",
+    "product": "ice rune",
+    "level": 99
+   },
+   {
+    "realm": 2,
+    "tier": "GEM0",
+    "product": "vapor rune",
+    "level": 99
+   },
+   {
+    "realm": 2,
+    "tier": "GEM1",
+    "product": "ashen rune",
+    "level": 199
+   },
+   {
+    "realm": 2,
+    "tier": "GEM1",
+    "product": "dust rune",
+    "level": 199
+   },
+   {
+    "realm": 2,
+    "tier": "GEM1",
+    "product": "heat rune",
+    "level": 199
+   },
+   {
+    "realm": 2,
+    "tier": "GEM1",
+    "product": "ice rune",
+    "level": 199
+   },
+   {
+    "realm": 2,
+    "tier": "GEM1",
+    "product": "vapor rune",
+    "level": 199
+   },
+   {
+    "realm": 2,
+    "tier": "GEM2",
+    "product": "ashen rune",
+    "level": 299
+   },
+   {
+    "realm": 2,
+    "tier": "GEM2",
+    "product": "dust rune",
+    "level": 299
+   },
+   {
+    "realm": 2,
+    "tier": "GEM2",
+    "product": "heat rune",
+    "level": 299
+   },
+   {
+    "realm": 2,
+    "tier": "GEM2",
+    "product": "ice rune",
+    "level": 299
+   },
+   {
+    "realm": 2,
+    "tier": "GEM2",
+    "product": "vapor rune",
+    "level": 299
+   },
+   {
+    "realm": 2,
+    "tier": "GEM3",
+    "product": "ashen rune",
+    "level": 399
+   },
+   {
+    "realm": 2,
+    "tier": "GEM3",
+    "product": "dust rune",
+    "level": 399
+   },
+   {
+    "realm": 2,
+    "tier": "GEM3",
+    "product": "heat rune",
+    "level": 399
+   },
+   {
+    "realm": 2,
+    "tier": "GEM3",
+    "product": "ice rune",
+    "level": 399
+   },
+   {
+    "realm": 2,
+    "tier": "GEM3",
+    "product": "vapor rune",
+    "level": 399
+   },
+   {
+    "realm": 2,
+    "tier": "GEM4",
+    "product": "ashen rune",
+    "level": 499
+   },
+   {
+    "realm": 2,
+    "tier": "GEM4",
+    "product": "dust rune",
+    "level": 499
+   },
+   {
+    "realm": 2,
+    "tier": "GEM4",
+    "product": "heat rune",
+    "level": 499
+   },
+   {
+    "realm": 2,
+    "tier": "GEM4",
+    "product": "ice rune",
+    "level": 499
+   },
+   {
+    "realm": 2,
+    "tier": "GEM4",
+    "product": "vapor rune",
+    "level": 499
+   },
+   {
+    "realm": 2,
+    "tier": "GEM5",
+    "product": "ashen rune",
+    "level": 599
+   },
+   {
+    "realm": 2,
+    "tier": "GEM5",
+    "product": "dust rune",
+    "level": 599
+   },
+   {
+    "realm": 2,
+    "tier": "GEM5",
+    "product": "heat rune",
+    "level": 599
+   },
+   {
+    "realm": 2,
+    "tier": "GEM5",
+    "product": "ice rune",
+    "level": 599
+   },
+   {
+    "realm": 2,
+    "tier": "GEM5",
+    "product": "vapor rune",
+    "level": 599
+   },
+   {
+    "realm": 2,
+    "tier": "GEM6",
+    "product": "ashen rune",
+    "level": 699
+   },
+   {
+    "realm": 2,
+    "tier": "GEM6",
+    "product": "dust rune",
+    "level": 699
+   },
+   {
+    "realm": 2,
+    "tier": "GEM6",
+    "product": "heat rune",
+    "level": 699
+   },
+   {
+    "realm": 2,
+    "tier": "GEM6",
+    "product": "ice rune",
+    "level": 699
+   },
+   {
+    "realm": 2,
+    "tier": "GEM6",
+    "product": "vapor rune",
+    "level": 699
+   },
+   {
+    "realm": 2,
+    "tier": "GEM7",
+    "product": "ashen rune",
+    "level": 799
+   },
+   {
+    "realm": 2,
+    "tier": "GEM7",
+    "product": "dust rune",
+    "level": 799
+   },
+   {
+    "realm": 2,
+    "tier": "GEM7",
+    "product": "heat rune",
+    "level": 799
+   },
+   {
+    "realm": 2,
+    "tier": "GEM7",
+    "product": "ice rune",
+    "level": 799
+   },
+   {
+    "realm": 2,
+    "tier": "GEM7",
+    "product": "vapor rune",
+    "level": 799
+   },
+   {
+    "realm": 2,
+    "tier": "GEM8",
+    "product": "ashen rune",
+    "level": 899
+   },
+   {
+    "realm": 2,
+    "tier": "GEM8",
+    "product": "dust rune",
+    "level": 899
+   },
+   {
+    "realm": 2,
+    "tier": "GEM8",
+    "product": "heat rune",
+    "level": 899
+   },
+   {
+    "realm": 2,
+    "tier": "GEM8",
+    "product": "ice rune",
+    "level": 899
+   },
+   {
+    "realm": 2,
+    "tier": "GEM8",
+    "product": "vapor rune",
+    "level": 899
+   },
+   {
+    "realm": 2,
+    "tier": "GEM9",
+    "product": "ashen rune",
+    "level": 999
+   },
+   {
+    "realm": 2,
+    "tier": "GEM9",
+    "product": "dust rune",
+    "level": 999
+   },
+   {
+    "realm": 2,
+    "tier": "GEM9",
+    "product": "heat rune",
+    "level": 999
+   },
+   {
+    "realm": 2,
+    "tier": "GEM9",
+    "product": "ice rune",
+    "level": 999
+   },
+   {
+    "realm": 2,
+    "tier": "GEM9",
+    "product": "vapor rune",
+    "level": 999
+   },
+   {
+    "realm": 2,
+    "tier": "GENE",
+    "product": "crushed diamond seal dust",
+    "level": 801
+   },
+   {
+    "realm": 2,
+    "tier": "GENE",
+    "product": "etched aquamarine eye",
+    "level": 1009
+   },
+   {
+    "realm": 3,
+    "tier": "GEM0",
+    "product": "earth spell stone",
+    "level": 99
+   },
+   {
+    "realm": 3,
+    "tier": "GEM0",
+    "product": "fire spell stone",
+    "level": 99
+   },
+   {
+    "realm": 3,
+    "tier": "GEM0",
+    "product": "ice spell stone",
+    "level": 99
+   },
+   {
+    "realm": 3,
+    "tier": "GEM0",
+    "product": "mineral encrusted spell stone",
+    "level": 77
+   },
+   {
+    "realm": 3,
+    "tier": "GEM0",
+    "product": "oozing spell stone",
+    "level": 99
+   },
+   {
+    "realm": 3,
+    "tier": "GEM0",
+    "product": "steaming spell stone",
+    "level": 99
+   },
+   {
+    "realm": 3,
+    "tier": "GEM0",
+    "product": "vapor spell stone",
+    "level": 99
+   },
+   {
+    "realm": 3,
+    "tier": "GEM0",
+    "product": "water spell stone",
+    "level": 99
+   },
+   {
+    "realm": 3,
+    "tier": "GEM1",
+    "product": "earth spell stone",
+    "level": 199
+   },
+   {
+    "realm": 3,
+    "tier": "GEM1",
+    "product": "fire spell stone",
+    "level": 199
+   },
+   {
+    "realm": 3,
+    "tier": "GEM1",
+    "product": "ice spell stone",
+    "level": 199
+   },
+   {
+    "realm": 3,
+    "tier": "GEM1",
+    "product": "mineral encrusted spell stone",
+    "level": 177
+   },
+   {
+    "realm": 3,
+    "tier": "GEM1",
+    "product": "oozing spell stone",
+    "level": 199
+   },
+   {
+    "realm": 3,
+    "tier": "GEM1",
+    "product": "steaming spell stone",
+    "level": 199
+   },
+   {
+    "realm": 3,
+    "tier": "GEM1",
+    "product": "vapor spell stone",
+    "level": 199
+   },
+   {
+    "realm": 3,
+    "tier": "GEM1",
+    "product": "water spell stone",
+    "level": 199
+   },
+   {
+    "realm": 3,
+    "tier": "GEM2",
+    "product": "earth spell stone",
+    "level": 299
+   },
+   {
+    "realm": 3,
+    "tier": "GEM2",
+    "product": "fire spell stone",
+    "level": 299
+   },
+   {
+    "realm": 3,
+    "tier": "GEM2",
+    "product": "ice spell stone",
+    "level": 299
+   },
+   {
+    "realm": 3,
+    "tier": "GEM2",
+    "product": "mineral encrusted spell stone",
+    "level": 277
+   },
+   {
+    "realm": 3,
+    "tier": "GEM2",
+    "product": "oozing spell stone",
+    "level": 299
+   },
+   {
+    "realm": 3,
+    "tier": "GEM2",
+    "product": "steaming spell stone",
+    "level": 299
+   },
+   {
+    "realm": 3,
+    "tier": "GEM2",
+    "product": "vapor spell stone",
+    "level": 299
+   },
+   {
+    "realm": 3,
+    "tier": "GEM2",
+    "product": "water spell stone",
+    "level": 299
+   },
+   {
+    "realm": 3,
+    "tier": "GEM3",
+    "product": "earth spell stone",
+    "level": 399
+   },
+   {
+    "realm": 3,
+    "tier": "GEM3",
+    "product": "fire spell stone",
+    "level": 399
+   },
+   {
+    "realm": 3,
+    "tier": "GEM3",
+    "product": "ice spell stone",
+    "level": 399
+   },
+   {
+    "realm": 3,
+    "tier": "GEM3",
+    "product": "mineral encrusted spell stone",
+    "level": 377
+   },
+   {
+    "realm": 3,
+    "tier": "GEM3",
+    "product": "oozing spell stone",
+    "level": 399
+   },
+   {
+    "realm": 3,
+    "tier": "GEM3",
+    "product": "steaming spell stone",
+    "level": 399
+   },
+   {
+    "realm": 3,
+    "tier": "GEM3",
+    "product": "vapor spell stone",
+    "level": 399
+   },
+   {
+    "realm": 3,
+    "tier": "GEM3",
+    "product": "water spell stone",
+    "level": 399
+   },
+   {
+    "realm": 3,
+    "tier": "GEM4",
+    "product": "earth spell stone",
+    "level": 499
+   },
+   {
+    "realm": 3,
+    "tier": "GEM4",
+    "product": "fire spell stone",
+    "level": 499
+   },
+   {
+    "realm": 3,
+    "tier": "GEM4",
+    "product": "ice spell stone",
+    "level": 499
+   },
+   {
+    "realm": 3,
+    "tier": "GEM4",
+    "product": "mineral encrusted spell stone",
+    "level": 477
+   },
+   {
+    "realm": 3,
+    "tier": "GEM4",
+    "product": "oozing spell stone",
+    "level": 499
+   },
+   {
+    "realm": 3,
+    "tier": "GEM4",
+    "product": "steaming spell stone",
+    "level": 499
+   },
+   {
+    "realm": 3,
+    "tier": "GEM4",
+    "product": "vapor spell stone",
+    "level": 499
+   },
+   {
+    "realm": 3,
+    "tier": "GEM4",
+    "product": "water spell stone",
+    "level": 499
+   },
+   {
+    "realm": 3,
+    "tier": "GEM5",
+    "product": "earth spell stone",
+    "level": 599
+   },
+   {
+    "realm": 3,
+    "tier": "GEM5",
+    "product": "fire spell stone",
+    "level": 599
+   },
+   {
+    "realm": 3,
+    "tier": "GEM5",
+    "product": "ice spell stone",
+    "level": 599
+   },
+   {
+    "realm": 3,
+    "tier": "GEM5",
+    "product": "mineral encrusted spell stone",
+    "level": 577
+   },
+   {
+    "realm": 3,
+    "tier": "GEM5",
+    "product": "oozing spell stone",
+    "level": 599
+   },
+   {
+    "realm": 3,
+    "tier": "GEM5",
+    "product": "steaming spell stone",
+    "level": 599
+   },
+   {
+    "realm": 3,
+    "tier": "GEM5",
+    "product": "vapor spell stone",
+    "level": 599
+   },
+   {
+    "realm": 3,
+    "tier": "GEM5",
+    "product": "water spell stone",
+    "level": 599
+   },
+   {
+    "realm": 3,
+    "tier": "GEM6",
+    "product": "earth spell stone",
+    "level": 699
+   },
+   {
+    "realm": 3,
+    "tier": "GEM6",
+    "product": "fire spell stone",
+    "level": 699
+   },
+   {
+    "realm": 3,
+    "tier": "GEM6",
+    "product": "ice spell stone",
+    "level": 699
+   },
+   {
+    "realm": 3,
+    "tier": "GEM6",
+    "product": "mineral encrusted spell stone",
+    "level": 677
+   },
+   {
+    "realm": 3,
+    "tier": "GEM6",
+    "product": "oozing spell stone",
+    "level": 699
+   },
+   {
+    "realm": 3,
+    "tier": "GEM6",
+    "product": "steaming spell stone",
+    "level": 699
+   },
+   {
+    "realm": 3,
+    "tier": "GEM6",
+    "product": "vapor spell stone",
+    "level": 699
+   },
+   {
+    "realm": 3,
+    "tier": "GEM6",
+    "product": "water spell stone",
+    "level": 699
+   },
+   {
+    "realm": 3,
+    "tier": "GEM7",
+    "product": "earth spell stone",
+    "level": 799
+   },
+   {
+    "realm": 3,
+    "tier": "GEM7",
+    "product": "fire spell stone",
+    "level": 799
+   },
+   {
+    "realm": 3,
+    "tier": "GEM7",
+    "product": "ice spell stone",
+    "level": 799
+   },
+   {
+    "realm": 3,
+    "tier": "GEM7",
+    "product": "mineral encrusted spell stone",
+    "level": 777
+   },
+   {
+    "realm": 3,
+    "tier": "GEM7",
+    "product": "oozing spell stone",
+    "level": 799
+   },
+   {
+    "realm": 3,
+    "tier": "GEM7",
+    "product": "steaming spell stone",
+    "level": 799
+   },
+   {
+    "realm": 3,
+    "tier": "GEM7",
+    "product": "vapor spell stone",
+    "level": 799
+   },
+   {
+    "realm": 3,
+    "tier": "GEM7",
+    "product": "water spell stone",
+    "level": 799
+   },
+   {
+    "realm": 3,
+    "tier": "GEM8",
+    "product": "earth spell stone",
+    "level": 899
+   },
+   {
+    "realm": 3,
+    "tier": "GEM8",
+    "product": "fire spell stone",
+    "level": 899
+   },
+   {
+    "realm": 3,
+    "tier": "GEM8",
+    "product": "ice spell stone",
+    "level": 899
+   },
+   {
+    "realm": 3,
+    "tier": "GEM8",
+    "product": "mineral encrusted spell stone",
+    "level": 877
+   },
+   {
+    "realm": 3,
+    "tier": "GEM8",
+    "product": "oozing spell stone",
+    "level": 899
+   },
+   {
+    "realm": 3,
+    "tier": "GEM8",
+    "product": "steaming spell stone",
+    "level": 899
+   },
+   {
+    "realm": 3,
+    "tier": "GEM8",
+    "product": "vapor spell stone",
+    "level": 899
+   },
+   {
+    "realm": 3,
+    "tier": "GEM8",
+    "product": "water spell stone",
+    "level": 899
+   },
+   {
+    "realm": 3,
+    "tier": "GEM9",
+    "product": "earth spell stone",
+    "level": 999
+   },
+   {
+    "realm": 3,
+    "tier": "GEM9",
+    "product": "fire spell stone",
+    "level": 999
+   },
+   {
+    "realm": 3,
+    "tier": "GEM9",
+    "product": "ice spell stone",
+    "level": 999
+   },
+   {
+    "realm": 3,
+    "tier": "GEM9",
+    "product": "mineral encrusted spell stone",
+    "level": 977
+   },
+   {
+    "realm": 3,
+    "tier": "GEM9",
+    "product": "oozing spell stone",
+    "level": 999
+   },
+   {
+    "realm": 3,
+    "tier": "GEM9",
+    "product": "steaming spell stone",
+    "level": 999
+   },
+   {
+    "realm": 3,
+    "tier": "GEM9",
+    "product": "vapor spell stone",
+    "level": 999
+   },
+   {
+    "realm": 3,
+    "tier": "GEM9",
+    "product": "water spell stone",
+    "level": 999
+   },
+   {
+    "realm": 3,
+    "tier": "GENE",
+    "product": "crushed diamond seal dust",
+    "level": 801
+   },
+   {
+    "realm": 3,
+    "tier": "GENE",
+    "product": "etched aquamarine eye",
+    "level": 1009
+   }
+  ],
+  "Alchemy": [
+   {
+    "realm": 1,
+    "tier": "GENE",
+    "product": "extraordinary behemoth potion",
+    "level": 1070
+   },
+   {
+    "realm": 1,
+    "tier": "GENE",
+    "product": "greater avian potion",
+    "level": 1012
+   },
+   {
+    "realm": 1,
+    "tier": "GENE",
+    "product": "greater carnivorous potion",
+    "level": 1013
+   },
+   {
+    "realm": 1,
+    "tier": "GENE",
+    "product": "greater herpetology potion",
+    "level": 1011
+   },
+   {
+    "realm": 1,
+    "tier": "GENE",
+    "product": "greater mammalogy potion",
+    "level": 1010
+   },
+   {
+    "realm": 1,
+    "tier": "GENE",
+    "product": "lesser avian potion",
+    "level": 857
+   },
+   {
+    "realm": 1,
+    "tier": "GENE",
+    "product": "lesser carnivorous potion",
+    "level": 858
+   },
+   {
+    "realm": 1,
+    "tier": "GENE",
+    "product": "lesser herpetology potion",
+    "level": 856
+   },
+   {
+    "realm": 1,
+    "tier": "GENE",
+    "product": "lesser mammalogy potion",
+    "level": 855
+   },
+   {
+    "realm": 1,
+    "tier": "GENE",
+    "product": "major avian potion",
+    "level": 947
+   },
+   {
+    "realm": 1,
+    "tier": "GENE",
+    "product": "major carnivorous potion",
+    "level": 948
+   },
+   {
+    "realm": 1,
+    "tier": "GENE",
+    "product": "major herpetology potion",
+    "level": 946
+   },
+   {
+    "realm": 1,
+    "tier": "GENE",
+    "product": "major mammalogy potion",
+    "level": 945
+   },
+   {
+    "realm": 1,
+    "tier": "GENE",
+    "product": "minor avian potion",
+    "level": 532
+   },
+   {
+    "realm": 1,
+    "tier": "GENE",
+    "product": "minor carnivorous potion",
+    "level": 533
+   },
+   {
+    "realm": 1,
+    "tier": "GENE",
+    "product": "minor herpetology potion",
+    "level": 531
+   },
+   {
+    "realm": 1,
+    "tier": "GENE",
+    "product": "minor mammalogy potion",
+    "level": 530
+   },
+   {
+    "realm": 2,
+    "tier": "GENE",
+    "product": "extraordinary behemoth potion",
+    "level": 1070
+   },
+   {
+    "realm": 2,
+    "tier": "GENE",
+    "product": "greater avian potion",
+    "level": 1012
+   },
+   {
+    "realm": 2,
+    "tier": "GENE",
+    "product": "greater carnivorous potion",
+    "level": 1013
+   },
+   {
+    "realm": 2,
+    "tier": "GENE",
+    "product": "greater herpetology potion",
+    "level": 1011
+   },
+   {
+    "realm": 2,
+    "tier": "GENE",
+    "product": "greater mammalogy potion",
+    "level": 1010
+   },
+   {
+    "realm": 2,
+    "tier": "GENE",
+    "product": "lesser avian potion",
+    "level": 857
+   },
+   {
+    "realm": 2,
+    "tier": "GENE",
+    "product": "lesser carnivorous potion",
+    "level": 858
+   },
+   {
+    "realm": 2,
+    "tier": "GENE",
+    "product": "lesser herpetology potion",
+    "level": 856
+   },
+   {
+    "realm": 2,
+    "tier": "GENE",
+    "product": "lesser mammalogy potion",
+    "level": 855
+   },
+   {
+    "realm": 2,
+    "tier": "GENE",
+    "product": "major avian potion",
+    "level": 947
+   },
+   {
+    "realm": 2,
+    "tier": "GENE",
+    "product": "major carnivorous potion",
+    "level": 948
+   },
+   {
+    "realm": 2,
+    "tier": "GENE",
+    "product": "major herpetology potion",
+    "level": 946
+   },
+   {
+    "realm": 2,
+    "tier": "GENE",
+    "product": "major mammalogy potion",
+    "level": 945
+   },
+   {
+    "realm": 2,
+    "tier": "GENE",
+    "product": "minor avian potion",
+    "level": 532
+   },
+   {
+    "realm": 2,
+    "tier": "GENE",
+    "product": "minor carnivorous potion",
+    "level": 533
+   },
+   {
+    "realm": 2,
+    "tier": "GENE",
+    "product": "minor herpetology potion",
+    "level": 531
+   },
+   {
+    "realm": 2,
+    "tier": "GENE",
+    "product": "minor mammalogy potion",
+    "level": 530
+   },
+   {
+    "realm": 3,
+    "tier": "GENE",
+    "product": "extraordinary behemoth potion",
+    "level": 1070
+   },
+   {
+    "realm": 3,
+    "tier": "GENE",
+    "product": "greater avian potion",
+    "level": 1012
+   },
+   {
+    "realm": 3,
+    "tier": "GENE",
+    "product": "greater carnivorous potion",
+    "level": 1013
+   },
+   {
+    "realm": 3,
+    "tier": "GENE",
+    "product": "greater herpetology potion",
+    "level": 1011
+   },
+   {
+    "realm": 3,
+    "tier": "GENE",
+    "product": "greater mammalogy potion",
+    "level": 1010
+   },
+   {
+    "realm": 3,
+    "tier": "GENE",
+    "product": "lesser avian potion",
+    "level": 857
+   },
+   {
+    "realm": 3,
+    "tier": "GENE",
+    "product": "lesser carnivorous potion",
+    "level": 858
+   },
+   {
+    "realm": 3,
+    "tier": "GENE",
+    "product": "lesser herpetology potion",
+    "level": 856
+   },
+   {
+    "realm": 3,
+    "tier": "GENE",
+    "product": "lesser mammalogy potion",
+    "level": 855
+   },
+   {
+    "realm": 3,
+    "tier": "GENE",
+    "product": "major avian potion",
+    "level": 947
+   },
+   {
+    "realm": 3,
+    "tier": "GENE",
+    "product": "major carnivorous potion",
+    "level": 948
+   },
+   {
+    "realm": 3,
+    "tier": "GENE",
+    "product": "major herpetology potion",
+    "level": 946
+   },
+   {
+    "realm": 3,
+    "tier": "GENE",
+    "product": "major mammalogy potion",
+    "level": 945
+   },
+   {
+    "realm": 3,
+    "tier": "GENE",
+    "product": "minor avian potion",
+    "level": 532
+   },
+   {
+    "realm": 3,
+    "tier": "GENE",
+    "product": "minor carnivorous potion",
+    "level": 533
+   },
+   {
+    "realm": 3,
+    "tier": "GENE",
+    "product": "minor herpetology potion",
+    "level": 531
+   },
+   {
+    "realm": 3,
+    "tier": "GENE",
+    "product": "minor mammalogy potion",
+    "level": 530
+   }
+  ]
+ }
+}

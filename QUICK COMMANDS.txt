@@ -1,0 +1,96 @@
+OFFLINE DAOC TRUE 1.65 v0.1 - QUICK COMMANDS AND LAUNCHER SHORTCUTS
+
+On the launcher, click + Lv.1 under a realm to add gamebots:
+  Normal click: +1 bot
+  Hold Shift while clicking: +10 bots
+  Hold Ctrl while clicking: +100 bots
+  Bots start at level 1 and level up in the world (there is no + Lv.50 button).
+
+COMPANIONS
+Talk to (right-click) the innkeeper at your realm's traveler's inn to hire companions.
+  Your first companion is free; later ones cost coin. More slots open at levels
+  5, 10, 15, 20, 30, 40 and 45 (7 companions, a full group of 8).
+  A companion joins at level 5 with a training weapon. Give it gear and train its specs.
+Right-click your companion to open its page (gear, stats, spec, realm abilities).
+Drag an item onto your companion: it wears it, or puts it in its 10-slot bag.
+A dead companion is revived free by any healer of your realm (right-click the healer).
+A blacksmith repairs the worn gear of the companions with you, free.
+
+/companionui
+  The hiring and companion windows send this when you click their buttons.
+  You can type it or use it in a macro. Rows count from 0 (first companion = row 0).
+  /companionui summon 0     calls your first companion (window open)
+  /companionui dismiss 0    sends it back to the inn
+  /companionui gear 0       its gear window (it must be with you)
+  See ALL SERVER COMMANDS.txt for every button word.
+
+/pull
+  Orders your companions and pets to engage your selected enemy. When possible,
+  a tank makes first contact before the rest of the group joins the fight.
+
+/aggressive
+  Companions attack what you attack (the default).
+
+/defensive
+  Companions stay near you and fight what comes within about 350 units, so you can
+  pull mobs back to the group. Useful for harder content.
+
+/classes
+  Lists your realm's Classic and Shrouded Isles classes and their party roles.
+
+TASKS AND QUESTS
+/task
+  Target a named guard (a Captain, a Sir...) for a kill task, or another
+  townsperson of your realm for a delivery task. Tasks are for levels 1 to 19.
+  /task with nothing targeted (or /task status) shows your current task.
+  /task abort gives your task up.
+
+/questguide
+  Shows the period walkthrough of your active quests, one page at a time.
+  /questguide X shows the guide of quest X. /questguide X 2 shows page 2.
+
+/quest
+  Lists your ongoing and finished quests.
+
+At level 5 a courier brings the quest "The Traveler's Inn": turn it in at the
+innkeeper. At level 50 a messenger brings "The Horn of Rallying": turn it in at
+the inn's Horn Handler.
+
+THE HORN OF RALLYING (level 50)
+Right-click the horn at the traveler's inn to open its window and start a great hunt
+(dragon, epic dungeon, Summoner's Hall, Darkness Falls).
+/horn list
+  Shows the great hunts of your realm and whether each is ready.
+/horn sound X
+  X = the hunt's place in the list, counting from 0. Sounds the horn for it.
+/horn close
+  Closes the window.
+
+TRAVEL AND TRAINING
+/stables
+  Lists every stablemaster horse route in your realm, one page at a time.
+  /stables X shows page X.
+/stables classic
+  Jumps to your realm's Classic stable routes.
+/stables si
+  Jumps to your realm's Shrouded Isles stable routes.
+
+/train <line> <level>
+  Trains a specialization to the chosen level using your available specialization
+  points. Target a trainer of your class first.
+
+REALM EXCHANGE (beside the traveler's inn)
+Right-click the broker, then click a choice (or /whisper it):
+  [Browse the exchange]   [Manage my listings]   [Claim sale proceeds]
+
+GM ONLY IN TRUE 1.65
+/tele, /tc, /grind, /mobs, /spawn, /raid, /freelevel, /vault, /autoloot,
+/buff, /xp, /rp, /hardcore, /classrog, /bountylocation, /bountyrent, /dropmr, /api,
+/switch, /sell, /craftmacro, /faction, and the launcher's "Teleport to" on a bot
+  A normal player gets "That command does not exist in True 1.65 Mode."
+  Companions are hired at the inns instead of /spawn and /raid.
+
+These controls apply to your hired companions, not the autonomous gamebots.
+ALL SERVER COMMANDS.txt is the exhaustive advanced reference, not this quick guide.
+
+The new client's own commands and keys: source/new-client/docs/CLIENT COMMANDS AND KEYS.txt

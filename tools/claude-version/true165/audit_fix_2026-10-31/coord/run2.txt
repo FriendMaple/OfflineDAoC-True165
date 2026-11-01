@@ -1,0 +1,40 @@
+quick_check ok
+3 | removed: Realm Exchange moves to the traveler's inns
+0 | updated: 1.65 medallions of passage are worn on the neck (the Mythical slot is an Atlas addition)
+5538 | updated: 1.65
+9 | updated: 1.65 invented stats replaced by the real page
+16 | updated: 1.65 invented reward replaced by the real item
+10 | updated: 1.65 lost bonuses restored
+0 | updated: 1.65 statless step item removed from the final reward
+0 | updated: Moonspun Vest (Enchanter)
+0 | updated: Mystical Hauberk (Warden)
+0 | updated: Mistwoven Gloves (Eldritch)
+0 | updated: Pants of Mental Acuity (Sorcerer; SorcerorEpicLegs is the one Academy50.cs gives, SorcererEpicLegs is the duplicate row)
+0 | updated: 1.65 no zone bonuses
+37 | updated: 1.65 inn clearing
+0 | updated: 1.65 period merchant stock (vendor pass 1)
+8 | updated: 1.65 period merchant stock (vendor pass 2)
+0 | updated: 1.65 period merchants (missing merchants)
+1303 | updated: 1.65 period item stats
+435 | updated: 1.65 item stats (Uthgard)
+190 | updated: 1.65 level
+29 | updated: True 1.65
+0 | updated: 1.65 audit fix
+11626 | period drop rows added
+0/222/0 | add-deaditems165.json: inserted/updated/stale
+0/359/0 | add-dropitems165.json: inserted/updated/stale
+0/1/0 | add-epics165.json: inserted/updated/stale
+0/35/0 | add-goodsitems165.json: inserted/updated/stale
+3/57/0 | add-inns165.json: inserted/updated/stale
+0/177/0 | add-merchantgoods165.json: inserted/updated/stale
+0/422/0 | add-merchantlists165.json: inserted/updated/stale
+0/668/0 | add-merchantstock165.json: inserted/updated/stale
+0/7/0 | add-missingmerchants165.json: inserted/updated/stale
+0/191/0 | add-missingmerchantstock165.json: inserted/updated/stale
+0/7/0 | add-npctemplates165.json: inserted/updated/stale
+0/18/0 | add-objects165.json: inserted/updated/stale
+0/1071/0 | add-pathpoints165.json: inserted/updated/stale
+0/15/0 | add-paths165.json: inserted/updated/stale
+0/16838/0 | add-restoredspawns165.json: inserted/updated/stale
+0/1/0 | add-spectralprovisioner165.json: inserted/updated/stale
+0/181/0 | add-vendoritems165.json: inserted/updated/stale

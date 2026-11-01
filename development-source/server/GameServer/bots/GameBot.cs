@@ -1,0 +1,5382 @@
+using System;
+using System.Collections;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.Linq;
+using System.Numerics;
+using System.Threading;
+using DOL.Logging;
+using DOL.AI.Brain;
+using DOL.Database;
+using DOL.Events;
+using DOL.GS.Effects;
+using DOL.GS.GameEvents;
+using DOL.GS.Movement;
+using DOL.GS.PacketHandler;
+using DOL.GS.PropertyCalc;
+using DOL.GS.Realm;
+using DOL.GS.RealmAbilities;
+using DOL.GS.Styles;
+using static DOL.GS.GamePlayer;
+
+namespace DOL.GS
+{
+    public enum eBotStance : byte
+    {
+        Auto = 0,
+        Melee = 1,
+        Ranged = 2,
+        Passive = 3
+    }
+
+    public class GameBot : GameNPC, IGamePlayer, IGameStaticItemOwner
+    {
+        private static new readonly Logger log = LoggerManager.Create(typeof(GameBot));
+
+        #region Core Properties
+
+        public GamePlayer Owner { get; private set; }
+        public GamePlayer PlayerGroupLeader { get; private set; }
+
+        /// <summary>Set by the brain only around the pet focus shield's own cast (BotBrain.TryStartPetFocusShield).</summary>
+        internal bool PetFocusShieldApproved { get; set; }
+        public bool IsPlayerLedGroup => PlayerGroupLeader != null;
+        public string ClassName { get; private set; }
+
+        /// <summary>True 1.65 Mode promotion (BaseClassBots165).</summary>
+        internal void SetClassName(string name) => ClassName = name;
+        public new string InternalID { get; set; }
+        public byte ClassId { get; set; }
+        public byte RaceId { get; set; }
+        public byte GenderId { get; set; }
+        public long DatabaseID { get; set; }
+        public bool IsAutonomousWorldBot { get; private set; }
+        /// <summary>
+        /// The NPC Size that draws like a player of that height (1 Short, 2 Average, 3 Tall): 48 / 50 / 52, the new client's
+        /// player scale (ClassicFigure.HEIGHT_SIZE). No bot is drawn bigger than a Tall player (owner 2026-10-31).
+        /// </summary>
+        public static byte SizeForHeight(int height) => height switch { 1 => 48, 3 => 52, _ => 50 };
+
+        public bool IsTemporaryGroupHelper { get; private set; }
+
+        /// <summary>
+        /// A player's own companion: a /spawn helper, or a True 1.65 Mode hired companion (a persistent bot, but its
+        /// player's, never a world bot with goals). The companion follow, buff, song, stealth and PvP rules apply to both
+        /// (owner 2026-10-31: hired Shamans and Bards buffed instead of following a walking player and got stuck).
+        /// </summary>
+        public bool IsPlayerCompanion => IsTemporaryGroupHelper && !IsAutonomousWorldBot || HiredCompanions165.IsHired(this);
+
+        /// <summary>The player a companion works for: a /spawn helper's owner, or a True 1.65 hired companion's player
+        /// (hired companions are persistent bots with no Owner; owner 2026-10-31: a hired Cleric never healed its
+        /// Necromancer's pet or held still in combat because those behaviours only knew /spawn helpers).</summary>
+        public GamePlayer CompanionPlayer => IsTemporaryGroupHelper ? Owner : HiredCompanions165.IsHired(this) ? PlayerGroupLeader : null;
+        public bool IsEndgameCompanion => TemporaryCompanionBalance.IsEndgame(IsTemporaryGroupHelper, Level);
+        private bool _endgameCompanionEquipped;
+        public bool SuppressLootAndProgress => IsTemporaryGroupHelper;
+        internal int EquipmentLevelFloor { get; private set; }
+        internal int EquipmentLevelCap { get; private set; }
+        public OfflineWorldBotRecord PersistentRecord { get; private set; }
+        internal AutonomousGoalAttempt GoalDiagnosticAttempt;
+        private byte _lastAutonomousTrainedLevel = 1;
+        public bool HasPendingAutonomousTraining => IsAutonomousWorldBot &&
+            (_lastAutonomousTrainedLevel < Level || BaseClassBots165.NeedsPromotion(this));
+        /// <summary>
+        /// Spec points to spend, or enough realm ability points to be worth the trip (both at the class
+        /// trainer; a few realm points are spent at the next level-up visit instead).
+        /// </summary>
+        public bool HasSpendableAutonomousTrainingPoints =>
+            // True 1.65 Mode: a base-class bot at level 5 goes to its planned class's trainer to be promoted (run 1: 194 of
+            // them reached 5 in an hour and 3 were promoted, only those that passed a trainer by chance)
+            BaseClassBots165.NeedsPromotion(this) && !IsTemporaryGroupHelper ||
+            HasSpendableAutonomousSpecPoints || AutonomousBotRealmAbilities.WorthTrainerTrip(this);
+        private bool HasSpendableAutonomousSpecPoints
+        {
+            get
+            {
+                if (!HasPendingAutonomousTraining || BotSpec == null || IsTemporaryGroupHelper)
+                    return false;
+                int points = m_leftOverSpecPoints;
+                bool catchingUp = Level - _lastAutonomousTrainedLevel > 1;
+                for (int level = _lastAutonomousTrainedLevel + 1; level <= Level; level++)
+                    points += GetSpecPointsForLevel(level, catchingUp);
+                return BotSpec.SpecLines.Any(line => (line.levelRatio > 0 || Level >= 50) &&
+                    GetSpecializationByName(line.Spec) is Specialization spec && spec.Trainable &&
+                    spec.Level < Math.Min(Level, line.SpecCap) && points >= spec.Level + 1);
+            }
+        }
+        public long Experience { get; private set; }
+        public long AutonomousRealmPoints { get; private set; }
+        public bool AutonomousStateDirty { get; private set; }
+        public eAutonomousFidelity AutonomousFidelity { get; set; } = eAutonomousFidelity.Efficient;
+        public bool IsOnStableMasterRoute { get; private set; }
+
+        /// <summary>A player's companion (hired, or a /spawn helper) on a stable route: no attack reaches it and no damage
+        /// lands (owner 2026-10-30: companions must never be killed during stable rides).</summary>
+        public bool IsRidingProtectedCompanion =>
+            StowedForRide || IsOnStableMasterRoute && (IsTemporaryGroupHelper || HiredCompanions165.IsHired(this));
+
+        public override void TakeDamage(GameObject source, eDamageType damageType, int damageAmount, int criticalAmount)
+        {
+            // damage over time, area effects and anything else that lands without an attack check
+            if (IsRidingProtectedCompanion)
+                return;
+            base.TakeDamage(source, damageType, damageAmount, criticalAmount);
+        }
+        public string StableRouteDestination { get; private set; } = string.Empty;
+        private DateTime _stableRouteExpectedArrivalUtc;
+        private GameTaxi _stableRouteMount;
+        private ECSGameTimer _stableRouteDepartureTimer;
+        private bool _stableRouteDeparturePending;
+        private PathPoint _stableRouteStart;
+        private Point3D _stableRouteEndpoint;
+        private int _stableRouteRecoveryCount;
+        private readonly ConcurrentDictionary<GamePlayer, StableRideObserver> _stableRideViewers = new();
+        private long _nextStableViewerRefreshTick;
+        private long _stableRouteLastMovementTick;
+        private Point3D _stableRouteLastPosition;
+        private ECSGameTimer _deathRecoveryTimer;
+        private long _deathTick;
+        private ushort _deathRegionId;
+        private Point3D _deathLocation;
+        private long _nextReturnRoleplayTick;
+        private AutonomousStableRoutePlanner.Choice _stableReturnPlan;
+        // GameObject.MoveTo removes and re-adds an actor. GameNPC.RemoveFromWorld
+        // stops its brain, and brain shutdown can itself request a MoveTo. Keep a
+        // depth rather than a boolean so a nested request cannot clear the outer
+        // transfer scope and turn a legitimate zone change into a logout/save.
+        private int _intentionalWorldMoveDepth;
+        internal bool IsIntentionalWorldMove => Volatile.Read(ref _intentionalWorldMoveDepth) > 0;
+
+        private void BeginIntentionalWorldMove() => Interlocked.Increment(ref _intentionalWorldMoveDepth);
+
+        private bool EndIntentionalWorldMove() => Interlocked.Decrement(ref _intentionalWorldMoveDepth) == 0;
+        public bool IsReturningAfterRelease { get; private set; }
+        public BotSpec BotSpec { get; private set; }
+        public eBotStance Stance { get; set; } = eBotStance.Auto;
+        private int m_leftOverSpecPoints;
+        private long _nextWeaponRepairWarningTick;
+
+        public override IList GetExamineMessages(GamePlayer player)
+        {
+            if (IsAutonomousWorldBot && player != null && Realm != eRealm.None && player.Realm != eRealm.None &&
+                Realm != player.Realm)
+            {
+                return new ArrayList(1)
+                {
+                    $"You examine {GetName(0, false)}. {GetPronoun(0, true)} is a member of an enemy faction."
+                };
+            }
+            return base.GetExamineMessages(player);
+        }
+
+        #endregion
+
+        #region IGamePlayer — DummyClient / DummyPacketLib
+
+        private readonly BotDummyPacketLib _dummyLib;
+        private readonly BotDummyClient _dummyClient;
+
+        public IPacketLib Out => _dummyLib;
+        public GameClient Client => _dummyClient;
+
+        #endregion
+
+        #region IGamePlayer — CharacterClass
+
+        protected ICharacterClass m_characterClass;
+
+        public virtual ICharacterClass CharacterClass => m_characterClass;
+
+        public virtual bool SetCharacterClass(int id)
+        {
+            ICharacterClass cl = ScriptMgr.FindCharacterClass(id);
+            if (cl == null)
+            {
+                if (log.IsErrorEnabled)
+                    log.ErrorFormat("No CharacterClass with ID {0} found", id);
+                return false;
+            }
+
+            m_characterClass = cl;
+            // Note: ICharacterClass.Init() expects GamePlayer. We skip it for GameBot
+            // since GameBot is not a GamePlayer. The class identity (ID, stats, etc.)
+            // is still usable without Init().
+
+            if (Group != null)
+                Group.UpdateMember(this, false, true);
+
+            return true;
+        }
+
+        #endregion
+
+        #region IGamePlayer — ECS Components (Explicit Interface)
+
+        // The ECS components are public fields on GameLiving (lowercase).
+        // IGamePlayer expects PascalCase properties.
+        AttackComponent IGamePlayer.AttackComponent => attackComponent;
+        RangeAttackComponent IGamePlayer.RangeAttackComponent => rangeAttackComponent;
+        StyleComponent IGamePlayer.StyleComponent => styleComponent;
+        EffectListComponent IGamePlayer.EffectListComponent => effectListComponent;
+
+        #endregion
+
+        #region IGamePlayer — Property Indexers (Explicit)
+
+        // GameLiving returns PropertyIndexer (concrete) but IGamePlayer expects IPropertyIndexer.
+        IPropertyIndexer IGamePlayer.AbilityBonus => AbilityBonus;
+        IPropertyIndexer IGamePlayer.ItemBonus => ItemBonus;
+        IPropertyIndexer IGamePlayer.BaseBuffBonusCategory => BaseBuffBonusCategory;
+        IPropertyIndexer IGamePlayer.SpecBuffBonusCategory => SpecBuffBonusCategory;
+        IPropertyIndexer IGamePlayer.DebuffCategory => DebuffCategory;
+
+        public PropertyIndexer BuffBonusCategory4 { get; } = new();
+
+        IPropertyIndexer IGamePlayer.BuffBonusCategory4 => BuffBonusCategory4;
+        IPropertyIndexer IGamePlayer.OtherBonus => OtherBonus;
+        IPropertyIndexer IGamePlayer.SpecDebuffCategory => SpecDebuffCategory;
+
+        #endregion
+
+        #region IGamePlayer — Stats (Explicit Interface — short vs int mismatch)
+
+        int IGamePlayer.Strength => Strength;
+        int IGamePlayer.Dexterity => Dexterity;
+        // True 1.65 Mode: swing and draw speed use buffed Quickness, as a player's do (haste/Quickness buffs and debuffs count).
+        int IGamePlayer.Quickness => Classic165Mode.IsOn ? GetModified(eProperty.Quickness) : Quickness;
+        int IGamePlayer.Intelligence => Intelligence;
+
+        #endregion
+
+        #region IGamePlayer — Health/Mana/Endurance Overrides
+
+        public override int Health
+        {
+            get => base.Health;
+            set
+            {
+                byte oldPercent = HealthPercent;
+                base.Health = value;
+
+                if (oldPercent != HealthPercent)
+                    Group?.UpdateMember(this, false, false);
+            }
+        }
+
+        public override int Mana
+        {
+            get => m_mana;
+            set
+            {
+                byte oldPercent = ManaPercent;
+                int maxMana = MaxMana;
+                m_mana = Math.Clamp(value, 0, maxMana);
+
+                if (m_mana < maxMana)
+                    StartPowerRegeneration();
+
+                if (oldPercent != ManaPercent)
+                    Group?.UpdateMember(this, false, false);
+            }
+        }
+
+        public override int MaxMana => GetModified(eProperty.MaxMana);
+
+        public override int MaxConcentration => GetModified(eProperty.MaxConcentration);
+        public override int Concentration => MaxConcentration - (effectListComponent?.UsedConcentration ?? 0);
+
+        // Bot buffs retain their real point budget, but not the human 20-effect cap.
+        // Check before queuing a cast so exhausted buffers can move/rest instead of retrying.
+        public bool CanAffordConcentration(Spell spell) => spell != null &&
+            (spell.Concentration == 0 || spell.Concentration <= Concentration);
+
+        public override int Endurance
+        {
+            get => m_endurance;
+            set
+            {
+                byte oldPercent = EndurancePercent;
+                int maxEndurance = MaxEndurance;
+                m_endurance = Math.Clamp(value, 0, maxEndurance);
+
+                if (m_endurance < maxEndurance)
+                    StartEnduranceRegeneration();
+
+                if (oldPercent != EndurancePercent)
+                    Group?.UpdateMember(this, false, false);
+            }
+        }
+
+        #endregion
+
+        #region Player-accurate regeneration
+
+        private int GetHealthAndPowerRegenerationInterval()
+        {
+            // True 1.65 Mode: exactly the player intervals, seated or standing, no bot fast rest (owner 2026-10-30).
+            if (Classic165Mode.IsOn) return ClassicRestRegeneration.HealthAndPowerInterval(_seatedForClients, InCombat);
+            if (IsEnhancedResting) return BotRestRecovery.TickMilliseconds;
+            // GameBots recover through the internal recovery lock; never expose
+            // GameLiving.IsSitting to clients. Outside enhanced recovery they
+            // use ordinary standing/combat timing.
+            return ClassicRestRegeneration.HealthAndPowerInterval(false, InCombat);
+        }
+
+        protected override int GetHealthRegenerationInterval() => GetHealthAndPowerRegenerationInterval();
+
+        protected override int GetPowerRegenerationInterval() => GetHealthAndPowerRegenerationInterval();
+
+        protected override int GetEnduranceRegenerationInterval() => 1000;
+
+        public bool IsRecoveryResting => _recoveryRestLocked;
+
+        private readonly Dictionary<int, long> _companionCastLog165 = new();
+
+        /// <summary>COMPANION_CAST_165: a hired companion's buff or heal attempt, its target and what came of it, at most once
+        /// per spell and outcome every 30 s (owner 2026-10-31: a trained Cleric seemed never to use its new AF buff).</summary>
+        private void LogCompanionCast165(Spell spell, string result)
+        {
+            if (!Classic165Mode.IsOn || spell == null || spell.IsHarmful || !HiredCompanions165.IsHired(this) || !log.IsInfoEnabled)
+                return;
+            long now = GameLoop.GameLoopTime;
+            int key = spell.ID * 31 + result.GetHashCode();
+            lock (_companionCastLog165)
+            {
+                if (_companionCastLog165.TryGetValue(key, out long next) && now < next)
+                    return;
+                _companionCastLog165[key] = now + 30_000;
+            }
+            log.Info($"COMPANION_CAST_165 bot=\"{Name}\" spell=\"{spell.Name}\" ({spell.SpellType}, level {spell.Level}) " +
+                     $"target=\"{(TargetObject as GameObject)?.Name}\" result={result}");
+        }
+
+        /// <summary>A hired companion's level cap: its player's level (null when the player isn't known/online).</summary>
+        private byte? HiredCompanionLevelCap() =>
+            CompanionPlayer is { } player ? player.Level
+            : HiredCompanions165.OwnerOf(this) is { } owner ? owner.Level : null;
+
+        /// <summary>True 1.65 Mode: a bot's melee reach is a player's (128, +32 when it or its target moves, +150 on a
+        /// keep part; owner 2026-10-31). Elsewhere bots keep the monster reach of 200.</summary>
+        public override int MeleeAttackRange
+        {
+            get
+            {
+                if (!Classic165Mode.IsOn)
+                    return base.MeleeAttackRange;
+                int range = 128;
+                if (TargetObject is DOL.GS.Keeps.GameKeepComponent)
+                    range += 150;
+                else
+                {
+                    if (TargetObject is GameLiving target && target.IsMoving)
+                        range += 32;
+                    if (IsMoving)
+                        range += 32;
+                }
+                return range + DragonCombatGeometry.TargetReach(TargetObject);
+            }
+        }
+
+        /// <summary>True 1.65 Mode: relic bonuses apply to bots as to players.</summary>
+        public override bool BenefitsFromRelics => Classic165Mode.IsOn || base.BenefitsFromRelics;
+
+        public bool IsEnhancedResting => !Classic165Mode.IsOn && (
+            (IsRecoveryResting && !IsMoving && !BotRestRecovery.BlocksRest(this)) ||
+            BotRestRecovery.ShouldAutonomousPlayerBotRecover(this, GameLoop.GameLoopTime));
+
+        // ---- True 1.65 Mode: bots really sit to rest (owner 2026-10-30, plan section 21)
+        // The NPC packets carry no sit state, so the original-client chat's game.dll hook (overlay 165-overlay-0.6) seats
+        // an NPC on emote 0xF0 and stands it on 0xF1, with the same posture as a sitting player (sit down once, then
+        // sit-idle). The new client maps the same ids. Sent on each change to the players who see the bot, and again by
+        // SendNPCCreate to a player who first sees it seated. Normal mode never sends them (its game.dll has no hook).
+        internal const eEmote SitEmote = (eEmote)0xF0;
+        internal const eEmote StandEmote = (eEmote)0xF1;
+        private bool _seatedForClients;
+
+        /// <summary>Seated in True 1.65 Mode: resting on the ground, as a sitting player (no evade, parry or block).</summary>
+        public bool IsSeatedForClients => _seatedForClients;
+
+        public override bool IsSitting
+        {
+            get => _seatedForClients;
+            set { }
+        }
+
+        private void SetSeatedForClients(bool seated)
+        {
+            if (_seatedForClients == seated)
+                return;
+            _seatedForClients = seated;
+            if (ObjectState != eObjectState.Active)
+                return;
+            foreach (GamePlayer player in GetPlayersInRadius(WorldMgr.VISIBILITY_DISTANCE))
+                player.Out.SendEmoteAnimation(this, seated ? SitEmote : StandEmote);
+            // a seated rest ticks at the sitting interval from now on, as a player's does
+            if (Health < MaxHealth) m_healthRegenerationTimer?.Start(GetHealthRegenerationInterval());
+            if (Mana < MaxMana) m_powerRegenerationTimer?.Start(GetPowerRegenerationInterval());
+        }
+
+        /// <summary>
+        /// Moves an already-running ordinary regeneration timer onto the
+        /// bot-only fast cadence when the two-second quiet window opens. The
+        /// callback still rechecks combat, aggro, and casting, so this never
+        /// grants recovery during an active encounter or changes normal NPC or
+        /// real-player timers.
+        /// </summary>
+        internal void EnsureAutonomousRecoveryTimers()
+        {
+            if (Classic165Mode.IsOn || !BotRestRecovery.ShouldAutonomousPlayerBotRecover(this, GameLoop.GameLoopTime) ||
+                ObjectState is not eObjectState.Active)
+                return;
+
+            static void ArmFastTimer(ECSGameTimer timer)
+            {
+                if (timer == null || !timer.IsAlive || timer.Interval != BotRestRecovery.TickMilliseconds ||
+                    timer.TimeUntilElapsed > BotRestRecovery.TickMilliseconds)
+                    timer?.Start(BotRestRecovery.TickMilliseconds);
+            }
+
+            if (Health < MaxHealth)
+                ArmFastTimer(m_healthRegenerationTimer);
+            if (Mana < MaxMana)
+                ArmFastTimer(m_powerRegenerationTimer);
+            if (Endurance < MaxEndurance)
+                ArmFastTimer(m_enduRegenerationTimer);
+        }
+
+        // GameNPC forwards controlled-pet combat timestamps to its owner. Wake
+        // the bot on that same event instead of waiting for its next idle turn.
+        // Do not change human combat flags, clear aggro or interrupt any casts.
+        private void WakeFromRestOnCombat(long tick)
+        {
+            if (!IsRecoveryResting || !BotRestRecovery.RecentlyFought(GameLoop.GameLoopTime, tick)) return;
+            WakeRecoveryRest();
+            if (Brain is BotBrain brain) brain.NextThinkTick = GameLoop.GameLoopTime;
+        }
+
+        public override long LastAttackTickPvE
+        {
+            set { base.LastAttackTickPvE = value; WakeFromRestOnCombat(value); }
+        }
+
+        public override long LastAttackTickPvP
+        {
+            set { base.LastAttackTickPvP = value; WakeFromRestOnCombat(value); }
+        }
+
+        public override long LastAttackedByEnemyTickPvE
+        {
+            set { base.LastAttackedByEnemyTickPvE = value; WakeFromRestOnCombat(value); }
+        }
+
+        public override long LastAttackedByEnemyTickPvP
+        {
+            set { base.LastAttackedByEnemyTickPvP = value; WakeFromRestOnCombat(value); }
+        }
+
+        private void StartEnhancedRecoveryTimers()
+        {
+            if (!IsEnhancedResting || ObjectState is not eObjectState.Active) return;
+            // Entering rest is a one-time transition. Replace a pending 14s
+            // combat tick, but never restart timers on each ordinary AI turn.
+            if (Health < MaxHealth) m_healthRegenerationTimer?.Start(1);
+            if (Mana < MaxMana) m_powerRegenerationTimer?.Start(1);
+            if (Endurance < MaxEndurance) m_enduRegenerationTimer?.Start(1);
+        }
+
+        private void WakeAfterRecovery()
+        {
+            if (IsRecoveryResting && AutonomousRestPolicy.IsFullyRecovered(HealthPercent, ManaPercent, EndurancePercent, MaxMana > 0) &&
+                Brain is BotBrain brain && brain.NextThinkTick > GameLoop.GameLoopTime)
+                brain.NextThinkTick = GameLoop.GameLoopTime;
+        }
+
+        protected override int HealthRegenerationTimerCallback(ECSGameTimer timer)
+        {
+            if (!IsEnhancedResting || Health >= MaxHealth) return base.HealthRegenerationTimerCallback(timer);
+            int native = GetModified(eProperty.HealthRegenerationAmount);
+            // Disease/bleed regen suppression remains authoritative.
+            if (native > 0) ChangeHealth(this, eHealthChangeType.Regenerate, BotRestRecovery.RecoveryAmount(native, MaxHealth));
+            WakeAfterRecovery();
+            return BotRestRecovery.TickMilliseconds;
+        }
+
+        protected override int PowerRegenerationTimerCallback(ECSGameTimer timer)
+        {
+            if (!IsEnhancedResting || Mana >= MaxMana) return base.PowerRegenerationTimerCallback(timer);
+            ChangeMana(this, eManaChangeType.Regenerate,
+                BotRestRecovery.RecoveryAmount(GetModified(eProperty.PowerRegenerationAmount), MaxMana));
+            WakeAfterRecovery();
+            return BotRestRecovery.TickMilliseconds;
+        }
+
+        public override void StartPowerRegeneration()
+        {
+            if (m_health == 0 || ObjectState is not eObjectState.Active || m_powerRegenerationTimer.IsAlive || MaxMana <= 0)
+                return;
+
+            m_powerRegenerationTimer.Start(GetPowerRegenerationInterval());
+        }
+
+        public override void StartEnduranceRegeneration()
+        {
+            if (m_health == 0 || ObjectState is not eObjectState.Active || m_enduRegenerationTimer.IsAlive)
+                return;
+
+            m_enduRegenerationTimer.Start(GetEnduranceRegenerationInterval());
+        }
+
+        protected override int EnduranceRegenerationTimerCallback(ECSGameTimer selfRegenerationTimer)
+        {
+            int maxEndurance = MaxEndurance;
+            // GameBots have lightweight free-running travel. Endurance is a
+            // combat resource for styles/abilities and is never consumed merely
+            // because a persistent bot or /spawn companion is moving quickly.
+            if (Endurance >= maxEndurance)
+            {
+                Endurance = maxEndurance;
+                return 0;
+            }
+
+            int regen = GetModified(eProperty.EnduranceRegenerationAmount);
+            if (IsEnhancedResting) regen = BotRestRecovery.RecoveryAmount(regen, maxEndurance);
+            if (regen != 0)
+                ChangeEndurance(this, eEnduranceChangeType.Regenerate, regen);
+
+            WakeAfterRecovery();
+
+            return GetEnduranceRegenerationInterval();
+        }
+
+        #endregion
+
+        #region IGamePlayer — Health/Mana Calculations
+
+        public virtual int CalculateMaxHealth(int level, int constitution)
+        {
+            if (CharacterClass == null)
+                return 1;
+
+            // Keep this identical to GamePlayer.CalculateMaxHealth. Playerbots
+            // must not receive the old NPC-oriented approximation, especially
+            // at the first few levels where it granted a large flat HP surplus.
+            constitution -= 50;
+            if (constitution < 0)
+                constitution *= 2;
+
+            int hpFromLevel = CharacterClass.BaseHP * level;
+            int hpFromConstitution = hpFromLevel * constitution / 10000;
+            int hpFromChampionLevels = ChampionLevel >= 1
+                ? ServerProperties.Properties.HPS_PER_CHAMPIONLEVEL * ChampionLevel
+                : 0;
+            double health = 20 + hpFromLevel / 50 + hpFromConstitution + hpFromChampionLevels;
+            if (GetModified(eProperty.ExtraHP) > 0)
+                health += Math.Round(health * GetModified(eProperty.ExtraHP) / 100d);
+
+            return Math.Max(1, (int)health);
+        }
+
+        public virtual int CalculateMaxMana(int level, int manaStat)
+        {
+            if (CharacterClass == null || CharacterClass.ManaStat == eStat.UNDEFINED)
+                return 0;
+
+            return Math.Max(5, level * 5 + (manaStat - 50));
+        }
+
+        #endregion
+
+        #region IGamePlayer — PlayerDeck / Misc
+
+        private PlayerDeck _randomNumberDeck;
+
+        public PlayerDeck RandomNumberDeck
+        {
+            get
+            {
+                if (_randomNumberDeck == null)
+                    _randomNumberDeck = new PlayerDeck();
+                return _randomNumberDeck;
+            }
+            set { _randomNumberDeck = value; }
+        }
+
+        public List<int> SelfBuffChargeIDs { get; } = new List<int>();
+        public int TotalConstitutionLostAtDeath { get; set; }
+        public double SpecLock { get; set; }
+
+        #endregion
+
+        #region IGamePlayer — Level / Class Properties
+
+        public byte MaxLevel => 50;
+        public int RealmLevel { get; set; }
+        public int MLLevel { get; set; }
+        public bool Champion { get; set; }
+        public int ChampionLevel { get; set; }
+
+        #endregion
+
+        #region IGamePlayer — Guild
+
+        private Guild _guild;
+
+        public Guild Guild
+        {
+            get => _guild;
+            set => _guild = value;
+        }
+
+        #endregion
+
+        #region IGamePlayer — Duel System
+
+        private GameDuel Duel { get; set; }
+
+        public GameLiving DuelPartner => Duel?.GetPartnerOf(this);
+
+        public void OnDuelStart(GameDuel duel)
+        {
+            Duel = duel;
+        }
+
+        public void OnDuelStop()
+        {
+            Duel = null;
+        }
+
+        public bool IsDuelPartner(GameLiving living)
+        {
+            return DuelPartner == living;
+        }
+
+        public bool IsDuelReady { get; set; }
+
+        #endregion
+
+        #region IGamePlayer — Shade System
+
+        protected ShadeECSGameEffect m_ShadeEffect;
+        private ushort _creationModel;
+
+        public ShadeECSGameEffect ShadeEffect
+        {
+            get => m_ShadeEffect;
+            set => m_ShadeEffect = value;
+        }
+
+        public bool IsShade => m_ShadeEffect != null || Model == ShadeModel;
+
+        public ushort CreationModel => _creationModel == 0 ? Model : _creationModel;
+
+        /// <summary>True 1.65 Mode: a hired companion wears the classic look its player chose in the hire window.</summary>
+        public void SetLookModel(ushort model)
+        {
+            if (model == 0)
+                return;
+            _creationModel = model;
+            Model = model;
+        }
+
+        public ushort ShadeModel
+        {
+            get
+            {
+                // Like a player (GamePlayer.ShadeModel): any Disciple, so a not-yet-promoted Disciple with its zombie
+                // servant out is drawn as a shade too (owner 2026-10-31: True 1.65 bots start as Disciples).
+                if (CharacterClass is DOL.GS.PlayerClass.ClassDisciple || CharacterClass?.ID is (int)eCharacterClass.Necromancer or (int)eCharacterClass.Disciple)
+                    return 822;
+                return Model;
+            }
+        }
+
+        public virtual void Shade(bool state)
+        {
+            if (state)
+            {
+                if (m_ShadeEffect != null)
+                    return;
+                m_ShadeEffect = ECSGameEffectFactory.Create(
+                    new(this, 0, 1),
+                    static (in ECSGameEffectInitParams init) => new NecromancerShadeECSGameEffect(init)) as ShadeECSGameEffect;
+                ushort was = Model;
+                Model = ShadeModel;
+                log.Info($"BOT_SHADE bot=\"{Name}\" class={CharacterClass?.Name} on=true model={Model} was={was}");
+            }
+            else
+            {
+                ShadeECSGameEffect oldEffect = m_ShadeEffect;
+                m_ShadeEffect = null;
+                if (oldEffect?.IsActive == true)
+                    _ = oldEffect.End();
+                Model = CreationModel;
+                if (oldEffect != null)
+                    log.Info($"BOT_SHADE bot=\"{Name}\" class={CharacterClass?.Name} on=false model={Model}");
+            }
+        }
+
+        #endregion
+
+        #region IGamePlayer — Horse System
+
+        public ControlledHorse ActiveHorse => null;
+
+        private bool _isOnHorse;
+        public virtual bool IsOnHorse
+        {
+            get => _isOnHorse;
+            set => _isOnHorse = value;
+        }
+
+        /// <summary>
+        /// Boards this bot on an existing, authoritative stable path.  A small
+        /// optional delay lets player-led temporary companions visibly board in
+        /// sequence after their real player while still using the same path and
+        /// normal taxi movement.
+        /// </summary>
+        public bool BeginStableMasterRoute(
+            string destination,
+            TimeSpan expectedDuration,
+            PathPoint route,
+            DbItemTemplate ticket,
+            int departureDelayMilliseconds = 0)
+        {
+            if (route == null || route.Next == null || route.Type is not EPathType.Once || CurrentRegion == null)
+                return false;
+
+            WakeRecoveryRest();
+            CleanupStableRouteMount();
+            // a companion boarding leaves every fight: monsters drop it from their aggro lists
+            if (IsTemporaryGroupHelper || HiredCompanions165.IsHired(this))
+                foreach (GameNPC npc in GetNPCsInRadius(WorldMgr.VISIBILITY_DISTANCE))
+                    if (npc.Brain is StandardMobBrain enemy)
+                        enemy.RemoveFromAggroList(this);
+            StopAttack();
+            StopFollowing();
+            StopMovingOnPath();
+            StopMoving();
+            if (Brain is BotBrain brain)
+                brain.ClearAggroList();
+            // A player keeps their pet when boarding a horse (MountSteed releases nothing); so do the player's
+            // companions, whose pet is placed beside them on arrival. Gamebots still release it.
+            if (ControlledBrain != null && !IsPlayerCompanion)
+                ReleaseControlledPet(PetReleaseReason.StableTravel);
+            AutonomousPetSupport.ReleaseFieldTurrets(this);
+
+            // Unlike GamePlayer, GameBot is NPC-backed and cannot occupy the
+            // native GameTaxi rider array. The taxi therefore owns the one and
+            // only moving path while it synchronizes this bot's authoritative
+            // server position. Running a second copy of the path on the bot was
+            // the source of detached/riderless horses and arrival drift.
+            var mount = ticket?.Color > 0
+                ? new GameBotTaxi(this, NpcTemplateMgr.GetTemplate(ticket.Color))
+                : new GameBotTaxi(this);
+            mount.Realm = Realm;
+            mount.X = route.X;
+            mount.Y = route.Y;
+            mount.Z = route.Z;
+            mount.CurrentRegion = CurrentRegion;
+            mount.Heading = route.GetHeading(route.Next);
+            mount.FixedSpeed = true;
+            mount.MaxSpeedBase = AutonomousStableRoutePlanner.StableSpeed;
+            if (!mount.AddToWorld())
+            {
+                mount.Delete();
+                return false;
+            }
+
+            _stableRouteMount = mount;
+            _stableRouteMount.CurrentPathPoint = route;
+            IsOnStableMasterRoute = true;
+            IsOnHorse = true;
+            StableRouteDestination = destination ?? string.Empty;
+            _stableRouteExpectedArrivalUtc = DateTime.UtcNow + expectedDuration +
+                                              TimeSpan.FromMilliseconds(Math.Max(0, departureDelayMilliseconds)) +
+                                              TimeSpan.FromMinutes(2);
+            _stableRouteLastMovementTick = GameLoop.GameLoopTime;
+            _stableRouteLastPosition = new Point3D(route.X, route.Y, route.Z);
+            _stableRouteStart = route;
+            PathPoint endpoint = route;
+            while (endpoint.Next != null)
+                endpoint = endpoint.Next;
+            _stableRouteEndpoint = new Point3D(endpoint.X, endpoint.Y, endpoint.Z);
+            _stableRouteRecoveryCount = 0;
+            CurrentPathPoint = null;
+            mount.SynchronizeRider();
+            RefreshStableRideViewers();
+            _nextStableViewerRefreshTick = GameLoop.GameLoopTime + 2_000 + ObjectID % 750;
+            if (departureDelayMilliseconds > 0)
+            {
+                _stableRouteDeparturePending = true;
+                _stableRouteDepartureTimer = new ECSGameTimer(this, StartStableMasterRouteMotion);
+                _stableRouteDepartureTimer.Start(departureDelayMilliseconds);
+            }
+            else
+            {
+                StartStableMasterRouteMotion(null);
+            }
+            if (PersistentRecord != null)
+            {
+                PersistentRecord.Activity = "Riding stablemaster horse route";
+                PersistentRecord.CurrentGoal = $"Travel to {StableRouteDestination}";
+                PersistentRecord.TravelDestination = StableRouteDestination;
+            }
+            AutonomousStuckWatchdog.MarkProgress(this, eAutonomousProgressKind.StableTravel);
+            log.Info($"AUTONOMOUS_STABLE_ROUTE_BOARD bot=\"{Name}\" id={DatabaseID} level={Level} " +
+                     $"realm={GlobalConstants.RealmToName(Realm)} destination=\"{StableRouteDestination}\" ticket=\"{ticket?.Name}\" " +
+                     $"endpoint={_stableRouteEndpoint.X},{_stableRouteEndpoint.Y},{_stableRouteEndpoint.Z}");
+            return true;
+        }
+
+        private int StartStableMasterRouteMotion(ECSGameTimer timer)
+        {
+            _stableRouteDepartureTimer?.Stop();
+            _stableRouteDepartureTimer = null;
+            _stableRouteDeparturePending = false;
+            if (!IsOnStableMasterRoute)
+                return 0;
+
+            if (_stableRouteMount?.ObjectState is eObjectState.Active && _stableRouteMount.CurrentPathPoint != null)
+                _stableRouteMount.MoveOnPath(AutonomousStableRoutePlanner.StableSpeed);
+            _stableRouteLastMovementTick = GameLoop.GameLoopTime;
+            return 0;
+        }
+
+        public bool IsProtectedStableMasterTravel(DateTime nowUtc) =>
+            IsOnStableMasterRoute && IsOnHorse && nowUtc <= _stableRouteExpectedArrivalUtc;
+
+        public void CompleteStableMasterRoute() => CompleteStableMasterRoute(false);
+
+        private void CompleteStableMasterRoute(bool confirmedArrival)
+        {
+            bool wasStableTravel = IsOnStableMasterRoute;
+            try { CompleteStableMasterRouteCore(confirmedArrival, wasStableTravel); }
+            finally
+            {
+                // A companion's pet rejoins it at the end of the ride (it could not keep up with the horse).
+                if (wasStableTravel && (IsTemporaryGroupHelper || HiredCompanions165.IsHired(this)) && ControlledBrain?.Body is { IsAlive: true } pet &&
+                    pet.ObjectState == eObjectState.Active && pet.CurrentRegionID == CurrentRegionID && pet.MaxSpeedBase > 0 &&
+                    !IsWithinRadius(pet, 400))
+                {
+                    Point2D beside = GetPointFromHeading(Heading, 64);
+                    pet.MoveInRegion(CurrentRegionID, beside.X, beside.Y, Z + 10, (ushort)((Heading + 2048) % 4096), false);
+                }
+            }
+        }
+
+        private void CompleteStableMasterRouteCore(bool confirmedArrival, bool wasStableTravel)
+        {
+            string completedDestination = StableRouteDestination;
+            _stableRouteDepartureTimer?.Stop();
+            _stableRouteDepartureTimer = null;
+            _stableRouteDeparturePending = false;
+            CleanupStableRouteMount();
+            IsOnStableMasterRoute = false;
+            IsOnHorse = false;
+            StableRouteDestination = string.Empty;
+            _stableRouteExpectedArrivalUtc = default;
+            _stableRouteStart = null;
+            _stableRouteEndpoint = null;
+            _stableRouteRecoveryCount = 0;
+            if (wasStableTravel && IsAutonomousWorldBot)
+            {
+                Vector3 arrival = new(X, Y, Z);
+                // A horse lands on the ground. Route end points were recorded on another client's
+                // terrain at some border keeps (Castle Sauvage ~150 units low, Svasud Faste ~450 units
+                // high on the classic meshes), leaving the rider off the walkable floor; every route
+                // then failed and the pocket escape sent it to its capital (164 Albion bots in 30
+                // minutes, 2026-10-06). Same spot, real floor height.
+                if ((AutonomousStableRoutePlanner.ShouldCorrectAuditedMularnLanding(
+                         confirmedArrival, IsAlive, CurrentRegionID, arrival) &&
+                     AutonomousRouteHotspotRepair.TryResolveFloor(PathfindingProvider.Instance,
+                         CurrentZone, CurrentRegionID, arrival, out Vector3 floor) ||
+                     IsAlive && AutonomousStableRoutePlanner.TryGroundLanding(PathfindingProvider.Instance, CurrentZone, arrival, out floor)) &&
+                    MoveInRegion(CurrentRegionID, (int)Math.Round(floor.X), (int)Math.Round(floor.Y),
+                        (int)Math.Round(floor.Z), Heading, true))
+                    log.Info($"AUTONOMOUS_STABLE_LANDING_CORRECTION bot=\"{Name}\" id={DatabaseID} " +
+                             $"region={CurrentRegionID} from={arrival} to={floor}");
+                AutonomousStuckWatchdog.MarkProgress(this, eAutonomousProgressKind.StableTravel);
+                log.Info($"AUTONOMOUS_STABLE_ROUTE_ARRIVE bot=\"{Name}\" id={DatabaseID} level={Level} " +
+                         $"realm={GlobalConstants.RealmToName(Realm)} destination=\"{completedDestination}\" position={X},{Y},{Z}");
+            }
+        }
+
+        /// <summary>
+        /// A transient loss of movement flags is not an arrival. The rider stays
+        /// mounted until the real final ticket waypoint has actually been
+        /// reached and the Once path has released its last point.
+        /// </summary>
+        public bool TryCompleteStableMasterRouteAfterArrival()
+        {
+            if (!IsOnStableMasterRoute)
+                return true;
+            bool atEndpoint = _stableRouteEndpoint != null &&
+                              DistanceSquared(X, Y, _stableRouteEndpoint.X, _stableRouteEndpoint.Y) <= 90L * 90L;
+            if (!AutonomousStableRouteLifecycle.ShouldComplete(
+                    _stableRouteDeparturePending,
+                    _stableRouteMount?.IsMovingOnPath == true,
+                    _stableRouteMount?.CurrentPathPoint != null,
+                    atEndpoint))
+                return false;
+            CompleteStableMasterRoute(true);
+            return true;
+        }
+
+        public void MaintainStableMasterRoute()
+        {
+            if (!IsOnStableMasterRoute)
+                return;
+
+            if (_stableRouteMount?.ObjectState is not eObjectState.Active)
+            {
+                log.Warn($"AUTONOMOUS_STABLE_ROUTE_FAIL bot=\"{Name}\" id={DatabaseID} level={Level} " +
+                         $"realm={GlobalConstants.RealmToName(Realm)} destination=\"{StableRouteDestination}\" reason=\"authoritative taxi left world before arrival\"");
+                CompleteStableMasterRoute();
+                return;
+            }
+
+            if (_stableRouteMount is GameBotTaxi botTaxi)
+                botTaxi.SynchronizeRider();
+            if (GameServiceUtils.ShouldTick(_nextStableViewerRefreshTick))
+            {
+                _nextStableViewerRefreshTick = GameLoop.GameLoopTime + 2_000 + ObjectID % 750;
+                RefreshStableRideViewers();
+            }
+            if (_stableRouteDeparturePending)
+                return;
+            if (DistanceSquared(X, Y, _stableRouteLastPosition.X, _stableRouteLastPosition.Y) >= 24L * 24L)
+            {
+                _stableRouteLastPosition = new Point3D(X, Y, Z);
+                _stableRouteLastMovementTick = GameLoop.GameLoopTime;
+                AutonomousStuckWatchdog.MarkProgress(this, eAutonomousProgressKind.StableTravel);
+            }
+
+            if (_stableRouteMount.CurrentPathPoint != null && !_stableRouteMount.IsMovingOnPath &&
+                GameLoop.GameLoopTime - _stableRouteLastMovementTick >= 5_000)
+            {
+                _stableRouteMount.MoveOnPath(AutonomousStableRoutePlanner.StableSpeed);
+                _stableRouteLastMovementTick = GameLoop.GameLoopTime;
+            }
+
+            if (_stableRouteMount.CurrentPathPoint == null && !_stableRouteMount.IsMovingOnPath && _stableRouteEndpoint != null &&
+                DistanceSquared(X, Y, _stableRouteEndpoint.X, _stableRouteEndpoint.Y) > 90L * 90L &&
+                GameLoop.GameLoopTime - _stableRouteLastMovementTick >= 1_000)
+            {
+                _stableRouteMount.CurrentPathPoint = FindStableRouteRecoveryPoint();
+                if (_stableRouteMount.CurrentPathPoint != null)
+                {
+                    _stableRouteRecoveryCount++;
+                    _stableRouteMount.MoveOnPath(AutonomousStableRoutePlanner.StableSpeed);
+                    _stableRouteLastMovementTick = GameLoop.GameLoopTime;
+                    log.Warn($"AUTONOMOUS_STABLE_ROUTE_RESUME bot={Name} id={DatabaseID} " +
+                             $"destination=\"{StableRouteDestination}\" recovery={_stableRouteRecoveryCount} " +
+                             $"position={X},{Y},{Z}");
+                }
+            }
+
+            if (_stableRouteMount?.ObjectState is eObjectState.Active &&
+                _stableRouteMount.CurrentPathPoint != null && !_stableRouteMount.IsMovingOnPath)
+            {
+                _stableRouteMount.MoveOnPath(AutonomousStableRoutePlanner.StableSpeed);
+            }
+        }
+
+        private PathPoint FindStableRouteRecoveryPoint()
+        {
+            PathPoint nearest = null;
+            long bestDistance = long.MaxValue;
+            for (PathPoint point = _stableRouteStart; point != null; point = point.Next)
+            {
+                long distance = DistanceSquared(X, Y, point.X, point.Y);
+                if (distance >= bestDistance)
+                    continue;
+                bestDistance = distance;
+                nearest = point;
+            }
+            return bestDistance <= 120L * 120L && nearest?.Next != null ? nearest.Next : nearest;
+        }
+
+        internal void SynchronizeStableRoutePosition(GameBotTaxi mount)
+        {
+            if (mount == null || !IsOnStableMasterRoute || mount != _stableRouteMount ||
+                mount.CurrentRegion != CurrentRegion)
+                return;
+
+            m_x = mount.X;
+            m_y = mount.Y;
+            m_z = mount.Z;
+            Heading = mount.Heading;
+            movementComponent.ForceUpdatePosition();
+            SubZoneObject.CheckForRelocation();
+        }
+
+        internal GameTaxi StableRouteMountForClient =>
+            IsOnStableMasterRoute && ObjectState is eObjectState.Active &&
+            _stableRouteMount?.ObjectState is eObjectState.Active &&
+            _stableRouteMount.CurrentRegion == CurrentRegion ? _stableRouteMount : null;
+
+        private void RefreshStableRideViewers()
+        {
+            if (_stableRouteMount?.ObjectState is not eObjectState.Active)
+                return;
+
+            GamePlayer[] viewers = GetPlayersInRadius(WorldMgr.VISIBILITY_DISTANCE)
+                .Where(player => player?.Client?.ClientState is GameClient.eClientState.Playing &&
+                                 player.IsWithinRadius(_stableRouteMount, WorldMgr.VISIBILITY_DISTANCE))
+                .ToArray();
+            HashSet<GamePlayer> present = viewers.ToHashSet();
+            foreach (GamePlayer departed in _stableRideViewers.Keys.Where(player => !present.Contains(player)))
+                _stableRideViewers.TryRemove(departed, out _);
+
+            foreach (GamePlayer player in viewers)
+                SendStableRideAssociation(player);
+        }
+
+        /// <summary>
+        /// The native player path creates the horse before its rider. Do the same
+        /// for NPC-backed bots without changing their server type or taxi movement.
+        /// Reattach after recreation/position packets and retry at a bounded rate.
+        /// </summary>
+        internal void SendStableRideAssociation(GamePlayer player, bool force = false)
+        {
+            GameTaxi mount = StableRouteMountForClient;
+            if (player?.Client?.ClientState is not GameClient.eClientState.Playing ||
+                mount == null || !IsWithinRadius(player, WorldMgr.VISIBILITY_DISTANCE) ||
+                !player.IsWithinRadius(mount, WorldMgr.VISIBILITY_DISTANCE) ||
+                !IsVisibleTo(player) || !mount.IsVisibleTo(player) ||
+                !player.CanDetect(this) || !player.CanDetect(mount))
+                return;
+
+            StableRideObserver observer = _stableRideViewers.GetOrAdd(player, static _ => new());
+            observer.Refresh(GameLoop.GameLoopTime, force,
+                () =>
+                {
+                    // Also refresh an already visible on-foot bot when it first boards.
+                    // ClientService preserves equipment and its normal object caches.
+                    ClientService.CreateObjectForPlayer(player, mount);
+                    ClientService.CreateObjectForPlayer(player, this);
+                },
+                () =>
+                {
+                    if (StableRouteMountForClient == mount)
+                        player.Out.SendRiding(this, mount, false);
+                });
+        }
+
+        private void CleanupStableRouteMount()
+        {
+            if (_stableRouteMount != null)
+            {
+                foreach (GamePlayer player in GetPlayersInRadius(WorldMgr.VISIBILITY_DISTANCE))
+                    player.Out.SendRiding(this, _stableRouteMount, true);
+                if (_stableRouteMount.ObjectState is eObjectState.Active)
+                    _stableRouteMount.RemoveFromWorld();
+                _stableRouteMount.Delete();
+            }
+            _stableRouteMount = null;
+            _stableRideViewers.Clear();
+            _nextStableViewerRefreshTick = 0;
+            _stableRouteLastMovementTick = 0;
+            if (ObjectState is eObjectState.Active)
+                ClientService.UpdateNpcForPlayers(this, false);
+        }
+
+        protected override bool RetainCorpseForResurrection => true;
+        protected override bool RetainGroupWhenDead => true;
+
+        /// <summary>
+        /// BOT_DEATH_POS (owner 2026-10-30: a dead bot's body showed farther away than where it died): the recorded death
+        /// spot, the frozen position after StopMoving and what the next client update carries, in world and zone units,
+        /// for comparing with the new client's death_log.txt. Only for deaths a player can see.
+        /// </summary>
+        private void LogDeathPosition()
+        {
+            if (CurrentZone == null || GetPlayersInRadius(WorldMgr.VISIBILITY_DISTANCE).Count == 0)
+                return;
+            Vector3 sent = movementComponent.PositionForClient;
+            log.Info($"BOT_DEATH_POS {Name} (oid {ObjectID}{(HiredCompanions165.IsHired(this) ? ", companion" : string.Empty)}) " +
+                     $"region {CurrentRegionID} zone {CurrentZone.ID}: death {_deathLocation.X},{_deathLocation.Y},{_deathLocation.Z}; " +
+                     $"frozen {X},{Y},{Z}; sent {sent.X:0},{sent.Y:0},{sent.Z:0} " +
+                     $"(zone units {sent.X - CurrentZone.XOffset:0},{sent.Y - CurrentZone.YOffset:0}); moving {IsMoving} speed {CurrentSpeed}");
+        }
+
+        /// <summary>BOT_DEATH_165 (owner 2026-10-31 runs: level 6-9 solo bots died to a single green or blue monster 20-40%
+        /// of the time): what killed the bot and what it had - attackers on it, health, Constitution, the sickness penalty,
+        /// worn armor pieces and the weapon's skill. For True 1.65 gamebots only.</summary>
+        private void LogDeath165(GameObject killer)
+        {
+            if (!Classic165Mode.IsOn || !IsAutonomousWorldBot)
+                return;
+            try
+            {
+                GameLiving source = killer as GameLiving;
+                int armorPieces = 0;
+                foreach (eInventorySlot slot in new[] { eInventorySlot.HeadArmor, eInventorySlot.TorsoArmor, eInventorySlot.LegsArmor,
+                             eInventorySlot.ArmsArmor, eInventorySlot.HandsArmor, eInventorySlot.FeetArmor })
+                    if (Inventory?.GetItem(slot) != null)
+                        armorPieces++;
+                DbInventoryItem weapon = ActiveWeapon;
+                string killerCon = source == null ? "-" : ConLevels.GetConColor(GetConLevel(source)).ToString();
+                log.Info($"BOT_DEATH_165 bot={Name} id={DatabaseID} level={Level} class=\"{ClassName}\" " +
+                         $"killer=\"{killer?.Name}\" killer_level={source?.Level ?? 0} killer_con={killerCon} " +
+                         $"attackers={attackComponent.AttackerTracker.Count} group={(Group?.MemberCount ?? 1)} " +
+                         $"maxhp={MaxHealth} con={GetModified(eProperty.Constitution)} con_lost={TotalConstitutionLostAtDeath} " +
+                         $"eff={Effectiveness:0.00} eff_tracked={_effectiveness165:0.00} armor={armorPieces}/6 " +
+                         $"weapon=\"{weapon?.Name}\" wskill={(weapon == null ? 0 : GetWeaponSkill(weapon)):0} " +
+                         $"spec={(weapon == null ? 0 : WeaponSpecLevel(weapon))} region={CurrentRegionID} at={X},{Y}");
+            }
+            catch (Exception e)
+            {
+                log.Warn($"BOT_DEATH_165 log failed for {Name}: {e.Message}");
+            }
+        }
+
+        public override void ProcessDeath(GameObject killer)
+        {
+            SetSeatedForClients(false);
+            AutonomousPetSupport.CancelPendingCharm(this);
+            _deathTick = GameLoop.GameLoopTime;
+            _deathRegionId = CurrentRegionID;
+            _deathLocation = new Point3D(X, Y, Z);
+            (_lastDeathRvR165, _pendingConLoss165) = DeathPenalty165.OnDeath(this, killer, ref _deathsLevel165, ref _deathsThisLevel165);
+            LogDeath165(killer);
+            IsReturningAfterRelease = false;
+            _stableReturnPlan = null;
+            CompleteStableMasterRoute();
+
+            if (IsAutonomousWorldBot && PersistentRecord != null)
+            {
+                PersistentRecord.DeathCount++;
+                GoalDiagnosticAttempt?.Died();
+                PersistentRecord.TargetName = (TargetObject as GameLiving)?.Name ?? killer?.Name ?? string.Empty;
+                PersistentRecord.Activity = "Defeated; reassessing target difficulty";
+                PersistentRecord.ObjectiveProgress = "The next grind target will be a lower con, never below green";
+                MarkAutonomousStateDirty();
+            }
+
+            base.ProcessDeath(killer);
+            LogDeathPosition();
+            if (IsAutonomousWorldBot)
+                AutonomousBotStatusPersistence.Queue(this);
+            StartDeathRecoveryTimer();
+        }
+
+        /// <summary>Where the bot last died (region and spot), for the camp planner's no-go memory.</summary>
+        public (ushort Region, int X, int Y) LastDeathSpot => (_deathRegionId, _deathLocation?.X ?? 0, _deathLocation?.Y ?? 0);
+
+        private bool _lastDeathRvR165;
+        private int _pendingConLoss165;
+        private byte _deathsLevel165;
+        private int _deathsThisLevel165;
+
+        /// <summary>True 1.65 Mode: back alive. A release costs the Constitution the death set aside; either way the bot
+        /// gets resurrection sickness (DeathPenalty165).</summary>
+        private void AfterRevive165(bool released)
+        {
+            if (released && _pendingConLoss165 > 0)
+            {
+                TotalConstitutionLostAtDeath += _pendingConLoss165;
+                MarkAutonomousStateDirty();
+            }
+            _pendingConLoss165 = 0;
+            DeathPenalty165.OnRevive(this, _lastDeathRvR165);
+            _lastDeathRvR165 = false;
+        }
+
+        private void StartDeathRecoveryTimer()
+        {
+            _deathRecoveryTimer?.Stop();
+            _deathRecoveryTimer = new ECSGameTimer(this)
+            {
+                Callback = HandleDeathRecovery
+            };
+            _deathRecoveryTimer.Start(3000);
+        }
+
+        private long _nextDeathRecoveryErrorTick;
+
+        private int HandleDeathRecovery(ECSGameTimer timer)
+        {
+            if (ObjectState is not eObjectState.Active)
+                return 0;
+            if (IsAlive)
+            {
+                _deathRecoveryTimer = null;
+                return 0;
+            }
+
+            long deadFor = GameLoop.GameLoopTime - _deathTick;
+            // True 1.65 Mode: a hired companion's body stays where it fell, then fades to wait for a healer
+            int hiredNext = HiredCompanions165.DeathTick(this, deadFor);
+            if (hiredNext >= 0)
+            {
+                if (hiredNext == 0)
+                    _deathRecoveryTimer = null;
+                return hiredNext;
+            }
+            AutonomousBotGroupCoordinator.PveCorpseDisposition groupDisposition =
+                AutonomousBotGroupCoordinator.PveCorpseRecovery(this);
+            if (groupDisposition == AutonomousBotGroupCoordinator.PveCorpseDisposition.HoldForResurrection)
+                return 3000;
+            // A siege attacker also waits for any healer of its army nearby (AutonomousSiegeResurrection), not only its party's.
+            bool resurrectionPossible = HasViableResurrector() ||
+                IsAutonomousWorldBot && AutonomousSiegeResurrection.IsSiegeAttacker(this) &&
+                AutonomousSiegeResurrection.HasArmyResurrectorNear(this);
+            // A siege attacker's release is a long walk back from its realm's muster (run 18, 2026-10-17: Dun Dagda,
+            // 176,000 units), so with a resurrector in its party it waits longer for a raise, as players did.
+            long releaseDelay = resurrectionPossible
+                ? IsAutonomousWorldBot && AutonomousRvrEventLayer.TrySiegeRelease(AutonomousBotGroupCoordinator.RvrForceId(this), Realm,
+                    GameLoop.GameLoopTime, out _, out _) ? SiegeCorpseWaitMilliseconds : 90_000
+                : 20_000;
+            if (groupDisposition is not (AutonomousBotGroupCoordinator.PveCorpseDisposition.ReleaseAndDisband or
+                AutonomousBotGroupCoordinator.PveCorpseDisposition.ReleaseAndRejoin) &&
+                deadFor < releaseDelay)
+                return 3000;
+
+            // Leave the corpse and its retry timer intact while the owner is
+            // dead or the party is still fighting. Reviving first would send
+            // a one-third-health helper straight back into the corpse fight.
+            if (IsTemporaryGroupHelper && !TemporaryCompanionRecovery.CanReleaseToOwner(this))
+                return 3000;
+
+            try
+            {
+                ReleaseToNearestBindAndReturn(groupDisposition !=
+                    AutonomousBotGroupCoordinator.PveCorpseDisposition.ReleaseAndDisband);
+            }
+            catch (Exception exception)
+            {
+                // A transient transfer failure must not kill the only release timer.
+                // Rate limit per character; no DB retry/sleep on the game thread.
+                if (GameLoop.GameLoopTime >= _nextDeathRecoveryErrorTick)
+                {
+                    _nextDeathRecoveryErrorTick = GameLoop.GameLoopTime + 60_000;
+                    log.Error($"BOT_RELEASE_RETRY bot={Name} id={DatabaseID} region={_deathRegionId}", exception);
+                }
+                return 3000;
+            }
+            if (!IsAlive)
+                return 3000; // A failed destination/transfer must retain the recovery timer.
+            _deathRecoveryTimer = null;
+            return 0;
+        }
+
+        public const long SiegeCorpseWaitMilliseconds = 240_000;
+
+        private bool HasViableResurrector()
+        {
+            if (Group == null)
+                return false;
+
+            foreach (GameLiving member in Group.GetMembersInTheGroup())
+            {
+                if (member == this || !member.IsAlive || member.CurrentRegionID != CurrentRegionID)
+                    continue;
+                if (member is GameBot bot && bot.ResurrectionSpell != null && bot.Mana >= bot.PowerCost(bot.ResurrectionSpell))
+                    return true;
+                if (member is GamePlayer player && player.CharacterClass?.ID is
+                    (int)eCharacterClass.Cleric or (int)eCharacterClass.Friar or
+                    (int)eCharacterClass.Healer or (int)eCharacterClass.Shaman or
+                    (int)eCharacterClass.Druid or (int)eCharacterClass.Warden or (int)eCharacterClass.Bard)
+                    return true;
+            }
+            return false;
+        }
+
+        private void ReleaseToNearestBindAndReturn(bool returnToParty = true)
+        {
+            if (IsTemporaryGroupHelper)
+            {
+                if (!TemporaryCompanionRecovery.CanReleaseToOwner(this))
+                    return;
+                // Move the corpse FIRST. Reviving before a failed MoveTo left a
+                // living helper at its killer with an expired recovery timer.
+                Vector3 destination = TemporaryGroupStableTravel.FormationPoint(Owner, CompanionRaid.IsMember(this) ? Math.Max(0, GroupIndex - 1) : ObjectID % 6);
+                StopCurrentSpellcast();
+                (Brain as BotBrain)?.PrepareForTankPull();
+                StopMoving();
+                if (!MoveCorpseForRelease(Owner.CurrentRegionID, (int)Math.Round(destination.X),
+                    (int)Math.Round(destination.Y), (int)Math.Round(destination.Z), Owner.Heading))
+                    return;
+
+                Health = Math.Max(1, MaxHealth);
+                Mana = Math.Max(0, MaxMana);
+                Endurance = Math.Max(0, MaxEndurance);
+                IsReturningAfterRelease = false;
+                _stableReturnPlan = null;
+                EnterPlayerLedGroup(Owner);
+                Brain?.FSM?.SetCurrentState(eFSMStateType.FOLLOW);
+                Brain?.Start();
+                ShowStandingToViewers();
+                return;
+            }
+
+            Point3D release = FindNearestBindPoint();
+            ushort releaseRegion = _deathRegionId;
+            // True 1.65 Mode: a solo gamebot releases to its own bind, as a player does, not to the bind stone nearest
+            // its body (owner 2026-10-31 run: level-4 bots died to level-11 sveawolves beside the West Svealand inn,
+            // released at that inn's stone and died again, up to 12 times an hour).
+            if (Classic165Mode.IsOn && IsAutonomousWorldBot && Group == null && returnToParty &&
+                PersistentRecord is { BindRegionId: > 0 } bindRecord && WorldMgr.GetRegion((ushort)bindRecord.BindRegionId) != null &&
+                (bindRecord.BindX != 0 || bindRecord.BindY != 0))
+            {
+                releaseRegion = (ushort)bindRecord.BindRegionId;
+                release = new Point3D(bindRecord.BindX, bindRecord.BindY, bindRecord.BindZ);
+            }
+            if (IsAutonomousWorldBot && release != null)
+            {
+                Zone releaseZone = WorldMgr.GetRegion(releaseRegion)?.GetZone(release.X, release.Y);
+                if (releaseZone == null || !AutonomousRealmBoundary.Allows(Realm, releaseRegion, releaseZone.ID))
+                    release = null;
+            }
+            if (release == null && IsAutonomousWorldBot && returnToParty &&
+                AutonomousRealmRaid.TryRaidRelease(this, out ushort hubRegion, out Point3D hub))
+            {
+                releaseRegion = hubRegion;
+                release = hub;
+            }
+            if (release == null && IsAutonomousWorldBot &&
+                AutonomousRvrEventLayer.TrySiegeRelease(AutonomousBotGroupCoordinator.RvrForceId(this), Realm,
+                    GameLoop.GameLoopTime, out ushort musterRegion, out Point3D muster))
+            {
+                releaseRegion = musterRegion;
+                release = muster;
+            }
+            if (release == null && IsAutonomousWorldBot)
+            {
+                var capital = AutonomousStuckWatchdog.SafeCapitalFor(Realm);
+                releaseRegion = capital.RegionId;
+                release = new Point3D(capital.X, capital.Y, capital.Z);
+            }
+            release ??= _deathLocation;
+            // Transfer the corpse first: a failed MoveTo must not revive the bot
+            // at its killer or cause HandleDeathRecovery to discard its timer.
+            if (!MoveCorpseForRelease(releaseRegion, release.X, release.Y, release.Z, Heading))
+                return;
+            Health = Math.Max(1, MaxHealth / 3);
+            Mana = Math.Max(0, MaxMana / 3);
+            Endurance = Math.Max(0, MaxEndurance / 3);
+            AfterRevive165(released: true);
+            IsReturningAfterRelease = returnToParty;
+            if (returnToParty) AutonomousRealmRaid.RejoinAfterRelease(this);
+            _nextReturnRoleplayTick = GameLoop.GameLoopTime + Util.Random(45_000, 90_000);
+            Brain?.FSM?.SetCurrentState(eFSMStateType.FOLLOW);
+            Brain?.Start();
+            ShowStandingToViewers();
+            if (returnToParty)
+                Say(ReturnDialogue("release"));
+
+            if (PersistentRecord != null)
+            {
+                PersistentRecord.Activity = returnToParty ? "Released and returning on foot" : "Released after party disbanded";
+                if (returnToParty)
+                    PersistentRecord.CurrentGoal = $"Return to the party near {_deathLocation.X}, {_deathLocation.Y}";
+                PersistentRecord.TravelDestination = CurrentZone?.Description ?? string.Empty;
+                MarkAutonomousStateDirty();
+            }
+        }
+
+        /// <summary>
+        /// A release moves the corpse first and raises it after: the move re-created the bot for every viewer while it
+        /// was still dead, and a client keeps an NPC created dead lying down whatever its health says later, so it showed
+        /// as a second dead body (owner 2026-10-30). Re-send it standing.
+        /// </summary>
+        private void ShowStandingToViewers()
+        {
+            if (!IsAlive || ObjectState != eObjectState.Active)
+                return;
+            foreach (GamePlayer viewer in GetPlayersInRadius(WorldMgr.VISIBILITY_DISTANCE))
+            {
+                if (viewer.Client?.ClientState is not GameClient.eClientState.Playing || !viewer.CanDetect(this))
+                    continue;
+                viewer.Out.SendObjectRemove(this);
+                ClientService.CreateObjectForPlayer(viewer, this);
+                viewer.Out.SendLivingEquipmentUpdate(this);
+            }
+        }
+
+        private Point3D? FindNearestBindPoint()
+        {
+            return BotReleaseBindPoints.Nearest(_deathRegionId, X, Y, IsAutonomousWorldBot ? Realm : eRealm.None);
+        }
+
+        public void OnResurrectedBy(GameLiving caster)
+        {
+            AutonomousRealmRaid.ClearCorpseWait(this);
+            _deathRecoveryTimer?.Stop();
+            _deathRecoveryTimer = null;
+            IsReturningAfterRelease = false;
+            _stableReturnPlan = null;
+            CompleteStableMasterRoute();
+            if (IsTemporaryGroupHelper)
+                TryReturnTemporaryCompanionToLeader(true);
+            HiredCompanions165.OnRaised(this);
+            AfterRevive165(released: false);
+            Brain?.FSM?.SetCurrentState(eFSMStateType.FOLLOW);
+            Brain?.Start();
+            Say(Random.Shared.Next(3) switch
+            {
+                0 => $"My thanks, {caster?.Name ?? "friend"}. I am ready to continue.",
+                1 => "That was too close. Give me a moment, then I will fall back into formation.",
+                _ => "Back among the living. I will stay nearer the group this time."
+            });
+        }
+
+        private long _nextCompanionRecallTick;
+
+        public bool TryReturnTemporaryCompanionToLeader(bool afterRevival = false)
+        {
+            // Even persistent bots in a human's party retain their walk-back.
+            if (!IsTemporaryGroupHelper || !IsAlive || Owner?.IsAlive != true ||
+                Owner.ObjectState != eObjectState.Active || Owner.CurrentZone == null)
+                return false;
+            if ((afterRevival || IsReturningAfterRelease) && !TemporaryCompanionRecovery.CanReleaseToOwner(this))
+                return false;
+            if (!afterRevival && GameLoop.GameLoopTime < _nextCompanionRecallTick)
+                return false;
+            _nextCompanionRecallTick = GameLoop.GameLoopTime + TemporaryCompanionRecovery.CheckIntervalMilliseconds;
+            bool sameGroup = Group != null && Group == Owner.Group && Group.IsInTheGroup(this) && Group.IsInTheGroup(Owner);
+            if (!TemporaryCompanionRecovery.ShouldRecall(true, IsAlive, ObjectState == eObjectState.Active,
+                sameGroup, PlayerGroupLeader == Owner, IsOnStableMasterRoute, Owner.IsOnHorse,
+                CurrentRegionID == Owner.CurrentRegionID, GetDistanceTo(Owner), afterRevival || IsReturningAfterRelease))
+                return false;
+
+            // A combat knockback/dragon throw must not recall and reset an entire raid.
+            // Genuine portal transfers use the separate transfer coordinator.
+            if (DragonCombatGeometry.IsRecoveringFromThrow(Owner) ||
+                CurrentRegionID == Owner.CurrentRegionID && TemporaryCompanionRecovery.HasPartyCombat(this) &&
+                !TemporaryCompanionRecovery.FrontierChaseLeash(this))
+                return false;
+            // A raid squad on a keep siege holds its post until the event ends (goal 11: no leash during sieges).
+            if (CurrentRegionID == Owner.CurrentRegionID && CompanionRaidSiege.Holds(this))
+                return false;
+
+            Vector3 destination = TemporaryGroupStableTravel.FormationPoint(Owner, CompanionRaid.IsMember(this) ? Math.Max(0, GroupIndex - 1) : ObjectID % 6);
+            StopCurrentSpellcast();
+            WakeRecoveryRest();
+            (Brain as BotBrain)?.PrepareForTankPull();
+            StopMoving();
+            if (!MoveTo(Owner.CurrentRegionID, (int)Math.Round(destination.X), (int)Math.Round(destination.Y),
+                (int)Math.Round(destination.Z), Owner.Heading))
+                return false;
+
+            IsReturningAfterRelease = false;
+            _stableReturnPlan = null;
+            EnterPlayerLedGroup(Owner);
+            Brain?.Start();
+            return true;
+        }
+
+        // The autonomous controller owns released solo and group journeys.
+        // Human-led companions retain their existing return-to-player behavior.
+        public void HandOverReleaseReturnToGroup()
+        {
+            if (!IsAutonomousWorldBot || IsTemporaryGroupHelper || IsPlayerLedGroup ||
+                !IsAlive || !IsReturningAfterRelease || IsOnStableMasterRoute)
+                return;
+            IsReturningAfterRelease = false;
+            _stableReturnPlan = null;
+            StopMovingOnPath();
+            StopMoving();
+        }
+
+        public bool ContinueReturnJourney()
+        {
+            if (!IsReturningAfterRelease || !IsAlive)
+                return false;
+
+            if (IsTemporaryGroupHelper)
+            {
+                TryReturnTemporaryCompanionToLeader(true);
+                return IsReturningAfterRelease;
+            }
+
+            GamePlayer leader = PlayerGroupLeader ?? Owner;
+            Point3D destination = leader?.IsAlive == true && leader.CurrentRegionID == CurrentRegionID
+                ? new Point3D(leader.X, leader.Y, leader.Z)
+                : _deathLocation;
+            if (CurrentRegionID != _deathRegionId && (leader == null || leader.CurrentRegionID != CurrentRegionID))
+                return true;
+
+            if (GetDistanceTo(destination) <= 350)
+            {
+                IsReturningAfterRelease = false;
+                _stableReturnPlan = null;
+                CompleteStableMasterRoute();
+                Say(ReturnDialogue("arrive"));
+                Brain?.FSM?.SetCurrentState(eFSMStateType.FOLLOW);
+                return false;
+            }
+
+            if (IsOnStableMasterRoute)
+            {
+                MaintainStableMasterRoute();
+                if (IsMovingOnPath || CurrentPathPoint != null)
+                    return true;
+                if (!TryCompleteStableMasterRouteAfterArrival())
+                    return true;
+                _stableReturnPlan = null;
+                Say(ReturnDialogue("dismount"));
+            }
+
+            _stableReturnPlan ??= FindFasterStableRoute(destination);
+            if (_stableReturnPlan != null)
+            {
+                if (!IsWithinRadius(_stableReturnPlan.Master, 225))
+                {
+                    WalkReturnStep(new Point3D(_stableReturnPlan.Master.X, _stableReturnPlan.Master.Y, _stableReturnPlan.Master.Z));
+                    MaybeExplainReturn("stable");
+                    return true;
+                }
+
+                if (DistanceSquared(X, Y, _stableReturnPlan.Route.X, _stableReturnPlan.Route.Y) > 45L * 45L)
+                {
+                    WalkReturnStep(new Point3D(_stableReturnPlan.Route.X, _stableReturnPlan.Route.Y, _stableReturnPlan.Route.Z));
+                    return true;
+                }
+
+                long price = Math.Max(0, _stableReturnPlan.Ticket.Price);
+                if (price > 0 && !AutonomousBotEconomy.TrySpend(DatabaseID, price))
+                {
+                    _stableReturnPlan = null;
+                    return true;
+                }
+                if (!BeginStableMasterRoute(_stableReturnPlan.DestinationName,
+                        TimeSpan.FromSeconds(_stableReturnPlan.RideSeconds), _stableReturnPlan.Route, _stableReturnPlan.Ticket))
+                {
+                    if (price > 0)
+                        AutonomousBotEconomy.AddMoney(DatabaseID, price);
+                    _stableReturnPlan = null;
+                    return true;
+                }
+                _stableReturnPlan = null;
+                Say(ReturnDialogue("mount"));
+                return true;
+            }
+
+            WalkReturnStep(destination);
+            MaybeExplainReturn("walk");
+            return true;
+        }
+
+        private void WalkReturnStep(Point3D destination)
+        {
+            Vector3 current = new(X, Y, Z);
+            Vector3 desired = new(destination.X, destination.Y, destination.Z);
+            AutonomousThreatAwarePathing.SafeStep step = AutonomousThreatAwarePathing.ChooseStep(this, current, desired, 900);
+            PathTo(step.Position, MaxSpeed);
+            if (PersistentRecord != null)
+            {
+                PersistentRecord.Activity = step.Detouring ? step.Reason : "Walking back to the party";
+                PersistentRecord.CurrentGoal = "Return to party after release";
+                MarkAutonomousStateDirty();
+            }
+        }
+
+        private AutonomousStableRoutePlanner.Choice FindFasterStableRoute(Point3D destination)
+        {
+            return CurrentRegion == null
+                ? null
+                : AutonomousStableRoutePlanner.FindBest(this, new Vector3(destination.X, destination.Y, destination.Z));
+        }
+
+        private void MaybeExplainReturn(string stage)
+        {
+            if (GameLoop.GameLoopTime < _nextReturnRoleplayTick || IsCasting || InCombat)
+                return;
+            _nextReturnRoleplayTick = GameLoop.GameLoopTime + Util.Random(60_000, 120_000);
+            Say(ReturnDialogue(stage));
+        }
+
+        private string ReturnDialogue(string stage) => stage switch
+        {
+            "release" => Random.Shared.Next(3) switch
+            {
+                0 => "No resurrection is coming. I have released, and I am making my way back.",
+                1 => "I woke at the bindstone. Hold the road; I will return on foot.",
+                _ => "The healers could not reach me. I am alive again and starting the journey back."
+            },
+            "stable" => "The stable is on my route. A horse should save time from here.",
+            "mount" => $"I found a faster horse route toward {StableRouteDestination}. I am taking it now.",
+            "dismount" => "Off the horse. I will cover the rest of the road on foot.",
+            "arrive" => "I have caught up. Returning to formation.",
+            _ => Random.Shared.Next(4) switch
+            {
+                0 => "Still on the road. I am avoiding the stronger creatures along the way.",
+                1 => "I know the direction now. Keep going; I will catch up.",
+                2 => "The road is longer than it looked from the bindstone, but I am making progress.",
+                _ => $"I am crossing {CurrentZone?.Description ?? "the wilds"} and heading back to the group."
+            }
+        };
+
+        private static long DistanceSquared(int ax, int ay, int bx, int by)
+        {
+            long dx = (long)ax - bx;
+            long dy = (long)ay - by;
+            return dx * dx + dy * dy;
+        }
+
+        #endregion
+
+        #region IGamePlayer — Sprint
+
+        public bool IsSprinting => effectListComponent.ContainsEffectForEffectType(eEffect.Sprint);
+
+        public virtual bool Sprint(bool state)
+        {
+            if (state == IsSprinting)
+                return state;
+
+            if (state)
+            {
+                if (Endurance <= 10 || IsStealthed || !IsAlive)
+                    return false;
+
+                ECSGameEffectFactory.Create(new ECSGameEffectInitParams(this, 0, 1),
+                    static (in ECSGameEffectInitParams i) => new SprintECSGameEffect(i));
+                return true;
+            }
+            else
+            {
+                ECSGameEffect effect = EffectListService.GetEffectOnTarget(this, eEffect.Sprint);
+                effect?.End();
+                return false;
+            }
+        }
+
+        #endregion
+
+        #region IGamePlayer — Status Flags
+
+        public bool CanBreathUnderWater { get; set; }
+        public bool IsOverencumbered { get; set; }
+        public int Encumberance => 0;
+        public int MaxEncumberance => 0;
+
+        #endregion
+
+        #region IGamePlayer — Skill System
+
+        protected readonly Dictionary<string, Specialization> m_specialization = new Dictionary<string, Specialization>();
+        protected readonly List<SpellLine> m_spellLines = new List<SpellLine>();
+
+        public virtual bool HasSpecialization(string keyName)
+        {
+            lock (((ICollection)m_specialization).SyncRoot)
+            {
+                return m_specialization.ContainsKey(keyName);
+            }
+        }
+
+        public virtual SpellLine GetSpellLine(string keyname)
+        {
+            lock (m_spellLines)
+            {
+                return m_spellLines.FirstOrDefault(sl => sl.KeyName == keyname);
+            }
+        }
+
+        #endregion
+
+        #region IGamePlayer — Equipment / Armor
+
+        // Bot armor works exactly like a player's (owner 2026-10-31, major): the piece that is hit is chosen with the
+        // player's odds (or the style's fixed location), its AF is capped by level and armor type, quality and condition
+        // count, and its absorb comes from the armor type. Before this a bot defended like a monster of its level and
+        // its worn armor did nothing. Copies of GamePlayer.CalculateArmorHitLocation / GetArmorFactorCap / GetArmorAF /
+        // GetArmorAbsorb.
+        public virtual eArmorSlot CalculateArmorHitLocation(AttackData ad)
+        {
+            if (ad?.Style != null && ad.Style.ArmorHitLocation != eArmorSlot.NOTSET)
+                return ad.Style.ArmorHitLocation;
+            int chance = Util.Random(1, 100);
+            if (chance <= 40) return eArmorSlot.TORSO;
+            if (chance <= 65) return eArmorSlot.LEGS;
+            if (chance <= 80) return eArmorSlot.ARMS;
+            if (chance <= 90) return eArmorSlot.HEAD;
+            if (chance <= 95) return eArmorSlot.HAND;
+            return eArmorSlot.FEET;
+        }
+
+        public int GetArmorFactorCap(eObjectType type, out int itemArmorFactorCap)
+        {
+            int modifiedCharacterLevel = Level;
+            if (RealmLevel > 39)
+                modifiedCharacterLevel++;
+            int playerArmorFactorCap = modifiedCharacterLevel * 2;
+            itemArmorFactorCap = type is eObjectType.Cloth ? modifiedCharacterLevel : playerArmorFactorCap;
+            return playerArmorFactorCap;
+        }
+
+        public override double GetArmorAF(eArmorSlot slot)
+        {
+            if (slot is eArmorSlot.NOTSET)
+                return 0;
+            DbInventoryItem item = Inventory?.GetItem((eInventorySlot)slot);
+            if (item == null || !GlobalConstants.IsArmor(item.Object_Type))
+                return 0;
+            int armorFactorCap = GetArmorFactorCap((eObjectType)item.Object_Type, out int itemArmorFactorCap);
+            double armorFactor = Math.Min(item.DPS_AF, itemArmorFactorCap);
+            armorFactor += BaseBuffBonusCategory[eProperty.ArmorFactor] / 5.0;
+            armorFactor *= item.Quality * 0.01 * item.ConditionPercent * 0.01;
+            armorFactor = Math.Min(armorFactor, armorFactorCap);
+            armorFactor += GetModified(eProperty.ArmorFactor) / 5.0;
+            return Math.Max(0, armorFactor);
+        }
+
+        public override double GetArmorAbsorb(eArmorSlot slot)
+        {
+            if (slot is eArmorSlot.NOTSET)
+                return 0;
+            DbInventoryItem item = Inventory?.GetItem((eInventorySlot)slot);
+            if (item == null)
+                return 0;
+            double absorb = item.SPD_ABS * 0.01 * (1 + GetModified(eProperty.ArmorAbsorption) * 0.01);
+            return Math.Clamp(absorb, 0, 1);
+        }
+
+        public double WeaponDamageWithoutQualityAndCondition(DbInventoryItem weapon)
+        {
+            if (weapon == null)
+                return 0;
+
+            double weaponDps = weapon.DPS_AF * 0.1;
+            double dpsCap = 1.2 + 0.3 * Level;
+            if (RealmLevel > 39)
+                dpsCap += 0.3;
+
+            double dps = Math.Min(weaponDps, dpsCap);
+            return dps * (1 + GetModified(eProperty.DPS) * 0.01);
+        }
+
+        public override int GetWeaponStat(DbInventoryItem weapon)
+        {
+            if (weapon != null)
+            {
+                switch ((eObjectType)weapon.Object_Type)
+                {
+                    case eObjectType.Staff:
+                    case eObjectType.Fired:
+                    case eObjectType.Longbow:
+                    case eObjectType.Crossbow:
+                    case eObjectType.CompositeBow:
+                    case eObjectType.RecurvedBow:
+                    case eObjectType.Thrown:
+                    case eObjectType.Shield:
+                        return GetModified(eProperty.Dexterity);
+
+                    case eObjectType.ThrustWeapon:
+                    case eObjectType.Piercing:
+                    case eObjectType.Spear:
+                    case eObjectType.Flexible:
+                    case eObjectType.HandToHand:
+                        return (GetModified(eProperty.Strength) + GetModified(eProperty.Dexterity)) >> 1;
+                }
+            }
+
+            return GetModified(eProperty.Strength);
+        }
+
+        public override double GetWeaponSkill(DbInventoryItem weapon)
+        {
+            if (weapon == null || CharacterClass == null)
+                return 0;
+
+            int classBaseWeaponSkill = (eInventorySlot)weapon.SlotPosition is eInventorySlot.DistanceWeapon
+                ? CharacterClass.WeaponSkillRangedBase
+                : CharacterClass.WeaponSkillBase;
+            double weaponSkill = Level * classBaseWeaponSkill / 200.0 *
+                                 (1 + 0.01 * GetWeaponStat(weapon) / 2) * Effectiveness;
+            return Math.Max(1, weaponSkill * GetModified(eProperty.WeaponSkill) * 0.01);
+        }
+
+        public override int WeaponSpecLevel(eObjectType objectType, int slotPosition)
+        {
+            if (objectType is eObjectType.LeftAxe && slotPosition is not Slot.LEFTHAND)
+                objectType = eObjectType.Axe;
+            else if (slotPosition is Slot.LEFTHAND && objectType is eObjectType.Axe)
+                objectType = eObjectType.LeftAxe;
+
+            string specName = SkillBase.ObjectTypeToSpec(objectType);
+            return string.IsNullOrWhiteSpace(specName) ? 0 : GetModifiedSpecLevel(specName);
+        }
+
+        public override int WeaponSpecLevel(DbInventoryItem weapon) =>
+            weapon == null ? 0 : WeaponSpecLevel((eObjectType)weapon.Object_Type, weapon.SlotPosition);
+
+        #endregion
+
+        #region IGamePlayer — XP / Realm Points
+
+        public object GameStaticItemOwnerComparand => DatabaseID > 0 ? $"offlinebot:{DatabaseID}" : this;
+
+        public TryPickUpResult TryAutoPickUpMoney(GameMoney money)
+        {
+            money.AssertLockAcquisition();
+            if (!IsAutonomousWorldBot || IsTemporaryGroupHelper || DatabaseID <= 0 ||
+                !AutonomousBotEconomy.AddMoney(DatabaseID, money.Value))
+                return TryPickUpResult.DoesNotWant;
+
+            money.RemoveFromWorld();
+            AutonomousStuckWatchdog.MarkProgress(this, eAutonomousProgressKind.Loot);
+            MarkAutonomousStateDirty();
+            return TryPickUpResult.Success;
+        }
+
+        private string _reportedLootRejection;
+
+        public TryPickUpResult TryAutoPickUpItem(WorldInventoryItem item)
+        {
+            item.AssertLockAcquisition();
+            if (!IsAutonomousWorldBot || IsTemporaryGroupHelper)
+                return TryPickUpResult.DoesNotWant;
+            if (Inventory == null)
+            {
+                ReportLootRejection(item, "missing_inventory");
+                return TryPickUpResult.DoesNotWant;
+            }
+
+            bool stored = item.Item.IsStackable
+                ? Inventory.AddTemplate(item.Item, item.Item.Count, eInventorySlot.FirstBackpack, eInventorySlot.LastBackpack)
+                : Inventory.AddItem(eInventorySlot.FirstEmptyBackpack, item.Item);
+            if (!stored)
+            {
+                ReportLootRejection(item, Inventory.FindFirstEmptySlot(eInventorySlot.FirstBackpack, eInventorySlot.LastBackpack) == eInventorySlot.Invalid
+                    ? "backpack_full" : "inventory_insert_failed");
+                return TryPickUpResult.Blocked;
+            }
+
+            item.RemoveFromWorld();
+            _reportedLootRejection = null;
+            AutonomousBotEconomy.MarkInventoryChanged(this);
+            // Queue owned loot for the existing asynchronous save before appraisal.
+            // This is not a synchronous commit; /spawn helpers never enter this path.
+            MarkAutonomousStateDirty();
+            AutonomousBotStatusPersistence.Queue(this, true);
+            bool equipped = false;
+            try
+            {
+                equipped = !item.Item.IsStackable && AutonomousBotEconomy.TryEquipOwnedUpgrade(this, item.Item, "loot");
+            }
+            catch (Exception exception)
+            {
+                // Receipt already succeeded. An appraisal failure must not make
+                // the drop available twice or prevent the owned item being saved.
+                const string appraisalFailure = "autonomous.telemetry.loot.appraisal_failed";
+                if (!TempProperties.GetProperty<bool>(appraisalFailure))
+                {
+                    TempProperties.SetProperty(appraisalFailure, true);
+                    if (log.IsErrorEnabled)
+                        log.Error($"AUTONOMOUS_LOOT_APPRAISAL_FAILED bot=\"{Name}\" id={DatabaseID} item=\"{item.Item.Name}\" retainedInInventory=true", exception);
+                }
+            }
+            AutonomousStuckWatchdog.MarkProgress(this, eAutonomousProgressKind.Loot);
+            const string firstLootTelemetry = "autonomous.telemetry.first.loot";
+            if (!TempProperties.GetProperty<bool>(firstLootTelemetry))
+            {
+                TempProperties.SetProperty(firstLootTelemetry, true);
+                if (log.IsInfoEnabled)
+                    log.Info($"AUTONOMOUS_FIRST_LOOT bot=\"{Name}\" id={DatabaseID} level={Level} " +
+                         $"item=\"{item.Item.Name}\" count={item.Item.Count} equipped={equipped}");
+            }
+            return TryPickUpResult.Success;
+        }
+
+        private void ReportLootRejection(WorldInventoryItem item, string reason)
+        {
+            // One line until the rejection changes or a later pickup succeeds.
+            // A full backpack remains full: never delete existing loot to make room.
+            if (_reportedLootRejection == reason)
+                return;
+            _reportedLootRejection = reason;
+            if (log.IsInfoEnabled)
+                log.Info($"AUTONOMOUS_LOOT_REJECTED bot=\"{Name}\" id={DatabaseID} level={Level} " +
+                     $"item=\"{item.Item.Name}\" reason={reason} dropRetained=true");
+        }
+
+        public TryPickUpResult TryPickUpMoney(GamePlayer source, GameMoney money) => TryPickUpResult.DoesNotWant;
+        public TryPickUpResult TryPickUpItem(GamePlayer source, WorldInventoryItem item) => TryPickUpResult.DoesNotWant;
+
+        public void AddXPGainer(GameObject xpGainer, float damageAmount)
+        {
+        }
+
+        public void GainRealmPoints(long amount, bool modify)
+        {
+            if (!IsAutonomousWorldBot || amount <= 0)
+                return;
+            AutonomousRealmPoints += amount;
+            RealmLevel = Math.Max(RealmLevel, AutonomousBotRealmPointRewards.RealmLevelFor(AutonomousRealmPoints));
+            AutonomousStuckWatchdog.MarkProgress(this, eAutonomousProgressKind.RealmPoints);
+            MarkAutonomousStateDirty();
+        }
+
+        public override void GainRealmPoints(long amount) => GainRealmPoints(amount, true);
+
+        public override void GainExperience(GainedExperienceEventArgs arguments, bool notify = true)
+        {
+            if (!IsAutonomousWorldBot || arguments == null || arguments.ExpTotal <= 0)
+                return;
+            if (Level >= MaxLevel)
+            {
+                // The cap discards the experience, but a kill that earned it is still proof the bot is working: a
+                // level-50 caster or pet class farming from one spot was "rescued" to its capital every fifteen
+                // minutes (241 of 268 such recoveries in run 2026-10-13 were level 50).
+                AutonomousStuckWatchdog.MarkProgress(this, eAutonomousProgressKind.Experience);
+                return;
+            }
+
+            long experienceGained = arguments.ExpTotal;
+            long baseExperience = arguments.ExpBase;
+            if (arguments.AllowMultiply)
+            {
+                experienceGained -= baseExperience;
+
+                if (ServerProperties.Properties.ENABLE_ZONE_BONUSES && CurrentZone != null)
+                {
+                    long zoneBonus = baseExperience * CurrentZone.BonusExperience / 100;
+                    if (zoneBonus > 0)
+                        experienceGained += ScaleAutonomousExperience(zoneBonus, false);
+                }
+
+                baseExperience = ScaleAutonomousExperience(baseExperience,
+                    CurrentRegion?.IsRvR == true || CurrentZone?.IsRvR == true);
+
+                long itemExperienceBonus = GetModified(eProperty.XpPoints);
+                if (itemExperienceBonus != 0)
+                    baseExperience += baseExperience * itemExperienceBonus / 100;
+
+                experienceGained += baseExperience;
+            }
+
+            // True 1.65 Mode: a hired companion never passes its player's level (owner 2026-10-31). At the player's level
+            // it fills its bar and waits there; once the player levels, its next experience levels it too.
+            if (HiredCompanions165.IsHired(this) && HiredCompanionLevelCap() is byte capLevel && Level >= capLevel)
+            {
+                long full = GamePlayer.GetExperienceAmountForLevel(capLevel) - 1;
+                experienceGained = Math.Min(experienceGained, Math.Max(0, full - Experience));
+                if (Level > capLevel)
+                    experienceGained = 0;
+            }
+
+            if (experienceGained <= 0)
+                return;
+
+            long previousExperience = Experience;
+            byte previousLevel = Level;
+            Experience += experienceGained;
+            AutonomousStuckWatchdog.MarkProgress(this, eAutonomousProgressKind.Experience);
+            bool leveled = false;
+            while (Level < MaxLevel && Experience >= GamePlayer.GetExperienceAmountForLevel(Level) &&
+                   !(HiredCompanions165.IsHired(this) && HiredCompanionLevelCap() is byte cap && Level >= cap))
+            {
+                Level++;
+                ApplyLevelStatGrowth(Level);
+                leveled = true;
+            }
+
+            if (leveled)
+            {
+                // New specialization points remain unspent until the bot chooses
+                // to reach and interact with its real class trainer.
+                RefreshSpecDependantSkills(false);
+                SetBotSpells();
+                SortStyles();
+                SortSpells();
+                Health = MaxHealth;
+                Mana = MaxMana;
+                Endurance = MaxEndurance;
+                AutonomousBotStatusPersistence.Queue(this, true);
+                LogCompanionSkills($"level {Level}");
+            }
+            else
+            {
+                MarkAutonomousStateDirty();
+                // XP is a real progression event, so coalesce it into the next
+                // status batch instead of waiting for a server-wide save.
+                AutonomousBotStatusPersistence.Queue(this);
+            }
+            if (previousExperience == 0 || previousLevel != Level)
+            {
+                log.Info($"AUTONOMOUS_XP_PROGRESS bot=\"{Name}\" id={DatabaseID} class=\"{ClassName}\" " +
+                         $"amount={experienceGained} xp={previousExperience}->{Experience} level={previousLevel}->{Level}");
+            }
+        }
+
+        private static long ScaleAutonomousExperience(long experience, bool isRvR)
+        {
+            double rate = Classic165Mode.BotXpRate;
+            if (isRvR)
+                rate *= ServerProperties.Properties.RvR_XP_RATE;
+            return (long)(experience * rate);
+        }
+
+        #endregion
+
+        #region IGamePlayer — Stealth
+
+        public override void Stealth(bool goStealth)
+        {
+            if (IsStealthed == goStealth)
+                return;
+
+            if (goStealth)
+            {
+                // A relic carrier cannot hide: the relic would fall at once (2026-10-30 livestream).
+                if (GameRelic.IsPlayerCarryingRelic(this))
+                    return;
+
+                // Songs and pulsing spells are mutually exclusive with stealth.
+                // Keep the same legality rule without using GamePlayer-only effects.
+                if (effectListComponent.ContainsEffectForEffectType(eEffect.Pulse))
+                    return;
+
+                if (IsOnHorse)
+                    IsOnHorse = false;
+
+                Flags |= eFlags.STEALTH;
+                OnMaxSpeedChange();
+                // Vanish from enemy players who cannot detect it (GamePlayer.CanDetect), as a stealthing player does.
+                foreach (GamePlayer viewer in GetPlayersInRadius(WorldMgr.VISIBILITY_DISTANCE))
+                    if (!viewer.CanDetect(this))
+                        viewer.Out.SendObjectRemove(this);
+                return;
+            }
+
+            Flags &= ~eFlags.STEALTH;
+            OnMaxSpeedChange();
+        }
+
+        public void StartStealthUncoverAction()
+        {
+        }
+
+        public void StopStealthUncoverAction()
+        {
+        }
+
+        #endregion
+
+        #region IGamePlayer — Pet Control
+
+        public void CommandNpcRelease()
+        {
+            ReleaseControlledPet(PetReleaseReason.Voluntary);
+        }
+
+        private enum PetReleaseReason { Voluntary, StableTravel, WorldRemoval }
+
+        private void ReleaseControlledPet(PetReleaseReason reason)
+        {
+            // AI maintenance and companion-level upgrades cannot recycle a
+            // living Necromancer servant. Required travel/world teardown is
+            // explicit so this guard cannot leak pets or trap a shade.
+            if (reason == PetReleaseReason.Voluntary && IsAlive &&
+                ObjectState == eObjectState.Active &&
+                ControlledBrain?.Body is NecromancerPet { IsAlive: true, ObjectState: eObjectState.Active })
+                return;
+
+            AutonomousPetSupport.CancelPendingCharm(this);
+            bool necromancerPetDied = false;
+            if (ControlledBrain != null)
+            {
+                var brain = ControlledBrain;
+                GameNPC petBody = brain.Body;
+                if (petBody is NecromancerPet servant)
+                    servant.BotReleaseReason = !servant.IsAlive ? "death" : reason.ToString();
+                necromancerPetDied = CharacterClass?.ID is (int)eCharacterClass.Necromancer or (int)eCharacterClass.Disciple &&
+                                      petBody != null && !petBody.IsAlive;
+                bool syntheticCharm = petBody?.TempProperties.GetProperty<bool>(AutonomousPetSupport.SyntheticCharmPetProperty) == true;
+                // Let the summon effect perform its normal release cleanup.
+                // This removes caster/pet effects and, for a Bonedancer
+                // commander, releases every sub-pet before deleting the body.
+                if (brain is ControlledMobBrain controlledBrain)
+                    controlledBrain.OnRelease();
+                else if (brain.Body != null && brain.Body != this)
+                    brain.Body.Delete();
+                if (ControlledBrain == brain)
+                    RemoveControlledBrain(brain);
+                if (syntheticCharm && petBody?.ObjectState is eObjectState.Active)
+                    petBody.Delete();
+            }
+            if (CharacterClass?.ID is (int)eCharacterClass.Necromancer or (int)eCharacterClass.Disciple && IsShade)
+            {
+                Shade(false);
+
+                // In classic 1.65 a Necromancer survives the loss of its
+                // zombie only barely. Match that failure state for autonomous
+                // and temporary bots, while leaving normal voluntary releases
+                // and stable-travel despawns untouched.
+                if (necromancerPetDied && IsAlive)
+                    Health = 1;
+            }
+        }
+
+        public override bool RemoveControlledBrain(IControlledBrain controlledBrain)
+        {
+            // PetECSGameEffect removes the controlled brain before deleting a
+            // dead summon. GameBot does not use GamePlayer's character-class
+            // callback, so without this hook a Necromancer bot could remain an
+            // invulnerable orphaned shade until a later AI maintenance pulse.
+            bool deadNecromancerPet = CharacterClass?.ID is (int)eCharacterClass.Necromancer or (int)eCharacterClass.Disciple &&
+                                      controlledBrain?.Body is NecromancerPet { IsAlive: false };
+
+            bool removed = base.RemoveControlledBrain(controlledBrain);
+            if (!removed || CharacterClass?.ID is not ((int)eCharacterClass.Necromancer or (int)eCharacterClass.Disciple))
+                return removed;
+
+            if (IsShade)
+                Shade(false);
+            if (deadNecromancerPet && IsAlive)
+                Health = 1;
+            return true;
+        }
+
+        #endregion
+
+        #region IGamePlayer — TargetInView
+
+        protected bool m_targetInView = true;
+
+        public override bool TargetInView
+        {
+            get
+            {
+                if (TargetObject != null && GetDistanceTo(TargetObject) <= TargetInViewAlwaysTrueMinRange)
+                    return true;
+                return m_targetInView;
+            }
+            set => m_targetInView = value;
+        }
+
+        public override int TargetInViewAlwaysTrueMinRange =>
+            (TargetObject is GamePlayer targetPlayer && targetPlayer.IsMoving) ? 100 : 64;
+
+        protected bool _groundTargetInView = true;
+
+        public override bool GroundTargetInView
+        {
+            get => _groundTargetInView;
+            set => _groundTargetInView = value;
+        }
+
+        #endregion
+
+        #region Combat Styles and Spell Lists
+
+        public new List<Style> StylesChain { get; protected set; }
+        public new List<Style> StylesDefensive { get; protected set; }
+        public new List<Style> StylesBack { get; protected set; }
+        public new List<Style> StylesSide { get; protected set; }
+        public new List<Style> StylesFront { get; protected set; }
+        public new List<Style> StylesAnytime { get; protected set; }
+        public List<Style> StylesTaunt { get; protected set; }
+        public List<Style> StylesDetaunt { get; protected set; }
+        public List<Style> StylesShield { get; protected set; }
+
+        public List<Spell> InstantCrowdControlSpells { get; set; }
+        public List<Spell> CrowdControlSpells { get; set; }
+        public List<Spell> BoltSpells { get; set; }
+
+        public bool CanUseSideStyles => StylesSide != null && StylesSide.Count > 0;
+        public bool CanUseBackStyles => StylesBack != null && StylesBack.Count > 0;
+        public bool CanUseFrontStyle => StylesFront != null && StylesFront.Count > 0;
+        public bool CanUseAnytimeStyles => StylesAnytime != null && StylesAnytime.Count > 0;
+        public bool CanUsePositionalStyles => CanUseSideStyles || CanUseBackStyles;
+        public bool CanCastCrowdControlSpells => CrowdControlSpells != null && CrowdControlSpells.Count > 0;
+        public bool CanCastBolts => BoltSpells != null && BoltSpells.Count > 0;
+
+        // Heal spell properties
+        public Spell HealBig { get; protected set; }
+        public Spell HealEfficient { get; protected set; }
+        public Spell HealGroup { get; protected set; }
+        public Spell HealInstant { get; protected set; }
+        public Spell HealInstantGroup { get; protected set; }
+        public Spell HealOverTime { get; protected set; }
+        public Spell HealOverTimeGroup { get; protected set; }
+        public Spell HealOverTimeInstant { get; protected set; }
+        public Spell HealOverTimeInstantGroup { get; protected set; }
+        public Spell CureMezz { get; protected set; }
+        public Spell CureDisease { get; protected set; }
+        public Spell CureDiseaseGroup { get; protected set; }
+        public Spell CurePoison { get; protected set; }
+        public Spell CurePoisonGroup { get; protected set; }
+        public Spell ResurrectionSpell { get; protected set; }
+
+        protected const int HEALTH_REGEN_PERIOD = 6000;
+
+        public static double HealAmount(Spell spell, GameLiving target)
+        {
+            return spell.Value >= 0
+                ? spell.Value
+                : target.MaxHealth * spell.Value * -0.01d;
+        }
+
+        public int PowerCost(Spell spell) => BotSpellPower.Cost(this, spell, null);
+
+        private Dictionary<int, SpellLine> _powerSpellLines = new();
+
+        // Combat still uses its existing dispatch line (no damage/spec behavior
+        // changes). Power alone resolves the learned line for staff focus. The
+        // cache is rebuilt with the spell list, not searched on every AI turn.
+        internal SpellLine ResolvePowerSpellLine(Spell spell, SpellLine supplied)
+        {
+            if (supplied != null && supplied.KeyName != GlobalSpellsLines.Mob_Spells)
+                return supplied;
+            return spell != null && _powerSpellLines != null && _powerSpellLines.TryGetValue(spell.ID, out SpellLine learned)
+                ? learned : supplied;
+        }
+
+        public override void SortSpells()
+        {
+            if (Spells.Count < 1)
+                return;
+
+            InstantHarmfulSpells?.Clear();
+            HarmfulSpells?.Clear();
+            InstantHealSpells?.Clear();
+            HealSpells?.Clear();
+            InstantCrowdControlSpells?.Clear();
+            CrowdControlSpells?.Clear();
+            BoltSpells?.Clear();
+            InstantMiscSpells?.Clear();
+            MiscSpells?.Clear();
+
+            HealBig = null;
+            HealEfficient = null;
+            HealGroup = null;
+            HealInstant = null;
+            HealInstantGroup = null;
+            HealOverTime = null;
+            HealOverTimeGroup = null;
+            HealOverTimeInstant = null;
+            HealOverTimeInstantGroup = null;
+            CureMezz = null;
+            CureDisease = null;
+            CureDiseaseGroup = null;
+            CurePoison = null;
+            CurePoisonGroup = null;
+            ResurrectionSpell = null;
+
+            foreach (Spell spell in Spells)
+            {
+                if (spell == null || AutonomousPetSupport.IsDisabledBotDamageShield(this, spell) ||
+                    !AnimistSingleTargetPolicy.AllowsAutomatedSpell(this, spell))
+                    continue;
+
+                if (spell.SpellType == eSpellType.Resurrect)
+                {
+                    if (ResurrectionSpell == null || spell.Level > ResurrectionSpell.Level ||
+                        spell.Level == ResurrectionSpell.Level && spell.ResurrectHealth > ResurrectionSpell.ResurrectHealth)
+                        ResurrectionSpell = spell;
+                }
+                else if (spell.SpellType == eSpellType.Bolt)
+                {
+                    BoltSpells ??= new List<Spell>(1);
+                    BoltSpells.Add(spell);
+                }
+                else if (spell.SpellType == eSpellType.Mesmerize ||
+                        (spell.SpellType == eSpellType.SpeedDecrease && spell.Value >= 99))
+                {
+                    CrowdControlSpells ??= new List<Spell>(1);
+                    CrowdControlSpells.Add(spell);
+                }
+                else if (spell.IsHarmful)
+                {
+                    if (spell.IsInstantCast)
+                    {
+                        InstantHarmfulSpells ??= new List<Spell>(1);
+                        InstantHarmfulSpells.Add(spell);
+                    }
+                    else
+                    {
+                        HarmfulSpells ??= new List<Spell>(1);
+                        HarmfulSpells.Add(spell);
+                    }
+                }
+                else if (spell.IsHealing && !spell.IsPulsing && !spell.IsConcentration)
+                {
+                    if (spell.Target == eSpellTarget.PET)
+                        continue;
+
+                    double valueNew = HealAmount(spell, this);
+
+                    if (spell.SpellType == eSpellType.CureMezz)
+                        CureMezz = spell;
+                    else if (spell.SpellType == eSpellType.CureDisease)
+                    {
+                        if ((spell.Target == eSpellTarget.GROUP || spell.Radius > 0)
+                            && (CureDiseaseGroup == null || spell.Duration > CureDiseaseGroup.Duration))
+                            CureDiseaseGroup = spell;
+                        else if (spell.Target == eSpellTarget.REALM && (CureDisease == null || spell.Duration > CureDisease.Duration))
+                            CureDisease = spell;
+                    }
+                    else if (spell.SpellType == eSpellType.CurePoison)
+                    {
+                        if ((spell.Target == eSpellTarget.GROUP || spell.Radius > 0)
+                            && (CurePoisonGroup == null || spell.Duration > CurePoisonGroup.Duration))
+                            CurePoisonGroup = spell;
+                        else if (spell.Target == eSpellTarget.REALM && (CurePoison == null || spell.Duration > CurePoison.Duration))
+                            CurePoison = spell;
+                    }
+                    else if (spell.IsInstantCast)
+                    {
+                        InstantHealSpells ??= new List<Spell>(1);
+                        InstantHealSpells.Add(spell);
+
+                        if (spell.SpellType == eSpellType.HealOverTime || spell.SpellType == eSpellType.HealthRegenBuff)
+                        {
+                            if (spell.Target == eSpellTarget.GROUP || spell.Radius > 0)
+                            {
+                                if (HealOverTimeInstantGroup == null)
+                                    HealOverTimeInstantGroup = spell;
+                                else
+                                {
+                                    double perSecondOld = HealOverTimeInstantGroup.SpellType == eSpellType.HealOverTime
+                                        ? HealAmount(HealOverTimeInstantGroup, this) / HealOverTimeInstantGroup.Frequency
+                                        : HealAmount(HealOverTimeInstantGroup, this) / HEALTH_REGEN_PERIOD / 2;
+                                    double perSecondNew = spell.SpellType == eSpellType.HealOverTime
+                                        ? valueNew / spell.Frequency
+                                        : valueNew / HEALTH_REGEN_PERIOD / 2;
+
+                                    if (perSecondNew > perSecondOld)
+                                        HealOverTimeInstantGroup = spell;
+                                }
+                            }
+                            else if (spell.Target == eSpellTarget.REALM)
+                            {
+                                if (HealOverTimeInstant == null)
+                                    HealOverTimeInstant = spell;
+                                else
+                                {
+                                    double perSecondOld = HealOverTimeInstant.SpellType == eSpellType.HealOverTime
+                                        ? HealAmount(HealOverTimeInstant, this) / HealOverTimeInstant.Frequency
+                                        : HealAmount(HealOverTimeInstant, this) / HEALTH_REGEN_PERIOD / 2;
+                                    double perSecondNew = spell.SpellType == eSpellType.HealOverTime
+                                        ? valueNew / spell.Frequency
+                                        : valueNew / HEALTH_REGEN_PERIOD / 2;
+
+                                    if (perSecondNew > perSecondOld)
+                                        HealOverTimeInstant = spell;
+                                }
+                            }
+                        }
+                        else if (spell.SpellType == eSpellType.Heal)
+                        {
+                            if (spell.Target == eSpellTarget.GROUP || spell.Radius > 0)
+                            {
+                                if (HealInstantGroup == null || valueNew > HealAmount(HealInstantGroup, this))
+                                    HealInstantGroup = spell;
+                            }
+                            else if (spell.Target == eSpellTarget.REALM)
+                            {
+                                if (HealInstant == null || valueNew > HealAmount(HealInstant, this))
+                                    HealInstant = spell;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        HealSpells ??= new List<Spell>(1);
+                        HealSpells.Add(spell);
+
+                        if (spell.SpellType == eSpellType.HealOverTime || spell.SpellType == eSpellType.HealthRegenBuff)
+                        {
+                            if (spell.Target == eSpellTarget.GROUP || spell.Radius > 0)
+                            {
+                                if (HealOverTimeGroup == null)
+                                    HealOverTimeGroup = spell;
+                                else
+                                {
+                                    double perSecondOld = HealOverTimeGroup.SpellType == eSpellType.HealOverTime
+                                        ? HealAmount(HealOverTimeGroup, this) / HealOverTimeGroup.Frequency
+                                        : HealAmount(HealOverTimeGroup, this) / HEALTH_REGEN_PERIOD / 2;
+                                    double perSecondNew = spell.SpellType == eSpellType.HealOverTime
+                                        ? valueNew / spell.Frequency
+                                        : valueNew / HEALTH_REGEN_PERIOD / 2;
+
+                                    if (perSecondNew > perSecondOld)
+                                        HealOverTimeGroup = spell;
+                                }
+                            }
+                            else if (spell.Target == eSpellTarget.REALM)
+                            {
+                                if (HealOverTime == null)
+                                    HealOverTime = spell;
+                                else
+                                {
+                                    double perSecondOld = HealOverTime.SpellType == eSpellType.HealOverTime
+                                        ? HealAmount(HealOverTime, this) / HealOverTime.Frequency
+                                        : HealAmount(HealOverTime, this) / HEALTH_REGEN_PERIOD / 2;
+                                    double perSecondNew = spell.SpellType == eSpellType.HealOverTime
+                                        ? valueNew / spell.Frequency
+                                        : valueNew / HEALTH_REGEN_PERIOD / 2;
+
+                                    if (perSecondNew > perSecondOld)
+                                        HealOverTime = spell;
+                                }
+                            }
+                        }
+                        else if (spell.SpellType == eSpellType.Heal)
+                        {
+                            if (spell.Target == eSpellTarget.GROUP || spell.Radius > 0)
+                            {
+                                if (HealGroup == null || valueNew / spell.CastTime > HealAmount(HealGroup, this) / HealGroup.CastTime)
+                                    HealGroup = spell;
+                            }
+                            else if (spell.Target == eSpellTarget.REALM)
+                            {
+                                if (HealEfficient == null)
+                                    HealEfficient = spell;
+                                else
+                                {
+                                    double perSecondNew = valueNew / spell.CastTime;
+                                    double perSecondEff = HealAmount(HealEfficient, this) / HealEfficient.CastTime;
+                                    double perSecondBig = HealBig == null ? 0.0 : HealAmount(HealBig, this) / HealBig.CastTime;
+
+                                    double effNew = valueNew / PowerCost(spell) + 0.25;
+                                    double effOld = HealAmount(HealEfficient, this) / PowerCost(HealEfficient);
+
+                                    if (effNew > effOld)
+                                    {
+                                        if (perSecondEff > perSecondNew && perSecondEff > perSecondBig)
+                                            HealBig = HealEfficient;
+
+                                        HealEfficient = spell;
+                                    }
+                                    else if (perSecondNew > perSecondEff && perSecondNew > perSecondBig)
+                                        HealBig = spell;
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    if (spell.IsInstantCast && spell.SpellType != eSpellType.SpeedEnhancement)
+                    {
+                        InstantMiscSpells ??= new List<Spell>(1);
+                        InstantMiscSpells.Add(spell);
+                    }
+                    else
+                    {
+                        MiscSpells ??= new List<Spell>(1);
+                        MiscSpells.Add(spell);
+                    }
+                }
+            }
+        }
+
+        public override void SortStyles()
+        {
+            StylesChain?.Clear();
+            StylesDefensive?.Clear();
+            StylesBack?.Clear();
+            StylesSide?.Clear();
+            StylesFront?.Clear();
+            StylesAnytime?.Clear();
+            StylesTaunt?.Clear();
+            StylesDetaunt?.Clear();
+            StylesShield?.Clear();
+
+            if (Styles == null)
+                return;
+
+            foreach (Style s in Styles)
+            {
+                if (s == null)
+                    continue;
+
+                if (s.WeaponTypeRequirement != (int)eObjectType.Shield ||
+                    s.WeaponTypeRequirement == (int)eObjectType.Shield && s.OpeningRequirementType == Style.eOpening.Defensive)
+                {
+                    switch (s.OpeningRequirementType)
+                    {
+                        case Style.eOpening.Defensive:
+                            StylesDefensive ??= new List<Style>(1);
+                            StylesDefensive.Add(s);
+                            break;
+
+                        case Style.eOpening.Positional:
+                            switch ((Style.eOpeningPosition)s.OpeningRequirementValue)
+                            {
+                                case Style.eOpeningPosition.Back:
+                                    StylesBack ??= new List<Style>(1);
+                                    StylesBack.Add(s);
+                                    break;
+
+                                case Style.eOpeningPosition.Side:
+                                    StylesSide ??= new List<Style>(1);
+                                    StylesSide.Add(s);
+                                    break;
+
+                                case Style.eOpeningPosition.Front:
+                                    StylesFront ??= new List<Style>(1);
+                                    StylesFront.Add(s);
+                                    break;
+                            }
+                            break;
+
+                        default:
+                            if (s.OpeningRequirementValue > 0)
+                            {
+                                StylesChain ??= new List<Style>(1);
+                                StylesChain.Add(s);
+                            }
+                            else
+                            {
+                                bool added = false;
+
+                                if (s.Procs.Count > 0)
+                                {
+                                    foreach (StyleProcInfo proc in s.Procs)
+                                    {
+                                        if (proc.Spell.SpellType == eSpellType.StyleTaunt)
+                                        {
+                                            if (proc.Spell.ID == 20000)
+                                            {
+                                                StylesTaunt ??= new List<Style>(1);
+                                                StylesTaunt.Add(s);
+                                                added = true;
+                                            }
+                                            else if (proc.Spell.ID == 20001)
+                                            {
+                                                StylesDetaunt ??= new List<Style>(1);
+                                                StylesDetaunt.Add(s);
+                                                added = true;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                if (!added)
+                                {
+                                    StylesAnytime ??= new List<Style>(1);
+                                    StylesAnytime.Add(s);
+                                }
+                            }
+                            break;
+                    }
+                }
+                else
+                {
+                    StylesShield ??= new List<Style>(1);
+                    StylesShield.Add(s);
+                }
+            }
+        }
+
+        #endregion
+
+        #region Constructor
+
+        public GameBot(
+            GamePlayer owner,
+            byte classId,
+            string name = null,
+            byte raceId = 0,
+            byte genderId = 0,
+            bool temporaryGroupHelper = false,
+            byte equipmentLevel = 0,
+            byte botLevel = 0,
+            BotSpec chosenSpec = null)
+        {
+            Owner = owner ?? throw new ArgumentNullException(nameof(owner));
+            IsTemporaryGroupHelper = temporaryGroupHelper;
+            ClassId = classId;
+            RaceId = raceId;
+            GenderId = genderId;
+            ClassName = BotManager.GetClassNameById(classId);
+            InternalID = Guid.NewGuid().ToString();
+            _dummyClient = new BotDummyClient();
+            _dummyLib = new BotDummyPacketLib();
+
+            // Set class identity first — needed for stat init and specs
+            if (!SetCharacterClass(ClassId))
+                throw new InvalidOperationException($"Failed to set character class for class ID {ClassId}. Ensure the class ID is valid.");
+            SetRaceAndRealm(owner);
+            Level = BotAttributeProgression.InitialLevel(owner.Level, botLevel, IsTemporaryGroupHelper);
+            _creationModel = Model;
+
+            Name = string.IsNullOrEmpty(name) ? $"{owner.Name}'s {ClassName} Bot" : name;
+            MaxSpeedBase = PLAYER_BASE_SPEED;
+
+            // Stat and spec initialization — order matters
+            InitializeBotStats();
+            eCharacterClass temporaryClass = (eCharacterClass)ClassId;
+            // /spawn <class> <spec> picks one of the class's existing builds (TemporaryGroupSpecCatalog); otherwise random.
+            BotSpec = chosenSpec ?? (temporaryClass == eCharacterClass.Bonedancer
+                ? new BonedancerBotSpec(BotSpec.ChooseRandomSpecialization(temporaryClass), 0, false)
+                : temporaryClass == eCharacterClass.Sluaghbinder
+                    ? new SluaghbinderBotSpec(BotSpec.ChooseRandomSpecialization(temporaryClass), 0, false)
+                : BotSpec.GetSpec(temporaryClass, BotSpec.ChooseRandomSpecialization(temporaryClass)));
+            LoadClassSpecializations(false);
+            SpendSpecPoints(Level, 0);
+            RefreshSpecDependantSkills(false);
+            SetBotSpells();
+            SortStyles();
+            SortSpells();
+            EquipBot(equipmentLevel);
+
+            Health = MaxHealth;
+            Endurance = MaxEndurance;
+            Mana = MaxMana;
+
+            RespawnInterval = -1;
+
+            // Set up BotBrain — replaces old BotAI system
+            var brain = temporaryClass == eCharacterClass.Sluaghbinder
+                ? new DOL.AI.Brain.SluaghbinderBotBrain()
+                : new DOL.AI.Brain.BotBrain();
+            brain.IsHealer = IsHealerClass();
+            SetOwnBrain(brain);
+
+            // ControlledBrain is reserved for an actual class pet. The bot's own
+            // combat AI belongs in Brain via SetOwnBrain.
+            InitControlledBrainArray(1);
+
+            GameEventMgr.AddHandler(Owner, GamePlayerEvent.Quit, new DOLEventHandler(OnOwnerQuit));
+            if (IsTemporaryGroupHelper)
+                GameEventMgr.AddHandler(Owner, GamePlayerEvent.RegionChanged, new DOLEventHandler(OnOwnerRegionChanged));
+        }
+
+        /// <summary>
+        /// Loads an ownerless autonomous character from its persistent record.
+        /// No generated equipment and no field auto-training are allowed here.
+        /// </summary>
+        public GameBot(OfflineWorldBotRecord record) : this(record, null)
+        {
+        }
+
+        public GameBot(OfflineWorldBotRecord record, System.Collections.IList preparedInventory)
+        {
+            PersistentRecord = record ?? throw new ArgumentNullException(nameof(record));
+            AutonomousBotGoalPolicy.ReconcileSavedAssignment(record);
+            // Autonomous Group instances are process-local and are rebuilt
+            // after every server start. Never expose a former process's leader,
+            // roster, or absolute meetup deadline while this actor is loading.
+            if (record.ItineraryJson?.StartsWith(AutonomousBotGroupCoordinator.MetadataPrefix,
+                    StringComparison.Ordinal) == true)
+            {
+                record.ItineraryJson = string.Empty;
+                record.Dirty = true;
+            }
+            IsAutonomousWorldBot = true;
+            DatabaseID = record.BotId;
+            InternalID = AutonomousBotEconomy.GetOwnerId(record.BotId);
+            ClassId = (byte)record.ClassId;
+            RaceId = (byte)record.RaceId;
+            GenderId = (byte)record.Gender;
+            ClassName = string.IsNullOrWhiteSpace(record.ClassName) ? BotManager.GetClassNameById(ClassId) : record.ClassName;
+            _dummyClient = new BotDummyClient();
+            _dummyLib = new BotDummyPacketLib();
+            if (!SetCharacterClass(ClassId))
+                throw new InvalidOperationException($"Failed to load autonomous class ID {ClassId} for {record.Name}.");
+            SetRaceAndRealm(null);
+            Level = (byte)Math.Clamp(record.Level, 1, MaxLevel);
+            _creationModel = Model;
+            if ((eRealm)record.Realm != eRealm.None)
+                Realm = (eRealm)record.Realm;
+            Name = record.Name;
+            MaxSpeedBase = PLAYER_BASE_SPEED;
+
+            InitializeBotStats();
+            // True 1.65 Mode: a base-class bot follows its planned class's spec plan, weapons and role (BaseClassBots165).
+            eCharacterClass persistentClass = BaseClassBots165.SpecClass(record);
+            BotSpec = persistentClass switch
+            {
+                eCharacterClass.Bonedancer => new BonedancerBotSpec(
+                    BotSpec.ChoosePersistentSpecialization(persistentClass, record.BotId), record.BotId, true),
+                eCharacterClass.Savage => new SavageBotSpec(
+                    BotSpec.ChoosePersistentSpecialization(persistentClass, record.BotId),
+                    SavageBotSpec.WeaponFromPersistedSpecs(record.SerializedSpecs)),
+                eCharacterClass.Sluaghbinder => new SluaghbinderBotSpec(
+                    BotSpec.ChoosePersistentSpecialization(persistentClass, record.BotId), record.BotId, true),
+                _ => BotSpec.GetSpec(persistentClass,
+                    BotSpec.ChoosePersistentSpecialization(persistentClass, record.BotId)),
+            };
+            LoadClassSpecializations(false);
+            LoadPersistedSpecs(record.SerializedSpecs);
+            bool buildLocked = BotLifetimeBuild.Restore(BotSpec, record.SerializedBuildPlan);
+            if (!buildLocked)
+                BotLifetimeBuild.AlignWithInvestedWeapons(BotSpec, GetBaseSpecLevel);
+            // A saved build can predate the Savage's trained weapon line. Its
+            // old weapon field must not override the specialization restored
+            // from the character record.
+            bool savagePlanCorrected = persistentClass == eCharacterClass.Savage &&
+                SavageBotSpec.AlignWithPersistedSpecs(BotSpec, record.SerializedSpecs);
+            if (!buildLocked || savagePlanCorrected)
+            {
+                record.SerializedBuildPlan = BotLifetimeBuild.Encode(BotSpec);
+                MarkAutonomousStateDirty();
+            }
+            m_leftOverSpecPoints = Math.Max(0, record.UnspentSpecPoints);
+            _lastAutonomousTrainedLevel = ParseLastTrainedLevel(record.SerializedAbilities, Level, record.SerializedSpecs);
+            RefreshSpecDependantSkills(false);
+            SetBotSpells();
+            SortStyles();
+            SortSpells();
+
+            Inventory = new BotInventory(InternalID);
+            if (preparedInventory == null)
+                Inventory.LoadFromDatabase(InternalID);
+            else
+                Inventory.LoadInventory(InternalID, preparedInventory);
+            bool starterWeaponAdded = EnsureAutonomousStarterWeapon();
+            starterWeaponAdded |= BotRangedCombat.EnsureStarter(this);
+            starterWeaponAdded |= BotStarterInstruments.Ensure(this);
+            RefreshItemBonuses();
+            if (starterWeaponAdded || !buildLocked)
+                AutonomousBotStatusPersistence.Queue(this, starterWeaponAdded);
+            Experience = Math.Max(0, record.Experience);
+            AutonomousRealmPoints = Math.Max(0, record.RealmPoints);
+            RealmLevel = AutonomousBotRealmPointRewards.RealmLevelFor(AutonomousRealmPoints);
+            AutonomousBotRealmAbilities.Restore(this, ParseTrainedRealmPoints(record.SerializedAbilities));
+            // At most one death's loss (3) is ever owed (owner 2026-10-31 cap, DeathPenalty165.OnDeath); older saves that
+            // stacked more before the cap come back at 3.
+            TotalConstitutionLostAtDeath = Math.Min(3, ParseSerializedNumber(record.SerializedAbilities, "con-lost"));
+            CurrentRegionID = (ushort)Math.Clamp(record.RegionId, 0, ushort.MaxValue);
+            X = record.X;
+            Y = record.Y;
+            Z = record.Z;
+            Health = Math.Clamp(record.Health, 1, MaxHealth);
+            Mana = Math.Clamp(record.Mana, 0, MaxMana);
+            Endurance = Math.Clamp(record.Endurance, 0, MaxEndurance);
+            RespawnInterval = -1;
+
+            var brain = persistentClass == eCharacterClass.Sluaghbinder
+                ? new DOL.AI.Brain.SluaghbinderBotBrain { IsHealer = IsHealerClass() }
+                : new DOL.AI.Brain.BotBrain { IsHealer = IsHealerClass() };
+            SetOwnBrain(brain);
+            InitControlledBrainArray(1);
+        }
+
+        private bool IsHealerClass()
+        {
+            return CharacterClass != null && BotPartyRoles.IsHealingClass((eCharacterClass)CharacterClass.ID);
+        }
+
+        #endregion
+
+        #region Bot Management
+
+        private void OnOwnerQuit(DOLEvent e, object sender, EventArgs arguments)
+        {
+            if (IsTemporaryGroupHelper)
+                Delete();
+            else
+                BotManager.RemoveBot(this);
+        }
+
+        private void OnOwnerRegionChanged(DOLEvent e, object sender, EventArgs arguments)
+        {
+            if (IsTemporaryGroupHelper && sender is GamePlayer player)
+                TemporaryGroupStableTravel.RelocateHelpersAfterPlayerTransfer(player);
+        }
+
+        public bool EnterPlayerLedGroup(GamePlayer leader)
+        {
+            if (leader == null || leader.Realm != Realm)
+                return false;
+
+            PlayerGroupLeader = leader;
+            if (Brain is BotBrain brain)
+            {
+                brain.RebindAssistedPlayer();
+                brain.FSM.SetCurrentState(eFSMStateType.FOLLOW);
+            }
+            return true;
+        }
+
+        public void LeavePlayerLedGroup()
+        {
+            if (IsTemporaryGroupHelper)
+                CompleteStableMasterRoute();
+            PlayerGroupLeader = null;
+            if (Brain is BotBrain brain)
+                brain.RebindAssistedPlayer();
+            HiredCompanions165.OnLeftPlayerGroup(this);   // a hired companion goes back to the inn, it doesn't roam
+        }
+
+        private bool _recoveryRestLocked;
+        private long _autonomousRecoveryStartTick;
+
+        internal long AutonomousRecoveryStartTick => _autonomousRecoveryStartTick;
+
+        /// <summary>
+        /// Temporary companions expose their general recovery lock to the
+        /// player-led coordination layer. The underlying recovery state is also
+        /// used by autonomous playerbots and never changes actor presentation.
+        /// </summary>
+        public bool IsTemporaryCompanionRestLocked =>
+            IsTemporaryGroupHelper && _recoveryRestLocked;
+
+        public bool BeginRecoveryRest()
+        {
+            if (!IsAlive || IsOnStableMasterRoute)
+                return false;
+
+            if (_recoveryRestLocked)
+            {
+                // 1.65 Mode: stood up for a song while resting: sits back down once it's done
+                if (Classic165Mode.IsOn && !_seatedForClients && !IsCasting && !IsMoving && !InCombat)
+                    SetSeatedForClients(true);
+                return true;
+            }
+
+            // Harmless mobile songs are allowed to continue during logical
+            // recovery. Ordinary casts are cancelled so recovery still owns
+            // movement and combat activity.
+            if ((IsCasting || castingComponent?.HasPendingSkillRequests == true) &&
+                !BotSongTwistPolicy.HasMobileSongCast(this))
+                StopCurrentSpellcast();
+            if (IsAttacking)
+                StopAttack();
+            StopFollowing();
+            StopMovingOnPath();
+            StopMoving();
+            _recoveryRestLocked = true;
+            if (Classic165Mode.IsOn && IsAutonomousWorldBot && log.IsInfoEnabled)
+                log.Info($"BOT_REST_BEGIN bot={Name} level={Level} hp={HealthPercent}% power={ManaPercent}% endurance={EndurancePercent}%");
+            // Normal mode: GameBots remain standing NPC actors (no IsSitting, emote or client-facing stance).
+            // True 1.65 Mode: they sit down for the rest, visibly (SetSeatedForClients).
+            if (Classic165Mode.IsOn)
+                SetSeatedForClients(true);
+            UpdateHealthManaEndu();
+            StartEnhancedRecoveryTimers();
+            return true;
+        }
+
+        public bool BeginTemporaryCompanionRest()
+        {
+            return IsTemporaryGroupHelper && BeginRecoveryRest();
+        }
+
+        public void WakeTemporaryCompanionRest()
+        {
+            if (IsTemporaryGroupHelper)
+                WakeRecoveryRest();
+        }
+
+        /// <summary>True 1.65 Mode: right-clicking your own hired companion opens the recruit screen on its row.</summary>
+        public override bool Interact(GamePlayer player)
+        {
+            if (Classic165Mode.IsOn && player != null && HiredCompanions165.IsHired(this) &&
+                HiredCompanions165.RosterOf(player).FirstOrDefault(h => h.BotId == DatabaseID) is { } hired)
+            {
+                if (!IsWithinRadius(player, WorldMgr.VISIBILITY_DISTANCE))
+                    return false;
+                Hire165.OpenForCompanion(player, hired.Row);
+                return true;
+            }
+            return base.Interact(player);
+        }
+
+        /// <summary>True 1.65 Mode: an item dragged onto your hired companion is put on (CanWear decides the slot), or goes
+        /// into its 10-slot bag when it can't wear it.</summary>
+        public override bool ReceiveItem(GameLiving source, DbInventoryItem item)
+        {
+            if (source is GamePlayer player && item != null && HiredCompanions165.IsHired(this) &&
+                HiredCompanions165.RosterOf(player).Any(h => h.BotId == DatabaseID) &&
+                item.SlotPosition is >= (int)eInventorySlot.FirstBackpack and <= (int)eInventorySlot.LastBackpack)
+            {
+                bool wears = AutonomousBotEconomy.CanWear(this, item, out _);
+                string problem = CompanionWindows165.Equip(player, this, item.SlotPosition);
+                player.Out.SendMessage(problem ?? (wears ? $"{Name} puts on {item.Name}." : $"{Name} puts {item.Name} in their bag."),
+                    eChatType.CT_System, eChatLoc.CL_SystemWindow);
+                return problem == null;
+            }
+            return base.ReceiveItem(source, item);
+        }
+
+        public void WakeRecoveryRest()
+        {
+            // True 1.65 Mode: say what stood a resting gamebot up, and how rested it was (owner 2026-10-31).
+            if (_recoveryRestLocked && Classic165Mode.IsOn && IsAutonomousWorldBot && log.IsInfoEnabled)
+                log.Info($"BOT_REST_WAKE bot={Name} level={Level} hp={HealthPercent}% power={ManaPercent}% endurance={EndurancePercent}% " +
+                         $"by={new System.Diagnostics.StackFrame(1).GetMethod()?.DeclaringType?.Name}.{new System.Diagnostics.StackFrame(1).GetMethod()?.Name}");
+            _recoveryRestLocked = false;
+            SetSeatedForClients(false);     // stands up before it moves, casts or fights (0xF1)
+        }
+
+        /// <summary>
+        /// Clears logical recovery as soon as this bot, its controlled pets, or
+        /// a nearby member of its actual group enters combat. Support-only bots
+        /// therefore heal and buff normally instead of retaining fast recovery
+        /// while their party fights.
+        /// </summary>
+        public bool WakeRecoveryRestIfCombatBlocked()
+        {
+            if (!IsRecoveryResting || !BotRestRecovery.BlocksRest(this))
+                return false;
+            WakeRecoveryRest();
+            return true;
+        }
+
+        // Wake only when an actual affordable spell is requested, not during
+        // spell selection. Mobile song maintenance remains compatible with
+        // out-of-combat logical recovery.
+        public override bool CastSpell(Spell spell, SpellLine line, ISpellCastingAbilityHandler spellCastingAbilityHandler = null, bool checkLos = true)
+        {
+            if (CompanionFollowPolicy.DeferBuff(this, spell)) { LogCompanionCast165(spell, "waiting-for-player-to-stop"); return false; }
+            // A cast reveals the caster: a companion hidden with its player casts only heals until a fight starts.
+            if (spell?.IsHealing != true && CompanionStealth.SuppressesCasting(this)) { LogCompanionCast165(spell, "hidden"); return false; }
+            if (AutonomousGroupFormationFollow.DeferBuff(this, spell)) { LogCompanionCast165(spell, "formation"); return false; }
+            // Final boundary as well as selection filtering: no rank of the
+            // disabled shield can keep a Cabalist/Enchanter bot channeling.
+            // The pet focus shield is cast only by its own decision (BotBrain.TryStartPetFocusShield), never by upkeep.
+            bool approvedPetShield = PetFocusShieldApproved && BotPetFocusShieldPolicy.IsPetFocusShield(spell);
+            if (AutonomousPetSupport.IsDisabledBotDamageShield(this, spell) && !approvedPetShield ||
+                BotSpellPower.BlocksAttackerRotation(this, spell) ||
+                !AnimistSingleTargetPolicy.AllowsAutomatedSpell(this, spell) ||
+                !BotAnimistPolicy.MayPlant(this, spell))
+            {
+                CabalistRestDiagnostics.Attempt(this, spell, false);
+                return false;
+            }
+
+            if (spell == null || !CanAffordConcentration(spell) || Mana < BotSpellPower.Cost(this, spell, line) ||
+                castingComponent.HasPendingSkillRequests ||
+                BotSpellPower.IsOffensiveCaster(this) && castingComponent.IsCasting && !castingComponent.IsFocusChanneling)
+            {
+                LogCompanionCast165(spell, !CanAffordConcentration(spell) ? "no-concentration" : "power-or-busy");
+                CabalistRestDiagnostics.Attempt(this, spell, false);
+                return false;
+            }
+
+            // Song maintenance may continue while recovering and must not wake
+            // a resting companion. A real, otherwise-valid buff, pet summon, or
+            // combat cast is an intentional action and wakes it exactly once.
+            if (IsTemporaryCompanionRestLocked)
+            {
+                if (!BotSongTwistPolicy.IsMobileSong(this, spell))
+                {
+                    (Brain as BotBrain)?.MarkTemporaryCompanionRestActivity();
+                    WakeTemporaryCompanionRest();
+                }
+            }
+            else if (IsTemporaryGroupHelper && !BotSongTwistPolicy.IsMobileSong(this, spell))
+                (Brain as BotBrain)?.MarkTemporaryCompanionRestActivity();
+
+            // Quickcast is explicitly disabled for all bot kinds. Clear a
+            // lingering externally applied effect without changing human casts.
+            EffectListService.GetAbilityEffectOnTarget(this, eEffect.QuickCast)?.End();
+
+            if (IsRecoveryResting && !IsTemporaryGroupHelper &&
+                !BotSongTwistPolicy.IsMobileSong(this, spell))
+                WakeRecoveryRest();
+            // 1.65 Mode: a seated bot stands to cast, as a player does (a song keeps the rest; it sits again after)
+            if (_seatedForClients)
+                SetSeatedForClients(false);
+            bool started = base.CastSpell(spell, line, spellCastingAbilityHandler, checkLos);
+            LogCompanionCast165(spell, started ? "cast" : "refused");
+            CabalistRestDiagnostics.Attempt(this, spell, started);
+            if (started && CharacterClass?.ID == (int)eCharacterClass.Animist)
+                AnimistSingleTargetPolicy.CastOwnerSpell(this, spell);
+            return started;
+        }
+
+        public override bool CastSpell(Spell spell, SpellLine line, bool checkLos)
+        {
+            return CastSpell(spell, line, null, checkLos);
+        }
+
+        public override void StartAttack(GameObject target)
+        {
+            // Verified damage/group-threat paths clear the lock before asking
+            // the bot to attack. Reject stale AI/pet work that arrives while a
+            // parked party is still recovering.
+            if (target != null && IsRecoveryResting)
+                return;
+
+            // A ranged shot owns its aim/release animation.  Reissuing the
+            // same target every think pulse used to reset that state, producing
+            // repeated bow preparation with no completed shot.  Suppress only
+            // duplicate GameBot requests while a real ranged action is active;
+            // a new target or a completed/cleared state still starts normally.
+            if (target != null && ActiveWeaponSlot == eActiveWeaponSlot.Distance &&
+                attackComponent.AttackState &&
+                rangeAttackComponent.RangedAttackState != eRangedAttackState.None &&
+                (TargetObject == target || rangeAttackComponent.AutoFireTarget == target))
+                return;
+
+            base.StartAttack(target);
+        }
+
+        public override bool AddToWorld()
+        {
+            // The guild name under the bot: its own guild (gamebot) or its owner's (/spawn companion), set before it
+            // appears so no extra update is sent (AutonomousBotGuilds).
+            GuildName = AutonomousBotGuilds.GuildNameFor(this);
+            if (!base.AddToWorld())
+                return false;
+
+            RandomNumberDeck = new PlayerDeck();
+            // An intentional MoveTo keeps both registrations alive across the
+            // brief remove/add cycle. Re-registering here reset watchdog clocks
+            // and dirtied the persistent record on every region transition.
+            if (IsAutonomousWorldBot && !IsIntentionalWorldMove)
+            {
+                if (_autonomousRecoveryStartTick <= 0)
+                    _autonomousRecoveryStartTick = GameLoop.GameLoopTime;
+                AutonomousBotRegistry.Register(this);
+                AutonomousStuckWatchdog.Register(this);
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Generic NPC movement temporarily removes and re-adds the object.
+        /// Keep an autonomous character registered as online across that
+        /// intentional transfer so population state and watchdog clocks survive.
+        /// The ordinary RemoveFromWorld pet release is retained, allowing the
+        /// pet manager to re-summon a legal pet in the destination region.
+        /// </summary>
+        private int _corpseReleaseMove;
+
+        /// <summary>The release's own corpse move (the bot is raised right after): the one move a dead bot may make.</summary>
+        private bool MoveCorpseForRelease(ushort regionID, int x, int y, int z, ushort heading)
+        {
+            _corpseReleaseMove++;
+            try { return MoveTo(regionID, x, y, z, heading); }
+            finally { _corpseReleaseMove--; }
+        }
+
+        /// <summary>
+        /// A body stays where it fell until it is raised or released (owner 2026-10-30: a companion killed outside the
+        /// Midgard inn showed up dead beside the innkeeper 6 seconds later, by an in-region teleport). Any other move of a
+        /// dead bot is refused and logged with its caller.
+        /// </summary>
+        private bool RefuseCorpseMove(string kind, ushort regionID, int x, int y, int z)
+        {
+            if (Health > 0 || ObjectState != eObjectState.Active || _corpseReleaseMove > 0)
+                return false;
+            log.Warn($"BOT_CORPSE_MOVE_REFUSED {kind} bot=\"{Name}\" id={DatabaseID} from={CurrentRegionID}:{X},{Y},{Z} " +
+                     $"to={regionID}:{x},{y},{z}{Environment.NewLine}{Environment.StackTrace}");
+            return true;
+        }
+
+        public override bool MoveInRegion(ushort regionID, int x, int y, int z, ushort heading, bool forceMove)
+        {
+            if (RefuseCorpseMove("MoveInRegion", regionID, x, y, z))
+                return false;
+            return base.MoveInRegion(regionID, x, y, z, heading, forceMove);
+        }
+
+        public override bool MoveTo(ushort regionID, int x, int y, int z, ushort heading)
+        {
+            if (RefuseCorpseMove("MoveTo", regionID, x, y, z))
+                return false;
+            SetSeatedForClients(false);     // 1.65 Mode: never arrives seated (the client forgets the state anyway)
+            // Owner 2026-10-07: travelling the old frontiers, the pets of the player's /spawn and /raid companions died
+            // on every move (the move removes the bot from the world, which released its pet) and their pet classes kept
+            // re-summoning. Within a region a companion's pet now comes along and is placed behind it, as a player's pet
+            // is on a teleport (GamePlayer.MoveTo). Across regions pets are released as for players. Gamebots unchanged.
+            GameNPC carriedPet = IsPlayerCompanion && regionID == CurrentRegionID && ControlledBrain?.Body is { IsAlive: true } body &&
+                body.ObjectState == eObjectState.Active ? body : null;
+            if (carriedPet == null)
+                return MoveToCore(regionID, x, y, z, heading);
+            _keepPetThroughMove++;
+            bool result;
+            try { result = MoveToCore(regionID, x, y, z, heading); }
+            finally { _keepPetThroughMove--; }
+            if (result && ControlledBrain?.Body == carriedPet && carriedPet.IsAlive && carriedPet.ObjectState == eObjectState.Active &&
+                carriedPet.MaxSpeedBase > 0)
+            {
+                Point2D behind = GetPointFromHeading(Heading, 64);
+                carriedPet.MoveInRegion(CurrentRegionID, behind.X, behind.Y, Z + 10, (ushort)((Heading + 2048) % 4096), false);
+            }
+            return result;
+        }
+
+        private int _keepPetThroughMove;
+
+        private bool MoveToCore(ushort regionID, int x, int y, int z, ushort heading)
+        {
+            if (!IsAutonomousWorldBot)
+                return base.MoveTo(regionID, x, y, z, heading);
+
+            if (regionID != CurrentRegionID)
+            {
+                AutonomousPetSupport.CancelPendingCharm(this);
+                AutonomousPetSupport.ReleaseFieldTurrets(this);
+            }
+
+            bool moved = false;
+            BeginIntentionalWorldMove();
+            try
+            {
+                moved = base.MoveTo(regionID, x, y, z, heading);
+                return moved;
+            }
+            finally
+            {
+                bool outermostMove = EndIntentionalWorldMove();
+
+                // GameObject.MoveTo removes the actor before AddToWorld tries
+                // the destination.  If that final add fails, the ordinary
+                // removal callback was intentionally suppressed and the old
+                // registry entry would otherwise remain forever: the launcher
+                // showed an "Offline" bot as online, the objective timer kept
+                // advancing, and the population controller could not reload it.
+                // A rejected move which leaves the actor active is harmless and
+                // stays in-world for the caller to replan.
+                if (outermostMove && ObjectState != eObjectState.Active)
+                {
+                    AutonomousStuckWatchdog.Unregister(this);
+                    AutonomousBotRegistry.Unregister(this);
+                    if (PersistentRecord != null)
+                    {
+                        PersistentRecord.IsOnline = false;
+                        PersistentRecord.Activity = "Queued after a failed world transfer";
+                        PersistentRecord.ObjectiveProgress =
+                            $"Region transfer to {regionID} was rejected after world removal; waiting for a clean reload";
+                        PersistentRecord.LastUpdateUtc = DateTime.UtcNow.ToString("O");
+                        PersistentRecord.Dirty = true;
+                        MarkAutonomousStateDirty();
+                        AutonomousBotStatusPersistence.Queue(this);
+                    }
+                    log.Warn($"AUTONOMOUS_TRANSFER_REQUEUE bot={Name} id={DatabaseID} " +
+                             $"target_region={regionID} moved={moved}");
+                }
+            }
+        }
+
+        public override void Delete()
+        {
+            if (ObjectState is eObjectState.Deleted)
+                return;
+
+            // Group.RemoveMember owns deletion of temporary helpers after its
+            // bookkeeping finishes. If Delete was the entry point, allow that
+            // one nested call to finish the object and do not clean it twice.
+            if (Group != null)
+            {
+                Group group = Group;
+                group.RemoveMember(this);
+                if (ObjectState is eObjectState.Deleted)
+                    return;
+            }
+
+            _deathRecoveryTimer?.Stop();
+            _deathRecoveryTimer = null;
+            AutonomousPetSupport.CancelPendingCharm(this);
+            AutonomousPetSupport.ReleaseFieldTurrets(this);
+            CompleteStableMasterRoute();
+            if (IsAutonomousWorldBot && !IsIntentionalWorldMove)
+                SaveAutonomousState(true);
+            if (Owner != null)
+            {
+                GameEventMgr.RemoveHandler(Owner, GamePlayerEvent.Quit, new DOLEventHandler(OnOwnerQuit));
+                if (IsTemporaryGroupHelper)
+                    GameEventMgr.RemoveHandler(Owner, GamePlayerEvent.RegionChanged, new DOLEventHandler(OnOwnerRegionChanged));
+            }
+            base.Delete();
+        }
+
+        public override bool RemoveFromWorld()
+        {
+            // Capture this before base.RemoveFromWorld stops the brain. The stop
+            // path is allowed to invoke virtual methods and must never change how
+            // this removal is classified after it has begun.
+            bool intentionalWorldMove = IsIntentionalWorldMove;
+            if (!intentionalWorldMove)
+                TempProperties.GetProperty<GameRelic>(GameRelic.PLAYER_CARRY_RELIC_WEAK)?.DropFromCarrier(this, "bot-removed");
+            if (IsAutonomousWorldBot && !intentionalWorldMove)
+                SaveAutonomousState(true);
+            // A charm cast can have created its tagged candidate before the
+            // ownership effect installs ControlledBrain. World removal must
+            // clean that pending body even during this short handshake.
+            AutonomousPetSupport.CancelPendingCharm(this);
+            if (!base.RemoveFromWorld())
+                return false;
+
+            Duel?.Stop();
+
+            if (ControlledBrain != null && _keepPetThroughMove == 0)
+                ReleaseControlledPet(PetReleaseReason.WorldRemoval);
+
+            if (IsAutonomousWorldBot && !intentionalWorldMove)
+            {
+                AutonomousStuckWatchdog.Unregister(this);
+                AutonomousBotRegistry.Unregister(this);
+                if (PersistentRecord != null)
+                {
+                    PersistentRecord.IsOnline = false;
+                    PersistentRecord.Activity = "Offline";
+                    PersistentRecord.LastUpdateUtc = DateTime.UtcNow.ToString("O");
+                    PersistentRecord.Dirty = true;
+                    GameServer.Database.SaveObject(PersistentRecord);
+                }
+            }
+
+            return true;
+        }
+
+        public override void OnAttackedByEnemy(AttackData ad)
+        {
+            // Notify BotBrain of the attack so it can add aggro and transition to combat state
+            if (Brain is BotBrain botBrain)
+                botBrain.OnAttackedByEnemy(ad);
+
+            // A defensive class pet may retaliate when its owner is attacked,
+            // while remaining non-aggressive on ordinary pulls.
+            if (ControlledBrain is ControlledMobBrain controlledBrain)
+                controlledBrain.OnOwnerAttacked(ad);
+
+            BotBrain.NotifyNearbyGroupBots(this, ad);
+            base.OnAttackedByEnemy(ad);
+        }
+
+        #endregion
+
+        #region Race and Realm
+
+        private void SetRaceAndRealm(GamePlayer owner)
+        {
+            if (CharacterClass == null)
+                return;
+
+            var eligibleRaces = CharacterClass.EligibleRaces;
+            eGender gender = GenderId == (byte)eGender.Female ? eGender.Female : eGender.Male;
+
+            if (RaceId != 0 && eligibleRaces != null)
+            {
+                // Use the user-provided race if it's eligible for this class
+                var requestedRace = eligibleRaces.FirstOrDefault(r => (byte)r.ID == RaceId);
+                if (requestedRace != null)
+                {
+                    Race = (short)requestedRace.ID;
+                    Model = (ushort)requestedRace.GetModel(gender);
+                    Gender = gender;
+                }
+                else
+                {
+                    // Provided race not eligible — fall back to random
+                    PlayerRace playerRace = eligibleRaces[Util.Random(eligibleRaces.Count - 1)];
+                    Race = (short)playerRace.ID;
+                    Model = (ushort)playerRace.GetModel(gender);
+                    Gender = gender;
+                }
+            }
+            else if (eligibleRaces != null && eligibleRaces.Count > 0)
+            {
+                // No race specified — pick random eligible race
+                PlayerRace playerRace = eligibleRaces[Util.Random(eligibleRaces.Count - 1)];
+                Race = (short)playerRace.ID;
+                Model = (ushort)playerRace.GetModel(gender);
+                Gender = gender;
+            }
+            else
+            {
+                Race = owner?.Race ?? 1;
+                Model = owner?.Model ?? 32;
+                Gender = gender;
+            }
+
+            // Determine realm from class
+            foreach (var kvp in GlobalConstants.STARTING_CLASSES_DICT)
+            {
+                if (kvp.Value.Contains((eCharacterClass)CharacterClass.ID))
+                {
+                    Realm = kvp.Key;
+                    break;
+                }
+            }
+
+            // A player's height, Short / Average / Tall, never bigger than a real player model (owner 2026-10-31: a hired
+            // Bard stood far above its player; it was a random 45-60). Hired companions use their chosen height at summon.
+            Size = SizeForHeight(Util.Random(1, 3));
+        }
+
+        #endregion
+
+        #region Stats
+
+        private void InitializeBotStats()
+        {
+            RebuildPlayerBaseStats();
+        }
+
+        private void ApplyLevelStatGrowth(int level)
+        {
+            // Level is authoritative, including multi-level promotion callers.
+            // Never add historical growth to the values SetStats already rebuilt.
+            RebuildPlayerBaseStats();
+        }
+
+        /// <summary>
+        /// Migrates an already-running Bonedancer from the legacy mixed-ratio
+        /// plan to the focused 50-point primary/secondary plan.  This changes
+        /// only the future allocation policy; the current specialization
+        /// levels and leftover points are deliberately left untouched.
+        /// </summary>
+        internal void EnsureBonedancerFocusedSpecPlan()
+        {
+            if (IsAutonomousWorldBot && !string.IsNullOrWhiteSpace(PersistentRecord?.SerializedBuildPlan))
+                return; // A saved lifetime build is not a maintenance-time respec opportunity.
+            if (CharacterClass?.ID != (int)eCharacterClass.Bonedancer || BotSpec == null)
+                return;
+
+            bool alreadyFocused = BotSpec.SpecLines.Count == 2 &&
+                BotSpec.SpecLines.Any(line => line.levelRatio >= 1.0f && line.SpecCap >= 50) &&
+                BotSpec.SpecLines.Any(line => line.levelRatio <= 0.0f && line.SpecCap >= 50);
+            eSpecType primary = BotSpec.SpecType is eSpecType.DarkBone or eSpecType.SuppBone or eSpecType.ArmyBone
+                ? BotSpec.SpecType
+                : BotSpec.ChooseRandomSpecialization(eCharacterClass.Bonedancer);
+            bool deterministic = IsAutonomousWorldBot;
+            long seed = deterministic ? DatabaseID : ObjectID;
+            if (!alreadyFocused)
+                BotSpec = new BonedancerBotSpec(primary, seed, deterministic);
+
+            string primaryName = primary switch
+            {
+                eSpecType.DarkBone => Specs.Darkness,
+                eSpecType.ArmyBone => Specs.BoneArmy,
+                _ => Specs.Suppression,
+            };
+            Specialization primarySpec = GetSpecializationByName(primaryName);
+            Specialization[] boneSpecs = [
+                GetSpecializationByName(Specs.Darkness),
+                GetSpecializationByName(Specs.Suppression),
+                GetSpecializationByName(Specs.BoneArmy)
+            ];
+
+            int expectedPrimary = Math.Min(50, (int)Level);
+            bool legacySpread = boneSpecs.Count(spec => spec?.Level > 1) > 1;
+            bool freshCompanionMissedFocusedTraining = IsTemporaryGroupHelper && primarySpec?.Level < expectedPrimary;
+            bool legacyBotCannotLearnFirstMinion = IsAutonomousWorldBot && Level >= 15 &&
+                primarySpec?.Level < 15 && boneSpecs.Any(spec => spec?.Level > 1);
+            if (!legacySpread && !freshCompanionMissedFocusedTraining && !legacyBotCannotLearnFirstMinion)
+                return;
+
+            // Rebuild only a legacy/malformed Bonedancer allocation, using the
+            // same normal point-spending routine as a fresh bot. No points are
+            // invented: one randomly locked primary is bought to the legal 50
+            // cap, and only points left at level 50 flow into its one locked
+            // secondary. Other classes and real players never enter this path.
+            foreach (Specialization spec in boneSpecs.Where(spec => spec != null))
+                spec.Level = 1;
+            m_leftOverSpecPoints = 0;
+            SpendSpecPoints(Level, 0);
+            RefreshSpecDependantSkills(false);
+            GetAllUsableListSpells(true);
+            SetBotSpells();
+            SortSpells();
+            TempProperties.RemoveProperty(AutonomousPetSupport.BonedancerSpellRefreshProperty);
+            if (IsAutonomousWorldBot)
+                MarkAutonomousStateDirty();
+        }
+
+        /// <summary>
+        /// One-time migration for the legacy Savage plan which trained the
+        /// health-cost buff line ahead of its weapon. Re-spend the same earned
+        /// points through the normal trainer algorithm; no levels, points or
+        /// item bonuses are invented.
+        /// </summary>
+        internal bool EnsureSavageWeaponSpecPlan()
+        {
+            if (CharacterClass?.ID != (int)eCharacterClass.Savage || BotSpec == null ||
+                BotSpec.WeaponOneType == 0)
+                return false;
+
+            Specialization weapon = GetSpecializationByName(SkillBase.ObjectTypeToSpec(BotSpec.WeaponOneType));
+            Specialization savagery = GetSpecializationByName(Specs.Savagery);
+            if (weapon == null || savagery == null ||
+                !SavageBotCombatPolicy.NeedsWeaponTrainingRepair(weapon.Level, savagery.Level))
+                return false;
+
+            foreach (Specialization spec in GetSpecList().Where(spec => spec.Trainable))
+                spec.Level = 1;
+            m_leftOverSpecPoints = 0;
+            SpendSpecPoints(Level, 0);
+            MarkAutonomousStateDirty();
+            return true;
+        }
+
+        public void RebuildPlayerBaseStats()
+        {
+            if (!GlobalConstants.STARTING_STATS_DICT.TryGetValue((eRace)Race, out var racialStats))
+                GlobalConstants.STARTING_STATS_DICT.TryGetValue(eRace.Unknown, out racialStats);
+
+            ICharacterClass characterClass = CharacterClass;
+            eStat primary = characterClass?.PrimaryStat ?? eStat.UNDEFINED;
+            eStat secondary = characterClass?.SecondaryStat ?? eStat.UNDEFINED;
+            eStat tertiary = characterClass?.TertiaryStat ?? eStat.UNDEFINED;
+            bool advanced = characterClass?.HasAdvancedFromBaseClass() == true;
+            // True 1.65 Mode: a bot still in its base class has spent its 30 creation points like a player, on the class
+            // it is heading for (10/10/10 on that class's primary, secondary and tertiary stats; audit 2026-10-31).
+            ICharacterClass creationClass = !Classic165Mode.IsOn || advanced || characterClass == null ? null
+                : PersistentRecord is { PlannedClassId: > 0 } planned
+                    ? ScriptMgr.FindCharacterClass(planned.PlannedClassId) ?? characterClass
+                    : characterClass;
+            int previousHealth = m_health;
+            try
+            {
+                for (eStat stat = eStat._First; stat <= eStat._Last; stat++)
+                {
+                    int racialBase = racialStats != null && racialStats.TryGetValue(stat, out int value) ? value : 60;
+                    int target = BotAttributeProgression.Calculate(racialBase, Level, stat, primary, secondary, tertiary, advanced);
+                    if (creationClass != null)
+                        target += (stat == creationClass.PrimaryStat ? 10 : 0) + (stat == creationClass.SecondaryStat ? 10 : 0) +
+                                  (stat == creationClass.TertiaryStat ? 10 : 0);
+                    int delta = target - GetBaseStat(stat);
+                    if (delta != 0) ChangeBaseStat(stat, (short)delta);
+                }
+            }
+            finally
+            {
+                // GameNPC.ChangeBaseStat(CON) invokes a setter that refills HP.
+                // A stat rebuild must not heal; real level-up refills happen later.
+                m_health = Math.Min(previousHealth, MaxHealth);
+            }
+            int maximumMana = MaxMana;
+            if (Mana > maximumMana) Mana = maximumMana;
+        }
+
+        private void LoadPersistedSpecs(string serialized)
+        {
+            if (string.IsNullOrWhiteSpace(serialized))
+                return;
+            foreach (string entry in serialized.Split(';', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries))
+            {
+                string[] parts = entry.Split('|', 2);
+                if (parts.Length == 2 && int.TryParse(parts[1], out int level) && GetSpecializationByName(parts[0]) is Specialization spec)
+                    spec.Level = Math.Clamp(level, 1, Level);
+            }
+        }
+
+        private static byte ParseLastTrainedLevel(string serialized, byte currentLevel, string serializedSpecs)
+        {
+            const string prefix = "trained-level|";
+            if (!string.IsNullOrWhiteSpace(serialized) && serialized.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) &&
+                byte.TryParse(serialized.Split('|')[1], out byte trained))
+                return (byte)Math.Clamp((int)trained, 1, currentLevel);
+
+            // Existing characters already have their trained spec levels saved.
+            // Treat those as current so the migration never double-spends points.
+            return string.IsNullOrWhiteSpace(serializedSpecs) ? (byte)1 : currentLevel;
+        }
+
+        /// <summary>"trained-level|N|realm-points|M": realm ability points already spent at a trainer (0 when absent).</summary>
+        /// <summary>A "key|number" pair from SerializedAbilities (0 when absent).</summary>
+        public static int ParseSerializedNumber(string serialized, string key)
+        {
+            string[] parts = serialized?.Split('|') ?? Array.Empty<string>();
+            for (int i = 0; i + 1 < parts.Length; i++)
+                if (parts[i].Equals(key, StringComparison.OrdinalIgnoreCase) && int.TryParse(parts[i + 1], out int value))
+                    return Math.Max(0, value);
+            return 0;
+        }
+
+        public static int ParseTrainedRealmPoints(string serialized)
+        {
+            string[] parts = serialized?.Split('|') ?? Array.Empty<string>();
+            for (int i = 0; i + 1 < parts.Length; i++)
+                if (parts[i].Equals("realm-points", StringComparison.OrdinalIgnoreCase) && int.TryParse(parts[i + 1], out int points))
+                    return Math.Max(0, points);
+            return 0;
+        }
+
+        // ---- True 1.65 Mode hired companions: their player trains their specs (owner 2026-10-30, plan 17h)
+
+        /// <summary>Spec points the companion can spend now: what's left plus every level not yet trained.</summary>
+        public int CompanionSpecPoints
+        {
+            get
+            {
+                int points = m_leftOverSpecPoints;
+                for (int level = _lastAutonomousTrainedLevel + 1; level <= Level; level++)
+                    points += GetSpecPointsForLevel(level, false);
+                return points;
+            }
+        }
+
+        /// <summary>Raises one spec line by one level, as the player chose. Returns the problem, or null.</summary>
+        public string CompanionTrain(Specialization spec)
+        {
+            if (spec == null || !spec.Trainable)
+                return "That line can't be trained.";
+            if (spec.Level >= Level)
+                return $"{spec.Name} can't go above {Name}'s level ({Level}).";
+            m_leftOverSpecPoints = CompanionSpecPoints;
+            _lastAutonomousTrainedLevel = Level;
+            int cost = spec.Level + 1;
+            if (m_leftOverSpecPoints < cost)
+                return $"{spec.Name} {cost} needs {cost} points; {Name} has {m_leftOverSpecPoints}.";
+            m_leftOverSpecPoints -= cost;
+            spec.Level++;
+            AfterCompanionTraining();
+            return null;
+        }
+
+        /// <summary>The free respec (owner rule): every trainable line back to 1, all the points back to spend.</summary>
+        public void CompanionRespec()
+        {
+            int total = 0;
+            for (int level = 2; level <= Level; level++)
+                total += GetSpecPointsForLevel(level, false);
+            foreach (Specialization spec in GetSpecList().Where(s => s.Trainable))
+                spec.Level = 1;
+            m_leftOverSpecPoints = total;
+            _lastAutonomousTrainedLevel = Level;
+            AfterCompanionTraining();
+        }
+
+        private void AfterCompanionTraining()
+        {
+            RefreshSpecDependantSkills(false);
+            SetBotSpells();
+            SortStyles();
+            SortSpells();
+            BotRangedCombat.EnsureStarter(this);
+            BotStarterInstruments.Ensure(this);
+            MarkAutonomousStateDirty();
+            AutonomousBotStatusPersistence.Queue(this, true);
+            LogCompanionSkills("trained");
+        }
+
+        /// <summary>COMPANION_SKILLS_165: what a hired companion can use after training or a level (owner 2026-10-30: a
+        /// level 5 Hunter trained Beastcraft 5 and seemed to use none of it).</summary>
+        internal void LogCompanionSkills(string why)
+        {
+            if (!HiredCompanions165.IsHired(this))
+                return;
+            static string Names<T>(IEnumerable<T> list, Func<T, string> name) =>
+                list == null ? "-" : string.Join(", ", list.Where(x => x != null).Select(name).Distinct());
+            log.Info($"COMPANION_SKILLS_165 {why} bot=\"{Name}\" id={DatabaseID} {ClassName} {Level} specs=[" +
+                     string.Join(", ", GetSpecList().Select(sp => $"{sp.KeyName} {sp.Level}")) + "] spells=[" +
+                     Names(Spells, sp => $"{sp.Name} ({sp.SpellType})") + "] styles=[" + Names(Styles, st => st.Name) + "]");
+        }
+
+        public bool TrainPendingSpecializations(GameTrainer trainer)
+        {
+            if (!HasPendingAutonomousTraining && !AutonomousBotRealmAbilities.HasPurchase(this))
+                return false;
+            // True 1.65 Mode: at a trainer of its planned class a base-class bot is promoted first, then trains.
+            if (trainer != null && IsWithinRadius(trainer, 350) && BaseClassBots165.TryPromote(this, trainer))
+                AfterCompanionTraining();   // the new class's skills, spells and styles (no points are granted again)
+            if (trainer == null ||
+                trainer.ObjectState != eObjectState.Active || trainer.CurrentRegionID != CurrentRegionID ||
+                !IsWithinRadius(trainer, 350) ||
+                trainer.TrainedClass != eCharacterClass.Unknown && trainer.TrainedClass != (eCharacterClass)CharacterClass.ID)
+                return false;
+
+            // Realm abilities are bought at the same visit (the class trainer, as a player would).
+            string realmAbilities = AutonomousBotRealmAbilities.Train(this);
+            if (!HasPendingAutonomousTraining)
+            {
+                MarkAutonomousStateDirty();
+                AutonomousBotStatusPersistence.Queue(this, true);
+                return realmAbilities.Length > 0;
+            }
+
+            byte previous = _lastAutonomousTrainedLevel;
+            Dictionary<string, int> beforeSpecs = GetSpecList()
+                .Where(spec => spec.Trainable)
+                .ToDictionary(spec => spec.KeyName, spec => spec.Level, StringComparer.OrdinalIgnoreCase);
+            int abilitiesBefore = GetAllAbilities().Count;
+            SpendSpecPoints(Level, previous);
+            _lastAutonomousTrainedLevel = Level;
+            RefreshSpecDependantSkills(false);
+            SetBotSpells();
+            SortStyles();
+            SortSpells();
+            BotRangedCombat.EnsureStarter(this); // Only an empty slot, once the weapon ability is learned.
+            BotStarterInstruments.Ensure(this);
+            // Advanced Albion weapon plans still need their ordinary base
+            // weapon before the class grants the planned line.  Reconcile at
+            // the exact unlock level without changing the bot's lifetime plan.
+            eCharacterClass trainedClass = (eCharacterClass)CharacterClass.ID;
+            if (trainedClass == eCharacterClass.Savage ||
+                !ShouldUsePlannedTwoHandedPrimary(trainedClass, previous,
+                    BotSpec?.Is2H == true, BotSpec?.WeaponTwoType ?? 0) &&
+                ShouldUsePlannedTwoHandedPrimary(trainedClass, Level,
+                    BotSpec?.Is2H == true, BotSpec?.WeaponTwoType ?? 0))
+                EnsureAutonomousStarterWeapon();
+            MarkAutonomousStateDirty();
+            // Training and its real equipment/inventory result are durable via
+            // the prioritized persistence queue. Do not stall an NPC service
+            // thread behind another SQLite writer for several seconds.
+            AutonomousBotStatusPersistence.Queue(this, true);
+
+            string changes = string.Join(",", GetSpecList()
+                .Where(spec => spec.Trainable && (!beforeSpecs.TryGetValue(spec.KeyName, out int oldLevel) || oldLevel != spec.Level))
+                .Select(spec =>
+                {
+                    int oldLevel = beforeSpecs.TryGetValue(spec.KeyName, out int value) ? value : 0;
+                    return $"{spec.KeyName}:{oldLevel}->{spec.Level}";
+                }));
+            if (AutonomousDiagnosticsProperties.Training)
+                log.Info($"AUTONOMOUS_TRAINING bot=\"{Name}\" id={DatabaseID} class=\"{ClassName}\" level={Level} " +
+                     $"trainer=\"{trainer.Name}\" trainedFrom={previous} trainedThrough={_lastAutonomousTrainedLevel} " +
+                     $"specializations=\"{changes}\" abilities={abilitiesBefore}->{GetAllAbilities().Count} unspent={m_leftOverSpecPoints}");
+            return true;
+        }
+
+        public override void CheckWeaponMagicalEffect(AttackData ad)
+        {
+            int charges = ad.Weapon?.PoisonCharges ?? 0;
+            base.CheckWeaponMagicalEffect(ad);
+            if (ad.Weapon != null && charges != ad.Weapon.PoisonCharges)
+                BotPoisonSupply.Changed(this);
+        }
+
+        public void MarkAutonomousStateDirty()
+        {
+            if (IsAutonomousWorldBot)
+                AutonomousStateDirty = true;
+        }
+
+        public bool SaveAutonomousState(bool includeInventory)
+        {
+            OfflineWorldBotRecord record = PrepareAutonomousStateSnapshot();
+            if (record == null)
+                return false;
+
+            bool saved;
+            lock (AutonomousBotStatusPersistence.DatabaseWriteLock)
+                saved = record.IsPersisted ? GameServer.Database.SaveObject(record) : GameServer.Database.AddObject(record);
+            if (includeInventory && Inventory is BotInventory persistentInventory)
+            {
+                lock (AutonomousBotStatusPersistence.DatabaseWriteLock)
+                    saved &= persistentInventory.SaveIntoDatabase(InternalID);
+            }
+            if (saved)
+                AutonomousStateDirty = false;
+            return saved;
+        }
+
+        public OfflineWorldBotRecord PrepareAutonomousStateSnapshot()
+        {
+            if (!IsAutonomousWorldBot || PersistentRecord == null)
+                return null;
+
+            OfflineWorldBotRecord record = PersistentRecord;
+            record.Level = Level;
+            record.Experience = Experience;
+            record.RealmPoints = AutonomousRealmPoints;
+            record.RegionId = CurrentRegionID;
+            record.ZoneId = CurrentZone?.ID ?? 0;
+            record.ZoneName = CurrentZone?.Description;
+            record.X = X;
+            record.Y = Y;
+            record.Z = Z;
+            record.Health = Math.Max(1, Health);
+            record.Mana = Math.Max(0, Mana);
+            record.Endurance = Math.Max(0, Endurance);
+            // IsAlive is false for anything out of the world, so a hired companion saved after it was parked (logout,
+            // dismiss) came back DEAD at the next login (True 1.65 Mode test, 2026-10-30). Out of the world, health decides.
+            record.IsAlive = ObjectState != eObjectState.Active && HiredCompanions165.IsHired(this) ? Health > 0 : IsAlive;
+            record.IsOnline = ObjectState == eObjectState.Active;
+            record.SerializedSpecs = string.Join(';', GetSpecList().Where(spec => spec.Trainable).Select(spec => $"{spec.KeyName}|{spec.Level}"));
+            record.SerializedAbilities = $"trained-level|{_lastAutonomousTrainedLevel}|realm-points|{AutonomousBotRealmAbilities.TrainedPoints(this)}" +
+                (TotalConstitutionLostAtDeath > 0 ? $"|con-lost|{TotalConstitutionLostAtDeath}" : string.Empty);
+            record.UnspentSpecPoints = m_leftOverSpecPoints;
+            record.LastSavedUtc = DateTime.UtcNow.ToString("O");
+            record.LastUpdateUtc = record.LastSavedUtc;
+            record.PersistedStateVersion = 1;
+            record.Dirty = true;
+            return record;
+        }
+
+        public void MarkAutonomousStateSaved() => AutonomousStateDirty = false;
+
+        #endregion
+
+        #region Specialization System
+
+        protected virtual void AddSpecialization(Specialization skill, bool notify)
+        {
+            if (skill == null)
+                return;
+
+            lock (((ICollection)m_specialization).SyncRoot)
+            {
+                if (m_specialization.TryGetValue(skill.KeyName, out Specialization specialization))
+                {
+                    specialization.Level = skill.Level;
+                    return;
+                }
+
+                m_specialization.Add(skill.KeyName, skill);
+            }
+        }
+
+        public virtual bool RemoveSpecialization(string specKeyName)
+        {
+            lock (((ICollection)m_specialization).SyncRoot)
+            {
+                return m_specialization.Remove(specKeyName);
+            }
+        }
+
+        public virtual IList<Specialization> GetSpecList()
+        {
+            lock (((ICollection)m_specialization).SyncRoot)
+            {
+                return m_specialization.Select(item => item.Value)
+                    .OrderBy(it => it.LevelRequired).ThenBy(it => it.ID).ToList();
+            }
+        }
+
+        public virtual Specialization GetSpecializationByName(string name)
+        {
+            lock (((ICollection)m_specialization).SyncRoot)
+            {
+                foreach (var entry in m_specialization)
+                {
+                    if (entry.Key.Equals(name, StringComparison.OrdinalIgnoreCase))
+                        return entry.Value;
+                }
+            }
+
+            return null;
+        }
+
+        public override int GetBaseSpecLevel(string keyName)
+        {
+            lock (((ICollection)m_specialization).SyncRoot)
+            {
+                if (m_specialization.TryGetValue(keyName, out Specialization spec))
+                    return spec.Level;
+            }
+
+            return 0;
+        }
+
+        public override int GetModifiedSpecLevel(string keyName)
+        {
+            if (keyName.StartsWith(GlobalSpellsLines.Champion_Lines_StartWith))
+                return 50;
+
+            if (keyName.StartsWith(GlobalSpellsLines.Realm_Spells))
+                return Level;
+
+            Specialization spec = null;
+            int level = 0;
+
+            lock (((ICollection)m_specialization).SyncRoot)
+            {
+                if (!m_specialization.TryGetValue(keyName, out spec))
+                {
+                    if (keyName == GlobalSpellsLines.Combat_Styles_Effect)
+                    {
+                        if (CharacterClass.ID == (int)eCharacterClass.Reaver || CharacterClass.ID == (int)eCharacterClass.Heretic)
+                            level = GetModifiedSpecLevel(Specs.Flexible);
+                        if (CharacterClass.ID == (int)eCharacterClass.Valewalker)
+                            level = GetModifiedSpecLevel(Specs.Scythe);
+                        if (CharacterClass.ID == (int)eCharacterClass.Savage)
+                            level = GetModifiedSpecLevel(Specs.Savagery);
+                    }
+
+                    return level;
+                }
+            }
+
+            if (spec != null)
+            {
+                level = spec.Level;
+                eProperty skillProp = SkillBase.SpecToSkill(keyName);
+                if (skillProp != eProperty.Undefined)
+                    level += GetModified(skillProp);
+            }
+
+            return level;
+        }
+
+        public virtual void LoadClassSpecializations(bool sendMessage)
+        {
+            if (CharacterClass == null)
+                return;
+
+            IDictionary<Specialization, int> careers = SkillBase.GetSpecializationCareer(CharacterClass.ID);
+            var speclist = GetSpecList();
+            var careerslist = careers.Keys.Select(k => k.KeyName.ToLower());
+
+            foreach (var spec in speclist.Where(sp => sp.Trainable || !sp.AllowSave))
+            {
+                if (!careerslist.Contains(spec.KeyName.ToLower()))
+                    RemoveSpecialization(spec.KeyName);
+            }
+
+            foreach (var constraint in careers)
+            {
+                if (constraint.Key is IMasterLevelsSpecialization)
+                    continue;
+
+                if (Level >= constraint.Value)
+                {
+                    if (!HasSpecialization(constraint.Key.KeyName))
+                        AddSpecialization(constraint.Key, sendMessage);
+                }
+                else
+                {
+                    if (HasSpecialization(constraint.Key.KeyName))
+                        RemoveSpecialization(constraint.Key.KeyName);
+                }
+            }
+        }
+
+        public void SpendSpecPoints(byte level, byte previousLevel)
+        {
+            if (BotSpec == null)
+                return;
+
+            BotSpec.SpecLines = BotSpec.SpecLines.OrderByDescending(ratio => ratio.levelRatio).ToList();
+
+            int leftOverSpecPoints = m_leftOverSpecPoints;
+            bool spentPoints = true;
+            bool spendLeftOverPoints = false;
+            bool botCreation = level - previousLevel > 1;
+
+            byte index = (byte)(previousLevel + 1);
+
+            if (level == previousLevel)
+                index = level;
+
+            for (byte i = index; i <= Level; i++)
+            {
+                spentPoints = true;
+                spendLeftOverPoints = false;
+
+                int totalSpecPointsThisLevel = GetSpecPointsForLevel(i, botCreation) + leftOverSpecPoints;
+
+                while (spentPoints)
+                {
+                    spentPoints = false;
+
+                    foreach (BotSpecLine specLine in BotSpec.SpecLines)
+                    {
+                        if (specLine.levelRatio <= 0 && Level < 50)
+                            continue;
+
+                        Specialization spec = GetSpecializationByName(specLine.Spec);
+
+                        if (spec != null)
+                        {
+                            if (spec.Level < specLine.SpecCap && spec.Level < i)
+                            {
+                                int specRatio = (int)(i * specLine.levelRatio);
+
+                                if (!spendLeftOverPoints && spec.Level >= specRatio)
+                                    continue;
+
+                                int totalCost = spec.Level + 1;
+
+                                if (totalSpecPointsThisLevel >= totalCost)
+                                {
+                                    totalSpecPointsThisLevel -= totalCost;
+                                    spec.Level++;
+                                    spentPoints = true;
+                                }
+                            }
+                        }
+                    }
+
+                    if (!spentPoints && !spendLeftOverPoints)
+                    {
+                        spendLeftOverPoints = true;
+                        spentPoints = true;
+                    }
+                }
+
+                m_leftOverSpecPoints = leftOverSpecPoints = totalSpecPointsThisLevel;
+            }
+        }
+
+        private int GetSpecPointsForLevel(int level, bool botCreation)
+        {
+            int specpoints = 0;
+
+            if (botCreation)
+                if (level > 40)
+                    specpoints += CharacterClass.SpecPointsMultiplier * (level - 1) / 20;
+
+            if (level > 5)
+                specpoints += CharacterClass.SpecPointsMultiplier * level / 10;
+            else if (level >= 2)
+                specpoints = level;
+
+            return specpoints;
+        }
+
+        public virtual void RefreshSpecDependantSkills(bool sendMessages)
+        {
+            LoadClassSpecializations(sendMessages);
+
+            lock (((ICollection)m_specialization).SyncRoot)
+            {
+                foreach (Specialization spec in m_specialization.Values)
+                {
+                    foreach (Ability ab in spec.GetAbilitiesForLiving(this))
+                    {
+                        if (!HasAbility(ab.KeyName) || GetAbility(ab.KeyName).Level < ab.Level)
+                            AddAbility(ab, false);
+                    }
+
+                    foreach (Style st in spec.GetStylesForLiving(this))
+                    {
+                        AddStyle(st, false);
+                    }
+
+                    foreach (SpellLine sl in spec.GetSpellLinesForLiving(this))
+                    {
+                        AddSpellLine(sl, false);
+                    }
+                }
+            }
+        }
+
+        public virtual void AddStyle(Style st, bool notify)
+        {
+            lock (Styles)
+            {
+                if (!Styles.Contains(st))
+                    Styles.Add(st);
+            }
+
+            Styles = Styles;
+        }
+
+        public virtual void AddSpellLine(SpellLine line, bool notify)
+        {
+            if (line == null)
+                return;
+
+            SpellLine oldline = GetSpellLine(line.KeyName);
+            if (oldline == null)
+            {
+                lock (m_spellLines)
+                {
+                    m_spellLines.Add(line);
+                }
+            }
+            else
+            {
+                oldline.Level = line.Level;
+            }
+        }
+
+        public virtual List<SpellLine> GetSpellLines()
+        {
+            lock (m_spellLines)
+            {
+                return new List<SpellLine>(m_spellLines);
+            }
+        }
+
+        #endregion
+
+        #region Spell Resolution
+
+        protected ReaderWriterList<Tuple<Skill, Skill>> m_usableSkills = new ReaderWriterList<Tuple<Skill, Skill>>();
+        protected ReaderWriterList<Tuple<SpellLine, List<Skill>>> m_usableListSpells = new ReaderWriterList<Tuple<SpellLine, List<Skill>>>();
+
+        public virtual new List<Tuple<SpellLine, List<Skill>>> GetAllUsableListSpells(bool update = false)
+        {
+            List<Tuple<SpellLine, List<Skill>>> results = new List<Tuple<SpellLine, List<Skill>>>();
+
+            if (!update)
+            {
+                if (m_usableListSpells.Count > 0)
+                    results = new List<Tuple<SpellLine, List<Skill>>>(m_usableListSpells);
+
+                if (results.Count > 0)
+                    return results;
+            }
+
+            m_usableListSpells.FreezeWhile(innerList =>
+            {
+                List<Tuple<SpellLine, List<Skill>>> finalbase = new List<Tuple<SpellLine, List<Skill>>>();
+                List<Tuple<SpellLine, List<Skill>>> finalspec = new List<Tuple<SpellLine, List<Skill>>>();
+
+                foreach (Specialization spec in GetSpecList().Where(item => !item.HybridSpellList))
+                {
+                    var spells = spec.GetLinesSpellsForLiving(this);
+
+                    foreach (SpellLine sl in spec.GetSpellLinesForLiving(this))
+                    {
+                        List<Tuple<SpellLine, List<Skill>>> working;
+                        if (sl.IsBaseLine)
+                            working = finalbase;
+                        else
+                            working = finalspec;
+
+                        List<Skill> sps = new List<Skill>();
+                        SpellLine key = spells.Keys.FirstOrDefault(el => el.ID == sl.ID);
+
+                        if (key != null && spells.TryGetValue(key, out List<Skill> spellsInLine))
+                        {
+                            foreach (Skill sp in spellsInLine)
+                                sps.Add(sp);
+                        }
+
+                        working.Add(new Tuple<SpellLine, List<Skill>>(sl, sps));
+                    }
+                }
+
+                innerList.Clear();
+                foreach (var tp in finalbase)
+                {
+                    innerList.Add(tp);
+                    results.Add(tp);
+                }
+
+                foreach (var tp in finalspec)
+                {
+                    innerList.Add(tp);
+                    results.Add(tp);
+                }
+            });
+
+            return results;
+        }
+
+        public virtual List<Tuple<Skill, Skill>> GetAllUsableSkills(bool update = false)
+        {
+            List<Tuple<Skill, Skill>> results = new List<Tuple<Skill, Skill>>();
+
+            if (!update)
+            {
+                if (m_usableSkills.Count > 0)
+                    results = new List<Tuple<Skill, Skill>>(m_usableSkills);
+
+                if (results.Count > 0)
+                    return results;
+            }
+
+            m_usableSkills.FreezeWhile(innerList =>
+            {
+                IList<Specialization> specs = GetSpecList();
+                List<Tuple<Skill, Skill>> copylist = new List<Tuple<Skill, Skill>>(innerList);
+
+                foreach (Specialization spec in specs.Where(item => item.Trainable))
+                {
+                    int index = innerList.FindIndex(e => (e.Item1 is Specialization specialization) && specialization.ID == spec.ID);
+
+                    if (index < 0)
+                        innerList.Insert(innerList.Count(e => e.Item1 is Specialization), new Tuple<Skill, Skill>(spec, spec));
+                    else
+                    {
+                        copylist.Remove(innerList[index]);
+                        innerList[index] = new Tuple<Skill, Skill>(spec, spec);
+                    }
+                }
+
+                foreach (Specialization spec in specs)
+                {
+                    foreach (Ability abv in spec.GetAbilitiesForLiving(this))
+                    {
+                        Ability ab = GetAbility(abv.KeyName);
+                        if (ab == null)
+                            ab = abv;
+
+                        int index = innerList.FindIndex(k => (k.Item1 is Ability ability) && ability.ID == ab.ID);
+
+                        if (index < 0)
+                            innerList.Add(new Tuple<Skill, Skill>(ab, spec));
+                        else
+                        {
+                            copylist.Remove(innerList[index]);
+                            innerList[index] = new Tuple<Skill, Skill>(ab, spec);
+                        }
+                    }
+                }
+
+                foreach (Specialization spec in specs.Where(item => item.HybridSpellList))
+                {
+                    foreach (var sl in spec.GetLinesSpellsForLiving(this))
+                    {
+                        int index = -1;
+
+                        foreach (Spell sp in sl.Value.Where(it => (it is Spell) && !((Spell)it).NeedInstrument).Cast<Spell>())
+                        {
+                            if (index < innerList.Count)
+                                index = innerList.FindIndex(index + 1, e => (e.Item2 is SpellLine spellLine) && spellLine.ID == sl.Key.ID && (e.Item1 is Spell spell) && !spell.NeedInstrument);
+
+                            if (index < 0 || index >= innerList.Count)
+                            {
+                                innerList.Add(new Tuple<Skill, Skill>(sp, sl.Key));
+                                index = innerList.Count;
+                            }
+                            else
+                            {
+                                copylist.Remove(innerList[index]);
+                                innerList[index] = new Tuple<Skill, Skill>(sp, sl.Key);
+                            }
+                        }
+                    }
+                }
+
+                int songIndex = -1;
+                foreach (Specialization spec in specs.Where(item => item.HybridSpellList))
+                {
+                    foreach (var sl in spec.GetLinesSpellsForLiving(this))
+                    {
+                        foreach (Spell sp in sl.Value.Where(it => (it is Spell) && ((Spell)it).NeedInstrument).Cast<Spell>())
+                        {
+                            if (songIndex < innerList.Count)
+                                songIndex = innerList.FindIndex(songIndex + 1, e => (e.Item1 is Spell) && ((Spell)e.Item1).NeedInstrument);
+
+                            if (songIndex < 0 || songIndex >= innerList.Count)
+                            {
+                                innerList.Add(new Tuple<Skill, Skill>(sp, sl.Key));
+                                songIndex = innerList.Count;
+                            }
+                            else
+                            {
+                                copylist.Remove(innerList[songIndex]);
+                                innerList[songIndex] = new Tuple<Skill, Skill>(sp, sl.Key);
+                            }
+                        }
+                    }
+                }
+
+                foreach (Specialization spec in specs)
+                {
+                    foreach (Style st in spec.GetStylesForLiving(this))
+                    {
+                        int index = innerList.FindIndex(e => (e.Item1 is Style) && e.Item1.ID == st.ID);
+                        if (index < 0)
+                            innerList.Add(new Tuple<Skill, Skill>(st, spec));
+                        else
+                        {
+                            copylist.Remove(innerList[index]);
+                            innerList[index] = new Tuple<Skill, Skill>(st, spec);
+                        }
+                    }
+                }
+
+                foreach (var item in copylist)
+                    innerList.Remove(item);
+
+                foreach (var el in innerList)
+                    results.Add(el);
+            });
+
+            return results;
+        }
+
+        private void SetBotSpells()
+        {
+            _powerSpellLines = new Dictionary<int, SpellLine>();
+            if (CharacterClass == null)
+                return;
+
+            // Sluaghbinder is a hybrid combat class, but its three baseline
+            // lines and the selected advanced line are ordinary list-caster
+            // spell lines.  The generic hybrid path only reads
+            // Specialization.HybridSpellList lines, so it silently produced a
+            // spell-less bot (no Raise spell, pet upkeep, self buffs, or
+            // instant Rot/Bane abilities).  Build its learned catalog from
+            // both sources while retaining the originating line for power and
+            // line-specific rank selection.
+            if (CharacterClass.ID == (int)eCharacterClass.Sluaghbinder)
+            {
+                SetSluaghbinderSpells();
+                return;
+            }
+
+            // The usable-skill lists are cached: rebuild them from the current specs and level first. Read from the cache,
+            // a bot trained or levelled in the field kept its old spells until it was created again (owner 2026-10-30:
+            // a level 5 Hunter trained to Beastcraft 5 used none of the new buffs until dismissed and summoned at the inn).
+            GetAllUsableSkills(true);
+            GetAllUsableListSpells(true);
+
+            // Casters use list spells (highest level per type), hybrids use all usable skills
+            if (CharacterClass.ClassType == eClassType.ListCaster)
+                SetCasterSpells();
+            else
+                SetHybridSpells();
+
+            if (IsEndgameCompanion)
+                Spells = TemporaryCompanionBalance.HighestRanks(Spells, Level, SkillBase.GetSpellByID);
+        }
+
+        private void SetSluaghbinderSpells()
+        {
+            List<(Spell Spell, SpellLine Line)> learned = new();
+
+            // Baseline and selected advanced lines are represented by the
+            // normal list-spell resolver.  Refreshing here is intentional:
+            // companions and persistent bots can be promoted/trained after
+            // construction and must see the newly learned ranks immediately.
+            foreach (Tuple<SpellLine, List<Skill>> tuple in GetAllUsableListSpells(true))
+            {
+                if (tuple?.Item1 == null || tuple.Item2 == null)
+                    continue;
+
+                // The Sluaghbinder bot build commits to one advanced path.
+                // GetSpellLinesForLiving intentionally exposes class-hint
+                // lines to NPCs, so explicitly keep only the baseline lines
+                // plus the path recorded by SluaghbinderBotSpec.  Otherwise
+                // an untrained Bulwark/Bane/Covenant line could leak its
+                // abilities into every bot at the NPC 75%-level estimate.
+                if (!IsSluaghbinderLineAllowed(tuple.Item1))
+                    continue;
+
+                foreach (Spell spell in tuple.Item2.OfType<Spell>())
+                {
+                    if (spell.Level <= Level && !SluaghbinderBotPolicy.IsPlayerOnlyServiceSpell(spell))
+                        learned.Add((spell, tuple.Item1));
+                }
+            }
+
+            // Keep this second pass for future class extensions that expose a
+            // spell line through HybridSpellList.  It also prevents this
+            // dedicated branch from regressing if a weapon/style-backed spell
+            // is added to the class later.
+            foreach (Tuple<Skill, Skill> tuple in GetAllUsableSkills(true))
+            {
+                if (tuple?.Item1 is not Spell spell || spell.Level > Level ||
+                    SluaghbinderBotPolicy.IsPlayerOnlyServiceSpell(spell))
+                    continue;
+
+                SpellLine line = tuple.Item2 as SpellLine ?? ResolvePowerSpellLine(spell, null);
+                if (!IsSluaghbinderLineAllowed(line))
+                    continue;
+                learned.Add((spell, line));
+            }
+
+            // Select one legal rank per effect role *within its spell line*.
+            // The line is part of the key so Abhartach's Rot and the advanced
+            // Abhartach's Bane DoT remain separate abilities and can stack as
+            // intended.  The generic caster selector does not include that
+            // line identity and would collapse them into one spell.
+            List<(Spell Spell, SpellLine Line)> selected = learned
+                .Where(entry => entry.Spell != null)
+                .GroupBy(entry => new
+                {
+                    LineId = entry.Line?.ID ?? 0,
+                    entry.Spell.DamageType,
+                    entry.Spell.SpellType,
+                    entry.Spell.Frequency,
+                    entry.Spell.CastTime,
+                    entry.Spell.Target,
+                    entry.Spell.Group,
+                    entry.Spell.IsPBAoE,
+                    entry.Spell.Radius,
+                    entry.Spell.SubSpellID
+                })
+                .Select(group => group
+                    .OrderByDescending(entry => entry.Spell.Level)
+                    .ThenByDescending(entry => entry.Spell.ID)
+                    .First())
+                .OrderBy(entry => entry.Line?.IsBaseLine == true ? 0 : 1)
+                .ThenBy(entry => entry.Line?.ID ?? int.MaxValue)
+                .ThenBy(entry => entry.Spell.Level)
+                .ThenBy(entry => entry.Spell.ID)
+                .ToList();
+
+            Spells = selected.Select(entry => entry.Spell).ToList();
+            foreach ((Spell spell, SpellLine line) in selected)
+            {
+                if (spell != null)
+                    _powerSpellLines[spell.ID] = line;
+            }
+        }
+
+        private bool IsSluaghbinderLineAllowed(SpellLine line)
+        {
+            if (line == null || line.IsBaseLine)
+                return line != null;
+
+            return BotSpec?.SpecLines?.Any(specLine =>
+                string.Equals(specLine.Spec, line.KeyName, StringComparison.OrdinalIgnoreCase)) == true;
+        }
+
+        private void SetCasterSpells()
+        {
+            List<Spell> spells = new List<Spell>();
+
+            var dict = GetAllUsableListSpells();
+
+            if (dict != null && dict.Count > 0)
+            {
+                foreach (var tuple in dict)
+                {
+                    if (tuple.Item2.Count > 0)
+                    {
+                        foreach (Skill skill in tuple.Item2)
+                        {
+                            if (skill is Spell spell && spell.Level <= Level && !spells.Contains(spell))
+                            {
+                                spells.Add(spell);
+                                _powerSpellLines.TryAdd(spell.ID, tuple.Item1);
+                            }
+                        }
+                    }
+                }
+            }
+
+            List<Spell> highestSpellLevels = IsEndgameCompanion
+                ? TemporaryCompanionBalance.HighestRanks(spells, Level, SkillBase.GetSpellByID)
+                : GetHighestLevelSpells(spells);
+
+            if (highestSpellLevels.Count > 0)
+                Spells = highestSpellLevels;
+        }
+
+        private void SetHybridSpells()
+        {
+            List<Spell> spells = new List<Spell>();
+
+            var usableSkills = GetAllUsableSkills();
+
+            for (int i = 0; i < usableSkills.Count; i++)
+            {
+                Skill skill = usableSkills[i].Item1;
+
+                if (skill is Spell spell && spell.Level <= Level)
+                    spells.Add(spell);
+            }
+
+            if (spells.Count > 0)
+                Spells = spells;
+        }
+
+        public List<Spell> GetHighestLevelSpells(List<Spell> spells)
+        {
+            spells = spells.OrderByDescending(spell => spell.Level).ToList();
+
+            List<Spell> highestLevelSpells = new List<Spell>();
+
+            foreach (Spell currentSpell in spells)
+            {
+                Spell existingSpell = highestLevelSpells.FirstOrDefault(x => AreSpellsEqual(x, currentSpell));
+
+                if (existingSpell != null)
+                {
+                    if (existingSpell.Level < currentSpell.Level)
+                        highestLevelSpells.Remove(existingSpell);
+                    else
+                        continue;
+                }
+
+                highestLevelSpells.Add(currentSpell);
+            }
+
+            return highestLevelSpells;
+        }
+
+        private bool AreSpellsEqual(Spell spellOne, Spell spellTwo)
+        {
+            // Ranks of one proc line may differ in proc chance (Valewalker
+            // Witherstrike 20 vs 15); they still replace one another
+            // (stefanrows/OfflineDAoC fork, 0.185.0).
+            bool sameProcLine = spellOne.SpellType is eSpellType.OffensiveProc or eSpellType.DefensiveProc &&
+                                spellOne.Group != 0;
+            return spellOne.DamageType == spellTwo.DamageType &&
+                   spellOne.SpellType == spellTwo.SpellType &&
+                   (sameProcLine || spellOne.Frequency == spellTwo.Frequency) &&
+                   spellOne.CastTime == spellTwo.CastTime &&
+                   spellOne.Target == spellTwo.Target &&
+                   spellOne.Group == spellTwo.Group &&
+                   spellOne.IsPBAoE == spellTwo.IsPBAoE;
+        }
+
+        #endregion
+
+        #region Equipment
+
+        public int BestArmorLevel
+        {
+            get
+            {
+                int bestLevel = -1;
+                bestLevel = Math.Max(bestLevel, GetAbilityLevel("AlbArmor"));
+                bestLevel = Math.Max(bestLevel, GetAbilityLevel("HibArmor"));
+                bestLevel = Math.Max(bestLevel, GetAbilityLevel("MidArmor"));
+                return bestLevel;
+            }
+        }
+
+        public int BestShieldLevel => GetAbilityLevel("Shield");
+
+        private void EquipBot(byte requestedEquipmentLevel = 0)
+        {
+            byte characterLevel = Level;
+            byte equipmentLevel = (byte)TemporaryCompanionBalance.GearLevel(IsTemporaryGroupHelper, characterLevel, requestedEquipmentLevel);
+
+            EquipmentLevelFloor = IsEndgameCompanion ? 50 : Math.Max(1, characterLevel - 10);
+            EquipmentLevelCap = characterLevel;
+            Inventory = new BotInventory();
+
+            try
+            {
+                // Equipment generators read Level. Temporarily exposing the rolled
+                // gear level keeps the character fully trained at its real level.
+                Level = IsTemporaryGroupHelper ? characterLevel : equipmentLevel;
+                // A Sluaghbinder Bane build, and a Covenant build that rolled
+                // its scythe option, is a two-handed weapon plan.  The class
+                // can use shields, but that does not make a shield part of
+                // this build.  Do not let the generic Shield career grant it
+                // an offhand on creation; doing so made every /spawn result
+                // look like the default mace-and-shield loadout even when the
+                // selected plan was supposed to use a scythe.
+                bool sluaghbinderScythePlan = SluaghbinderUsesScythe;
+                bool mayUseOffhand = !sluaghbinderScythePlan &&
+                    (BotSpec?.SpecType is eSpecType.DualWield or eSpecType.DualWieldAndShield or eSpecType.LeftAxe ||
+                     BestShieldLevel > 0);
+                bool includeOffhand = TemporaryCompanionBalance.EquipOffhand(IsTemporaryGroupHelper, characterLevel, mayUseOffhand, Random.Shared.NextDouble());
+                SetWeapons(includeOffhand);
+                if (includeOffhand)
+                    SetShield();
+                SetRanged();
+                BotRangedCombat.EnsureStarter(this);
+                BotStarterInstruments.Ensure(this);
+                if (IsTemporaryGroupHelper)
+                    EnsureTemporaryHelperWeapon();
+                Level = equipmentLevel;
+                SetArmor();
+                SetJewelry();
+                _endgameCompanionEquipped = IsEndgameCompanion;
+            }
+            finally
+            {
+                Level = characterLevel;
+                RefreshItemBonuses();
+                if (!IsTemporaryGroupHelper)
+                {
+                    EquipmentLevelFloor = 0;
+                    EquipmentLevelCap = 0;
+                }
+            }
+        }
+
+        // One-time promotion for helpers already present when their owner
+        // reaches 50. Run on the bot's normal turn, never in a player event or
+        // during combat/casting/horse travel. Preserve the existing build/group.
+        internal bool TryApplyEndgameCompanionUpgrade()
+        {
+            if (!IsTemporaryGroupHelper || _endgameCompanionEquipped || Owner?.Level != 50 ||
+                !IsAlive || IsCasting || InCombat || IsAttacking || IsOnStableMasterRoute ||
+                Brain is BotBrain { HasAggro: true } || ControlledBrain?.Body is { InCombat: true })
+                return false;
+
+            byte previousLevel = Level;
+            int healthPercent = HealthPercent, manaPercent = ManaPercent, endurancePercent = EndurancePercent;
+            Level = 50;
+            for (int level = Math.Max(6, previousLevel + 1); level <= Level; level++)
+                ApplyLevelStatGrowth(level);
+            if (previousLevel < Level)
+                SpendSpecPoints(Level, previousLevel);
+            RefreshSpecDependantSkills(false);
+            GetAllUsableSkills(true);
+            GetAllUsableListSpells(true);
+            SetBotSpells();
+            SortStyles();
+            SortSpells();
+            EquipBot(50);
+            // Replace a pre-50 summon through its normal release lifecycle.
+            // In particular this preserves Necromancer shade cleanup.
+            AutonomousPetSupport.CancelPendingCharm(this);
+            AutonomousPetSupport.ReleaseFieldTurrets(this);
+            CommandNpcRelease();
+            Health = Math.Max(1, MaxHealth * healthPercent / 100);
+            Mana = MaxMana * manaPercent / 100;
+            Endurance = MaxEndurance * endurancePercent / 100;
+            UpdateNPCEquipmentAppearance();
+            return true;
+        }
+
+        private void SetWeapons(bool includeOffhand = true)
+        {
+            if (BotSpec == null)
+                return;
+
+            switch (BotSpec.SpecType)
+            {
+                case eSpecType.SluaghbinderBulwark:
+                case eSpecType.SluaghbinderBane:
+                case eSpecType.SluaghbinderCovenant:
+                    // The selected Sluaghbinder plan is part of the bot's
+                    // identity.  Bane always starts with a usable scythe and
+                    // Covenant may start with the scythe it rolled; they must
+                    // not wait for a future loot drop before their build is
+                    // reflected in the active weapon.  Bulwark (and a
+                    // mace-and-shield Covenant) keeps the class's legal mace.
+                    if (SluaghbinderUsesScythe)
+                        BotEquipment.SetMeleeWeapon(this, eObjectType.Scythe, eHand.twoHand);
+                    else
+                        BotEquipment.SetMeleeWeapon(this, eObjectType.Blunt, eHand.oneHand);
+                    break;
+
+                case eSpecType.DualWield:
+                case eSpecType.DualWieldAndShield:
+                    BotEquipment.SetMeleeWeapon(this, BotSpec.WeaponOneType, eHand.oneHand);
+                    if (includeOffhand)
+                        BotEquipment.SetMeleeWeapon(this, BotSpec.WeaponOneType, eHand.leftHand);
+                    break;
+
+                case eSpecType.LeftAxe:
+                    BotEquipment.SetMeleeWeapon(this, BotSpec.WeaponOneType, eHand.oneHand);
+                    BotEquipment.SetMeleeWeapon(this, BotSpec.WeaponOneType, eHand.twoHand);
+                    if (includeOffhand)
+                        BotEquipment.SetMeleeWeapon(this, BotSpec.WeaponTwoType, eHand.leftHand);
+                    break;
+
+                case eSpecType.OneHandAndShield:
+                    BotEquipment.SetMeleeWeapon(this, BotSpec.WeaponOneType, eHand.oneHand);
+                    break;
+
+                case eSpecType.OneHandHybrid:
+                case eSpecType.TwoHandHybrid:
+                case eSpecType.TwoHanded when CharacterClass.ID != (int)eCharacterClass.Valewalker:
+                    BotEquipment.SetMeleeWeapon(this, BotSpec.WeaponOneType, eHand.oneHand);
+                    BotEquipment.SetMeleeWeapon(this, BotSpec.WeaponTwoType, eHand.twoHand, BotSpec.DamageType);
+                    break;
+
+                case eSpecType.Mid:
+                case eSpecType.PacHealer:
+                case eSpecType.AugHealer:
+                case eSpecType.MendHealer:
+                case eSpecType.MendShaman:
+                case eSpecType.AugShaman:
+                case eSpecType.SubtShaman:
+                    BotEquipment.SetMeleeWeapon(this, BotSpec.WeaponOneType, eHand.oneHand);
+                    BotEquipment.SetMeleeWeapon(this, BotSpec.WeaponOneType, eHand.twoHand);
+                    break;
+
+                case eSpecType.Instrument:
+                    BotEquipment.SetMeleeWeapon(this, BotSpec.WeaponOneType, eHand.oneHand);
+                    BotEquipment.SetInstrumentROG(this, Realm, (eCharacterClass)CharacterClass.ID, Level, eObjectType.Instrument, eInventorySlot.TwoHandWeapon, eInstrumentType.Flute);
+                    BotEquipment.SetInstrumentROG(this, Realm, (eCharacterClass)CharacterClass.ID, Level, eObjectType.Instrument, eInventorySlot.DistanceWeapon, eInstrumentType.Drum);
+                    BotEquipment.SetInstrumentROG(this, Realm, (eCharacterClass)CharacterClass.ID, Level, eObjectType.Instrument, eInventorySlot.FirstEmptyBackpack, eInstrumentType.Lute);
+                    break;
+
+                default:
+                    if (CharacterClass.ClassType == eClassType.ListCaster ||
+                        CharacterClass.ID == (int)eCharacterClass.Friar ||
+                        CharacterClass.ID == (int)eCharacterClass.Valewalker)
+                        BotEquipment.SetMeleeWeapon(this, BotSpec.WeaponOneType, eHand.twoHand);
+                    else if (CharacterClass.ID != (int)eCharacterClass.Hunter)
+                        BotEquipment.SetMeleeWeapon(this, BotSpec.WeaponOneType, eHand.oneHand);
+                    else
+                        BotEquipment.SetMeleeWeapon(this, BotSpec.WeaponOneType, eHand.twoHand);
+
+                    if (BotSpec.WeaponOneType == eObjectType.Sword)
+                        BotEquipment.SetMeleeWeapon(this, BotSpec.WeaponOneType, eHand.oneHand);
+                    break;
+            }
+
+            if (CharacterClass.ID == (int)eCharacterClass.Savage &&
+                SavageBotWeaponPolicy.TryBestGeneratedStarterSlot(this, out eActiveWeaponSlot savageSlot))
+                SwitchWeapon(savageSlot);
+            else if (PrimaryWeaponUsesTwoHands)
+                SwitchWeapon(eActiveWeaponSlot.TwoHanded);
+            else
+                SwitchWeapon(eActiveWeaponSlot.Standard);
+        }
+
+        private static bool IsBackpackSlot(eInventorySlot slot) =>
+            slot >= eInventorySlot.FirstBackpack && slot <= eInventorySlot.LastBackpack;
+
+        public static int PlannedTwoHandedUnlockLevel(eCharacterClass classId,
+            eObjectType plannedWeapon) => classId switch
+        {
+            // Classic Albion promotion gates. These bots begin directly in
+            // their final class, so equipment must still respect the levels at
+            // which a real character receives the advanced weapon ability.
+            eCharacterClass.Paladin => 5,
+            eCharacterClass.Armsman when plannedWeapon == eObjectType.PolearmWeapon => 5,
+            eCharacterClass.Armsman when plannedWeapon == eObjectType.TwoHandedWeapon => 10,
+            // Treat an unrecognized persisted Armsman 2H plan conservatively;
+            // its base Slash/Crush/Thrust weapon is always legal in the interim.
+            eCharacterClass.Armsman => 10,
+            _ => 1,
+        };
+
+        public static bool ShouldUsePlannedTwoHandedPrimary(eCharacterClass classId,
+            int level, bool plannedTwoHanded, eObjectType plannedWeapon = 0) =>
+            plannedTwoHanded && level >= PlannedTwoHandedUnlockLevel(classId, plannedWeapon);
+
+        private bool SluaghbinderUsesScythe =>
+            CharacterClass?.ID == (int)eCharacterClass.Sluaghbinder &&
+            BotSpec?.WeaponTwoType == eObjectType.Scythe &&
+            BotSpec?.Is2H == true;
+
+        /// <summary>True 1.65 Mode: a bot still in its base class (a Guardian who plans to be a Hero) carries the base
+        /// class's own starting weapon until it is promoted; its plan's weapon (a large weapon, a spear) is not usable
+        /// before then, which left such level-1 bots with no weapon at all (owner 2026-10-30).</summary>
+        private DbItemTemplate BaseClassStarterWeapon165 =>
+            Classic165Mode.IsOn && PersistentRecord is { PlannedClassId: > 0 } record && CharacterClass != null &&
+            CharacterClass.ID != record.PlannedClassId
+                ? DOL.GS.GameEvents.CreationStartupEquipment.GetStarterWeaponTemplate((eCharacterClass)CharacterClass.ID)
+                : null;
+
+        /// <summary>True 1.65 Mode: the weapon this bot's class started with (its base class's while not yet promoted).</summary>
+        private DbItemTemplate StarterWeapon165 => CharacterClass == null ? null :
+            BaseClassStarterWeapon165 ?? DOL.GS.GameEvents.CreationStartupEquipment.GetStarterWeaponTemplate((eCharacterClass)CharacterClass.ID);
+
+        /// <summary>True 1.65 Mode: the bot is still in its base class (not yet promoted), so its planned class's weapon
+        /// plan doesn't apply yet; it fights with what its base class can use (owner 2026-10-31: 566 level-1 bots had no
+        /// weapon because their period starter wasn't the plan's weapon type, and never moved to a fight).</summary>
+        public bool IsBaseClass165 => Classic165Mode.IsOn && CharacterClass != null && !CharacterClass.HasAdvancedFromBaseClass();
+
+        /// <summary>True 1.65 Mode: this is the period starting weapon of the bot's class (or of its base class), which it
+        /// keeps using until it finds an upgrade it prefers, whatever its weapon plan says (owner 2026-10-31).</summary>
+        public bool IsPeriodStarter165(DbItemTemplate template)
+        {
+            if (!Classic165Mode.IsOn || template == null || CharacterClass == null)
+                return false;
+            if (StarterWeapon165 is { } own && string.Equals(own.Id_nb, template.Id_nb, StringComparison.OrdinalIgnoreCase))
+                return true;
+            ICharacterClass baseClass = CharacterClass.HasAdvancedFromBaseClass() ? ScriptMgr.FindCharacterBaseClass(CharacterClass.ID) : null;
+            DbItemTemplate baseStarter = baseClass == null ? null :
+                DOL.GS.GameEvents.CreationStartupEquipment.GetStarterWeaponTemplate((eCharacterClass)baseClass.ID);
+            return baseStarter != null && string.Equals(baseStarter.Id_nb, template.Id_nb, StringComparison.OrdinalIgnoreCase);
+        }
+
+        /// <summary>The starting weapon goes in its own hand: a two-handed one in the two-hand slot, a one-handed one in
+        /// the main hand.</summary>
+        public static bool StarterFitsSlot165(DbItemTemplate starter, eInventorySlot target) => starter.Item_Type switch
+        {
+            Slot.TWOHAND => target == eInventorySlot.TwoHandWeapon,
+            Slot.RIGHTHAND => target == eInventorySlot.RightHandWeapon,
+            Slot.LEFTHAND => target == eInventorySlot.RightHandWeapon,   // one starting weapon, never a second copy in the off hand
+            _ => false,
+        };
+
+        /// <summary>True 1.65 Mode: weapons the old fallback generated for this bot (Atlas-style "ROG" items such as a
+        /// "Mighty Dagger") are taken away; the class's starting weapon replaces them (owner 2026-10-31: no ROGs).</summary>
+        private bool RemoveGeneratedWeapons165()
+        {
+            bool removed = false;
+            foreach (DbInventoryItem item in Inventory.AllItems.ToArray())
+                if (item?.Creator == nameof(GameBot) && item.Template is DbItemUnique &&
+                    (eObjectType)item.Object_Type != eObjectType.Instrument && Inventory.RemoveItem(item))
+                    removed = true;
+            return removed;
+        }
+
+        /// <summary>
+        /// True 1.65 Mode: without any usable main-hand or two-hand weapon, the class's starting weapon goes into its
+        /// own hand, and a class that started with a training shield gets it beside a one-handed weapon when the off hand
+        /// is empty. Only what a new character of that class received; nothing generated.
+        /// </summary>
+        private bool EnsureStarterWeaponInOwnHand165()
+        {
+            if (!Classic165Mode.IsOn || Inventory == null || CharacterClass == null)
+                return false;
+            bool changed = false;
+            DbItemTemplate starter = StarterWeapon165;
+            bool hasWeapon = BotWeaponStats.CanUseMelee(this, Inventory.GetItem(eInventorySlot.RightHandWeapon)) ||
+                             BotWeaponStats.CanUseMelee(this, Inventory.GetItem(eInventorySlot.TwoHandWeapon));
+            if (!hasWeapon && starter != null)
+            {
+                eInventorySlot own = starter.Item_Type == Slot.TWOHAND ? eInventorySlot.TwoHandWeapon : eInventorySlot.RightHandWeapon;
+                changed |= TryCreateConfiguredStarterWeapon(own, (eObjectType)starter.Object_Type);
+                if (BotWeaponStats.CanUseMelee(this, Inventory.GetItem(own)))
+                    SwitchWeapon(own == eInventorySlot.TwoHandWeapon ? eActiveWeaponSlot.TwoHanded : eActiveWeaponSlot.Standard);
+            }
+            DbItemTemplate shield = DOL.GS.GameEvents.CreationStartupEquipment.GetStarterShieldTemplate((eCharacterClass)CharacterClass.ID);
+            if (shield != null && BestShieldLevel > 0 && Inventory.GetItem(eInventorySlot.LeftHandWeapon) == null &&
+                Inventory.GetItem(eInventorySlot.RightHandWeapon) != null &&
+                !Inventory.AllItems.Any(i => i != null && (eObjectType)i.Object_Type == eObjectType.Shield))
+            {
+                GameInventoryItem item = GameInventoryItem.Create(shield);
+                item.Creator = nameof(GameBot);
+                item.Realm = (int)Realm;
+                if (HasAbilityToUseItem(shield) && Inventory.AddItem(eInventorySlot.LeftHandWeapon, item))
+                {
+                    RefreshItemBonuses();
+                    changed = true;
+                }
+            }
+            return changed;
+        }
+
+        private bool PrimaryWeaponUsesTwoHands =>
+            BaseClassStarterWeapon165 is { } baseStarter ? baseStarter.Item_Type == Slot.TWOHAND :
+            (CharacterClass?.ID == (int)eCharacterClass.Sluaghbinder &&
+             BotSpec?.WeaponTwoType == eObjectType.Scythe
+                ? SluaghbinderUsesScythe
+                : ShouldUsePlannedTwoHandedPrimary((eCharacterClass)(CharacterClass?.ID ?? 0),
+                    Level, BotSpec?.Is2H == true, BotSpec?.WeaponTwoType ?? 0)) ||
+            CharacterClass?.ClassType == eClassType.ListCaster ||
+            CharacterClass?.ID is (int)eCharacterClass.Friar or (int)eCharacterClass.Valewalker;
+
+        private eObjectType PreferredPrimaryWeaponType
+        {
+            get
+            {
+                if (BotSpec == null)
+                    return 0;
+                if (BaseClassStarterWeapon165 is { } baseStarter)
+                    return (eObjectType)baseStarter.Object_Type;
+                return BotWeaponStats.PrimaryType(BotSpec.WeaponOneType, BotSpec.WeaponTwoType, PrimaryWeaponUsesTwoHands);
+            }
+        }
+
+        private static int OwnedWeaponScore(DbInventoryItem item, eObjectType preferredType)
+        {
+            if (item == null)
+                return int.MinValue;
+            int preferred = (eObjectType)item.Object_Type == preferredType ? 1_000_000 : 0;
+            return preferred + Math.Max(0, item.Level) * 10_000 + Math.Max(0, item.DPS_AF) * 100 +
+                   Math.Max(0, item.Quality) + Math.Max(0, item.Bonus) * 2;
+        }
+
+        private bool IsOwnedWeaponCandidate(DbInventoryItem item, eInventorySlot target, bool twoHandOnly)
+        {
+            if (!BotWeaponStats.FitsConfiguredSlot(this, item, target))
+                return false;
+
+            // Item_Type is retained when loot is placed in the backpack. It is
+            // the authoritative hand shape; SlotPosition is only where that
+            // particular item currently lives.
+            bool twoHand = item.Item_Type == Slot.TWOHAND || item.SlotPosition == (int)eInventorySlot.TwoHandWeapon;
+            if (twoHandOnly)
+                return twoHand;
+            return !twoHand || item.SlotPosition == (int)target;
+        }
+
+        private bool TryEquipOwnedWeaponUpgrade(eInventorySlot target, eObjectType preferredType, bool twoHandOnly)
+        {
+            if (Inventory == null)
+                return false;
+
+            DbInventoryItem current = Inventory.GetItem(target);
+            int currentScore = BotWeaponStats.FitsConfiguredSlot(this, current, target)
+                ? OwnedWeaponScore(current, preferredType) : int.MinValue;
+            DbInventoryItem candidate = Inventory.AllItems
+                .Where(item => IsOwnedWeaponCandidate(item, target, twoHandOnly) &&
+                               ((eInventorySlot)item.SlotPosition == target ||
+                                (!twoHandOnly && target == eInventorySlot.RightHandWeapon &&
+                                 (eInventorySlot)item.SlotPosition == eInventorySlot.LeftHandWeapon) ||
+                                IsBackpackSlot((eInventorySlot)item.SlotPosition)))
+                .OrderByDescending(item => OwnedWeaponScore(item, preferredType))
+                .FirstOrDefault();
+            if (candidate == null || OwnedWeaponScore(candidate, preferredType) <= currentScore)
+                return false;
+
+            eInventorySlot source = (eInventorySlot)candidate.SlotPosition;
+            if (source != target && !Inventory.MoveItem(source, target, Math.Max(1, candidate.Count)))
+                return false;
+
+            RefreshItemBonuses();
+            SwitchWeapon(target == eInventorySlot.TwoHandWeapon
+                ? eActiveWeaponSlot.TwoHanded : eActiveWeaponSlot.Standard);
+            return true;
+        }
+
+        private bool TryMoveEquippedItemToBackpack(eInventorySlot slot)
+        {
+            DbInventoryItem item = Inventory?.GetItem(slot);
+            if (item == null)
+                return true;
+            eInventorySlot storage = Inventory.FindFirstEmptySlot(
+                eInventorySlot.FirstBackpack, eInventorySlot.LastBackpack);
+            if (storage == eInventorySlot.Invalid)
+                storage = Inventory.FindFirstEmptySlot(eInventorySlot.FirstVault, eInventorySlot.LastVault);
+            if (storage != eInventorySlot.Invalid &&
+                Inventory.MoveItem(slot, storage, Math.Max(1, item.Count)))
+                return true;
+
+            // Explicit cleanup policy for legacy bad loadouts: a focus staff
+            // must never remain equipped by a melee class merely because all
+            // forty backpack slots are occupied. Friars are the sole staff
+            // melee class; caster plans legitimately keep their focus staff.
+            bool invalidMeleeStaff = (eObjectType)item.Object_Type == eObjectType.Staff &&
+                                     CharacterClass?.ID != (int)eCharacterClass.Friar &&
+                                     CharacterClass?.ClassType != eClassType.ListCaster;
+            return invalidMeleeStaff && Inventory.RemoveItem(item);
+        }
+
+        private bool RequiresMeleeOffhand => BotSpec?.SpecType is
+            eSpecType.DualWield or eSpecType.DualWieldAndShield or eSpecType.LeftAxe;
+
+        private eObjectType PreferredOffhandWeaponType =>
+            BotSpec?.SpecType == eSpecType.LeftAxe && BotSpec.WeaponTwoType != 0
+                ? BotSpec.WeaponTwoType
+                : BotSpec?.WeaponOneType ?? (eObjectType)0;
+
+        private bool EnsureConfiguredMeleeOffhand()
+        {
+            if (!RequiresMeleeOffhand || PreferredOffhandWeaponType == 0)
+                return false;
+
+            DbInventoryItem current = Inventory.GetItem(eInventorySlot.LeftHandWeapon);
+            if (BotWeaponStats.FitsConfiguredSlot(this, current, eInventorySlot.LeftHandWeapon))
+                return false;
+
+            // A bag/armor/focus item in the visible offhand is inventory, not
+            // a weapon. Preserve it in the backpack before selecting or
+            // creating the class weapon that the build actually trained.
+            if (current != null && !TryMoveEquippedItemToBackpack(eInventorySlot.LeftHandWeapon))
+                return false;
+
+            if (TryEquipOwnedWeaponUpgrade(eInventorySlot.LeftHandWeapon,
+                    PreferredOffhandWeaponType, false))
+                return true;
+
+            return TryCreateConfiguredStarterWeapon(
+                eInventorySlot.LeftHandWeapon, PreferredOffhandWeaponType);
+        }
+
+        private bool StowInvalidInactiveWeaponSlots(eInventorySlot primarySlot)
+        {
+            bool changed = false;
+            foreach (eInventorySlot slot in new[]
+                     {
+                         eInventorySlot.RightHandWeapon,
+                         eInventorySlot.TwoHandWeapon,
+                     })
+            {
+                if (slot == primarySlot)
+                    continue;
+                DbInventoryItem item = Inventory.GetItem(slot);
+                if (item != null && !BotWeaponStats.CanUseMelee(this, item) &&
+                    TryMoveEquippedItemToBackpack(slot))
+                    changed = true;
+            }
+            return changed;
+        }
+
+        private bool TryCreateConfiguredStarterWeapon(eInventorySlot target, eObjectType type)
+        {
+            if (Inventory == null || type == 0 || !BotWeaponStats.IsMeleeWeapon(type))
+                return false;
+
+            DbInventoryItem occupied = Inventory.GetItem(target);
+            if (BotWeaponStats.FitsConfiguredSlot(this, occupied, target))
+            {
+                SwitchWeapon(target == eInventorySlot.TwoHandWeapon
+                    ? eActiveWeaponSlot.TwoHanded : eActiveWeaponSlot.Standard);
+                return false;
+            }
+
+            // True 1.65 Mode (owner 2026-10-31): only the class's own starting weapon, in its own hand, whatever the build
+            // would like later (an Armsman's polearm, a rogue's off-hand dagger); never a generated "ROG" weapon. The bot
+            // keeps it until loot or a merchant gives it an upgrade it prefers.
+            DbItemTemplate period = Classic165Mode.IsOn ? StarterWeapon165 : null;
+            if (Classic165Mode.IsOn && (period == null || !StarterFitsSlot165(period, target)))
+                return false;
+
+            eInventorySlot displacedSlot = eInventorySlot.Invalid;
+            if (occupied != null)
+            {
+                // Builds prior to the persistent-fallback fix could save the
+                // inventory relation but not its generated unique template.
+                // Remove only that unusable GameBot-created row so a full bag
+                // cannot permanently block the correct class weapon repair.
+                if (BotWeaponStats.IsBrokenGeneratedFallback(occupied) && Inventory.RemoveItem(occupied))
+                    occupied = null;
+            }
+            if (occupied != null)
+            {
+                displacedSlot = Inventory.FindFirstEmptySlot(eInventorySlot.FirstBackpack, eInventorySlot.LastBackpack);
+                if (displacedSlot == eInventorySlot.Invalid)
+                    displacedSlot = Inventory.FindFirstEmptySlot(eInventorySlot.FirstVault, eInventorySlot.LastVault);
+                if (displacedSlot == eInventorySlot.Invalid)
+                {
+                    bool invalidMeleeStaff = (eObjectType)occupied.Object_Type == eObjectType.Staff &&
+                                             CharacterClass.ID != (int)eCharacterClass.Friar &&
+                                             CharacterClass.ClassType != eClassType.ListCaster;
+                    if (!invalidMeleeStaff || !Inventory.RemoveItem(occupied))
+                        return false;
+                    occupied = null;
+                }
+                else if (!Inventory.MoveItem(target, displacedSlot, Math.Max(1, occupied.Count)))
+                    return false;
+            }
+
+            GameInventoryItem replacement;
+            if (period != null)
+                replacement = GameInventoryItem.Create(period);
+            else
+            {
+                var generated = new GeneratedUniqueItem(false, Realm, (eCharacterClass)CharacterClass.ID,
+                    (byte)Math.Clamp((int)Level, 1, (int)MaxLevel), type, target);
+                generated.Item_Type = (int)target;
+                generated.DPS_AF = Math.Max(generated.DPS_AF, BotWeaponStats.NormalDps(Level));
+                generated.Quality = Math.Max(generated.Quality, 85);
+                generated.SPD_ABS = Math.Max(generated.SPD_ABS, 20);
+                generated.MaxCondition = Math.Max(generated.MaxCondition, 50_000);
+                generated.Condition = Math.Max(generated.Condition, generated.MaxCondition);
+                generated.MaxDurability = Math.Max(generated.MaxDurability, generated.MaxCondition);
+                generated.Durability = Math.Max(generated.Durability, generated.MaxDurability);
+                // GeneratedUniqueItem intentionally defaults to AllowAdd=false.
+                // Persistent GameBot inventories need the unique side of the
+                // relation saved with the inventory row or the weapon reloads as a
+                // blank, unusable template after the next server start.
+                if (Inventory is BotInventory { IsPersistent: true })
+                    generated.AllowAdd = true;
+                replacement = GameInventoryItem.Create(generated);
+            }
+            replacement.Creator = nameof(GameBot);
+            replacement.Realm = (int)Realm;
+            if (!Inventory.AddItem(target, replacement) || !BotWeaponStats.CanUseMelee(this, replacement))
+            {
+                if (Inventory.GetItem(target) == replacement)
+                    Inventory.RemoveItemWithoutDbDeletion(replacement);
+                if (occupied != null && displacedSlot != eInventorySlot.Invalid && Inventory.GetItem(target) == null)
+                    Inventory.MoveItem(displacedSlot, target, Math.Max(1, occupied.Count));
+                return false;
+            }
+
+            RefreshItemBonuses();
+            SwitchWeapon(target == eInventorySlot.TwoHandWeapon
+                ? eActiveWeaponSlot.TwoHanded : eActiveWeaponSlot.Standard);
+            return true;
+        }
+
+        /// <summary>
+        /// GameBot-only weapon reconciliation. Existing real inventory is
+        /// preferred over creating anything: the highest-level class-valid
+        /// weapon in the bot's equipment/backpack is moved into the primary
+        /// hand as an upgrade. Invalid occupied slots are displaced into the
+        /// backpack before a normalized fallback is created, so no item is
+        /// silently deleted and no staff can become a hunter/shadowblade's
+        /// melee weapon.
+        /// </summary>
+        private bool EnsureAutonomousStarterWeapon()
+        {
+            if (Inventory == null || CharacterClass == null || BotSpec == null)
+                return false;
+
+            bool removedGenerated = Classic165Mode.IsOn && RemoveGeneratedWeapons165();
+
+            if (CharacterClass.ID == (int)eCharacterClass.Savage)
+                return EnsureSavageWeaponReady() | removedGenerated | EnsureStarterWeaponInOwnHand165();
+
+            eInventorySlot target = PrimaryWeaponUsesTwoHands
+                ? eInventorySlot.TwoHandWeapon : eInventorySlot.RightHandWeapon;
+            eObjectType preferredType = PreferredPrimaryWeaponType;
+            if (preferredType == 0)
+                return removedGenerated | EnsureStarterWeaponInOwnHand165();
+
+            bool changed = removedGenerated | TryEquipOwnedWeaponUpgrade(target, preferredType, PrimaryWeaponUsesTwoHands);
+
+            DbInventoryItem current = Inventory.GetItem(target);
+            if (!BotWeaponStats.FitsConfiguredSlot(this, current, target))
+            {
+                changed |= TryCreateConfiguredStarterWeapon(target, preferredType);
+                current = Inventory.GetItem(target);
+            }
+            // True 1.65 Mode: a build whose weapon wants the other hand (a two-handed plan, a one-handed starter) still
+            // carries the class's starting weapon in its own hand until it finds what it wants.
+            changed |= EnsureStarterWeaponInOwnHand165();
+
+            changed |= EnsureConfiguredMeleeOffhand();
+            bool hasSluaghbinderShield = Inventory.AllItems.Any(item =>
+                item != null && (eObjectType)item.Object_Type == eObjectType.Shield);
+            if (CharacterClass.ID == (int)eCharacterClass.Sluaghbinder &&
+                !SluaghbinderUsesScythe && BestShieldLevel > 0 && !hasSluaghbinderShield)
+            {
+                // Bulwark and mace-and-shield Covenant use the class-career
+                // shield.  A scythe plan intentionally has no active offhand.
+                BotEquipment.SetShield(this, BestShieldLevel);
+                changed = true;
+            }
+            changed |= StowInvalidInactiveWeaponSlots(target);
+
+            bool primaryReady = BotWeaponStats.FitsConfiguredSlot(this, Inventory.GetItem(target), target);
+            if (primaryReady)
+                SwitchWeapon(target == eInventorySlot.TwoHandWeapon
+                    ? eActiveWeaponSlot.TwoHanded : eActiveWeaponSlot.Standard);
+            else
+            {
+                // A full backpack can make it impossible to stow an old item
+                // immediately. Never display/use it: fall back to any legal
+                // standard or two-hand weapon already owned, and retry after
+                // the next inventory-maintenance vendor pass creates space.
+                bool standardReady = BotWeaponStats.CanUseMelee(this,
+                    Inventory.GetItem(eInventorySlot.RightHandWeapon));
+                bool twoHandReady = BotWeaponStats.CanUseMelee(this,
+                    Inventory.GetItem(eInventorySlot.TwoHandWeapon));
+                if (standardReady)
+                    SwitchWeapon(eActiveWeaponSlot.Standard);
+                else if (twoHandReady)
+                    SwitchWeapon(eActiveWeaponSlot.TwoHanded);
+                else if (log.IsWarnEnabled && GameLoop.GameLoopTime >= _nextWeaponRepairWarningTick)
+                {
+                    // Weapon reconciliation runs from the ordinary bot pulse.
+                    // A full backpack or a temporarily unavailable service is
+                    // not a new failure every pulse; rate-limit the diagnostic
+                    // while retaining the retry and preserving all real items.
+                    _nextWeaponRepairWarningTick = GameLoop.GameLoopTime + 60_000;
+                    log.Warn($"No usable {preferredType} weapon or free replacement slot for bot {Name}; preserving existing inventory.");
+                }
+            }
+
+            return changed;
+        }
+
+        private bool TryEquipBestSavageWeapon(eInventorySlot target)
+        {
+            DbInventoryItem current = Inventory.GetItem(target);
+            double currentScore = SavageBotWeaponPolicy.CombatScore(this, current, target);
+            DbInventoryItem best = Inventory.AllItems
+                .Where(item => item != null &&
+                    ((eInventorySlot)item.SlotPosition == target ||
+                     IsBackpackSlot((eInventorySlot)item.SlotPosition) ||
+                     target == eInventorySlot.RightHandWeapon &&
+                     (eInventorySlot)item.SlotPosition == eInventorySlot.LeftHandWeapon))
+                .OrderByDescending(item => SavageBotWeaponPolicy.CombatScore(this, item, target))
+                .FirstOrDefault();
+            if (best == null || SavageBotWeaponPolicy.CombatScore(this, best, target) <= currentScore)
+                return false;
+
+            eInventorySlot source = (eInventorySlot)best.SlotPosition;
+            if (!Inventory.MoveItem(source, target, Math.Max(1, best.Count)))
+                return false;
+            RefreshItemBonuses();
+            return true;
+        }
+
+        private bool EnsureSavageWeaponReady()
+        {
+            bool changed = TryEquipBestSavageWeapon(eInventorySlot.RightHandWeapon);
+            bool handToHand = BotSpec.WeaponOneType == eObjectType.HandToHand;
+            changed |= TryEquipBestSavageWeapon(handToHand
+                ? eInventorySlot.LeftHandWeapon : eInventorySlot.TwoHandWeapon);
+
+            if (!SavageBotWeaponPolicy.TryBestActiveSlot(this, out eActiveWeaponSlot activeSlot))
+            {
+                eInventorySlot starterSlot = handToHand
+                    ? eInventorySlot.RightHandWeapon : eInventorySlot.TwoHandWeapon;
+                changed |= TryCreateConfiguredStarterWeapon(starterSlot, BotSpec.WeaponOneType);
+            }
+            if (handToHand && SavageBotWeaponPolicy.CombatScore(this,
+                    Inventory.GetItem(eInventorySlot.LeftHandWeapon), eInventorySlot.LeftHandWeapon) <= 0)
+            {
+                DbInventoryItem offhand = Inventory.GetItem(eInventorySlot.LeftHandWeapon);
+                if (offhand == null || TryMoveEquippedItemToBackpack(eInventorySlot.LeftHandWeapon))
+                    changed |= TryCreateConfiguredStarterWeapon(eInventorySlot.LeftHandWeapon, BotSpec.WeaponOneType);
+            }
+            else if (!handToHand && Inventory.GetItem(eInventorySlot.LeftHandWeapon) != null &&
+                     TryMoveEquippedItemToBackpack(eInventorySlot.LeftHandWeapon))
+                changed = true;
+
+            // Legacy slots may still hold unusable weapons. Preserve the items
+            // in storage when possible, while the active choice stays legal.
+            changed |= StowInvalidInactiveWeaponSlots(eInventorySlot.Invalid);
+            if (SavageBotWeaponPolicy.TryBestActiveSlot(this, out activeSlot))
+                SwitchWeapon(activeSlot);
+            return changed;
+        }
+
+        // Called by BotBrain only after a melee decision found no legal active
+        // weapon.  Keeping the reconciliation behind this GameBot boundary
+        // prevents ordinary GameNPC and real-player equipment from changing.
+        internal bool EnsureBotWeaponReady()
+        {
+            bool changed = EnsureAutonomousStarterWeapon();
+            if (changed && IsAutonomousWorldBot)
+            {
+                MarkAutonomousStateDirty();
+                AutonomousBotEconomy.MarkInventoryChanged(this);
+                AutonomousBotStatusPersistence.Queue(this, true);
+            }
+            return changed;
+        }
+
+        private void EnsureTemporaryHelperWeapon()
+        {
+            EnsureAutonomousStarterWeapon();
+            bool hasUsableWeapon = BotWeaponStats.CanUseMelee(this, Inventory.GetItem(eInventorySlot.RightHandWeapon)) ||
+                                   BotWeaponStats.CanUseMelee(this, Inventory.GetItem(eInventorySlot.TwoHandWeapon)) ||
+                                   BotRangedCombat.CanUse(this, Inventory.GetItem(eInventorySlot.DistanceWeapon));
+            if (hasUsableWeapon || BotSpec == null)
+                return;
+
+            bool useTwoHands = PrimaryWeaponUsesTwoHands;
+            eInventorySlot slot = useTwoHands ? eInventorySlot.TwoHandWeapon : eInventorySlot.RightHandWeapon;
+            BotEquipment.SetWeaponROG(
+                this,
+                Realm,
+                (eCharacterClass)CharacterClass.ID,
+                Level,
+                BotSpec.WeaponOneType,
+                slot,
+                eDamageType.Slash);
+            SwitchWeapon(useTwoHands ? eActiveWeaponSlot.TwoHanded : eActiveWeaponSlot.Standard);
+        }
+
+        private void SetShield()
+        {
+            BotEquipment.SetShield(this, BestShieldLevel);
+        }
+
+        private void SetRanged()
+        {
+            foreach (Ability ability in GetAllAbilities())
+            {
+                switch (ability.KeyName)
+                {
+                    case "Weaponry: Thrown": BotEquipment.SetRangedWeapon(this, eObjectType.Thrown); break;
+                    case "Weaponry: Shortbows": BotEquipment.SetRangedWeapon(this, eObjectType.Fired); break;
+                    case "Weaponry: Crossbow": BotEquipment.SetRangedWeapon(this, eObjectType.Crossbow); break;
+                    case "Weaponry: Recurved Bows": BotEquipment.SetRangedWeapon(this, eObjectType.RecurvedBow); SwitchWeapon(eActiveWeaponSlot.Distance); break;
+                    case "Weaponry: Longbows": BotEquipment.SetRangedWeapon(this, eObjectType.Longbow); SwitchWeapon(eActiveWeaponSlot.Distance); break;
+                    case "Weaponry: Composite Bows": BotEquipment.SetRangedWeapon(this, eObjectType.CompositeBow); SwitchWeapon(eActiveWeaponSlot.Distance); break;
+                }
+            }
+        }
+
+        private void SetArmor()
+        {
+            int armorLevel = BestArmorLevel;
+            eObjectType armorType = eObjectType.GenericArmor;
+
+            switch (armorLevel)
+            {
+                case 1: armorType = eObjectType.Cloth; break;
+                case 2: armorType = eObjectType.Leather; break;
+                case 3:
+                    armorType = (Realm == eRealm.Hibernia) ? eObjectType.Reinforced : eObjectType.Studded;
+                    break;
+                case 4:
+                    armorType = (Realm == eRealm.Hibernia) ? eObjectType.Scale : eObjectType.Chain;
+                    break;
+                case 5: armorType = eObjectType.Plate; break;
+            }
+
+            BotEquipment.SetArmor(this, armorType);
+        }
+
+        private void SetJewelry()
+        {
+            BotEquipment.SetJewelryROG(this, Realm, (eCharacterClass)CharacterClass.ID, Level, eObjectType.Magical);
+        }
+
+        public virtual void RefreshItemBonuses()
+        {
+            ItemBonus.Clear();
+            string slotToLoad = string.Empty;
+
+            switch (VisibleActiveWeaponSlots)
+            {
+                case 16: slotToLoad = "rightandleftHandSlot"; break;
+                case 18: slotToLoad = "leftandtwoHandSlot"; break;
+                case 31: slotToLoad = "leftHandSlot"; break;
+                case 34: slotToLoad = "twoHandSlot"; break;
+                case 51: slotToLoad = "distanceSlot"; break;
+                case 240: slotToLoad = "righttHandSlot"; break;
+                case 242: slotToLoad = "twoHandSlot"; break;
+            }
+
+            foreach (DbInventoryItem item in Inventory.EquippedItems)
+            {
+                if (item == null)
+                    continue;
+
+                bool add = true;
+
+                if (slotToLoad != string.Empty)
+                {
+                    switch (item.SlotPosition)
+                    {
+                        case Slot.TWOHAND:
+                            if (!slotToLoad.Contains("twoHandSlot"))
+                                add = false;
+                            break;
+                        case Slot.RIGHTHAND:
+                            if (!slotToLoad.Contains("right"))
+                                add = false;
+                            break;
+                        case Slot.SHIELD:
+                        case Slot.LEFTHAND:
+                            if (!slotToLoad.Contains("left"))
+                                add = false;
+                            break;
+                        case Slot.RANGED:
+                            if (slotToLoad != "distanceSlot")
+                                add = false;
+                            break;
+                    }
+                }
+
+                if (!add)
+                    continue;
+
+                if (item.IsMagical)
+                {
+                    if (item.Bonus1 != 0) ItemBonus[(eProperty)item.Bonus1Type] += item.Bonus1;
+                    if (item.Bonus2 != 0) ItemBonus[(eProperty)item.Bonus2Type] += item.Bonus2;
+                    if (item.Bonus3 != 0) ItemBonus[(eProperty)item.Bonus3Type] += item.Bonus3;
+                    if (item.Bonus4 != 0) ItemBonus[(eProperty)item.Bonus4Type] += item.Bonus4;
+                    if (item.Bonus5 != 0) ItemBonus[(eProperty)item.Bonus5Type] += item.Bonus5;
+                    if (item.Bonus6 != 0) ItemBonus[(eProperty)item.Bonus6Type] += item.Bonus6;
+                    if (item.Bonus7 != 0) ItemBonus[(eProperty)item.Bonus7Type] += item.Bonus7;
+                    if (item.Bonus8 != 0) ItemBonus[(eProperty)item.Bonus8Type] += item.Bonus8;
+                    if (item.Bonus9 != 0) ItemBonus[(eProperty)item.Bonus9Type] += item.Bonus9;
+                    if (item.Bonus10 != 0) ItemBonus[(eProperty)item.Bonus10Type] += item.Bonus10;
+                    if (item.ExtraBonus != 0) ItemBonus[(eProperty)item.ExtraBonusType] += item.ExtraBonus;
+                }
+            }
+        }
+
+        public override DbInventoryItem ActiveLeftWeapon =>
+            CharacterClass?.ID == (int)eCharacterClass.Savage &&
+            (BotSpec?.WeaponOneType != eObjectType.HandToHand ||
+             !BotWeaponStats.FitsConfiguredSlot(this, base.ActiveLeftWeapon, eInventorySlot.LeftHandWeapon))
+                ? null : base.ActiveLeftWeapon;
+
+        public override void SwitchWeapon(eActiveWeaponSlot slot)
+        {
+            // GameNPC.SwitchWeapon intentionally stops and restarts an active
+            // attack, even when the requested slot is already selected. That
+            // is useful for scripted NPCs, but inventory/equipment refreshes
+            // can legitimately repeat the current slot for a GameBot. During
+            // a bow draw that reset RangedAttackState to None and produced an
+            // endless prepare animation instead of an arrow release.
+            //
+            // Only suppress a true no-op. If an item was replaced in the same
+            // slot (or the standard offhand changed), run the native switch so
+            // active item references and appearance are still refreshed.
+            if (slot == ActiveWeaponSlot && ActiveSlotMatchesInventory(slot))
+            {
+                if (Inventory != null)
+                    RefreshItemBonuses();
+                return;
+            }
+
+            base.SwitchWeapon(slot);
+            if (Inventory != null)
+                RefreshItemBonuses();
+        }
+
+        private bool ActiveSlotMatchesInventory(eActiveWeaponSlot slot)
+        {
+            if (Inventory == null)
+                return false;
+
+            return slot switch
+            {
+                eActiveWeaponSlot.Standard =>
+                    ReferenceEquals(ActiveWeapon, Inventory.GetItem(eInventorySlot.RightHandWeapon)) &&
+                    ReferenceEquals(ActiveLeftWeapon,
+                        CharacterClass?.ID == (int)eCharacterClass.Savage &&
+                        (BotSpec?.WeaponOneType != eObjectType.HandToHand ||
+                         !BotWeaponStats.FitsConfiguredSlot(this,
+                             Inventory.GetItem(eInventorySlot.LeftHandWeapon), eInventorySlot.LeftHandWeapon))
+                            ? null : Inventory.GetItem(eInventorySlot.LeftHandWeapon)),
+                eActiveWeaponSlot.TwoHanded =>
+                    ReferenceEquals(ActiveWeapon, Inventory.GetItem(eInventorySlot.TwoHandWeapon)),
+                eActiveWeaponSlot.Distance =>
+                    ReferenceEquals(ActiveWeapon, Inventory.GetItem(eInventorySlot.DistanceWeapon)),
+                _ => false,
+            };
+        }
+
+        #endregion
+
+        #region Database
+
+        public void SaveToDatabase()
+        {
+            if (IsTemporaryGroupHelper)
+                return;
+            BotDatabase.SaveBot(this);
+        }
+
+        public void LoadFromDatabase()
+        {
+            log.Debug($"LoadFromDatabase called for bot {Name}");
+        }
+
+        #endregion
+
+        #region Movement
+
+        /// <summary>
+        /// Synchronizes the NPC movement component with coordinates assigned
+        /// before AddToWorld. Login placement and validation run before the
+        /// normal AddToWorld synchronization, so they must explicitly perform
+        /// this step after loading or choosing a saved starting position.
+        /// </summary>
+        internal void SynchronizePositionForLoginValidation()
+        {
+            movementComponent.ForceUpdatePosition();
+        }
+
+        public override void WalkTo(Vector3 position, short speed)
+        {
+            if (IsOnStableMasterRoute)
+                return;
+
+            if (speed > 0 && IsRecoveryResting)
+                return;
+
+            // Persistent actors use collision-safe navigation for every ordinary
+            // walk order, including combat approaches and service interactions.
+            // A tiny cross-zone seam step remains direct because Detour meshes
+            // are stored per zone and cannot calculate across that boundary.
+            Zone destinationZone = CurrentRegion?.GetZone((int)position.X, (int)position.Y);
+            if (IsAutonomousWorldBot && CurrentZone != null && destinationZone == CurrentZone)
+                base.PathTo(position, speed);
+            else
+                base.WalkTo(position, speed);
+        }
+
+        public override void PathTo(Vector3 position, short speed)
+        {
+            if (speed > 0 && IsRecoveryResting)
+                return;
+            base.PathTo(position, speed);
+        }
+
+        public override void Follow(GameObject target, int minDistance, int maxDistance)
+        {
+            if (target != null && IsRecoveryResting)
+                return;
+            base.Follow(target, minDistance, maxDistance);
+        }
+
+        public new void StopFollowing()
+        {
+            base.StopFollowing();
+        }
+
+        public void MoveTo(Vector3 position)
+        {
+            WalkTo(position, MaxSpeed);
+        }
+
+        public override bool IsMoving => base.IsMoving || IsStrafing;
+
+        #endregion
+
+        #region Effectiveness
+
+        // True 1.65 Mode: resurrection sickness lowers a bot's effectiveness like a player's; elsewhere it stays 1.
+        private double _effectiveness165 = 1.0;
+
+        // The value is read from the sickness effects the bot has right now, so a sickness that ends without its stop step
+        // (death, leaving the world) can't leave the bot weakened for good; _effectiveness165 still tracks the adds and
+        // removals for the BOT_DEATH_165 log (eff_tracked) to show whether they ever drift.
+        public override double Effectiveness
+        {
+            get => Classic165Mode.IsOn ? SicknessEffectiveness165() : 1.0;
+            set { if (Classic165Mode.IsOn) _effectiveness165 = value; }
+        }
+
+        private double SicknessEffectiveness165()
+        {
+            double penalty = Penalty(eEffect.ResurrectionIllness) + Penalty(eEffect.RvrResurrectionIllness);
+            return Math.Clamp(1.0 - penalty, 0.0, 1.0);
+
+            double Penalty(eEffect type) =>
+                EffectListService.GetEffectOnTarget(this, type) is ECSGameSpellEffect { SpellHandler.Spell: { } spell }
+                    ? spell.Value * 0.01 : 0;
+        }
+
+        double IGamePlayer.Effectiveness
+        {
+            get => Effectiveness;
+            set => Effectiveness = value;
+        }
+
+        #endregion
+
+        #region InteractDistance
+
+        public override int InteractDistance => WorldMgr.VISIBILITY_DISTANCE;
+
+        #endregion
+    }
+}

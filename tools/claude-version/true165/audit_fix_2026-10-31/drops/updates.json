@@ -1,0 +1,118 @@
+[
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 25 WHERE lower(TemplateName) = 'drakoran leech' AND lower(ItemTemplateID) = 'drakoran_leech_hand'",
+  "reason": "True 1.65: period kill-task item Drakoran Leech Hand on drakoran leech: normal 25 % drop instead of the Atlas 3-minute timed drop (estimated 25 % (no Uthgard record of the item); period: period-zam item 5334 'Drakoran Leech Hand' (capture 20031014) Kill Task item; period-zam item 5334 'Drakoran Leech Hand' (capture 20031014) dropped by drakoran leech)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 6 WHERE lower(TemplateName) = 'alp luachra' AND lower(ItemTemplateID) = 'alp_luachra_head'",
+  "reason": "True 1.65: period kill-task item Alp Luachra Head on Alp Luachra: normal 6 % drop instead of the Atlas 3-minute timed drop (Uthgard measured on alp luachra: 39 in 684 kills; period: period-zam item 5563 'Alp Luachra Head' (capture 20030904); period-zam item 5563 'Alp Luachra Head' (capture 20030904) dropped by alp luachra)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 1 WHERE lower(TemplateName) = 'granite giant' AND lower(ItemTemplateID) = 'ancient_granite_stone'",
+  "reason": "True 1.65: period kill-task item Ancient Granite Stone on Granite Giant: normal 1 % drop instead of the Atlas 3-minute timed drop (Uthgard measured on granite giant: 23 in 4486 kills; period: period-zam item 5288 'Ancient Granite Stone' (capture 20030821) Kill Task item; period-zam item 5288 'Ancient Granite Stone' (capture 20030821) dropped by granite giant)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 9 WHERE lower(TemplateName) = 'cyclops' AND lower(ItemTemplateID) = 'bloody_cyclops_eye'",
+  "reason": "True 1.65: period kill-task item Bloody Cyclops Eye on Cyclops: normal 9 % drop instead of the Atlas 3-minute timed drop (Uthgard measured on cyclops: 28 in 306 kills; period: period-zam item 5303 'Bloody Cyclops Eye' (capture 20031013) Kill Task item; period-zam item 5303 'Bloody Cyclops Eye' (capture 20031013) dropped by cyclops)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 5 WHERE lower(TemplateName) = 'forest stalker' AND lower(ItemTemplateID) = 'blood_red_berry_wine'",
+  "reason": "True 1.65: period kill-task item Blood Red Berry Wine on Forest Stalker: normal 5 % drop instead of the Atlas 3-minute timed drop (Uthgard measured on forest stalker: 58 in 1157 kills; period: period-zam item 5302 'Blood Red Berry Wine' (capture 20030826) Kill Task item; period-zam item 5302 'Blood Red Berry Wine' (capture 20030826) dropped by forest stalker)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 25 WHERE lower(TemplateName) = 'aged boreal cockatrice' AND lower(ItemTemplateID) = 'boreal_cockatrice_feather'",
+  "reason": "True 1.65: period kill-task item Cockatrice Feather on Aged Boreal Cockatrice: normal 25 % drop instead of the Atlas 3-minute timed drop (estimated 25 % (no Uthgard record of the item); period: kept REVIEW item)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 2 WHERE lower(TemplateName) = 'ellyll villager' AND lower(ItemTemplateID) = 'bottle_of_ellyll_wine'",
+  "reason": "True 1.65: period kill-task item Bottle of Ellyll Wine on Ellyll Villager: normal 2 % drop instead of the Atlas 3-minute timed drop (Uthgard measured on ellyll villager: 4 in 204 kills; period: period-zam item 5304 'Bottle of Ellyll Wine' (capture 20030826) Kill Task item; period-zam item 5304 'Bottle of Ellyll Wine' (capture 20030826) dropped by ellyll villager)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 1 WHERE lower(TemplateName) = 'bucca' AND lower(ItemTemplateID) = 'bucca_silver_mirror'",
+  "reason": "True 1.65: period kill-task item Bucca Silver Mirror on bucca: normal 1 % drop instead of the Atlas 3-minute timed drop (Uthgard measured on bucca: 5 in 453 kills; period: period-zam item 5305 'Bucca Silver Mirror' (capture 20031014) Kill Task item; period-zam item 5305 'Bucca Silver Mirror' (capture 20031014) dropped by bucca)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 1 WHERE lower(TemplateName) = 'bwgan hunter' AND lower(ItemTemplateID) = 'bwgan_hunter_eye'",
+  "reason": "True 1.65: period kill-task item Bwgan Hunter Eye on bwgan hunter: normal 1 % drop instead of the Atlas 3-minute timed drop (Uthgard measured on bwgan hunter: 1 in 130 kills; period: period-zam item 5306 'Bwgan Hunter Eye' (capture 20030826) Kill Task item; period-zam item 5306 'Bwgan Hunter Eye' (capture 20030826) dropped by bwgan hunter)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 25 WHERE lower(TemplateName) = 'caer caddug bodyguard' AND lower(ItemTemplateID) = 'caer_caddug_bodyguard_bracer'",
+  "reason": "True 1.65: period kill-task item Caer Caddug Bodyguard Bracer on Caer Caddug Bodyguard: normal 25 % drop instead of the Atlas 3-minute timed drop (estimated 25 % (no Uthgard record of the item); period: period-zam item 5307 'Caer Caddug Bodyguard Bracer' (capture 20031014) Kill Task item; period-zam item 5307 'Caer Caddug Bodyguard Bracer' (capture 20031014) dropped by caer caddug bodyguard)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 25 WHERE lower(TemplateName) = 'cliff crawler' AND lower(ItemTemplateID) = 'cliff_crawler_leg'",
+  "reason": "True 1.65: period kill-task item Cliff Crawler Leg on Cliff Crawler: normal 25 % drop instead of the Atlas 3-minute timed drop (estimated 25 % (no Uthgard record of the item); period: period-zam item 5312 'Cliff Crawler Leg' (capture 20030826) Kill Task item; period-zam item 5312 'Cliff Crawler Leg' (capture 20030826) dropped by cliff crawler)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 25 WHERE lower(TemplateName) = 'cornish hen' AND lower(ItemTemplateID) = 'cornish_hen_tail'",
+  "reason": "True 1.65: period kill-task item Cornish Hen Tail on cornish hen: normal 25 % drop instead of the Atlas 3-minute timed drop (estimated 25 % (no Uthgard record of the item); period: period-zam item 5319 'Cornish Hen Tail' (capture 20031014) Kill Task item; period-zam item 5319 'Cornish Hen Tail' (capture 20031014) dropped by cornish hen)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 25 WHERE lower(TemplateName) = 'dark fire' AND lower(ItemTemplateID) = 'crystallized_darkfire'",
+  "reason": "True 1.65: period kill-task item Crystallized Darkfire on Dark Fire: normal 25 % drop instead of the Atlas 3-minute timed drop (estimated 25 % (no Uthgard record of the item); period: kept REVIEW item)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 1 WHERE lower(TemplateName) = 'danaoin fisherman' AND lower(ItemTemplateID) = 'danaoin_fishing_fly'",
+  "reason": "True 1.65: period kill-task item Danaoin Fishing Fly on Danaoin Fisherman: normal 1 % drop instead of the Atlas 3-minute timed drop (Uthgard measured on danaoin fisherman: 1 in 2273 kills; period: period-zam item 5322 'Danaoin Fishing Fly' (capture 20031013) Kill Task item; period-zam item 5322 'Danaoin Fishing Fly' (capture 20031013) dropped by danaoin fisherman)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 25 WHERE lower(TemplateName) = 'danaoin farmer' AND lower(ItemTemplateID) = 'danaoin_harvest_list'",
+  "reason": "True 1.65: period kill-task item Danaoin Harvest List on Danaoin Farmer: normal 25 % drop instead of the Atlas 3-minute timed drop (estimated 25 % (no Uthgard record of the item); period: period-zam item 5323 'Danaoin Harvest List' (capture 20030501) Kill Task item; period-zam item 5323 'Danaoin Harvest List' (capture 20030501) dropped by danaoin farmer)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 1 WHERE lower(TemplateName) = 'danaoin clerk' AND lower(ItemTemplateID) = 'danaoin_poison'",
+  "reason": "True 1.65: period kill-task item Danaoin Poison on Danaoin Clerk: normal 1 % drop instead of the Atlas 3-minute timed drop (Uthgard measured on danaoin clerk: 2 in 1561 kills; period: period-zam item 5324 'Danaoin Poison' (capture 20030817) Kill Task item; period-zam item 5324 'Danaoin Poison' (capture 20030817) dropped by danaoin clerk)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 25 WHERE lower(TemplateName) = 'corpse mold' AND lower(ItemTemplateID) = 'decayed_water_orb'",
+  "reason": "True 1.65: period kill-task item Decayed Water Orb on Corpse Mold: normal 25 % drop instead of the Atlas 3-minute timed drop (estimated 25 % (no Uthgard record of the item); period: period-zam item 5325 'Decayed Water Orb' (capture 20031014) Kill Task item)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 5 WHERE lower(TemplateName) = 'freybug' AND lower(ItemTemplateID) = 'decorative_arrows'",
+  "reason": "True 1.65: period kill-task item Decorative Arrows on Freybug: normal 5 % drop instead of the Atlas 3-minute timed drop (Uthgard measured on freybug: 6 in 111 kills; period: period-zam item 5327 'Decorative Arrows' (capture 20031014) Kill Task item; period-zam item 5327 'Decorative Arrows' (capture 20031014) dropped by freybug)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 25 WHERE lower(TemplateName) = 'deep goblin' AND lower(ItemTemplateID) = 'deep_goblin_hair'",
+  "reason": "True 1.65: period kill-task item Deep Goblin Hair on Deep Goblin: normal 25 % drop instead of the Atlas 3-minute timed drop (estimated 25 % (no Uthgard record of the item); period: period-zam item 5328 'Deep Goblin Hair' (capture 20030826) Kill Task item; period-zam item 5328 'Deep Goblin Hair' (capture 20030826) dropped by deep goblin)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 1 WHERE lower(TemplateName) = 'undead monk' AND lower(ItemTemplateID) = 'dried_monk_skull'",
+  "reason": "True 1.65: period kill-task item Dried Monk Skull on Undead Monk: normal 1 % drop instead of the Atlas 3-minute timed drop (Uthgard measured on undead monk: 9 in 1921 kills; period: period-zam item 5336 'Dried Monk Skull' (capture 20031014) Kill Task item; period-zam item 5336 'Dried Monk Skull' (capture 20031014) dropped by undead monk)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 4 WHERE lower(TemplateName) = 'dunter' AND lower(ItemTemplateID) = 'dunter_head'",
+  "reason": "True 1.65: period kill-task item Dunter Head on Dunter: normal 4 % drop instead of the Atlas 3-minute timed drop (Uthgard measured on dunter: 52 in 1355 kills; period: period-zam item 5364 'Dunter Head' (capture 20030826) Kill Task item; period-zam item 5364 'Dunter Head' (capture 20030826) dropped by dunter)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 3 WHERE lower(TemplateName) = 'grave goblin shaman' AND lower(ItemTemplateID) = 'enchanted_metal_studs'",
+  "reason": "True 1.65: period kill-task item Enchanted Metal Studs on Grave Goblin Shaman: normal 3 % drop instead of the Atlas 3-minute timed drop (Uthgard measured on grave goblin shaman: 4 in 147 kills; period: period-zam item 5366 'Enchanted Metal Studs' (capture 20031013) Kill Task item; period-zam item 5366 'Enchanted Metal Studs' (capture 20031013) dropped by grave goblin shaman)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 4 WHERE lower(TemplateName) = 'fiery fiend' AND lower(ItemTemplateID) = 'ever_burning_ember'",
+  "reason": "True 1.65: period kill-task item Ever Burning Ember on Fiery Fiend: normal 4 % drop instead of the Atlas 3-minute timed drop (Uthgard measured on fiery fiend: 6 in 154 kills; period: period-zam item 5367 'Ever Burning Ember' (capture 20031013) Kill Task item; period-zam item 5367 'Ever Burning Ember' (capture 20031013) dropped by fiery fiend)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 6 WHERE lower(TemplateName) = 'faerie frog' AND lower(ItemTemplateID) = 'faerie_frog_eye'",
+  "reason": "True 1.65: period kill-task item Faerie Frog Eye on Faerie Frog: normal 6 % drop instead of the Atlas 3-minute timed drop (Uthgard measured on faerie frog: 40 in 678 kills; period: period-zam item 5368 'Faerie Frog Eye' (capture 20031014) Kill Task item; period-zam item 5368 'Faerie Frog Eye' (capture 20031014) dropped by faerie frog)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 25 WHERE lower(TemplateName) = 'faint grim' AND lower(ItemTemplateID) = 'faint_grim_scrap'",
+  "reason": "True 1.65: period kill-task item Faint Grim Scrap on faint grim: normal 25 % drop instead of the Atlas 3-minute timed drop (estimated 25 % (no Uthgard record of the item); period: period-zam item 5369 'Faint Grim Scrap' (capture 20030826) Kill Task item)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 10 WHERE lower(TemplateName) = 'amadan touched' AND lower(ItemTemplateID) = 'forgotten_silver_jasper_locket'",
+  "reason": "True 1.65: period kill-task item Forgotten Silver Jasper Locket on Amadan Touched: normal 10 % drop instead of the Atlas 3-minute timed drop (Uthgard measured on amadan touched: 92 in 886 kills; period: period-zam item 5566 'Forgotten Silver Jasper Locket' (capture 20030904); period-zam item 5566 'Forgotten Silver Jasper Locket' (capture 20030904) dropped by amadan touched)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 1 WHERE lower(TemplateName) = 'melancholic fairy' AND lower(ItemTemplateID) = 'melancholic_fairy_wing'",
+  "reason": "True 1.65: period kill-task item Melancholic Fairy Wing on Melancholic Fairy: normal 1 % drop instead of the Atlas 3-minute timed drop (Uthgard measured on melancholic fairy: 1 in 73 kills; period: period-zam item 8248 'Melancholic Fairy Wing' (capture 20030909) Kill Task item)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 25 WHERE lower(TemplateName) = 'decaying marshman' AND lower(ItemTemplateID) = 'rusted_pendant'",
+  "reason": "True 1.65: period kill-task item Rusted Pendant on Decaying Marshman: normal 25 % drop instead of the Atlas 3-minute timed drop (estimated 25 % (no Uthgard record of the item); period: period-zam item 5326 'Rusted Pendant' (capture 20031014) Kill Task item; period-zam item 5326 'Rusted Pendant' (capture 20031014) dropped by decaying marshman)"
+ },
+ {
+  "sql": "UPDATE LootTemplate SET Chance = 25 WHERE lower(TemplateName) = 'tylwyth teg rover' AND lower(ItemTemplateID) = 'unused_arrowhead'",
+  "reason": "True 1.65: period kill-task item Unused Arrowhead on Tylwyth Teg Rover: normal 25 % drop instead of the Atlas 3-minute timed drop (estimated 25 % (no Uthgard record of the item); period: kept REVIEW item)"
+ }
+]

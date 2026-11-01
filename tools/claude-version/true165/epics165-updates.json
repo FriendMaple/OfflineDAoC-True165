@@ -1,0 +1,21 @@
+{
+ "note": "True 1.65 Mode epic armour fixes (plan section 4). Only pieces where the Camelot Warcry quest spoiler AND the Allakhazam item page give the same value against the server row; pieces where the two period sources disagree (Healer boots/gloves/legs, Eldritch cap/pants, Sorcerer caps) are left as they are until the pre-ToA Allakhazam item pages (crawler 'items' phase) settle them. Caveat: the Warcry pages survive only in 2004 Wayback captures (no pre-cutoff capture); no epic armour change between 1.65 and those captures is recorded in the Warcry news archive. Bonus types: 2 Dex, 9 Power, 10 Hits, 11 Body, 18 Spirit.",
+ "updates": [
+  {
+   "sql": "UPDATE ItemTemplate SET Bonus1=30 WHERE Id_nb='EnchanterEpicVest' AND Bonus1Type=10 AND Bonus1=33",
+   "reason": "Moonspun Vest (Enchanter): Hits 33 -> 30. Warcry spoiler 638 (capture 2004-07-04): 'Moonspun Vest: +30hps, +15int, +15dex, 3 charges of 10min self shield'; Allakhazam item page: 'Dexterity: 15 pts; Intelligence: 15 pts; Hits: 30 pts'."
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Bonus4=9, Bonus4Type=2 WHERE Id_nb='WardenEpicVest' AND (Bonus4Type IS NULL OR Bonus4Type=0)",
+   "reason": "Mystical Hauberk (Warden): missing Dex 9 added. Warcry spoiler 647 (capture 2004-03-09): 'Mystical Hauberk +39 Hits +9 Dex +9 Str +9 Emp'; Allakhazam item page: 'Strength: 9 pts; Dexterity: 9 pts; Empathy: 9 pts; Hits: 39 pts'. Server row has Str 9, Hits 39, Emp 9 only."
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Bonus3=6 WHERE Id_nb='EldritchEpicGloves' AND Bonus3Type=9 AND Bonus3=4",
+   "reason": "Mistwoven Gloves (Eldritch): Power 4 -> 6. Warcry spoiler 647 (capture 2004-03-09): 'Mistwoven Gloves ... +9 Dex +6 Power +4 Light Magic +24 Hits'; Allakhazam item page: 'Way of Light: +4; Dexterity: 9; Hits: 24; Power Pool: 6%' (the % form is the later 1.87 conversion of the same 6 power)."
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Bonus3=10, Bonus4=10 WHERE Id_nb IN ('SorcerorEpicLegs','SorcererEpicLegs') AND Bonus3Type=11 AND Bonus3=8 AND Bonus4Type=18 AND Bonus4=8",
+   "reason": "Pants of Mental Acuity (Sorcerer; SorcerorEpicLegs is the one Academy50.cs gives, SorcererEpicLegs is the duplicate row): Body 8% -> 10%, Spirit 8% -> 10%. Warcry spoiler 824 (captures 2004-09-07, 2004-12-05): 'Pants of Mental Acuity: Con 19 Mind Magic 4, Spirit 10%, Body 10%'; Allakhazam item page: 'Mind Twisting: +4; Constitution: 19; Body Resist: 10%; Spirit Resist: 10%'."
+  }
+ ]
+}

@@ -1,0 +1,125 @@
+TRUE 1.65 FIX PASS - NEW PERIOD SPAWNS (newspawns agent, 2026-10-31)
+=====================================================================
+
+TASK: the 739 HIGH/MODERATE spawn_missing / named_missing findings that had no archived row to restore
+(fix\spawns\not_restored_findings.csv, reason "no archived row in that zone") get brand-new Mob rows from period data.
+World used: fix\coord\run1.db (post-fix dry run, read-only). Nothing live was touched.
+
+FILES
+- add-periodspawns165.json  table Mob, key Mob_ID, 543 rows, PackageID 'true165-period-new'. Goes into runtime\true165\.
+- placed.csv                one line per mob+zone placed (rows, named, position source + CapnBry ids, level + its source,
+                            look source, respawn + its source, points skipped, notes, finding ids)
+- not_placed.csv            name, zone, region, why, finding ids (530 lines)
+- work\                     n1_targets.py (findings -> targets + period positions), n2_build.py (rows), n3_check.py
+                            (loot / remove rules / 60-unit check), n4_compare.py (dry-run compare), loot_check.json,
+                            targets.json, t1.txt / t2.txt / compare.txt (dry-run logs)
+
+COUNTS
+- 739 findings -> 630 distinct mob+zone targets (findings of several agents about the same mob/zone merged; names compared
+  without spaces/hyphens/case, so "ghostly manatarms" = "ghostly man-at-arms", "boneeater" = "bone-eater").
+  One more finding (global-472, the QuestWorld group) is skipped: the spawns agent already restored its 19 groups.
+- PLACED: 101 mob+zone targets, 543 spawn rows, 152 findings covered. 20 named (1 spawn each), 81 regular.
+  Regions: Midgard 100: 304, Albion 1: 172, Hall of the Corrupt 277: 30, Hibernia 200: 26, Tuscaran Glacier 160: 6,
+  Stonehenge Barrows 20: 2, Avalon 51: 1, Aegir 151: 1, Darkness Falls 249: 1.
+- NOT PLACED: 530 lines:
+    396  period Allakhazam habitat only, no coordinates anywhere (rule: not enough to place a spawn); 27 of them were seen
+         by CapnBry only in the New Frontiers copy of the zone (region 163 geometry, not usable)
+     62  radar positions exist but no model anywhere (no same-name live/archived row, no usable NpcTemplate, no same-family
+         monster) - e.g. the jarls of Uppland/Yggdra, Dodens Gruva atman/darkened atman/life dishonored/infested corpse,
+         granulator (89 sightings, Aegir's Landing), griffon chick (17), Lieutenant Elva/Saxe, Mutilator Axa'al/Axalnam,
+         champion elbaennon/merendon, sentinel of runes, forest heart, Dysdera/Dreadkane Dwarfeater, Haglion, Little Wind
+     46  already spawned in that zone after the first fix pass (the finding was made on the old snapshot, or matched by
+         case/spelling: e.g. "Echo of Life" = live "echo of life")
+     14  named mob whose one spawn went to another zone of the same finding, or that already exists in another of them
+      5  already there under a one-letter spelling variant (Broecia=Brodecia, forest messanger, vampric spider,
+         isolationist sorceror, Joseph Damr)
+      5  every radar position is off the navmesh / inside geometry (small rock bounder + arawnite warrior Snowdonia,
+         gristle Pennine, miles heberman Hadrian's Wall, gore dappled zombie Dodens Gruva)
+      1  Keeper (City of Camelot): a city NPC in a capital, the named finding says it may be scripted: left for a hand check
+      1  QuestWorld group finding (already restored)
+
+HOW (judgement calls in CAPS)
+Positions
+- CapnBry radar sightings (sightings_index.json), region coords = zone-local + Zones.OffsetX/Y*8192 of that zone id.
+  Two radar zone-id quirks found and checked against live spawns: zone 245 = the server's Hall of the Corrupt region 277
+  (same local coords; median 378 units from a live same-name spawn, many within 50), and zone 0 with Z > 10000 =
+  Darkness Falls 249 already in region coords (547 sightings, many exact matches with live DF spawns).
+  NF zones 163-178 (region 163) are never used.
+- Clusters: greedy 300-unit clusters; regular mob = one spawn per cluster at the sighting nearest the cluster centre;
+  named = one spawn at the densest cluster. A named mob listed for several zones gets ONE spawn in the zone with
+  positions, then period-zam habitat, then the densest cluster (never a capital city).
+- NAMED = capitalised as the RADAR spelled it (the radar reads the real server's name); without radar the finding's /
+  server's spelling. Realm/race first words (Albion, Hibernian, Ellyll, Tylwyth, Arawnite, Fomorian...) don't count, so
+  "Albion minion" (61 sightings) and "Ellyll windchaser" are regular.
+- Uthgard map dots (locations.json) only where no radar: 1 mob placed this way (lunaris primus pilus, Llyn Barfog).
+Z / geometry
+- Navmesh check with tools\claude-version\true165\groundz165.py (imported read-only, no bytecode written):
+  radar Z kept when the navmesh floor is within 64 (525 rows); snapped to the navmesh floor when 64-200 off (17 rows,
+  noted); point dropped when > 200 off or no floor within 150 (then the next sighting of the cluster is tried, up to 5);
+  zones with no navmesh keep the radar Z. 103 clusters were dropped this way (mostly old Snowdonia / Pennine /
+  Hadrian's Wall, where many radar Zs are 1000-4000 off the 1.65 terrain - probably later-patch geometry).
+Look and stats (placed.csv look_source)
+- 47 same-name live row (same region first, the most common Model/ClassType), 3 same-name archived row
+  (offline_classic165_removed_mobs), 38 NpcTemplate of that name, 13 same-family monster (marked "family"):
+    hibernian waylayer (31, Hadrian's Wall) + midgard waylayer (21) + hibernian waylayer (1, Pennine) <- albion waylayer
+      (OWNER CHECK: the look is the Albion waylayer's; no Hibernian/Midgard waylayer model exists anywhere in the db)
+    rock giant guard/shaman/wizard (Pennine) <- rock giant hunter; wolf patriarch (Jamtland) <- white wolf;
+    acrid ghoul <- mephitic ghoul; very chilly skelett <- chilly skelett; ancient iceweaver + iceweaver hatchling <-
+    iceweaver; enchanted wind ghoul <- wind ghoul; enchanted spraggonoll <- spraggonoll.
+  Family rule: same species word (last word that is not a rank/role word like guard/shaman/jarl/queen/hatchling), zone
+  first then region; generic species (spirit, creature, ghost, tree...) need two shared words; never for named mobs.
+  Family rows get NPCTemplateID -1 and ClassType DOL.GS.GameNPC (the family template would rename/relevel them).
+- NpcTemplates REJECTED as look: pet templates (theurgist/druid/necro pets: greater air/earth spirit, ice creature,
+  greater necroservant, vampiric mist - all level 0, no stats), town-NPC classes (Roibin = GameMerchant), and for
+  generic names a template more than 5 levels from the period level (cleric HotC: template lv 5 vs period 45-46;
+  kraken Gotar: lv 65 vs 24-25; animated corpse). Those mobs are in not_placed.csv.
+  OWNER OPTION: the pet templates carry the right creature models (114/125/126/440/910); they could be used look-only.
+- A kept NpcTemplate with ReplaceMobValues whose level list is > 2 from the row's period level would override the level,
+  so that row gets NPCTemplateID -1 (noted per mob; 44 rows, e.g. ghostly man-at-arms rows at 42/48-50 vs template 45).
+- Script classes kept only where the server has the boss script: DOL.GS.Mokkurvalve, DOL.GS.Ydenia, DOL.GS.Hjalmar
+  (scripts\namedmobs\...). No class/package/name/guild/where remove rule matches any new row (checked in n3 and in the
+  dry run).
+Level
+- period Allakhazam min-max for that name in that zone (80 mobs); the cluster's median radar level clamped into it.
+  No period page: the cluster's radar level (21 mobs).
+Other columns
+- RespawnInterval: named = period comment timer (period_timers.json) if any, else same-name rows, else 2700 s (45 min);
+  regular = same-name rows, else the family row, else the zone's regular median. AggroLevel/Range, RoamingRange, FactionID,
+  MeleeDamageType, Speed, Race, BodyType, Gender, Flags, Suffix/Guild = the look row. Realm 0, Brain ''.
+  Heading from the id; LastTimeRowUpdated fixed '2026-10-31 00:00:00' (so reruns write the same values).
+- Mob_ID = uuid5(fixed namespace, "Name|Region|X|Y"): reruns give the same ids. No id clashes with live rows.
+Checks
+- No new row within 60 units of a live same-name spawn (checked twice); new rows of one name at least 150 apart.
+- Loot: 32 of the 92 new names have a loot table (MobXLootTemplate / own LootTemplate / drops165). 60 have none and will
+  drop coin only. Of those, period Allakhazam lists Known Loot for 4 - FOLLOW-UP FOR THE DROPS AGENT:
+    Glowing Goo (key 376): Faded Boots/Cap/Gloves/Pants/Robes/Sleeves/Vest of the Risen
+    Mokkurvalve (key 2860): Ancient Cobalt Jerkin/Vest, Dread Cobalt Hauberk/Vest
+    Blodfelag Tormentor (key 889): Ring of Redhands
+    Ancient Iceweaver (key 6029): Soul-scarred Gloves
+  No-loot list: Albion minion, Argur, Buzz, Coldfeet, Cursiux princeps, Eibhilin, Eteki, Gagnrad, Geyra's guard,
+  Hopeless Soul, Jakr, Kullervo's Guardian, Lunaris primus pilus, Mokkurvalve, Nioclas, Puj, Snofrid, Taldos' companion,
+  Valfanar, Watchman Commander, Widower, Ydenia of the Seithkona, acrid ghoul, ancient iceweaver, blodfelag tormentor,
+  bone-eater warleader, brown drakeling, dergan courier, ebony fellwood, enchanted spraggonoll, enchanted wind ghoul,
+  enraged panther, enslaved orm, enslaved orm runner, enthralled zombie, fenrir prime, ghostly Midgard invader,
+  ghostly man-at-arms, giant snowcrab, glowing goo, green serpent, hibernian waylayer, ice lizard, iceweaver hatchling,
+  isalf blinder, isalf hierarch, isalf scryer, lupine snarler, lynx matriarch, mature wyvern, midgard waylayer,
+  northern light, red lion, rock giant guard, rock giant shaman, rock giant wizard, sleigh horse, undead goblin chief,
+  very chilly skelett, wolf patriarch.
+
+BIGGEST GROUPS (radar clusters): ebony fellwood Campacorentin 44, winter wolf Uppland 39, hibernian waylayer Hadrian's
+Wall 31, ghostly man-at-arms Hall of the Corrupt 29, Albion minion Jamtland 28, ghostly Hibernian invader Jamtland 27,
+midgard waylayer Hadrian's Wall 21.
+
+DRY RUN (fix\coord\dryrun.py, folder = copy of fix\stage + add-periodspawns165.json, on a copy of run1.db, twice)
+(see TEST RESULT below)
+TEST RESULT (2026-10-31)
+- Run 1 on a copy of run1.db: quick_check ok; add-periodspawns165.json inserted/updated/stale = 543/0/0; 0 of our rows
+  archived by any remove rule; the other files behave as in the coordinator's run2 (restored spawns 0/16838/0).
+- Run 2 on the result of run 1: quick_check ok; 0/543/0 (rewrites the same values). Our 543 rows are byte-identical
+  between runs, the whole Mob table is identical (hash of Mob_ID/Name/X/Y/Z/Level/Region/Model/NPCTemplateID/Respawn), and
+  Mob / LootTemplate / MobXLootTemplate / NpcTemplate counts are equal (Mob 83,674 = run1.db 83,131 + 543).
+- Every new row's NPCTemplateID is -1 or an existing template (one same-name row pointed at a missing template 5232525,
+  set to -1).
+- Test databases deleted afterwards (work\t1.txt, t2.txt, compare.txt kept).
+
+INSTALL: copy add-periodspawns165.json into runtime\true165\. No rule change needed.

@@ -1,0 +1,1535 @@
+{
+ "table": "MerchantItem",
+ "key": "MerchantItem_ID",
+ "reason": "True 1.65 period stock of the restored missing merchants (period Allakhazam pages; vendor pass 2)",
+ "rows": [
+  {
+   "MerchantItem_ID": "p165list-p165list_Eileen_Morton-0-0",
+   "ItemListID": "p165list_Eileen_Morton",
+   "ItemTemplateID": "ebonwood_lute",
+   "PageNumber": 0,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Eileen_Morton-0-1",
+   "ItemListID": "p165list_Eileen_Morton",
+   "ItemTemplateID": "elm_lute",
+   "PageNumber": 0,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Eileen_Morton-0-2",
+   "ItemListID": "p165list_Eileen_Morton",
+   "ItemTemplateID": "heartwood_lute",
+   "PageNumber": 0,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Eileen_Morton-0-3",
+   "ItemListID": "p165list_Eileen_Morton",
+   "ItemTemplateID": "ironwood_lute",
+   "PageNumber": 0,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Eileen_Morton-0-4",
+   "ItemListID": "p165list_Eileen_Morton",
+   "ItemTemplateID": "oaken_lute",
+   "PageNumber": 0,
+   "SlotPosition": 4,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Eileen_Morton-0-5",
+   "ItemListID": "p165list_Eileen_Morton",
+   "ItemTemplateID": "rowan_lute",
+   "PageNumber": 0,
+   "SlotPosition": 5,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Eileen_Morton-0-6",
+   "ItemListID": "p165list_Eileen_Morton",
+   "ItemTemplateID": "runewood_lute",
+   "PageNumber": 0,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Eileen_Morton-0-7",
+   "ItemListID": "p165list_Eileen_Morton",
+   "ItemTemplateID": "stonewood_lute",
+   "PageNumber": 0,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Eileen_Morton-0-8",
+   "ItemListID": "p165list_Eileen_Morton",
+   "ItemTemplateID": "ebonwood_drum",
+   "PageNumber": 0,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Eileen_Morton-0-9",
+   "ItemListID": "p165list_Eileen_Morton",
+   "ItemTemplateID": "elm_drum",
+   "PageNumber": 0,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Eileen_Morton-0-10",
+   "ItemListID": "p165list_Eileen_Morton",
+   "ItemTemplateID": "heartwood_drum",
+   "PageNumber": 0,
+   "SlotPosition": 10,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Eileen_Morton-0-11",
+   "ItemListID": "p165list_Eileen_Morton",
+   "ItemTemplateID": "ironwood_drum",
+   "PageNumber": 0,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Eileen_Morton-0-12",
+   "ItemListID": "p165list_Eileen_Morton",
+   "ItemTemplateID": "oaken_drum",
+   "PageNumber": 0,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Eileen_Morton-0-13",
+   "ItemListID": "p165list_Eileen_Morton",
+   "ItemTemplateID": "rowan_drum",
+   "PageNumber": 0,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Eileen_Morton-0-14",
+   "ItemListID": "p165list_Eileen_Morton",
+   "ItemTemplateID": "runewood_drum",
+   "PageNumber": 0,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Eileen_Morton-0-15",
+   "ItemListID": "p165list_Eileen_Morton",
+   "ItemTemplateID": "stonewood_drum",
+   "PageNumber": 0,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Eileen_Morton-0-16",
+   "ItemListID": "p165list_Eileen_Morton",
+   "ItemTemplateID": "ebonwood_flute",
+   "PageNumber": 0,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Eileen_Morton-0-17",
+   "ItemListID": "p165list_Eileen_Morton",
+   "ItemTemplateID": "elm_flute",
+   "PageNumber": 0,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Eileen_Morton-0-18",
+   "ItemListID": "p165list_Eileen_Morton",
+   "ItemTemplateID": "heartwood_flute",
+   "PageNumber": 0,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Eileen_Morton-0-19",
+   "ItemListID": "p165list_Eileen_Morton",
+   "ItemTemplateID": "ironwood_flute",
+   "PageNumber": 0,
+   "SlotPosition": 19,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Eileen_Morton-0-20",
+   "ItemListID": "p165list_Eileen_Morton",
+   "ItemTemplateID": "rowan_flute",
+   "PageNumber": 0,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Eileen_Morton-0-21",
+   "ItemListID": "p165list_Eileen_Morton",
+   "ItemTemplateID": "runewood_flute",
+   "PageNumber": 0,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Eileen_Morton-0-22",
+   "ItemListID": "p165list_Eileen_Morton",
+   "ItemTemplateID": "stonewood_flute",
+   "PageNumber": 0,
+   "SlotPosition": 22,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Eileen_Morton-0-23",
+   "ItemListID": "p165list_Eileen_Morton",
+   "ItemTemplateID": "oaken_flute",
+   "PageNumber": 0,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Madarl-0-0",
+   "ItemListID": "p165list_Madarl",
+   "ItemTemplateID": "brown_cloth_dye3",
+   "PageNumber": 0,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Madarl-0-1",
+   "ItemListID": "p165list_Madarl",
+   "ItemTemplateID": "blue_cloth_dye3",
+   "PageNumber": 0,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Madarl-0-2",
+   "ItemListID": "p165list_Madarl",
+   "ItemTemplateID": "cloak",
+   "PageNumber": 0,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Nealcail-0-0",
+   "ItemListID": "p165list_Nealcail",
+   "ItemTemplateID": "brown_cloth_dye3",
+   "PageNumber": 0,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Nealcail-0-1",
+   "ItemListID": "p165list_Nealcail",
+   "ItemTemplateID": "blue_cloth_dye3",
+   "PageNumber": 0,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Nealcail-0-2",
+   "ItemListID": "p165list_Nealcail",
+   "ItemTemplateID": "cloak",
+   "PageNumber": 0,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Nealcail-0-3",
+   "ItemListID": "p165list_Nealcail",
+   "ItemTemplateID": "brocade_dress_robe2",
+   "PageNumber": 0,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Nealcail-0-4",
+   "ItemListID": "p165list_Nealcail",
+   "ItemTemplateID": "cloth_bleach",
+   "PageNumber": 0,
+   "SlotPosition": 4,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Nealcail-0-5",
+   "ItemListID": "p165list_Nealcail",
+   "ItemTemplateID": "dress_robe3",
+   "PageNumber": 0,
+   "SlotPosition": 5,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Nealcail-0-6",
+   "ItemListID": "p165list_Nealcail",
+   "ItemTemplateID": "gossamer_dress_robe3",
+   "PageNumber": 0,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Nealcail-0-7",
+   "ItemListID": "p165list_Nealcail",
+   "ItemTemplateID": "green_cloth_dye3",
+   "PageNumber": 0,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Nealcail-0-8",
+   "ItemListID": "p165list_Nealcail",
+   "ItemTemplateID": "linen_dress_robe3",
+   "PageNumber": 0,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Nealcail-0-9",
+   "ItemListID": "p165list_Nealcail",
+   "ItemTemplateID": "orange_cloth_dye3",
+   "PageNumber": 0,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Nealcail-0-10",
+   "ItemListID": "p165list_Nealcail",
+   "ItemTemplateID": "silk_dress_robe3",
+   "PageNumber": 0,
+   "SlotPosition": 10,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Nealcail-0-11",
+   "ItemListID": "p165list_Nealcail",
+   "ItemTemplateID": "sylvan_dress_robe3",
+   "PageNumber": 0,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Nealcail-0-12",
+   "ItemListID": "p165list_Nealcail",
+   "ItemTemplateID": "yellow_cloth_dye3",
+   "PageNumber": 0,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-0",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "pointed_steeple_hat_pattern3",
+   "PageNumber": 0,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-1",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "alloy_spiked_circlet",
+   "PageNumber": 0,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-2",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "alloy_war_circlet",
+   "PageNumber": 0,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-3",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "brocade_padded_circlet",
+   "PageNumber": 0,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-4",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "brocade_woven_pointed_steeple_hat3",
+   "PageNumber": 0,
+   "SlotPosition": 4,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-5",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "bronze_spiked_circlet",
+   "PageNumber": 0,
+   "SlotPosition": 5,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-6",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "bronze_war_circlet",
+   "PageNumber": 0,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-7",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "circlet_pattern",
+   "PageNumber": 0,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-8",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "cured_suede_circlet",
+   "PageNumber": 0,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-9",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "elegant_fur-trimmed_tunic",
+   "PageNumber": 0,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-10",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "embossed_suede_circlet",
+   "PageNumber": 0,
+   "SlotPosition": 10,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-11",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "exquisite_fur-trimmed_tunic",
+   "PageNumber": 0,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-12",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "fine_alloy_spiked_circlet",
+   "PageNumber": 0,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-13",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "fine_alloy_war_circlet",
+   "PageNumber": 0,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-14",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "fur-lined_gloves",
+   "PageNumber": 0,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-15",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "fur-lined_leggings",
+   "PageNumber": 0,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-16",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "fur-trimmed_boots",
+   "PageNumber": 0,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-17",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "fur-trimmed_cap",
+   "PageNumber": 0,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-18",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "gossamer_pointed_steeple_hat",
+   "PageNumber": 0,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-19",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "hard_suede_circlet",
+   "PageNumber": 0,
+   "SlotPosition": 19,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-20",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "iron_spiked_circlet",
+   "PageNumber": 0,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-21",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "iron_war_circlet",
+   "PageNumber": 0,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-22",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "linen_padded_circlet",
+   "PageNumber": 0,
+   "SlotPosition": 22,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-24",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "mithril_spiked_circlet",
+   "PageNumber": 0,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-25",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "mithril_war_circlet",
+   "PageNumber": 0,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-26",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "rawhide_suede_circlet",
+   "PageNumber": 0,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-27",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "rigid_suede_circlet",
+   "PageNumber": 0,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-0-28",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "silk_padded_circlet",
+   "PageNumber": 0,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-1-0",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "steel_spiked_circlet",
+   "PageNumber": 1,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-1-1",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "steel_war_circlet",
+   "PageNumber": 1,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-1-2",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "sylvan_padded_circlet",
+   "PageNumber": 1,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-1-4",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "tanned_suede_circlet",
+   "PageNumber": 1,
+   "SlotPosition": 4,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-1-5",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "winged_helm",
+   "PageNumber": 1,
+   "SlotPosition": 5,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-1-6",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "wolf-head_helm",
+   "PageNumber": 1,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-1-7",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "woolen_padded_circlet",
+   "PageNumber": 1,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-1-8",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "gossamer_padded_circlet",
+   "PageNumber": 1,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Vinandr-1-9",
+   "ItemListID": "p165list_Vinandr",
+   "ItemTemplateID": "resplendent_fur-trimmed_tunic",
+   "PageNumber": 1,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-0",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "elm_kite_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-1",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "oaken_kite_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-2",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "ironwood_kite_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-3",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "rowan_tower_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-4",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "oaken_tower_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 4,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-5",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "ironwood_tower_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 5,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-6",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "heartwood_tower_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-7",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "runewood_tower_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-8",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "elm_round_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-9",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "oaken_round_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-10",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "heartwood_round_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 10,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-11",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "runewood_round_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-12",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "rowan_heater_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-13",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "elm_heater_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-14",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "ironwood_heater_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-15",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "heartwood_heater_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-16",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "runewood_heater_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-17",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "buckler2",
+   "PageNumber": 0,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-18",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "elm_large_block_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-19",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "elm_large_round_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 19,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-20",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "elm_medium_round_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-21",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "embossed_buckler2",
+   "PageNumber": 0,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-22",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "embossed_large_block_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 22,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-23",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "embossed_large_round_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-24",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "embossed_medium_heater_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-25",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "hard_large_heater_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-26",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "hard_large_round_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-27",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "hard_medium_block_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-28",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "large_block_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-0-29",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "large_heater_shield2",
+   "PageNumber": 0,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-0",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "large_round_shield2",
+   "PageNumber": 1,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-1",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "medium_block_shield2",
+   "PageNumber": 1,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-2",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "medium_heater_shield2",
+   "PageNumber": 1,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-3",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "medium_round_shield2",
+   "PageNumber": 1,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-4",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "oaken_buckler2",
+   "PageNumber": 1,
+   "SlotPosition": 4,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-5",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "oak_large_block_shield5",
+   "PageNumber": 1,
+   "SlotPosition": 5,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-6",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "oak_large_round_shield5",
+   "PageNumber": 1,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-7",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "oak_medium_block_shield5",
+   "PageNumber": 1,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-8",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "oak_medium_heater_shield5",
+   "PageNumber": 1,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-9",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "oak_medium_round_shield5",
+   "PageNumber": 1,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-10",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "rigid_buckler2",
+   "PageNumber": 1,
+   "SlotPosition": 10,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-11",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "rigid_large_block_shield2",
+   "PageNumber": 1,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-12",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "rigid_large_heater_shield2",
+   "PageNumber": 1,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-13",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "rigid_large_round_shield2",
+   "PageNumber": 1,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-14",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "rigid_medium_block_shield2",
+   "PageNumber": 1,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-15",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "rigid_medium_round_shield2",
+   "PageNumber": 1,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-16",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "elm_buckler2",
+   "PageNumber": 1,
+   "SlotPosition": 16,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-17",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "elm_large_heater_shield2",
+   "PageNumber": 1,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-18",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "elm_medium_block_shield2",
+   "PageNumber": 1,
+   "SlotPosition": 18,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-19",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "elm_medium_heater_shield2",
+   "PageNumber": 1,
+   "SlotPosition": 19,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-20",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "elm_tower_shield2",
+   "PageNumber": 1,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-21",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "embossed_large_heater_shield2",
+   "PageNumber": 1,
+   "SlotPosition": 21,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-22",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "embossed_medium_block_shield2",
+   "PageNumber": 1,
+   "SlotPosition": 22,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-23",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "embossed_medium_round_shield2",
+   "PageNumber": 1,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-24",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "hard_buckler2",
+   "PageNumber": 1,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-25",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "hard_large_block_shield2",
+   "PageNumber": 1,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-26",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "hard_medium_round_shield2",
+   "PageNumber": 1,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-27",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "heartwood_kite_shield2",
+   "PageNumber": 1,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-28",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "ironwood_round_shield2",
+   "PageNumber": 1,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-1-29",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "oaken_heater_shield2",
+   "PageNumber": 1,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-2-0",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "oak_large_heater_shield2",
+   "PageNumber": 2,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-2-1",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "rigid_medium_heater_shield2",
+   "PageNumber": 2,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-2-2",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "rowan_kite_shield2",
+   "PageNumber": 2,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-2-3",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "rowan_round_shield2",
+   "PageNumber": 2,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Borjal-2-4",
+   "ItemListID": "p165list_Borjal",
+   "ItemTemplateID": "runewood_kite_shield2",
+   "PageNumber": 2,
+   "SlotPosition": 4,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Royd-0-0",
+   "ItemListID": "p165list_Royd",
+   "ItemTemplateID": "Carved_Totem_of_Eir",
+   "PageNumber": 0,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Royd-0-1",
+   "ItemListID": "p165list_Royd",
+   "ItemTemplateID": "Carved_Totem_of_Heimdal",
+   "PageNumber": 0,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Royd-0-2",
+   "ItemListID": "p165list_Royd",
+   "ItemTemplateID": "Carved_Totem_of_Odin",
+   "PageNumber": 0,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Royd-0-3",
+   "ItemListID": "p165list_Royd",
+   "ItemTemplateID": "Embossed_Totem_of_Odin",
+   "PageNumber": 0,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Royd-0-4",
+   "ItemListID": "p165list_Royd",
+   "ItemTemplateID": "Embossed_Totem_of_Eir",
+   "PageNumber": 0,
+   "SlotPosition": 4,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Royd-0-5",
+   "ItemListID": "p165list_Royd",
+   "ItemTemplateID": "Embossed_Totem_of_Heimdal",
+   "PageNumber": 0,
+   "SlotPosition": 5,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Royd-0-6",
+   "ItemListID": "p165list_Royd",
+   "ItemTemplateID": "Encrusted_Totem_of_Eir",
+   "PageNumber": 0,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Royd-0-7",
+   "ItemListID": "p165list_Royd",
+   "ItemTemplateID": "Encrusted_Totem_of_Heimdal",
+   "PageNumber": 0,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Royd-0-8",
+   "ItemListID": "p165list_Royd",
+   "ItemTemplateID": "Encrusted_Totem_of_Odin",
+   "PageNumber": 0,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Royd-0-9",
+   "ItemListID": "p165list_Royd",
+   "ItemTemplateID": "Polished_Totem_of_Eir",
+   "PageNumber": 0,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Royd-0-10",
+   "ItemListID": "p165list_Royd",
+   "ItemTemplateID": "Polished_Totem_of_Heimdal",
+   "PageNumber": 0,
+   "SlotPosition": 10,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Royd-0-11",
+   "ItemListID": "p165list_Royd",
+   "ItemTemplateID": "Polished_Totem_of_Odin",
+   "PageNumber": 0,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-0",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "amber_encrusted_ivy_wreath",
+   "PageNumber": 0,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-1",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "antlered_helm",
+   "PageNumber": 0,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-2",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "bone_encrusted_ivy_wreath",
+   "PageNumber": 0,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-3",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "brocade_woven_wreath",
+   "PageNumber": 0,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-4",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "carbide_mistletoe_spiked_wreath",
+   "PageNumber": 0,
+   "SlotPosition": 4,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-5",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "cobalt_mistletoe_spiked_wreath",
+   "PageNumber": 0,
+   "SlotPosition": 5,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-6",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "cured_suede_wreath",
+   "PageNumber": 0,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-7",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "elegant_moss-trimmed_tunic",
+   "PageNumber": 0,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-8",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "embossed_suede_wreath",
+   "PageNumber": 0,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-9",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "encrusted_ivy_wreath",
+   "PageNumber": 0,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-10",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "entwined_leaf_hat",
+   "PageNumber": 0,
+   "SlotPosition": 10,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-11",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "exquisite_moss-trimmed_tunic",
+   "PageNumber": 0,
+   "SlotPosition": 11,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-12",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "ferrite_mistletoe_spiked_wreath",
+   "PageNumber": 0,
+   "SlotPosition": 12,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-13",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "fossil_encrusted_ivy_wreath",
+   "PageNumber": 0,
+   "SlotPosition": 13,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-14",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "hard_suede_wreath",
+   "PageNumber": 0,
+   "SlotPosition": 14,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-15",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "brocade_woven_pointed_steeple_hat",
+   "PageNumber": 0,
+   "SlotPosition": 15,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-17",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "pointed_steeple_hat_pattern",
+   "PageNumber": 0,
+   "SlotPosition": 17,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-20",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "woodsmans_hat",
+   "PageNumber": 0,
+   "SlotPosition": 20,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-22",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "wreath_pattern",
+   "PageNumber": 0,
+   "SlotPosition": 22,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-23",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "linen_woven_wreath",
+   "PageNumber": 0,
+   "SlotPosition": 23,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-24",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "mistletoe_spiked_wreath",
+   "PageNumber": 0,
+   "SlotPosition": 24,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-25",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "moss-trimmed_leggings",
+   "PageNumber": 0,
+   "SlotPosition": 25,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-26",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "moss-trimmed_boots",
+   "PageNumber": 0,
+   "SlotPosition": 26,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-27",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "moss-trimmed_gloves",
+   "PageNumber": 0,
+   "SlotPosition": 27,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-28",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "quartz_mistletoe_spiked_wreath",
+   "PageNumber": 0,
+   "SlotPosition": 28,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-0-29",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "rawhide_suede_wreath",
+   "PageNumber": 0,
+   "SlotPosition": 29,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-1-0",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "rigid_suede_wreath",
+   "PageNumber": 1,
+   "SlotPosition": 0,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-1-1",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "shell_encrusted_ivy_wreath",
+   "PageNumber": 1,
+   "SlotPosition": 1,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-1-2",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "silk_woven_wreath",
+   "PageNumber": 1,
+   "SlotPosition": 2,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-1-3",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "sylvan_woven_wreath",
+   "PageNumber": 1,
+   "SlotPosition": 3,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-1-4",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "woolen_woven_wreath",
+   "PageNumber": 1,
+   "SlotPosition": 4,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-1-5",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "tanned_suede_wreath",
+   "PageNumber": 1,
+   "SlotPosition": 5,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-1-6",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "dolomite_mistletoe_spiked_wreath",
+   "PageNumber": 1,
+   "SlotPosition": 6,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-1-7",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "gossamer_pointed_steeple_hat",
+   "PageNumber": 1,
+   "SlotPosition": 7,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-1-8",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "gossamer_woven_wreath",
+   "PageNumber": 1,
+   "SlotPosition": 8,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-1-9",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "resplendent_moss-trimmed_tunic",
+   "PageNumber": 1,
+   "SlotPosition": 9,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  },
+  {
+   "MerchantItem_ID": "p165list-p165list_Melanaha-1-10",
+   "ItemListID": "p165list_Melanaha",
+   "ItemTemplateID": "vine_encrusted_ivy_wreath",
+   "PageNumber": 1,
+   "SlotPosition": 10,
+   "LastTimeRowUpdated": "2026-10-31 00:00:00"
+  }
+ ]
+}

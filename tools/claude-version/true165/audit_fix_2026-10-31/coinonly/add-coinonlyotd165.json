@@ -1,0 +1,28 @@
+{
+ "table": "LootOTD",
+ "key": "LootOTD_ID",
+ "reason": "True 1.65 coin-only pass: period one-time drops of named monsters (Allakhazam OTD pages, fix/coinonly)",
+ "rows": [
+  {
+   "LootOTD_ID": "7c76c528-0f96-53f8-8bf9-1b17ca6f6a40",
+   "MobName": "Nasher",
+   "ItemTemplateID": "p165_drop_1325",
+   "MinLevel": 37,
+   "LastTimeRowUpdated": "2026-10-31 12:00:00"
+  },
+  {
+   "LootOTD_ID": "fcbc1036-554b-58b6-8831-baeacfb117d2",
+   "MobName": "Soulsong",
+   "ItemTemplateID": "p165_drop_1569",
+   "MinLevel": 41,
+   "LastTimeRowUpdated": "2026-10-31 12:00:00"
+  },
+  {
+   "LootOTD_ID": "25cf8141-d07d-5a84-8ff0-399b4067b5cb",
+   "MobName": "Nogud the Smasher",
+   "ItemTemplateID": "p165_drop_4754",
+   "MinLevel": 41,
+   "LastTimeRowUpdated": "2026-10-31 12:00:00"
+  }
+ ]
+}

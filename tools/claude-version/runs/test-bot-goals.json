@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "Levels1To19": {
+    "SoloPve": 60,
+    "GroupPve": 20,
+    "RvR": 0,
+    "Battlegrounds": 20
+  },
+  "Levels20To49": {
+    "SoloPve": 15,
+    "GroupPve": 15,
+    "RvR": 0,
+    "Battlegrounds": 70
+  },
+  "Level50": {
+    "SoloPve": 10,
+    "GroupPve": 50,
+    "RvR": 40,
+    "Battlegrounds": 0
+  }
+}

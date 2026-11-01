@@ -1,0 +1,71 @@
+{
+ "table": "LootTemplate",
+ "key": "LootTemplate_ID",
+ "reason": "1.65 boss trophies kept (owner 2026-10-31: trophies and remains came with Foundations housing, June 2003, before Trials of Atlantis)",
+ "rows": [
+  {
+   "TemplateName": "Cuuldurach the Glimmer King",
+   "ItemTemplateID": "Cuul_Trophy",
+   "Chance": 5,
+   "Count": 1,
+   "LastTimeRowUpdated": "2000-01-10 00:00:00",
+   "LootTemplate_ID": "Trophys10"
+  },
+  {
+   "TemplateName": "Evern",
+   "ItemTemplateID": "Evern_trophy",
+   "Chance": 5,
+   "Count": 1,
+   "LastTimeRowUpdated": "2000-01-12 00:00:00",
+   "LootTemplate_ID": "Trophys12"
+  },
+  {
+   "TemplateName": "Gjalpinulva",
+   "ItemTemplateID": "Gjal_trophy",
+   "Chance": 5,
+   "Count": 1,
+   "LastTimeRowUpdated": "2000-01-15 00:00:00",
+   "LootTemplate_ID": "Trophys15"
+  },
+  {
+   "TemplateName": "Glacier Giant",
+   "ItemTemplateID": "Glacier_trophy",
+   "Chance": 5,
+   "Count": 1,
+   "LastTimeRowUpdated": "2000-01-16 00:00:00",
+   "LootTemplate_ID": "Trophys16"
+  },
+  {
+   "TemplateName": "Golestandt",
+   "ItemTemplateID": "Gole_Trophy",
+   "Chance": 5,
+   "Count": 1,
+   "LastTimeRowUpdated": "2000-01-18 00:00:00",
+   "LootTemplate_ID": "Trophys18"
+  },
+  {
+   "TemplateName": "Green Knight",
+   "ItemTemplateID": "GreenKnight_Trophy",
+   "Chance": 5,
+   "Count": 1,
+   "LastTimeRowUpdated": "2000-01-19 00:00:00",
+   "LootTemplate_ID": "Trophys19"
+  },
+  {
+   "TemplateName": "Prince Ba'alorien",
+   "ItemTemplateID": "Baalorien_trophy",
+   "Chance": 5,
+   "Count": 1,
+   "LastTimeRowUpdated": "2000-01-02 00:00:00",
+   "LootTemplate_ID": "Trophys2"
+  },
+  {
+   "TemplateName": "Xanxicar",
+   "ItemTemplateID": "Xanxi_trophy",
+   "Chance": 5,
+   "Count": 1,
+   "LastTimeRowUpdated": "2000-02-11 00:00:00",
+   "LootTemplate_ID": "Trophys42"
+  }
+ ]
+}

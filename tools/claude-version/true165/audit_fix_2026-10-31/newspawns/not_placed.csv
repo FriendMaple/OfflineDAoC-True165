@@ -1,0 +1,531 @@
+name,zone,region,why,findings
+Dash,Pennine Mountains,1,"1 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",named-764
+corryn,Pennine Mountains,1,"1 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",raids-430;named-90
+hwch ddu gota,Pennine Mountains,1,"1 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",raids-439;named-97
+kraken,Gotar,100,"1 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster); its same-name NpcTemplate is a different monster (level far from the period level)",mid-210;named-150
+Fanin,Jamtland Mountains,100,"1 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",mid-411;named-751
+Dysdera Dwarfeater,Myrkwood Forest,100,"1 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",named-84
+Roibin,Raumarik,100,"1 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster); only a pet / town-NPC template has that name",mid-415
+Ash Tree,Skona Ravine,100,"1 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",mid-416;named-767
+Broch,West Svealand,100,"1 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",mid-420;named-138
+Frej,Yggdra Forest,100,"1 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",mid-421;raids-497;named-142
+Norna,Yggdra Forest,100,"1 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",mid-423;raids-510;named-144
+Sir Charles,Yggdra Forest,100,"1 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",mid-204;named-145
+Gormror,Aegir's Landing,151,"1 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",named-1;si-32
+Grakin,Iarnwood,151,"1 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",named-53;si-34
+Urkart,Iarnwood,151,"1 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",named-54;si-35
+Balorson,Breifine,200,"1 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",named-721
+fomorian goblern,Breifine,200,"1 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",raids-296
+fomorian grencher,Breifine,200,"1 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",raids-298
+Mutilator Axa'al,Darkness Falls,249,"1 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",named-725
+Mutilator Axalnam,Darkness Falls,249,"1 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",named-726
+Lieutenant Elva,Hall of the Corrupt,277,"1 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",dungeons-68
+Lieutenant Saxe,Hall of the Corrupt,277,"1 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",dungeons-69
+cleric,Hall of the Corrupt,277,"1 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster); its same-name NpcTemplate is a different monster (level far from the period level)",dungeons-112;raids-380
+Spicket,Connacht,200,"1 uthgard map positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",named-21
+Dreadkane Dwarfeater,Myrkwood Forest,100,"10 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",mid-192;named-83
+greater air spirit,Odin's Gate,100,"10 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster); only a pet / town-NPC template has that name",raids-425
+greater earth spirit,Yggdra Forest,100,"11 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster); only a pet / town-NPC template has that name",raids-502
+griffon chick,Tuscaran Glacier,160,"17 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",raids-176
+Anne Fhitich,Hadrian's Wall,1,"2 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",named-747
+Evian Fhitich,Hadrian's Wall,1,"2 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",named-748
+Arawn Commander,Pennine Mountains,1,"2 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",named-88
+Haglion,Myrkwood Forest,100,"2 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",mid-193;named-85
+Grimnought Ejnar,Varulvhamn,127,"2 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",dungeons-232
+Little Wind,Connacht,200,"2 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",named-19
+ice creature,Yggdra Forest,100,"21 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster); only a pet / town-NPC template has that name",mid-55;raids-187
+Klippa,East Svealand,100,"3 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",mid-187;named-47
+fomorian annag,Breifine,200,"3 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",raids-147
+infested corpse,Dodens Gruva,246,"4 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",dungeons-269
+greater air spirit,Jamtland Mountains,100,"5 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster); only a pet / town-NPC template has that name",raids-391
+thjodvitnir,Jamtland Mountains,100,"5 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",raids-393
+hlidskialf jarl,Uppland,100,"5 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",raids-483
+Anklebiter,Vale of Mularn,100,"5 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",mid-199;named-136
+glenlock jarl,Yggdra Forest,100,"5 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",raids-500
+greater necroservant,Yggdra Forest,100,"5 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster); only a pet / town-NPC template has that name",raids-503
+raging anger spirit,Emain Macha,200,"5 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",raids-345
+life dishonored,Dodens Gruva,246,"5 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",dungeons-270;raids-340
+bledmeer jarl,Uppland,100,"6 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",raids-475
+enoga,Vale of Mularn,100,"6 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",mid-228
+blendrake jarl,Yggdra Forest,100,"6 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",raids-490
+forest heart,Emain Macha,200,"6 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",raids-341
+vampiric mist,Emain Macha,200,"6 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster); only a pet / town-NPC template has that name",raids-347
+darkened atman,Dodens Gruva,246,"6 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",raids-339
+sentinel of runes,Uppland,100,"7 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",raids-487
+greater air spirit,Yggdra Forest,100,"7 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster); only a pet / town-NPC template has that name",raids-501
+greater earth spirit,Emain Macha,200,"7 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster); only a pet / town-NPC template has that name",raids-342
+animated corpse,Dodens Gruva,246,"8 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster); its same-name NpcTemplate is a different monster (level far from the period level)",dungeons-266;raids-338
+granulator,Aegir's Landing,151,"89 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",si-11
+champion elbaennon,Pennine Mountains,1,"9 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",raids-428;named-762
+champion merendon,Pennine Mountains,1,"9 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",raids-429;named-763
+forest heart,Jamtland Mountains,100,"9 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",raids-389
+fensalir jarl,Yggdra Forest,100,"9 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",raids-495
+atman,Dodens Gruva,246,"9 capnbry positions but no model anywhere (no same-name row, NpcTemplate or same-family monster)",dungeons-267
+miles heberman,Hadrian's Wall,1,all 1 capnbry positions are off the navmesh / inside geometry,raids-376;named-749
+gristle,Pennine Mountains,1,all 1 capnbry positions are off the navmesh / inside geometry,raids-169;named-94
+small rock bounder,Snowdonia,1,all 11 capnbry positions are off the navmesh / inside geometry,alb-104;raids-174
+gore dappled zombie,Dodens Gruva,246,all 2 capnbry positions are off the navmesh / inside geometry,dungeons-268
+arawnite warrior,Snowdonia,1,all 3 capnbry positions are off the navmesh / inside geometry,alb-91;raids-173
+Ember,Black Mtns. North,1,already spawned there after the first fix pass (1 rows),named-772
+disturbed presence,Black Mtns. North,1,already spawned there after the first fix pass (1 rows),alb-10
+Broecia,Forest Sauvage,1,already spawned there under the spelling variant 'Brodecia',named-746
+forest messanger,Forest Sauvage,1,already spawned there under the spelling variant 'forest messenger',alb-342;raids-350
+vampric spider,Hadrian's Wall,1,already spawned there under the spelling variant 'vampiric spider',raids-379
+gwartheg y llyn,Llyn Barfog,1,already spawned there after the first fix pass (1 rows),alb-359
+isolationist sorceror,Pennine Mountains,1,already spawned there under the spelling variant 'isolationist sorcerer',alb-366;raids-442
+shadowhunter shewolf,Pennine Mountains,1,already spawned there after the first fix pass (6 rows),raids-449
+shadowhunter shewolf,Snowdonia,1,already spawned there after the first fix pass (45 rows),raids-464
+boneeater warleader,Jamtland Mountains,100,already spawned there after the first fix pass (15 rows),raids-386
+Brika,Muspelheim,100,already spawned there after the first fix pass (1 rows),named-153
+Joseph Damr,Myrkwood Forest,100,already spawned there under the spelling variant 'Joseph Domr',named-761
+boneeater slayer,Uppland,100,already spawned there after the first fix pass (29 rows),raids-478
+boneeater clanmother,Yggdra Forest,100,already spawned there after the first fix pass (39 rows),raids-492
+vendo reaver,Vendo Caverns,126,already spawned there after the first fix pass (8 rows),dungeons-95
+celtic sepulchre chieftain,Stonehenge Barrows,20,already spawned there after the first fix pass (1 rows),dungeons-77
+echo of life,Stonehenge Barrows,20,already spawned there after the first fix pass (7 rows),dungeons-78
+lifeblighter,Stonehenge Barrows,20,already spawned there after the first fix pass (1 rows),dungeons-80
+dark mare,Cursed Forest,200,already spawned there after the first fix pass (1 rows),hib-263
+wind ghoul,Shannon Estuary,200,already spawned there after the first fix pass (4 rows),hib-293
+Mithra Acolyte,Tomb of Mithra,21,already spawned there after the first fix pass (8 rows),dungeons-84
+Mithra Fanatic,Tomb of Mithra,21,already spawned there after the first fix pass (4 rows),dungeons-85
+disturbed initiate,Tomb of Mithra,21,already spawned there after the first fix pass (2 rows),dungeons-81
+fallen cleric,Tomb of Mithra,21,already spawned there after the first fix pass (9 rows),dungeons-82
+last breath,Tomb of Mithra,21,already spawned there after the first fix pass (4 rows),dungeons-83
+priest of Mithra,Tomb of Mithra,21,already spawned there after the first fix pass (14 rows),dungeons-264
+undead believer,Tomb of Mithra,21,already spawned there after the first fix pass (9 rows),dungeons-86
+undead filidh,Tomb of Mithra,21,already spawned there after the first fix pass (1 rows),dungeons-87
+Muire Lady in Waiting,Muire Tomb,221,already spawned there after the first fix pass (18 rows),dungeons-97
+Muire Man-at-Arms,Muire Tomb,221,already spawned there after the first fix pass (6 rows),dungeons-98
+Shyena Muire,Muire Tomb,221,already spawned there after the first fix pass (1 rows),dungeons-59
+guardian betrayer,Muire Tomb,221,already spawned there after the first fix pass (12 rows),dungeons-96
+Hervelina the Hermit,Treibh Caillte,224,already spawned there after the first fix pass (1 rows),dungeons-60
+Spirit of the Emperor,Catacombs of Cardova,23,already spawned there after the first fix pass (1 rows),dungeons-54
+blind boogey,Catacombs of Cardova,23,already spawned there after the first fix pass (11 rows),dungeons-88
+caesar,Catacombs of Cardova,23,already spawned there after the first fix pass (1 rows),dungeons-89
+crypt snake,Catacombs of Cardova,23,already spawned there after the first fix pass (27 rows),dungeons-90
+evocatus Augusti,Catacombs of Cardova,23,already spawned there after the first fix pass (6 rows),dungeons-91
+skull eater,Catacombs of Cardova,23,already spawned there after the first fix pass (1 rows),dungeons-92
+stalker,Tepok's Mine,24,already spawned there after the first fix pass (7 rows),dungeons-93
+innocent,Dodens Gruva,246,already spawned there after the first fix pass (29 rows),dungeons-100
+black noble,Summoner's Hall,248,already spawned there after the first fix pass (37 rows),dungeons-103
+Uvo,Darkness Falls,249,already spawned there after the first fix pass (1 rows),named-149
+dark eldritch,Marfach Cavern,276,already spawned there after the first fix pass (1 rows),dungeons-104
+decomposing lookout,Marfach Cavern,276,already spawned there after the first fix pass (12 rows),dungeons-105
+reanimated champion,Marfach Cavern,276,already spawned there after the first fix pass (33 rows),dungeons-106
+restless champion,Marfach Cavern,276,already spawned there after the first fix pass (7 rows),dungeons-107
+restless guardian,Marfach Cavern,276,already spawned there after the first fix pass (8 rows),dungeons-108
+unseelie fairy,Marfach Cavern,276,already spawned there after the first fix pass (89 rows),dungeons-110
+widow claw,Marfach Cavern,276,already spawned there after the first fix pass (26 rows),dungeons-111
+innocent,Hall of the Corrupt,277,already spawned there after the first fix pass (17 rows),dungeons-114
+Keeper,City of Camelot,10,"capital city: a realm/town NPC, not a monster spawn (named finding says it may be spawned by a script); left for a hand check",named-728
+(QuestWorld package monsters),(several),,group finding (QuestWorld package monsters): its 19 name+zone groups were restored by the spawns agent (172 QuestWorld rows),global-472
+Uvo,City of Camelot,10,named mob already spawned in another zone its finding names,named-149
+Ember,Muspelheim,100,named mob already spawned in another zone its finding names,global-498;named-772
+Hopeless Soul,Camelot Hills,1,named mob: its one spawn goes to Darkness Falls (densest radar cluster / period habitat),named-13
+Mutilator Axa'al,Camelot Hills,1,named mob: its one spawn goes to Darkness Falls (densest radar cluster / period habitat),named-725
+Mutilator Axalnam,Camelot Hills,1,named mob: its one spawn goes to Darkness Falls (densest radar cluster / period habitat),named-726
+blendrake jarl,Uppland,100,named mob: its one spawn goes to Yggdra Forest (densest radar cluster / period habitat),raids-476
+Major Terentius,Vanern Swamp,100,named mob: its one spawn goes to Raumarik (densest radar cluster / period habitat),named-98
+baugi,Yggdra Forest,100,named mob: its one spawn goes to Uppland (densest radar cluster / period habitat),raids-489;named-134
+jakr,Yggdra Forest,100,named mob: its one spawn goes to Uppland (densest radar cluster / period habitat),raids-507;named-135
+sentinel of runes,Yggdra Forest,100,named mob: its one spawn goes to Uppland (densest radar cluster / period habitat),raids-511
+Cichol Grichnos,Cursed Forest,200,named mob: its one spawn goes to Vale of Balor (densest radar cluster / period habitat),named-33
+Spicket,Lough Derg,200,named mob: its one spawn goes to Connacht (densest radar cluster / period habitat),named-21
+Ancient Black Oak,Marfach Caverns,247,named mob: its one spawn goes to Marfach Cavern (densest radar cluster / period habitat),named-74;named-74
+Ghostwalker's Apprentice,Caldey,51,named mob: its one spawn goes to Salisbury Plains (densest radar cluster / period habitat),named-9
+bloodfish,Avalon Marsh,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-304
+dryad,Avalon Marsh,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-305
+fading spirit,Avalon Marsh,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-306
+mouldering corpse,Avalon Marsh,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-307
+river drakeling,Avalon Marsh,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-308
+river sprite,Avalon Marsh,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-309
+rotting skeleton,Avalon Marsh,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-310
+small bear,Avalon Marsh,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-312
+small snake,Avalon Marsh,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-313
+spirit,Avalon Marsh,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-314
+cutpurse,Black Mtns. North,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-316
+wicked cythraul,Black Mtns. North,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-13
+Shade of Harish,Black Mtns. South,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-3
+boulder imp,Black Mtns. South,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-14
+dwarf raider leader,Black Mtns. South,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-318
+giant ant,Black Mtns. South,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-319
+goblin warrior,Black Mtns. South,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-15
+spriggarn,Black Mtns. South,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-16
+spriggarn elder,Black Mtns. South,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-321
+wandering bandit,Black Mtns. South,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-322
+young boar,Black Mtns. South,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-323
+ant drone,Camelot Hills,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-324
+black wolf pup,Camelot Hills,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-18
+green snake,Camelot Hills,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-325
+highwayman,Camelot Hills,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-326
+poacher leader,Camelot Hills,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-327
+river goblin,Camelot Hills,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-328
+warrior ant,Camelot Hills,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-329
+weak skeleton,Camelot Hills,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-330
+wild boar,Camelot Hills,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-21
+lake adder,Campacorentin Forest,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-331
+moldy skeleton,Campacorentin Forest,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-25
+pixie imp,Campacorentin Forest,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-27
+river drake hatchling,Campacorentin Forest,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-28
+robber,Campacorentin Forest,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-29
+tree snake,Campacorentin Forest,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-30
+wood ogre raider,Campacorentin Forest,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-332
+arisus princeps,Cornwall,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-31
+freed spirit,Cornwall,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-333
+lesser telamon,Cornwall,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-334
+roman ghost,Cornwall,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-335
+roman spirit,Cornwall,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-336
+small skeletal legionnaire,Cornwall,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-337
+Nodin,Dartmoor,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-43
+draconic ancilla,Dartmoor,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-35
+granite giant stonebreaker,Dartmoor,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-37
+greenhorn poacher,Dartmoor,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-38
+ettin shaman,Forest Sauvage,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-341;raids-348
+grimwood,Forest Sauvage,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-345;raids-354
+master hunter,Forest Sauvage,1,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (2 sightings, region 163 geometry)",alb-42
+young forest runner,Forest Sauvage,1,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (2 sightings, region 163 geometry)",alb-347;raids-355
+celtic lich,Hadrian's Wall,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-348;raids-371
+ceriallen,Hadrian's Wall,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-372
+fasius previlus,Hadrian's Wall,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-374
+hill troll,Hadrian's Wall,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-349;raids-375
+stone sentinel,Hadrian's Wall,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-350;raids-377
+tunneler,Hadrian's Wall,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-351;raids-378
+Basher,Llyn Barfog,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-56
+Beater,Llyn Barfog,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-57
+Islwyn,Llyn Barfog,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-58
+Rhyfelwr,Llyn Barfog,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-60
+alfanc,Llyn Barfog,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-353
+bwgan horde,Llyn Barfog,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-354
+bwgan horde leader,Llyn Barfog,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-355
+deep lake adder,Llyn Barfog,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-356
+ellyll explorer,Llyn Barfog,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-357
+fallen,Llyn Barfog,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-358
+rusted skeleton,Llyn Barfog,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-360
+Sister Blythe,Lyonesse,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-756
+bone crusher,Lyonesse,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-361
+clergyman,Lyonesse,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-54
+danaoin lieutenant,Lyonesse,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-362
+danaoin priest,Lyonesse,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-57
+petrified grovewood,Lyonesse,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-363
+priestess,Lyonesse,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-364
+blue man,Pennine Mountains,1,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (1 sightings, region 163 geometry)",raids-427;named-89
+destrier ceingalad,Pennine Mountains,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-431
+eildon,Pennine Mountains,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-432;named-91
+eli twigg,Pennine Mountains,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-433;named-92
+glipin,Pennine Mountains,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-434;named-93
+grimwood keeper,Pennine Mountains,1,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (20 sightings, region 163 geometry)",alb-70;raids-436
+gwalchmai,Pennine Mountains,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-437;named-95
+hawthorn,Pennine Mountains,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-438;named-96
+pendrake,Pennine Mountains,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-367;raids-445
+sockburn worm,Pennine Mountains,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-450
+Ghostwalker's Apprentice,Salisbury Plains,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-9
+skeletal centurion,Salisbury Plains,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-83
+tomb raider commander,Salisbury Plains,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-87
+undead armsman,Salisbury Plains,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-369
+undead cleric,Salisbury Plains,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-370
+undead mercenary,Salisbury Plains,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-371
+undead mercenary lieutenant,Salisbury Plains,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-88
+undead paladin,Salisbury Plains,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-372
+undead paladin lieutenant,Salisbury Plains,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,alb-373
+Cheshire,Snowdonia,1,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (2 sightings, region 163 geometry)",global-493;raids-454;named-126
+arawnite assassin,Snowdonia,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-451
+cath paluc,Snowdonia,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-453;named-125
+howling maiden,Snowdonia,1,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (4 sightings, region 163 geometry)",alb-98;raids-460
+saelonna,Snowdonia,1,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-461
+scorned bwca,Snowdonia,1,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (16 sightings, region 163 geometry)",alb-101;raids-462
+shadowhunter,Snowdonia,1,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (32 sightings, region 163 geometry)",alb-102;raids-463
+Kobold Hunter,East Svealand,100,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-740
+Tamed Sveawolf,East Svealand,100,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-742
+tomte runner,East Svealand,100,period Allakhazam habitat only (no coordinates): not enough to place a spawn,mid-209
+boneeater clanmother,Jamtland Mountains,100,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-383
+fenrir prime,Jamtland Mountains,100,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-388
+svartalf dark foister,Malmohus,100,period Allakhazam habitat only (no coordinates): not enough to place a spawn,mid-216
+large fangfish,Myrkwood Forest,100,period Allakhazam habitat only (no coordinates): not enough to place a spawn,mid-217
+Major Terentius,Raumarik,100,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-98
+Nimh,Skona Ravine,100,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-122
+wolfaur shaman,Skona Ravine,100,period Allakhazam habitat only (no coordinates): not enough to place a spawn,mid-218
+baugi,Uppland,100,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-474;named-134
+boneeater clanmother,Uppland,100,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (1 sightings, region 163 geometry)",raids-477
+frosty colt,Uppland,100,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (9 sightings, region 163 geometry)",raids-480
+drowned vendo,Vale of Mularn,100,period Allakhazam habitat only (no coordinates): not enough to place a spawn,mid-227
+hobgoblin runt,Vale of Mularn,100,period Allakhazam habitat only (no coordinates): not enough to place a spawn,mid-230
+hobgoblin whelp,Vale of Mularn,100,period Allakhazam habitat only (no coordinates): not enough to place a spawn,mid-231
+enthralled zombie,Vanern Swamp,100,period Allakhazam habitat only (no coordinates): not enough to place a spawn,mid-234
+Captain Rayburn,Yggdra Forest,100,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (1 sightings, region 163 geometry)",named-140
+frosty colt,Yggdra Forest,100,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (2 sightings, region 163 geometry)",raids-499
+gunnolf,Yggdra Forest,100,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-504
+kodi,Yggdra Forest,100,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-508
+sjor,Yggdra Forest,100,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (1 sightings, region 163 geometry)",raids-512;named-771
+skeletal wolf,Yggdra Forest,100,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-513
+ulfgar,Yggdra Forest,100,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-514;named-147
+undead soldier,Yggdra Forest,100,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (1 sightings, region 163 geometry)",raids-515
+Lord Athulf,Varulvhamn,127,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-137
+Thorhalla,Nisse's Lair,129,period Allakhazam habitat only (no coordinates): not enough to place a spawn,dungeons-56
+undead hem'varn,Trollheim,150,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-182
+sand ooze,Aegir's Landing,151,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-79
+carnitaur,Faraheim,151,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-145
+fungal shredder,Faraheim,151,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-146
+vanvettig odla,Faraheim,151,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-147
+redcap sokier,Gripklosa Mountains,151,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-161
+carnitaur,Iarnwood,151,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-175
+etvarg packleader,Iarnwood,151,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-176
+ancient shale golem,Munin Sound,151,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-180
+vanvettig odla,Munin Sound,151,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-181
+elder icelord suttung,Tuscaran Glacier,160,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-473
+fomorian carnivian,Fomor,180,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-148
+fomorian chapestian,Fomor,180,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-149
+fomorian cruerrior,Fomor,180,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-150
+fomorian depresseor,Fomor,180,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-151
+fomorian dibreer,Fomor,180,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-152
+fomorian ferad,Fomor,180,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-153
+fomorian hiccor,Fomor,180,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-154
+fomorian marhoder,Fomor,180,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-155
+fomorian nelmar,Fomor,180,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-156
+fomorian pecitor,Fomor,180,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-157
+fomorian pelistruct,Fomor,180,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-158
+fomorian saveast,Fomor,180,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-159
+fomorian zasser,Fomor,180,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-160
+fomorian bruid,Caillte Garran,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-110
+fomorian radden,Caillte Garran,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-111
+fomorian radiac,Caillte Garran,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-112
+greater angler,Caillte Garran,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-113
+lesser anglator,Caillte Garran,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-114
+mantid dissembler,Caillte Garran,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-115
+mantid exterminator,Caillte Garran,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-116
+mantid priest,Caillte Garran,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-117
+mantid warlock,Caillte Garran,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-118
+poisonous sylvanshade,Caillte Garran,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-119
+rapacious shriller,Caillte Garran,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-120
+garran treant seedling,Cothrom Gorge,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-121
+botonid displacer,Domnann,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-141
+cniogcrag swarmer,Domnann,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-142
+domnann angler,Domnann,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-143
+treant sprout,Domnann,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-144
+Cichol Grichnos,Vale of Balor,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-33
+fomorian insipistruct,Vale of Balor,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-190
+ixthiar creeper,Vale of Balor,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-191
+wicked sylvanshade,Vale of Balor,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-192
+cniogcrag annoyance,Vigilant Rock,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-193
+corrupter bodyguard,World's End,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-194
+young botonid rencanraider,World's End,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-195
+young death shroud,World's End,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-196
+young octonid,World's End,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-197
+young treant,World's End,181,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-198
+balorian ansgar,Tur Suil,190,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-183
+balorian batair,Tur Suil,190,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-184
+balorian diolmhain,Tur Suil,190,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-185
+balorian ewyn,Tur Suil,190,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-186
+balorian ferdiad,Tur Suil,190,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-187
+balorian liosliath,Tur Suil,190,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-188
+balorian owin,Tur Suil,190,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-189
+beatha,Galladoria,191,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-356
+bru sciath drudge,Galladoria,191,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-357
+corp sciath drudge,Galladoria,191,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-358
+corrupt primal of air,Galladoria,191,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-359
+corrupt primal of earth,Galladoria,191,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-360
+corrupt primal of water,Galladoria,191,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-361
+damhna sciath drudge,Galladoria,191,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-362
+fuar sciath drudge,Galladoria,191,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-363
+fuinneamh sciath drudge,Galladoria,191,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-364
+newly born spindler,Galladoria,191,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-365
+ropadh sciath drudge,Galladoria,191,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-366
+scor sciath drudge,Galladoria,191,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-367
+spiorad sciath drudge,Galladoria,191,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-368
+teas sciath drudge,Galladoria,191,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-369
+tine,Galladoria,191,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-370
+Cait Sidhe,Stonehenge Barrows,20,period Allakhazam habitat only (no coordinates): not enough to place a spawn,dungeons-231
+bog pike,Bog of Cullen,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-250
+eiru waylayer,Bog of Cullen,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-252
+fishing bear,Bog of Cullen,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-253
+lunger,Bog of Cullen,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-254
+siabra escort,Bog of Cullen,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-255
+supernatural stallion,Bog of Cullen,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-256
+eiru waylayer,Breifine,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-291
+empyrean overseer,Breifine,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-292
+fomor underling,Breifine,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-293
+fomorian grabeye,Breifine,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-297
+leprechaun,Breifine,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-302
+pookha,Breifine,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-304
+siabra raider,Breifine,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-305
+Scaird,Cliffs of Moher,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-16
+cronsidhe,Cliffs of Moher,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-146
+fetch abductor,Cliffs of Moher,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-257
+lesser zephyr,Cliffs of Moher,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-258
+myntaugh,Cliffs of Moher,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-259
+Cachia,Connacht,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-17
+Fearg,Connacht,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-18
+Red,Connacht,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-729
+fog wraith,Connacht,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-261
+irewood,Connacht,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-262
+Mald the Hermite,Cruachan Gorge,200,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (1 sightings, region 163 geometry)",named-730
+casolith,Cruachan Gorge,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-308
+eiru waylayer,Cruachan Gorge,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-311
+empyrean sentinel,Cruachan Gorge,200,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (6 sightings, region 163 geometry)",raids-312
+ghoulie,Cruachan Gorge,200,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (5 sightings, region 163 geometry)",raids-315
+giant ant hib,Cruachan Gorge,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-316
+hill hound,Cruachan Gorge,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-318
+mountain mephit,Cruachan Gorge,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-320
+siabra anchorite,Cruachan Gorge,200,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (1 sightings, region 163 geometry)",raids-322
+siabra raider,Cruachan Gorge,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-323
+streaming wisp,Cruachan Gorge,200,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (6 sightings, region 163 geometry)",raids-325
+thistle,Cruachan Gorge,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-326;named-29
+vindictive bocan,Cruachan Gorge,200,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (1 sightings, region 163 geometry)",raids-328
+Caithor,Cursed Forest,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-731
+Goborchen Vindicator,Cursed Forest,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-31
+dark steed,Cursed Forest,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-150
+fomorian annag,Cursed Forest,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-151
+fomorian cyclen,Cursed Forest,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-152
+fomorian gleener,Cursed Forest,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-264
+fomorian grencher,Cursed Forest,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-153
+fomorian wolfbeast,Cursed Forest,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-154
+veil steed,Cursed Forest,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-157
+leprechaun,Emain Macha,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-343
+sett matriarch,Emain Macha,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-346
+bantam spectre,Lough Derg,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-265
+cluricaun,Lough Derg,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-266
+curmudgeon rockclimber,Lough Derg,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-267
+druid (20+),Lough Derg,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-269
+enchanted ghoul,Lough Derg,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-270
+enchanted luricaduane,Lough Derg,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-271
+enchanted spraggonoll,Lough Derg,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-272
+gurite assailer,Lough Derg,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-273
+rage sprite,Lough Derg,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-274
+sheevra skirmisher,Lough Derg,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-275
+siog footpad,Lough Derg,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-276
+siog piller,Lough Derg,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-277
+streaming wisp,Lough Derg,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-278
+Druid Spirit,Lough Gur,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-66
+Melancholy Fairy Queen,Lough Gur,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-755
+faerie beetle,Lough Gur,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-162
+fallen one,Lough Gur,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-164
+ghostly wickerman,Lough Gur,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-280
+ghoulie,Lough Gur,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-165
+greater dew sheerie,Lough Gur,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-281
+gurite piller,Lough Gur,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-166
+huge rage wolf,Lough Gur,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-282
+large red wolfhound,Lough Gur,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-167
+luch,Lough Gur,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-283
+lugradan,Lough Gur,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-168
+melancholic faerie,Lough Gur,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-284
+melancholic faerie bodyguard,Lough Gur,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-285
+pall spectre,Lough Gur,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-286
+siog piller,Lough Gur,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-169
+Anord,Mount Collory,200,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (3 sightings, region 163 geometry)",named-77
+Oak Man,Mount Collory,200,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (1 sightings, region 163 geometry)",global-499;named-773
+empyrean elder,Mount Collory,200,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (5 sightings, region 163 geometry)",raids-407
+empyrean keeper,Mount Collory,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-408
+empyrean overseer,Mount Collory,200,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (6 sightings, region 163 geometry)",raids-409
+far liath,Mount Collory,200,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (3 sightings, region 163 geometry)",raids-412
+ghoulie,Mount Collory,200,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (6 sightings, region 163 geometry)",raids-414
+giant ant hib,Mount Collory,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-415
+gualach,Mount Collory,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-416;named-78
+gurite assailer,Mount Collory,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-417
+morghoul,Mount Collory,200,"period Allakhazam habitat only (no coordinates): not enough to place a spawn; CapnBry saw it only in the New Frontiers copy of the zone (2 sightings, region 163 geometry)",raids-419
+oak man hib,Mount Collory,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-420
+siabra raider,Mount Collory,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-421
+Blue Bilk,Shannon Estuary,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-105
+Caora,Shannon Estuary,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-106
+fishing bear,Shannon Estuary,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-287
+merrow maiden,Shannon Estuary,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-288
+phantom wickerman,Shannon Estuary,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-289
+siabra,Shannon Estuary,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-290
+siabra ambusher,Shannon Estuary,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-291
+siabra kedger,Shannon Estuary,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-292
+Glimmer Spass,Sheeroe Hills,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-118
+glimmer coseal,Sheeroe Hills,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-294
+Hondrund,Silvermine Mts.,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-766
+badger,Silvermine Mts.,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-295
+fishing bear cub,Silvermine Mts.,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-297
+fishing bear forager,Silvermine Mts.,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-298
+large hill toad,Silvermine Mts.,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-299
+lough wolf,Silvermine Mts.,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-300
+moss sheerie,Silvermine Mts.,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-301
+siabra,Silvermine Mts.,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-302
+anger sprite,Valley of Bri Leith,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-303
+gurite footpad,Valley of Bri Leith,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-304
+mist sheerie,Valley of Bri Leith,200,period Allakhazam habitat only (no coordinates): not enough to place a spawn,hib-305
+ick worm,Spraggon Den,222,period Allakhazam habitat only (no coordinates): not enough to place a spawn,dungeons-99
+wight,Tepok's Mine,24,period Allakhazam habitat only (no coordinates): not enough to place a spawn,dungeons-94
+Spirit Master,Summoner's Hall,248,period Allakhazam habitat only (no coordinates): not enough to place a spawn,dungeons-271;raids-468
+summoner,Summoner's Hall,248,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-469
+Abdin's Rage,Darkness Falls,249,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-34
+Archived Souls,Darkness Falls,249,period Allakhazam habitat only (no coordinates): not enough to place a spawn,dungeons-233;raids-329
+Beliathan,Darkness Falls,249,period Allakhazam habitat only (no coordinates): not enough to place a spawn,dungeons-61;raids-330;named-732
+Commander Abgar,Darkness Falls,249,period Allakhazam habitat only (no coordinates): not enough to place a spawn,dungeons-62;raids-332;named-35
+Inquisitor Kireasil,Darkness Falls,249,period Allakhazam habitat only (no coordinates): not enough to place a spawn,named-733
+Inquisitor Lazarus,Darkness Falls,249,period Allakhazam habitat only (no coordinates): not enough to place a spawn,dungeons-235
+Inquisitor Yonzael,Darkness Falls,249,period Allakhazam habitat only (no coordinates): not enough to place a spawn,dungeons-63
+Soultorn Hibernian Emerald Ridere,Darkness Falls,249,period Allakhazam habitat only (no coordinates): not enough to place a spawn,dungeons-272;raids-337
+Soultorn Hibernian Tiarna,Darkness Falls,249,period Allakhazam habitat only (no coordinates): not enough to place a spawn,dungeons-273
+Soultorn Norse Stormur Herra,Darkness Falls,249,period Allakhazam habitat only (no coordinates): not enough to place a spawn,dungeons-274
+chthonic azea,Darkness Falls,249,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-331
+demoniac familiar scorpion,Darkness Falls,249,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-333
+demoniac familiar spider,Darkness Falls,249,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-334
+inquisitor yonzeal,Darkness Falls,249,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-336
+Ancient Black Oak,Marfach Cavern,276,period Allakhazam habitat only (no coordinates): not enough to place a spawn,dungeons-64;raids-395;named-74;named-74
+drau'gyn advowee,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-83
+drau'gyn armourer,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-84
+drau'gyn calciner,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-85
+drau'gyn courier,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-86
+drau'gyn domesman,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-87
+drau'gyn herbalist,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-88
+drau'gyn jongleur,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-89
+drau'gyn scribe,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-90
+drau'gyn sphere,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-91
+dry'ak accompant,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-92
+dry'ak artificer,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-93
+dry'ak scrivener,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-94
+dry'ak zouave,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-95
+panicked syhr'phint,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-96
+starving trained guagaran,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-97
+syhr'phint caird,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-98
+syhr'phint crozier,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-99
+syhr'phint gaoler,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-100
+syrh'phint verger,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-101
+vyr'em bloodman,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-102
+vyr'em ordinary,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-103
+vyr'em ostler,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-104
+vyr'em riftere,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-105
+wi'voron alchemist,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-106
+wi'voron archiller,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-107
+wi'voron bowyer,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-108
+wi'voron gynour,Avalon City,50,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-109
+thrawn ogre ambusher,Aldland,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-80
+thrawn ogre rough,Aldland,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-81
+thrawn ogre squad leader,Aldland,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-82
+anvil smith,Dales of Devwy,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-122
+apparition,Dales of Devwy,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-123
+corroded irons,Dales of Devwy,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-124
+crafted dwarf,Dales of Devwy,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-125
+crafted giant dwarf,Dales of Devwy,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-126
+crafted giant elf,Dales of Devwy,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-127
+crudely crafted dwarf,Dales of Devwy,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-128
+crudely crafted elf,Dales of Devwy,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-129
+drakoran raider,Dales of Devwy,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-130
+forged monster,Dales of Devwy,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-131
+frayed animation,Dales of Devwy,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-132
+heap,Dales of Devwy,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-133
+old scrap pile,Dales of Devwy,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-134
+one-wheeled sentry,Dales of Devwy,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-135
+ragged construct,Dales of Devwy,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-136
+refuse,Dales of Devwy,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-137
+shredded fabrication,Dales of Devwy,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-138
+tempered fetters,Dales of Devwy,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-139
+weathered rope,Dales of Devwy,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-140
+cliff serpent,Gwyddneau,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-163
+dissolver,Gwyddneau,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-164
+lammia bowmaiden,Gwyddneau,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-165
+lammia swordswoman,Gwyddneau,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-166
+marooned viking,Gwyddneau,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-167
+marooned viking commander,Gwyddneau,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-168
+sea wolf,Gwyddneau,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-169
+undeath binder,Gwyddneau,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-170
+undeath walking,Gwyddneau,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-171
+western guagaran breeder,Gwyddneau,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-172
+western guagaran juvenile,Gwyddneau,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-173
+zarassa's personal guard,Gwyddneau,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-174
+sea cur,Isle of Glass,51,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-177
+Spectral Provisioner,Caer Sidi,60,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-141
+baleful visitant,Caer Sidi,60,period Allakhazam habitat only (no coordinates): not enough to place a spawn,raids-306
+thrawn modig beorn,Krondon,61,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-178
+thrawn ogre attacker,Krondon,61,period Allakhazam habitat only (no coordinates): not enough to place a spawn,si-179

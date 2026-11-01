@@ -1,0 +1,33 @@
+{
+ "pages_with_merchant_block": 2981,
+ "pages_with_named_merchant": 2493,
+ "pages_location_only": 290,
+ "pages_no_merchant_info": 198,
+ "period_merchants": 277,
+ "match_kinds": {
+  "exact": 243,
+  "spelling": 11,
+  "none": 23
+ },
+ "chosen_unambiguous": 251,
+ "ambiguous": 0,
+ "unconfirmed": 2,
+ "present_under_other_name": 178,
+ "additions_fix_dead_row": 234,
+ "additions_no_free_slot": 35,
+ "additions": 854,
+ "additions_by_conf": {
+  "medium": 68,
+  "high": 720,
+  "low": 66
+ },
+ "additions_planned_items": 65,
+ "skipped": {
+  "already on list": 3878,
+  "on list under another name (stats agree)": 178,
+  "merchant not matched unambiguously": 492,
+  "duplicate page of the same template": 3
+ },
+ "merchantitem_rows_with_missing_template": 2975,
+ "lists_with_missing_templates": 184
+}

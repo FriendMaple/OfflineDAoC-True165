@@ -1,0 +1,4453 @@
+[
+ {
+  "new_list_id": "p165list_Signy",
+  "period_name": "Signy",
+  "realm": "Midgard",
+  "npc": [
+   {
+    "name": "Signy",
+    "mob_id": "af4086dc-8895-4875-bc08-e9ad0953488c",
+    "region": 101,
+    "zone": "Jordheim",
+    "x": 35449,
+    "y": 30399,
+    "current_class": "DOL.GS.GameMerchant",
+    "current_guild": "Weapon Merchant",
+    "current_list": "MidWeaponMerchant"
+   }
+  ],
+  "target_class": "DOL.GS.GameMerchant",
+  "change": "point the NPC at the new list (old list stays for the NPCs that share it: Niklaas)",
+  "rows_total": 60,
+  "rows_over_150": 0,
+  "rows_by_confidence": {
+   "high": 60
+  },
+  "rows": [
+   {
+    "template_id": "bronze_dagger2",
+    "page_key": 2351,
+    "item_name": "Bronze Dagger (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 0
+   },
+   {
+    "template_id": "bronze_short_sword2",
+    "page_key": 2352,
+    "item_name": "Bronze Short Sword (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 1
+   },
+   {
+    "template_id": "bronze_broadsword2",
+    "page_key": 2353,
+    "item_name": "Bronze Broadsword (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 2
+   },
+   {
+    "template_id": "bronze_longsword2",
+    "page_key": 2354,
+    "item_name": "Bronze Longsword (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 3
+   },
+   {
+    "template_id": "iron_dagger2",
+    "page_key": 2356,
+    "item_name": "Iron Dagger (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 4
+   },
+   {
+    "template_id": "iron_short_sword2",
+    "page_key": 2357,
+    "item_name": "Iron Short Sword (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 5
+   },
+   {
+    "template_id": "iron_longsword2",
+    "page_key": 2359,
+    "item_name": "Iron Longsword (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 6
+   },
+   {
+    "template_id": "iron_bastard_sword2",
+    "page_key": 2360,
+    "item_name": "Iron Bastard Sword (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 7
+   },
+   {
+    "template_id": "steel_dagger2",
+    "page_key": 2361,
+    "item_name": "Steel Dagger (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 8
+   },
+   {
+    "template_id": "steel_short_sword2",
+    "page_key": 2362,
+    "item_name": "Steel Short Sword (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 9
+   },
+   {
+    "template_id": "steel_broadsword2",
+    "page_key": 2363,
+    "item_name": "Steel Broadsword (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 10
+   },
+   {
+    "template_id": "steel_longsword2",
+    "page_key": 2364,
+    "item_name": "Steel Longsword (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 11
+   },
+   {
+    "template_id": "steel_bastard_sword2",
+    "page_key": 2365,
+    "item_name": "Steel Bastard Sword (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 12
+   },
+   {
+    "template_id": "alloy_dagger2",
+    "page_key": 2366,
+    "item_name": "Alloy Dagger (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 13
+   },
+   {
+    "template_id": "alloy_broadsword2",
+    "page_key": 2368,
+    "item_name": "Alloy Broadsword (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 14
+   },
+   {
+    "template_id": "alloy_bastard_sword2",
+    "page_key": 2370,
+    "item_name": "Alloy Bastard Sword (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 15
+   },
+   {
+    "template_id": "fine_alloy_dagger2",
+    "page_key": 2371,
+    "item_name": "Fine Alloy Dagger (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 16
+   },
+   {
+    "template_id": "fine_alloy_short_sword2",
+    "page_key": 2372,
+    "item_name": "Fine Alloy Short Sword (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 17
+   },
+   {
+    "template_id": "fine_alloy_bastard_sword2",
+    "page_key": 2375,
+    "item_name": "Fine Alloy Bastard Sword (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 18
+   },
+   {
+    "template_id": "fine_alloy_hand_axe2",
+    "page_key": 2376,
+    "item_name": "Fine Alloy Hand Axe (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 19
+   },
+   {
+    "template_id": "fine_alloy_bearded_axe",
+    "page_key": 2377,
+    "item_name": "Fine Alloy Bearded Axe",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 20
+   },
+   {
+    "template_id": "fine_alloy_war_axe2",
+    "page_key": 2378,
+    "item_name": "Fine Alloy War Axe (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 21
+   },
+   {
+    "template_id": "fine_alloy_spiked_axe",
+    "page_key": 2379,
+    "item_name": "Fine Alloy Spiked Axe",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 22
+   },
+   {
+    "template_id": "fine_alloy_double-bladed_axe",
+    "page_key": 2380,
+    "item_name": "Fine Alloy Double-Bladed Axe",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 23
+   },
+   {
+    "template_id": "fine_alloy_small_hammer2",
+    "page_key": 2381,
+    "item_name": "Fine Alloy Small Hammer",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 24
+   },
+   {
+    "template_id": "fine_alloy_hammer2",
+    "page_key": 2382,
+    "item_name": "Fine Alloy Hammer",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 25
+   },
+   {
+    "template_id": "fine_alloy_war_hammer2",
+    "page_key": 2383,
+    "item_name": "Fine Alloy War Hammer",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 26
+   },
+   {
+    "template_id": "fine_alloy_pick_hammer2",
+    "page_key": 2384,
+    "item_name": "Fine Alloy Pick Hammer",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 27
+   },
+   {
+    "template_id": "fine_alloy_battle_hammer2",
+    "page_key": 2385,
+    "item_name": "Fine Alloy Battle Hammer",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 28
+   },
+   {
+    "template_id": "alloy_battle_hammer2",
+    "page_key": 7660,
+    "item_name": "Alloy Battle Hammer",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 29
+   },
+   {
+    "template_id": "alloy_hammer2",
+    "page_key": 7661,
+    "item_name": "Alloy Hammer",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 0
+   },
+   {
+    "template_id": "alloy_pick_hammer2",
+    "page_key": 7662,
+    "item_name": "Alloy Pick Hammer",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 1
+   },
+   {
+    "template_id": "alloy_small_hammer2",
+    "page_key": 7663,
+    "item_name": "Alloy Small Hammer",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 2
+   },
+   {
+    "template_id": "alloy_war_hammer2",
+    "page_key": 7664,
+    "item_name": "Alloy War Hammer",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 3
+   },
+   {
+    "template_id": "bronze_pick_hammer2",
+    "page_key": 7667,
+    "item_name": "Bronze Pick Hammer",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 4
+   },
+   {
+    "template_id": "bronze_small_hammer2",
+    "page_key": 7668,
+    "item_name": "Bronze Small Hammer",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 5
+   },
+   {
+    "template_id": "bronze_war_hammer2",
+    "page_key": 7669,
+    "item_name": "Bronze War Hammer",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 6
+   },
+   {
+    "template_id": "iron_battle_hammer2",
+    "page_key": 7678,
+    "item_name": "Iron Battle Hammer",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 7
+   },
+   {
+    "template_id": "iron_war_hammer2",
+    "page_key": 7682,
+    "item_name": "Iron War Hammer",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 8
+   },
+   {
+    "template_id": "steel_battle_hammer2",
+    "page_key": 7695,
+    "item_name": "Steel Battle Hammer",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 9
+   },
+   {
+    "template_id": "steel_hammer2",
+    "page_key": 7696,
+    "item_name": "Steel Hammer",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 10
+   },
+   {
+    "template_id": "steel_pick_hammer2",
+    "page_key": 7697,
+    "item_name": "Steel Pick Hammer",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 11
+   },
+   {
+    "template_id": "steel_small_hammer2",
+    "page_key": 7698,
+    "item_name": "Steel Small Hammer",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 12
+   },
+   {
+    "template_id": "steel_war_hammer2",
+    "page_key": 7699,
+    "item_name": "Steel War Hammer",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 13
+   },
+   {
+    "template_id": "bronze_hand_axe2",
+    "page_key": 7988,
+    "item_name": "Bronze Hand Axe (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 14
+   },
+   {
+    "template_id": "bronze_bearded_axe",
+    "page_key": 7989,
+    "item_name": "Bronze Bearded Axe",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 15
+   },
+   {
+    "template_id": "alloy_bearded_axe",
+    "page_key": 8327,
+    "item_name": "Alloy Bearded Axe",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 16
+   },
+   {
+    "template_id": "alloy_double-bladed_axe",
+    "page_key": 8328,
+    "item_name": "Alloy Double-Bladed Axe",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 17
+   },
+   {
+    "template_id": "alloy_hand_axe2",
+    "page_key": 8329,
+    "item_name": "Alloy Hand Axe (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 18
+   },
+   {
+    "template_id": "alloy_spiked_axe",
+    "page_key": 8330,
+    "item_name": "Alloy Spiked Axe",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 19
+   },
+   {
+    "template_id": "alloy_war_axe2",
+    "page_key": 8331,
+    "item_name": "Alloy War Axe (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 20
+   },
+   {
+    "template_id": "bronze_double-bladed_axe",
+    "page_key": 8332,
+    "item_name": "Bronze Double-Bladed Axe",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 21
+   },
+   {
+    "template_id": "bronze_spiked_axe",
+    "page_key": 8333,
+    "item_name": "Bronze Spiked Axe",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 22
+   },
+   {
+    "template_id": "iron_bearded_axe",
+    "page_key": 8335,
+    "item_name": "Iron Bearded Axe",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 23
+   },
+   {
+    "template_id": "iron_double-bladed_axe",
+    "page_key": 8336,
+    "item_name": "Iron Double-Bladed Axe",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 24
+   },
+   {
+    "template_id": "iron_hand_axe2",
+    "page_key": 8337,
+    "item_name": "Iron Hand Axe (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 25
+   },
+   {
+    "template_id": "iron_spiked_axe",
+    "page_key": 8338,
+    "item_name": "Iron Spiked Axe",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 26
+   },
+   {
+    "template_id": "steel_bearded_axe",
+    "page_key": 8340,
+    "item_name": "Steel Bearded Axe",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 27
+   },
+   {
+    "template_id": "steel_spiked_axe",
+    "page_key": 8343,
+    "item_name": "Steel Spiked Axe",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 28
+   },
+   {
+    "template_id": "steel_war_axe2",
+    "page_key": 8344,
+    "item_name": "Steel War Axe (Mid)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 29
+   }
+  ]
+ },
+ {
+  "new_list_id": "p165list_Holsvi_Hallgrim",
+  "period_name": "Holsvi Hallgrim",
+  "realm": "Midgard",
+  "npc": [
+   {
+    "name": "Holsvi Hallgrim",
+    "mob_id": "206c0b13-ce15-4188-8519-4ada641dda55",
+    "region": 101,
+    "zone": "Jordheim",
+    "x": 32713,
+    "y": 32291,
+    "current_class": "DOL.GS.GameMerchant",
+    "current_guild": "Merchant",
+    "current_list": "MidAlchemy"
+   }
+  ],
+  "target_class": "DOL.GS.GameMerchant",
+  "change": "point the NPC at the new list (old list stays for the NPCs that share it: Acchiles Treldolph, Urho)",
+  "rows_total": 134,
+  "rows_over_150": 0,
+  "rows_by_confidence": {
+   "high": 132,
+   "medium": 2
+  },
+  "rows": [
+   {
+    "template_id": "Lo_gem",
+    "page_key": 5782,
+    "item_name": "Lo Gem",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 0
+   },
+   {
+    "template_id": "Um_gem",
+    "page_key": 5783,
+    "item_name": "Um Gem",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 1
+   },
+   {
+    "template_id": "On_gem",
+    "page_key": 5784,
+    "item_name": "On Gem",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 2
+   },
+   {
+    "template_id": "Ee_gem",
+    "page_key": 5785,
+    "item_name": "Ee Gem",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 3
+   },
+   {
+    "template_id": "Pal_gem",
+    "page_key": 5786,
+    "item_name": "Pal Gem",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 4
+   },
+   {
+    "template_id": "Mon_gem",
+    "page_key": 5787,
+    "item_name": "Mon Gem",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 5
+   },
+   {
+    "template_id": "Ros_gem",
+    "page_key": 5788,
+    "item_name": "Ros Gem",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 6
+   },
+   {
+    "template_id": "Zo_gem",
+    "page_key": 5789,
+    "item_name": "Zo Gem",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 7
+   },
+   {
+    "template_id": "Kath_gem",
+    "page_key": 5790,
+    "item_name": "Kath Gem",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 8
+   },
+   {
+    "template_id": "Ra_gem",
+    "page_key": 5791,
+    "item_name": "Ra Gem",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 9
+   },
+   {
+    "template_id": "sun_light",
+    "page_key": 5792,
+    "item_name": "Sun Light",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 10
+   },
+   {
+    "template_id": "draconic_fire",
+    "page_key": 5793,
+    "item_name": "Draconic Fire",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 11
+   },
+   {
+    "template_id": "treant_blood",
+    "page_key": 5794,
+    "item_name": "Treant Blood",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 12
+   },
+   {
+    "template_id": "swamp_fog",
+    "page_key": 5795,
+    "item_name": "Swamp Fog",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 13
+   },
+   {
+    "template_id": "air_elemental_essence",
+    "page_key": 5796,
+    "item_name": "Air Elemental Essence",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 14
+   },
+   {
+    "template_id": "leviathan_blood",
+    "page_key": 5797,
+    "item_name": "Leviathan Blood",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 15
+   },
+   {
+    "template_id": "heat_from_an_unearthly_pyre",
+    "page_key": 5798,
+    "item_name": "Heat from an Unearthly Pyre",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 16
+   },
+   {
+    "template_id": "undead_ash_and_holy_water",
+    "page_key": 5799,
+    "item_name": "Undead Ash and Holy Water",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 17
+   },
+   {
+    "template_id": "frost_from_a_wasteland",
+    "page_key": 5800,
+    "item_name": "Frost from a Wasteland",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 18
+   },
+   {
+    "template_id": "ground_draconic_scales",
+    "page_key": 5801,
+    "item_name": "Ground Draconic Scales",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 19
+   },
+   {
+    "template_id": "essence_of_life",
+    "page_key": 5802,
+    "item_name": "Essence of Life",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 20
+   },
+   {
+    "template_id": "bloodied_battlefield_dirt",
+    "page_key": 5803,
+    "item_name": "Bloodied Battlefield Dirt",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 21
+   },
+   {
+    "template_id": "spellcraft_kit",
+    "page_key": 5807,
+    "item_name": "Spellcraft Kit",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 22
+   },
+   {
+    "template_id": "giant_blood",
+    "page_key": 5808,
+    "item_name": "Giant Blood",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 23
+   },
+   {
+    "template_id": "mystic_energy",
+    "page_key": 5809,
+    "item_name": "Mystic Energy",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 24
+   },
+   {
+    "template_id": "thin_metal_flask",
+    "page_key": 5858,
+    "item_name": "Thin Metal Flask",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 25
+   },
+   {
+    "template_id": "ceramic_flask",
+    "page_key": 5859,
+    "item_name": "Ceramic Flask",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 26
+   },
+   {
+    "template_id": "crystal_flask",
+    "page_key": 5860,
+    "item_name": "Crystal Flask",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 27
+   },
+   {
+    "template_id": "glass_flask",
+    "page_key": 5861,
+    "item_name": "Glass Flask",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 28
+   },
+   {
+    "template_id": "alum",
+    "page_key": 5862,
+    "item_name": "Alum",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 29
+   },
+   {
+    "template_id": "tartaric_acid",
+    "page_key": 5863,
+    "item_name": "Tartaric Acid",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 0
+   },
+   {
+    "template_id": "cloisonne",
+    "page_key": 5864,
+    "item_name": "Cloisonne",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 1
+   },
+   {
+    "template_id": "ground_tea",
+    "page_key": 5865,
+    "item_name": "Ground Tea",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 2
+   },
+   {
+    "template_id": "meadowsweet",
+    "page_key": 5866,
+    "item_name": "Meadowsweet",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 3
+   },
+   {
+    "template_id": "diluted_sassafras_leaf_extract",
+    "page_key": 5867,
+    "item_name": "Diluted Sassafras Leaf Extract",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 4
+   },
+   {
+    "template_id": "ground_grass",
+    "page_key": 5868,
+    "item_name": "Ground Grass",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 5
+   },
+   {
+    "template_id": "ground_red_cabbage",
+    "page_key": 5869,
+    "item_name": "Ground Red Cabbage",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 6
+   },
+   {
+    "template_id": "ground_dandelion_root",
+    "page_key": 5870,
+    "item_name": "Ground Dandelion Root",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 7
+   },
+   {
+    "template_id": "crushed_walnut_hulls",
+    "page_key": 5871,
+    "item_name": "Crushed Walnut Hulls",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 8
+   },
+   {
+    "template_id": "crushed_weld",
+    "page_key": 5872,
+    "item_name": "Crushed Weld",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 9
+   },
+   {
+    "template_id": "crushed_sassafras_leaves",
+    "page_key": 5873,
+    "item_name": "Crushed Sassafras Leaves",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 10
+   },
+   {
+    "template_id": "crushed_juniper_berries",
+    "page_key": 5874,
+    "item_name": "Crushed Juniper Berries",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 11
+   },
+   {
+    "template_id": "crushed_marigold_blossom",
+    "page_key": 5875,
+    "item_name": "Crushed Marigold Blossom",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 12
+   },
+   {
+    "template_id": "sassafras_extract",
+    "page_key": 5876,
+    "item_name": "Sassafras Extract",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 13
+   },
+   {
+    "template_id": "crumpled_bracken_buds",
+    "page_key": 5877,
+    "item_name": "Crumpled Bracken Buds",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 14
+   },
+   {
+    "template_id": "fermented_wode_leaf_extract",
+    "page_key": 5884,
+    "item_name": "Fermented Wode Leaf Extract",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 15
+   },
+   {
+    "template_id": "fermented_devils_bit",
+    "page_key": 6637,
+    "item_name": "Fermented Devil's Bit",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 16
+   },
+   {
+    "template_id": "sorrel_root",
+    "page_key": 6638,
+    "item_name": "Sorrel Root",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 17
+   },
+   {
+    "template_id": "boiled_heath",
+    "page_key": 6639,
+    "item_name": "Boiled Heath",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 18
+   },
+   {
+    "template_id": "diluted_fermented_wode_leaves",
+    "page_key": 6640,
+    "item_name": "Diluted Fermented Wode Leaves",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 19
+   },
+   {
+    "template_id": "fermented_wode_leaves",
+    "page_key": 6641,
+    "item_name": "Fermented Wode Leaves",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 20
+   },
+   {
+    "template_id": "St._Johns_wort",
+    "page_key": 6642,
+    "item_name": "St. John's Wort",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 21
+   },
+   {
+    "template_id": "danesweed",
+    "page_key": 6643,
+    "item_name": "Danesweed",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 22
+   },
+   {
+    "template_id": "yellow_iris_roots",
+    "page_key": 6644,
+    "item_name": "Yellow Iris Roots",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 23
+   },
+   {
+    "template_id": "weld_and_nettles",
+    "page_key": 6645,
+    "item_name": "Weld and Nettles",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 24
+   },
+   {
+    "template_id": "aged_fermented_wode_extract",
+    "page_key": 6646,
+    "item_name": "Aged Fermented Wode Extract",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 25
+   },
+   {
+    "template_id": "ground_giant_bone",
+    "page_key": 6647,
+    "item_name": "Ground Giant Bone",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 26
+   },
+   {
+    "template_id": "ground_vendo_bone3",
+    "page_key": 6648,
+    "item_name": "Ground Vendo Bone",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 27
+   },
+   {
+    "template_id": "soot_from_niflheim3",
+    "page_key": 6649,
+    "item_name": "Soot From Niflheim",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 28
+   },
+   {
+    "template_id": "stable_eroding_catalyst",
+    "page_key": 6650,
+    "item_name": "Stable Eroding Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 29
+   },
+   {
+    "template_id": "stable_protecting_catalyst",
+    "page_key": 6651,
+    "item_name": "Stable Protecting Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 0
+   },
+   {
+    "template_id": "concoctive_honing_catalyst",
+    "page_key": 6652,
+    "item_name": "Concoctive Honing Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 1
+   },
+   {
+    "template_id": "concoctive_leeching_catalyst",
+    "page_key": 6653,
+    "item_name": "Concoctive Leeching Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 2
+   },
+   {
+    "template_id": "concoctive_withering_catalyst",
+    "page_key": 6654,
+    "item_name": "Concoctive Withering Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 3
+   },
+   {
+    "template_id": "concoctive_crippling_catalyst",
+    "page_key": 6655,
+    "item_name": "Concoctive Crippling Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 4
+   },
+   {
+    "template_id": "reactive_firebrand_catalyst",
+    "page_key": 6656,
+    "item_name": "Reactive Firebrand Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 5
+   },
+   {
+    "template_id": "reactive_glacial_catalyst",
+    "page_key": 6657,
+    "item_name": "Reactive Glacial Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 6
+   },
+   {
+    "template_id": "reactive_electrical_catalyst",
+    "page_key": 6658,
+    "item_name": "Reactive Electrical Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 7
+   },
+   {
+    "template_id": "reactive_spirit_catalyst",
+    "page_key": 6659,
+    "item_name": "Reactive Spirit Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 8
+   },
+   {
+    "template_id": "reactive_celeric_catalyst",
+    "page_key": 6660,
+    "item_name": "Reactive Celeric Catalyst",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 9
+   },
+   {
+    "template_id": "reactive_shielding_catalyst",
+    "page_key": 6661,
+    "item_name": "Reactive Shielding Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 10
+   },
+   {
+    "template_id": "reactive_hardening_catalyst",
+    "page_key": 6662,
+    "item_name": "Reactive Hardening Catalyst",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 11
+   },
+   {
+    "template_id": "reactive_eroding_catalyst",
+    "page_key": 6663,
+    "item_name": "Reactive Eroding Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 12
+   },
+   {
+    "template_id": "alchemy_kit3",
+    "page_key": 6664,
+    "item_name": "Alchemy Kit",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 13
+   },
+   {
+    "template_id": "thin_glass_vial",
+    "page_key": 6666,
+    "item_name": "Thin Glass Vial",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 14
+   },
+   {
+    "template_id": "thin_metal_vial",
+    "page_key": 6667,
+    "item_name": "Thin Metal Vial",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 15
+   },
+   {
+    "template_id": "ceramic_vial",
+    "page_key": 6668,
+    "item_name": "Ceramic Vial",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 16
+   },
+   {
+    "template_id": "crystal_vial",
+    "page_key": 6669,
+    "item_name": "Crystal Vial",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 17
+   },
+   {
+    "template_id": "rotted_flaxseed_extract",
+    "page_key": 6670,
+    "item_name": "Rotted Flaxseed Extract",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 18
+   },
+   {
+    "template_id": "bone_salve_extract",
+    "page_key": 6671,
+    "item_name": "Bone Salve Extract",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 19
+   },
+   {
+    "template_id": "hevea_tree_extract",
+    "page_key": 6672,
+    "item_name": "Hevea Tree Extract",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 20
+   },
+   {
+    "template_id": "blood_albumen",
+    "page_key": 6673,
+    "item_name": "Blood Albumen",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 21
+   },
+   {
+    "template_id": "distilled_honey_bee_venom",
+    "page_key": 6674,
+    "item_name": "Distilled Honey Bee Venom",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 22
+   },
+   {
+    "template_id": "poison_ivy",
+    "page_key": 6675,
+    "item_name": "Poison Ivy",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 23
+   },
+   {
+    "template_id": "fox_glove",
+    "page_key": 6676,
+    "item_name": "Foxglove",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 24
+   },
+   {
+    "template_id": "crushed_maggots",
+    "page_key": 6677,
+    "item_name": "Crushed Maggots",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 25
+   },
+   {
+    "template_id": "distilled_soricidae_venom",
+    "page_key": 6678,
+    "item_name": "Distilled Soricidae Venom",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 26
+   },
+   {
+    "template_id": "potato_extract",
+    "page_key": 6679,
+    "item_name": "Potato Extract",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 27
+   },
+   {
+    "template_id": "cherry_laurel",
+    "page_key": 6680,
+    "item_name": "Cherry Laurel",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 28
+   },
+   {
+    "template_id": "distilled_wasp_venom",
+    "page_key": 6681,
+    "item_name": "Distilled Wasp Venom",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 29
+   },
+   {
+    "template_id": "buttercup",
+    "page_key": 6682,
+    "item_name": "Buttercup",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 0
+   },
+   {
+    "template_id": "oleander",
+    "page_key": 6683,
+    "item_name": "Oleander",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 1
+   },
+   {
+    "template_id": "latrodectus_spider_venom",
+    "page_key": 6684,
+    "item_name": "Latrodectus Spider Venom",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 2
+   },
+   {
+    "template_id": "bat_saliva",
+    "page_key": 6685,
+    "item_name": "Bat Saliva",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 3
+   },
+   {
+    "template_id": "poppy_seed",
+    "page_key": 6686,
+    "item_name": "Poppy Seed",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 4
+   },
+   {
+    "template_id": "peony",
+    "page_key": 6687,
+    "item_name": "Peony",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 5
+   },
+   {
+    "template_id": "black_widow_venom",
+    "page_key": 6688,
+    "item_name": "Black Widow Venom",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 6
+   },
+   {
+    "template_id": "caster_oil_plant",
+    "page_key": 6689,
+    "item_name": "Caster Oil Plant",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 7
+   },
+   {
+    "template_id": "autumn_crocus",
+    "page_key": 6690,
+    "item_name": "Autumn Crocus",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 8
+   },
+   {
+    "template_id": "distilled_anemone_venom",
+    "page_key": 6691,
+    "item_name": "Distilled Anemone Venom",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 9
+   },
+   {
+    "template_id": "rat_saliva",
+    "page_key": 6692,
+    "item_name": "Rat Saliva",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 10
+   },
+   {
+    "template_id": "narcissus",
+    "page_key": 6693,
+    "item_name": "Narcissus",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 11
+   },
+   {
+    "template_id": "henbane",
+    "page_key": 6694,
+    "item_name": "Henbane",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 12
+   },
+   {
+    "template_id": "coral_snake_venom",
+    "page_key": 6695,
+    "item_name": "Coral Snake Venom",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 13
+   },
+   {
+    "template_id": "heated_distill",
+    "page_key": 6696,
+    "item_name": "Heated Distill",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 14
+   },
+   {
+    "template_id": "dusty_distill",
+    "page_key": 6697,
+    "item_name": "Dusty Distill",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 15
+   },
+   {
+    "template_id": "earthen_distill",
+    "page_key": 6698,
+    "item_name": "Earthen Distill",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 16
+   },
+   {
+    "template_id": "vapor_distill",
+    "page_key": 6699,
+    "item_name": "Vapor Distill",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 17
+   },
+   {
+    "template_id": "watery_distill",
+    "page_key": 6700,
+    "item_name": "Watery Distill",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 18
+   },
+   {
+    "template_id": "fiery_distill",
+    "page_key": 6701,
+    "item_name": "Fiery Distill",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 19
+   },
+   {
+    "template_id": "icy_distill",
+    "page_key": 6702,
+    "item_name": "Icy Distill",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 20
+   },
+   {
+    "template_id": "airy_distill",
+    "page_key": 6703,
+    "item_name": "Airy Distill",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 21
+   },
+   {
+    "template_id": "ogre_blood",
+    "page_key": 6704,
+    "item_name": "Ogre Blood",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 22
+   },
+   {
+    "template_id": "treant_wood",
+    "page_key": 6705,
+    "item_name": "Treant Wood",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 23
+   },
+   {
+    "template_id": "faerie_boots",
+    "page_key": 6706,
+    "item_name": "Faerie Boots",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 24
+   },
+   {
+    "template_id": "wizened_wood",
+    "page_key": 6707,
+    "item_name": "Wizened Wood",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 25
+   },
+   {
+    "template_id": "ancient_treant_wood",
+    "page_key": 6708,
+    "item_name": "Ancient Treant Wood",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 26
+   },
+   {
+    "template_id": "silvery_faerie_hair",
+    "page_key": 6709,
+    "item_name": "Silvery Faerie Hair",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 27
+   },
+   {
+    "template_id": "boiled_blood_root",
+    "page_key": 6710,
+    "item_name": "Boiled Blood Root",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 28
+   },
+   {
+    "template_id": "boiled_ginger_root",
+    "page_key": 6711,
+    "item_name": "Boiled Ginger Root",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 29
+   },
+   {
+    "template_id": "boiled_St._Johns_wort",
+    "page_key": 6712,
+    "item_name": "Boiled St John's Wort",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 4,
+    "slot": 0
+   },
+   {
+    "template_id": "dried_blood_root",
+    "page_key": 6713,
+    "item_name": "Dried Blood Root",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 4,
+    "slot": 1
+   },
+   {
+    "template_id": "dried_ginger_root",
+    "page_key": 6714,
+    "item_name": "Dried Ginger Root",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 4,
+    "slot": 2
+   },
+   {
+    "template_id": "dried_St._Johns_wort",
+    "page_key": 6715,
+    "item_name": "Dried St John's Wort",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 4,
+    "slot": 3
+   },
+   {
+    "template_id": "powdered_blood_root",
+    "page_key": 6716,
+    "item_name": "Powdered Blood Root",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 4,
+    "slot": 4
+   },
+   {
+    "template_id": "powdered_ginger_root",
+    "page_key": 6717,
+    "item_name": "Powdered Ginger Root",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 4,
+    "slot": 5
+   },
+   {
+    "template_id": "powdered_St._Johns_wort",
+    "page_key": 6718,
+    "item_name": "Powdered St John's Wort",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 4,
+    "slot": 6
+   },
+   {
+    "template_id": "fermented_blood_root",
+    "page_key": 6719,
+    "item_name": "Fermented Blood Root",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 4,
+    "slot": 7
+   },
+   {
+    "template_id": "fermented_ginger_root",
+    "page_key": 6720,
+    "item_name": "Fermented Ginger Root",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 4,
+    "slot": 8
+   },
+   {
+    "template_id": "fermented_St._Johns_wort",
+    "page_key": 6721,
+    "item_name": "Fermented St John's Wort",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 4,
+    "slot": 9
+   },
+   {
+    "template_id": "shard_of_a_mirror",
+    "page_key": 6722,
+    "item_name": "Shard of a Mirror",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 4,
+    "slot": 10
+   },
+   {
+    "template_id": "small_broken_mirror",
+    "page_key": 6723,
+    "item_name": "Small Broken Mirror",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 4,
+    "slot": 11
+   },
+   {
+    "template_id": "ornate_broken_mirror",
+    "page_key": 6724,
+    "item_name": "Ornate Broken Mirror",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 4,
+    "slot": 12
+   },
+   {
+    "template_id": "drop_of_mercury",
+    "page_key": 6725,
+    "item_name": "Drop of Mercury",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 4,
+    "slot": 13
+   }
+  ]
+ },
+ {
+  "new_list_id": "p165list_Brach_Leof",
+  "period_name": "Brach Leof",
+  "realm": "Albion",
+  "npc": [
+   {
+    "name": "Brach Leof",
+    "mob_id": "91d8947a-0ed4-5a87-8147-b5348aaf01cc",
+    "region": 10,
+    "zone": "City of Camelot",
+    "x": 36532,
+    "y": 29730,
+    "current_class": "DOL.GS.GameNPC",
+    "current_guild": "",
+    "current_list": null
+   }
+  ],
+  "target_class": "DOL.GS.GameMerchant",
+  "change": "turn the NPC into a merchant: set ClassType to target_class, ItemsListTemplateID to new_list_id, and Guild (period guild title not in the pages: owner/coordinator to choose)",
+  "rows_total": 92,
+  "rows_over_150": 0,
+  "rows_by_confidence": {
+   "high": 92
+  },
+  "rows": [
+   {
+    "template_id": "thin_metal_flask",
+    "page_key": 5858,
+    "item_name": "Thin Metal Flask",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 0
+   },
+   {
+    "template_id": "ceramic_flask",
+    "page_key": 5859,
+    "item_name": "Ceramic Flask",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 1
+   },
+   {
+    "template_id": "crystal_flask",
+    "page_key": 5860,
+    "item_name": "Crystal Flask",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 2
+   },
+   {
+    "template_id": "glass_flask",
+    "page_key": 5861,
+    "item_name": "Glass Flask",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 3
+   },
+   {
+    "template_id": "alum",
+    "page_key": 5862,
+    "item_name": "Alum",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 4
+   },
+   {
+    "template_id": "tartaric_acid",
+    "page_key": 5863,
+    "item_name": "Tartaric Acid",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 5
+   },
+   {
+    "template_id": "cloisonne",
+    "page_key": 5864,
+    "item_name": "Cloisonne",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 6
+   },
+   {
+    "template_id": "ground_tea",
+    "page_key": 5865,
+    "item_name": "Ground Tea",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 7
+   },
+   {
+    "template_id": "meadowsweet",
+    "page_key": 5866,
+    "item_name": "Meadowsweet",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 8
+   },
+   {
+    "template_id": "diluted_sassafras_leaf_extract",
+    "page_key": 5867,
+    "item_name": "Diluted Sassafras Leaf Extract",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 9
+   },
+   {
+    "template_id": "ground_grass",
+    "page_key": 5868,
+    "item_name": "Ground Grass",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 10
+   },
+   {
+    "template_id": "ground_red_cabbage",
+    "page_key": 5869,
+    "item_name": "Ground Red Cabbage",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 11
+   },
+   {
+    "template_id": "ground_dandelion_root",
+    "page_key": 5870,
+    "item_name": "Ground Dandelion Root",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 12
+   },
+   {
+    "template_id": "crushed_walnut_hulls",
+    "page_key": 5871,
+    "item_name": "Crushed Walnut Hulls",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 13
+   },
+   {
+    "template_id": "crushed_weld",
+    "page_key": 5872,
+    "item_name": "Crushed Weld",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 14
+   },
+   {
+    "template_id": "crushed_sassafras_leaves",
+    "page_key": 5873,
+    "item_name": "Crushed Sassafras Leaves",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 15
+   },
+   {
+    "template_id": "crushed_juniper_berries",
+    "page_key": 5874,
+    "item_name": "Crushed Juniper Berries",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 16
+   },
+   {
+    "template_id": "crushed_marigold_blossom",
+    "page_key": 5875,
+    "item_name": "Crushed Marigold Blossom",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 17
+   },
+   {
+    "template_id": "sassafras_extract",
+    "page_key": 5876,
+    "item_name": "Sassafras Extract",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 18
+   },
+   {
+    "template_id": "crumpled_bracken_buds",
+    "page_key": 5877,
+    "item_name": "Crumpled Bracken Buds",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 19
+   },
+   {
+    "template_id": "rowan_wooden_boards",
+    "page_key": 5895,
+    "item_name": "Rowan Wooden Boards",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 20
+   },
+   {
+    "template_id": "elm_wooden_boards",
+    "page_key": 5896,
+    "item_name": "Elm Wooden Boards",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 21
+   },
+   {
+    "template_id": "ironwood_wooden_boards",
+    "page_key": 5898,
+    "item_name": "Ironwood Wooden Boards",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 22
+   },
+   {
+    "template_id": "heartwood_wooden_boards",
+    "page_key": 5899,
+    "item_name": "Heartwood Wooden Boards",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 23
+   },
+   {
+    "template_id": "planing_tool",
+    "page_key": 5900,
+    "item_name": "Planing Tool",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 24
+   },
+   {
+    "template_id": "fermented_devils_bit",
+    "page_key": 6637,
+    "item_name": "Fermented Devil's Bit",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 25
+   },
+   {
+    "template_id": "sorrel_root",
+    "page_key": 6638,
+    "item_name": "Sorrel Root",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 26
+   },
+   {
+    "template_id": "diluted_fermented_wode_leaves",
+    "page_key": 6640,
+    "item_name": "Diluted Fermented Wode Leaves",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 27
+   },
+   {
+    "template_id": "fermented_wode_leaves",
+    "page_key": 6641,
+    "item_name": "Fermented Wode Leaves",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 28
+   },
+   {
+    "template_id": "St._Johns_wort",
+    "page_key": 6642,
+    "item_name": "St. John's Wort",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 29
+   },
+   {
+    "template_id": "danesweed",
+    "page_key": 6643,
+    "item_name": "Danesweed",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 0
+   },
+   {
+    "template_id": "yellow_iris_roots",
+    "page_key": 6644,
+    "item_name": "Yellow Iris Roots",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 1
+   },
+   {
+    "template_id": "aged_fermented_wode_extract",
+    "page_key": 6646,
+    "item_name": "Aged Fermented Wode Extract",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 2
+   },
+   {
+    "template_id": "thin_glass_vial",
+    "page_key": 6666,
+    "item_name": "Thin Glass Vial",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 3
+   },
+   {
+    "template_id": "thin_metal_vial",
+    "page_key": 6667,
+    "item_name": "Thin Metal Vial",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 4
+   },
+   {
+    "template_id": "ceramic_vial",
+    "page_key": 6668,
+    "item_name": "Ceramic Vial",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 5
+   },
+   {
+    "template_id": "rotted_flaxseed_extract",
+    "page_key": 6670,
+    "item_name": "Rotted Flaxseed Extract",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 6
+   },
+   {
+    "template_id": "bone_salve_extract",
+    "page_key": 6671,
+    "item_name": "Bone Salve Extract",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 7
+   },
+   {
+    "template_id": "hevea_tree_extract",
+    "page_key": 6672,
+    "item_name": "Hevea Tree Extract",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 8
+   },
+   {
+    "template_id": "blood_albumen",
+    "page_key": 6673,
+    "item_name": "Blood Albumen",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 9
+   },
+   {
+    "template_id": "distilled_honey_bee_venom",
+    "page_key": 6674,
+    "item_name": "Distilled Honey Bee Venom",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 10
+   },
+   {
+    "template_id": "poison_ivy",
+    "page_key": 6675,
+    "item_name": "Poison Ivy",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 11
+   },
+   {
+    "template_id": "fox_glove",
+    "page_key": 6676,
+    "item_name": "Foxglove",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 12
+   },
+   {
+    "template_id": "crushed_maggots",
+    "page_key": 6677,
+    "item_name": "Crushed Maggots",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 13
+   },
+   {
+    "template_id": "distilled_soricidae_venom",
+    "page_key": 6678,
+    "item_name": "Distilled Soricidae Venom",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 14
+   },
+   {
+    "template_id": "potato_extract",
+    "page_key": 6679,
+    "item_name": "Potato Extract",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 15
+   },
+   {
+    "template_id": "cherry_laurel",
+    "page_key": 6680,
+    "item_name": "Cherry Laurel",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 16
+   },
+   {
+    "template_id": "distilled_wasp_venom",
+    "page_key": 6681,
+    "item_name": "Distilled Wasp Venom",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 17
+   },
+   {
+    "template_id": "buttercup",
+    "page_key": 6682,
+    "item_name": "Buttercup",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 18
+   },
+   {
+    "template_id": "oleander",
+    "page_key": 6683,
+    "item_name": "Oleander",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 19
+   },
+   {
+    "template_id": "latrodectus_spider_venom",
+    "page_key": 6684,
+    "item_name": "Latrodectus Spider Venom",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 20
+   },
+   {
+    "template_id": "bat_saliva",
+    "page_key": 6685,
+    "item_name": "Bat Saliva",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 21
+   },
+   {
+    "template_id": "poppy_seed",
+    "page_key": 6686,
+    "item_name": "Poppy Seed",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 22
+   },
+   {
+    "template_id": "peony",
+    "page_key": 6687,
+    "item_name": "Peony",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 23
+   },
+   {
+    "template_id": "black_widow_venom",
+    "page_key": 6688,
+    "item_name": "Black Widow Venom",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 24
+   },
+   {
+    "template_id": "caster_oil_plant",
+    "page_key": 6689,
+    "item_name": "Caster Oil Plant",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 25
+   },
+   {
+    "template_id": "autumn_crocus",
+    "page_key": 6690,
+    "item_name": "Autumn Crocus",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 26
+   },
+   {
+    "template_id": "distilled_anemone_venom",
+    "page_key": 6691,
+    "item_name": "Distilled Anemone Venom",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 27
+   },
+   {
+    "template_id": "rat_saliva",
+    "page_key": 6692,
+    "item_name": "Rat Saliva",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 28
+   },
+   {
+    "template_id": "narcissus",
+    "page_key": 6693,
+    "item_name": "Narcissus",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 29
+   },
+   {
+    "template_id": "henbane",
+    "page_key": 6694,
+    "item_name": "Henbane",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 0
+   },
+   {
+    "template_id": "coral_snake_venom",
+    "page_key": 6695,
+    "item_name": "Coral Snake Venom",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 1
+   },
+   {
+    "template_id": "heated_distill",
+    "page_key": 6696,
+    "item_name": "Heated Distill",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 2
+   },
+   {
+    "template_id": "dusty_distill",
+    "page_key": 6697,
+    "item_name": "Dusty Distill",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 3
+   },
+   {
+    "template_id": "earthen_distill",
+    "page_key": 6698,
+    "item_name": "Earthen Distill",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 4
+   },
+   {
+    "template_id": "vapor_distill",
+    "page_key": 6699,
+    "item_name": "Vapor Distill",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 5
+   },
+   {
+    "template_id": "watery_distill",
+    "page_key": 6700,
+    "item_name": "Watery Distill",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 6
+   },
+   {
+    "template_id": "fiery_distill",
+    "page_key": 6701,
+    "item_name": "Fiery Distill",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 7
+   },
+   {
+    "template_id": "icy_distill",
+    "page_key": 6702,
+    "item_name": "Icy Distill",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 8
+   },
+   {
+    "template_id": "airy_distill",
+    "page_key": 6703,
+    "item_name": "Airy Distill",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 9
+   },
+   {
+    "template_id": "ogre_blood",
+    "page_key": 6704,
+    "item_name": "Ogre Blood",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 10
+   },
+   {
+    "template_id": "treant_wood",
+    "page_key": 6705,
+    "item_name": "Treant Wood",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 11
+   },
+   {
+    "template_id": "faerie_boots",
+    "page_key": 6706,
+    "item_name": "Faerie Boots",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 12
+   },
+   {
+    "template_id": "wizened_wood",
+    "page_key": 6707,
+    "item_name": "Wizened Wood",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 13
+   },
+   {
+    "template_id": "ancient_treant_wood",
+    "page_key": 6708,
+    "item_name": "Ancient Treant Wood",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 14
+   },
+   {
+    "template_id": "silvery_faerie_hair",
+    "page_key": 6709,
+    "item_name": "Silvery Faerie Hair",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 15
+   },
+   {
+    "template_id": "boiled_blood_root",
+    "page_key": 6710,
+    "item_name": "Boiled Blood Root",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 16
+   },
+   {
+    "template_id": "boiled_ginger_root",
+    "page_key": 6711,
+    "item_name": "Boiled Ginger Root",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 17
+   },
+   {
+    "template_id": "boiled_St._Johns_wort",
+    "page_key": 6712,
+    "item_name": "Boiled St John's Wort",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 18
+   },
+   {
+    "template_id": "dried_blood_root",
+    "page_key": 6713,
+    "item_name": "Dried Blood Root",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 19
+   },
+   {
+    "template_id": "dried_ginger_root",
+    "page_key": 6714,
+    "item_name": "Dried Ginger Root",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 20
+   },
+   {
+    "template_id": "dried_St._Johns_wort",
+    "page_key": 6715,
+    "item_name": "Dried St John's Wort",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 21
+   },
+   {
+    "template_id": "powdered_blood_root",
+    "page_key": 6716,
+    "item_name": "Powdered Blood Root",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 22
+   },
+   {
+    "template_id": "powdered_ginger_root",
+    "page_key": 6717,
+    "item_name": "Powdered Ginger Root",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 23
+   },
+   {
+    "template_id": "powdered_St._Johns_wort",
+    "page_key": 6718,
+    "item_name": "Powdered St John's Wort",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 24
+   },
+   {
+    "template_id": "fermented_blood_root",
+    "page_key": 6719,
+    "item_name": "Fermented Blood Root",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 25
+   },
+   {
+    "template_id": "fermented_ginger_root",
+    "page_key": 6720,
+    "item_name": "Fermented Ginger Root",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 26
+   },
+   {
+    "template_id": "fermented_St._Johns_wort",
+    "page_key": 6721,
+    "item_name": "Fermented St John's Wort",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 27
+   },
+   {
+    "template_id": "shard_of_a_mirror",
+    "page_key": 6722,
+    "item_name": "Shard of a Mirror",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 28
+   },
+   {
+    "template_id": "small_broken_mirror",
+    "page_key": 6723,
+    "item_name": "Small Broken Mirror",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 2,
+    "slot": 29
+   },
+   {
+    "template_id": "ornate_broken_mirror",
+    "page_key": 6724,
+    "item_name": "Ornate Broken Mirror",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 0
+   },
+   {
+    "template_id": "drop_of_mercury",
+    "page_key": 6725,
+    "item_name": "Drop of Mercury",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 3,
+    "slot": 1
+   }
+  ]
+ },
+ {
+  "new_list_id": "p165list_Chelseigh_Stillman",
+  "period_name": "Chelseigh Stillman",
+  "realm": "Albion",
+  "npc": [
+   {
+    "name": "Chelseigh Stilman",
+    "mob_id": "6271a188-a458-403b-926a-9f95fba958a4",
+    "region": 10,
+    "zone": "City of Camelot",
+    "x": 36657,
+    "y": 29331,
+    "current_class": "DOL.GS.GameNPC",
+    "current_guild": "",
+    "current_list": null
+   }
+  ],
+  "target_class": "DOL.GS.GameMerchant",
+  "change": "turn the NPC into a merchant: set ClassType to target_class, ItemsListTemplateID to new_list_id, and Guild (period guild title not in the pages: owner/coordinator to choose)",
+  "rows_total": 58,
+  "rows_over_150": 0,
+  "rows_by_confidence": {
+   "high": 44,
+   "medium": 14
+  },
+  "rows": [
+   {
+    "template_id": "bronze_metal_bars",
+    "page_key": 5595,
+    "item_name": "Bronze Metal Bars",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 0
+   },
+   {
+    "template_id": "iron_metal_bars",
+    "page_key": 5596,
+    "item_name": "Iron Metal Bars",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 1
+   },
+   {
+    "template_id": "steel_metal_bars",
+    "page_key": 5597,
+    "item_name": "Steel Metal Bars",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 2
+   },
+   {
+    "template_id": "alloy_metal_bars",
+    "page_key": 5598,
+    "item_name": "Alloy Metal Bars",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 3
+   },
+   {
+    "template_id": "fine_alloy_metal_bars",
+    "page_key": 5599,
+    "item_name": "Fine Alloy Metal Bars",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 4
+   },
+   {
+    "template_id": "smiths_hammer",
+    "page_key": 5600,
+    "item_name": "Smith's Hammer",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 5
+   },
+   {
+    "template_id": "crotal_lichen",
+    "page_key": 5878,
+    "item_name": "Crotal Lichen",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 6
+   },
+   {
+    "template_id": "deadly_nihtscada",
+    "page_key": 5879,
+    "item_name": "Deadly Nihtscada",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 7
+   },
+   {
+    "template_id": "elder_bark",
+    "page_key": 5880,
+    "item_name": "Elder Bark",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 8
+   },
+   {
+    "template_id": "lichens",
+    "page_key": 5881,
+    "item_name": "Lichens",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 9
+   },
+   {
+    "template_id": "elder_berries",
+    "page_key": 5882,
+    "item_name": "Elder Berries",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 10
+   },
+   {
+    "template_id": "black_thorn_root",
+    "page_key": 5883,
+    "item_name": "Black Thorn Root",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 11
+   },
+   {
+    "template_id": "fermented_wode_leaf_extract",
+    "page_key": 5884,
+    "item_name": "Fermented Wode Leaf Extract",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 12
+   },
+   {
+    "template_id": "spindle",
+    "page_key": 5885,
+    "item_name": "Spindle",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 13
+   },
+   {
+    "template_id": "crushed_murex",
+    "page_key": 5886,
+    "item_name": "Crushed Murex",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 14
+   },
+   {
+    "template_id": "boiled_bog_mire",
+    "page_key": 5887,
+    "item_name": "Boiled Bog Mire",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 15
+   },
+   {
+    "template_id": "prepared_devils_bit",
+    "page_key": 5888,
+    "item_name": "Prepared Devil's Bit",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 16
+   },
+   {
+    "template_id": "crushed_kermes",
+    "page_key": 5889,
+    "item_name": "Crushed Kermes",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 17
+   },
+   {
+    "template_id": "crushed_sea_slugs",
+    "page_key": 5890,
+    "item_name": "Crushed Sea Slugs",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 18
+   },
+   {
+    "template_id": "purple_wode_extract",
+    "page_key": 5891,
+    "item_name": "Purple Wode Extract",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 19
+   },
+   {
+    "template_id": "enchanted_black_dust",
+    "page_key": 5892,
+    "item_name": "Enchanted Black Dust",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 20
+   },
+   {
+    "template_id": "flask_of_water",
+    "page_key": 5893,
+    "item_name": "Flask of Water",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 21
+   },
+   {
+    "template_id": "packet_of_crushed_glass",
+    "page_key": 5894,
+    "item_name": "Packet of Crushed Glass",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 22
+   },
+   {
+    "template_id": "yew_leaves",
+    "page_key": 7013,
+    "item_name": "Yew Leaves",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 23
+   },
+   {
+    "template_id": "european_spider_venom",
+    "page_key": 7014,
+    "item_name": "European Spider Venom",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 24
+   },
+   {
+    "template_id": "hemlock",
+    "page_key": 7015,
+    "item_name": "Hemlock",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 25
+   },
+   {
+    "template_id": "crushed_plague_rat_fleas",
+    "page_key": 7016,
+    "item_name": "Crushed Plague Rat Fleas",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 26
+   },
+   {
+    "template_id": "sea_snake_venom",
+    "page_key": 7017,
+    "item_name": "Sea Snake Venom",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 27
+   },
+   {
+    "template_id": "common_monkshood",
+    "page_key": 7018,
+    "item_name": "Common Monkshood",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 28
+   },
+   {
+    "template_id": "adder_venom",
+    "page_key": 7019,
+    "item_name": "Adder Venom",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 29
+   },
+   {
+    "template_id": "deadly_nightshade",
+    "page_key": 7020,
+    "item_name": "Deadly Nightshade",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 0
+   },
+   {
+    "template_id": "carrion_drake_saliva",
+    "page_key": 7021,
+    "item_name": "Carrion Drake Saliva",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 1
+   },
+   {
+    "template_id": "tiny_vial_of_mercury",
+    "page_key": 7023,
+    "item_name": "Tiny Vial of Mercury",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 2
+   },
+   {
+    "template_id": "vial_of_mercury",
+    "page_key": 7024,
+    "item_name": "Vial of Mercury",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 3
+   },
+   {
+    "template_id": "drop_of_troll_blood",
+    "page_key": 7025,
+    "item_name": "Drop of Troll Blood",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 4
+   },
+   {
+    "template_id": "tiny_vial_of_troll_blood",
+    "page_key": 7026,
+    "item_name": "Tiny Vial of Troll Blood",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 5
+   },
+   {
+    "template_id": "vial_of_troll_blood",
+    "page_key": 7027,
+    "item_name": "Vial of Troll Blood",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 6
+   },
+   {
+    "template_id": "drop_of_giant_blood",
+    "page_key": 7028,
+    "item_name": "Drop of Giant Blood",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 7
+   },
+   {
+    "template_id": "tiny_vial_of_giant_blood",
+    "page_key": 7029,
+    "item_name": "Tiny Vial of Giant Blood",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 8
+   },
+   {
+    "template_id": "vial_of_giant_blood",
+    "page_key": 7030,
+    "item_name": "Vial of Giant Blood",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 9
+   },
+   {
+    "template_id": "crushed_brown_focus_stone",
+    "page_key": 7031,
+    "item_name": "Crushed Brown Focus Stone",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 10
+   },
+   {
+    "template_id": "crushed_blue_focus_stone",
+    "page_key": 7032,
+    "item_name": "Crushed Blue Focus Stone",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 11
+   },
+   {
+    "template_id": "crushed_red_focus_stone",
+    "page_key": 7033,
+    "item_name": "Crushed Red Focus Stone",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 12
+   },
+   {
+    "template_id": "volatile_catalyst",
+    "page_key": 7034,
+    "item_name": "Volatile Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 13
+   },
+   {
+    "template_id": "volatile_firebrand_catalyst",
+    "page_key": 7035,
+    "item_name": "Volatile Firebrand Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 14
+   },
+   {
+    "template_id": "volatile_glacial_catalyst",
+    "page_key": 7036,
+    "item_name": "Volatile Glacial Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 15
+   },
+   {
+    "template_id": "volatile_electrical_catalyst",
+    "page_key": 7037,
+    "item_name": "Volatile Electrical Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 16
+   },
+   {
+    "template_id": "volatile_spirit_catalyst",
+    "page_key": 7038,
+    "item_name": "Volatile Spirit Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 17
+   },
+   {
+    "template_id": "volatile_hardening_catalyst",
+    "page_key": 7041,
+    "item_name": "Volatile Hardening Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 18
+   },
+   {
+    "template_id": "volatile_eroding_catalyst",
+    "page_key": 7042,
+    "item_name": "Volatile Eroding Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 19
+   },
+   {
+    "template_id": "stable_catalyst",
+    "page_key": 7044,
+    "item_name": "Stable Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 20
+   },
+   {
+    "template_id": "stable_glacial_catalyst",
+    "page_key": 7046,
+    "item_name": "Stable Glacial Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 21
+   },
+   {
+    "template_id": "stable_electrical_catalyst",
+    "page_key": 7047,
+    "item_name": "Stable Electrical Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 22
+   },
+   {
+    "template_id": "stable_spirit_catalyst",
+    "page_key": 7048,
+    "item_name": "Stable Spirit Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 23
+   },
+   {
+    "template_id": "stable_celeric_catalyst",
+    "page_key": 7049,
+    "item_name": "Stable Celeric Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 24
+   },
+   {
+    "template_id": "stable_shielding_catalyst",
+    "page_key": 7050,
+    "item_name": "Stable Shielding Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 25
+   },
+   {
+    "template_id": "stable_hardening_catalyst",
+    "page_key": 7051,
+    "item_name": "Stable Hardening Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 26
+   },
+   {
+    "template_id": "stable_enlightening_catalyst",
+    "page_key": 7052,
+    "item_name": "Stable Enlightening Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 27
+   }
+  ]
+ },
+ {
+  "new_list_id": "p165list_Gremain_Watford",
+  "period_name": "Gremain Watford",
+  "realm": "Albion",
+  "npc": [
+   {
+    "name": "Gremain Watford",
+    "mob_id": "b4350286-03fe-4dca-aa75-22b63304b510",
+    "region": 10,
+    "zone": "City of Camelot",
+    "x": 36496,
+    "y": 29305,
+    "current_class": "DOL.GS.GameNPC",
+    "current_guild": "",
+    "current_list": null
+   }
+  ],
+  "target_class": "DOL.GS.GameMerchant",
+  "change": "turn the NPC into a merchant: set ClassType to target_class, ItemsListTemplateID to new_list_id, and Guild (period guild title not in the pages: owner/coordinator to choose)",
+  "rows_total": 43,
+  "rows_over_150": 0,
+  "rows_by_confidence": {
+   "high": 41,
+   "medium": 2
+  },
+  "rows": [
+   {
+    "template_id": "crow_feathers",
+    "page_key": 5750,
+    "item_name": "Crow Feathers",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 0
+   },
+   {
+    "template_id": "hawk_feathers",
+    "page_key": 5751,
+    "item_name": "Hawk Feathers",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 1
+   },
+   {
+    "template_id": "gull_feathers",
+    "page_key": 5752,
+    "item_name": "Gull Feathers",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 2
+   },
+   {
+    "template_id": "cockatrice_feathers",
+    "page_key": 5753,
+    "item_name": "Cockatrice Feathers",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 3
+   },
+   {
+    "template_id": "phoenix_feathers",
+    "page_key": 5754,
+    "item_name": "Phoenix Feathers",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 4
+   },
+   {
+    "template_id": "Lo_gem",
+    "page_key": 5782,
+    "item_name": "Lo Gem",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 5
+   },
+   {
+    "template_id": "Um_gem",
+    "page_key": 5783,
+    "item_name": "Um Gem",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 6
+   },
+   {
+    "template_id": "On_gem",
+    "page_key": 5784,
+    "item_name": "On Gem",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 7
+   },
+   {
+    "template_id": "Ee_gem",
+    "page_key": 5785,
+    "item_name": "Ee Gem",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 8
+   },
+   {
+    "template_id": "Pal_gem",
+    "page_key": 5786,
+    "item_name": "Pal Gem",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 9
+   },
+   {
+    "template_id": "Mon_gem",
+    "page_key": 5787,
+    "item_name": "Mon Gem",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 10
+   },
+   {
+    "template_id": "Ros_gem",
+    "page_key": 5788,
+    "item_name": "Ros Gem",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 11
+   },
+   {
+    "template_id": "Zo_gem",
+    "page_key": 5789,
+    "item_name": "Zo Gem",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 12
+   },
+   {
+    "template_id": "Kath_gem",
+    "page_key": 5790,
+    "item_name": "Kath Gem",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 13
+   },
+   {
+    "template_id": "Ra_gem",
+    "page_key": 5791,
+    "item_name": "Ra Gem",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 14
+   },
+   {
+    "template_id": "sun_light",
+    "page_key": 5792,
+    "item_name": "Sun Light",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 15
+   },
+   {
+    "template_id": "swamp_fog",
+    "page_key": 5795,
+    "item_name": "Swamp Fog",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 16
+   },
+   {
+    "template_id": "leviathan_blood",
+    "page_key": 5797,
+    "item_name": "Leviathan Blood",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 17
+   },
+   {
+    "template_id": "heat_from_an_unearthly_pyre",
+    "page_key": 5798,
+    "item_name": "Heat from an Unearthly Pyre",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 18
+   },
+   {
+    "template_id": "undead_ash_and_holy_water",
+    "page_key": 5799,
+    "item_name": "Undead Ash and Holy Water",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 19
+   },
+   {
+    "template_id": "frost_from_a_wasteland",
+    "page_key": 5800,
+    "item_name": "Frost from a Wasteland",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 20
+   },
+   {
+    "template_id": "ground_draconic_scales",
+    "page_key": 5801,
+    "item_name": "Ground Draconic Scales",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 21
+   },
+   {
+    "template_id": "bloodied_battlefield_dirt",
+    "page_key": 5803,
+    "item_name": "Bloodied Battlefield Dirt",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 22
+   },
+   {
+    "template_id": "ground_blessed_undead_bone",
+    "page_key": 5805,
+    "item_name": "Ground Blessed Undead Bone",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 23
+   },
+   {
+    "template_id": "ground_cave_crystal",
+    "page_key": 5806,
+    "item_name": "Ground Cave Crystal",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 24
+   },
+   {
+    "template_id": "spellcraft_kit",
+    "page_key": 5807,
+    "item_name": "Spellcraft Kit",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 25
+   },
+   {
+    "template_id": "giant_blood",
+    "page_key": 5808,
+    "item_name": "Giant Blood",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 26
+   },
+   {
+    "template_id": "mystic_energy",
+    "page_key": 5809,
+    "item_name": "Mystic Energy",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 27
+   },
+   {
+    "template_id": "stable_eroding_catalyst",
+    "page_key": 6650,
+    "item_name": "Stable Eroding Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 28
+   },
+   {
+    "template_id": "stable_protecting_catalyst",
+    "page_key": 6651,
+    "item_name": "Stable Protecting Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 29
+   },
+   {
+    "template_id": "concoctive_honing_catalyst",
+    "page_key": 6652,
+    "item_name": "Concoctive Honing Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 0
+   },
+   {
+    "template_id": "concoctive_leeching_catalyst",
+    "page_key": 6653,
+    "item_name": "Concoctive Leeching Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 1
+   },
+   {
+    "template_id": "concoctive_withering_catalyst",
+    "page_key": 6654,
+    "item_name": "Concoctive Withering Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 2
+   },
+   {
+    "template_id": "concoctive_crippling_catalyst",
+    "page_key": 6655,
+    "item_name": "Concoctive Crippling Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 3
+   },
+   {
+    "template_id": "reactive_firebrand_catalyst",
+    "page_key": 6656,
+    "item_name": "Reactive Firebrand Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 4
+   },
+   {
+    "template_id": "reactive_glacial_catalyst",
+    "page_key": 6657,
+    "item_name": "Reactive Glacial Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 5
+   },
+   {
+    "template_id": "reactive_electrical_catalyst",
+    "page_key": 6658,
+    "item_name": "Reactive Electrical Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 6
+   },
+   {
+    "template_id": "reactive_spirit_catalyst",
+    "page_key": 6659,
+    "item_name": "Reactive Spirit Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 7
+   },
+   {
+    "template_id": "reactive_shielding_catalyst",
+    "page_key": 6661,
+    "item_name": "Reactive Shielding Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 8
+   },
+   {
+    "template_id": "reactive_eroding_catalyst",
+    "page_key": 6663,
+    "item_name": "Reactive Eroding Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 9
+   },
+   {
+    "template_id": "alchemy_kit",
+    "page_key": 6664,
+    "item_name": "Alchemy Kit",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 10
+   },
+   {
+    "template_id": "mortar_and_pestle",
+    "page_key": 6665,
+    "item_name": "Mortar and Pestle",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 11
+   },
+   {
+    "template_id": "reactive_protecting_catalyst",
+    "page_key": 7053,
+    "item_name": "Reactive Protecting Catalyst",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 1,
+    "slot": 12
+   }
+  ]
+ },
+ {
+  "new_list_id": "p165list_Shayly_Parke",
+  "period_name": "Shayly Parke",
+  "realm": "Albion",
+  "npc": [
+   {
+    "name": "Shayly Parke",
+    "mob_id": "99992245",
+    "region": 10,
+    "zone": "City of Camelot",
+    "x": 36688,
+    "y": 29015,
+    "current_class": "DOL.GS.GameNPC",
+    "current_guild": "",
+    "current_list": null
+   }
+  ],
+  "target_class": "DOL.GS.GameMerchant",
+  "change": "turn the NPC into a merchant: set ClassType to target_class, ItemsListTemplateID to new_list_id, and Guild (period guild title not in the pages: owner/coordinator to choose)",
+  "rows_total": 14,
+  "rows_over_150": 0,
+  "rows_by_confidence": {
+   "high": 14
+  },
+  "rows": [
+   {
+    "template_id": "sewing_kit",
+    "page_key": 5913,
+    "item_name": "Sewing Kit",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 0
+   },
+   {
+    "template_id": "rawhide_leather_squares",
+    "page_key": 5914,
+    "item_name": "Rawhide Leather Square",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 1
+   },
+   {
+    "template_id": "tanned_leather_squares",
+    "page_key": 5915,
+    "item_name": "Tanned Leather Square",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 2
+   },
+   {
+    "template_id": "hard_leather_squares",
+    "page_key": 5917,
+    "item_name": "Hard Leather Square",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 3
+   },
+   {
+    "template_id": "rigid_leather_squares",
+    "page_key": 5918,
+    "item_name": "Rigid Leather Square",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 4
+   },
+   {
+    "template_id": "woolen_cloth_squares",
+    "page_key": 5919,
+    "item_name": "Woolen Cloth Square",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 5
+   },
+   {
+    "template_id": "linen_cloth_squares",
+    "page_key": 5920,
+    "item_name": "Linen Cloth Square",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 6
+   },
+   {
+    "template_id": "brocade_cloth_squares",
+    "page_key": 5921,
+    "item_name": "Brocade Cloth Square",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 7
+   },
+   {
+    "template_id": "silk_cloth_squares",
+    "page_key": 5922,
+    "item_name": "Silk Cloth Square",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 8
+   },
+   {
+    "template_id": "gossamer_cloth_squares",
+    "page_key": 5923,
+    "item_name": "Gossamer Cloth Square",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 9
+   },
+   {
+    "template_id": "woolen_heavy_thread",
+    "page_key": 5924,
+    "item_name": "Woolen Heavy Thread",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 10
+   },
+   {
+    "template_id": "brocade_heavy_thread",
+    "page_key": 5926,
+    "item_name": "Brocade Heavy Thread",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 11
+   },
+   {
+    "template_id": "silk_heavy_thread",
+    "page_key": 5927,
+    "item_name": "Silk Heavy Thread",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 12
+   },
+   {
+    "template_id": "gossamer_heavy_thread",
+    "page_key": 5928,
+    "item_name": "Gossamer Heavy Thread",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 13
+   }
+  ]
+ },
+ {
+  "new_list_id": "p165list_Caley",
+  "period_name": "Caley",
+  "realm": "Hibernia",
+  "npc": [
+   {
+    "name": "Caley",
+    "mob_id": "294c6a26-925b-42ee-b3fe-a2b505bbb28d",
+    "region": 201,
+    "zone": "Tir na Nog",
+    "x": 23336,
+    "y": 35239,
+    "current_class": "DOL.GS.GameNPC",
+    "current_guild": "",
+    "current_list": null
+   }
+  ],
+  "target_class": "DOL.GS.GameMerchant",
+  "change": "turn the NPC into a merchant: set ClassType to target_class, ItemsListTemplateID to new_list_id, and Guild (period guild title not in the pages: owner/coordinator to choose)",
+  "rows_total": 5,
+  "rows_over_150": 0,
+  "rows_by_confidence": {
+   "low": 1,
+   "high": 4
+  },
+  "rows": [
+   {
+    "template_id": "p165_item_5895",
+    "page_key": 5895,
+    "item_name": "Rowan Wooden Boards",
+    "confidence": "low",
+    "note": "NOT BUILT: planned id, the item does not exist yet",
+    "prices": [],
+    "page": 0,
+    "slot": 0
+   },
+   {
+    "template_id": "elm_wooden_boards",
+    "page_key": 5896,
+    "item_name": "Elm Wooden Boards",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 1
+   },
+   {
+    "template_id": "ironwood_wooden_boards",
+    "page_key": 5898,
+    "item_name": "Ironwood Wooden Boards",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 2
+   },
+   {
+    "template_id": "heartwood_wooden_boards",
+    "page_key": 5899,
+    "item_name": "Heartwood Wooden Boards",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 3
+   },
+   {
+    "template_id": "planing_tool",
+    "page_key": 5900,
+    "item_name": "Planing Tool",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 4
+   }
+  ]
+ },
+ {
+  "new_list_id": "p165list_Eluned",
+  "period_name": "Eluned",
+  "realm": "Hibernia",
+  "npc": [
+   {
+    "name": "Eluned",
+    "mob_id": "87f27eb4-9ddd-4b44-b177-afe187d08d8d",
+    "region": 200,
+    "zone": "Lough Derg",
+    "x": 347331,
+    "y": 489556,
+    "current_class": "DOL.GS.GameNPC",
+    "current_guild": "Armor Merchant",
+    "current_list": null
+   }
+  ],
+  "target_class": "DOL.GS.GameMerchant",
+  "change": "turn the NPC into a merchant: set ClassType to target_class, ItemsListTemplateID to new_list_id, and Guild (period guild title not in the pages: owner/coordinator to choose)",
+  "rows_total": 17,
+  "rows_over_150": 0,
+  "rows_by_confidence": {
+   "medium": 12,
+   "high": 5
+  },
+  "rows": [
+   {
+    "template_id": "brocade_dress_robe3",
+    "page_key": 8038,
+    "item_name": "Brocade Dress Robe (Hib)",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 0
+   },
+   {
+    "template_id": "brocade_fancy_robe3",
+    "page_key": 8039,
+    "item_name": "Brocade Fancy Robe (Hib)",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 1
+   },
+   {
+    "template_id": "brocade_plain_robe3",
+    "page_key": 8040,
+    "item_name": "Brocade Plain Robe (Hib)",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 2
+   },
+   {
+    "template_id": "dress_robe3",
+    "page_key": 8044,
+    "item_name": "Dress Robe (Hib)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 3
+   },
+   {
+    "template_id": "fancy_robe3",
+    "page_key": 8045,
+    "item_name": "Fancy Robe (Hib)",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 4
+   },
+   {
+    "template_id": "gossamer_dress_robe3",
+    "page_key": 8046,
+    "item_name": "Gossamer Dress Robe (Hib)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 5
+   },
+   {
+    "template_id": "gossamer_fancy_robe3",
+    "page_key": 8047,
+    "item_name": "Gossamer Fancy Robe (Hib)",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 6
+   },
+   {
+    "template_id": "gossamer_plain_robe3",
+    "page_key": 8048,
+    "item_name": "Gossamer Plain Robe (Hib)",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 7
+   },
+   {
+    "template_id": "linen_dress_robe3",
+    "page_key": 8049,
+    "item_name": "Linen Dress Robe (Hib)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 8
+   },
+   {
+    "template_id": "linen_fancy_robe3",
+    "page_key": 8050,
+    "item_name": "Linen Fancy Robe (Hib)",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 9
+   },
+   {
+    "template_id": "linen_plain_robe3",
+    "page_key": 8051,
+    "item_name": "Linen Plain Robe (Hib)",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 10
+   },
+   {
+    "template_id": "silk_dress_robe3",
+    "page_key": 8054,
+    "item_name": "Silk Dress Robe (Hib)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 11
+   },
+   {
+    "template_id": "silk_fancy_robe3",
+    "page_key": 8055,
+    "item_name": "Silk Fancy Robe (Hib)",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 12
+   },
+   {
+    "template_id": "silk_plain_robe3",
+    "page_key": 8056,
+    "item_name": "Silk Plain Robe (Hib)",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 13
+   },
+   {
+    "template_id": "sylvan_dress_robe3",
+    "page_key": 8058,
+    "item_name": "Sylvan Dress Robe (Hib)",
+    "confidence": "high",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 14
+   },
+   {
+    "template_id": "sylvan_fancy_robe3",
+    "page_key": 8059,
+    "item_name": "Sylvan Fancy Robe (Hib)",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 15
+   },
+   {
+    "template_id": "sylvan_plain_robe3",
+    "page_key": 8060,
+    "item_name": "Sylvan Plain Robe (Hib)",
+    "confidence": "medium",
+    "note": "",
+    "prices": [],
+    "page": 0,
+    "slot": 16
+   }
+  ]
+ }
+]
