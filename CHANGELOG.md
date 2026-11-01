@@ -77,7 +77,7 @@ most of the systems below have been tested in autonomous bot runs, but not yet b
   [ALL SERVER COMMANDS.txt](ALL%20SERVER%20COMMANDS.txt) has the full list.
   - `/switch`, `/sell`, `/craftmacro` and `/faction` are GM only too: neither the 1.64 client's command help nor
     the DAoC Manual lists them. `/transfercorpse` is in both, so players keep it.
-- No player horses: horses, horse armour and barding are off every merchant. Horse travel is by the stablemasters'
+- No player horses: horses, horse vouchers, horse armour and barding are off every merchant. Horse travel is by the stablemasters'
   routes.
 - `/task` follows the period rules: kill targets 3 levels below you to 1 above, period task XP, and plain guards say
   who gives tasks.
@@ -131,8 +131,10 @@ most of the systems below have been tested in autonomous bot runs, but not yet b
   - solo bots pull from range with a bow, a throwing weapon or a spell. They move into range and line of sight
     first; if a shot is refused as out of range or not visible, they step closer and try again, and after 4 tries
     they pull in melee. A shot that hits, misses or is resisted always alerts the monster, so it comes for the
-    bot (before, many ranged pulls went unnoticed). A monster that still takes no notice within 3 seconds is
-    pulled the ordinary way;
+    bot (before, many ranged pulls went unnoticed). A monster's AI used to wake only for a player who could see it,
+    or a bot inside its aggro radius, so a bot shooting from range drew aggro the monster never acted on; now the
+    monster comes for the bot, and the bot waits for a monster that is on its way. A monster that still takes no
+    notice within 3 seconds is pulled the ordinary way;
   - camps are chosen by challenge colour;
   - grey targets are a last resort;
   - outleveled camps are left alone for 30 minutes.
