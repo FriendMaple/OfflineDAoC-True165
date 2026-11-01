@@ -367,8 +367,9 @@ Useful log tags:
 
 ## 7. The release (v0.1)
 
-A release is the clean runtime folder plus the new client, as checked parts with a downloader. Nothing has been
-released yet. This is the plan the first release follows.
+A release is the clean runtime folder plus the new client, as checked parts with a downloader. v0.1 was made this
+way; the tools and the steps are in [release/README.md](../release/README.md), and its baseline is in
+`release-baselines/0.1/`.
 
 `development-source/tools/build_release_true165.py` builds the game package from a working install: `runtime/`
 (the launcher, server, both navmesh sets, the True 1.65 content and the clean world), `tools/dotnet` (.NET 10:

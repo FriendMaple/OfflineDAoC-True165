@@ -1,9 +1,13 @@
 OFFLINE DAOC TRUE 1.65 v0.1
 
 This folder is the complete game: the new client, the server, the clean
-world, the launcher, tools and source code. It contains no one else's
-account, characters or bots. There's nothing to install: .NET is included in
-tools\dotnet, and no original DAoC client is needed.
+world and the launcher. It contains no one else's account, characters or
+bots.
+
+There's nothing to install or turn on in Windows: .NET is included in
+tools\dotnet, and the game uses only that copy. You don't need the Windows
+".NET Framework 3.5" feature (only the old Offline DAoC's original client
+needed it), the Visual C++ Redistributable, or an original DAoC client.
 
 WHAT YOU NEED
 A 64-bit Windows 10 or 11 PC whose CPU supports AVX2 (the bots' navigation
@@ -41,4 +45,5 @@ docs\NEW-CLIENT.md          the client: keys, settings, logs
 CHANGELOG.md                what's in this version, and known issues
 QUICK COMMANDS.txt          handy in-game commands
 ALL SERVER COMMANDS.txt     every command (GM-only ones marked)
-AGENTS.md, docs\DEVELOPMENT.md    for developers and AI assistants
+The source code and the guides for developers and AI assistants are on
+GitHub: https://github.com/shadowofze/OfflineDAoC-True165

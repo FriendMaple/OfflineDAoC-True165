@@ -5,7 +5,7 @@ The newest version is first.
 Offline DAoC True 1.65 grew out of [Offline DAoC](https://github.com/shadowofze/OfflineDAoC) (0.3 to 0.37c, now on
 hold). Its changelog has the history of everything this version inherits.
 
-## 0.1 (not released yet)
+## 0.1 (2026-11-01)
 
 The first version of True 1.65: Classic and Shrouded Isles as they were at patch 1.65 (1 November 2003). The only
 additions to the period game are the bot and companion systems and the Realm Exchange. It is early in development:

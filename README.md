@@ -17,8 +17,8 @@
 > **This is an AI-made project.** All of its code was written by AI tools (Codex, then Claude). The project owner
 > has no game development or coding experience: they directed the work and play-tested it. Expect bugs.
 >
-> **Early development. Nothing has been released yet.** The first version will be **v0.1**. It is uncertain
-> whether or when it will come out.
+> **v0.1 is out, and it's an early version.** Large parts of the game haven't been played through by a person yet.
+> Expect bugs, and keep a backup of your save. Bug reports are welcome in [Issues](https://github.com/shadowofze/OfflineDAoC-True165/issues).
 
 # Offline DAoC True 1.65: single-player Dark Age of Camelot as of patch 1.65
 
@@ -29,6 +29,37 @@ with gamebots that level, group, trade, craft and fight on their own.
 It grew out of [Offline DAoC](https://github.com/shadowofze/OfflineDAoC), which is now on hold. Everything this
 project adds to the OpenDAoC server was written by AI tools (Codex, then Claude), as was the whole new client. The
 project owner, who has no game development or coding experience, directed and play-tested it.
+
+## Download and play
+
+**[Download v0.1](https://github.com/shadowofze/OfflineDAoC-True165/releases/latest)**, no Git or AI tools needed:
+
+1. On the release page, under **Assets**, download **`Download-OfflineDAoC-True165-v0.1.zip`** (just the
+   downloader, a few KB).
+2. Put it in a folder with a short path, such as `C:\Games\OfflineDAoC`. Right-click it, choose **Extract All…**,
+   and open the extracted folder.
+3. Double-click **`GET-OFFLINE-DAOC-TRUE165.cmd`**. If Windows SmartScreen appears, click **More info → Run
+   anyway**. It checks your PC, shows the download size, and installs the game into a new folder. If it stops, run
+   it again; it continues where it stopped.
+4. In the new `OfflineDAoC-True165` folder, double-click **`START OFFLINE DAOC TRUE 1.65.cmd`**. Click **START
+   SERVER**, wait for **RUNNING**, then click **ENTER REALM**. Your account is created the first time.
+
+What you need:
+- 64-bit Windows 10 or 11, with a CPU that supports **AVX2** (the bots' navigation needs it; most CPUs from 2014
+  onward do).
+- A graphics card that supports **Vulkan**, with current drivers. It's developed and tested on an RTX 2060 (6 GB).
+- 16 GB RAM recommended, and about 45 GB of free disk space while it installs.
+- **Nothing to install or turn on in Windows:** .NET comes with the game. You don't need the Windows ".NET Framework
+  3.5" feature, the Visual C++ Redistributable or an original DAoC client.
+
+The full walkthrough with troubleshooting is in [docs/PLAY.md](docs/PLAY.md), and the client's guide is in
+[docs/NEW-CLIENT.md](docs/NEW-CLIENT.md). **Code > Download ZIP** on this page gives you the *source code*, not the
+playable game.
+
+**Handy commands:** [QUICK COMMANDS.txt](QUICK%20COMMANDS.txt) has the everyday commands and the launcher
+shortcuts: hiring and managing companions, `/task`, `/questguide`, the Horn of Rallying, horse routes and training.
+Every command that works in True 1.65 is in [ALL SERVER COMMANDS.txt](ALL%20SERVER%20COMMANDS.txt), with the GM-only
+ones marked. Both files are in your game folder too.
 
 ## Built on OpenDAoC and Dawn of Light
 
@@ -114,26 +145,6 @@ is the result: the world database and the content files built from it.
 - Boss changes that let bots finish raids, and faster respawns for named and quest monsters.
 - Quest markers, quest objectives and the quest guide (`/questguide`).
 - Slash commands that skip the period game, such as `/tele` and `/tc`. They're kept for GM accounts only.
-
-## Download and play
-
-There is no release yet. When v0.1 comes out, its release page here will have a downloader and step-by-step
-instructions. **Code > Download ZIP** on this page gives you the *source code*, not the playable game.
-
-What you need:
-- A 64-bit Windows 10 or 11 PC whose CPU supports **AVX2** (the bots' navigation needs it). Most CPUs from 2014
-  onward do.
-- A graphics card that supports Vulkan, with current drivers. It's developed and tested on an RTX 2060 (6 GB).
-- 16 GB RAM recommended.
-- About 40 GB of free disk space for the game content and the engine. The exact figure comes with the release.
-
-Once it's out, the full walkthrough with troubleshooting is in [docs/PLAY.md](docs/PLAY.md), and the client's
-guide is in [docs/NEW-CLIENT.md](docs/NEW-CLIENT.md).
-
-**Handy commands:** [QUICK COMMANDS.txt](QUICK%20COMMANDS.txt) has the everyday commands and the launcher
-shortcuts: hiring and managing companions, `/task`, `/questguide`, the Horn of Rallying, horse routes and training.
-Every command that works in True 1.65 is in [ALL SERVER COMMANDS.txt](ALL%20SERVER%20COMMANDS.txt), with the GM-only
-ones marked. Both files will be in your game folder too.
 
 ## For developers and AI assistants
 
