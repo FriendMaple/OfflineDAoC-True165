@@ -1,0 +1,43 @@
+OFFLINE DAOC TRUE 1.65 v0.1
+
+This folder is the complete game: the new client, the server, the clean
+world, the launcher, tools and source code. It contains no one else's
+account, characters or bots. There's nothing to install: .NET is included in
+tools\dotnet, and no original DAoC client is needed.
+
+WHAT YOU NEED
+A 64-bit Windows 10 or 11 PC with a graphics card that supports Vulkan
+(current drivers). 16 GB RAM recommended.
+
+PLAY
+1. Keep this whole folder together. Don't run files from inside a ZIP.
+2. Double-click the START file in this folder. The launcher shows VERSION 0.1.
+3. Click START SERVER and wait until the launcher shows RUNNING.
+   The first start sets up the world and can take a few minutes.
+4. Click ENTER REALM. Your own local account is created the first time.
+5. Add bots with the + Lv.1 button on each realm's card (Shift = 10,
+   Ctrl = 100). Start small and add more as your PC allows.
+6. To finish: quit the game, click STOP SERVER, and wait for it to save.
+Only one server can run at a time.
+
+COMPANIONS
+At level 5 a courier sends you to your realm's traveler's inn (near Caer
+Witrin, Huginfell or Connla). The innkeeper hires companions. More slots
+open at levels 5, 10, 15, 20, 30, 40 and 45.
+
+A FRESH START
+True 1.65 is its own game. Saves from Offline DAoC 0.37 and earlier can't be
+brought over.
+
+YOUR SAVE
+Your world, characters, companions and bots are in
+runtime\data\opendaoc-165.sqlite3.db. Back it up before you try a new build
+or a mod.
+
+MORE HELP
+docs\PLAY.md                full guide and troubleshooting
+docs\NEW-CLIENT.md          the client: keys, settings, logs
+CHANGELOG.md                what's in this version, and known issues
+QUICK COMMANDS.txt          handy in-game commands
+ALL SERVER COMMANDS.txt     every command (GM-only ones marked)
+AGENTS.md, docs\DEVELOPMENT.md    for developers and AI assistants

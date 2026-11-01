@@ -120,6 +120,32 @@ What the new client needs:
 - 16 GB RAM recommended.
 - About 40 GB of free disk space for the game content and the engine. The exact figure comes with the release.
 
+Once it's out, the full walkthrough with troubleshooting is in [docs/PLAY.md](docs/PLAY.md), and the client's
+guide is in [docs/NEW-CLIENT.md](docs/NEW-CLIENT.md).
+
+**Handy commands:** [QUICK COMMANDS.txt](QUICK%20COMMANDS.txt) has the everyday commands and the launcher
+shortcuts: hiring and managing companions, `/task`, `/questguide`, the Horn of Rallying, horse routes and training.
+Every command that works in True 1.65 is in [ALL SERVER COMMANDS.txt](ALL%20SERVER%20COMMANDS.txt), with the GM-only
+ones marked. Both files will be in your game folder too.
+
+## For developers and AI assistants
+
+- **Where to start:** [AGENTS.md](AGENTS.md) (also read by Claude as [CLAUDE.md](CLAUDE.md)) has the project rules
+  and the layout.
+- **Guides:**
+  - [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md): building and testing the server and launcher, and how the True 1.65
+    content reaches the world;
+  - [source/new-client/README.md](source/new-client/README.md): the client and its content pipeline;
+  - [docs/LLM-QUICKSTART.md](docs/LLM-QUICKSTART.md): customizing it with your own AI.
+- **Where the code is:**
+  - `development-source/server`: the game server, the True 1.65 rules (`GameServer/mode165`) and all bot AI.
+  - `development-source/tools`: the launcher and the navigation mesh builder.
+  - `tools/claude-version/true165` and `runtime/true165`: the generators and the True 1.65 world content they make.
+  - `database`: the clean world database.
+  - `source/new-client`: the new client (Godot 4 project and its content pipeline).
+- **Cloning on Windows:** turn on long paths first (`git config --global core.longpaths true`), or clone into a
+  short folder.
+
 ## Good to know
 
 - **AI-written code can have bugs.** Keep a backup of your save before installing a new build or mod. There's
@@ -137,3 +163,7 @@ What the new client needs:
 
 The server is licensed under the [GNU General Public License v3](LICENSE), like the OpenDAoC and Dawn of Light
 code it is based on. Other parts keep their own licenses; see [THIRD_PARTY.md](THIRD_PARTY.md).
+
+## Changes
+
+See the [changelog](CHANGELOG.md).
