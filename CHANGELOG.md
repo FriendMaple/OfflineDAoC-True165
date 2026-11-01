@@ -5,6 +5,13 @@ The newest version is first.
 Offline DAoC True 1.65 grew out of [Offline DAoC](https://github.com/shadowofze/OfflineDAoC) (0.3 to 0.37c, now on
 hold). Its changelog has the history of everything this version inherits.
 
+## 0.2 (not released yet)
+
+What's coming in the next version is listed here as it's made. Nothing has changed since v0.1 yet.
+
+v0.2 will come as an update to v0.1, not another full download: only the files that changed are downloaded, and your
+account, characters, companions and bots stay as they are.
+
 ## 0.1 (2026-11-01)
 
 The first version of True 1.65: Classic and Shrouded Isles as they were at patch 1.65 (1 November 2003). The only
