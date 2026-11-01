@@ -179,8 +179,8 @@
    {
     "table": "MerchantItem",
     "key": "MerchantItem_ID",
-    "where": "lower(ItemTemplateID) IN (SELECT lower(Id_nb) FROM ItemTemplate WHERE Item_Type IN (7,8,9))",
-    "reason": "No player horses in 1.65: horses, horse armour and barding off the merchants (owner 2026-11-01: \"remove them\")"
+    "where": "lower(ItemTemplateID) IN (SELECT lower(Id_nb) FROM ItemTemplate WHERE Item_Type IN (7,8,9)) OR lower(ItemTemplateID) IN ('horse_voucher','chestnut_horse_voucher')",
+    "reason": "No player horses in 1.65: horses, horse armour, barding and horse vouchers off the merchants (owner 2026-11-01: \"remove them\")"
    },
    {
     "table": "Ability",

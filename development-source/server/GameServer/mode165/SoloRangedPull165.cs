@@ -236,7 +236,7 @@ namespace DOL.GS
                     bot.SwitchWeapon(MeleeSlot(bot, s.PreviousWeapon));
             }
             // Shot, but the monster took no notice (nothing aggroed it): pull it the ordinary way instead of waiting.
-            if (now - s.ShotTick >= 3000 && !target.InCombat && (target as GameNPC)?.TargetObject != bot)
+            if (now - s.ShotTick >= 3000 && !Noticed(target, bot))
             {
                 // Diagnostics for these (2026-11-01: a third of the shots went unnoticed): what the monster made of it.
                 if (target is GameNPC { Brain: StandardMobBrain mob } seen)
@@ -307,6 +307,13 @@ namespace DOL.GS
             s.ShotTick = GameLoop.GameLoopTime;
             s.PutAwayPending = true;
         }
+
+        /// <summary>The monster knows about the bot: in combat, targeting it, or (on its way over) holding aggro on it. The
+        /// first two only turn on once it arrives (2026-11-01 run: every "unnoticed" shot had the monster in its aggro
+        /// state, coming).</summary>
+        private static bool Noticed(GameLiving target, GameBot bot) =>
+            target.InCombat || (target as GameNPC)?.TargetObject == bot ||
+            target is GameNPC { Brain: StandardMobBrain mob } && mob.HasAggro;
 
         private static eActiveWeaponSlot MeleeSlot(GameBot bot, eActiveWeaponSlot previous)
         {
