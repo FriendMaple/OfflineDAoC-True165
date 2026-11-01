@@ -37,6 +37,11 @@ most of the systems below have been tested in autonomous bot runs, but not yet b
   - 886 freeshard and dead loot rows removed: Atlas XP items, orbs, trophies, timed drops and items no source knows;
   - 1,334 period items built from their period pages;
   - the 8 period boss trophies stay (they came with housing in June 2003).
+- **Kill tasks** (turning in monster items for XP) pay the period rewards: a fixed XP per item, and the period
+  turn-in cap of 15 below level 40 and 25 for the level 40+ bounties (before: the freeshard 1 level per item, and 30).
+  143 of the 227 values come from period pages; the other 84 are estimated from them. The freeshard turn-ins with no
+  period source are removed: the level 11-19 "Dr" turn-ins, a stand-in for the Ghoul Hair Belt quest, a duplicate
+  Giant Snow Crab Claw task, and the 10 items only they used.
 - **Coin as in 1.65:** a monster carries coin or it doesn't. The chance comes from Uthgard's measured kills, and the
   amounts are unchanged.
 - **Item stats:** about 7,200 corrected to the period item pages. Invented quest rewards were replaced by the real
