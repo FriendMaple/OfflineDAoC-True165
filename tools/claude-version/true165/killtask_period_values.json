@@ -1,0 +1,2045 @@
+[
+ {
+  "id": 1,
+  "name": "Footman Cloaks XP Item",
+  "reward_xp": 24089951,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=680 (2003-02); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "Can turn them in at level 46, 24 mil xp each."
+ },
+ {
+  "id": 2,
+  "name": "Drakoran Skirmisher Head XP Item",
+  "reward_xp": 163840,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=628 (2004-09); cap: page says \"upper limit is probably 15 heads\"",
+  "quote": "lvl 23 received 163.840 exp per head"
+ },
+ {
+  "id": 3,
+  "name": "Fomorian Geddon Great Bow XP Item",
+  "reward_xp": 1651404,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 30 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=598",
+  "quote": ""
+ },
+ {
+  "id": 104,
+  "name": "Bwgan Hunter Eye XP Item",
+  "reward_xp": 231705,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=406 (page)",
+  "quote": "231,705 xp if you turn the tongue in to Boc (limit of 15)"
+ },
+ {
+  "id": 105,
+  "name": "Fell Creature Tooth XP Item",
+  "reward_xp": 1651404,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 30 from period table (5*2^e fit); cap 15 = period tier rule; page says \"4.4 million exp, some coin or a gem\" (undated, random reward?); nearest page http://camelot.allakhazam.com/quests.html?cquest=536",
+  "quote": ""
+ },
+ {
+  "id": 107,
+  "name": "Mottled Apple Fly Wings XP Item",
+  "reward_xp": 655360,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=696 (2003-04); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "650k experience per wings given to her"
+ },
+ {
+  "id": 108,
+  "name": "Stolen Signet Ring XP Item",
+  "reward_xp": 655360,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=410 (page)",
+  "quote": "Limit is 15 and Xp is 655,360 per"
+ },
+ {
+  "id": 109,
+  "name": "Blood Red Berry Wine XP Item",
+  "reward_xp": 825702,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=421 (2002-08); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "I had to turn mine in to Allia Fletcher 825K exp"
+ },
+ {
+  "id": 110,
+  "name": "Faerie Frog Eye XP Item",
+  "reward_xp": 1040319,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=422 (page); page typo of 1,040,319",
+  "quote": "Repeatable 15 times for 1, 040,310 xp per"
+ },
+ {
+  "id": 112,
+  "name": "Rotted Apple Gatherer Flesh XP Item",
+  "reward_xp": 1040319,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=685 (2004-05); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "1040319exp also at lvl 31"
+ },
+ {
+  "id": 113,
+  "name": "Key of the Lost XP Item",
+  "reward_xp": 1651404,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=424 (2003-11)",
+  "quote": "Get 1,651,404 xp per / All kill tasks have a limit of 15 pieces"
+ },
+ {
+  "id": 114,
+  "name": "Sack of Grain XP Item",
+  "reward_xp": 2621440,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 32 from period table (5*2^e fit); cap 15 = period tier rule; DB quest is level 32-38 (Pethos); Allakhazam Sack of Grain page is a level 35-41 Hibernia task paying 5,242,880; nearest page http://camelot.allakhazam.com/quests.html?cquest=391",
+  "quote": ""
+ },
+ {
+  "id": 115,
+  "name": "Bucca Silver Mirror XP Item",
+  "reward_xp": 327680,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=407 (page)",
+  "quote": "You'll get 327,680 xp ... (limit of 15)"
+ },
+ {
+  "id": 116,
+  "name": "Dried Monk Skull XP Item",
+  "reward_xp": 1310720,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=423 (2002-09); xp from page: return for 1,310,720 xp",
+  "quote": "Was only allowed to turn in 15 heads for the xp"
+ },
+ {
+  "id": 117,
+  "name": "Glowing Soul Gem XP Item",
+  "reward_xp": 520160,
+  "max_count": 18,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=449 (2003-06); RANDOM reward (xp, coin or gem per gem); 18 accepted, no cap stated",
+  "quote": "I recieved at most 520,160xp a few times (at level 42)"
+ },
+ {
+  "id": 119,
+  "name": "Drakoran Leech Hand XP Item",
+  "reward_xp": 1040319,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 28 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=665",
+  "quote": ""
+ },
+ {
+  "id": 120,
+  "name": "Cornish Hen Tail XP Item",
+  "reward_xp": 412850,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=408 (page)",
+  "quote": "return for 412,850 xp (limit of 15)"
+ },
+ {
+  "id": 122,
+  "name": "Dunter Head XP Item",
+  "reward_xp": 3302807,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=366 (2002-08)",
+  "quote": "they give 3,302,807 exp each / only able to turn in 15 heads"
+ },
+ {
+  "id": 123,
+  "name": "Rusted Pendants XP Item",
+  "reward_xp": 6022488,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=679 (2003-04); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "Turned in 10 pendants today at level 36 ... 6,022,488 experience"
+ },
+ {
+  "id": 125,
+  "name": "Peallaidh Hide XP Item",
+  "reward_xp": 6918022,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=441 (2002-10); reports of 6-6.2M after 1.53 (5,242,880 before); 6,918,022 = level-37 value (Phaeghoul); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "gave me just over 6million xp (lvl 37)"
+ },
+ {
+  "id": 126,
+  "name": "Danaoin Poison XP Item",
+  "reward_xp": 9128384,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=444 (2003-07); 6,605,615 in Aug 2002, before 1.53; cap 15 = period tier rule (no task-specific cap)",
+  "quote": "My 40 Pally just got 9,128,384 exp apiece"
+ },
+ {
+  "id": 127,
+  "name": "Oily Contraption Bits XP Item",
+  "reward_xp": 2621440,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=604 (2004-02); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "Just turned in an Oily Contraption Piece at lvl 33...only recieved 2,621,440 xp"
+ },
+ {
+  "id": 129,
+  "name": "Decorative Arrows XP Item",
+  "reward_xp": 5242880,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=440 (page); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "You will get approximately 5,242,880 xp"
+ },
+ {
+  "id": 130,
+  "name": "Giant Boar Claw XP Item",
+  "reward_xp": 4161277,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=439 (page); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "Get 4,161,277 xp per"
+ },
+ {
+  "id": 131,
+  "name": "Ancient Granite Stone XP Item",
+  "reward_xp": 13249472,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=446 (page); LEVEL-SCALED: 15,893,440 at 48 (Oct 2002); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "with my lvl 41 friar, 13.2 million per stone"
+ },
+ {
+  "id": 132,
+  "name": "Ancient Crafted Guardian Legs XP Item",
+  "reward_xp": 10485760,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=605 (2002-12); approx. report snapped to level-40 value; cap 25 = period tier rule (no task-specific cap)",
+  "quote": "At lev 43 the legs fetched 10.9 mill exp per item"
+ },
+ {
+  "id": 133,
+  "name": "Giant Lizard Sinew XP Item",
+  "reward_xp": 6022488,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=442 (2002-10); 5,242,880 in Aug 2002, before 1.53; cap 15 = period tier rule (no task-specific cap)",
+  "quote": "6,022,488 xp at lvl 41"
+ },
+ {
+  "id": 134,
+  "name": "Enchanted Metal Studs XP Item",
+  "reward_xp": 7946720,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=443 (2003-10); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "turned in one today at level 43 and receive 7,946,720"
+ },
+ {
+  "id": 135,
+  "name": "Worn Strangler Cord XP Item",
+  "reward_xp": 13836043,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 42 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=603",
+  "quote": ""
+ },
+ {
+  "id": 136,
+  "name": "Caer Caddug Bodyguard Bracer XP Item",
+  "reward_xp": 18256769,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=586 (2004-07); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "Elyn gives 18,256,769 exp for the bracer at level 49."
+ },
+ {
+  "id": 137,
+  "name": "Danaoin Fishing Fly XP Item",
+  "reward_xp": 10485760,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=445 (page); cap: level-40 rung of the 21-40 ladder (15)",
+  "quote": "*hands over the Danaon Fishing Fly* 10,485,760 experience"
+ },
+ {
+  "id": 138,
+  "name": "Dark Urchin Spines XP Item",
+  "reward_xp": 18256769,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 44 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=614",
+  "quote": ""
+ },
+ {
+  "id": 139,
+  "name": "Pictish Warrior Ring XP Item",
+  "reward_xp": 12044975,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 41 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=463",
+  "quote": ""
+ },
+ {
+  "id": 140,
+  "name": "Bloody Cyclops Eye XP Item",
+  "reward_xp": 13249472,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=527 (2003-09); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "As a level 41 Necromancer ... received 13,249,472 experience each"
+ },
+ {
+  "id": 141,
+  "name": "Ever Burning Ember XP Item",
+  "reward_xp": 15893440,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=3028 (page); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "You are awarded 15,893,440 experience! (this was at lvl 47)"
+ },
+ {
+  "id": 142,
+  "name": "Unused Arrow Heads XP Item",
+  "reward_xp": 12044975,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=471 (2003-11); xp: 12,044,975 at 48 (Oct 2002)",
+  "quote": "one stack (25 total) is the max allowable turn-in"
+ },
+ {
+  "id": 143,
+  "name": "Cliff Crawler Leg XP Item",
+  "reward_xp": 13836043,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=462 (2002-08); LEVEL-SCALED (poster: \"based on your level\"); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "Level 42.5: 13,836,043 xp Level 43.0: 15,893,440 xp"
+ },
+ {
+  "id": 145,
+  "name": "Crystallized Darkfire XP Item",
+  "reward_xp": 15893440,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=485 (2002-12); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "The reward for this quest is 15,893,440 exp per crystal."
+ },
+ {
+  "id": 146,
+  "name": "Decayed Water Orb XP Item",
+  "reward_xp": 13836043,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=664 (page); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "13,836,043 experience"
+ },
+ {
+  "id": 147,
+  "name": "Deep Goblin Hair XP Item",
+  "reward_xp": 15893440,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=447 (page)",
+  "quote": "do up to 25 times ... gets 15,893,440 exp"
+ },
+ {
+  "id": 148,
+  "name": "Ghoulic Viper Fang XP Item",
+  "reward_xp": 12044975,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=469 (2002-08); one 2003-07 post says 30 turned in; cap 25 = period tier rule (no task-specific cap)",
+  "quote": "At 42.0, I got 12,044,975 xp for some Ghoulic Viper Fangs"
+ },
+ {
+  "id": 149,
+  "name": "Great Boar Hide XP Item",
+  "reward_xp": 18256769,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=470 (2002-10); approx. report snapped to nearest in-game value; cap 25 = period tier rule (no task-specific cap)",
+  "quote": "Great Boar Hides ... 18.9 million xp"
+ },
+ {
+  "id": 150,
+  "name": "Jeweled Polished Skull XP Item",
+  "reward_xp": 15219647,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=483 (2003-05); approx. report snapped; cap 25 = period tier rule (no task-specific cap)",
+  "quote": "The exp ist about 15 million at level 44 per item."
+ },
+ {
+  "id": 151,
+  "name": "Pristine Cockatrice Feather XP Item",
+  "reward_xp": 15219647,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=484 (2003-03); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "I did this task at level 42, and got 15,219,647 experience."
+ },
+ {
+  "id": 152,
+  "name": "Pristine She-wolf Pelt XP Item",
+  "reward_xp": 13836043,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 42 from period table (5*2^e fit); cap 25 = period tier rule; period note: task RETIRED by Nov 2003 (\"Lundeg Tranyth no longer collect the pelts\", 2003-11-01); nearest page http://camelot.allakhazam.com/quests.html?cquest=487",
+  "quote": ""
+ },
+ {
+  "id": 153,
+  "name": "Scaled Fiend Heart XP Item",
+  "reward_xp": 13836043,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=480 (2002-10); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "I was able to turn in hearts for 13.8 Mil each at level 43"
+ },
+ {
+  "id": 154,
+  "name": "Rotted Corpse Delver Eyes XP Item",
+  "reward_xp": 18256769,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=745 (page); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "At level 45, the quest gives 18,256,769 xp"
+ },
+ {
+  "id": 156,
+  "name": "Tylwyth Teg Huntress Wristband XP Item",
+  "reward_xp": 15893440,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=481 (2003-11); xp: 15,893,440 at 48 (Oct 2002)",
+  "quote": "Max number to turn in is 15."
+ },
+ {
+  "id": 157,
+  "name": "Bronze Thrawn Ogre Thresher Spear Tips XP Item",
+  "reward_xp": 24089951,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 46 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=615",
+  "quote": ""
+ },
+ {
+  "id": 158,
+  "name": "Danaoin Harvest List XP Item",
+  "reward_xp": 18256769,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=479 (2002-09); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "It works now. I got 18,256,769 xp for my list."
+ },
+ {
+  "id": 159,
+  "name": "Ghostly Soul Shroud XP Item",
+  "reward_xp": 24089951,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=661 (2003-02); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "Can turn them in at level 46, 24 mil xp each."
+ },
+ {
+  "id": 160,
+  "name": "Gruesome Thrawn Ogre Heads XP Item",
+  "reward_xp": 24089951,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 46 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=2432",
+  "quote": ""
+ },
+ {
+  "id": 162,
+  "name": "Bottle of Ellyll Wine XP Item",
+  "reward_xp": 20971520,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=458 (2002-11); xp: level 45 scout received 20,971,520",
+  "quote": "I was limited to 15 turn ins of the wine"
+ },
+ {
+  "id": 163,
+  "name": "Rotted Ebon Skeleton Tibia XP Item",
+  "reward_xp": 31786880,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 48 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=662",
+  "quote": ""
+ },
+ {
+  "id": 164,
+  "name": "Sleeping Kitten XP Item",
+  "reward_xp": 24089951,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=486 (page); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "he kept it gave 24,089,951 experience points"
+ },
+ {
+  "id": 168,
+  "name": "Drake Claws XP Item",
+  "reward_xp": 27672087,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 47 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=526",
+  "quote": ""
+ },
+ {
+  "id": 169,
+  "name": "Skin Cream XP Item",
+  "reward_xp": 31786880,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=517 (2003-01); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "31,786,880 xp is rewarded as stated"
+ },
+ {
+  "id": 170,
+  "name": "Clawed Mummified Hand XP Item",
+  "reward_xp": 40164890,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=659 (2004-03)",
+  "quote": "At level 49 they give 40,164,890 exp each ... up to 15"
+ },
+ {
+  "id": 171,
+  "name": "Crackling Pitch Skeleton Hand XP Item",
+  "reward_xp": 40164890,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=663 (2003-03); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "40,164,890 per Pitch Skeleton Hand."
+ },
+ {
+  "id": 201,
+  "name": "Morvalt Obsidian Sword XP Item",
+  "reward_xp": 163840,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=612 (page); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "Reward is 163,840 experience."
+ },
+ {
+  "id": 202,
+  "name": "Scimitar Cat Pelt XP Item",
+  "reward_xp": 163840,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=630 (page); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "164K xp"
+ },
+ {
+  "id": 203,
+  "name": "Ancey Shell XP Item",
+  "reward_xp": 412850,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 24 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=672",
+  "quote": ""
+ },
+ {
+  "id": 204,
+  "name": "Boobrie Egg XP Item",
+  "reward_xp": 2621440,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 32 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=3701",
+  "quote": ""
+ },
+ {
+  "id": 205,
+  "name": "Gold Shale XP Item",
+  "reward_xp": 655360,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=622 (2003-10); 14 accepted in two reports",
+  "quote": "Gived him 14 Gold Shales ... for 655,350 xp also at 26"
+ },
+ {
+  "id": 206,
+  "name": "Pendant of the Forsaken XP Item",
+  "reward_xp": 231705,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=621 (2003-02); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "XP was 231K at L25"
+ },
+ {
+  "id": 207,
+  "name": "Warm Fire Ant Larva XP Item",
+  "reward_xp": 206435,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=358 (page); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "He rewards you with 206k xp."
+ },
+ {
+  "id": 208,
+  "name": "Water Cat Pelt XP Item",
+  "reward_xp": 231705,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 22 from period table (5*2^e fit); cap 15 = period tier rule; only post-1.72 figures on the page; nearest page http://camelot.allakhazam.com/quests.html?cquest=624",
+  "quote": ""
+ },
+ {
+  "id": 209,
+  "name": "Warm Tree Sap XP Item",
+  "reward_xp": 231705,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=360 (2003-01); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "231.705 xp for 1 sap"
+ },
+ {
+  "id": 210,
+  "name": "Polished Obsidian XP Item",
+  "reward_xp": 520160,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=411 (page); approx. report snapped to level-25 value; cap 15 = period tier rule (no task-specific cap)",
+  "quote": "When you return the obsidian to her you get over 500k xp!"
+ },
+ {
+  "id": 211,
+  "name": "Scroll of Eternal Sorrow XP Item",
+  "reward_xp": 327680,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=413 (page); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "You will get 328K per scroll."
+ },
+ {
+  "id": 212,
+  "name": "Mist Water Sack XP Item",
+  "reward_xp": 412850,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=623 (2002-12); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "At 33 I also got 412,850 exp"
+ },
+ {
+  "id": 213,
+  "name": "Wood Rat Tail XP Item",
+  "reward_xp": 412850,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=528 (page); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "For each tail you can get 412,850 xp"
+ },
+ {
+  "id": 214,
+  "name": "Griffon Loner Feathers XP Item",
+  "reward_xp": 1040319,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 28 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=602",
+  "quote": ""
+ },
+ {
+  "id": 215,
+  "name": "Morvalt Landflyke Head XP Item",
+  "reward_xp": 655360,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=601 (2002-12); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "Reward at level 31 is 655,360 experience points."
+ },
+ {
+  "id": 216,
+  "name": "Melted Ghoul Flesh XP Item",
+  "reward_xp": 655360,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=412 (page); one player stopped at 12; cap 15 = period tier rule (no task-specific cap)",
+  "quote": "You get 655k xp for each one."
+ },
+ {
+  "id": 217,
+  "name": "Thick White Pelt XP Item",
+  "reward_xp": 655360,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=468 (2004-08); RANDOM reward per pelt (xp, 50s, gem or a spawned mob); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "07 x 655,360 Experience"
+ },
+ {
+  "id": 218,
+  "name": "Megaloceros Fawn Claw XP Item",
+  "reward_xp": 1040319,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=607 (2002-12); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "Reward at level 31 is 1,040,319 experience."
+ },
+ {
+  "id": 219,
+  "name": "White Wolf Fang XP Item",
+  "reward_xp": 1040319,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=532 (page); approx.; cap 15 = period tier rule (no task-specific cap)",
+  "quote": "Return for approximately 1M+ xp."
+ },
+ {
+  "id": 220,
+  "name": "Biting Wind Eye XP Item",
+  "reward_xp": 1310720,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 29 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=530",
+  "quote": ""
+ },
+ {
+  "id": 221,
+  "name": "Little Greeber Beak XP Item",
+  "reward_xp": 1651404,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=619 (2004-05); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "1 beaks brings me 1.651.404 mio exp"
+ },
+ {
+  "id": 222,
+  "name": "Morvalt Streber Head XP Item",
+  "reward_xp": 1651404,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=599 (2002-12); 1,651,404 at 31, 34 and 36; cap 15 = period tier rule (no task-specific cap)",
+  "quote": "the reward must be the same for all eligible levels"
+ },
+ {
+  "id": 224,
+  "name": "Myling Essence XP Item",
+  "reward_xp": 1651404,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=595 (2002-12); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "Turned in Myling Essence at level 37 and received 1,651,404"
+ },
+ {
+  "id": 225,
+  "name": "Cultist Staff XP Item",
+  "reward_xp": 2080638,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 31 from period table (5*2^e fit); cap 15 = period tier rule; only post-1.72 figures on the page; nearest page http://camelot.allakhazam.com/quests.html?cquest=620",
+  "quote": ""
+ },
+ {
+  "id": 226,
+  "name": "Vial Ice Water XP Item",
+  "reward_xp": 2080638,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=533 (page); approx.; cap 15 = period tier rule (no task-specific cap)",
+  "quote": "Kill Snow Giants in the frontier, get about 2M xp per."
+ },
+ {
+  "id": 227,
+  "name": "Ingester Stomach XP Item",
+  "reward_xp": 2621440,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 32 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=568",
+  "quote": ""
+ },
+ {
+  "id": 228,
+  "name": "Malefic Tooth XP Item",
+  "reward_xp": 15893440,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 43 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=1815",
+  "quote": ""
+ },
+ {
+  "id": 229,
+  "name": "Mud Frog Tongue XP Item",
+  "reward_xp": 1651404,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=460 (2002-08); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "I got 1.6 m exp per tongue."
+ },
+ {
+  "id": 230,
+  "name": "Steam XP Item",
+  "reward_xp": 2621440,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 32 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=579",
+  "quote": ""
+ },
+ {
+  "id": 231,
+  "name": "Badger Stomach XP Item",
+  "reward_xp": 2621440,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=534 (page); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "XP is around 2.6M!"
+ },
+ {
+  "id": 232,
+  "name": "Cicada Legs XP Item",
+  "reward_xp": 2621440,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=580 (2004-10wb); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "lvl 41 received 2,621,440 exp per leg."
+ },
+ {
+  "id": 234,
+  "name": "Giant Snowcrab Claw XP Item",
+  "reward_xp": 3302807,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=506 (page); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "Claws are worth 3.302 mil each"
+ },
+ {
+  "id": 235,
+  "name": "Lost Pearl XP Item",
+  "reward_xp": 4161277,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=464 (2003-02)",
+  "quote": "4,161,277 exp each and limited to 15 turn ins."
+ },
+ {
+  "id": 236,
+  "name": "Morvalt Skydda Eyes XP Item",
+  "reward_xp": 4161277,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 34 from period table (5*2^e fit); cap 15 = period tier rule; only post-1.72 figures on the page; nearest page http://camelot.allakhazam.com/quests.html?cquest=1992",
+  "quote": ""
+ },
+ {
+  "id": 237,
+  "name": "Yellowed Bone Beads XP Item",
+  "reward_xp": 4161277,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=566 (2004-10wb); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "Reward: 4,161,277 experience."
+ },
+ {
+  "id": 238,
+  "name": "Black Orm Gland XP Item",
+  "reward_xp": 6022488,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=418 (2004-03); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "At 38, each turn in was worth 6,022,488 to me."
+ },
+ {
+  "id": 239,
+  "name": "Coral XP Item",
+  "reward_xp": 7946720,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=682 (2003-03); page typo of 7,946,720; cap 15 = period tier rule (no task-specific cap)",
+  "quote": "36 bonedancer did the quest just fine. Received 7,946,728 exp"
+ },
+ {
+  "id": 240,
+  "name": "Fisher Grip Feathers XP Item",
+  "reward_xp": 7946720,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 38 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=582",
+  "quote": ""
+ },
+ {
+  "id": 241,
+  "name": "Mud Crab Claw XP Item",
+  "reward_xp": 5242880,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=365 (page); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "Reward 5,242,880 at level 37"
+ },
+ {
+  "id": 242,
+  "name": "Drakulv Scale XP Item",
+  "reward_xp": 13249472,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=375 (2004-02); LEVEL-SCALED: 15,893,440 (Jan 2003); 27 accepted; cap 25 = period tier rule (no task-specific cap)",
+  "quote": "at lvl 41 i got 13,249,472 xp. for a max of 27 scales"
+ },
+ {
+  "id": 243,
+  "name": "Golden Chain Necklace XP Item",
+  "reward_xp": 6022488,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 36 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=735",
+  "quote": ""
+ },
+ {
+  "id": 244,
+  "name": "Ice Creature Corpse XP Item",
+  "reward_xp": 8322553,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=457 (2002-09); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "I turned one corpse in and got 8,322,553."
+ },
+ {
+  "id": 245,
+  "name": "Mammoth Herdguard Skin XP Item",
+  "reward_xp": 6022488,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 36 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=593",
+  "quote": ""
+ },
+ {
+  "id": 246,
+  "name": "Red Caps XP Item",
+  "reward_xp": 6918022,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 37 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=594",
+  "quote": ""
+ },
+ {
+  "id": 247,
+  "name": "Washed Up Skeleton Skull XP Item",
+  "reward_xp": 6022488,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 36 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=1769",
+  "quote": ""
+ },
+ {
+  "id": 248,
+  "name": "Frost Giant Blood XP Item",
+  "reward_xp": 6918022,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 37 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=456",
+  "quote": ""
+ },
+ {
+  "id": 251,
+  "name": "Griffon Glider Head XP Item",
+  "reward_xp": 7946720,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 38 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=592",
+  "quote": ""
+ },
+ {
+  "id": 252,
+  "name": "Terra Crab Claw XP Item",
+  "reward_xp": 7946720,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=419 (2002-12); 6.6M in Aug 2002, before 1.53; cap 15 = period tier rule (no task-specific cap)",
+  "quote": "Reward at level 38 for my Shaman was 7,946,720 Experience."
+ },
+ {
+  "id": 253,
+  "name": "Warder Ear XP Item",
+  "reward_xp": 825702,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=529 (page); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "And get 825,702 xp"
+ },
+ {
+  "id": 254,
+  "name": "Fenrir Tracker Paw XP Item",
+  "reward_xp": 15219647,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=1813 (page); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "He gave me this task at lvl 42 and I received 15.2 million exp"
+ },
+ {
+  "id": 255,
+  "name": "Forest Viper Venom XP Item",
+  "reward_xp": 10485760,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 40 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=420",
+  "quote": ""
+ },
+ {
+  "id": 256,
+  "name": "Frozen Teardrop XP Item",
+  "reward_xp": 13249472,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=518 (2003-03); 15.2M at 42; \"Dail will accept 25 of them\" (2003-06)",
+  "quote": "Got 13.2 million per tear."
+ },
+ {
+  "id": 257,
+  "name": "Jeweled Shaman Totem XP Item",
+  "reward_xp": 15219647,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=1814 (page); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "at lvl 42 and I received 15.2 million exp per totem"
+ },
+ {
+  "id": 258,
+  "name": "Aurora Corpse XP Item",
+  "reward_xp": 24089951,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 46 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=758",
+  "quote": ""
+ },
+ {
+  "id": 259,
+  "name": "Digested Skull XP Item",
+  "reward_xp": 15893440,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 43 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found",
+  "quote": ""
+ },
+ {
+  "id": 260,
+  "name": "Iceberg Tooth XP Item",
+  "reward_xp": 12044975,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 41 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found",
+  "quote": ""
+ },
+ {
+  "id": 261,
+  "name": "Vial of Shimmering Essence XP Item",
+  "reward_xp": 12044975,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 41 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=759",
+  "quote": ""
+ },
+ {
+  "id": 262,
+  "name": "Ghostly Necklace XP Item",
+  "reward_xp": 15219647,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=727 (page); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "I received 15.2 million XP per necklace."
+ },
+ {
+  "id": 263,
+  "name": "Ice Shard XP Item",
+  "reward_xp": 15219647,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=1811 (page); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "I was lvl 42 ... I received 15.2 million exp per shard"
+ },
+ {
+  "id": 264,
+  "name": "Magic Clay XP Item",
+  "reward_xp": 15893440,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=539 (page); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "he gives you 15.9 million exp @ level 42"
+ },
+ {
+  "id": 265,
+  "name": "Runemaster Sealed Page XP Item",
+  "reward_xp": 13836043,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 42 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=695",
+  "quote": ""
+ },
+ {
+  "id": 266,
+  "name": "Vial of Ghastly Vapors XP Item",
+  "reward_xp": 15219647,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=728 (2003-06); Each one got me 15.2 million XP",
+  "quote": "She'll take up to 25 of these"
+ },
+ {
+  "id": 267,
+  "name": "Frosted Gimel Root XP Item",
+  "reward_xp": 15893440,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 43 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found",
+  "quote": ""
+ },
+ {
+  "id": 268,
+  "name": "Spirit Stone XP Item",
+  "reward_xp": 15893440,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=1822 (page)",
+  "quote": "At 47 I got 15.8 million exp each and turned in 25"
+ },
+ {
+  "id": 269,
+  "name": "Morvalt Blandere Belt XP Item",
+  "reward_xp": 24089951,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 46 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=742",
+  "quote": ""
+ },
+ {
+  "id": 270,
+  "name": "Rack of Megaloceros Claw XP Item",
+  "reward_xp": 20971520,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 45 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=726",
+  "quote": ""
+ },
+ {
+  "id": 271,
+  "name": "Troll Teeth XP Item",
+  "reward_xp": 18256769,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 44 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=744",
+  "quote": ""
+ },
+ {
+  "id": 272,
+  "name": "Svartalf Poison Recipes XP Item",
+  "reward_xp": 20971520,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 45 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=741",
+  "quote": ""
+ },
+ {
+  "id": 273,
+  "name": "Red Eye XP Item",
+  "reward_xp": 27672087,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 47 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=2436",
+  "quote": ""
+ },
+ {
+  "id": 274,
+  "name": "Faraheim Doe Meat XP Item",
+  "reward_xp": 40164890,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=691 (page); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "receive 40,164,890 exp. (at 49th)"
+ },
+ {
+  "id": 275,
+  "name": "Faraheim Stag Body XP Item",
+  "reward_xp": 40164890,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=684 (2003-06); approx.; sister task pays 40,164,890; cap 25 = period tier rule (no task-specific cap)",
+  "quote": "I received 41.1 M of XP for one Stag Body."
+ },
+ {
+  "id": 276,
+  "name": "Silver-Gemmed Collar XP Item",
+  "reward_xp": 12044975,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 41 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=3790",
+  "quote": ""
+ },
+ {
+  "id": 277,
+  "name": "Trip String XP Item",
+  "reward_xp": 40164890,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 49 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=743",
+  "quote": ""
+ },
+ {
+  "id": 278,
+  "name": "Feather XP Item",
+  "reward_xp": 40164890,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 49 from period table (5*2^e fit); cap 25 = period tier rule; Allakhazam match was the Albion Pristine Cockatrice task; no Midgard figure; nearest page http://camelot.allakhazam.com/quests.html?cquest=484",
+  "quote": ""
+ },
+ {
+  "id": 300,
+  "name": "Faerie Drake Hide XP Item",
+  "reward_xp": 231705,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=359 (page); approx.; level-22 value; cap 15 = period tier rule (no task-specific cap)",
+  "quote": "Get a lot of XP (200k) for every one that you turn in"
+ },
+ {
+  "id": 301,
+  "name": "Cracked Dark Heart XP Item",
+  "reward_xp": 206435,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 21 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=395",
+  "quote": ""
+ },
+ {
+  "id": 302,
+  "name": "Copper Moonstone Flagon XP Item",
+  "reward_xp": 206435,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=397 (2002-12); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "I get 206.435 XP for each Flaggon."
+ },
+ {
+  "id": 303,
+  "name": "Wind Swept Leaves XP Item",
+  "reward_xp": 520160,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=396 (2002-08); \"Repeatable up to 15 times\"",
+  "quote": "I turned some in at lvl 28 and got about 500,000 a piece"
+ },
+ {
+  "id": 304,
+  "name": "Streaming Wisp Husk XP Item",
+  "reward_xp": 412850,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=394 (2003-03); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "Each husk is worth 412,850 XP at that level."
+ },
+ {
+  "id": 305,
+  "name": "Ire Wolf Claw XP Item",
+  "reward_xp": 825702,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=388 (2004-02); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "Worth 825,702 xp at L27"
+ },
+ {
+  "id": 306,
+  "name": "Siabra Waylayer Sash XP Item",
+  "reward_xp": 655360,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 26 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=377",
+  "quote": ""
+ },
+ {
+  "id": 307,
+  "name": "Sett Fur XP Item",
+  "reward_xp": 231705,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 22 from period table (5*2^e fit); cap 15 = period tier rule; RANDOM reward task: page lists 50 sp, gems or 813K exp at level 30; an Oct 2002 post saw coin/gems only; nearest page http://camelot.allakhazam.com/quests.html?cquest=438",
+  "quote": ""
+ },
+ {
+  "id": 308,
+  "name": "Darkened Terror Claw XP Item",
+  "reward_xp": 1040319,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=387 (page); approx.; cap 15 = period tier rule (no task-specific cap)",
+  "quote": "1M xp per."
+ },
+ {
+  "id": 309,
+  "name": "Squabbler Eye XP Item",
+  "reward_xp": 1310720,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=382 (2003-10wb); \"1.35\" read as 1.31M; cap 15 = period tier rule (no task-specific cap)",
+  "quote": "Squabbler eyes gave me 1.35 xp at lvl 31"
+ },
+ {
+  "id": 310,
+  "name": "Forgotten Silver Jasper Locket XP Item",
+  "reward_xp": 1651404,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=379 (2003-07)",
+  "quote": "I turned in 15 lockets at lvl 41 and got 1,651,404 experience"
+ },
+ {
+  "id": 311,
+  "name": "Botonid Claw XP Item",
+  "reward_xp": 1651404,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 30 from period table (5*2^e fit); cap 15 = period tier rule; period note: Feb 2003 report says Orlae refuses the claws (no xp); nearest page http://camelot.allakhazam.com/quests.html?cquest=584",
+  "quote": ""
+ },
+ {
+  "id": 312,
+  "name": "Trampler Stomach XP Item",
+  "reward_xp": 4161277,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 34 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=570",
+  "quote": ""
+ },
+ {
+  "id": 313,
+  "name": "Rage Wolf Tooth XP Item",
+  "reward_xp": 2080638,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 31 from period table (5*2^e fit); cap 15 = period tier rule; random reward teeth task; nearest page http://camelot.allakhazam.com/quests.html?cquest=404",
+  "quote": ""
+ },
+ {
+  "id": 314,
+  "name": "Glowing Red Eye XP Item",
+  "reward_xp": 2621440,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=378 (2003-09); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "Unloaded a few on him at 33 and the reward was 2,621,440xp"
+ },
+ {
+  "id": 315,
+  "name": "Black Swirling Orbs XP Item",
+  "reward_xp": 2621440,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=643 (2003-05); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "2,621,440 exp at level 38"
+ },
+ {
+  "id": 316,
+  "name": "Red Cruach Wings XP Item",
+  "reward_xp": 3302807,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=380 (2003-09); \"This is repeatable 15X\" (2004-08)",
+  "quote": "The reward was 3,302,807xp each."
+ },
+ {
+  "id": 317,
+  "name": "Arbordon Abductor Arm XP Item",
+  "reward_xp": 6022488,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=583 (2003-05); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "6,022,488 at level 38"
+ },
+ {
+  "id": 318,
+  "name": "Greater Angler Tail XP Item",
+  "reward_xp": 3302807,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 33 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=667",
+  "quote": ""
+ },
+ {
+  "id": 319,
+  "name": "Torc Tooth XP Item",
+  "reward_xp": 4161277,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 34 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found",
+  "quote": ""
+ },
+ {
+  "id": 320,
+  "name": "Deamhan Aeir Essence XP Item",
+  "reward_xp": 4161277,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=398 (page); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "She gives 4.1 mil xp at 34."
+ },
+ {
+  "id": 321,
+  "name": "Ixthiar Forearm XP Item",
+  "reward_xp": 7946720,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=569 (2003-05); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "A season 49 Nightshade received 7.9 million xp for one."
+ },
+ {
+  "id": 322,
+  "name": "Skimmer Skin XP Item",
+  "reward_xp": 6022488,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=666 (page); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "6,022,488 at level 38"
+ },
+ {
+  "id": 323,
+  "name": "Juvenile Megafelid Tooth XP Item",
+  "reward_xp": 6022488,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 36 from period table (5*2^e fit); cap 15 = period tier rule; random reward (gems/cash/xp) per 2002-08 post; nearest page http://camelot.allakhazam.com/quests.html?cquest=399",
+  "quote": ""
+ },
+ {
+  "id": 324,
+  "name": "Sack of Grain XP Item",
+  "reward_xp": 5242880,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=391 (2004-04); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "I, as a level 40, was awarded 5,242,880 experience"
+ },
+ {
+  "id": 325,
+  "name": "Glimmering Gem XP Item",
+  "reward_xp": 13249472,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=383 (2004-08); \"about 13.75 mil\" after 1.53 (2002-09)",
+  "quote": "Repeatable up to 25 times. lvl 41 received 13,249,472 xp"
+ },
+ {
+  "id": 326,
+  "name": "Treant Bark XP Item",
+  "reward_xp": 7946720,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 38 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=3031",
+  "quote": ""
+ },
+ {
+  "id": 328,
+  "name": "Phaeghoul Red Hand XP Item",
+  "reward_xp": 6918022,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=392 (2002-09); \"Repeatable 15 times\"",
+  "quote": "At lvl 40, and as of patch 1.53, I received 6,918,022 xp"
+ },
+ {
+  "id": 329,
+  "name": "Gold-Lined Drinking Horn XP Item",
+  "reward_xp": 6022488,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 36 from period table (5*2^e fit); cap 15 = period tier rule; only report is pre-1.53 (5.2M at 38, Aug 2002); level-36 post-1.53 value used; nearest page http://camelot.allakhazam.com/quests.html?cquest=390",
+  "quote": ""
+ },
+ {
+  "id": 330,
+  "name": "Venom Sac XP Item",
+  "reward_xp": 7946720,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=668 (2004-10wb); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "7,946,720 at level 38"
+ },
+ {
+  "id": 331,
+  "name": "Grovewood Bark XP Item",
+  "reward_xp": 7946720,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 38 from period table (5*2^e fit); cap 15 = period tier rule; only report is 6.6M (Sep 2002, around 1.53); cap 15 is period (\"turned in all 15 barks\"); nearest page http://camelot.allakhazam.com/quests.html?cquest=386",
+  "quote": ""
+ },
+ {
+  "id": 332,
+  "name": "Glowing Veined Stone XP Item",
+  "reward_xp": 15219647,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=523 (2003-03); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "She is on the north end of town ... gives 15,219,647 exp"
+ },
+ {
+  "id": 333,
+  "name": "Block of Sanidon Sand XP Item",
+  "reward_xp": 10485760,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=562 (2003-09); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "I am level 41 and I received 10,485,760."
+ },
+ {
+  "id": 334,
+  "name": "Marine Shriller Eggs XP Item",
+  "reward_xp": 10485760,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=677 (2003-01); page typo of 10,485,760; cap 25 = period tier rule (no task-specific cap)",
+  "quote": "Received 10,458,760 exp at lvl 40"
+ },
+ {
+  "id": 335,
+  "name": "Shadowy Helm XP Item",
+  "reward_xp": 15893440,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 43 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=433",
+  "quote": ""
+ },
+ {
+  "id": 336,
+  "name": "Medicinal Herb XP Item",
+  "reward_xp": 8322553,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=389 (2002-11); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "8.3M per gift."
+ },
+ {
+  "id": 337,
+  "name": "Yellow Curmudgeon Teeth XP Item",
+  "reward_xp": 13836043,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 42 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found",
+  "quote": ""
+ },
+ {
+  "id": 338,
+  "name": "Ixthiar Decimater Mandible XP Item",
+  "reward_xp": 9128384,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 39 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=631",
+  "quote": ""
+ },
+ {
+  "id": 339,
+  "name": "Ixthiar Plaguebringer Satchel XP Item",
+  "reward_xp": 10485760,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=553 (2004-10); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "I was awarded 10,485,760 for each Satchel."
+ },
+ {
+  "id": 340,
+  "name": "Ixthiar Wing XP Item",
+  "reward_xp": 10485760,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 40 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=633",
+  "quote": ""
+ },
+ {
+  "id": 341,
+  "name": "Vial of Deamhan Breath XP Item",
+  "reward_xp": 13249472,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=432 (2002-11); LEVEL-SCALED: 15,893,440 at 43 (2002-12); \"Repeatable 25 times\"",
+  "quote": "The experience awarded is 13,249,472."
+ },
+ {
+  "id": 342,
+  "name": "Alp Luachra Head XP Item",
+  "reward_xp": 2080638,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=381 (2004-04); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "I was awarded 2,080,638 experience at level 41."
+ },
+ {
+  "id": 343,
+  "name": "Spirit Catcher Stone XP Item",
+  "reward_xp": 10485760,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 40 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=434",
+  "quote": ""
+ },
+ {
+  "id": 344,
+  "name": "Vial of Moss Juice XP Item",
+  "reward_xp": 10485760,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 40 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=718",
+  "quote": ""
+ },
+ {
+  "id": 345,
+  "name": "Vehement Gizzard XP Item",
+  "reward_xp": 10485760,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 40 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=525",
+  "quote": ""
+ },
+ {
+  "id": 346,
+  "name": "Long White Boar Tusk XP Item",
+  "reward_xp": 13249472,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=490 (2002-11); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "identical to reward for Deamhan breath ... 13,249,472"
+ },
+ {
+  "id": 347,
+  "name": "Speghoul Heart XP Item",
+  "reward_xp": 10485760,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 40 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=513",
+  "quote": ""
+ },
+ {
+  "id": 348,
+  "name": "Tidal Angler Meat XP Item",
+  "reward_xp": 13836043,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=746 (2003-10wb); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "Recieved 13.8 million on the Kill Task item."
+ },
+ {
+  "id": 349,
+  "name": "Umber Bear Tooth XP Item",
+  "reward_xp": 4161277,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=402 (2002-11); RANDOM reward (xp, gem or ~75s); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "I only got 4 mil xp for the tooth at 45"
+ },
+ {
+  "id": 350,
+  "name": "Gorge Shriller Wings XP Item",
+  "reward_xp": 13836043,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 42 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=669",
+  "quote": ""
+ },
+ {
+  "id": 351,
+  "name": "Ixthiar Doomcaller Beads XP Item",
+  "reward_xp": 18256769,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 44 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=559",
+  "quote": ""
+ },
+ {
+  "id": 352,
+  "name": "Ixthiar Reaper Claw XP Item",
+  "reward_xp": 18256769,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=632 (2003-12); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "At level 46, I turned in claws for 18,256,769 xp each."
+ },
+ {
+  "id": 353,
+  "name": "Ixthiar Reaper Mandible XP Item",
+  "reward_xp": 13836043,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=560 (page); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "EXP reward: 13,836,043"
+ },
+ {
+  "id": 354,
+  "name": "Siabra Charm Ring XP Item",
+  "reward_xp": 15893440,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=493 (2003-06); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "Received 15,893,440 exp per ring at lvl 43"
+ },
+ {
+  "id": 355,
+  "name": "Hopper Tongue XP Item",
+  "reward_xp": 18256769,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=524 (page); approx.; cap 25 = period tier rule (no task-specific cap)",
+  "quote": "I got approx 18M xp!"
+ },
+ {
+  "id": 356,
+  "name": "Vial of Glowing Gasses XP Item",
+  "reward_xp": 15893440,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 43 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=430",
+  "quote": ""
+ },
+ {
+  "id": 357,
+  "name": "Mature Skimmer Hide XP Item",
+  "reward_xp": 18256769,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 44 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=678",
+  "quote": ""
+ },
+ {
+  "id": 358,
+  "name": "Death Robe XP Item",
+  "reward_xp": 15893440,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=431 (page); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "You will get 15.9M xp per."
+ },
+ {
+  "id": 359,
+  "name": "Skeletal Dwarf Invader Skull XP Item",
+  "reward_xp": 15893440,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=512 (page); approx.; cap 25 = period tier rule (no task-specific cap)",
+  "quote": "Approx 16M xp per skull."
+ },
+ {
+  "id": 360,
+  "name": "Dusky Sylvanshade Head XP Item",
+  "reward_xp": 20971520,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=675 (2003-05); approx.; cap 25 = period tier rule (no task-specific cap)",
+  "quote": "20M XP at lvl 48."
+ },
+ {
+  "id": 361,
+  "name": "Bugbear Snout XP Item",
+  "reward_xp": 18256769,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 44 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=554",
+  "quote": ""
+ },
+ {
+  "id": 362,
+  "name": "Cervodeth Antlers XP Item",
+  "reward_xp": 18256769,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=551 (2004-10wb); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "You are awarded 18,256,769 experience!"
+ },
+ {
+  "id": 363,
+  "name": "Soaring Manta Wing XP Item",
+  "reward_xp": 18256769,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=647 (2003-06); approx.; cap 25 = period tier rule (no task-specific cap)",
+  "quote": "18M is what she gives."
+ },
+ {
+  "id": 364,
+  "name": "Ravaging Marine Shriller Hide XP Item",
+  "reward_xp": 24089951,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 46 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=635",
+  "quote": ""
+ },
+ {
+  "id": 365,
+  "name": "Octonid Tentacle XP Item",
+  "reward_xp": 18256769,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 44 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=676",
+  "quote": ""
+ },
+ {
+  "id": 366,
+  "name": "Morass Leech Blood XP Item",
+  "reward_xp": 15219647,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=491 (2004-04); LEVEL-SCALED: 15,893,440 at 43 (2003-06); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "15,219,647 exp at lvl 42."
+ },
+ {
+  "id": 368,
+  "name": "Melancholy Faerie Wing XP Item",
+  "reward_xp": 20971520,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=1767 (2003-10wb); approx.; cap 25 = period tier rule (no task-specific cap)",
+  "quote": "Redeem experience(20 million at level 50)"
+ },
+ {
+  "id": 369,
+  "name": "Pastry Puff XP Item",
+  "reward_xp": 24089951,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=760 (2004-10); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "Bricacos gives you 24mill xp at 46"
+ },
+ {
+  "id": 370,
+  "name": "Mad Grazer Ear XP Item",
+  "reward_xp": 24089951,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=644 (2003-09); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "Received 24,089,951 xp as a level 47 Champion."
+ },
+ {
+  "id": 371,
+  "name": "Bog Frog Ear XP Item",
+  "reward_xp": 27672087,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 47 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=752",
+  "quote": ""
+ },
+ {
+  "id": 372,
+  "name": "Poison Sac XP Item",
+  "reward_xp": 40164890,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 49 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=692",
+  "quote": ""
+ },
+ {
+  "id": 373,
+  "name": "Tittering Tree Dervish Bark XP Item",
+  "reward_xp": 31786880,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=1818 (page); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "lvl 49 received 31,786,880 exp"
+ },
+ {
+  "id": 374,
+  "name": "Horseshoe XP Item",
+  "reward_xp": 31786880,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 48 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=753",
+  "quote": ""
+ },
+ {
+  "id": 375,
+  "name": "Fine Bear Pelt XP Item",
+  "reward_xp": 36513537,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=687 (2003-05); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "36,513,537 exp"
+ },
+ {
+  "id": 376,
+  "name": "Death Shroud Silk XP Item",
+  "reward_xp": 40164890,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=674 (2003-07); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "EXP 40,164,890"
+ },
+ {
+  "id": 377,
+  "name": "Spectral Essence XP Item",
+  "reward_xp": 31786880,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 48 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=1762",
+  "quote": ""
+ },
+ {
+  "id": 378,
+  "name": "Death Robe XP Item",
+  "reward_xp": 15893440,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=431 (page); same Death Robe item as Brisen (cq 431); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "You will get 15.9M xp per."
+ },
+ {
+  "id": 379,
+  "name": "Death Robe XP Item",
+  "reward_xp": 15893440,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=431 (page); same Death Robe item (Raghnall, cq 435); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "You will get 15.9M xp per."
+ },
+ {
+  "id": 380,
+  "name": "Death Robe XP Item",
+  "reward_xp": 15893440,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=431 (page); same Death Robe item (Sorcha, cq 436); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "You will get 15.9M xp per."
+ },
+ {
+  "id": 381,
+  "name": "Orc Tracking Hound Paw XP Item",
+  "reward_xp": 24089951,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 46 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=557",
+  "quote": ""
+ },
+ {
+  "id": 382,
+  "name": "Spotted Orc Lure Ear XP Item",
+  "reward_xp": 24089951,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=556 (page); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "I returned the ear and at level 49 got 24mil xp."
+ },
+ {
+  "id": 385,
+  "name": "Gangrenous Mass Pustule XP Item",
+  "reward_xp": 31786880,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 48 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=757",
+  "quote": ""
+ },
+ {
+  "id": 386,
+  "name": "Blackened Staff of the Minion XP Item",
+  "reward_xp": 31786880,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=750 (page); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "*hands staff gets 31,786,880 exp*"
+ },
+ {
+  "id": 387,
+  "name": "Shimmering Water Orb XP Item",
+  "reward_xp": 31786880,
+  "max_count": 25,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 48 from period table (5*2^e fit); cap 25 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=613",
+  "quote": ""
+ },
+ {
+  "id": 388,
+  "name": "Faint Geist Essence XP Item",
+  "reward_xp": 40164890,
+  "max_count": 25,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=690 (2004-03); cap 25 = period tier rule (no task-specific cap)",
+  "quote": "At level 49, you receive 40,164,890 xp."
+ },
+ {
+  "id": 389,
+  "name": "Drakoran Marauder Helm XP Item",
+  "reward_xp": 412850,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 24 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=694",
+  "quote": ""
+ },
+ {
+  "id": 391,
+  "name": "Tattered Rope Threads XP Item",
+  "reward_xp": 1651404,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 30 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=708",
+  "quote": ""
+ },
+ {
+  "id": 392,
+  "name": "Cultist Supplie XP Item",
+  "reward_xp": 4161277,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 34 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=567",
+  "quote": ""
+ },
+ {
+  "id": 393,
+  "name": "Faint Grim Scrap XP Item",
+  "reward_xp": 206435,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 21 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found",
+  "quote": ""
+ },
+ {
+  "id": 394,
+  "name": "Tattered Rope Threads XP Item",
+  "reward_xp": 1651404,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 30 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=708",
+  "quote": ""
+ },
+ {
+  "id": 395,
+  "name": "Bright Illuminated Gem XP Item",
+  "reward_xp": 4161277,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=749 (2003-10); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "Got 4,161,277 exp. pts. for the one gem"
+ },
+ {
+  "id": 396,
+  "name": "Cave Lioness Pelt XP Item",
+  "reward_xp": 7946720,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=581 (page); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "Exp gained per pelt 7,946,720."
+ },
+ {
+  "id": 397,
+  "name": "Fomorian Hormone Gland XP Item",
+  "reward_xp": 2621440,
+  "max_count": 15,
+  "basis": "estimate",
+  "source": "estimate: in-game value for task level 32 from period table (5*2^e fit); cap 15 = period tier rule; no XP figure found; nearest page http://camelot.allakhazam.com/quests.html?cquest=634",
+  "quote": ""
+ },
+ {
+  "id": 398,
+  "name": "Gem of the Despoiled XP Item",
+  "reward_xp": 2080638,
+  "max_count": 15,
+  "basis": "period",
+  "source": "http://camelot.allakhazam.com/quests.html?cquest=425 (page); cap 15 = period tier rule (no task-specific cap)",
+  "quote": "You get about 2,080,638 xp per gem handed in"
+ }
+]

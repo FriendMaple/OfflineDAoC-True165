@@ -39,6 +39,7 @@ namespace DOL.GS
             public bool Reposition;          // set by a failed shot: find a closer spot before trying again
             public string LastFailure = "";
             public bool PutAwayPending;      // the shot is made: stop and take the melee weapon on the next turn
+            public string ShotResult = "";
         }
 
         public const int MaximumReplans = 4;
@@ -237,6 +238,10 @@ namespace DOL.GS
             // Shot, but the monster took no notice (nothing aggroed it): pull it the ordinary way instead of waiting.
             if (now - s.ShotTick >= 3000 && !target.InCombat && (target as GameNPC)?.TargetObject != bot)
             {
+                // Diagnostics for these (2026-11-01: a third of the shots went unnoticed): what the monster made of it.
+                if (target is GameNPC { Brain: StandardMobBrain mob } seen)
+                    s.LastFailure += $"; mob_has_aggro={mob.HasAggro} mob_state={mob.FSM?.GetCurrentState()?.GetType().Name} " +
+                                     $"mob_hp={seen.HealthPercent}% shot_result={s.ShotResult}";
                 Finish(bot, s, true, "not noticed");
                 return false;
             }
@@ -280,7 +285,7 @@ namespace DOL.GS
                 }
                 return;
             }
-            MarkShot(bot, s);
+            MarkShot(bot, s, attack);
         }
 
         /// <summary>Something hit the bot: its target coming in means the fight is on; any other monster ends the pull and
@@ -295,8 +300,9 @@ namespace DOL.GS
         /// <summary>Records the shot. The attack is still being made when this runs (the attacker is told before the monster
         /// is), so stopping it or putting the bow away here cancelled the shot before the monster ever heard of it
         /// (2026-11-01 runs: hundreds of "shots" the monster never noticed). That happens on the bot's next turn.</summary>
-        private static void MarkShot(GameBot bot, State s)
+        private static void MarkShot(GameBot bot, State s, AttackData attack = null)
         {
+            s.ShotResult = attack == null ? "seen coming" : $"{attack.AttackType}/{attack.AttackResult}{(attack.IsSpellResisted ? "/resisted" : "")} dmg={attack.Damage}";
             s.Shot = true;
             s.ShotTick = GameLoop.GameLoopTime;
             s.PutAwayPending = true;

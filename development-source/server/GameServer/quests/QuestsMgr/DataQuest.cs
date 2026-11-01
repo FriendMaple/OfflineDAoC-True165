@@ -2259,7 +2259,7 @@ namespace DOL.GS.Quests
 						{
 							if(rewardXP == 0)
 								rewardXP = player.GetExperienceNeededForLevel(player.Level) / 50;
-							else if (lvlXP > rewardXP)
+							else if (!Classic165Mode.IsOn && lvlXP > rewardXP)   // True 1.65: the period fixed reward per item (owner 2026-11-01)
 								rewardXP = lvlXP;
 							player.ForceGainExperience(rewardXP);
 						}
@@ -2286,7 +2286,7 @@ namespace DOL.GS.Quests
 								{
 									if(rewardXP == 0)
 										rewardXP = player.GetExperienceNeededForLevel(player.Level) / 50;
-									else if (lvlXP > rewardXP)
+									else if (!Classic165Mode.IsOn && lvlXP > rewardXP)   // True 1.65: the period fixed reward per item (owner 2026-11-01)
 										rewardXP = lvlXP;
 									player.ForceGainExperience(rewardXP);
 								}
@@ -2305,7 +2305,7 @@ namespace DOL.GS.Quests
 								{
 									if(rewardXP == 0)
 										rewardXP = player.GetExperienceNeededForLevel(player.Level) / 50;
-									else if (lvlXP > rewardXP)
+									else if (!Classic165Mode.IsOn && lvlXP > rewardXP)   // True 1.65: the period fixed reward per item (owner 2026-11-01)
 										rewardXP = lvlXP;
 									player.ForceGainExperience(rewardXP);
 								}
