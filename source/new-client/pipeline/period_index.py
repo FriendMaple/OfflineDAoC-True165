@@ -8,10 +8,11 @@ for 20 minutes looking for one name").
 The archive itself is never modified (read with read_archive.records). SQLite FTS5, page text with HTML stripped,
 one row per page: source (archive folder), url, date (capture / fetch / Last Updated where known), text."""
 import html, json, re, sqlite3, sys, time
+import paths as _paths
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-PERIOD = HERE.parent / 'external/old_project/development-source/research/period-data'
+PERIOD = _paths.PERIOD_DATA
 DB = HERE / 'data/period_index.sqlite'
 sys.path.insert(0, str(PERIOD))
 

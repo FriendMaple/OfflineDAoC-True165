@@ -5,10 +5,10 @@ block; its "New" blocks are later emotes). Writes godot/content/rules/emotes.jso
 
     python build_emotes.py"""
 import json, re
+import paths as _paths
 from assets_pipeline import ROOT
-OLD = ROOT / 'external/old_project'
-SRC = OLD / 'development-source/server/GameServer/commands/playercommands/emotes.cs'
-IPL = OLD / 'development-source/server/GameServer/packets/Server/IPacketLib.cs'
+SRC = _paths.GAMESERVER / 'commands/playercommands/emotes.cs'
+IPL = _paths.GAMESERVER / 'packets/Server/IPacketLib.cs'
 
 
 def main():

@@ -13,13 +13,14 @@ Writes "SPELL FX AUDIT.md" in the project folder.
     python pipeline/audit_spell_fx.py
 """
 import csv, io, json, sqlite3, re
+import paths as _paths
 from collections import defaultdict
 from pathlib import Path
 from assets_pipeline import CLIENT, ROOT
 from daoc_mpk import read_mpk
 
 G = ROOT / 'godot'
-DB = ROOT / 'external/old_project/runtime/data/opendaoc.sqlite3.db'
+DB = _paths.WORLD_DB
 OUT = ROOT / 'SPELL FX AUDIT.md'
 
 

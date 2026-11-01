@@ -19,6 +19,7 @@ and converts every effect NIF it names (build_monsters.build_effect -> content/m
 
     python build_spell_fx.py [--no-upscale]"""
 import csv, io, json, re, sys
+import paths as _paths
 from assets_pipeline import CLIENT, ROOT
 from daoc_mpk import read_mpk
 import nif_character as nc
@@ -55,7 +56,7 @@ def main():
                     used.add(ce)
     # 0.36c: every client effect the shared server's spells use (read only) - the Sluaghbinder's (Cairnhide 4569, the
     # raise spells 4625-4631 ...), the custom NPCs' and ROG procs (owner 2026-10-11: no Sluaghbinder effect showed)
-    db = ROOT.parent / 'new class test - CLAUDE VERSION/runtime/data/opendaoc.sqlite3.db'
+    db = _paths.WORLD_DB
     if db.exists():
         import sqlite3
         con = sqlite3.connect(db.as_uri() + '?mode=ro', uri=True)

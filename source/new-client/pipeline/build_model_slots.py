@@ -8,10 +8,11 @@ Writes godot/content/items/model_slots.json {model: item_type}.
     python pipeline/build_model_slots.py
 """
 import json, sqlite3
+import paths as _paths
 from collections import Counter, defaultdict
 from assets_pipeline import ROOT
 
-DB = ROOT.parent / 'new class test - CLAUDE VERSION/runtime/data/opendaoc.sqlite3.db'
+DB = _paths.WORLD_DB
 OUT = ROOT / 'godot/content/items/model_slots.json'
 EQUIP = {10, 11, 12, 13, 21, 22, 23, 24, 25, 26, 27, 28, 29, 32, 33, 34, 35, 36, 37}
 

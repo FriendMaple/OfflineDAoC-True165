@@ -9,6 +9,7 @@ prop within BAKED_M of a baked one is not drawn (the baked one is); the client o
 the ground (and only within 4 m), it never lowers one.
     python probe_floating_props.py [zone=1] [--db=<sqlite>] [--all]"""
 import json, math, sqlite3, struct, sys
+import paths as _paths
 from pathlib import Path
 from assets_pipeline import ROOT
 
@@ -17,7 +18,7 @@ TREES = ('elm', 'pine', 'oak', 'tree', 'birch', 'willow', 'fir', 'spruce', 'ash'
 SUPPORT_PAD = 0.6
 BAKED_M = 2.0
 M = 0.025
-DB = ROOT.parent / 'new class test - CLAUDE VERSION/runtime/data/opendaoc-165.sqlite3.db'
+DB = _paths.WORLD_DB
 
 
 def main():

@@ -13,6 +13,7 @@ Writes godot/content/zones/zoneNNN/npcs.json:
            "She is neutral towards you.", "He is aggressive towards you!", "...friendly and is a guard.")
 Coordinates: DAoC zone-local units (global - zone offset) -> engine (x, height, y) x 0.025, like the zone fixtures."""
 import json, re, sqlite3, sys
+import paths as _paths
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -20,7 +21,7 @@ sys.path.insert(0, str(HERE))
 from assets_pipeline import ROOT
 from build_zone import zone_section
 
-DB = ROOT / 'external/old_project/runtime/data/opendaoc.sqlite3.db'
+DB = _paths.WORLD_DB
 M = 0.025
 # DOL class type -> the NPC's job (what clicking it does; the examine suffix)
 ROLES = {'GameMerchant': 'merchant', 'GameGuard': 'guard', 'GameHealer': 'healer', 'Blacksmith': 'smith',

@@ -7,6 +7,7 @@ Writes godot/content/characters/armor.json {model: {"m": {slot: [variant, textur
 textures into content/characters/fig3_textures/{original,x4plus} (Real-ESRGAN x4plus 4x, like every character
 texture). The race figures carry every mesh variant as hidden nodes "<slot>@<n>" (build_races.py)."""
 import json, sys
+import paths as _paths
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -49,7 +50,7 @@ def wanted_models():
         # 0.36c: every armour model the shared server's items and NPCs can wear (ItemTemplate, ItemUnique - ROG, quest
         # rewards, crafted - and NPCEquipment), read only
         import sqlite3
-        db = ROOT.parent / 'new class test - CLAUDE VERSION/runtime/data/opendaoc.sqlite3.db'
+        db = _paths.WORLD_DB
         con = sqlite3.connect(db.as_uri() + '?mode=ro', uri=True)
         for table in ('ItemTemplate', 'ItemUnique'):
             models.update(m for (m,) in con.execute(f'select distinct Model from {table} where Object_Type between 32 and 38 and Model > 0'))
@@ -65,7 +66,7 @@ def code_made_models():
     """Items the server makes in its scripts rather than its item tables (the Sluaghbinder's Dubh Sluagh epic set,
     SluaghbinderEpicArmor.cs: new("hauberk", "Hauberk of the Dubh Sluagh", 4826, eObjectType.Scale, ...)), read only."""
     import re
-    scripts = ROOT.parent / 'new class test - CLAUDE VERSION/development-source/server/GameServer/scripts'
+    scripts = _paths.GAMESERVER / 'scripts'
     pat = re.compile(r'new\("[^"]*",\s*"[^"]*",\s*(\d{2,5}),\s*eObjectType\.')
     found = set()
     for f in scripts.rglob('*.cs') if scripts.exists() else []:

@@ -1,6 +1,6 @@
 // The game's link to the Offline DAoC server (Offline DAoC Rebuilt, owner 2026-10-11): the Godot game is a real DAoC
 // client of the unchanged OpenDAoC server the launcher runs - it connects as the original client (game.dll 1.127) did.
-// Formats follow the server's own code (external\old_project\development-source\server: GameClient.cs,
+// Formats follow the server's own code (the server's development-source\server: GameClient.cs,
 // PacketProcessor.cs, packets\Client\168, packets\Server\PacketLib1126/1127, CoreBase\Network\PacketOut.cs):
 //   client -> server: [data length u16 BE][sequence u16][session u16][parameter u16][code u16 (low byte)] data [checksum]
 //   server -> client: [data length u16 BE][code u8] data

@@ -7,10 +7,11 @@ A name seen in several zones / pages keeps the page with the most kills.
 
     python parse_uthgard_drops.py"""
 import html, json, re, sys
+import paths as _paths
 from pathlib import Path
 from assets_pipeline import ROOT
 
-PD = ROOT / 'external/old_project/development-source/research/period-data'
+PD = _paths.PERIOD_DATA
 sys.path.insert(0, str(PD))
 from read_archive import records                         # noqa: E402
 

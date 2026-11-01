@@ -86,7 +86,7 @@ This is the single place for everything learned while bringing DAoC's world into
 ## Paths and tools
 
 - **Project:** `DAOC HIATUS/OFFLINE DAOC MMOENGINE GODOT`.
-- **Client (read-only source):** `DAOC HIATUS/new class test - CLAUDE VERSION/runtime/client-opendaoc/app`.
+- **Client (read-only source):** the DAoC client's `app` folder (`DAOC_CLIENT`, pipeline/paths.py).
 - **Pipeline (`pipeline/`):**
   - `daoc_mpk.py`: MPAK reader, written fresh.
   - `netimmerse.py` + `spec/nif.xml`: NIF reader that interprets the NifTools spec.
@@ -487,7 +487,7 @@ DAoC scatters billboard clutter that is **not** in fixtures. This is the "little
 **Owner rule:** "anything that a player can climb up without jumping in the original client should be viable here", copied from the client's own logic so the full-world import needs no per-spot testing. First case: the Mag Mell castle platform ledge (16606,4358), 0.26 m = 10.4 units. It is part of the "Outer Wall" model (houtwall), whose collision mesh includes the platform edge, so my old controller (walls first) blocked it.
 
 **How it was found:**
-- Tools and recipe: `new class test - CLAUDE VERSION/CLIENT REVERSE ENGINEERING NOTES.md` (capstone, pefile, fixed image base 0x400000).
+- Tools and recipe: the server tree's `CLIENT REVERSE ENGINEERING NOTES.md` (capstone, pefile, fixed image base 0x400000).
 - Scripts are in `pipeline/client_re/`: re_xref.py (string xrefs, function dump with float constants), re_refs.py (refs to an address), re_callers.py (call sites), re_full.py (full .text disassembly, ~1.3 M lines, 8 s).
 - Path: the string `gspFigureCollisionGroup` → its global → the functions using it → the callback they install → the movement function.
 

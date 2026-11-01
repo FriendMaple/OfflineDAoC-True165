@@ -15,15 +15,16 @@ Writes godot/content/crafting/recipes.json. Reads the server database read-only.
     python pipeline/build_recipes.py
 """
 import collections
+import paths as _paths
 import csv
 import json
 import sqlite3
 from pathlib import Path
 
 TOP = Path(__file__).resolve().parent.parent
-SERVER = TOP.parent / 'new class test - CLAUDE VERSION'
-DB = SERVER / 'runtime/data/opendaoc.sqlite3.db'
-TDL = SERVER / 'development-source/research/period-data/client-1.64/ifd/tdl.irf'
+SERVER = _paths.SERVER
+DB = _paths.WORLD_DB
+TDL = _paths.PERIOD_DATA / 'client-1.64/ifd/tdl.irf'
 OUT = TOP / 'godot/content/crafting/recipes.json'
 
 # eCraftingSkill (GameServer/craft/CraftingMgr.cs) and the names the server gives them (languages/EN/Crafting.txt)

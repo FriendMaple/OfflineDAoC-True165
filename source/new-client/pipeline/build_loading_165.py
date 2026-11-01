@@ -4,18 +4,19 @@ standing-stones character screen, as the original client shows them in True 1.65
 
     python build_loading_165.py
 
-Reads (both from the original-client chat's local work):
-  1.65 MODE CLIENT (local only)/work/loading165.dat   region -> pictures, 1.127 loading.dat format: [regionNNN]
+Reads (both from the original-client chat's local work; folders set in pipeline/paths.py):
+  <TRUE165_WORK>/work/loading165.dat   region -> pictures, 1.127 loading.dat format: [regionNNN]
         screenNN=archive://data/loading/alb1.mpk:alb0 (regions the 1.64 file lists use its pictures, dungeon instances
         keep pictures that exist in 1.64, post-1.65 regions have none - screens=0)
-  1.64 real client/DAoC 1.64.zip                      data/loading/*.mpk, phousing/data/loading/housing.mpk
+  <DAOC_164_ZIP> (DAoC 1.64.zip)                      data/loading/*.mpk, phousing/data/loading/housing.mpk
         (800 x 600 8-bit TGAs)
-  1.65 MODE CLIENT (local only)/work/pregame/stones164_plate.png   the 1.64 charman Main.tga (standing stones) with its
+  <TRUE165_WORK>/work/pregame/stones164_plate.png   the 1.64 charman Main.tga (standing stones) with its
         baked-in labels inpainted, centred on a 2:1 plate
 Writes godot/content/ui/loading165/<archive>_<name>.png, godot/content/ui/loading165/loading165.json
 {"regions": {region id: [picture, ...]}} and godot/content/pregame/stones164_plate.png.
 """
 import io, json, re, shutil, sys, tempfile, zipfile
+import paths as _paths
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -24,8 +25,8 @@ from assets_pipeline import ROOT
 from daoc_mpk import read_mpk
 from PIL import Image
 
-WORK = ROOT.parent / '1.65 MODE CLIENT (local only)/work'
-ZIP164 = ROOT.parent / '1.64 real client/DAoC 1.64.zip'
+WORK = _paths.TRUE165_WORK / 'work'
+ZIP164 = _paths.ZIP_164
 OUT = ROOT / 'godot/content/ui/loading165'
 
 

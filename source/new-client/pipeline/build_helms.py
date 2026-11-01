@@ -12,6 +12,7 @@ Writes godot/content/helms/<nif>/model.gltf, textures in godot/content/helms/tex
 godot/content/helms/helms.json {model: {figure prefix: {file, hair, scale}}}.
 """
 import csv
+import paths as _paths
 import io
 import json
 import sqlite3
@@ -28,7 +29,7 @@ import nif_static
 
 OUT = ROOT / 'godot/content/helms'
 FIG_TEX = ROOT / 'godot/content/characters/fig3_textures/original'
-DB = ROOT.parent / 'new class test - CLAUDE VERSION/runtime/data/opendaoc.sqlite3.db'
+DB = _paths.WORLD_DB
 PREFIXES = ['bri', 'ava', 'hig', 'sar', 'inc', 'nor', 'tro', 'dwa', 'kob', 'val', 'cel', 'fir', 'elf', 'lur', 'syl']
 # objects.csv Nif1 .. Nif12 are the realm's races in this order - the client picks the column by the wearer's race and
 # gender, whatever the NIF is named (owner 2026-10-19: Albion hats missing - Briton women's NIFs are "albHelm01_brit_f",

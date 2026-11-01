@@ -30,13 +30,14 @@ xp_n x living(level) below the cap and xp_n / 1.1 x living(cap) from it (QuestEn
 Writes the steps in godot/content/quests/quests.json and pipeline/data/quest_xp_report.json.
     python build_quest_xp.py         (build_quests.py runs it too)"""
 import json, re, sqlite3
+import paths as _paths
 from pathlib import Path
 from assets_pipeline import ROOT
 
 HERE = Path(__file__).resolve().parent
 QUESTS = ROOT / 'godot/content/quests/quests.json'
 RULES = ROOT / 'godot/content/rules/rules.json'
-SPECS = ROOT / 'external/old_project/development-source/research/period-data/quests/specs'
+SPECS = _paths.PERIOD_DATA / 'quests/specs'
 OLD_XP = SPECS.parent / 'xp_table.json'
 REPORT = HERE / 'data/quest_xp_report.json'
 INDEX = HERE / 'data/period_index.sqlite'

@@ -1,5 +1,5 @@
 """True 1.65 Mode (LOCAL ONLY - not on GitHub): the roadside inns' scenery, copied 1:1 from the original-client chat's
-layouts (DAOC HIATUS/1.65 MODE CLIENT (local only)/layouts/inn_*.json - the fixture rows it writes into the original
+layouts (<TRUE165_WORK>/layouts/inn_*.json, pipeline/paths.py - the fixture rows it writes into the original
 client's zone archives). The server's inn NPCs, props and horn click target stand on these spots.
 
 Writes content/zones/zoneNNN/inns_165.json ({models, fixtures} in zone.json's own format, model indexes local to the
@@ -11,6 +11,7 @@ Re-run whenever the layouts change:
     python build_inns_165.py
 """
 import json, sys
+import paths as _paths
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -32,7 +33,7 @@ def _lightdef():
 
 
 LIGHTDEF = _lightdef()
-LAYOUTS = ROOT.parent / '1.65 MODE CLIENT (local only)' / 'layouts'
+LAYOUTS = _paths.TRUE165_WORK / 'layouts'
 M = nif_static.UNITS_TO_METRES
 
 

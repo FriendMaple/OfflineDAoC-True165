@@ -3,7 +3,7 @@
 Flesh (9461) hand glows the period client never had; 673 of the 4,046 shared rows differ in glows, sounds, cast
 animations or hit / bolt / pulse effects).
 
-Sources (DAOC HIATUS\\1.64 real client\\DAoC 1.64.zip, gamedata via 1.65 MODE CLIENT (local only)\\work\\164):
+Sources (DAoC 1.64.zip at DAOC_164_ZIP, its gamedata.mpk extracted under TRUE165_WORK/work/164 - pipeline/paths.py):
    gamedata spells.csv / speffects.csv / spnifs.csv - the same columns as build_spell_fx.py reads (spells.csv 0 ID, 1 Name,
    3-5 Anim1-3, 6-7 hand glows, 8-9 cast effects, 10 Projectile, 11 Target, 12 Buildup, 13 Pulse, 14 Sound Set, 15 Radius,
    16 Resist; 1.64 has no Projectile Lag column). anims.csv: the casting columns carry the same names in both clients
@@ -19,6 +19,7 @@ Writes godot/content/spells/spell_fx_165.json: {"effects": {client effect: {...}
 later table in True 1.65 Mode (a client effect the 1.64 table lacks - a later-only server spell - keeps the later row).
     python build_spell_fx_164.py"""
 import csv, io, json, sys, zipfile
+import paths as _paths
 from pathlib import Path
 from assets_pipeline import CLIENT, ROOT
 from daoc_mpk import read_mpk
@@ -27,8 +28,8 @@ from build_races import cast_clip
 from texture_index import TextureIndex
 import build_monsters
 
-ZIP = ROOT.parent / '1.64 real client' / 'DAoC 1.64.zip'
-GAMEDATA = ROOT.parent / '1.65 MODE CLIENT (local only)' / 'work' / '164' / 'gamedata.mpk'
+ZIP = _paths.ZIP_164
+GAMEDATA = _paths.TRUE165_WORK / 'work' / '164' / 'gamedata.mpk'
 OUT = ROOT / 'godot/content/spells/spell_fx_165.json'
 EFX164 = build_monsters.OUT / 'effects164'
 FX_BASE = 100000

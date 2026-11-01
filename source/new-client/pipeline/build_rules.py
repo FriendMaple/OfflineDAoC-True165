@@ -5,15 +5,15 @@ implements the rules itself (game/combat/*.gd). Every value is listed with where
 
     python build_rules.py      -> godot/content/rules/rules.json"""
 import json, re, sqlite3, sys
+import paths as _paths
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from assets_pipeline import ROOT
 
-OLD = ROOT / 'external/old_project'
-SRC = OLD / 'development-source/server/GameServer'
-DB = OLD / 'runtime/data/opendaoc.sqlite3.db'
+SRC = _paths.GAMESERVER
+DB = _paths.WORLD_DB
 OUT = ROOT / 'godot/content/rules/rules.json'
 BASE = ['Acolyte', 'AlbionRogue', 'Disciple', 'Elementalist', 'Fighter', 'Mage', 'Magician', 'Forester', 'Guardian',
         'Naturalist', 'Stalker', 'MidgardRogue', 'Mystic', 'Seer', 'Viking']   # ids from Enums/eCharacterClass.cs

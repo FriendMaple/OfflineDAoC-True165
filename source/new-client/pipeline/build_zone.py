@@ -20,6 +20,7 @@ Fixtures come from dat<id>.mpk, the zone's own table; later patch tables (csv<id
 SI portals, which the clean 1.65 world leaves out. Re-running only redoes textures whose source changed.
 """
 import argparse, configparser, csv, io, json, re, shutil, subprocess, sys, tempfile
+import paths as _paths
 from pathlib import Path
 import numpy as np
 from PIL import Image
@@ -255,7 +256,7 @@ def _upscale_one(src, tmp):
 # Owner 2026-10-09: they become real world objects in the zone data, not tied to any server code, game-wide.
 # Read-only, as data. Untargetable prop NPCs (Mob rows with the CANTTARGET flag whose model is a prop) go the same way;
 # in Lough Derg those are all creatures/controllers (ambient rats, pixies, flies, siabra), so none qualify there.
-OLD_DB = ROOT / 'external/old_project/runtime/data/opendaoc.sqlite3.db'
+OLD_DB = _paths.WORLD_DB
 
 
 def object_effects(g, objects, region):

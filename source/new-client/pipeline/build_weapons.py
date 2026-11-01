@@ -11,6 +11,7 @@ x4plus at 4x (owner: weapons get the 4x pass like players and armour).
 Writes godot/content/weapons/<nif>/model.gltf, textures in godot/content/weapons/textures/{original,x4plus} and
 godot/content/weapons/weapons.json {model id: {nif, file, belt, stance, left, back_offset}}."""
 import csv, io, json, sys
+import paths as _paths
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -100,7 +101,7 @@ def main():
         # 0.36c: every weapon / shield / instrument the shared server's items and NPCs can show (ItemTemplate,
         # ItemUnique - ROG, quest rewards, crafted - and NPCEquipment), read only
         import sqlite3
-        db = ROOT.parent / 'new class test - CLAUDE VERSION/runtime/data/opendaoc.sqlite3.db'
+        db = _paths.WORLD_DB
         con = sqlite3.connect(db.as_uri() + '?mode=ro', uri=True)
         kinds = '(' + ','.join(str(t) for t in list(range(1, 32)) + [42, 45]) + ')'
         for table in ('ItemTemplate', 'ItemUnique'):

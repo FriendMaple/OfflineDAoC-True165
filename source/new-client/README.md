@@ -58,10 +58,25 @@ changes, fighters facing away), `death_log.txt` and Godot's `logs/`.
 
 ## The content pipeline
 
-The pipeline needs Python 3.10+ (`pipeline/requirements-full.txt`), Real-ESRGAN for the 4x texture upscale
-(`realesrgan-ncnn-vulkan.exe` with its `models` folder, under `tools/realesrgan/`) and the original DAoC client's files
-(set `DAOC_CLIENT` to the client's folder). Each `build_*.py` script says at its top what it builds and how to run it.
-A full rebuild takes many hours.
+The pipeline needs Python 3.10+ (`pipeline/requirements-full.txt`) and Real-ESRGAN for the 4x texture upscale
+(`realesrgan-ncnn-vulkan.exe` with its `models` folder, under `tools/realesrgan/`). Each `build_*.py` script says at its
+top what it builds and how to run it. A full rebuild takes many hours.
+
+Every input from outside this folder is set in one place, `pipeline/paths.py`, by environment variable (a script that
+needs a missing one stops and says which):
+
+| Variable | What | Default |
+|---|---|---|
+| `DAOC_CLIENT` | the DAoC client's files (the 1.127-era client's `app` folder) | none in the repository - set it |
+| `OFFLINEDAOC_SERVER` | the True 1.65 server's tree (its source and runtime) | this repository's root |
+| `OFFLINEDAOC_WORLD_DB` | the True 1.65 world database | `<server>/runtime/data/opendaoc-165.sqlite3.db` (the repository has it compressed under `database/`) |
+| `PERIOD_DATA` | the period data archive (Allakhazam / Uthgard / Warcry pages) | not in the repository - set it |
+| `DAOC_164_ZIP` | the real 1.64 client, `DAoC 1.64.zip` | not in the repository - set it |
+| `TRUE165_WORK` | the 1.65 layouts and extracts (inn layouts, loading pictures) | not in the repository - set it |
+
+The database-built data the True 1.65 game reads while playing (classes, spells, styles, abilities for the tooltips;
+`content/items/model_slots.json`) is built from the True 1.65 world database; the rest of the database-built content
+(items, quests, loot, NPC lists, monster spells) is only used by the client's offline test mode.
 
 The True 1.65 pieces come from the real 1.64 client (`DAoC 1.64.zip`): the classic figures (`build_classic_races.py`,
 `build_classic_armor.py`), the pregame art (`build_pregame_164.py`), and the spell table (`build_spell_fx_164.py` - the

@@ -14,6 +14,7 @@ Merges into godot/content/quests/quests.json:
   items: {id: item (build_items fields + icon)}, missing_items: [...]
 Points (markers, search areas, spawns, custom places) are resolved to {zone, pos [x, y, z] metres}."""
 import json, re, sqlite3, sys
+import paths as _paths
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -22,9 +23,8 @@ from assets_pipeline import ROOT
 from build_zone import zone_section, zone_of
 from build_items import FIELDS, object_icons, global_icon, DB
 
-OLD = ROOT / 'external/old_project'
-CLASSIC = OLD / 'runtime/server/classic-quests.json'
-GUIDES = OLD / 'runtime/server/classic-quest-guides.json'
+CLASSIC = _paths.SERVER_RUNTIME / 'classic-quests.json'
+GUIDES = _paths.SERVER_RUNTIME / 'classic-quest-guides.json'
 OUT = ROOT / 'godot/content/quests/quests.json'
 M = 0.025
 # owner rulings: quests left out (2026-10-09: no period source anywhere - not on Allakhazam, Wayback or Warcry)
@@ -169,7 +169,7 @@ def main():
             out['chat'][name] = classic['Chat'][name]
     # every item the quests hand out, take or drop
     icons = object_icons()
-    pq = OLD / 'development-source/research/period-data/quests'
+    pq = _paths.PERIOD_DATA / 'quests'
     period_rewards = {r['Id_nb']: r for r in json.loads((pq / 'reward_item_rows.json').read_text(encoding='utf-8'))} \
         if (pq / 'reward_item_rows.json').exists() else {}
     period_report = json.loads((pq / 'reward_items_report.json').read_text(encoding='utf-8')).get('built', {}) \

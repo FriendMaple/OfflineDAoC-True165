@@ -17,8 +17,9 @@ from PIL import Image, ImageEnhance, ImageFilter, ImageDraw
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
-CLIENT = Path(os.environ.get('DAOC_CLIENT', str(Path(__file__).resolve().parent.parent / 'external/old_project/runtime/client-opendaoc/app')))
 sys.path.insert(0, str(HERE))
+import paths as _paths
+CLIENT = _paths.CLIENT                                  # the DAoC client's files: DAOC_CLIENT (pipeline/paths.py)
 from daoc_mpk import read_mpk
 
 KINDS = {

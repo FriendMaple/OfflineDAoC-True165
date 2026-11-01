@@ -9,6 +9,7 @@ states: normal grey, hover gold, white, pressed red) with each row's name, and t
     python build_pregame_164.py
 """
 import io, json, sys, zipfile
+import paths as _paths
 from pathlib import Path
 from PIL import Image
 
@@ -17,7 +18,7 @@ sys.path.insert(0, str(HERE))
 from assets_pipeline import ROOT
 from daoc_mpk import read_mpk
 
-ZIP = ROOT.parent / '1.64 real client' / 'DAoC 1.64.zip'
+ZIP = _paths.ZIP_164
 OUT = ROOT / 'godot/content/ui/pregame164'
 
 # charbut.tga: 4 states across (97 px), 51 rows down (23 px) - the names read off the sheet, top to bottom

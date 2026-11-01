@@ -6,7 +6,7 @@ own `<ZONE> LEDGER.md`. Improve this file whenever a zone teaches something new.
 
 ## Ground rules
 1. **1.65 only.** Nothing added after patch 1.65 (UI, items, classes, races, quests, monsters).
-2. **Authoritative base: the old OfflineDAoC project** (`new class test - CLAUDE VERSION`): its database and
+2. **Authoritative base: the old OfflineDAoC project** (the server's tree, `OFFLINEDAOC_SERVER` in pipeline/paths.py): its database and
    `runtime/server/classic-quests.json` hold the vetted classic quests, quest NPCs and monsters built from period
    data. Monster stats, levels, abilities, models: take them from there; never invent them.
 3. **Fill its known gaps from period data only**: quest reward items + stats, missing / broken dialogue, bad quest

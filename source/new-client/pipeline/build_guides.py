@@ -8,10 +8,11 @@ Merges into godot/content/quests/quests.json "guides".
 
     python build_guides.py"""
 import json, re
+import paths as _paths
 from assets_pipeline import ROOT
 from build_zone import zone_name
 
-PD = ROOT / 'external/old_project/development-source/research/period-data'
+PD = _paths.PERIOD_DATA
 QUESTS = ROOT / 'godot/content/quests/quests.json'
 STAND_IN = 'No Allakhazam walkthrough was found'
 CLASS_NAMES = {}                                          # class id -> name (godot/content classes)

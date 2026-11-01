@@ -13,15 +13,15 @@ A charge / proc's spell is the existing spell of the same function and damage ty
     python build_reward_items.py      -> pipeline/data/reward_item_rows.json + reward_items_report.json
 (build_quests.py reads them; then rebuild the quests: build_quests.py --zone=N for the zones.)"""
 import json, re, sqlite3
+import paths as _paths
 from collections import defaultdict
 from pathlib import Path
 from assets_pipeline import ROOT
 
 HERE = Path(__file__).resolve().parent
 INDEX = HERE / 'data/period_index.sqlite'
-OLD = ROOT / 'external/old_project'
-DB = OLD / 'runtime/data/opendaoc.sqlite3.db'
-NEED = OLD / 'development-source/research/period-data/quests/reward_items_needed.json'
+DB = _paths.WORLD_DB
+NEED = _paths.PERIOD_DATA / 'quests/reward_items_needed.json'
 QUESTS = ROOT / 'godot/content/quests/quests.json'
 CLASSES = ROOT / 'godot/content/classes/classes.json'
 _cls = json.loads(CLASSES.read_text(encoding='utf-8'))

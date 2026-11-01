@@ -12,12 +12,13 @@ section 3, patch_classic_warmap_client.py / build_classic_warmap_textures.py):
     relic_symbol).
 Writes godot/content/ui/warmap/warmap.json and the textures as png.   python build_warmap.py"""
 import json, re, sqlite3
+import paths as _paths
 from pathlib import Path
 from PIL import Image
 from assets_pipeline import CLIENT, ROOT
 
 OUT = ROOT / 'godot/content/ui/warmap'
-DB = ROOT / 'external/old_project/runtime/data/opendaoc.sqlite3.db'
+DB = _paths.WORLD_DB
 PAGES = {'alb': ('realmwar_alb.xml', 'albmap.tga', 1), 'mid': ('realmwar_mid.xml', 'midmap.tga', 100),
          'hib': ('realmwar_hib.xml', 'hibmap2.tga', 200)}
 TILE_ZONES = {'alb': (11, 15, 12, 14), 'mid': (112, 111, 115, 113), 'hib': (211, 214, 212, 210)}

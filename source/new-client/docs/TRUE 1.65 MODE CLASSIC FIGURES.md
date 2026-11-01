@@ -5,7 +5,7 @@ Scratch extracts it names (scratchpad gd\, gd164\, z164\) are temporary; the csv
 
 I've worked out how the original client builds, dresses and animates the classic race figures, and written it up below as a spec you can implement from. I mostly worked from the 1.64 client's `game.dll`, whose code is simpler; the SI-era `game.dll` still has the same suffix tables. A few points are marked **[inferred]** or **[verify]** where I didn't trace the code all the way.
 
-**Paths used below.** `CLIENT` = `...\OFFLINE DAOC MMOENGINE GODOT\external\old_project\runtime\client-opendaoc\app`. The working copies referred to below were extracted into a temporary folder (any scratch folder will do):
+**Paths used below.** `CLIENT` = the DAoC client's app folder (`DAOC_CLIENT`, pipeline/paths.py). The working copies referred to below were extracted into a temporary folder (any scratch folder will do):
 - `gd\` holds every SI-era gamedata csv.
 - `gd164\` holds the 1.64 csvs.
 - `z164\game.dll` and `z164\fig\HCeltM.NIF` are extracted from `DAoC 1.64.zip`.

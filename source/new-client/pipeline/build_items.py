@@ -23,6 +23,7 @@ number (sheet base + index), the same numbering the quickbar uses for spells and
 Writes godot/content/items/items.json and the sheets to godot/content/ui/icons/{original,x4plus} (UI art = x4plus
 4x, one file at a time)."""
 import csv, io, json, sys
+import paths as _paths
 from pathlib import Path
 import sqlite3
 from PIL import Image
@@ -33,7 +34,7 @@ from assets_pipeline import CLIENT, ROOT
 from build_pregame import BASE_IDS
 import daoc_mpk
 
-DB = ROOT / 'external/old_project/runtime/data/opendaoc.sqlite3.db'
+DB = _paths.WORLD_DB
 OUT = ROOT / 'godot/content/items'
 ICON_OUT = ROOT / 'godot/content/ui/icons'
 SHEETS = {0: 'SPL_0', 100: 'SPL_100', 200: 'SPL_200', 300: 'SPL_300', 400: 'SPL_400', 500: 'CBT_500',
@@ -45,7 +46,7 @@ LATER = {'Personal_Bind_Recall_Stone', 'Bead_Of_Regeneration', 'plain_mauler_fis
 FIELDS = ['Name', 'Level', 'Durability', 'MaxDurability', 'Condition', 'MaxCondition', 'Quality', 'DPS_AF', 'SPD_ABS',
           'Hand', 'Type_Damage', 'Object_Type', 'Item_Type', 'Color', 'Weight', 'Model', 'Extension', 'Price',
           'Realm', 'IsDropable', 'IsTradable', 'MaxCount', 'PackSize', 'Bonus', 'AllowedClasses'] +          [f'Bonus{i}' for i in range(1, 11)] + [f'Bonus{i}Type' for i in range(1, 11)]
-ENUMS = ROOT / 'external/old_project/development-source/server/GameServer/Enums'
+ENUMS = _paths.GAMESERVER / 'Enums'
 
 
 def bonus_names():

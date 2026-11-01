@@ -11,15 +11,15 @@ and the old project's custom Sluaghbinder.
     python build_classes.py
 Writes godot/content/classes/{classes,specs,spells,styles,abilities}.json."""
 import json, re, sqlite3, sys
+import paths as _paths
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from assets_pipeline import ROOT
 
-OLD = ROOT / 'external/old_project'
-SRC = OLD / 'development-source/server/GameServer'
-DB = OLD / 'runtime/data/opendaoc.sqlite3.db'
+SRC = _paths.GAMESERVER
+DB = _paths.WORLD_DB
 OUT = ROOT / 'godot/content/classes'
 
 BASE = ['Fighter', 'AlbionRogue', 'Acolyte', 'Elementalist', 'Mage', 'Viking', 'MidgardRogue', 'Mystic', 'Seer',
@@ -204,7 +204,7 @@ def main():
         st['animation_2h'] = int(row2[3]) if row2 and row2[3].strip().isdigit() else st['animation']
         st['trail'], st['trail_2h'] = style_trail(row), style_trail(row2 or row)
     # profession (guild) names in English: PlayerClass.Profession.PathofHarmony -> "Path of Harmony"
-    langs = sorted((OLD / 'development-source/server').rglob('languages/EN/PlayerClasses.txt'))
+    langs = sorted(_paths.SERVER_SOURCE.rglob('languages/EN/PlayerClasses.txt'))
     prof = {}
     if langs:
         for line in langs[0].read_text(encoding='utf-8', errors='ignore').splitlines():

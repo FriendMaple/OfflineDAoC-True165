@@ -9,15 +9,16 @@ audit_class_fx.py: a spells.csv row in spell_fx.json, every piece's NIF converte
                                                      Galladoria TuscarianGlacier)
 """
 import json, re, sqlite3, sys
+import paths as _paths
 from collections import defaultdict
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 GODOT = ROOT / 'godot'
-SERVER = ROOT.parent / 'new class test - CLAUDE VERSION'
+SERVER = _paths.SERVER
 SCRIPTS = SERVER / 'development-source/server/GameServer/scripts/namedmobs'
-DB = SERVER / 'runtime/data/opendaoc.sqlite3.db'
+DB = _paths.WORLD_DB
 AREAS = sys.argv[1:] or ['Dragons', 'DarknessFalls', 'SummonersHall', 'CaerSidi', 'Galladoria', 'TuscarianGlacier']
 
 fx = json.loads((GODOT / 'content/spells/spell_fx.json').read_text(encoding='utf-8'))

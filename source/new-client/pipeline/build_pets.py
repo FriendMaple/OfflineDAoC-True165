@@ -9,6 +9,7 @@ Writes content/classes/pets.json:
 Equipment: a template's Inventory without ':' names NPCEquipment templates (one picked); with ':' it is the legacy
 inline list "slot:model|model;..." (GameNPC.LoadTemplate HandleInventory) - both resolved here."""
 import json, sqlite3, sys
+import paths as _paths
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -16,7 +17,7 @@ sys.path.insert(0, str(HERE))
 from assets_pipeline import ROOT
 import build_npcs
 
-DB = ROOT / 'external/old_project/runtime/data/opendaoc.sqlite3.db'
+DB = _paths.WORLD_DB
 SPELLS = ROOT / 'godot/content/classes/spells.json'
 OUT = ROOT / 'godot/content/classes/pets.json'
 SUMMONS = ('SummonDruidPet', 'SummonUnderhill', 'SummonHunterPet', 'SummonSpiritFighter', 'SummonSimulacrum',

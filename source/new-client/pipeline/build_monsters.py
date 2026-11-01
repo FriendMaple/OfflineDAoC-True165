@@ -13,6 +13,7 @@ monnifs figure + skin combination: content/monsters/<figure>__<skin>/model.gltf.
     python build_monsters.py --models=1207,1235    # listed model numbers (the flight mounts build_routes.py names)
 Writes content/monsters/monsters.json: {model number: {figure, gltf, scale, strides, clips, race prefix or null}}."""
 import csv, io, json, re, sys
+import paths as _paths
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -24,7 +25,7 @@ import nif_character as nc
 from texture_index import TextureIndex
 
 OUT = ROOT / 'godot/content/monsters'
-DB = ROOT / 'external/old_project/runtime/data/opendaoc.sqlite3.db'
+DB = _paths.WORLD_DB
 SKIN_COLS = ['Body', 'Head', 'Arms', 'Gloves', 'LBody', 'Legs', 'Boots', 'Cloak', 'Helm']
 CLIPS = {'Idle': 'idle', 'Walk': 'walk', 'Run': 'run', 'Back': 'walk_back', 'Crawl': 'swim', 'Jump': 'jump',
          'Land': 'land', 'Slide Left': 'strafe_left', 'Slide Right': 'strafe_right'}

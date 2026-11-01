@@ -7,12 +7,13 @@ animation in style_anims.json and the clip on the race figures.
     python pipeline/audit_class_fx.py 63          (class id; 63 = Sluaghbinder)
 """
 import json, os, sqlite3, sys
+import paths as _paths
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 GODOT = ROOT / 'godot'
-DB = ROOT.parent / 'new class test - CLAUDE VERSION/runtime/data/opendaoc.sqlite3.db'
+DB = _paths.WORLD_DB
 
 cls = int(sys.argv[1]) if len(sys.argv) > 1 else 63
 con = sqlite3.connect(f'file:{DB}?mode=ro', uri=True)

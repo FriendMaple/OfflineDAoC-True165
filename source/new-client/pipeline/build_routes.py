@@ -5,9 +5,9 @@ godot/content/world/routes.json.
 
     python build_routes.py"""
 import json, sqlite3
+import paths as _paths
 from assets_pipeline import ROOT
-OLD = ROOT / 'external/old_project'
-DB = OLD / 'runtime/data/opendaoc.sqlite3.db'
+DB = _paths.WORLD_DB
 
 
 def main():

@@ -3,24 +3,25 @@
 The game is a client of the old server, so character creation must offer exactly what that server accepts: its
 classes (not 1.65 "ways" - the old client picked the class itself), each class's races, its three stats (the server
 checks the 30 creation points against them) and the classes the server has switched off (ServerProperty
-disabled_classes). Read from the old server's own source and database:
-  external/old_project/development-source/server/GameServer/playerclasses/*/Class*.cs
-  external/old_project/development-source/server/GameServer/Enums/eCharacterClass.cs, GlobalConstants.cs
-  ../new class test - CLAUDE VERSION/runtime/data/opendaoc.sqlite3.db - the shared server's database, read only
+disabled_classes). Read from the server's own source and database (pipeline/paths.py):
+  <server source>/GameServer/playerclasses/*/Class*.cs
+  <server source>/GameServer/Enums/eCharacterClass.cs, GlobalConstants.cs
+  <world DB> (the True 1.65 database, opendaoc-165.sqlite3.db), read only
   (ServerProperty disabled_classes / disabled_races)
 Writes godot/content/rules/server_classes.json.
 
     python pipeline/build_server_classes.py
 """
 import json
+import paths as _paths
 import re
 import sqlite3
 from pathlib import Path
 
 TOP = Path(__file__).resolve().parent.parent
-GS = TOP / 'external/old_project/development-source/server/GameServer'
+GS = _paths.GAMESERVER
 OUT = TOP / 'godot/content/rules/server_classes.json'
-DB = TOP.parent / 'new class test - CLAUDE VERSION/runtime/data/opendaoc.sqlite3.db'   # the shared server (0.36 / b / c)
+DB = _paths.WORLD_DB   # the shared server (0.36 / b / c)
 
 RACES = {'Briton': 1, 'Avalonian': 2, 'Highlander': 3, 'Saracen': 4, 'Norseman': 5, 'Troll': 6, 'Dwarf': 7,
          'Kobold': 8, 'Celt': 9, 'Firbolg': 10, 'Elf': 11, 'Lurikeen': 12, 'Inconnu': 13, 'Valkyn': 14, 'Sylvan': 15,
