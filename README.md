@@ -103,8 +103,10 @@ is the result: the world database and the content files built from it.
 
 **Kept on purpose, although they aren't from 1.65:**
 - The gamebots and the bot systems.
-- The Realm Exchange, now in a small building by each inn. It sells crafted and spellcrafted gear, potions,
-  poisons, period drops and Darkness Falls items.
+- The Realm Exchange: an auction house where gamebots and players trade with each other. Bots list what they
+  craft and loot, and buy from each other's listings and yours; you can list your own items and buy theirs. Prices
+  follow what an item is worth, and unsold bot listings are repriced. Only crafted and spellcrafted gear, potions,
+  poisons, period drops and Darkness Falls items can be listed. Its brokers are in a small building by each inn.
 - Boss changes that let bots finish raids, and faster respawns for named and quest monsters.
 - Quest markers, quest objectives and the quest guide (`/questguide`).
 - Slash commands that skip the period game, such as `/tele` and `/tc`. They're kept for GM accounts only.

@@ -85,7 +85,8 @@ most of the systems below have been tested in autonomous bot runs, but not yet b
 - The **Horn of Rallying:** a level-50 player who has done its courier quest starts a PvE realm event there (a dragon,
   an epic dungeon, Summoner's Hall or Darkness Falls). PvE events never start by themselves; keep sieges and relic
   raids still do.
-- The **Realm Exchange** moved from the capitals to the inns. Valuable items ask more, within limits. Unsold bot
+- The **Realm Exchange**, the auction house where gamebots and players buy and sell to each other, moved from the
+  capitals to the inns. Valuable items ask more, within limits. Unsold bot
   listings are relisted at 90%, then 80%, then returned.
 - Couriers at levels 5 and 50 bring the inn and horn quests, with map markers. Road patrols, wandering arrow and
   poison traders, and guards complete the inns.
