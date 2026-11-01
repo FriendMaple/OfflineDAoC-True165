@@ -19,6 +19,7 @@ spell table - on a modern engine (Vulkan, high frame rates, large crowds).
 | `godot/tools/` | Content maintenance scripts run inside Godot (`pack_scenes.gd` packs converted models into `.scn` files). |
 | `pipeline/` | The Python content pipeline: it reads the original DAoC client's files (zones, NIF models, textures, sounds, interface art, game data) and writes the converted content into `godot/content`. `nif_static.py` / `nif_character.py` read NetImmerse models (`spec/nif.xml` from NifTools). |
 | `tools/build_csharp.ps1` | Builds the C# code into `godot/.godot/mono/temp/bin/Debug/MMOEngine.dll`. |
+| `tools/stage_true165_release.py` | Stages the client for a release package's `new-client\` folder (client, content, import cache, built network client, engine; no tests, developer mode, editor state or save data). |
 | `docs/` | How the world import, the classic figures, the period pregame, the spell effects and the companion protocol work, and what had to differ from 1.65 (`1.65 EXCEPTIONS MADE.txt`). |
 
 The repository holds the source only. The converted content (`godot/content`, about 37 GB) is derived from the
