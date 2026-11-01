@@ -70,6 +70,8 @@ DEFAULT KEYS (RPG preset)
   Look Down                              Num.
   Camera Reset                           Num5
   Camera Toggle                          F11
+  Mouse Look Toggle                      Right Mouse (a right click on open ground: on; the next right click
+                                         or Esc: off. Right-click NPCs and objects still uses them.)
 [Chat]
   Chat                                   -
   Reply                                  R

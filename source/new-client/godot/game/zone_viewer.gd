@@ -746,7 +746,8 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
 			_click_down = true
-			_click_from = event.position
+			# (mouse look on: the cursor is hidden, so a click picks what is in the middle of the view)
+			_click_from = get_viewport().get_visible_rect().size * 0.5 if player and player.mouse_look else event.position
 			_click_moved = 0.0
 			_click_placed = get_viewport().gui_is_dragging()    # this click puts down what the pointer holds
 		elif _click_down:
@@ -782,7 +783,10 @@ func _input(event: InputEvent) -> void:
 			_rclick_moved = 0.0
 		elif _rclick_down:
 			_rclick_down = false
-			if _rclick_moved < 6.0 and get_viewport().gui_get_hovered_control() == null:
+			if _rclick_moved < 6.0 and player and player.mouse_look:
+				player.set_mouse_look(false)                     # Mouse Look Toggle: the second right click
+			elif _rclick_moved < 6.0 and get_viewport().gui_get_hovered_control() == null:
+				var hit := true
 				var rn: Npc = npcs.pick(player.camera, _rclick_from)
 				if rn:
 					npcs.select(rn)
@@ -790,11 +794,15 @@ func _input(event: InputEvent) -> void:
 					npcs.interact(rn)
 				elif npcs is ServerWorld and (npcs as ServerWorld).use_object(player.camera, _rclick_from):
 					pass                                         # a relic taken up, loot picked up (a grave: targeted)
-				elif companions:
-					var rb: Node3D = WorldLink.pick_bot(player.camera, _rclick_from)
+				else:
+					hit = false
+					var rb: Node3D = WorldLink.pick_bot(player.camera, _rclick_from) if companions else null
 					if rb and bool(rb.get("companion")):       # your companion: its window (gear, training, tactics, stance)
+						hit = true
 						WorldLink.target_bot(rb)
 						companions.manage(int(rb.get("bot_id")))
+				if not hit and player and player.mouse_look_on_right():
+					player.set_mouse_look(true)                  # Mouse Look Toggle: a right click on open ground
 	elif event is InputEventMouseMotion and (_click_down or _rclick_down):
 		_click_moved += event.relative.length() if _click_down else 0.0
 		_rclick_moved += event.relative.length() if _rclick_down else 0.0
