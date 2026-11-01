@@ -1,7 +1,7 @@
-# True 1.65 Mode traveler's-inn hire window: server protocol (local only, not for GitHub until the owner says)
+# True 1.65 Mode traveler's-inn hire window: server protocol
 
-From the server chat, 2026-10-30 (server build mode-165 2786ef0). One shared protocol for the original client and the
-new client. Not built in the new client yet.
+Agreed between the server and the client, 2026-10-30 (server build mode-165 2786ef0). One shared protocol for the original client and the
+new client. Built in the new client: `godot/game/companions/` (`companion_net.gd`, the `srv_*_window.gd` windows).
 
 ## Server -> client
 

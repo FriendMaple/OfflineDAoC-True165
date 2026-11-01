@@ -213,7 +213,7 @@ func _sound_effect(d: Dictionary) -> void:
 ## True 1.65 Mode: the Horn of Rallying's call when someone starts a realm event with it (owner 2026-10-30, a client
 ## sound - the server says so with op 23 "The horn sounds across the land! ..." to the sounder). cc_sounds 219
 ## RelicTaken_Hibernia, the swelling low horn the keep alarm uses, on that line only - as the original client plays it
-## (original-client chat 2026-10-30: the same sound and trigger in both clients). Once per call.
+## (original client 2026-10-30: the same sound and trigger in both clients). Once per call.
 const HORN_SOUND := 219
 var _horn_called_at := -100000
 
@@ -705,7 +705,7 @@ func _move(d: Dictionary) -> void:
 		PlayerData.pet_changed.emit()
 
 
-## Death position log (server chat 2026-10-30, owner: a dead companion's / gamebot's body shows farther away than where it
+## Death position log (2026-10-30, owner: a dead companion's / gamebot's body shows farther away than where it
 ## died): for a character figure (a gamebot, a companion), the last update before its death (position, speed,
 ## destination), where its body is drawn when it dies, and every update for 15 s after - user://death_log.txt (the
 ## packet's own zone units next to the drawn place, so the server's log can be matched).
@@ -1000,7 +1000,7 @@ func _physics_body(delta: float) -> void:
 	_seat_riders()
 
 
-## A living standing in a fight turns to its target, as the original client turned fighters itself (server chat
+## A living standing in a fight turns to its target, as the original client turned fighters itself (server protocol
 ## 2026-10-31: the server turns an NPC once when its attack starts; a gamebot that then steps to a flank / behind spot
 ## kept its walk-in heading - owner: "bots are facing away from their targets and meleeing"). Within 30 m, turned
 ## smoothly; the server's own heading still comes with every update.
@@ -1753,7 +1753,7 @@ func _add_object(d: Dictionary) -> void:
 	add_child(holder)
 	holder.add_child(m)
 	if is_horn(String(d.name)):                                    # (its model lies hidden inside the horn scenery in
-		m.visible = false                                          # the original client - original-client chat)
+		m.visible = false                                          # the original client)
 	var g := ground_at(p)
 	if g > -INF and absf(g - p.y) < 4.0:
 		p.y = maxf(p.y, g)
@@ -1823,7 +1823,7 @@ func click_object(cam: Camera3D, screen_pos: Vector2) -> bool:
 	return true
 
 
-## A right click on a ground object (2026-10-30, owner / server chat: "right-clicking a relic never triggers a pickup
+## A right click on a ground object (2026-10-30, owner report: "right-clicking a relic never triggers a pickup
 ## request"): targeted and used at once - a relic taken up (GameRelic.Interact -> TryPickup: the interact request, as
 ## the Get Item key sends for one), loot picked up; a gravestone only targeted (for /pray). True when the click hit one.
 func use_object(cam: Camera3D, screen_pos: Vector2) -> bool:
@@ -1998,12 +1998,12 @@ func _pet_window(d: Dictionary) -> void:
 
 const RELIC_MODELS := [630, 631, 632, 633, 634, 635]     # objects.csv: the six realm relics
 # ground objects that are used, not picked up (the interact request, as a relic): the Horn of Rallying on each inn's
-# horn platform (objects.csv 3545 "Relic Warhorn", True 1.65 Mode - server chat 2026-10-30: right-click opens its window)
+# horn platform (objects.csv 3545 "Relic Warhorn", True 1.65 Mode - server protocol, 2026-10-30: right-click opens its window)
 const USE_MODELS := [3545]
 
 
 ## True 1.65 Mode: the Horn of Rallying's click target. The horn you see is the zone's scenery (ZoneLoader._add_inn_165,
-## R_NHorn.nif at 328 %); the server's object on it is only what you click (original-client chat 2026-10-30: model 211
+## R_NHorn.nif at 328 %); the server's object on it is only what you click (original client 2026-10-30: model 211
 ## now, was 3545) - known by its name, so a ground item with the same model is still picked up.
 static func is_horn(object_name: String) -> bool:
 	return object_name.to_lower().begins_with("horn of rallying")
@@ -2153,7 +2153,7 @@ func _seat_riders() -> void:
 		var rider: NpcState = by_oid.get(r)
 		var steed: NpcState = by_oid.get(_riders[r])
 		# (a Riding packet a moment ahead of the rider's or the horse's own create - a hired companion boarding your
-		# stable route, server chat 2026-10-30: horse, rider, then Riding, re-sent after re-creates): held 5 s
+		# stable route, server protocol, 2026-10-30: horse, rider, then Riding, re-sent after re-creates): held 5 s
 		if (rider == null or steed == null) and now - int(_ride_since.get(r, 0)) < 5000:
 			continue
 		if rider == null or steed == null:

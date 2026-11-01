@@ -45,7 +45,7 @@ func build() -> void:
 	_guide.pressed.connect(func():
 		if Server.active:                                  # the server's QUEST GUIDE: /questguide (each click the next
 			Server.command("/questguide")                  # page, then the next active quest - QuestGuide.cs; /task is
-		                                                   # the period task command again - server chat 2026-10-31)
+		                                                   # the period task command again - server protocol, 2026-10-31)
 		else:
 			guide_requested.emit(selected))
 	add_child(_guide)

@@ -140,7 +140,7 @@ static func summary(it: Dictionary) -> Array:
 	var pack_line := ("%d PER PURCHASE" % pack) if pack > 1 else ""
 	if ot == 43 or ot == 44:
 		# arrows / bolts, as the original client builds them from the merchant list itself (game.dll 0x440E7E,
-		# original-client chat 2026-10-30): the count, the damage type, the weight, and the three grades in SPD_ABS -
+		# original client 2026-10-30): the count, the damage type, the weight, and the three grades in SPD_ABS -
 		# damage bits 0-1, range 2-3, accuracy 4-5 (the server's AttackComponent: -15% / normal / +15% / +25%)
 		var n := int(it.get("count", 0)) if int(it.get("count", 0)) > 0 else pack
 		var word := ("BOLT" if ot == 44 else "ARROW") + ("S" if n != 1 else "")

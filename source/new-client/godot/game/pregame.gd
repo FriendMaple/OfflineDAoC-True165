@@ -725,8 +725,8 @@ func _load_realm_scene() -> void:
 	_env.ambient_light_energy = light[1]
 
 
-## True 1.65 Mode (LOCAL ONLY): the 1.64 standing stones behind the windows and the character, in place of the realm's
-## 3D keep scene - as the original client shows it there (original-client chat 2026-10-30: the 1.64 charman Main.tga,
+## True 1.65 Mode: the 1.64 standing stones behind the windows and the character, in place of the realm's
+## 3D keep scene - as the original client shows it there (original client 2026-10-30: the 1.64 charman Main.tga,
 ## its PLAY / OPTIONS / QUIT / Delete Character labels inpainted, centred on a 2:1 plate; pipeline/build_loading_165.py).
 ## Drawn as the 3D view's background (a canvas layer under it), full height, the plate's dark sides past 4:3.
 var _stones: CanvasLayer

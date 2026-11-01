@@ -1,6 +1,6 @@
 class_name SrvHornWindow
 extends ClassicWindow
-## True 1.65 Mode (LOCAL ONLY): the Horn of Rallying's window (owner 2026-10-30: "the HORN WINDOW built in both
+## True 1.65 Mode: the Horn of Rallying's window (owner 2026-10-30: "the HORN WINDOW built in both
 ## clients"), from the server's DebugMode 0x21 'H' ops 20 - 23 (CompanionNet.horn). The Horn Handler opens it once its
 ## level-50 quest is turned in. Each PvE event of your realm the horn can start: its name, the server's status line,
 ## its state - READY, UNDERWAY, a boss respawning or the event cooling down (with the time left), UNAVAILABLE - the
@@ -35,7 +35,7 @@ func build() -> void:
 	_list.add_theme_constant_override("separation", 2)
 	sc.add_child(_list)
 	_message = CompanionUi.text(self, "", Vector2(14, SIZE.y - 36), Vector2(SIZE.x - 28 - 130, 24), 8, UiArt.CREAM, true)
-	# REFRESH and CLOSE, as the original client's horn window has them (original-client chat 2026-10-30)
+	# REFRESH and CLOSE, as the original client's horn window has them (original client 2026-10-30)
 	CompanionUi.button(self, "Refresh", Vector2(SIZE.x - 12 - 124, SIZE.y - 34), Vector2(60, 16), func():
 		_poll = 0.0
 		net.horn_command("list"), 8)

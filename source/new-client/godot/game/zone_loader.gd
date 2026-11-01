@@ -543,8 +543,8 @@ func set_light_level(level: float) -> void:
 
 # ---------------------------------------------------------------- fixtures
 
-## True 1.65 Mode (LOCAL ONLY): the roadside inn's scenery - its building, yard props, the horn platform and the Horn of
-## Rallying lying on it - from inns_165.json (pipeline/build_inns_165.py: the original-client chat's layouts, the same
+## True 1.65 Mode: the roadside inn's scenery - its building, yard props, the horn platform and the Horn of
+## Rallying lying on it - from inns_165.json (pipeline/build_inns_165.py: the original-client layouts, the same
 ## fixture rows the original client gets). Added to this zone's models and fixtures in that mode only; a fixture with
 ## the ground flag stands on the terrain under it (the client's ground follow), the horn on its own height.
 func _add_inn_165() -> void:
@@ -563,7 +563,7 @@ func _add_inn_165() -> void:
 		if not info.has("lights"):
 			info["lights"] = []
 		info.lights.append_array(inn.lights)
-	# the roads to the inn, the horn and the exchange (painted into the ground by the original-client chat): the ground
+	# the roads to the inn, the horn and the exchange (painted into the ground in the inn layouts): the ground
 	# blend patches they change, and the distance ground with those tiles
 	if info.get("ground_splat") and not (inn.get("splat_patches", {}) as Dictionary).is_empty():
 		for k in inn.splat_patches:

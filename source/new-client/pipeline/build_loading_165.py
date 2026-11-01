@@ -1,10 +1,9 @@
-"""True 1.65 Mode (LOCAL ONLY - not for GitHub until the owner says): the real 1.64 loading pictures and the 1.64
-standing-stones character screen, as the original client shows them in True 1.65 Mode (original-client chat
-2026-10-30; owner: "add the 1.64 loading screens and standing stones too").
+"""True 1.65 Mode: the real 1.64 loading pictures and the 1.64
+standing-stones character screen, as the original client shows them in True 1.65 Mode (2026-10-30; owner: "add the 1.64 loading screens and standing stones too").
 
     python build_loading_165.py
 
-Reads (both from the original-client chat's local work; folders set in pipeline/paths.py):
+Reads (both from the True 1.65 work folder, TRUE165_WORK; folders set in pipeline/paths.py):
   <TRUE165_WORK>/work/loading165.dat   region -> pictures, 1.127 loading.dat format: [regionNNN]
         screenNN=archive://data/loading/alb1.mpk:alb0 (regions the 1.64 file lists use its pictures, dungeon instances
         keep pictures that exist in 1.64, post-1.65 regions have none - screens=0)

@@ -1,5 +1,5 @@
 extends Node3D
-## Offline, True 1.65 Mode classic figures (LOCAL ONLY): one race's looks side by side, by the server's model id - the
+## Offline, True 1.65 Mode classic figures: one race's looks side by side, by the server's model id - the
 ## hire window's face / hair picker (owner 2026-10-30: the preview never changed). Head-and-shoulders shot.
 ##   Godot --path godot --screen 1 res://tests/classic_faces_probe.tscn -- --race=bri_m --models=32,471,473,14,257
 ##       --out=<png prefix>

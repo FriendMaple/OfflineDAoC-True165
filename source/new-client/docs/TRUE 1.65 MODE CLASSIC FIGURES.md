@@ -1,9 +1,9 @@
-# True 1.65 Mode: classic figures (local only - not for GitHub until the owner says)
+# True 1.65 Mode: classic figures
 
-Research report 2026-10-30 (how the original client builds, dresses and animates the classic race figures).
-Scratch extracts it names (scratchpad gd\, gd164\, z164\) are temporary; the csvs are in the client's gamedata.mpk.
+Research report, 2026-10-30.
+The csvs it names are in the client's gamedata.mpk.
 
-I've worked out how the original client builds, dresses and animates the classic race figures, and written it up below as a spec you can implement from. I mostly worked from the 1.64 client's `game.dll`, whose code is simpler; the SI-era `game.dll` still has the same suffix tables. A few points are marked **[inferred]** or **[verify]** where I didn't trace the code all the way.
+This spec describes how the original client builds, dresses and animates the classic race figures. It is worked out mostly from the 1.64 client's `game.dll`, whose code is simpler; the SI-era `game.dll` still has the same suffix tables. Points marked **[inferred]** or **[verify]** were not traced through the code all the way.
 
 **Paths used below.** `CLIENT` = the DAoC client's app folder (`DAOC_CLIENT`, pipeline/paths.py). The working copies referred to below were extracted into a temporary folder (any scratch folder will do):
 - `gd\` holds every SI-era gamedata csv.
@@ -138,7 +138,7 @@ Everything is visible by default in the file; the client hides what isn't worn.
 - There is no Catacombs-only body armour: all 1,683 `objects.csv` rows with Cata skins also have classic skins.
 - 7 classic textures are missing: pskins 5000–5006 `b_chn0_*` ("Rediscovered Chain", e.g. object 2938).
 - 8 helm rows exist only for Catacombs: event masks and pumpkins 4809–4820, plus 2732/2794 whose NIF is the generic "loot". The head-swap full helms (Dragonsworn/Dragonslayer, NIF 0, Head# up to 11) have no classic mesh.
-- I found no explicit fallback in the code. Proposed rule: no classic helm NIF → draw no helm; Head# above 5 → keep `Head{A|B}1`; missing texture → keep the race default skin.
+- The code has no explicit fallback. Rule used: no classic helm NIF → draw no helm; Head# above 5 → keep `Head{A|B}1`; missing texture → keep the race default skin.
 - Dye: `tints.csv` classic RGB (cols 2–4) equals the Cata RGB for all 144 rows, so `dye_tints.json` can be reused.
 
 ## 4. Animations

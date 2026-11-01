@@ -14,8 +14,8 @@ var _tips: Array = []
 var _tip_time := 0.0
 
 
-## True 1.65 Mode (LOCAL ONLY): the real 1.64 loading pictures of the region (pipeline/build_loading_165.py from the
-## original-client chat's loading165.dat), full height at their own 4:3, as the original client shows them there;
+## True 1.65 Mode: the real 1.64 loading pictures of the region (pipeline/build_loading_165.py from the
+## original client's loading165.dat), full height at their own 4:3, as the original client shows them there;
 ## a region without 1.64 pictures keeps the box art. "" when there is none.
 static func picture_165(region: int) -> String:
 	if Server.world_mode != "1.65" or region < 0:

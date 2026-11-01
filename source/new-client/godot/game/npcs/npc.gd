@@ -992,8 +992,8 @@ var _cast_clips := ["cast_start", "cast_mid", "cast_end"]
 
 
 ## An emote clip (emotes.csv id) when its figure has one (player-race NPCs: build_races.py 'emote_<id>').
-## 0xF0 / 0xF1 are no emotes but a held state - a gamebot or companion sitting to rest (True 1.65 Mode; server chat /
-## original-client chat 2026-10-30): sit_down once, sit_idle held until 0xF1, then stand_up. The server sends 0xF0 again
+## 0xF0 / 0xF1 are no emotes but a held state - a gamebot or companion sitting to rest (True 1.65 Mode; server protocol /
+## original-client research 2026-10-30): sit_down once, sit_idle held until 0xF1, then stand_up. The server sends 0xF0 again
 ## right after the bot comes into view seated, and 0xF1 before a seated bot moves or fights.
 const EMOTE_SIT := 0xF0
 const EMOTE_STAND := 0xF1

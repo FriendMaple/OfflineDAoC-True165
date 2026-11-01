@@ -1,10 +1,10 @@
 class_name ClassicFigure
 extends Fig3Figure
-## True 1.65 Mode (LOCAL ONLY - not for GitHub until the owner says): a player-race figure drawn as the original client
+## True 1.65 Mode: a player-race figure drawn as the original client
 ## draws it with its figure version set to Classic (the 1.65 profile: user.dat [character_version] 0). Built by
 ## pipeline/build_classic_races.py (content/characters/classic/<prefix>, the same prefixes as the Catacombs figures) and
 ## dressed from pipeline/build_classic_armor.py (content/characters/classic_armor.json). Spec: TRUE 1.65 MODE CLASSIC
-## FIGURES (local only).md. Fig3Figure.make() gives one of these in True 1.65 Mode; every caller keeps Fig3Figure's
+## FIGURES.md. Fig3Figure.make() gives one of these in True 1.65 Mode; every caller keeps Fig3Figure's
 ## public face (load_figure, apply, set_armor, set_helm, hood_up, cloak_hidden, helm_hidden, cloak_emblem, anim, play).
 ##
 ## The figure: one NIF per race and gender with every part variant (Body1..5 + the cloak-cut Body1b..5b, Arms1..6,
@@ -18,7 +18,7 @@ const NODE_OF := {"body": "Body", "arms": "Arms", "gloves": "Gloves", "lbody": "
 static var _classic_armor := {}
 ## Short / Average / Tall (the period creation page; a player's model bits 11-12; a hired companion's HEIGHT): drawn
 ## as the NPC Size byte 48 / 50 / 52 would be (size / 50, as every NPC), so a companion the server sends that Size is
-## exactly as tall as a player of the same race and height (server chat 2026-10-31). The 1.64 game.dll's own player
+## exactly as tall as a player of the same race and height (server protocol, 2026-10-31). The 1.64 game.dll's own player
 ## scale is not known; the Catacombs figures used +-5%.
 const HEIGHT_SIZE := {1: 48, 2: 50, 3: 52}
 
@@ -75,7 +75,7 @@ static func classic_texture_keys(meta: Dictionary, look: Dictionary, parts: Dict
 
 
 ## The monsters.csv row a look stands for (figure.json looks): a character's own face + hair style through
-## fig3tofigmain, as the original client maps its customize screen onto the classic figure (original-client chat
+## fig3tofigmain, as the original client maps its customize screen onto the classic figure (original client
 ## 2026-10-30: [character_version]=0 keeps the face / hair / colour pickers), else the server's model id when it is one
 ## of the race's rows (NPCs, other players), else the race's first row.
 static func look_row(meta: Dictionary, look: Dictionary) -> Dictionary:
@@ -138,7 +138,7 @@ func load_figure(prefix: String, texture_set := "x4plus") -> bool:
 		meta = {}
 		return false
 	# the customize screen's pickers stay the Catacombs ones (the original client with [character_version]=0 keeps the
-	# face / hair style / hair colour / eye / skin pickers and maps them onto the classic figure - original-client chat
+	# face / hair style / hair colour / eye / skin pickers and maps them onto the classic figure - original client
 	# 2026-10-30): the race's Catacombs option lists, on this figure's own copy of the shared meta
 	var cata := CharacterFactory.figure_meta(prefix)
 	if not cata.is_empty():

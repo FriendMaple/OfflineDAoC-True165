@@ -1,6 +1,6 @@
 class_name SrvCompanionWindow
 extends ClassicWindow
-## True 1.65 Mode (LOCAL ONLY): one hired companion's window, from the server's messages (CompanionNet, plan 17h).
+## True 1.65 Mode: one hired companion's window, from the server's messages (CompanionNet, plan 17h).
 ##   GEAR   its worn items on a paper doll and its bag - 10 slots, no weight limit (op 7; owner 2026-10-30). Drag an item from your backpack onto a slot to put it on
 ##          (/companionui equip, or swap when the slot is taken), right-click or double-click one to take it back
 ##          (unequip). REPAIR repairs it all at a smith (the server asks the price first).
@@ -164,7 +164,7 @@ func _refresh_gear() -> void:
 			cell.position = Vector2(x * 100.0, y * 32.0)
 			cell.size = Vector2(96, 30)
 			_doll.add_child(cell)
-	# the bag: its 10 slots (the companion's backpack 40 - 49, server chat 2026-10-30), each a drop target
+	# the bag: its 10 slots (the companion's backpack 40 - 49, server protocol, 2026-10-30), each a drop target
 	_clear(_bag)
 	var used := 0
 	for s in range(BAG_FIRST, BAG_FIRST + BAG_SLOTS):
@@ -331,7 +331,7 @@ func _refresh_spec() -> void:
 	if _preview_line < 0 and not lines.is_empty() and lines[0] is Dictionary:
 		_preview_line = int(lines[0].index)
 	_clear(_preview_list)
-	# kind 4: a BASELINE spell (server chat 2026-10-31) - it comes with the companion's level, not its trained points,
+	# kind 4: a BASELINE spell (server protocol, 2026-10-31) - it comes with the companion's level, not its trained points,
 	# drawn in its own cool grey (owner: "clear what each spec line actually unlocks"), never the dim of "not reached"
 	var kinds := {1: "STYLE", 2: "SPELL", 3: "ABILITY", 4: "BASELINE"}
 	var cur := -1

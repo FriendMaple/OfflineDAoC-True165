@@ -3,8 +3,7 @@ extends Control
 ## True 1.65 Mode: the period 1.64 pregame (owner 2026-10-31: "figure out what the period 1.65 realm selection,
 ## character select screen, creation screen, play buttons, etc. actually looked like ... replace the current ones";
 ## PERIOD PREGAME PLAN.md). The real 1.64 client's own art (pipeline/build_pregame_164.py -> content/ui/pregame164) at
-## the places its game.dll puts it (1.65 MODE CLIENT\work\164\pregame-layout\1.64 PREGAME LAYOUT.txt, the retired
-## original-client chat): Choose Your Realm -> the standing stones (8 slots, PLAY / OPTIONS / QUIT / Delete Character,
+## the places its game.dll puts it (read from the 1.64 game.dll and login.dll - docs/PERIOD PREGAME PLAN.md): Choose Your Realm -> the standing stones (8 slots, PLAY / OPTIONS / QUIT / Delete Character,
 ## the selected character on the stones) -> one creation page (name + Generate, race, base class, sex, hair colour,
 ## face, height, Points Left + the 8 attributes, a help box, the figure with its face close-up) -> the summary page.
 ## Everything sits in the 800 x 600 art space, scaled to the window; the art fills the sides blurred (no black bars).

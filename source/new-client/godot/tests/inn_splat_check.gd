@@ -1,5 +1,5 @@
 extends Node
-## Offline, True 1.65 Mode (LOCAL ONLY): prints which ground-blend weight maps and distance ground the loaded zone uses
+## Offline, True 1.65 Mode: prints which ground-blend weight maps and distance ground the loaded zone uses
 ## for the inn road patches (ZoneLoader._add_inn_165), and how many inn fixtures / lights it added.
 func _ready() -> void:
 	await get_tree().create_timer(3.0).timeout

@@ -327,7 +327,7 @@ func _to_game(c: Dictionary, realm: String) -> Dictionary:
 	lk["model"] = int(c.get("model", 0))                # (the classic figures' look: ClassicFigure.look_row)
 	if world_mode == "1.65":
 		# the server's own record wins: the model without its height bits (11-12, the period creation page's Short /
-		# Average / Tall) and the HairColor byte as the index into the look's hair.csv set (server chat 2026-10-31:
+		# Average / Tall) and the HairColor byte as the index into the look's hair.csv set (server protocol, 2026-10-31:
 		# player hair colour lives only there, never in the model word); no Catacombs face / hair to map instead
 		lk["model"] = int(c.get("model", 0)) & 0x7FF
 		lk["hair_index"] = int(c.get("hair_color", 0)) & 15
@@ -439,8 +439,8 @@ const BASE_STATS_FROM := {"FIGH": "Armsman", "ELEM": "Wizard", "ACOL": "Cleric",
 		"GROV": "Animist"}
 
 
-## True 1.65 Mode's base classes as the original client's creation screen shows them (original-client chat
-## 2026-10-30, content/classes/base_classes_165.json - LOCAL ONLY, not for GitHub): class id, realm, name, the races
+## True 1.65 Mode's base classes as the original client's creation screen shows them (original client
+## 2026-10-30, content/classes/base_classes_165.json): class id, realm, name, the races
 ## the server lets start as it (its base-class EligibleRaces; Acolyte without Inconnu) and the 1.64 summary text with
 ## the race wording taken out. {} when the file is missing.
 var _base_table := {}
@@ -525,7 +525,7 @@ func check_name(n: String) -> void:
 ## three stats (+10 each - CharacterStatValidator), the figure look kept here (the server stores face bytes only).
 ## stats_in: the player's own attributes from the period creation page (STR DEX CON QUI INT PIE EMP CHA, the server's
 ## CharacterStatValidator: all 30 points spent), else the old auto fill; height: 1 short, 2 average, 3 tall (the
-## CreationModel's bits 11-12, server chat 2026-10-31), 0 none; want_slot: the slot clicked (else the first free).
+## CreationModel's bits 11-12, server protocol, 2026-10-31), 0 none; want_slot: the slot clicked (else the first free).
 ## 8 slots per realm (owner 2026-10-31, the period manual).
 const SLOTS_PER_REALM := 8
 
@@ -1032,7 +1032,7 @@ signal skills_changed
 ## VariousUpdate 3 (info.craft_skill / craft_title).
 var craft_skills := {}
 signal craft_changed
-## The group's companion stance (server chat 2026-10-30, both modes): /aggressive or /defensive for the whole group, the
+## The group's companion stance (server protocol, 2026-10-30, both modes): /aggressive or /defensive for the whole group, the
 ## server's DebugMode 'H' op 30 on every change ([4] 1 defensive / 0 aggressive). Not saved: aggressive at login.
 var companion_defensive := false
 signal stance_changed
@@ -1284,7 +1284,7 @@ func bot_dots() -> PackedVector3Array:
 ## quests 4 - BountyMapMarkers / ReputationMapMarkers / SluaghbinderQuestMapMarkers / ClassicQuests) in the zone you
 ## are in, as the map's red step marks.
 const QUEST_MARKERS := 0xFFFE0000
-## True 1.65 Mode's turn-in markers (server chat 2026-10-31, owner: "do the quest markers show where the turn in is?"):
+## True 1.65 Mode's turn-in markers (server protocol, 2026-10-31, owner: "do the quest markers show where the turn in is?"):
 ## 0xFFFD0001 the traveler's inn's innkeeper ("The Traveler's Inn"), 0xFFFD0002 its Horn Handler ("The Horn of
 ## Rallying") - green, as a turn-in; sent per player while the quest is open, removed at the turn-in.
 const TURNIN_MARKERS := 0xFFFD0000

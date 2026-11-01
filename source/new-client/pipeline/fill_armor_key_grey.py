@@ -5,7 +5,7 @@ grey (129, 127, 129). Our figures' glove and boot meshes reach into that filler 
 of the glove's vertices), and lit it shows as pale, near-white patches. The filler is replaced by the nearest painted
 colour of the same texture - in the client's own pictures (original) and the upscaled ones (x4plus, the same mask at
 4x) - so any part of the mesh on it shows the item's own leather / cloth / metal. The tattoo decals (cel_f_tattoo_*),
-where grey is the see-through decal background, are left alone. Backups next to the scratchpad run; run
+where grey is the see-through decal background, are left alone. Keep a backup before running it; run
 godot/tools/compress_textures.gd on fig3_textures/x4plus afterwards for the block-compressed copies.
 
     python pipeline/fill_armor_key_grey.py [--backup=<dir>]

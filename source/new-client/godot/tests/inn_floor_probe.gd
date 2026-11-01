@@ -1,5 +1,5 @@
 extends Node
-## Offline, True 1.65 Mode (LOCAL ONLY): the drawn floors at the inn doors and paths (owner 2026-10-30: an adventurer
+## Offline, True 1.65 Mode: the drawn floors at the inn doors and paths (owner 2026-10-30: an adventurer
 ## sank into the floor at the Albion inn entrance). For each point (zone units x, y, the layout's / server's z):
 ## the terrain, every floor hit straight down from 10 m above, and what NpcManager.floor_at gives from the server's Z.
 ##   Godot --path godot --screen 1 res://game/zone_viewer.tscn -- --zone=9 --world-mode=1.65 --no-npcs --mute

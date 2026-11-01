@@ -1,4 +1,4 @@
-# Never in the repository (GitHub chat rules 2026-10-31): converted game content, Godot caches and exports,
+# Never in the repository (project rules): converted game content, Godot caches and exports,
 # developer flags, user data.
 godot/content/
 godot/.godot/

@@ -6,7 +6,7 @@ does the new client. Two lists, one per world mode (the launcher's --world-mode)
           ones its MakeProduct handler (0xED) looks up; the 1.64 file's ids only partly match them (alchemy, siege and
           some metal / wood ids hold other products there);
   1.65:   the 1.64 client's own recipe file (research/period-data/client-1.64/ifd/tdl.irf, 8,574 recipes) - 1.65 Mode
-          imports it, ids and all (server chat 2026-10-30).
+          imports it, ids and all (server protocol, 2026-10-30).
 Each recipe: id, product name, the base product it is a tier of (the window's tree: trade > product > material tier),
 item level, recipe skill level, product model (its icon), ingredients [[name, count], ...]. Grouped per realm
 (1 Albion, 2 Midgard, 3 Hibernia) and trade (eCraftingSkill id).

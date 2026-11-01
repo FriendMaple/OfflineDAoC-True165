@@ -1,7 +1,7 @@
 class_name CompanionNet
 extends Node
-## True 1.65 Mode hired companions, as the server tells them (LOCAL ONLY - not for GitHub until the owner says): the
-## DebugMode 0x21 'H' messages of plan section 17g / 17h ("TRUE 1.65 MODE HIRE WINDOW PROTOCOL (local only).md"), read
+## True 1.65 Mode hired companions, as the server tells them: the
+## DebugMode 0x21 'H' messages of plan section 17g / 17h ("TRUE 1.65 MODE HIRE WINDOW PROTOCOL.md"), read
 ## into one place for the hire window (SrvHireWindow) and each companion's window (SrvCompanionWindow). The same server
 ## logic drives the original client (its native trainer / vault windows) - nothing here decides anything: every button
 ## is a /companionui command and the server answers with fresh messages.
@@ -68,7 +68,7 @@ func handle(body: PackedByteArray) -> void:
 			slots.open = body[6]
 			slots.next = body[7]
 			if not _own_preview:                      # (once a login: the server stands no preview figure in the world for
-				_own_preview = true                   # us - the hire window draws its own; server chat 2026-10-30)
+				_own_preview = true                   # us - the hire window draws its own; server protocol, 2026-10-30)
 				command("ownpreview")
 			opened.emit(mode)
 		2:
@@ -80,7 +80,7 @@ func handle(body: PackedByteArray) -> void:
 				hire = {"race": body[5], "gender": body[6], "class": body[7], "face": body[8], "faces": body[9],
 						"hair": body[10], "hairs": body[11], "hair_color": body[12], "colors": body[13],
 						"model": _u16(body, 14), "cost": _u32(body, 16), "enabled": body[20] != 0,
-						# HEIGHT (owner 2026-10-31, server chat): [21] 1 short / 2 average / 3 tall, [22] its count (3)
+						# HEIGHT (owner 2026-10-31; server protocol): [21] 1 short / 2 average / 3 tall, [22] its count (3)
 						"height": body[21] if body.size() > 22 and body[22] == 3 else 2,
 						"heights": body[22] if body.size() > 22 else 0}
 			else:

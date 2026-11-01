@@ -1,4 +1,4 @@
-"""True 1.65 Mode (LOCAL ONLY - not on GitHub): the roadside inns' scenery, copied 1:1 from the original-client chat's
+"""True 1.65 Mode: the roadside inns' scenery, copied 1:1 from the original-client
 layouts (<TRUE165_WORK>/layouts/inn_*.json, pipeline/paths.py - the fixture rows it writes into the original
 client's zone archives). The server's inn NPCs, props and horn click target stand on these spots.
 
@@ -55,7 +55,7 @@ def source_bytes(nif_file, zone_id, src_zone):
 
 
 def roads(zone_id, out, tex_names):
-    """The inn roads the original-client chat painted into its overlay copies of the zone's ter / lod archives
+    """The inn roads the inn layouts painted into overlay copies of the zone's ter / lod archives
     (layouts/inn_roads_<realm>.json): the ground-blend patches they change, as weight maps of their own
     (splat/inn165_patch_XX_YY_wN.png, the zone.json ground_splat format), and the baked distance ground (lod.png /
     x4plus) with the changed tiles - ZoneLoader swaps both in, in True 1.65 Mode only."""

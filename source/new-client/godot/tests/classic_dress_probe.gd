@@ -1,5 +1,5 @@
 extends Node3D
-## Offline (no server), True 1.65 Mode classic figures (LOCAL ONLY): eight races in classic gear - plate + full helm +
+## Offline (no server), True 1.65 Mode classic figures: eight races in classic gear - plate + full helm +
 ## cloak + sword, a Highlander in a robe under a hooded cloak, leather / studded / scale sets with helms, a staff -
 ## shot from the front, mid-swing, casting, and from behind (cloaks).
 ##   Godot --path godot --screen 1 res://tests/classic_dress_probe.tscn -- --out=<png prefix>

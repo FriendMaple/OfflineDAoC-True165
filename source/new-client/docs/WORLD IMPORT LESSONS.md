@@ -241,13 +241,11 @@ DAoC scatters billboard clutter that is **not** in fixtures. This is the "little
 ## Performance (Lough Derg, RTX 2060, 1080p, native, shadows + SSAO + MSAA 4x)
 
 - **204 FPS average with vsync off** (165-279) after batching fixtures per 102 m map cell, with visibility ranges of 30x the object's size (160-900 m).
-- The owner's MSI G32C4W is on HDMI, which means no G-SYNC Compatible on an RTX 20 card; DisplayPort is needed.
+- On an RTX 20 card, G-SYNC Compatible needs DisplayPort; over HDMI it is not available.
 
 ## Environment lessons (Windows tooling)
 
-- Heredoc Python edits containing `\n` or backslashes get mangled. Write patch scripts to a file in the scratchpad and run them, or use the Edit tool.
 - A failed `Path.write_text` (cp1252 can't encode a character) leaves the file EMPTY. Always pass `encoding='utf-8'`.
-- `rm` of a relative glob after `cd` is blocked by a safety check. Write to a fresh output folder instead.
 
 ## Sky, weather and atmosphere (client data, next to import)
 
@@ -755,7 +753,7 @@ Large or blocky lettering (quickbar numbers, lag-meter letters, paper-doll slot 
 - **Clamped layers**: the samplers repeat, so a clamped layer must stay half a texel (at the drawn mip) inside the
   picture - clamping to 0..1 let the filter blend in the opposite edge (earth crack plates took the hot rim's row).
 - Effect sprites with alpha blend on + alpha test at threshold 0 are soft blends (not 0.05 cut-outs).
-- Re-run: pipeline/reconvert_effects.py (DAOC_CLIENT = the Claude version's client for the Sluaghbinder's custom NIFs),
+- Re-run: pipeline/reconvert_effects.py (DAOC_CLIENT = the client folder the effects are converted from),
   then pack_scenes.gd --force res://content/monsters/effects.
 
 ## NiPathController (2026-10-13)

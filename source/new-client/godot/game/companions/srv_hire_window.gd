@@ -1,6 +1,6 @@
 class_name SrvHireWindow
 extends ClassicWindow
-## True 1.65 Mode (LOCAL ONLY): the traveler's-inn innkeeper's hiring window - and the healer's, for a free REVIVE -
+## True 1.65 Mode: the traveler's-inn innkeeper's hiring window - and the healer's, for a free REVIVE -
 ## drawn from the server's messages (CompanionNet, plan 17g). Every choice is the server's: the arrows and buttons send
 ## /companionui commands and the server answers with the new page. The preview is the companion's own classic figure,
 ## from the hire page's numbers (race, gender, model).
@@ -102,7 +102,7 @@ func _refresh_roster() -> void:
 	_slots.text = line.to_upper()
 	for c in _list.get_children():
 		c.queue_free()
-	# (the server sends unused rows named "(empty)" / "(locked)" - server chat 2026-10-30; they aren't companions)
+	# (the server sends unused rows named "(empty)" / "(locked)" - server protocol, 2026-10-30; they aren't companions)
 	var rows: Array = net.roster.keys().filter(func(r): return not net.row_name(int(r)).to_lower() in ["(empty)", "(locked)"])
 	rows.sort()
 	if rows.is_empty():
@@ -113,7 +113,7 @@ func _refresh_roster() -> void:
 		_list.add_child(_row(int(r), net.roster[r]))
 
 
-## A roster row, as the original client's (original-client chat 2026-10-30 - both clients the same): name, class and
+## A roster row, as the original client's (original client 2026-10-30 - both clients the same): name, class and
 ## level, where, XP bubbles, then SUMMON / DISMISS / RELEASE / REVIVE as the server's button bits allow, each
 ## "/companionui <verb> <row>", and MANAGE ("select <row>" and that companion's window). The healer: REVIVE only.
 func _row(r: int, rec: Dictionary) -> Control:
@@ -156,7 +156,7 @@ func _build_hire(page: Control) -> void:
 	# are fixed face + hair pairs): "/companionui look- / look+", the server's "Look n of N" in text slot 4
 	# and HAIR COLOR (owner 2026-10-30: "there needs to be hair color options"): hair- / hair+, the server's
 	# "Hair colour n of N" in text slot 5 - an index into the look's hair.csv set (op 4 [12] / [13])
-	# and HEIGHT (owner 2026-10-31, server chat: a hired Bard came out taller than his own character): height- /
+	# and HEIGHT (owner 2026-10-31: a hired Bard came out taller than his own character): height- /
 	# height+, Short / Average / Tall as the period creation page (op 4 [21])
 	var rows := [[1, "RACE", "race"], [2, "CLASS", "class"], [3, "GENDER", ""], [4, "LOOK", "look"], [5, "HAIR", "hair"],
 			[-1, "HEIGHT", "height"]]

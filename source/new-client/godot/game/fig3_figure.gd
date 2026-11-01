@@ -32,7 +32,7 @@ const LOOPING := ["ladder", "idle", "walk", "run", "walk_back", "strafe_left", "
 ## (owner 2026-10-14: a bot's figure, armour textures and helm parsed on the main thread hitched 100-200 ms each
 ## when the server streamed new ones in), and the main thread keeps what they made.
 
-## True 1.65 Mode: the classic figures (ClassicFigure; LOCAL ONLY), as the original client's 1.65 profile draws every
+## True 1.65 Mode: the classic figures (ClassicFigure), as the original client's 1.65 profile draws every
 ## player race ([character_version] 0). Read once: the mode is fixed for a run (Server.world_mode, --world-mode=).
 static var _classic := -1
 

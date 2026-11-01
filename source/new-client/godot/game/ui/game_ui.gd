@@ -52,7 +52,7 @@ var clear_target := Callable()               # set by the zone viewer: drops the
 var merchant: MerchantWindow
 var vault: VaultWindow
 var craft: CraftWindow                       # the tradeskill window and the server's timer bar (owner 2026-10-30)
-var companion_net: CompanionNet              # True 1.65 Mode's hired companions (plan 17g / 17h, LOCAL ONLY)
+var companion_net: CompanionNet              # True 1.65 Mode's hired companions (plan 17g / 17h)
 var companion_hire: SrvHireWindow
 var companion_manage: SrvCompanionWindow
 var horn_window: SrvHornWindow
@@ -489,7 +489,7 @@ func _build() -> void:
 		timer_bar.visible = false
 		timer_bar.build()
 		windows["timer"] = timer_bar
-	# --- True 1.65 Mode's hired companions (LOCAL ONLY; owner 2026-10-30): the innkeeper / healer window and each
+	# --- True 1.65 Mode's hired companions (owner 2026-10-30): the innkeeper / healer window and each
 	# companion's gear / spec / stats / realm ability window, from the server's DebugMode 0x21 'H' messages
 	if Server.active and Server.world_mode == "1.65":
 		companion_net = CompanionNet.new()
