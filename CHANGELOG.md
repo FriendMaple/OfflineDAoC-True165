@@ -125,8 +125,9 @@ most of the systems below have been tested in autonomous bot runs, but not yet b
 - Camps and pulls:
   - solo bots pull from range with a bow, a throwing weapon or a spell. They move into range and line of sight
     first; if a shot is refused as out of range or not visible, they step closer and try again, and after 4 tries
-    they pull in melee. Only a shot that reaches the monster counts (a miss or a resist still does), and a monster
-    that takes no notice within 3 seconds is pulled the ordinary way;
+    they pull in melee. A shot that hits, misses or is resisted always alerts the monster, so it comes for the
+    bot (before, many ranged pulls went unnoticed). A monster that still takes no notice within 3 seconds is
+    pulled the ordinary way;
   - camps are chosen by challenge colour;
   - grey targets are a last resort;
   - outleveled camps are left alone for 30 minutes.
