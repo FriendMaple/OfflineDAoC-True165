@@ -74,3 +74,6 @@ tools/dotnet/
 # The new client's converted game content and Godot's cache (DAoC client files are never shipped)
 source/new-client/godot/content/
 source/new-client/godot/.godot/
+
+# Per-run AI timing report
+runtime/server/bot-ai-delay.json

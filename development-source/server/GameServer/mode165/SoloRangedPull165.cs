@@ -34,7 +34,14 @@ namespace DOL.GS
             public Spell Spell;
             public eActiveWeaponSlot PreviousWeapon;
             public long Until, ShotTick, NextMove, RetryAfter;
+            public int Replans;              // new firing spots looked for after the first one
+            public float RangeScale = 1f;    // shrinks after a shot the server called out of range or not visible
+            public bool Reposition;          // set by a failed shot: find a closer spot before trying again
+            public string LastFailure = "";
         }
+
+        public const int MaximumReplans = 4;
+        public const int RangeMargin = 100;   // shoot only well inside the range: the server measures it in 3D
 
         private static readonly ConditionalWeakTable<GameBot, State> States = new();
 
@@ -91,6 +98,10 @@ namespace DOL.GS
             s.FiringPoint = point;
             s.Until = now + PrepareMilliseconds;
             s.NextMove = 0;
+            s.Replans = 0;
+            s.RangeScale = 1f;
+            s.Reposition = false;
+            s.LastFailure = "";
             bot.WakeRecoveryRest();
             bot.StopAttack();
             bot.StopFollowing();
@@ -103,26 +114,40 @@ namespace DOL.GS
             return true;
         }
 
-        /// <summary>A walkable spot in range of the target with line of sight, reachable from where the bot stands.</summary>
+        /// <summary>A walkable spot in range of the target with line of sight, reachable from where the bot stands. Tries
+        /// the full range first, then closer spots (a hill or a wall in the way, owner 2026-11-01: "make them get into
+        /// valid range/move up, and make sure they have los before trying").</summary>
         private static bool TryFiringPoint(GameBot bot, GameLiving target, int range, out Vector3 point)
         {
             Vector3 origin = new(bot.X, bot.Y, bot.Z), enemy = new(target.X, target.Y, target.Z);
             point = origin;
             IPathfindingMgr nav = PathfindingProvider.Instance;
             Zone zone = bot.CurrentZone;
-            if (nav?.IsAvailable != true || zone == null || range < 1000)
+            if (nav?.IsAvailable != true || zone == null || range < 600)
                 return false;
             float distance = Vector3.Distance(origin, enemy);
-            float advance = Math.Max(0, distance - (range - 150));
-            if (advance > MaximumAdvance)
-                return false;
-            Vector3 desired = advance == 0 ? origin : Vector3.Lerp(origin, enemy, advance / distance);
-            if (!AutonomousNavigationSurface.TryFloor(nav, zone, desired, out point))
-                return false;
-            return Vector3.Distance(point, enemy) <= range - 50 &&
-                   nav.HasLineOfSight(zone, point, enemy, nav.DefaultFilters) &&
-                   (advance == 0 || AutonomousZoneItinerary.HasCompleteCorridor(nav, zone, origin, point));
+            foreach (float scale in new[] { 1f, 0.8f, 0.6f, 0.45f })
+            {
+                float standOff = Math.Max(250, range * scale - RangeMargin - 50);
+                float advance = Math.Max(0, distance - standOff);
+                if (advance > MaximumAdvance)
+                    return false;
+                Vector3 desired = advance == 0 ? origin : Vector3.Lerp(origin, enemy, advance / distance);
+                if (!AutonomousNavigationSurface.TryFloor(nav, zone, desired, out Vector3 spot))
+                    continue;
+                if (Vector3.Distance(spot, enemy) <= range - RangeMargin && HasSight(nav, zone, spot, enemy) &&
+                    (advance == 0 || AutonomousZoneItinerary.HasCompleteCorridor(nav, zone, origin, spot)))
+                {
+                    point = spot;
+                    return true;
+                }
+            }
+            return false;
         }
+
+        /// <summary>Line of sight at body height (the server checks it between the two figures, not their feet).</summary>
+        private static bool HasSight(IPathfindingMgr nav, Zone zone, Vector3 from, Vector3 to) =>
+            nav.HasLineOfSight(zone, from + new Vector3(0, 0, 60), to + new Vector3(0, 0, 50), nav.DefaultFilters);
 
         /// <summary>Called on the bot's AI turn: true while the pull holds the bot (walking to its spot, shooting, waiting).</summary>
         public static bool Hold(GameBot bot)
@@ -163,11 +188,32 @@ namespace DOL.GS
                     bot.StopMoving();
                     if (bot.IsCrowdControlled)
                         return true;
-                    int range = s.Spell?.Range ?? bot.attackComponent.AttackRange;
+                    int range = (int)((s.Spell?.Range ?? bot.attackComponent.AttackRange) * s.RangeScale);
                     IPathfindingMgr nav = PathfindingProvider.Instance;
-                    if (!bot.IsWithinRadius(target, range - 50) ||
-                        !nav.HasLineOfSight(bot.CurrentZone, new(bot.X, bot.Y, bot.Z), new(target.X, target.Y, target.Z), nav.DefaultFilters))
+                    bool inRange = bot.IsWithinRadius(target, Math.Max(200, range - RangeMargin));
+                    bool sight = HasSight(nav, bot.CurrentZone, new(bot.X, bot.Y, bot.Z), new(target.X, target.Y, target.Z));
+                    // Not in range or no line of sight from here (the monster moved, a hill, a wall, or the last shot was
+                    // refused): find a closer spot from where the bot stands and walk there before shooting.
+                    if (s.Reposition || !inRange || !sight)
+                    {
+                        s.LastFailure = s.Reposition ? s.LastFailure : !inRange ? "out of range" : "no line of sight";
+                        s.Reposition = false;
+                        if (s.Replans >= MaximumReplans)
+                        {
+                            Finish(bot, s, false, $"no firing spot ({s.LastFailure})");
+                            return false;
+                        }
+                        s.Replans++;
+                        if (!TryFiringPoint(bot, target, range, out Vector3 closer))
+                        {
+                            s.RangeScale *= 0.75f;
+                            return true;
+                        }
+                        s.FiringPoint = closer;
+                        s.NextMove = 0;
+                        s.Until = Math.Max(s.Until, now + 8000);
                         return true;
+                    }
                     bot.TargetObject = target;
                     if (s.Spell != null)
                     {
@@ -214,7 +260,17 @@ namespace DOL.GS
             // or "not allowed" doesn't: 2026-11-01 run, 310 of 521 pulls "shot" and the monster never noticed).
             if (attack.AttackResult is not (eAttackResult.HitUnstyled or eAttackResult.HitStyle or eAttackResult.Missed or
                 eAttackResult.Evaded or eAttackResult.Blocked or eAttackResult.Parried or eAttackResult.Fumbled))
+            {
+                // Refused (out of range, not visible...): stop, step closer and try again.
+                if (attack.AttackResult is eAttackResult.OutOfRange or eAttackResult.TargetNotVisible)
+                {
+                    s.Reposition = true;
+                    s.RangeScale *= 0.8f;
+                    s.LastFailure = attack.AttackResult == eAttackResult.OutOfRange ? "shot out of range" : "shot not visible";
+                    bot.StopAttack();
+                }
                 return;
+            }
             MarkShot(bot, s);
         }
 
