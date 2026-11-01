@@ -116,8 +116,9 @@ instructions. **Code > Download ZIP** on this page gives you the *source code*, 
 
 What the new client needs:
 - A 64-bit Windows 10 or 11 PC.
-- A graphics card that supports Vulkan or DirectX 12, with current drivers.
-- The disk space and memory needed are listed with the release.
+- A graphics card that supports Vulkan, with current drivers. It's developed and tested on an RTX 2060 (6 GB).
+- 16 GB RAM recommended.
+- About 40 GB of free disk space for the game content and the engine. The exact figure comes with the release.
 
 ## Good to know
 
