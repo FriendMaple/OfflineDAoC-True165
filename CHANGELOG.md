@@ -54,7 +54,10 @@ hold). Its changelog has the history of everything this version inherits.
   porch, guild banner and shield; the garden; going inside; placing, rotating and taking back furniture; hookpoints
   (vaults, bindstones, tools, house merchants); house vaults; friend permissions; paying rent by dropping coins on
   your house; and the 1.64 housing windows (External / Internal Options, Garden Placement, Friend Level Permissions,
-  Permissions List, Rotate Object). Checked offline; not yet played through on a live server.
+  Permissions List, Rotate Object). Lots, deeds and rent cost the period prices, the decorators carry their full
+  stock, stable routes run inside the housing zones, and hanging a weapon on a wall no longer leaves a copy in your
+  bag. Checked offline; not yet played through on a live server.
+- Launcher: the Stop button stops the server again (it could keep running).
 - NPCs: Half Ogre, Frostalf and Shar NPCs (about 150 of them, General Vaul among them) draw with their own classic
   figures instead of broken.
 - Companions: reviving a companion at a healer after it died while casting no longer breaks its spell effects
