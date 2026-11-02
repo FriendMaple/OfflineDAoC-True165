@@ -25,6 +25,8 @@ hold). Its changelog has the history of everything this version inherits.
 - Companions: your hired companions come with you at once when you use a teleporter or release to your bind point.
 - Items: merchant caster staves have their focus levels again (lower spell power cost), and about 470 items regain
   bonuses from their 1.65 descriptions (instrument and weapon skills, resists, staff focus).
+- Items: about 340 loot items show an icon that matches their name (a boar tusk is a tusk, raw pork is meat), from the
+  1.64 client's own item art.
 - Quests: you can still hand in quest items after outleveling a quest you already have (for example the Necromancer
   quest Inconnu Poison).
 - Companions: a companion whose bow is taken away in the middle of a pull switches back to its melee weapons.
