@@ -273,7 +273,7 @@ namespace DOL.GS
             if (hired == null)
                 return;
             string name = Record(hired.BotId)?.Name ?? "this companion";
-            player.Out.SendCustomDialog($"Release {name} for good? They leave with everything they carry and cannot be hired back.",
+            player.Out.SendCustomDialog($"Release {name} for good? They leave with everything they carry, quest and no-trade items included, and cannot be hired back.",
                 (p, response) =>
                 {
                     if (response != 0x01 || !Hired.ContainsKey(hired.BotId))

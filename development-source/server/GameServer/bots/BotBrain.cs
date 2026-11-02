@@ -632,6 +632,10 @@ namespace DOL.AI.Brain
         private long _nextAmbientChatCheckTick;
         private long _nextExchangeCheckTick;
         private long _nextMerchantServiceTick;
+        // The merchant whose visit set _nextMerchantServiceTick: the wait holds back that merchant, not the one a trip
+        // was sent to (2026-11-01 run 5: the nearest-merchant pulse failed at another merchant in town, and its wait kept
+        // the planned merchant from serving the bot until the trip gave up - 131 of 131 abandoned trips).
+        private GameMerchant _nextMerchantServiceFor;
         private long _pendingExchangeListTick;
         private DbInventoryItem _pendingExchangeItem;
         private int _pendingExchangePrice;
@@ -1890,18 +1894,48 @@ namespace DOL.AI.Brain
         /// movement side effects, cannot affect /spawn helpers, and uses only saved bot inventory
         /// and copper through AutonomousBotEconomy.
         /// </summary>
+        /// <summary>Game time of the bot's last merchant transaction (a sale, purchase, repair...): a visit still at work.</summary>
+        internal long LastMerchantActionTick { get; private set; }
+
+        /// <summary>Why the merchant service would not run for this bot right now, or null (run diagnostics).</summary>
+        internal string MerchantServiceBlock(GameMerchant merchant)
+        {
+            GameBot bot = BotBody;
+            if (bot == null) return "no body";
+            if (bot.Group != null) return "grouped";
+            if (!bot.IsAlive) return "dead";
+            if (bot.InCombat) return "in combat";
+            if (bot.IsAttacking) return "attacking";
+            if (bot.IsCasting) return "casting";
+            if (bot.IsMoving) return "moving";
+            if (GameLoop.GameLoopTime < _nextMerchantServiceTick && (merchant == null || merchant == _nextMerchantServiceFor))
+                return $"waiting {(_nextMerchantServiceTick - GameLoop.GameLoopTime) / 1000}s";
+            if (merchant != null && !merchant.IsWithinRadius(bot, GS.ServerProperties.Properties.WORLD_PICKUP_DISTANCE)) return "out of reach";
+            return null;
+        }
+
         private bool TryHandleAutonomousMerchantService(GameMerchant arrivedMerchant = null)
+        {
+            bool served = TryHandleAutonomousMerchantServiceCore(arrivedMerchant);
+            if (served)
+                LastMerchantActionTick = GameLoop.GameLoopTime;
+            return served;
+        }
+
+        private bool TryHandleAutonomousMerchantServiceCore(GameMerchant arrivedMerchant = null)
         {
             GameBot bot = BotBody;
             long now = GameLoop.GameLoopTime;
             if (bot?.IsAutonomousWorldBot != true || bot.IsTemporaryGroupHelper || bot.IsPlayerLedGroup ||
                 bot.Group != null || !bot.IsAlive || bot.InCombat || bot.IsAttacking || bot.IsCasting || bot.IsMoving ||
-                now < _nextMerchantServiceTick)
+                now < _nextMerchantServiceTick && (arrivedMerchant == null || arrivedMerchant == _nextMerchantServiceFor))
                 return false;
             // A shopping trip can start in the middle of a task, not only in the between-task errands (2026-11-01 run:
             // 188 bots reached the merchant on their plan, were never served and stood there until the 15-minute
             // watchdog): the merchant the plan names always serves the bot.
-            bool shoppingHere = arrivedMerchant != null && AutonomousWorldBotController.ShoppingPlanFor(bot)?.Merchant == arrivedMerchant;
+            bool shoppingHere = arrivedMerchant != null &&
+                                (AutonomousWorldBotController.ShoppingPlanFor(bot)?.Merchant == arrivedMerchant ||
+                                 AutonomousBotEconomy.GetNeededService(bot) == eWorldServiceKind.Shop);   // any merchant a shopping trip reaches
             if (!shoppingHere && (!AutonomousObjectiveAssignments.WantsBetweenTaskInventory(bot) ||
                                   AutonomousObjectiveAssignments.BetweenTaskServiceExpired(bot)))
                 return false;
@@ -1944,7 +1978,7 @@ namespace DOL.AI.Brain
                     : $"Paid {sealsPaid} looted seals for an item to sell; no seal upgrade left to save for");
                 AutonomousStuckWatchdog.MarkProgress(bot, eAutonomousProgressKind.Inventory);
                 AutonomousObjectiveAssignments.TryCompleteBetweenTaskServicesIfSatisfied(bot);
-                _nextMerchantServiceTick = now + 3_000;
+                _nextMerchantServiceFor = merchant; _nextMerchantServiceTick = now + 3_000;
                 return true;
             }
 
@@ -1955,7 +1989,7 @@ namespace DOL.AI.Brain
                 {
                     SetMerchantStatus(bot,$"Restocked {repairKits} siege repair kits", "Paid from saved coins; topped up to five at the current merchant");
                     AutonomousObjectiveAssignments.TryCompleteBetweenTaskServicesIfSatisfied(bot);
-                    _nextMerchantServiceTick=now+30_000;
+                    _nextMerchantServiceFor = merchant; _nextMerchantServiceTick = now+30_000;
                     return true;
                 }
             }
@@ -1971,7 +2005,7 @@ namespace DOL.AI.Brain
                     SetMerchantStatus(bot, $"Sold {trash.Name} to {merchant.Name}", $"Received {earned} saved copper from a real vendor");
                     AutonomousStuckWatchdog.MarkProgress(bot, eAutonomousProgressKind.Money);
                     AutonomousObjectiveAssignments.TryCompleteBetweenTaskServicesIfSatisfied(bot);
-                    _nextMerchantServiceTick = now + 3_000;
+                    _nextMerchantServiceFor = merchant; _nextMerchantServiceTick = now + 3_000;
                     return true;
                 }
             }
@@ -1986,7 +2020,7 @@ namespace DOL.AI.Brain
                     "The replaced equipment remains in the real inventory for appraisal");
                 AutonomousStuckWatchdog.MarkProgress(bot, eAutonomousProgressKind.Inventory);
                 AutonomousObjectiveAssignments.TryCompleteBetweenTaskServicesIfSatisfied(bot);
-                _nextMerchantServiceTick = now + 3_000;
+                _nextMerchantServiceFor = merchant; _nextMerchantServiceTick = now + 3_000;
                 return true;
             }
 
@@ -2001,7 +2035,7 @@ namespace DOL.AI.Brain
                     "No backpack item could be sold; combat gear, instruments and saved copper were kept");
                 AutonomousStuckWatchdog.MarkProgress(bot, eAutonomousProgressKind.Inventory);
                 AutonomousObjectiveAssignments.TryCompleteBetweenTaskServicesIfSatisfied(bot);
-                _nextMerchantServiceTick = now + 30_000;
+                _nextMerchantServiceFor = merchant; _nextMerchantServiceTick = now + 30_000;
                 return true;
             }
 
@@ -2018,7 +2052,7 @@ namespace DOL.AI.Brain
                 SetMerchantStatus(bot, $"Bought {purchased.Name} from {merchant.Name}", $"Spent {spent} saved copper on a legal equipment upgrade");
                 AutonomousStuckWatchdog.MarkProgress(bot, eAutonomousProgressKind.Money);
                 AutonomousObjectiveAssignments.TryCompleteBetweenTaskServicesIfSatisfied(bot);
-                _nextMerchantServiceTick = now + 30_000 + Random.Shared.Next(30_001);
+                _nextMerchantServiceFor = merchant; _nextMerchantServiceTick = now + 30_000 + Random.Shared.Next(30_001);
                 return true;
             }
 
@@ -2026,7 +2060,7 @@ namespace DOL.AI.Brain
             // for a while, or the bot would walk back and forth.
             if (service == eWorldServiceKind.Shop || plannedHere)
                 AutonomousWorldBotController.SkipShoppingAt(bot, merchant);
-            _nextMerchantServiceTick = now + 20_000 + Random.Shared.Next(20_001);
+            _nextMerchantServiceFor = merchant; _nextMerchantServiceTick = now + 20_000 + Random.Shared.Next(20_001);
             AutonomousBotEconomy.MarkEconomyChanged(bot.DatabaseID);
             return false;
         }
@@ -2606,8 +2640,27 @@ namespace DOL.AI.Brain
             // Do not leave pets until every humanoid has been processed first.
             return BotBuffReservations<GameLiving>.Choose(
                 members.Concat(BotGroupPetBuffTargets.Enumerate(BotBody, spell)),
-                target => target.IsAlive && Body.IsWithinRadius(target, range) &&
+                target => target.IsAlive && Body.IsWithinRadius(target, range) && BuffHelps(target, spell) &&
                     !LivingHasEffect(target, spell) && !(claims?.IsReserved(target, family, now) ?? false));
+        }
+
+        /// <summary>
+        /// Whether a stat buff does anything for this target's class, so a bot spends its concentration where a player
+        /// would (player report 2026-11-01: companions put strength and strength/constitution buffs on mages instead of
+        /// the tanks). Strength buffs skip pure casters; acuity buffs go only to classes that cast from a mana stat.
+        /// Pets and every other buff: always.
+        /// </summary>
+        internal static bool BuffHelps(GameLiving target, Spell spell)
+        {
+            ICharacterClass cls = target switch { GamePlayer p => p.CharacterClass, GameBot b => b.CharacterClass, _ => null };
+            if (cls == null || spell == null)
+                return true;
+            return spell.SpellType switch
+            {
+                eSpellType.StrengthBuff or eSpellType.StrengthConstitutionBuff => cls.ClassType != eClassType.ListCaster,
+                eSpellType.AcuityBuff => cls.ManaStat is not eStat.UNDEFINED,
+                _ => true,
+            };
         }
 
         private bool CastCoordinatedBuff(Spell spell, bool? queued = null)
@@ -4820,7 +4873,7 @@ namespace DOL.AI.Brain
                 case eSpellType.OffensiveProc:
                 case eSpellType.DefensiveProc:
                 case eSpellType.Bladeturn when !spell.IsPulsing:
-                    if (!LivingHasEffect(Body, spell))
+                    if (!LivingHasEffect(Body, spell) && (spell.Target != eSpellTarget.REALM || BuffHelps(Body, spell)))
                     {
                         target = Body;
                         break;
@@ -4830,7 +4883,8 @@ namespace DOL.AI.Brain
                     {
                         foreach (GameLiving groupMember in Body.Group.GetMembersInTheGroup())
                         {
-                            if (groupMember != Body && !LivingHasEffect(groupMember, spell) && Body.IsWithinRadius(groupMember, spell.Range) && groupMember.IsAlive)
+                            if (groupMember != Body && !LivingHasEffect(groupMember, spell) && Body.IsWithinRadius(groupMember, spell.Range) && groupMember.IsAlive &&
+                                (spell.Target != eSpellTarget.REALM || BuffHelps(groupMember, spell)))
                             {
                                 target = groupMember;
                                 break;
