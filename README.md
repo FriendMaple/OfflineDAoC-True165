@@ -32,16 +32,22 @@ project owner, who has no game development or coding experience, directed and pl
 
 ## Download and play
 
-**[Download v0.1](https://github.com/shadowofze/OfflineDAoC-True165/releases/latest)**, no Git or AI tools needed:
+**[Download v0.2](https://github.com/shadowofze/OfflineDAoC-True165/releases/latest)**, no Git or AI tools needed.
+**Already playing v0.1?** The same downloader updates your game in place with a small download (about 40 MB). Your
+account, characters, companions and bots stay as they are.
 
-1. On the release page, under **Assets**, download **`Download-OfflineDAoC-True165-v0.1.zip`** (just the
+1. On the release page, under **Assets**, download **`Download-OfflineDAoC-True165-v0.2.zip`** (just the
    downloader, a few KB).
 2. Put it in a folder with a short path, such as `C:\Games\OfflineDAoC`. Right-click it, choose **Extract All…**,
    and open the extracted folder.
-3. Double-click **`GET-OFFLINE-DAOC-TRUE165.cmd`**. If Windows SmartScreen appears, click **More info → Run
-   anyway**. It checks your PC, shows the download size, and installs the game into a new folder. If it stops, run
-   it again; it continues where it stopped.
-4. In the new `OfflineDAoC-True165` folder, double-click **`START OFFLINE DAOC TRUE 1.65.cmd`**. Click **START
+3. Close the game and the launcher if they're running. Then double-click **`GET-OFFLINE-DAOC-TRUE165.cmd`**. If
+   Windows SmartScreen appears, click **More info → Run anyway**. It checks your PC and asks:
+   - **1 = Update my game:** it finds your `OfflineDAoC-True165` folder (or asks you to pick it), checks it, and
+     updates it in place (about 40 MB);
+   - **2 = New install:** the complete game, into a new folder (about 31 GB).
+
+   If it stops, run it again; it continues where it stopped.
+4. In the `OfflineDAoC-True165` folder, double-click **`START OFFLINE DAOC TRUE 1.65.cmd`**. Click **START
    SERVER**, wait for **RUNNING**, then click **ENTER REALM**. Your account is created the first time.
 
 What you need:
