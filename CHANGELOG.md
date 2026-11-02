@@ -38,6 +38,8 @@ keeps your account, characters, companions, bots and settings. New players get t
 - Horses: gamebots ride horses sized for their race, as players do.
 - Merchant caster staves have their focus levels again (lower spell power cost), and about 470 items regain bonuses
   from their 1.65 descriptions (instrument and weapon skills, resists, staff focus).
+- Items: about 340 loot items show an icon that matches their name (a boar tusk is a tusk, raw pork is meat), from the
+  1.64 client's own item art.
 - Camelot: the walls around the round table area no longer show up white, and the palace's closed double door by
   Guard Eraedus is back ([#2](https://github.com/shadowofze/OfflineDAoC-True165/issues/2)).
 - Missing doors, doorways and doorsteps now show in Caer Sidi, Muspelheim, Yggdra Forest, Odin's Gate, Trollheim and
