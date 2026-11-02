@@ -81,6 +81,12 @@ keeps your account, characters, companions, bots and settings. New players get t
 - Mouse Look Toggle, as in the original client, can be switched on in Options > Controls (off by default). Once on,
   right-click on open ground to turn mouse look on (the mouse turns you with no button held), and right-click again
   or press Esc to turn it off. Right-clicking NPCs and objects still works as before, and the key can be rebound.
+- Controls: the 1.64 client's keys that did nothing now work - Follow, Stick and Face (on your target; press again
+  to stop), Camera Reset, Look Up / Look Down, Target Group #2-8, Target Friend, Target Object, Last Attacker,
+  Consider, Command Window (opens the chat line with "/"), Help (the server's command list), Chat Logging (to
+  CHAT.LOG beside the game), Toggle Names (/hidenames and /shownames too) and the Perf. Meter. The Realm War Map key
+  opens the war map too. Default keys the 1.65 key file gives an unknown modifier no longer fire on the bare key
+  (Nearest Friend took Tab from Target Enemy, Chat Logging took L from the combat window); bind those in Options.
 - Chat: Shift+Up and Shift+Down go through your last 10 sent lines, as in the original 1.64 client; Shift+Up with the
   chat line closed opens it with your last line. One minor convenience over the real 1.64 behavior: stepping past the
   newest line with Shift+Down brings back what you were typing (1.64 shows an empty line).
