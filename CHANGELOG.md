@@ -34,6 +34,9 @@ hold). Its changelog has the history of everything this version inherits.
 - Loading screens: the 1.64 client's classic loading bar and layout - the loading picture at its own size, the glass
   bar in its bottom right corner and "Loading..." beside it.
 - Loot: dropped loot shows the 1.64 client's classic bag instead of the later Catacombs one.
+- Death: one death window with the release timer, its bar (the 1.64 client's green bar art) and /RELEASE, /RELEASE
+  CITY and /RELEASE HOUSE, all inside the window - the separate Release Timer window is gone, and /RELEASE BIND (the
+  same as /RELEASE) was removed. Crafting, salvage and repair timer bars stay inside their window too.
 - Companions: reviving a companion at a healer after it died while casting no longer breaks its spell effects
   (reported as a client crash when reviving at Epona in Mag Mell).
 - NPCs: NPCs stored a little below their floor now stand on it, as the original client drew them - Gothwaite Harbor's
