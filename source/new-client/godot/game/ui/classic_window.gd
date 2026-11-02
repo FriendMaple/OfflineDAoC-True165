@@ -53,13 +53,24 @@ static func interface_alpha() -> float:
 	return _alpha
 
 
-## A new Alpha (percent) on every open window's frame.
+## A new Alpha (percent) on every open window's frame and its other backing art.
 static func set_interface_alpha(percent: float, tree: SceneTree) -> void:
 	_alpha = clampf(percent / 100.0, 0.1, 1.0)
 	for w in tree.get_nodes_in_group("classic_windows"):
-		var f: Control = (w as ClassicWindow).frame
-		if f and is_instance_valid(f):
-			f.modulate.a = _alpha
+		var cw := w as ClassicWindow
+		for f in [cw.frame] + cw.backing:
+			if f and is_instance_valid(f):
+				(f as Control).modulate.a = _alpha
+
+
+## Art inside the window that is its background too (the character panel's sheet bitmap and tab strip): it fades
+## with the frame at the interface's Alpha.
+var backing: Array = []
+
+
+func add_backing(c: Control) -> void:
+	backing.append(c)
+	c.modulate.a = interface_alpha()
 
 
 ## The right-click Alpha panel: "ALPHA: N%" between two arrows (10% a click), the same setting as Options' ALPHA;

@@ -418,6 +418,8 @@ func _build() -> void:
 	# the tab strip: control.bmp rows of 32 px = normal / hover / dimmed / selected, drawn over every sheet
 	_strip = UiArt.picture("control", Rect2(0, 0, 192, 32))
 	right_panel.add_child(_strip)
+	right_panel.add_backing(_sheet_bg)                     # (both fade with the interface's Alpha)
+	right_panel.add_backing(_strip)
 	for i in TABS.size():
 		var lit := UiArt.picture("control", Rect2(TAB_X[i], 96 + 3, TAB_W[i], 24))
 		lit.position = Vector2(TAB_X[i], 3)
