@@ -1814,7 +1814,7 @@ func _add_object(d: Dictionary) -> void:
 		return                                                     # the zone already has it (baked, with its fixes)
 		# (never a relic: it lies on its pad - a baked world object right under it)
 	var m := WeaponModels.make_world(model)
-	if m == null and model in HOUSE_USE_MODELS:
+	if m == null and model in HOUSE_USE_MODELS and _in_housing_region():
 		# housing's own ground objects only (lot markers, vaults, bindstones, tools) - not any id in the house-item
 		# range: loot whose model number is a house item there (dragon ant carapace = 1575 = a rose trellis) drew as
 		# garden furniture (owner 2026-11-02) - loot keeps the bag
@@ -1999,7 +1999,7 @@ func use_object(cam: Camera3D, screen_pos: Vector2) -> bool:
 	var holder: Node3D = objects.get(oid)
 	if holder and String(holder.get_meta("name", "")).contains("'s Grave"):
 		return true
-	if holder and int(holder.get_meta("model", 0)) in HOUSE_USE_MODELS:
+	if holder and int(holder.get_meta("model", 0)) in HOUSE_USE_MODELS and _in_housing_region():
 		if int(holder.get_meta("model", 0)) in [1489, 1491, 1493]:
 			Server.house_vault_at = Time.get_ticks_msec()        # (its window 4 is the house vault, not companion gear)
 		var r := Server.to_region(_current_zone(), player.global_position)
@@ -2180,6 +2180,13 @@ const USE_MODELS := [3545]
 # list), the house vaults (open), bindstones, tool tables; the Get Item key still picks a hookpoint item up (the owner
 # taking it back, GamePlayer.PickupObject)
 const HOUSE_USE_MODELS := [1306, 1307, 1308, 1488, 1489, 1490, 1491, 1492, 1493, 1494, 1495, 1496]
+
+
+## Housing's objects exist only in the housing regions (2 Albion, 102 Midgard, 202 Hibernia): elsewhere a ground
+## object with one of those model numbers is loot (the quest item Forge Plans is model 1495, the forge) - the bag,
+## picked up on a right click.
+func _in_housing_region() -> bool:
+	return int(Server.zone_info(_current_zone()).get("region", -1)) in [2, 102, 202]
 
 
 ## True 1.65 Mode: the Horn of Rallying's click target. The horn you see is the zone's scenery (ZoneLoader._add_inn_165,
