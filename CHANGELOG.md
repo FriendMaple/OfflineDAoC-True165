@@ -64,6 +64,11 @@ keeps your account, characters, companions, bots and settings. New players get t
 - Death: one death window with the release timer, its bar (the 1.64 client's green bar art) and /RELEASE, /RELEASE
   CITY and /RELEASE HOUSE, all inside the window. The separate Release Timer window is gone, and /RELEASE BIND (the
   same as /RELEASE) was removed. Crafting, salvage and repair timer bars stay inside their window too.
+- Items: the Destroy Item key (Shift+D) now works, as in the 1.64 client - right-click an item to select it, press
+  the key and answer "Do you really wish to destroy this item?" (indestructible items, relics and worn items stay).
+- Interface: window transparency, as in the 1.64 client - right-click any window (the chat boxes too) for the Alpha
+  panel and its two arrows, or set ALPHA in Options > Interface; text and icons stay solid.
+- Spells: Shift+right-click one of your own buff icons to cancel it.
 - The window title is "Offline DAoC True 1.65 v0.2", and the launcher shows VERSION 0.2.
 
 ### The downloader
