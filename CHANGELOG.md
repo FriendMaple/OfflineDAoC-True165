@@ -16,7 +16,9 @@ hold). Its changelog has the history of everything this version inherits.
 - Companions: you can give your own companions quest and no-trade items.
 - Companions: a companion that dies shows as dead on your companion roster at once.
 - Horses: stable horses ride over the bridges on every horse route (Prydwen Bridge, the bridge into Camelot and the
-  rest) instead of through or under them ([#1](https://github.com/shadowofze/OfflineDAoC-True165/issues/1)).
+  rest) instead of through or under them ([#1](https://github.com/shadowofze/OfflineDAoC-True165/issues/1)). Still
+  slightly buggy: crossing Prydwen Bridge, the horse can dip into the deck a few times, and in the new client horse
+  rides rubber-band (the horse jumps back and forth along the route).
 - Items: merchant caster staves have their focus levels again (lower spell power cost), and about 470 items regain
   bonuses from their 1.65 descriptions (instrument and weapon skills, resists, staff focus).
 - Quests: you can still hand in quest items after outleveling a quest you already have (for example the Necromancer
