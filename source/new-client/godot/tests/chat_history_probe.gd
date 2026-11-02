@@ -43,9 +43,9 @@ func _ready() -> void:
 		seen.append("%s:%s" % ["up" if k == KEY_UP else "down", chat._input.text])
 	print("[chat] ", seen)
 	# the 1.64 client's order: its index already points past the line shown (the first Down shows it again), stops
-	# at the oldest, past the newest an empty line
+	# at the oldest; past the newest the line you were typing (owner: a convenience)
 	var want := ["up:second line", "up:first line", "up:/loc", "up:/loc", "down:/loc", "down:first line",
-			"down:second line", "down:"]
+			"down:second line", "down:half typed"]
 	print("[chat] ", "ok" if seen == want else "FAILED, wanted %s" % str(want))
 	chat._send("/appeal stuck")                            # (not kept, as the 1.64 client)
 	await get_tree().process_frame

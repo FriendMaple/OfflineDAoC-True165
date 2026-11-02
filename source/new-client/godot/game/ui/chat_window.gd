@@ -36,11 +36,13 @@ var _input: LineEdit
 # shift+down to go through the past 5-10 previous messages"; 1.64 game.dll save 0x419b54, recall 0x424ef9 - read by
 # the original-client research): 10 lines, newest first, as typed (commands with their /); /appeal and /report lines
 # are not kept; in memory only. Shift+Up shows _history[_hist_i] and steps older (stops at the oldest), Shift+Down
-# steps newer (past the newest: an empty line - 1.64 keeps no draft); Shift+Up with the chat line closed opens it with
-# the newest line. The cursor goes to the start of a recalled line.
+# steps newer - past the newest, the line you were typing (1.64 gives an empty line; owner 2026-11-01: "they can do it
+# as a convenience for now"); Shift+Up with the chat line closed opens it with the newest line. The cursor goes to the
+# start of a recalled line.
 const HISTORY_MAX := 10
 var _history: Array[String] = []
 var _hist_i := 0
+var _draft := ""
 
 
 ## The box frame: the upper chatext box for Main, the lower for Combat, stretched as a nine-patch.
@@ -258,6 +260,8 @@ func _qbar(rest: String, reply: Callable) -> void:
 ## points past the line shown, so the first Shift+Down after Shift+Ups shows that line again).
 func _browse_history(older: bool) -> void:
 	if older:
+		if _hist_i == 0:
+			_draft = _input.text                              # (what you were typing: back past the newest)
 		if _hist_i < _history.size():
 			_set_line(_history[_hist_i])
 			_hist_i = mini(_hist_i + 1, HISTORY_MAX - 1)
@@ -265,7 +269,8 @@ func _browse_history(older: bool) -> void:
 		_hist_i -= 1
 		if _hist_i < 0:
 			_hist_i = 0
-			_set_line("")
+			_set_line(_draft)
+			_input.caret_column = _draft.length()
 		elif _hist_i < _history.size():
 			_set_line(_history[_hist_i])
 
@@ -282,6 +287,7 @@ func open_with_last() -> bool:
 	start_typing(_history[0])
 	_input.caret_column = 0
 	_hist_i = 1
+	_draft = ""
 	return true
 
 
@@ -289,6 +295,7 @@ func _send(text: String) -> void:
 	stop_typing()
 	text = text.strip_edges()
 	_hist_i = 0
+	_draft = ""
 	if text == "":
 		return
 	var low := text.to_lower()
