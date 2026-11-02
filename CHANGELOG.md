@@ -39,21 +39,8 @@ keeps your account, characters, companions, bots and settings. New players get t
   Tur Suil, and a Darkness Falls tunnel has its textures again.
 - Sharper textures on the new traveler's inns (Avalon Marsh, West Svealand, Shannon Estuary) and on some grass
   (Iarnwood, Cothrom Gorge, World's End).
-- World: floors, beams, pillars and furniture that drew in one flat colour have their textures again - the upstairs
-  room above Camelot's Necromancer and Reaver trainers and other Camelot buildings, Hibernia's taverns and housing
-  marketplaces, Norse huts, some Albion dungeon halls, keeps and buildings (47 models: a few broken texture
-  coordinates in the original models flattened the whole surface).
-- Trainers: a RESPEC button beside TRAIN in the training window respecs all your specializations; the server's own
-  "CAUTION: All respec changes are final" box asks you first. The 1.64 client had only /respec all - this is a
-  necessary and simple QoL addition.
-- Quests: REMOVE QUEST in the quest journal asks "Do you really wish to remove this quest?" (YES / NO) before it
-  gives the quest up.
-- Controls: the 1.64 client's keys that did nothing now work - Follow, Stick and Face (on your target; press again
-  to stop), Camera Reset, Look Up / Look Down, Target Group #2-8, Target Friend, Target Object, Last Attacker,
-  Consider, Command Window (opens the chat line with "/"), Help (the server's command list), Chat Logging (to
-  CHAT.LOG beside the game), Toggle Names (/hidenames and /shownames too) and the Perf. Meter. The Realm War Map key
-  opens the war map too. Default keys the 1.65 key file gives an unknown modifier no longer fire on the bare key
-  (Nearest Friend took Tab from Target Enemy, Chat Logging took L from the combat window); bind those in Options.
+- NPCs stored a little below their floor now stand on it, as the original client drew them: Gothwaite Harbor's dye
+  merchants were sunk to the neck ([#4](https://github.com/shadowofze/OfflineDAoC-True165/issues/4)).
 
 ### Quests
 
@@ -65,6 +52,13 @@ keeps your account, characters, companions, bots and settings. New players get t
 - Mouse Look Toggle, as in the original client, can be switched on in Options > Controls (off by default). Once on,
   right-click on open ground to turn mouse look on (the mouse turns you with no button held), and right-click again
   or press Esc to turn it off. Right-clicking NPCs and objects still works as before, and the key can be rebound.
+- Chat: Shift+Up and Shift+Down go through your last 10 sent lines, as in the original 1.64 client; Shift+Up with the
+  chat line closed opens it with your last line. One minor convenience over the real 1.64 behavior: stepping past the
+  newest line with Shift+Down brings back what you were typing (1.64 shows an empty line).
+- `/qbar` works as in the 1.64 client: `/qbar #` shows quickbar bank # (1-10).
+- Loading screens: the 1.64 client's classic loading bar and layout, with the loading picture at its own size, the
+  glass bar in its bottom right corner and "Loading..." beside it.
+- Loot: dropped loot shows the 1.64 client's classic bag instead of the later Catacombs one.
 - The window title is "Offline DAoC True 1.65 v0.2", and the launcher shows VERSION 0.2.
 
 ### The downloader
