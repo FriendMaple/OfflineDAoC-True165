@@ -15,6 +15,7 @@ hold). Its changelog has the history of everything this version inherits.
 - Interface: the status window gets its thin red border while you are in attack mode (melee), as in the 1.64 client.
 - Companions: a companion that levels shows its new level in the group window at once ([#7](https://github.com/shadowofze/OfflineDAoC-True165/issues/7)).
 - Quickbars: dropping a skill or spell you are holding onto a filled quickbar slot puts the one that was there on your pointer, as in the 1.64 client, instead of deleting it ([#6](https://github.com/shadowofze/OfflineDAoC-True165/issues/6)).
+- Chat: the combat chat window no longer disappears when you click its top-right corner; that corner resizes it, as on the main chat window and in the 1.64 client ([#8](https://github.com/shadowofze/OfflineDAoC-True165/issues/8)). Hide or show either chat window in Options > Windows.
 
 ## 0.2 (2026-11-01)
 

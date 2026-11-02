@@ -78,7 +78,10 @@ func _fit_frame() -> void:
 
 
 func build() -> void:
-	closable = role != "main"
+	# never closed by its corner (GitHub issue #8: the combat box vanished on a click in its top-right corner, where
+	# the cursor showed the resize arrows): the 1.64 chat corners are the move handle (top left) and the resize handle
+	# (top right, chatcorners.bmp) on both boxes; a box is hidden / shown from Options > WINDOWS
+	closable = false
 	min_size = Vector2(160, 50)
 	max_size = Vector2(900, 480)
 	var cfg := ConfigFile.new()
