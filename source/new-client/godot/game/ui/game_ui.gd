@@ -1928,6 +1928,10 @@ func handle_input(event: InputEvent) -> bool:
 	if Keybinds.pressed(event, "reply"):
 		chat.start_typing("/r ")
 		return true
+	# Shift+Up with the chat line closed: it opens with your last line, as the 1.64 client (ChatWindow history)
+	if event is InputEventKey and event.pressed and event.shift_pressed and event.keycode == KEY_UP and chat \
+			and chat.open_with_last():
+		return true
 	for sc in [["chat_page_up", -1], ["chat_page_down", 1]]:
 		if Keybinds.pressed(event, sc[0]):
 			chat.scroll(sc[1])

@@ -761,9 +761,9 @@ func _ground(st: NpcState) -> void:
 	if bool(mv.get("flying", false)):
 		return
 	# Every height is found from the server's own Z for it (its last update), never from where it is drawn now
-	# (owner 2026-10-14: bots stood on each other and up in a pine tree): the floor pick looks 1.2 m above the height
-	# it starts from, so starting from the drawn height let a walker that met a tree, a fixture or a rock ratchet up it
-	# 1.2 m at a time, tick after tick - the server's next update only pulled it halfway back.
+	# (owner 2026-10-14: bots stood on each other and up in a pine tree): the floor pick looks 1.6 m (64 units) above the
+	# height it starts from, so starting from the drawn height let a walker that met a tree, a fixture or a rock ratchet up
+	# it 1.6 m at a time, tick after tick - the server's next update only pulled it halfway back.
 	var ref := float(mv.get("sy", st.pos.y))
 	var at := Vector3(st.pos.x, ref, st.pos.z)
 	# in deep water (owner 2026-10-14: companion bots stood on top of the water): the server holds a swimmer at the
