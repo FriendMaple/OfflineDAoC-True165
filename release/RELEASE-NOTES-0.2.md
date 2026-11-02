@@ -43,7 +43,8 @@ You **don't** need to download the other files on this page by hand: the downloa
   as dead on the roster at once, and keep their spell effects after a revive.
 - **Horse routes** ride over the bridges ([#1](https://github.com/shadowofze/OfflineDAoC-True165/issues/1)), keep their rider through lag spikes and no longer
   rubber-band. Still a little buggy: the horse can dip into Prydwen Bridge's deck now and then.
-- **Items:** merchant caster staves have their focus again, and about 470 items regain their 1.65 bonuses.
+- **Items:** merchant caster staves have their focus again, about 470 items regain their 1.65 bonuses, and about
+  340 loot items show an icon that matches their name.
 - **World:** Camelot's walls and palace door are fixed ([#2](https://github.com/shadowofze/OfflineDAoC-True165/issues/2)),
   missing doors are back in six zones, NPCs no longer stand sunk into their floor
   ([#4](https://github.com/shadowofze/OfflineDAoC-True165/issues/4)), and the inns and some grass have sharper textures.
