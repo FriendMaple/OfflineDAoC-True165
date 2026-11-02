@@ -7,6 +7,20 @@ hold). Its changelog has the history of everything this version inherits.
 
 ## Coming in 0.2
 
+- Gamebots: bots buy and wield weapons of the line they trained, and dual wielders hold the trained weapon in their
+  main hand.
+- Gamebots: a bot that keeps dying with poor gear goes shopping for an upgrade it can afford, and bots on a shopping
+  trip no longer stand at a merchant for 15 minutes.
+- Gamebots and companions: strength buffs go to fighters and acuity buffs to casters.
+- Gamebots and companions: a bot that levels shows its new level and con colour at once, and in the group window.
+- Companions: you can give your own companions quest and no-trade items.
+- Companions: a companion that dies shows as dead on your companion roster at once.
+- Horses: stable horses ride over the bridges on every horse route (Prydwen Bridge, the bridge into Camelot and the
+  rest) instead of through or under them ([#1](https://github.com/shadowofze/OfflineDAoC-True165/issues/1)).
+- Items: merchant caster staves have their focus levels again (lower spell power cost), and about 470 items regain
+  bonuses from their 1.65 descriptions (instrument and weapon skills, resists, staff focus).
+- Quests: you can still hand in quest items after outleveling a quest you already have (for example the Necromancer
+  quest Inconnu Poison).
 - Companions: a companion whose bow is taken away in the middle of a pull switches back to its melee weapons.
 - Controls: Mouse Look Toggle, as in the original client, can be switched on in Options > Controls (off by default).
   Once on, right-click on open ground to turn mouse look on (the mouse turns you with no button held), and right-click
