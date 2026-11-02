@@ -30,7 +30,8 @@ keeps your account, characters, companions, bots and settings. New players get t
 ### World and items
 
 - Stable horses ride over the bridges on every horse route (Prydwen Bridge, the bridge into Camelot and the rest)
-  instead of through or under them ([#1](https://github.com/shadowofze/OfflineDAoC-True165/issues/1)).
+  instead of through or under them ([#1](https://github.com/shadowofze/OfflineDAoC-True165/issues/1)). Still slightly buggy: crossing Prydwen Bridge, the horse can dip into the
+  deck a few times, and in the new client horse rides rubber-band (the horse jumps back and forth along the route).
 - Merchant caster staves have their focus levels again (lower spell power cost), and about 470 items regain bonuses
   from their 1.65 descriptions (instrument and weapon skills, resists, staff focus).
 - Camelot: the walls around the round table area no longer show up white, and the palace's closed double door by
@@ -244,5 +245,5 @@ These were built during this work and are shared with Offline DAoC.
   - the Realm Exchange tab (the Exchange is in game only);
   - the Reset Keeps & Relics button.
 
-The known issues in v0.1 are listed in the [README](README.md#known-issues-in-v01), and the fixes taken from
+The known issues are listed in the [README](README.md#known-issues), and the fixes taken from
 community forks are credited in [THIRD_PARTY.md](THIRD_PARTY.md#fork-credits).

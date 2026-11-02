@@ -183,8 +183,10 @@ is the result: the world database and the content files built from it.
 - **Forking:** you don't need permission to fork this repository and make it your own. Keep the existing
   licenses and credits ([THIRD_PARTY.md](THIRD_PARTY.md)).
 
-## Known issues in v0.1
+## Known issues
 
+- Horse routes: crossing Prydwen Bridge, the horse can dip into the deck a few times, and in the new client horse
+  rides rubber-band (the horse jumps back and forth along the route).
 - Low-level gamebots (levels 6-9) die a lot: they start with no armour and have to buy it.
 - Gear wears at the player rate, so bots rarely need repairs early on. This is expected.
 - About 2,100 monster names drop only coin, mostly in the Shrouded Isles, where no period source recorded their loot.

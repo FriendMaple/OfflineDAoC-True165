@@ -38,7 +38,8 @@ You **don't** need to download the other files on this page by hand: the downloa
   dying, no longer get stuck at merchants, buff the right classes, and show their new level and con colour at once.
 - **Companions** switch back to melee when their bow is taken away mid-pull, accept quest and no-trade items, show
   as dead on the roster at once, and keep their spell effects after a revive.
-- **Horse routes** ride over the bridges ([#1](https://github.com/shadowofze/OfflineDAoC-True165/issues/1)).
+- **Horse routes** ride over the bridges ([#1](https://github.com/shadowofze/OfflineDAoC-True165/issues/1)). Still slightly buggy: the horse can dip into
+  Prydwen Bridge's deck a few times, and horse rides rubber-band in the new client.
 - **Items:** merchant caster staves have their focus again, and about 470 items regain their 1.65 bonuses.
 - **World:** Camelot's walls and palace door are fixed ([#2](https://github.com/shadowofze/OfflineDAoC-True165/issues/2)),
   missing doors are back in six zones, NPCs no longer stand sunk into their floor
