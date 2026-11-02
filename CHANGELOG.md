@@ -40,7 +40,8 @@ keeps your account, characters, companions, bots and settings. New players get t
 - Sharper textures on the new traveler's inns (Avalon Marsh, West Svealand, Shannon Estuary) and on some grass
   (Iarnwood, Cothrom Gorge, World's End).
 - NPCs stored a little below their floor now stand on it, as the original client drew them: Gothwaite Harbor's dye
-  merchants were sunk to the neck ([#4](https://github.com/shadowofze/OfflineDAoC-True165/issues/4)).
+  merchants were sunk to the neck ([#4](https://github.com/shadowofze/OfflineDAoC-True165/issues/4)), and three more
+  NPCs in the Vale of Mularn and the Black Mountains stood in their floor.
 
 ### Quests
 
