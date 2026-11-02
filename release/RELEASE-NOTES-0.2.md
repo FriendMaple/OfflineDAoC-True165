@@ -45,7 +45,7 @@ You **don't** need to download the other files on this page by hand: the downloa
   missing doors are back in six zones, NPCs no longer stand sunk into their floor
   ([#4](https://github.com/shadowofze/OfflineDAoC-True165/issues/4)), and the inns and some grass have sharper textures.
 - **Quests:** quest items can still be handed in after you outlevel a quest you already have.
-- **The new client:** the 1.64 loading bar and loot bag, chat history on Shift+Up / Shift+Down, `/qbar`, and
+- **The new client:** one death window with the release timer, the 1.64 loading bar and loot bag, chat history on Shift+Up / Shift+Down, `/qbar`, and
   Mouse Look Toggle as in the original client (off by default; switch it on in Options > Controls).
 
 The full list is in the [changelog](https://github.com/shadowofze/OfflineDAoC-True165/blob/main/CHANGELOG.md).
