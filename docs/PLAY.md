@@ -138,5 +138,5 @@ characters, companions, bots and settings stay as they are.
 in `runtime\data\opendaoc-165.sqlite3.db`.
 
 **Reporting a bug:** open an [issue](https://github.com/shadowofze/OfflineDAoC-True165/issues). Say what you were
-doing, and attach the logs from `new-client\save` (`spell_log.txt`, `death_log.txt` and the `logs` folder) and
-`runtime\logs` if there are any.
+doing, and attach the logs from `new-client\save\Godot\app_userdata\MMOEngine` (`logs\godot.log`, `spell_log.txt`, `death_log.txt`) and
+`runtime\logs` if there are any. [docs/NEW-CLIENT.md](NEW-CLIENT.md#reporting-problems) says which files to send.

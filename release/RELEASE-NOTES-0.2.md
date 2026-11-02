@@ -58,7 +58,7 @@ The full list is in the [changelog](https://github.com/shadowofze/OfflineDAoC-Tr
 
 - The full guide with troubleshooting: [docs/PLAY.md](https://github.com/shadowofze/OfflineDAoC-True165/blob/main/docs/PLAY.md)
 - Bugs: [open an issue](https://github.com/shadowofze/OfflineDAoC-True165/issues). Say what you were doing, and
-  attach the logs from `new-client\save` if you can.
+  attach the logs from `new-client\save\Godot\app_userdata\MMOEngine\logs` (and `spell_log.txt`, `death_log.txt` there) if you can.
 - The source code, and the guides for developers and AI assistants, are in this repository; start with the
   [README](https://github.com/shadowofze/OfflineDAoC-True165#readme).
 
