@@ -1667,6 +1667,8 @@ func _set_server_attack(on: bool, tell: bool) -> void:
 		return
 	_server_attack = on
 	_attack_on = null
+	if not on:
+		ui.set_combat_border(false)                        # (dead, or your target died: the server may send no AttackMode)
 	player.set_combat(on, player.weapon_stance())        # a staff held as a staff (owner 2026-10-11)
 	var set_id := int(WeaponModels.info(int(MeleeMath.weapon(PlayerData).get("model", 0))).get("sound_set", 0))
 	if set_id > 0 and player.sounds:
@@ -1704,6 +1706,7 @@ func _on_server_world(kind: String, d: Dictionary) -> void:
 	match kind:
 		"attack_mode":                                     # the server ended (or began) your attack
 			_set_server_attack(bool(d.on), false)
+			ui.set_combat_border(bool(d.on))               # (the 1.64 status panel's red border: this packet only)
 		"time":                                            # the server's time of day (ms into the game day)
 			if sky:
 				sky.day_increment = Server.day_increment

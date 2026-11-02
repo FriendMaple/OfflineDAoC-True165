@@ -38,6 +38,16 @@ var _tab_lit: Array = []
 var _tab_hover: Array = []
 var _status_bars := {}
 var _status_name: Label
+var _status: ClassicWindow
+
+
+## The status panel's thin red border (the 1.64 client's rightbotcomb.bmp; owner 2026-11-02 from a player report):
+## game.dll draws it while its attack-mode flag is on - set only by the server's AttackMode packet (0x74, handler
+## 0x412479 -> 0x453df8 -> 0x4a6dd0 state 2 -> 0x4b5645: the window's +0xa8 flag, its draw at 0x4b5051 then takes
+## rightbotcomb instead of rightbot) and cleared by it or by the client's own reset (0x4122f4).
+func set_combat_border(on: bool) -> void:
+	if _status and _status.frame is TextureRect:
+		(_status.frame as TextureRect).texture = UiArt.tex("rightbotcomb" if on else "rightbot")
 var _target_name: Label
 var _target_bar: TextureRect
 var _target_pct: Label
@@ -159,6 +169,7 @@ func _build() -> void:
 	# (percent box x 3-19, bar y 82-89). Bar order health / power / endurance: to check against a 1.65 screenshot.
 	var st := _window("status", "rightbot", Rect2(), Vector2(a.x - 128, a.y - 96), true)
 	st.closable = false
+	_status = st
 	_status_name = UiArt.label(PlayerData.display_name(), 7, UiArt.GOLD_HI)
 	_status_name.position = Vector2(14, 3)                 # the name bar's dark inside: x 14-116, y 3-11
 	_status_name.size = Vector2(102, 8)

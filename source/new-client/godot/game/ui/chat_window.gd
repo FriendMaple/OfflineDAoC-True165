@@ -233,6 +233,21 @@ func _client_command(text: String) -> bool:
 	return true
 
 
+## %t / %T in a chat line: your target's name, or "<nothing>" with no target - as the 1.64 client (game.dll 0x42ca79,
+## run on every line: it finds "%t", else "%T", turns every other '%' into '*' and formats the name in there; owner
+## 2026-11-02 from a player report: "/s Healing %t" went out as typed).
+static func target_fill(text: String) -> String:
+	var at := text.find("%t")
+	if at < 0:
+		at = text.find("%T")
+	if at < 0:
+		return text
+	var name := String(PlayerData.target.get("name", "")) if not PlayerData.target.is_empty() else ""
+	if name == "":
+		name = "<nothing>"
+	return text.substr(0, at).replace("%", "*") + name + text.substr(at + 2).replace("%", "*")
+
+
 ## A line typed by a macro (the quickbar): as if typed here.
 func run_line(text: String) -> void:
 	_send(text)
@@ -305,6 +320,7 @@ func _send(text: String) -> void:
 		_history.push_front(text)
 		if _history.size() > HISTORY_MAX:
 			_history.pop_back()
+	text = target_fill(text)
 	if _macro(text):                                       # a client command: never sent to the server
 		return
 	if text.to_lower() == "/loc" or text.to_lower().begins_with("/loc "):
