@@ -91,7 +91,39 @@ func _zone_pos(zone_id: int, xoff: int, yoff: int, z: int) -> Vector3:
 	return scene_pos(float(zi.x) * 8192.0 + xoff, float(zi.y) * 8192.0 + yoff, float(z))
 
 
+## Player housing's state (made at its first packet): the houses around you, the one you are in (game/housing).
+var housing: Node                             # (game/housing/housing.gd)
+const HousingScript := preload("res://game/housing/housing.gd")
+const HouseViewScript := preload("res://game/housing/house_view.gd")
+var house_view: Node3D                        # the houses drawn (game/housing/house_view.gd)
+const HousingWindowsScript := preload("res://game/housing/housing_windows.gd")
+var housing_windows: Node                     # the 1.64 housing windows (game/housing/housing_windows.gd)
+const HOUSING_KINDS := ["house", "garden", "house_occupied", "house_enter", "house_exit", "furniture", "house_points",
+		"house_rotate_ok", "house_perms", "house_users"]
+
+
+func _ensure_housing() -> void:
+	if housing != null:
+		return
+	housing = HousingScript.new()
+	housing.name = "Housing"
+	add_child(housing)
+	house_view = HouseViewScript.new()
+	house_view.name = "HouseView"
+	add_child(house_view)
+	house_view.setup(self, housing)
+	if viewer and viewer.ui:
+		housing_windows = HousingWindowsScript.new()
+		housing_windows.name = "HousingWindows"
+		add_child(housing_windows)
+		housing_windows.setup(viewer.ui, housing, house_view)
+
+
 func _on_world(kind: String, d: Dictionary) -> void:
+	if kind in HOUSING_KINDS:
+		_ensure_housing()
+		housing.on_packet(kind, d)
+		return
 	match kind:
 		"npc": _add_npc(d)
 		"object": _add_object(d)
@@ -977,6 +1009,9 @@ func _drop_stale(delta: float) -> void:
 			gone.append(int(oid))
 	for oid in gone:
 		_remove(oid, true, 1, "no word from the server for %d s (stale drop)" % (STALE_MS / 1000))
+	if housing and player:                                  # the houses the server stopped sending (it never removes
+		var me: Vector3 = Server.to_region(_current_zone(), player.global_position)   # one leaving range)
+		housing.cull(me.x, me.y)
 
 
 func _physics_body(delta: float) -> void:
@@ -1780,6 +1815,8 @@ func _add_object(d: Dictionary) -> void:
 		# (never a relic: it lies on its pad - a baked world object right under it)
 	var m := WeaponModels.make_world(model)
 	if m == null:
+		m = HouseViewScript.item_model(model)                     # housing's: lot markers, vaults, bindstones, tools
+	if m == null:
 		m = WeaponModels.make_world(BAG_MODEL)                     # loot without a world model: the brown bag
 	if m == null:
 		return
@@ -1818,6 +1855,8 @@ func _add_object(d: Dictionary) -> void:
 ## Campacorentin, "everytime ive seen these floating objects ive been on a horse ride").
 func rebase(d: Vector3) -> void:
 	super.rebase(d)
+	if house_view:
+		house_view.rebase(d)
 	for oid in objects:
 		var o = objects[oid]
 		if o is Node3D and is_instance_valid(o):
@@ -1851,10 +1890,89 @@ func click_object(cam: Camera3D, screen_pos: Vector2) -> bool:
 	var from := cam.project_ray_origin(screen_pos)
 	var q := PhysicsRayQueryParameters3D.create(from, from + cam.project_ray_normal(screen_pos) * 60.0, OBJECT_PICK)
 	var hit := get_world_3d().direct_space_state.intersect_ray(q)
+	if not hit.is_empty() and hit.collider.has_meta("house_door") and house_view:
+		house_view.door_clicked(int(hit.collider.get_meta("house_door")))   # a house door: in / out
+		return true
+	for meta in ["house_furniture", "house_garden"]:                 # a placed decoration / garden item (double: up)
+		if not hit.is_empty() and hit.collider.has_meta(meta) and house_view:
+			house_view.item_clicked(meta, hit.collider.get_meta(meta))
+			return true
 	if hit.is_empty() or not hit.collider.has_meta("server_object"):
 		return false
 	_target_ground(int(hit.collider.get_meta("server_object")))
 	return true
+
+
+## Shift + right-click in player housing (1.64 game.dll 0x429a7d / 0x429b11 / 0x4088ee): on a placed decoration, ask
+## to turn it (the Rotate Object window opens on the server's yes); on a house from outside its External Options, on
+## a wall / floor inside its Internal Options. True when it was housing's.
+func house_shift_click(cam: Camera3D, screen_pos: Vector2) -> bool:
+	if house_view == null:
+		return false
+	var from := cam.project_ray_origin(screen_pos)
+	var to := from + cam.project_ray_normal(screen_pos) * 80.0
+	var q := PhysicsRayQueryParameters3D.create(from, to, OBJECT_PICK | ZoneLoader.LAYER_WALL | ZoneLoader.LAYER_FLOOR)
+	var hit := get_world_3d().direct_space_state.intersect_ray(q)
+	if hit.is_empty():
+		return false
+	var c: Object = hit.collider
+	if c.has_meta("house_furniture"):
+		var f: Dictionary = c.get_meta("house_furniture")
+		Server.client.call("HouseRotateRequest", int(f.house), int(f.index))
+		return true
+	if c.has_meta("house_number") and housing_windows:
+		housing_windows.ask_options(int(c.get_meta("house_number")), bool(c.get_meta("house_inside", false)))
+		return true
+	return false
+
+
+## An item from the backpack let go on the world, housing's part (1.64 game.dll 0x42950a): onto a ground object (a
+## lot marker - a deed builds the house there: the server's give, slot 1000 + its id), onto a house from outside (a
+## deed / banner / porch deed: HousePlaceItem, the server picks the method by the item), or onto a wall / floor inside
+## your house (HouseView.place_inside). True when it was housing's.
+func house_drop(slot: int, cam: Camera3D, screen_pos: Vector2) -> bool:
+	if Server.client == null:
+		return false
+	var from := cam.project_ray_origin(screen_pos)
+	var to := from + cam.project_ray_normal(screen_pos) * 80.0
+	var q := PhysicsRayQueryParameters3D.create(from, to, OBJECT_PICK | ZoneLoader.LAYER_WALL | ZoneLoader.LAYER_FLOOR)
+	var hit := get_world_3d().direct_space_state.intersect_ray(q)
+	if hit.is_empty():
+		return false
+	var c: Object = hit.collider
+	if c.has_meta("house_hookpoint"):                             # a hookpoint item onto its marker (method 5)
+		var hp: Dictionary = c.get_meta("house_hookpoint")
+		Server.client.call("HousePlace", slot, int(hp.house), int(hp.id), 5, 0, 0, 0)
+		return true
+	if c.has_meta("server_object"):
+		var oid := int(c.get_meta("server_object"))
+		var holder: Node3D = objects.get(oid)
+		if holder and int(holder.get_meta("model", 0)) in [1306, 1307, 1308]:
+			Server.client.call("MoveItem", slot, 1000 + oid, int(PlayerData.entry(slot).get("count", 1)))
+			return true
+		return false
+	if c.has_meta("house_number"):
+		if bool(c.get_meta("house_inside", false)) and house_view:
+			return house_view.place_inside(slot, hit.position, hit.normal)
+		Server.client.call("HousePlace", slot, int(c.get_meta("house_number")), 0, 4, 0, 0, 0)
+		return true
+	return false
+
+
+## Coins from the Money Selector let go on a house from outside (1.64 help: "drop them on to the outside of the house"):
+## HousePlaceItem with the money slot (245 platinum .. 248 copper) and the amount; the server asks "Pay rent with ...?"
+## and puts it in the lockbox on yes.
+func house_money_drop(slot: int, amount: int, cam: Camera3D, screen_pos: Vector2) -> void:
+	if Server.client == null:
+		return
+	var from := cam.project_ray_origin(screen_pos)
+	var q := PhysicsRayQueryParameters3D.create(from, from + cam.project_ray_normal(screen_pos) * 80.0,
+			ZoneLoader.LAYER_WALL | ZoneLoader.LAYER_FLOOR)
+	var hit := get_world_3d().direct_space_state.intersect_ray(q)
+	if hit.is_empty() or not hit.collider.has_meta("house_number"):
+		PlayerData.message.emit("Drop the coins onto the outside of your house to pay its rent.", "system")
+		return
+	Server.client.call("HousePlace", slot, int(hit.collider.get_meta("house_number")), clampi(amount, 1, 255), 4, 0, 0, 0)
 
 
 ## A right click on a ground object (2026-10-30, owner report: "right-clicking a relic never triggers a pickup
@@ -1864,12 +1982,25 @@ func use_object(cam: Camera3D, screen_pos: Vector2) -> bool:
 	var from := cam.project_ray_origin(screen_pos)
 	var q := PhysicsRayQueryParameters3D.create(from, from + cam.project_ray_normal(screen_pos) * 60.0, OBJECT_PICK)
 	var hit := get_world_3d().direct_space_state.intersect_ray(q)
+	if not hit.is_empty() and hit.collider.has_meta("house_door") and house_view:
+		house_view.door_clicked(int(hit.collider.get_meta("house_door")))   # a house door: in / out
+		return true
+	if not hit.is_empty() and hit.collider.has_meta("house_hookpoint"):   # a hookpoint marker: its store (1.64: a
+		var hp: Dictionary = hit.collider.get_meta("house_hookpoint")     # right click, no Shift needed)
+		Server.client.call("HouseMenu", int(hp.house), int(hp.menu), 0)
+		return true
 	if hit.is_empty() or not hit.collider.has_meta("server_object"):
 		return false
 	var oid := int(hit.collider.get_meta("server_object"))
 	_target_ground(oid)
 	var holder: Node3D = objects.get(oid)
 	if holder and String(holder.get_meta("name", "")).contains("'s Grave"):
+		return true
+	if holder and int(holder.get_meta("model", 0)) in HOUSE_USE_MODELS:
+		if int(holder.get_meta("model", 0)) in [1489, 1491, 1493]:
+			Server.house_vault_at = Time.get_ticks_msec()        # (its window 4 is the house vault, not companion gear)
+		var r := Server.to_region(_current_zone(), player.global_position)
+		Server.client.call("Interact", oid, int(r.x), int(r.y))
 		return true
 	get_object()
 	return true
@@ -1970,6 +2101,14 @@ func _merchant(d: Dictionary) -> void:
 	var mst: NpcState = by_oid.get(last_interact_oid)
 	if mst:
 		who = String(mst.spawn.get("name", who))                 # (the merchant you right-clicked, whatever you target)
+	var wt := int(d.window)
+	if wt >= 3 and wt <= 11:                                    # player housing's windows (eMerchantWindowType 3-11):
+		_ensure_housing()                                       # the options windows, the garden placement, the stores
+		if housing_windows and housing_windows.merchant(wt, _merchant_pages):
+			return
+		var title := HousingWindowsScript.store_title(wt)
+		if title != "":
+			who = title
 	viewer.ui.merchant.server_oid = last_interact_oid
 	viewer.ui.merchant.open_server(who, _merchant_pages, int(d.window))
 
@@ -2034,6 +2173,10 @@ const RELIC_MODELS := [630, 631, 632, 633, 634, 635]     # objects.csv: the six 
 # ground objects that are used, not picked up (the interact request, as a relic): the Horn of Rallying on each inn's
 # horn platform (objects.csv 3545 "Relic Warhorn", True 1.65 Mode - server protocol, 2026-10-30: right-click opens its window)
 const USE_MODELS := [3545]
+# player housing's ground objects a right click uses (the interact request): the lot markers (buy the lot / its deed
+# list), the house vaults (open), bindstones, tool tables; the Get Item key still picks a hookpoint item up (the owner
+# taking it back, GamePlayer.PickupObject)
+const HOUSE_USE_MODELS := [1306, 1307, 1308, 1488, 1489, 1490, 1491, 1492, 1493, 1494, 1495, 1496]
 
 
 ## True 1.65 Mode: the Horn of Rallying's click target. The horn you see is the zone's scenery (ZoneLoader._add_inn_165,

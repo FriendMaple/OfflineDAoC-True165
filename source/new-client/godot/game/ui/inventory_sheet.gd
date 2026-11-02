@@ -86,6 +86,10 @@ static func build(parent: Control, ui: GameUI) -> void:
 		l.size = Vector2(28, 11)
 		l.mouse_filter = Control.MOUSE_FILTER_STOP
 		l.tooltip_text = COINS[i].to_upper()
+		var coin: String = COINS[i]
+		l.gui_input.connect(func(e: InputEvent):             # (housing: a click clicks coins out - the Money Selector)
+			if e is InputEventMouseButton and e.pressed and e.button_index == MOUSE_BUTTON_LEFT and Server.active:
+				preload("res://game/housing/housing_windows.gd").open_money(coin))
 		parent.add_child(l)
 	var weight := UiArt.label("", 8, UiArt.CREAM)         # the weight box under the doll: carried / capacity
 	weight.name = "weight"

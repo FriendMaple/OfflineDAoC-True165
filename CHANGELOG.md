@@ -48,6 +48,15 @@ hold). Its changelog has the history of everything this version inherits.
 - Spells: Shift+right-click one of your own buff icons to cancel it.
 - Items: a highlighted item in your backpack, vault or a merchant's list, and the right-click box, show the item's name
   in its con colour to you.
+- Player housing, as in the 1.64 client and with its own models: the 12 period housing zones (Caerwent, Old Sarum,
+  Rilan, Dalton; Erikstaad, Arothi, Carlingford, Wyndham; Meath, Dunshire, Torrylin, Kilcullen) through the realms'
+  housing gates; buying a lot and building a house with a deed; the houses' roof, wall, door and wood materials,
+  porch, guild banner and shield; the garden; going inside; placing, rotating and taking back furniture; hookpoints
+  (vaults, bindstones, tools, house merchants); house vaults; friend permissions; paying rent by dropping coins on
+  your house; and the 1.64 housing windows (External / Internal Options, Garden Placement, Friend Level Permissions,
+  Permissions List, Rotate Object). Checked offline; not yet played through on a live server.
+- NPCs: Half Ogre, Frostalf and Shar NPCs (about 150 of them, General Vaul among them) draw with their own classic
+  figures instead of broken.
 - Companions: reviving a companion at a healer after it died while casting no longer breaks its spell effects
   (reported as a client crash when reviving at Epona in Mag Mell).
 - NPCs: NPCs stored a little below their floor now stand on it, as the original client drew them - Gothwaite Harbor's

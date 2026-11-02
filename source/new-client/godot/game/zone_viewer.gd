@@ -190,6 +190,9 @@ func _ready() -> void:
 			player.start_track(mode, t, (t.display_name(true) if t else "")))
 		PlayerData.use_skill.connect(_server_use)          # spells, styles, abilities from the sheets and quickbars
 		ui.item_dropped_on_world.connect(_on_item_dropped)   # an item dragged out: onto an NPC (give) or the ground
+		ui.money_dropped_on_world.connect(func(slot: int, amount: int, at: Vector2):   # coins onto a house: rent
+			if npcs is ServerWorld:
+				(npcs as ServerWorld).house_money_drop(slot, amount, player.camera, at))
 		ui.npc_dialog.keyword.connect(_server_keyword)     # a [keyword] in an NPC's words: whispered to it
 		PlayerData.release_requested.connect(_server_release)   # the death window's RELEASE: the server's /release
 		PlayerData.release_to.connect(_server_release_to)       # its CITY / HOUSE / BIND buttons: /release city ...
@@ -241,6 +244,9 @@ func _ready() -> void:
 		cast.cast_progress.connect(ui.show_cast)
 		ui.casting = cast
 		ui.item_dropped_on_world.connect(_on_item_dropped)
+		ui.money_dropped_on_world.connect(func(slot: int, amount: int, at: Vector2):   # coins onto a house: rent
+			if npcs is ServerWorld:
+				(npcs as ServerWorld).house_money_drop(slot, amount, player.camera, at))
 		ui.npc_dialog.keyword.connect(_on_keyword)
 		combat.player_died.connect(ui.show_release.bind(true))
 		var routes := HorseRoutes.new()                   # stable master horse routes (tickets)
@@ -788,7 +794,9 @@ func _input(event: InputEvent) -> void:
 			elif _rclick_moved < 6.0 and get_viewport().gui_get_hovered_control() == null:
 				var hit := true
 				var rn: Npc = npcs.pick(player.camera, _rclick_from)
-				if rn:
+				if Input.is_key_pressed(KEY_SHIFT) and npcs is ServerWorld 						and (npcs as ServerWorld).house_shift_click(player.camera, _rclick_from):
+					pass                                         # housing: options / turning a decoration
+				elif rn:
 					npcs.select(rn)
 					_note_interact(rn)
 					npcs.interact(rn)
@@ -907,6 +915,8 @@ func _clicked_self(at: Vector2) -> bool:
 ## {1}. Do you accept?", "You pay {0} {1}.", "{0} says, \"There, {1} is ready for combat.\""), on a merchant a sale.
 func _on_item_dropped(slot: int, screen_pos: Vector2) -> void:
 	var n: Npc = npcs.pick(player.camera, screen_pos) if npcs else null
+	if Server.active and n == null and npcs is ServerWorld and (npcs as ServerWorld).house_drop(slot, player.camera, screen_pos):
+		return                                              # housing: a deed on a lot, an item on a wall / floor
 	if Server.active:                                       # the server: onto an NPC = give it (slot 1000 + its id), else
 		var count := int(PlayerData.entry(slot).get("count", 1))   # onto the ground (slot 1) - PlayerMoveItem
 		Server.client.call("MoveItem", slot, 1000 + int(n.spawn.get("oid", 0)) if n else 1, count)

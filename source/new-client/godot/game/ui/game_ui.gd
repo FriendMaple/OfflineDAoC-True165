@@ -63,6 +63,7 @@ var exchange: ExchangeWindow
 var journal: JournalWindow
 var guide: ClassicWindow
 var quest_abandon: Callable                               # QuestEngine.abandon (set by the zone viewer)
+signal money_dropped_on_world(slot: int, amount: int, screen_pos: Vector2)   # housing: coins onto a house (rent)
 signal item_dropped_on_world(slot: int, screen_pos: Vector2)   # zone viewer: an NPC under it (smith repair, sell)
 var map_window: MapWindow
 var casting: Casting
@@ -2049,7 +2050,10 @@ class WorldDrop extends Control:
 			mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 	func _can_drop_data(_pos: Vector2, data: Variant) -> bool:
-		return InventorySheet.is_item(data)
+		return InventorySheet.is_item(data) or (data is Dictionary and String(data.get("kind", "")) == "money")
 
 	func _drop_data(_pos: Vector2, data: Variant) -> void:
+		if data is Dictionary and String(data.get("kind", "")) == "money":   # coins from the Money Selector (rent)
+			ui.money_dropped_on_world.emit(int(data.slot), int(data.amount), get_viewport().get_mouse_position())
+			return
 		ui.item_dropped_on_world.emit(int(data.slot), get_viewport().get_mouse_position())
