@@ -69,6 +69,7 @@ keeps your account, characters, companions, bots and settings. New players get t
 - Interface: window transparency, as in the 1.64 client - right-click any window (the chat boxes too) for the Alpha
   panel and its two arrows, or set ALPHA in Options > Interface; text and icons stay solid.
 - Spells: Shift+right-click one of your own buff icons to cancel it.
+- Items: a highlighted item in your backpack, vault or a merchant's list shows its name in its con colour to you.
 - The window title is "Offline DAoC True 1.65 v0.2", and the launcher shows VERSION 0.2.
 
 ### The downloader
