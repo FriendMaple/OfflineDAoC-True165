@@ -9,6 +9,8 @@ hold). Its changelog has the history of everything this version inherits.
 
 - Combat: a monster on its last sliver of health no longer falls over before the hit that kills it.
 - World: two Albion banners floating in the air over Camelot Hills are gone.
+- Looting: you can no longer pick up loot while dead.
+- Groups: removing yourself from a group of bots that follow you releases them, instead of leaving them stuck following you where you could neither disband nor re-invite them.
 
 ## 0.2 (2026-11-01)
 
