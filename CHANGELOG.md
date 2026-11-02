@@ -72,6 +72,15 @@ hold). Its changelog has the history of everything this version inherits.
   Trollheim and Tur Suil, and a Darkness Falls tunnel has its textures again.
 - World: sharper textures on the new traveler's inns (Avalon Marsh, West Svealand, Shannon Estuary) and on some grass
   (Iarnwood, Cothrom Gorge, World's End).
+- World: floors, beams, pillars and furniture that drew in one flat colour have their textures again - the upstairs
+  room above Camelot's Necromancer and Reaver trainers and other Camelot buildings, Hibernia's taverns and housing
+  marketplaces, Norse huts, some Albion dungeon halls, keeps and buildings (47 models: a few broken texture
+  coordinates in the original models flattened the whole surface).
+- Trainers: a RESPEC button beside TRAIN in the training window respecs all your specializations; the server's own
+  "CAUTION: All respec changes are final" box asks you first. The 1.64 client had only /respec all - this is a
+  necessary and simple QoL addition.
+- Quests: REMOVE QUEST in the quest journal asks "Do you really wish to remove this quest?" (YES / NO) before it
+  gives the quest up.
 
 ## 0.1 (2026-11-01)
 
