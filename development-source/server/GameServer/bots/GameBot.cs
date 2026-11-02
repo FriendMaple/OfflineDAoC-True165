@@ -771,6 +771,7 @@ namespace DOL.GS
             var mount = ticket?.Color > 0
                 ? new GameBotTaxi(this, NpcTemplateMgr.GetTemplate(ticket.Color))
                 : new GameBotTaxi(this);
+            mount.Size = GameTaxi.SizeForRace(Race);   // the same race-sized horse a player of this race gets
             mount.Realm = Realm;
             mount.X = route.X;
             mount.Y = route.Y;

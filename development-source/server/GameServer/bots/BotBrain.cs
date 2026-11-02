@@ -1391,6 +1391,11 @@ namespace DOL.AI.Brain
             // True 1.65 Mode: a hired companion left far behind comes back to its player (owner 2026-10-30)
             if (HiredCompanions165.TryRecallToOwner(BotBody) || HiredCompanions165.TryUnstick(BotBody))
                 return;
+            // Any move of a companion (MoveTo stops the brain: WAKING_UP, which BotBrain lacks) left it with no state at all,
+            // standing still until a stuck check moved it again (owner 2026-11-01). A companion in its player's group
+            // follows; FOLLOW itself drops to IDLE while the player is dead.
+            if (FSM.GetCurrentState() == null && BotBody?.IsPlayerCompanion == true && BotBody.IsPlayerLedGroup)
+                FSM.SetCurrentState(eFSMStateType.FOLLOW);
 
             if (PlayerLedPullCoordinator.IsWaiting(BotBody))
             {
