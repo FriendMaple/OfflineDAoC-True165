@@ -24,6 +24,7 @@ keeps your account, characters, companions, bots and settings. New players get t
 - Companions: a companion whose bow is taken away in the middle of a pull switches back to its melee weapons.
 - Companions: you can give your own companions quest and no-trade items.
 - Companions: a companion that dies shows as dead on your companion roster at once.
+- Companions: your hired companions come with you at once when you use a teleporter or release to your bind point.
 - Companions: reviving a companion at a healer after it died while casting no longer breaks its spell effects
   (reported as a client crash when reviving at Epona in Mag Mell).
 
@@ -32,6 +33,9 @@ keeps your account, characters, companions, bots and settings. New players get t
 - Stable horses ride over the bridges on every horse route (Prydwen Bridge, the bridge into Camelot and the rest)
   instead of through or under them ([#1](https://github.com/shadowofze/OfflineDAoC-True165/issues/1)). Still slightly buggy: crossing Prydwen Bridge, the horse can dip into the
   deck a few times, and in the new client horse rides rubber-band (the horse jumps back and forth along the route).
+- Horses: a lag spike no longer throws you off a stable horse in the middle of a route (both clients).
+- Horses: stable horses no longer rubber-band along their route.
+- Horses: gamebots ride horses sized for their race, as players do.
 - Merchant caster staves have their focus levels again (lower spell power cost), and about 470 items regain bonuses
   from their 1.65 descriptions (instrument and weapon skills, resists, staff focus).
 - Camelot: the walls around the round table area no longer show up white, and the palace's closed double door by
