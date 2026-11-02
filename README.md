@@ -33,7 +33,7 @@ project owner, who has no game development or coding experience, directed and pl
 ## Download and play
 
 **[Download v0.2](https://github.com/shadowofze/OfflineDAoC-True165/releases/latest)**, no Git or AI tools needed.
-**Already playing v0.1?** The same downloader updates your game in place with a small download (about 40 MB). Your
+**Already playing v0.1?** The same downloader updates your game in place with a much smaller download (about 2.5 GB). Your
 account, characters, companions and bots stay as they are.
 
 1. On the release page, under **Assets**, download **`Download-OfflineDAoC-True165-v0.2.zip`** (just the
@@ -43,8 +43,8 @@ account, characters, companions and bots stay as they are.
 3. Close the game and the launcher if they're running. Then double-click **`GET-OFFLINE-DAOC-TRUE165.cmd`**. If
    Windows SmartScreen appears, click **More info → Run anyway**. It checks your PC and asks:
    - **1 = Update my game:** it finds your `OfflineDAoC-True165` folder (or asks you to pick it), checks it, and
-     updates it in place (about 40 MB);
-   - **2 = New install:** the complete game, into a new folder (about 31 GB).
+     updates it in place (about 2.5 GB);
+   - **2 = New install:** the complete game, into a new folder (about 36 GB).
 
    If it stops, run it again; it continues where it stopped.
 4. In the `OfflineDAoC-True165` folder, double-click **`START OFFLINE DAOC TRUE 1.65.cmd`**. Click **START
@@ -54,7 +54,7 @@ What you need:
 - 64-bit Windows 10 or 11, with a CPU that supports **AVX2** (the bots' navigation needs it; most CPUs from 2014
   onward do).
 - A graphics card that supports **Vulkan**, with current drivers. It's developed and tested on an RTX 2060 (6 GB).
-- 16 GB RAM recommended, and about 45 GB of free disk space while it installs.
+- 16 GB RAM recommended, and about 48 GB of free disk space for a new install.
 - **Nothing to install or turn on in Windows:** .NET comes with the game. You don't need the Windows ".NET Framework
   3.5" feature, the Visual C++ Redistributable or an original DAoC client.
 

@@ -11,7 +11,8 @@ This guide is for players. You don't need Git, an AI assistant or any programmin
 - A graphics card that supports **Vulkan**, with a current driver. The game is developed and tested on an RTX 2060
   (6 GB). If the downloader says Vulkan wasn't found, install the latest driver from NVIDIA, AMD or Intel.
 - 16 GB RAM recommended.
-- About **45 GB of free disk space** while it installs. Once installed, it takes about 38 GB.
+- About **48 GB of free disk space** for a new install. Once installed, it takes about 43 GB. An update needs
+  about 7 GB free.
 
 **Nothing to install or turn on in Windows.**
 - .NET comes with the game, in its own folder, and the game uses only that copy.
@@ -36,7 +37,7 @@ This guide is for players. You don't need Git, an AI assistant or any programmin
 6. It downloads the game in checked parts and installs it into a new folder, **`OfflineDAoC-True165`**, next to the
    downloader's folder (for example `C:\Games\OfflineDAoC\OfflineDAoC-True165`). If that path would be too long, it
    uses `C:\Games\OfflineDAoC-True165` instead: the game needs a short path to keep its graphics cache. It shows
-   you the folder before it starts. This takes a while: about 31 GB comes down. If it stops, or you close the
+   you the folder before it starts. This takes a while: about 36 GB comes down. If it stops, or you close the
    window, double-click the same file again; it continues where it stopped.
 7. At the end it offers a desktop shortcut. When it says the game is installed, you can delete the downloader
    folder.
@@ -96,7 +97,7 @@ The client's keys and its own commands are in [NEW-CLIENT.md](NEW-CLIENT.md).
 
 ## Updating
 
-A new version comes as a small update to the game you already have, in the folder you installed it in. Your account,
+A new version comes as an update to the game you already have, in the folder you installed it in. Your account,
 characters, companions, bots and settings stay as they are.
 
 1. Quit the game and click **STOP SERVER**, then close the launcher.
@@ -105,7 +106,7 @@ characters, companions, bots and settings stay as they are.
    [1. Download](#1-download).
 3. Double-click **`GET-OFFLINE-DAOC-TRUE165.cmd`** and press **1 = Update my game**. It finds your
    `OfflineDAoC-True165` folder (or asks you to pick it) and shows what it will download.
-4. It checks every file it will replace first. Then it downloads the update (about 40 MB for v0.1 to v0.2), backs up
+4. It checks every file it will replace first. Then it downloads the update (about 2.5 GB for v0.1 to v0.2), backs up
    each file it replaces in `patch-backups\` in your game folder, and puts the new files in.
 5. Start the game as usual. The first **START SERVER** after an update brings the world up to date and can take a
    few minutes.

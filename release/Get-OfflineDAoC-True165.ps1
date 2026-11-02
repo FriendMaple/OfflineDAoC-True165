@@ -441,7 +441,7 @@ if ($choice -eq 'ask') {
     else {
         $found = @(Find-Installed)
         Say ''
-        Say "1 = Update my game (v$(($patch.From) -join ' / v') to v$ReleaseVersion, in the folder it is in; a small download)"
+        Say "1 = Update my game (v$(($patch.From) -join ' / v') to v$ReleaseVersion, in the folder it is in; a smaller download)"
         Say '2 = New install (the complete game, into a new folder)'
         if ($found.Count -gt 0) { Say "Found an installed game: $($found -join ', ')" }
         do { $answer = Read-Host 'Press 1 or 2, then Enter' } until ($answer -match '^\s*[12]\s*$')

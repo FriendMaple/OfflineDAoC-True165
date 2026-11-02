@@ -5,7 +5,7 @@ Isles, November 2003), with a world full of gamebots, hired companions, and a ne
 > experience. Large parts of the game haven't been played through by a person. Expect bugs, and keep a backup of
 > your save.
 
-## Already playing v0.1? Update in place (about 40 MB)
+## Already playing v0.1? Update in place (about 2.5 GB)
 
 1. Quit the game, click **STOP SERVER**, and close the launcher.
 2. Under **Assets** below, download **`Download-OfflineDAoC-True165-v0.2.zip`** (a few KB: just the downloader),
@@ -20,7 +20,7 @@ Isles, November 2003), with a world full of gamebots, hired companions, and a ne
 If it finds files that were changed on your PC, it changes nothing and can make a fresh install that brings your save
 over.
 
-## New players: the complete game (about 31 GB)
+## New players: the complete game (about 36 GB)
 
 1. Download **`Download-OfflineDAoC-True165-v0.2.zip`** below and put it in a folder with a short path, such as
    `C:\Games\OfflineDAoC`. Right-click it, choose **Extract All…**, and open the extracted folder.
@@ -59,7 +59,7 @@ The full list is in the [changelog](https://github.com/shadowofze/OfflineDAoC-Tr
 
 - 64-bit Windows 10 or 11, with a CPU that supports **AVX2** (most from 2014 onward). The downloader checks.
 - A graphics card that supports **Vulkan**, with a current driver.
-- 16 GB RAM recommended, and about 45 GB of free disk space for a new install.
+- 16 GB RAM recommended, and about 48 GB of free disk space for a new install.
 - Nothing to install or turn on in Windows: .NET comes with the game, and the Windows ".NET Framework 3.5" feature,
   the Visual C++ Redistributable and an original DAoC client are **not** needed.
 

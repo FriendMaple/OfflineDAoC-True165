@@ -11,7 +11,7 @@ Nothing yet.
 
 ## 0.2 (2026-11-01)
 
-An update to v0.1: the downloader updates an installed v0.1 game in place with a small download (about 40 MB), and
+An update to v0.1: the downloader updates an installed v0.1 game in place (about 2.5 GB instead of the full 36 GB), and
 keeps your account, characters, companions, bots and settings. New players get the complete game, as before.
 
 ### Gamebots and companions
