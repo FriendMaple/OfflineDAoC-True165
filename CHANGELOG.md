@@ -13,6 +13,7 @@ hold). Its changelog has the history of everything this version inherits.
 - Groups: removing yourself from a group of bots that follow you releases them, instead of leaving them stuck following you where you could neither disband nor re-invite them.
 - Chat: %t or %T in a chat line is replaced by your target's name (or "<nothing>" with no target), as in the 1.64 client - for example /s Healing %t.
 - Interface: the status window gets its thin red border while you are in attack mode (melee), as in the 1.64 client.
+- Companions: a companion that levels shows its new level in the group window at once ([#7](https://github.com/shadowofze/OfflineDAoC-True165/issues/7)).
 
 ## 0.2 (2026-11-01)
 
