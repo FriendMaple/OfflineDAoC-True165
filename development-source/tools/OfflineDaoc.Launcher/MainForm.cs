@@ -2586,6 +2586,8 @@ internal sealed partial class MainForm : Form
                 RedirectStandardInput = true,
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
+                // No byte-order mark before "exit" (the server took that mark + "exit" for a command and kept running)
+                StandardInputEncoding = new System.Text.UTF8Encoding(false),
             };
             _serverProcess = new Process { StartInfo = startInfo, EnableRaisingEvents = true };
             _serverProcess.OutputDataReceived += (_, args) => { try { if (args.Data is not null) _serverLog?.WriteLine(args.Data); } catch (Exception) { } };
