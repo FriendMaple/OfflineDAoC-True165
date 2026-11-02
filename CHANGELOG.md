@@ -61,6 +61,9 @@ keeps your account, characters, companions, bots and settings. New players get t
 - Loading screens: the 1.64 client's classic loading bar and layout, with the loading picture at its own size, the
   glass bar in its bottom right corner and "Loading..." beside it.
 - Loot: dropped loot shows the 1.64 client's classic bag instead of the later Catacombs one.
+- Death: one death window with the release timer, its bar (the 1.64 client's green bar art) and /RELEASE, /RELEASE
+  CITY and /RELEASE HOUSE, all inside the window. The separate Release Timer window is gone, and /RELEASE BIND (the
+  same as /RELEASE) was removed. Crafting, salvage and repair timer bars stay inside their window too.
 - The window title is "Offline DAoC True 1.65 v0.2", and the launcher shows VERSION 0.2.
 
 ### The downloader
