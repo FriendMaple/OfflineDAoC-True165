@@ -7,7 +7,8 @@ hold). Its changelog has the history of everything this version inherits.
 
 ## Coming in 0.3
 
-Nothing yet.
+- Combat: a monster on its last sliver of health no longer falls over before the hit that kills it.
+- World: two Albion banners floating in the air over Camelot Hills are gone.
 
 ## 0.2 (2026-11-01)
 
