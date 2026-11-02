@@ -513,6 +513,15 @@ public partial class DaocClient : Node
 		Send(0x7B, new Writer());
 	}
 
+	// PlayerCancelsEffectHandler (0xF8): cancel one of your own effects - the effect id UpdateIcons gave it (the
+	// server's TryGetEffectFromEffectId). Shift + right-click on its icon (a player report 2026-11-01).
+	public void CancelEffect(int effectId)
+	{
+		var w = new Writer();
+		w.Short((ushort)effectId);
+		Send(0xF8, w);
+	}
+
 	// RemoveConcentrationEffectHandler: cancel one of your concentration spells (its place in ConcentrationList).
 	public void RemoveConcentration(int index)
 	{

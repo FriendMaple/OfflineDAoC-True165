@@ -37,6 +37,11 @@ hold). Its changelog has the history of everything this version inherits.
 - Death: one death window with the release timer, its bar (the 1.64 client's green bar art) and /RELEASE, /RELEASE
   CITY and /RELEASE HOUSE, all inside the window - the separate Release Timer window is gone, and /RELEASE BIND (the
   same as /RELEASE) was removed. Crafting, salvage and repair timer bars stay inside their window too.
+- Items: the Destroy Item key (Shift+D) now works, as in the 1.64 client - right-click an item to select it, press
+  the key and answer "Do you really wish to destroy this item?" (indestructible items, relics and worn items stay).
+- Interface: window transparency, as in the 1.64 client - right-click any window (the chat boxes too) for the Alpha
+  panel and its two arrows, or set ALPHA in Options > Interface; text and icons stay solid.
+- Spells: Shift+right-click one of your own buff icons to cancel it.
 - Companions: reviving a companion at a healer after it died while casting no longer breaks its spell effects
   (reported as a client crash when reviving at Epona in Mag Mell).
 - NPCs: NPCs stored a little below their floor now stand on it, as the original client drew them - Gothwaite Harbor's

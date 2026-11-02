@@ -508,6 +508,11 @@ func _interface() -> void:
 			ui.set_ui_scale(scale_slider.value))
 	_row("UI SCALE", scale_slider)
 	_hint("THE INTERFACE KEEPS ITS SIZE ON SCREEN AT ANY RESOLUTION; UI SCALE MAKES ALL OF IT BIGGER OR SMALLER.")
+	# the 1.64 client's "Alpha: N%" (game.dll Options, saved [Panels] Alpha): the windows' see-through-ness
+	_row("ALPHA", _slider(ClassicWindow.interface_alpha() * 100.0, 10, 100, 5, func(x: float):
+		_save("interface", "alpha", x)
+		ClassicWindow.set_interface_alpha(x, get_tree())))
+	_hint("HOW SOLID THE WINDOWS ARE (THE CHAT BOXES TOO) - LOWER SEES THE WORLD THROUGH THEM; TEXT AND ICONS STAY SOLID.")
 	if Server.world_mode != "1.65":                    # (1.65 Mode refuses /autoloot: owner 2026-10-30)
 		_heading("LOOT")
 		_row("AUTO LOOT", _toggle(Loot.autoloot(), func(on: bool): Loot.set_autoloot(on)))

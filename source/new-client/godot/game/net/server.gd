@@ -1335,7 +1335,7 @@ func effects_list() -> Array:
 		var ic := skill_icon("icon" if bool(e.get("ability", false)) else "spell", int(e.icon))
 		out.append({"icon": int(ic[0]), "border": int(ic[1]), "name": String(e.name), "fx": int(e.icon),
 				"seconds": maxf(0.001, (int(e.until) - now) / 1000.0) if int(e.until) > 0 else 1e9,
-				"disabled": bool(e.get("disabled", false))})
+				"disabled": bool(e.get("disabled", false)), "negative": int(e.get("negative", 0)) != 0})
 	return out
 
 

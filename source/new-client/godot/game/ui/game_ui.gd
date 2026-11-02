@@ -1183,6 +1183,29 @@ func message(text: String, kind := "system") -> void:
 
 
 ## The information window for an item (shift-click on it).
+## Destroy Item (its key, Shift+D by default): the selected item, as the 1.64 client - game.dll asks "Do you really
+## wish to / destroy this item?" for the item selected in the backpack or worn, and sends the server's
+## DestroyItemRequest (0x80) on yes (a player report: destroying did nothing - the key had no handler). The server
+## refuses what may not go (indestructible, a relic, an equipped item) with its own message.
+func _destroy_selected() -> void:
+	var slot := PlayerData.selected_slot
+	var it := PlayerData.item_at(slot)
+	if it.is_empty():
+		return
+	UiArt.confirm(root, "", "Do you really wish to\ndestroy this item?", "ACCEPT", "DECLINE", func():
+		if PlayerData.item_at(slot).is_empty():
+			return
+		if Server.active:
+			Server.client.call("DestroyItem", slot)
+		elif PlayerData.is_backpack(slot):
+			PlayerData.inventory.erase(slot)
+			PlayerData.inventory_changed.emit()
+			PlayerData.save_character()
+			PlayerData.message.emit("You destroy the %s." % String(it.get("name", "item")), "system")
+		else:
+			PlayerData.message.emit("You cannot destroy an equipped item!", "system"))
+
+
 ## The death window (owner 2026-11-01: ONE window - the release timer and its bar over the buttons, no separate timer
 ## window): the release timer's line, the 1.64 green bar (greenbg / greenfull, the endurance bar's art) and /RELEASE,
 ## /RELEASE CITY, /RELEASE HOUSE - the server's /release commands of that kind (its /RELEASE BIND dropped: the same as
@@ -1327,7 +1350,7 @@ func _refresh_effects() -> void:
 	var effs := _player_effects()
 	for i in effs.size():
 		_effect_box(int(effs[i].icon), int(effs[i].border), String(effs[i].name).to_upper(), i, int(effs[i].get("fx", -1)),
-				bool(effs[i].get("disabled", false)))
+				bool(effs[i].get("disabled", false)), Server.active and not bool(effs[i].get("negative", true)))
 	_tick_effects()
 
 
@@ -1346,6 +1369,14 @@ const EFFECT_ICON := 32.0                     # px (the client's 20; owner 2026-
 class EffectBox extends Control:
 	var fx := -1
 	var title := ""
+	var can_cancel := false
+
+	# shift + right-click on one of your own beneficial effects ends it (the server's PlayerCancelsEffect, by its
+	# icon id; a player report 2026-11-01 - the concentration window already cancelled concentration buffs this way)
+	func _gui_input(ev: InputEvent) -> void:
+		if can_cancel and fx > 0 and ev is InputEventMouseButton and ev.pressed and ev.shift_pressed 				and ev.button_index == MOUSE_BUTTON_RIGHT and Server.client:
+			Server.client.call("CancelEffect", fx)
+			accept_event()
 
 	func _notification(what: int) -> void:
 		if what == NOTIFICATION_MOUSE_ENTER and Server.active and fx > 0:
@@ -1363,10 +1394,14 @@ class EffectBox extends Control:
 const EFFECT_DISABLED := Color(255 / 255.0, 35 / 255.0, 97 / 255.0)
 
 
-func _effect_box(icon: int, border: int, tip: String, index: int, fx := -1, disabled := false) -> void:
+func _effect_box(icon: int, border: int, tip: String, index: int, fx := -1, disabled := false, can_cancel := false) -> void:
 	var box := EffectBox.new()
 	box.fx = fx
 	box.title = tip
+	box.can_cancel = can_cancel
+	if can_cancel:
+		tip += "
+SHIFT + RIGHT-CLICK TO CANCEL"
 	box.custom_minimum_size = Vector2(EFFECT_ICON, EFFECT_ICON + 12)
 	box.tooltip_text = tip
 	box.mouse_filter = Control.MOUSE_FILTER_PASS
@@ -1937,6 +1972,9 @@ func handle_input(event: InputEvent) -> bool:
 			PlayerData.item_used.emit(String(PlayerData.entry(PlayerData.selected_slot).id))   # quest items: use_item steps
 		elif not it.is_empty():
 			PlayerData.message.emit("You can't use the %s." % it.get("name", "item"), "error")
+		return true
+	if Keybinds.pressed(event, "destroy_item") and PlayerData.selected_slot >= 0:
+		_destroy_selected()
 		return true
 	if Keybinds.pressed(event, "show_compass"):
 		windows.compass.toggle_window()
