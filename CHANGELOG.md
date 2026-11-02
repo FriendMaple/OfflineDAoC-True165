@@ -55,6 +55,11 @@ keeps your account, characters, companions, bots and settings. New players get t
   opens the war map too. Default keys the 1.65 key file gives an unknown modifier no longer fire on the bare key
   (Nearest Friend took Tab from Target Enemy, Chat Logging took L from the combat window); bind those in Options.
 
+### Quests
+
+- You can still hand in quest items after outleveling a quest you already have (for example the Necromancer quest
+  Inconnu Poison).
+
 ### The new client
 
 - Mouse Look Toggle, as in the original client, can be switched on in Options > Controls (off by default). Once on,
