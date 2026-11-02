@@ -1814,8 +1814,11 @@ func _add_object(d: Dictionary) -> void:
 		return                                                     # the zone already has it (baked, with its fixes)
 		# (never a relic: it lies on its pad - a baked world object right under it)
 	var m := WeaponModels.make_world(model)
-	if m == null:
-		m = HouseViewScript.item_model(model)                     # housing's: lot markers, vaults, bindstones, tools
+	if m == null and model in HOUSE_USE_MODELS:
+		# housing's own ground objects only (lot markers, vaults, bindstones, tools) - not any id in the house-item
+		# range: loot whose model number is a house item there (dragon ant carapace = 1575 = a rose trellis) drew as
+		# garden furniture (owner 2026-11-02) - loot keeps the bag
+		m = HouseViewScript.item_model(model)
 	if m == null:
 		m = WeaponModels.make_world(BAG_MODEL)                     # loot without a world model: the brown bag
 	if m == null:
