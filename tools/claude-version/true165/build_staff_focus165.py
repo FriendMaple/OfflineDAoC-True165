@@ -97,13 +97,20 @@ probe = json.load(open(os.path.join(HERE, 'missing_bonuses165_updates.json'), en
 probe_ids = {re.search(r"Id_nb = '(.*)'$", u['sql']).group(1).replace("''", "'").lower() for u in probe}
 cols = ['Id_nb', 'Name'] + [f'Bonus{i}Type' for i in range(1, 11)] + [f'Bonus{i}' for i in range(1, 11)]
 staff_updates = []
+installed_staves = {}
+for u in json.load(open(os.path.join(HERE, 'true165-rules.json'), encoding='utf-8')).get('updates', []):
+    if u.get('reason', '').startswith('True 1.65 merchant focus staves:'):
+        installed_staves[re.search(r"Id_nb = '(.*)'$", u['sql']).group(1).replace("''", "'").lower()] = u
 for row in db.execute(f"SELECT {','.join(cols)} FROM ItemTemplate WHERE Object_Type = 8"):
     d = dict(zip(cols, row))
     want = focus_for(d['Name'])
     if not want or d['Id_nb'].lower() in probe_ids:
         continue
     if any(120 <= (d[f'Bonus{i}Type'] or 0) <= 165 and d[f'Bonus{i}'] for i in range(1, 11)):
-        continue   # already has focus
+        # Already has focus: its own (left alone), or ours from an earlier run on a refreshed world (kept as installed).
+        if d['Id_nb'].lower() in installed_staves:
+            staff_updates.append(installed_staves[d['Id_nb'].lower()])
+        continue
     free = [i for i in range(1, 11) if not d[f'Bonus{i}Type'] or not d[f'Bonus{i}']]
     sets = [f'Bonus{slot}Type = {prop}, Bonus{slot} = {lvl}' for (prop, lvl), slot in zip(sorted(want.items()), free)]
     staff_updates.append({'sql': f"UPDATE ItemTemplate SET {', '.join(sets)} WHERE Id_nb = '" + d['Id_nb'].replace("'", "''") + "'",
@@ -124,3 +131,29 @@ if write:
         nl = b'\r\n' if b'\r\n' in raw else b'\n'
         open(p, 'wb').write(json.dumps(rules, indent=1, ensure_ascii=False).encode('utf-8').replace(b'\n', nl) + (nl if raw.endswith(nl) else b''))
         print('installed in', p, len(ups), 'updates')
+        # Items that an add-*.json file creates (the drop / vendor passes) are written over by the launcher's add step,
+        # which runs after the "updates": put their bonuses into the add-file row too, or they never reach the world.
+        # Re-running a builder that regenerates those add files means re-running this one afterwards.
+        fixes = {}
+        for u in probe + staff_updates:
+            m = re.match(r"UPDATE ItemTemplate SET (.*) WHERE Id_nb = '(.*)'$", u['sql'])
+            pairs = re.findall(r"(\w+) = (-?\d+)", m.group(1))
+            fixes[m.group(2).replace("''", "'").lower()] = [(col, int(val)) for col, val in pairs]
+        for name in sorted(os.listdir(folder)):
+            if not (name.startswith('add-') and name.endswith('.json')):
+                continue
+            ap = os.path.join(folder, name)
+            raw = open(ap, 'rb').read()
+            data = json.loads(raw.decode('utf-8'))
+            if not isinstance(data, dict) or data.get('table') != 'ItemTemplate':
+                continue
+            n = 0
+            for row in data['rows']:
+                for col, val in fixes.get(str(row.get('Id_nb', '')).lower(), []):
+                    if row.get(col) != val:
+                        row[col] = val
+                        n += 1
+            if n:
+                nl = b'\r\n' if b'\r\n' in raw else b'\n'
+                open(ap, 'wb').write(json.dumps(data, indent=1, ensure_ascii=False).encode('utf-8').replace(b'\n', nl) + (nl if raw.endswith(nl) else b''))
+                print('  ', name, n, 'bonus fields set in its rows')
