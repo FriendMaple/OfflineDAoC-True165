@@ -660,6 +660,11 @@ func _move(d: Dictionary) -> void:
 	mv["water"] = (int(d.flags) & 0x10) != 0                    # the server's "underwater" (npc.IsUnderwater)
 	mv["sy"] = p.y                                              # the server's Z: every height is found from it (_ground)
 	mv["speed"] = float(int(d.speed))                           # (before _ground: a mover goes on the ground)
+	mv["dest"] = null                                           # (before _ground too: a ridden steed's leg height)
+	if int(d.tx) != 0 or int(d.ty) != 0:
+		var dp := _zone_pos(int(d.tzone), int(d.tx), int(d.ty), int(d.tz))
+		if dp != Vector3.INF:
+			mv["dest"] = dp
 	_mover[st] = mv
 	var ridden := _ridden(st)
 	# a ridden steed at 37 m/s is a few metres off the server's place at every update: snapping it there (SNAP_M) made
@@ -673,14 +678,23 @@ func _move(d: Dictionary) -> void:
 		pass
 	elif st.pos.distance_to(p) > snap or float(d.speed) == 0.0:
 		st.pos = p
+		mv["err"] = Vector3.ZERO
+	elif ridden:
+		# a ridden steed is never stepped back toward the server's place (server chat 2026-11-01: the route horse moved
+		# at 45-75% of its packet speed on dense route points and stalled ~1.5 s now and then - the 25% lerp jumped it
+		# back 10-15 times a second, up to 5-8 m after a stall: rubber-banding): the gap is kept and _move_ridden
+		# paces it off - slower or up to 50% faster along its way, never backwards
+		var err := p - st.pos
+		err.y = 0.0
+		mv["err"] = err
 	else:
-		st.pos = st.pos.lerp(p, 0.25 if ridden else 0.5)       # close: ease into the server's place
+		st.pos = st.pos.lerp(p, 0.5)                            # close: ease into the server's place
 	if not seated and not (ridden and String(st.info.get("figure", "")).to_lower() in FLIER_FIGURES):
 		_ground(st)
-	if not ridden:
+	if not ridden or float(d.speed) == 0.0:
 		st.yaw = Server.yaw_of(int(d.heading))
-	else:                                                       # (turned smoothly by _move_ridden, never flipped)
-		st.yaw = lerp_angle(st.yaw, Server.yaw_of(int(d.heading)), 0.5)
+	# (a ridden steed on the move is turned by _move_ridden alone: pulling it toward the update's heading, which may be
+	# a stale leg's, fought its steering)
 	mv["target"] = int(d.target)
 	_note_facing(st, int(d.oid), int(d.target), int(d.heading), float(d.speed))
 	# the server's attack state (ObjectUpdate's target: > 0 while it attacks - PacketLib168, "enables the NPC's attack
@@ -692,11 +706,6 @@ func _move(d: Dictionary) -> void:
 	elif bool(mv.get("saw_target", false)):
 		mv["saw_target"] = false
 		st.combat_until = 0
-	mv["dest"] = null
-	if int(d.tx) != 0 or int(d.ty) != 0:
-		var dp := _zone_pos(int(d.tzone), int(d.tx), int(d.ty), int(d.tz))
-		if dp != Vector3.INF:
-			mv["dest"] = dp
 	var hp := int(d.health)
 	_death_note(st, d, p, hp, drawn_before)
 	_set_health(st, hp)
@@ -765,6 +774,17 @@ func _ground(st: NpcState) -> void:
 	# height it starts from, so starting from the drawn height let a walker that met a tree, a fixture or a rock ratchet up
 	# it 1.6 m at a time, tick after tick - the server's next update only pulled it halfway back.
 	var ref := float(mv.get("sy", st.pos.y))
+	# a ridden steed on the move (server chat 2026-11-01: a route horse gets one update per leg, so the server's Z was
+	# the leg's start for the whole leg - a leg climbing a bridge ramp over 64 units started the pick under the deck,
+	# and the horse dipped to the river bed at Prydwen Bridge): its height follows the leg, from the update's Z to its
+	# destination's by how far along it has come. Still the server's heights, never the drawn one (no ratchet).
+	var dest = mv.get("dest")
+	if dest is Vector3 and float(mv.get("speed", 0.0)) > 0.0 and mv.has("srv_pos") and _ridden(st):
+		var from: Vector3 = mv.srv_pos
+		var leg := Vector2(dest.x - from.x, dest.z - from.z).length()
+		if leg > 0.5:
+			var done := Vector2(st.pos.x - from.x, st.pos.z - from.z).length()
+			ref = lerpf(ref, float(dest.y), clampf(done / leg, 0.0, 1.0))
 	var at := Vector3(st.pos.x, ref, st.pos.z)
 	# in deep water (owner 2026-10-14: companion bots stood on top of the water): the server holds a swimmer at the
 	# surface (AutonomousNavigationSurface) and flags it underwater; it swims there - your own swim height
@@ -1038,7 +1058,17 @@ func _move_ridden(s: NpcState, mv: Dictionary, step: float, delta: float) -> voi
 		if to.length() > step and to.normalized().dot(ahead) > 0.0:
 			aim = atan2(to.x, to.z)                            # still ahead: steer for it
 	s.yaw = lerp_angle(s.yaw, aim, minf(1.0, delta * 6.0))
-	s.pos += Vector3(sin(s.yaw), 0.0, cos(s.yaw)) * step
+	# the gap to the server's place (_move keeps it): the part along its way is paced off (step + up to 1 s of it per
+	# second, never below 0 or above 1.5 steps), the part to the side eased in
+	var ahead := Vector3(sin(s.yaw), 0.0, cos(s.yaw))
+	var err: Vector3 = mv.get("err", Vector3.ZERO)
+	err.y = 0.0
+	var along := err.dot(ahead)
+	var side := err - ahead * along
+	var adv := clampf(step + along * minf(1.0, delta), 0.0, step * 1.5)
+	var fix_side := side * minf(1.0, delta * 3.0)
+	s.pos += ahead * adv + fix_side
+	mv["err"] = ahead * (along - (adv - step)) + (side - fix_side)
 	if String(s.info.get("figure", "")).to_lower() in FLIER_FIGURES:
 		s.pos.y = lerpf(s.pos.y, float(mv.get("sy", s.pos.y)), minf(1.0, delta * 4.0))
 	else:
