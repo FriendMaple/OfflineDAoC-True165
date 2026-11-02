@@ -8,10 +8,26 @@ hold). Its changelog has the history of everything this version inherits.
 ## Coming in 0.2
 
 - Companions: a companion whose bow is taken away in the middle of a pull switches back to its melee weapons.
-- Travel: a zone or route the client does not have now says it is not in this client or not available.
-- Controls: Mouse Look Toggle is back, as in the original client: right-click on open ground to turn mouse look on (the
-  mouse turns you with no button held), and right-click again or press Esc to turn it off. Right-clicking NPCs and
-  objects still works as before, and you can rebind it in Options > Controls.
+- Controls: Mouse Look Toggle, as in the original client, can be switched on in Options > Controls (off by default).
+  Once on, right-click on open ground to turn mouse look on (the mouse turns you with no button held), and right-click
+  again or press Esc to turn it off. Right-clicking NPCs and objects still works as before, and the key can be rebound.
+- Chat: Shift+Up and Shift+Down go through your last 10 sent lines, as in the original 1.64 client; Shift+Up with the
+  chat line closed opens it with your last line. One minor convenience over the real 1.64 behavior: stepping past the
+  newest line with Shift+Down brings back what you were typing (1.64 shows an empty line).
+- Controls: /qbar works as in the 1.64 client: /qbar # shows quickbar bank # (1-10).
+- Loading screens: the 1.64 client's classic loading bar and layout - the loading picture at its own size, the glass
+  bar in its bottom right corner and "Loading..." beside it.
+- Loot: dropped loot shows the 1.64 client's classic bag instead of the later Catacombs one.
+- Companions: reviving a companion at a healer after it died while casting no longer breaks its spell effects
+  (reported as a client crash when reviving at Epona in Mag Mell).
+- NPCs: NPCs stored a little below their floor now stand on it, as the original client drew them - Gothwaite Harbor's
+  dye merchants were sunk to the neck (GitHub issue #4).
+- Camelot: the walls around the round table area no longer show up white, and the palace's closed double door by
+  Guard Eraedus is back (GitHub issue #2).
+- World: missing doors, doorways and doorsteps now show in Caer Sidi, Muspelheim, Yggdra Forest, Odin's Gate,
+  Trollheim and Tur Suil, and a Darkness Falls tunnel has its textures again.
+- World: sharper textures on the new traveler's inns (Avalon Marsh, West Svealand, Shannon Estuary) and on some grass
+  (Iarnwood, Cothrom Gorge, World's End).
 
 ## 0.1 (2026-11-01)
 
