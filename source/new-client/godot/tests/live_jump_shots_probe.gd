@@ -65,6 +65,15 @@ class Driver extends Node:
 				print("[shots] FAIL: after the jump the zone is %s, not %d" % [str(viewer.zone.info.id), zid])
 			p = viewer.player.global_position
 			print("[shots] at %s: %s" % [look, str(p)])
+			for nm in _arg("names", "").split(";", false):        # NPCs to measure: server height vs where drawn
+				for st in viewer.npcs.states:
+					if String((st as NpcState).spawn.get("name", "")).to_lower() == nm.to_lower():
+						var mv: Dictionary = viewer.npcs._mover.get(st, {})
+						var sy := float(mv.get("sy", NAN))
+						var v3 = viewer.npcs._view_of(int(st.spawn.get("oid", 0)))
+						var dy: float = (v3 as Node3D).global_position.y if v3 else NAN
+						print("[shots] %-18s server height %.2f m, drawn at %.2f m (%+.2f); you stand at %.2f m" % [nm, sy, dy,
+								dy - sy, p.y])
 			var lcam := Camera3D.new()
 			viewer.add_child(lcam)
 			lcam.far = 2000.0
