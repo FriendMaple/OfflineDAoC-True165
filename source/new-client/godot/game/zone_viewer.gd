@@ -838,12 +838,48 @@ func _input(event: InputEvent) -> void:
 		combat.casting.set_ground_target(player.camera, get_viewport().get_mouse_position())
 		if combat.casting.ground_target != null:
 			show_ground_target(combat.casting.ground_target)
+	elif _track_key(event) != "" and not player._ui_typing():
+		# Follow / Stick / Face keys (owner 2026-11-02: no binding did anything - only /follow /stick /face and the
+		# command buttons worked): the same as those commands, on your target; pressed again, they stop
+		PlayerData.track_requested.emit(_track_key(event))
+		get_viewport().set_input_as_handled()
+	elif npcs is ServerWorld and not player._ui_typing() and _server_target_key(event):
+		get_viewport().set_input_as_handled()
 	elif Keybinds.pressed(event, "target_group_1") and not player._ui_typing():
 		target_self()                                      # Target Group #1 (F1): you - always the first of your group
 	elif Keybinds.pressed(event, "target_enemy") and npcs:
 		var n := npcs.nearest_enemy()
 		if n:
 			npcs.select(n)
+
+
+## The 1.64 client's other targeting keys on the server (owner 2026-11-02: no code read them): Target Group #2-8,
+## Target Friend, Target Object, Last Attacker, Consider. True when the event was one of them.
+func _server_target_key(event: InputEvent) -> bool:
+	var sw := npcs as ServerWorld
+	for i in range(2, 9):
+		if Keybinds.pressed(event, "target_group_%d" % i):
+			sw.target_group_member(i)
+			return true
+	if Keybinds.pressed(event, "target_friend"):
+		sw.target_nearest_friend()
+	elif Keybinds.pressed(event, "target_object"):
+		sw.target_nearest_object()
+	elif Keybinds.pressed(event, "target_last_attacker"):
+		sw.target_last_attacker()
+	elif Keybinds.pressed(event, "consider"):
+		sw.consider_target()
+	else:
+		return false
+	return true
+
+
+## Which of the Follow / Stick / Face keys this event is ("" for none).
+func _track_key(event: InputEvent) -> String:
+	for mode in ["follow", "stick", "face"]:
+		if Keybinds.pressed(event, mode):
+			return mode
+	return ""
 
 
 ## You as your own target (the original client: F1 / Target Group #1, or a click on your character): your name and

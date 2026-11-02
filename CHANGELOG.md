@@ -81,6 +81,12 @@ hold). Its changelog has the history of everything this version inherits.
   necessary and simple QoL addition.
 - Quests: REMOVE QUEST in the quest journal asks "Do you really wish to remove this quest?" (YES / NO) before it
   gives the quest up.
+- Controls: the 1.64 client's keys that did nothing now work - Follow, Stick and Face (on your target; press again
+  to stop), Camera Reset, Look Up / Look Down, Target Group #2-8, Target Friend, Target Object, Last Attacker,
+  Consider, Command Window (opens the chat line with "/"), Help (the server's command list), Chat Logging (to
+  CHAT.LOG beside the game), Toggle Names (/hidenames and /shownames too) and the Perf. Meter. The Realm War Map key
+  opens the war map too. Default keys the 1.65 key file gives an unknown modifier no longer fire on the bare key
+  (Nearest Friend took Tab from Target Enemy, Chat Logging took L from the combat window); bind those in Options.
 
 ## 0.1 (2026-11-01)
 

@@ -215,6 +215,8 @@ func _client_command(text: String) -> bool:
 			PlayerData.track_requested.emit(cmd)
 		"realmwar", "rw":
 			PlayerData.window_toggle.emit("warmap")
+		"hidenames", "shownames":                       # the 1.64 client's own (game.dll &hidenames / &shownames)
+			NamePlates.hidden = cmd == "hidenames"
 		"craft" when Server.active and rest == "":       # the tradeskill window (the original's own /craft;
 			PlayerData.window_toggle.emit("craft")         # owner 2026-10-30)
 		"qbar":
