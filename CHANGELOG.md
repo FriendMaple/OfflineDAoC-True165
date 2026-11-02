@@ -19,6 +19,10 @@ hold). Its changelog has the history of everything this version inherits.
   rest) instead of through or under them ([#1](https://github.com/shadowofze/OfflineDAoC-True165/issues/1)). Still
   slightly buggy: crossing Prydwen Bridge, the horse can dip into the deck a few times, and in the new client horse
   rides rubber-band (the horse jumps back and forth along the route).
+- Horses: a lag spike no longer throws you off a stable horse in the middle of a route (both clients).
+- Horses: stable horses no longer rubber-band along their route.
+- Horses: gamebots ride horses sized for their race, as players do.
+- Companions: your hired companions come with you at once when you use a teleporter or release to your bind point.
 - Items: merchant caster staves have their focus levels again (lower spell power cost), and about 470 items regain
   bonuses from their 1.65 descriptions (instrument and weapon skills, resists, staff focus).
 - Quests: you can still hand in quest items after outleveling a quest you already have (for example the Necromancer
