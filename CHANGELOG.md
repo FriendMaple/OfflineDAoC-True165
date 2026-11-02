@@ -51,6 +51,10 @@ keeps your account, characters, companions, bots and settings. New players get t
   NPCs in the Vale of Mularn and the Black Mountains stood in their floor.
 - Half Ogre, Frostalf and Shar NPCs (about 150 of them, General Vaul among them) draw with their own classic figures
   instead of broken.
+- World: floors, beams, pillars and furniture that drew in one flat colour have their textures again - the upstairs
+  room above Camelot's Necromancer and Reaver trainers and other Camelot buildings, Hibernia's taverns and housing
+  marketplaces, Norse huts, some Albion dungeon halls, keeps and buildings (47 models: a few broken texture
+  coordinates in the original models flattened the whole surface).
 
 ### Housing (new)
 
@@ -69,6 +73,8 @@ keeps your account, characters, companions, bots and settings. New players get t
 
 - You can still hand in quest items after outleveling a quest you already have (for example the Necromancer quest
   Inconnu Poison).
+- Quests: REMOVE QUEST in the quest journal asks "Do you really wish to remove this quest?" (YES / NO) before it
+  gives the quest up.
 
 ### The new client
 
@@ -92,6 +98,9 @@ keeps your account, characters, companions, bots and settings. New players get t
 - Spells: Shift+right-click one of your own buff icons to cancel it.
 - Items: a highlighted item in your backpack, vault or a merchant's list, and the right-click box, show the item's name
   in its con colour to you.
+- Trainers: a RESPEC button beside TRAIN in the training window respecs all your specializations; the server's own
+  "CAUTION: All respec changes are final" box asks you first. The 1.64 client had only /respec all - this is a
+  necessary and simple QoL addition.
 - The window title is "Offline DAoC True 1.65 v0.2", and the launcher shows VERSION 0.2.
 
 ### The launcher and the downloader
