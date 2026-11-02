@@ -1647,9 +1647,18 @@ func show_info(it: Dictionary, full := true) -> void:
 	for b in _info_buttons:
 		b.visible = _info_slot >= 0
 	(w.get_node("Title") as Label).text = String(it.get("name", "")).to_upper()
+	info_title_con(it)
 	var body := w.get_node("Body") as RichTextLabel
 	body.text = "\n".join(ItemDb.delve(it) if full else ItemDb.summary(it))
 	_fit_info(w, body)
+
+
+## The information window's title in the item's con colour to you, as in the lists (owner 2026-11-02: the
+## right-click box too); an item without a level keeps the window's gold.
+func info_title_con(it: Dictionary) -> void:
+	var lv := int(it.get("level", 0))
+	(windows.info.get_node("Title") as Label).add_theme_color_override("font_color",
+			UiArt.GOLD_HI if lv <= 0 else ItemTooltip.con_color(lv, PlayerData.level))
 
 
 ## Lines of text in the information window under a title (the /task snapshot).
@@ -1657,6 +1666,7 @@ func show_lines(title: String, lines: Array) -> void:
 	var w: ClassicWindow = windows.info
 	_hide_info_buttons()
 	(w.get_node("Title") as Label).text = title.to_upper()
+	(w.get_node("Title") as Label).add_theme_color_override("font_color", UiArt.GOLD_HI)
 	var body := w.get_node("Body") as RichTextLabel
 	body.text = "
 ".join(lines)
@@ -1697,6 +1707,7 @@ func show_skill_info(entry: Dictionary) -> void:
 								# showed a buff)
 	var w: ClassicWindow = windows.info
 	(w.get_node("Title") as Label).text = String(entry.get("name", "")).to_upper()
+	(w.get_node("Title") as Label).add_theme_color_override("font_color", UiArt.GOLD_HI)
 	var body := w.get_node("Body") as RichTextLabel
 	body.text = "
 ".join(SkillInfo.lines(entry))

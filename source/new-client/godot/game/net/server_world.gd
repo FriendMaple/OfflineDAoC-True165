@@ -153,6 +153,7 @@ func _on_world(kind: String, d: Dictionary) -> void:
 				else:
 					viewer.ui.show_lines(String(d.caption), d.lines)
 					if Server.info_item_slot >= 0:               # the item you right-clicked: SALVAGE / REPAIR under it
+						viewer.ui.info_title_con(PlayerData.item_at(Server.info_item_slot))   # (its name in its con colour)
 						viewer.ui.show_item_buttons(Server.info_item_slot)
 						Server.info_item_slot = -1
 		"trainer":

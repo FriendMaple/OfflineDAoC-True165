@@ -46,7 +46,8 @@ hold). Its changelog has the history of everything this version inherits.
 - Interface: window transparency, as in the 1.64 client - right-click any window (the chat boxes too) for the Alpha
   panel and its two arrows, or set ALPHA in Options > Interface; text and icons stay solid.
 - Spells: Shift+right-click one of your own buff icons to cancel it.
-- Items: a highlighted item in your backpack, vault or a merchant's list shows its name in its con colour to you.
+- Items: a highlighted item in your backpack, vault or a merchant's list, and the right-click box, show the item's name
+  in its con colour to you.
 - Companions: reviving a companion at a healer after it died while casting no longer breaks its spell effects
   (reported as a client crash when reviving at Epona in Mag Mell).
 - NPCs: NPCs stored a little below their floor now stand on it, as the original client drew them - Gothwaite Harbor's
