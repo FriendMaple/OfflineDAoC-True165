@@ -31,8 +31,8 @@ keeps your account, characters, companions, bots and settings. New players get t
 ### World and items
 
 - Stable horses ride over the bridges on every horse route (Prydwen Bridge, the bridge into Camelot and the rest)
-  instead of through or under them ([#1](https://github.com/shadowofze/OfflineDAoC-True165/issues/1)). Still slightly buggy: crossing Prydwen Bridge, the horse can dip into the
-  deck a few times, and in the new client horse rides rubber-band (the horse jumps back and forth along the route).
+  instead of through or under them ([#1](https://github.com/shadowofze/OfflineDAoC-True165/issues/1)). Still a little buggy: crossing Prydwen Bridge, the horse can dip into
+  the deck now and then.
 - Horses: a lag spike no longer throws you off a stable horse in the middle of a route (both clients).
 - Horses: stable horses no longer rubber-band along their route.
 - Horses: gamebots ride horses sized for their race, as players do.
@@ -47,6 +47,21 @@ keeps your account, characters, companions, bots and settings. New players get t
 - NPCs stored a little below their floor now stand on it, as the original client drew them: Gothwaite Harbor's dye
   merchants were sunk to the neck ([#4](https://github.com/shadowofze/OfflineDAoC-True165/issues/4)), and three more
   NPCs in the Vale of Mularn and the Black Mountains stood in their floor.
+- Half Ogre, Frostalf and Shar NPCs (about 150 of them, General Vaul among them) draw with their own classic figures
+  instead of broken.
+
+### Housing (new)
+
+- Player housing, as in the 1.64 client and with its own models: the 12 period housing zones (Caerwent, Old Sarum,
+  Rilan, Dalton; Erikstaad, Arothi, Carlingford, Wyndham; Meath, Dunshire, Torrylin, Kilcullen) through the realms'
+  housing gates; buying a lot and building a house with a deed; the houses' roof, wall, door and wood materials,
+  porch, guild banner and shield; the garden; going inside; placing, rotating and taking back furniture; hookpoints
+  (vaults, bindstones, tools, house merchants); house vaults; friend permissions; paying rent by dropping coins on
+  your house; and the 1.64 housing windows (External / Internal Options, Garden Placement, Friend Level Permissions,
+  Permissions List, Rotate Object).
+- Lots, deeds and rent cost the period prices, the decorators carry their full stock, and stable routes run inside
+  the housing zones. Hanging a weapon on a wall no longer leaves a copy in your bag.
+- Housing is checked offline but not yet played through on a live server.
 
 ### Quests
 
@@ -77,8 +92,9 @@ keeps your account, characters, companions, bots and settings. New players get t
   in its con colour to you.
 - The window title is "Offline DAoC True 1.65 v0.2", and the launcher shows VERSION 0.2.
 
-### The downloader
+### The launcher and the downloader
 
+- The launcher's Stop button stops the server again (it could keep running).
 - One downloader for everyone: **1 = Update my game** updates an installed game in the folder it is in, and
   **2 = New install** installs the complete game into a new folder.
 - An update checks every file it replaces first and changes nothing if one was changed on that PC (it can then make a

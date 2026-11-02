@@ -185,8 +185,8 @@ is the result: the world database and the content files built from it.
 
 ## Known issues
 
-- Horse routes: crossing Prydwen Bridge, the horse can dip into the deck a few times, and in the new client horse
-  rides rubber-band (the horse jumps back and forth along the route).
+- Horse routes: crossing Prydwen Bridge, the horse can dip into the deck now and then.
+- Housing is new in v0.2: it is checked offline but not yet played through on a live server.
 - Low-level gamebots (levels 6-9) die a lot: they start with no armour and have to buy it.
 - Gear wears at the player rate, so bots rarely need repairs early on. This is expected.
 - About 2,100 monster names drop only coin, mostly in the Shrouded Isles, where no period source recorded their loot.

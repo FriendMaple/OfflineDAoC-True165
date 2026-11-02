@@ -34,12 +34,15 @@ You **don't** need to download the other files on this page by hand: the downloa
 
 ## What's new in 0.2
 
+- **Player housing, as in 1.64:** the 12 period housing zones, buying a lot and building a house, the garden,
+  furniture and hookpoints, house vaults, friend permissions, rent, and the 1.64 housing windows. It is checked
+  offline but not yet played through on a live server.
 - **Gamebots** buy and wield weapons of the line they trained, go shopping for an affordable upgrade when they keep
   dying, no longer get stuck at merchants, buff the right classes, and show their new level and con colour at once.
-- **Companions** switch back to melee when their bow is taken away mid-pull, accept quest and no-trade items, show
+- **Companions** follow you through teleporters and releases at once, switch back to melee when their bow is taken away mid-pull, accept quest and no-trade items, show
   as dead on the roster at once, and keep their spell effects after a revive.
-- **Horse routes** ride over the bridges ([#1](https://github.com/shadowofze/OfflineDAoC-True165/issues/1)). Still slightly buggy: the horse can dip into
-  Prydwen Bridge's deck a few times, and horse rides rubber-band in the new client.
+- **Horse routes** ride over the bridges ([#1](https://github.com/shadowofze/OfflineDAoC-True165/issues/1)), keep their rider through lag spikes and no longer
+  rubber-band. Still a little buggy: the horse can dip into Prydwen Bridge's deck now and then.
 - **Items:** merchant caster staves have their focus again, and about 470 items regain their 1.65 bonuses.
 - **World:** Camelot's walls and palace door are fixed ([#2](https://github.com/shadowofze/OfflineDAoC-True165/issues/2)),
   missing doors are back in six zones, NPCs no longer stand sunk into their floor
