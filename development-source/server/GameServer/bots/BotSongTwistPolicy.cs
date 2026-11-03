@@ -20,7 +20,9 @@ namespace DOL.GS
                 return BotBrain.IsMaintainableClassBuff(spell);
             // Tank chants use a separate selector: never send Paladin/Warden
             // through the performer code that drops songs for solo melee.
-            return spell.IsInstantCast && !spell.NeedInstrument && (characterClass switch
+            // Warden SpeedEnhancement is cast out of combat, so it does not need
+            // to be instant cast; Bladeturn and DamageAdd remain instant-only.
+            return (spell.IsInstantCast || (characterClass == eCharacterClass.Warden && spell.SpellType == eSpellType.SpeedEnhancement)) && !spell.NeedInstrument && (characterClass switch
             {
                 eCharacterClass.Paladin => spell.SpellType is eSpellType.EnduranceRegenBuff or
                     eSpellType.SpecArmorFactorBuff or eSpellType.DamageAdd or eSpellType.CombatHeal,
@@ -83,7 +85,7 @@ namespace DOL.GS
 
         public static eSpellType WardenAnchor(bool traveling, bool combat, bool grouped, bool hasBladeturn)
         {
-            if (traveling && !combat) return eSpellType.SpeedEnhancement;
+            if (!combat) return eSpellType.SpeedEnhancement;
             if (hasBladeturn && (combat || grouped)) return eSpellType.Bladeturn;
             return eSpellType.DamageAdd;
         }
