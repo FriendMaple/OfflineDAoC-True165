@@ -46,6 +46,9 @@ hold). Its changelog has the history of everything this version inherits.
 - Horses: on stable routes that turn sharply (more than 90 degrees, such as North Tir na Nog to Druim Ligen) the horse turns with the route instead of sliding sideways for most of the ride.
 - Chat: SMALL CHAT TEXT in Options > Chat, the 1.64 client's small chat font (UI SCALE in Options > Interface still makes all text bigger). Window transparency stays one setting for every window, as the 1.64 client kept it.
 - Account vault: the account vault keepers open the vault window in the 1.64 style, with FIRST PAGE and SECOND PAGE buttons for the vault's two pages.
+- Merchants: the Hibernian staff, weapon and shield merchants (Tir na Nog's weapon merchant among them) no longer sell caster staffs, blades, blunts and shields for 30 copper that you can't equip ("not of this realm"): those 120 items have their realm and price back.
+- Account vaults: an account vault keeper in each capital (Camelot, Jordheim, Tir na Nog) lets your characters of one realm share items. Each realm has its own vault. This is a convenience addition that 1.65 did not have.
+- Horse routes: horses no longer ride under the bridge near Druim Ligen or jump onto the bridge towers on the routes over the Druim Ligen, Innis Carthaig and Midgard river bridges.
 
 ## 0.2 (2026-11-01)
 
