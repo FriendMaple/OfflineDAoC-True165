@@ -29,6 +29,31 @@ func _init(folders: Dictionary, initial_set: String) -> void:
 static var WEB := RegEx.create_from_string("(?i)spiderweb|cob_crnr|cobweb")
 
 
+## A copy of an effect material for one effect copy that fades / changes colour on its own. Not duplicate(): it lists
+## every shader parameter with its default (RenderingServer.shader_get_parameter_default) - with the separate render
+## thread each copy waited on the render thread (a player's logs 2026-11-03: "shader_get_parameter_default causing
+## RenderingServer synchronizations on every frame", 84-152 a session). The shader's parameter names are read once per
+## shader; each copy takes only the values set on the original.
+static var _uniforms := {}                     # Shader -> [parameter names]
+
+
+static func copy_of(m: ShaderMaterial) -> ShaderMaterial:
+	var own := ShaderMaterial.new()
+	own.shader = m.shader
+	own.render_priority = m.render_priority
+	own.next_pass = m.next_pass
+	if m.shader:
+		if not _uniforms.has(m.shader):
+			_uniforms[m.shader] = m.shader.get_shader_uniform_list().map(func(u): return StringName(u.name))
+		for n in _uniforms[m.shader]:
+			var v = m.get_shader_parameter(n)
+			if v != null:
+				own.set_shader_parameter(n, v)
+	for k in m.get_meta_list():
+		own.set_meta(k, m.get_meta(k))
+	return own
+
+
 ## Material for one spec (a Dictionary from extras.nif_materials); identical specs share one material.
 ## main_only: built on the main thread when asked from a worker (GpuJobs) - a ShaderMaterial's parameters set on a
 ## worker make its render-server material there, the race GpuJobs exists for (2026-10-30: the login freeze -

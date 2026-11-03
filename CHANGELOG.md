@@ -40,6 +40,7 @@ hold). Its changelog has the history of everything this version inherits.
 - Monsters: levels, aggression and speed from the Prima guides, in the zones the guides cover (bosses, epic dungeons and Darkness Falls named monsters unchanged).
 - Quests: Bear Skins, Big Paw, Trapper's Joy, Ghoul Hair Belt, Missing Bard and the Berserker's Rasczel's Bane added from the period sources, each with its quest guide; Rhian's Dyes is Tyree's Dyes again (Tyree in Howth).
 - Quests: The Growling Ghost branches as in the period. Help Growler (Growler's Necklace) and he gives you The Growler; slay him instead and Sergeant Alain sends you the long way to the same mace with Growler Mace and Mathien's Metal.
+- Performance: fewer stutters when many fading or colour-changing spell effects play at once (each copy of such an effect no longer waits on the renderer), and the skills and spells pages no longer log an error on every skill update after they are rebuilt (both from a player's logs).
 
 ## 0.2 (2026-11-01)
 

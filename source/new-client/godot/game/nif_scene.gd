@@ -254,7 +254,7 @@ func _bind() -> void:
 				# this copy fades / changes colour on its own - duplicated on the main thread (2026-10-30, the login freeze:
 				# an effect packed on a worker made this copy's render-server material there - duplicate() sets every
 				# parameter, the race GpuJobs exists for)
-				var own := GpuJobs.run(func(): return m.duplicate(), "effect material") as ShaderMaterial
+				var own := GpuJobs.run(func(): return NifMaterials.copy_of(m), "effect material") as ShaderMaterial
 				mi.set_surface_override_material(i, own)
 				var aa: Dictionary = spec.get("alpha_anim", {})
 				var cas: Array = spec.get("color_anims", [])

@@ -36,6 +36,9 @@ static func build(parent: Control, tab: String) -> void:
 		scroll.add_child(list)
 		lists.append(list)
 	var fill := func():
+		for l in lists:                                     # (a page built again: this one's lists are gone - its hooks
+			if not is_instance_valid(l):                    # still fired on every skill / spell-line update, 'Trying to
+				return                                      # cast a freed object' in a player's logs, 2026-11-03)
 		for l in lists:
 			for c in (l as Node).get_children():
 				c.queue_free()
