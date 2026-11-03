@@ -445,9 +445,9 @@ func _controls() -> void:
 					ui.player.call("set_mouse_look", false)))
 		_hint("ON: THE MOUSE LOOK TOGGLE KEY (RIGHT MOUSE, AS THE ORIGINAL - A RIGHT CLICK ON OPEN GROUND) HIDES THE CURSOR AND THE MOUSE TURNS YOU; PRESS IT AGAIN OR ESC TO GET THE CURSOR BACK. OFF: RIGHT CLICK ONLY STEERS AND USES THINGS.")
 	# the 1.64 camera (owner 2026-11-03, a player report): ON = the camera swings back behind you as you move (ours as
-	# before); OFF = as the 1.64 client, a camera you turned with the mouse or the Pan Camera key stays there until
+	# before); OFF (the default, owner 2026-11-03) = as the 1.64 client, a camera you turned with the mouse or the Pan Camera key stays there until
 	# Camera Reset
-	_row("CAMERA FOLLOW", _toggle(bool(settings.get_value("player", "camera_follow", true)),
+	_row("CAMERA FOLLOW", _toggle(bool(settings.get_value("player", "camera_follow", false)),
 			func(v: bool):
 		_save("player", "camera_follow", v)
 		if ui and ui.player:
@@ -522,7 +522,7 @@ func _interface() -> void:
 	_row("ALPHA", _slider(ClassicWindow.interface_alpha() * 100.0, 10, 100, 5, func(x: float):
 		_save("interface", "alpha", x)
 		ClassicWindow.set_interface_alpha(x, get_tree())))
-	_hint("HOW SOLID THE WINDOWS ARE (THE CHAT BOXES TOO) - LOWER SEES THE WORLD THROUGH THEM; TEXT AND ICONS STAY SOLID.")
+	_hint("HOW SOLID ALL THE WINDOWS ARE (THE CHAT BOXES TOO) - LOWER SEES THE WORLD THROUGH THEM; TEXT AND ICONS STAY SOLID. RIGHT-CLICK A WINDOW TO SET THAT WINDOW ALONE.")
 	if Server.world_mode != "1.65":                    # (1.65 Mode refuses /autoloot: owner 2026-10-30)
 		_heading("LOOT")
 		_row("AUTO LOOT", _toggle(Loot.autoloot(), func(on: bool): Loot.set_autoloot(on)))

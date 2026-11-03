@@ -13,7 +13,10 @@ signal resized_by_user
 const HANDLE := Rect2(0, 0, 13, 13)          # the four-arrow move handle painted in the frames' top-left corner
 const EDGE := 4.0
 
-var window_id := ""
+var window_id := "":
+	set(v):
+		window_id = v
+		_apply_alpha()                           # (a window named after its frame was set takes its own Alpha)
 var movable := true
 var closable := true
 var resizable := false
@@ -23,10 +26,14 @@ var frame: Control:                          # the frame bitmap (TextureRect, or
 	set(v):
 		frame = v
 		if v:
-			v.modulate.a = interface_alpha()
+			v.modulate.a = window_alpha()
 ## The interface's Alpha (the 1.64 client's Options "Alpha: N%", saved as [Panels] Alpha): how solid every window's
 ## frame / background is - its text, icons and buttons stay solid (a player report: chat transparency).
 static var _alpha := -1.0
+## Per-window Alpha (owner 2026-11-03: "an option per window"; the 1.64 client had only the one value): the right-click
+## panel sets the window it was opened on, saved as settings [window_alpha] <window_id> = percent. Options' ALPHA
+## sets every window again and clears these.
+static var _per_window = null
 var frame_name := ""
 var patch := [8, 8, 8, 8]                    # resizable frames: border sizes left / top / right / bottom (art px)
 var _drag := false
@@ -53,14 +60,57 @@ static func interface_alpha() -> float:
 	return _alpha
 
 
-## A new Alpha (percent) on every open window's frame and its other backing art.
+static func _window_alphas() -> Dictionary:
+	if _per_window == null:
+		_per_window = {}
+		var cfg := ConfigFile.new()
+		cfg.load(UiArt.settings_path)
+		if cfg.has_section("window_alpha"):
+			for k in cfg.get_section_keys("window_alpha"):
+				_per_window[k] = clampf(float(cfg.get_value("window_alpha", k)) / 100.0, 0.1, 1.0)
+	return _per_window
+
+
+## This window's Alpha: its own if the right-click panel set one, else the interface's.
+func window_alpha() -> float:
+	return float(_window_alphas().get(window_id, interface_alpha()))
+
+
+func _apply_alpha() -> void:
+	var a := window_alpha()
+	for f in [frame] + backing:
+		if f and is_instance_valid(f):
+			(f as Control).modulate.a = a
+
+
+## A new Alpha (percent) on every open window's frame and its other backing art; the per-window ones are dropped.
 static func set_interface_alpha(percent: float, tree: SceneTree) -> void:
 	_alpha = clampf(percent / 100.0, 0.1, 1.0)
+	if not _window_alphas().is_empty():
+		_per_window = {}
+		var cfg := ConfigFile.new()
+		cfg.load(UiArt.settings_path)
+		if cfg.has_section("window_alpha"):
+			cfg.erase_section("window_alpha")
+			cfg.save(UiArt.settings_path)
 	for w in tree.get_nodes_in_group("classic_windows"):
-		var cw := w as ClassicWindow
-		for f in [cw.frame] + cw.backing:
-			if f and is_instance_valid(f):
-				(f as Control).modulate.a = _alpha
+		(w as ClassicWindow)._apply_alpha()
+
+
+## A new Alpha (percent) for this window only (every window of the same id: the saved layout key).
+func set_window_alpha(percent: float) -> void:
+	if window_id == "":
+		set_interface_alpha(percent, get_tree())               # (an unnamed window: no key to keep it under)
+		return
+	var a := clampf(percent / 100.0, 0.1, 1.0)
+	_window_alphas()[window_id] = a
+	var cfg := ConfigFile.new()
+	cfg.load(UiArt.settings_path)
+	cfg.set_value("window_alpha", window_id, roundi(a * 100.0))
+	cfg.save(UiArt.settings_path)
+	for w in get_tree().get_nodes_in_group("classic_windows"):
+		if (w as ClassicWindow).window_id == window_id:
+			(w as ClassicWindow)._apply_alpha()
 
 
 ## Art inside the window that is its background too (the character panel's sheet bitmap and tab strip): it fades
@@ -70,11 +120,11 @@ var backing: Array = []
 
 func add_backing(c: Control) -> void:
 	backing.append(c)
-	c.modulate.a = interface_alpha()
+	c.modulate.a = window_alpha()
 
 
-## The right-click Alpha panel: "ALPHA: N%" between two arrows (10% a click), the same setting as Options' ALPHA;
-## a click anywhere else closes it.
+## The right-click Alpha panel: "ALPHA: N%" between two arrows (10% a click) for this window only (Options' ALPHA
+## sets them all); a click anywhere else closes it.
 func _alpha_panel(at: Vector2) -> void:
 	var host := get_parent() as Control
 	if host == null:
@@ -97,16 +147,11 @@ func _alpha_panel(at: Vector2) -> void:
 	label.custom_minimum_size = Vector2(70, 16)
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	var show := func(): label.text = "ALPHA: %d%%" % roundi(interface_alpha() * 100.0)
+	var show := func(): label.text = "ALPHA: %d%%" % roundi(window_alpha() * 100.0)
 	for step in [-10, 10]:
 		var b := UiArt.button("<" if step < 0 else ">", Vector2(16, 16), 9)
 		b.pressed.connect(func():
-			var pct := clampf(roundf(interface_alpha() * 10.0) * 10.0 + step, 10.0, 100.0)
-			var cfg := ConfigFile.new()
-			cfg.load(UiArt.settings_path)
-			cfg.set_value("interface", "alpha", pct)
-			cfg.save(UiArt.settings_path)
-			set_interface_alpha(pct, get_tree())
+			set_window_alpha(clampf(roundf(window_alpha() * 10.0) * 10.0 + step, 10.0, 100.0))
 			show.call())
 		row.add_child(b)
 		if step < 0:

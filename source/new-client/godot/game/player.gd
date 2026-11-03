@@ -120,10 +120,10 @@ var mouse_sensitivity := 1.0           # Options: CONTROLS
 # The 1.64 client's camera (owner 2026-11-03, a player report: "pan ... and not have it recenter on the character as
 # you run until you hit the camera reset keybind"): game.dll keeps the camera's angle around you (user.dat
 # cameracircleangle) and only Reset Camera (0x42b6ea) zeroes it; the Pan Camera key turns that angle instead of you
-# (0x4275f8 with 0x8827b4 set). camera_follow (Options > CONTROLS): true = ours as before, the camera swings back
-# behind you as you move; false = the 1.64 way. first_person: user.dat cameramode 0 (Camera Toggle). Saved in
+# (0x4275f8 with 0x8827b4 set). camera_follow (Options > CONTROLS): false (the default, owner 2026-11-03) = the 1.64
+# way; true = ours as before, the camera swings back behind you as you move. first_person: user.dat cameramode 0 (Camera Toggle). Saved in
 # settings [camera], as the client's user.dat kept cameradistance / cameracircletilt / cameracircleangle / cameramode.
-var camera_follow := true
+var camera_follow := false
 var first_person := false
 var _cam_offset := 0.0                  # the camera's angle around you (cam_yaw - char_yaw) while it does not follow
 const CAM_DISTANCE := 5.5              # the default zoom (Camera Reset puts it back, as 0x42b6ea's 240 units)
@@ -187,7 +187,7 @@ func _ready() -> void:
 	mouse_sensitivity = float(cfg.get_value("player", "mouse_sensitivity", 1.0))
 	invert_mouse = bool(cfg.get_value("player", "invert_mouse", false))
 	mouse_look_allowed = bool(cfg.get_value("player", "mouse_look_toggle", false))
-	camera_follow = bool(cfg.get_value("player", "camera_follow", true))
+	camera_follow = bool(cfg.get_value("player", "camera_follow", false))
 	cam_distance = clampf(float(cfg.get_value("camera", "distance", CAM_DISTANCE)), CAM_MIN, CAM_MAX)
 	cam_pitch = clampf(float(cfg.get_value("camera", "pitch", CAM_PITCH_DEFAULT)), -CAM_PITCH, CAM_PITCH)
 	_cam_offset = float(cfg.get_value("camera", "angle", 0.0)) if not camera_follow else 0.0
