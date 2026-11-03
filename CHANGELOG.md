@@ -19,6 +19,18 @@ hold). Its changelog has the history of everything this version inherits.
 - Groups: a dead companion or group member stays shown as dead (no health) in the group window when the window is redrawn, instead of coming back at full health ([#10](https://github.com/shadowofze/OfflineDAoC-True165/issues/10)).
 - Characters: companions and gamebots with some player looks no longer appear as an item - a Sylvan on look 12 was drawn as a bow (male) or a mace (female), and other looks of Sylvans, Valkyn, Frostalf, Shar, Half Ogres and more could show as armor pieces, shields or weapons ([#9](https://github.com/shadowofze/OfflineDAoC-True165/issues/9)).
 - Camera: the 1.64 client's camera options. CAMERA FOLLOW (Options > Controls): on, the camera swings back behind you as you move (as before); off, as in the 1.64 client, a camera you turn with the left mouse button stays where you put it while you run, until Camera Reset. The Pan Camera key (bind it in Options > Controls > Camera) turns the camera around you instead of turning you. Camera Toggle (F11) switches to first person and back (zooming out also leaves it). Camera Reset now also puts the zoom back to normal, and the camera's zoom, tilt, angle and first person are kept for next time, as the 1.64 client kept them.
+- Companions: a hired companion with a charm spell never charms the monster your group is fighting, only an add that nobody in the group is on; if the group gets on it while the charm is being cast, the charm fizzles ([#13](https://github.com/shadowofze/OfflineDAoC-True165/issues/13)).
+- Companions: a Minstrel companion with a pet keeps its charm song going and plays no other song, instead of switching songs and letting the freed pet loose on itself; it takes its instrument out to charm.
+- Companions: a Theurgist's elementals and an Animist's turrets count as your pets: companions join the fight they start and defend them, so after you root a monster and send your pets, your companions come in when the root breaks ([#13](https://github.com/shadowofze/OfflineDAoC-True165/issues/13)).
+- Companions: companions no longer jump on a monster you are mesmerizing, stunning or rooting.
+- Companions: a companion revived at a healer after its body faded comes back at full health; /pull and attack orders stand resting companions up; companions follow you at once after a teleport or a horse ride.
+- Companions: a companion healer raises you first when you die, and sits to regain the power for it if it has to; buffs wait while a body nearby needs raising.
+- Companions: buffers no longer keep retrying a concentration buff past the 20 concentration spells limit.
+- Items: weapons with broken damage fixed, and item stats set back to their 2003 values where the Prima strategy guides and the period item pages agree.
+- Loot: drops from the Prima Atlas added to 361 monsters (93 of them dropped nothing before).
+- Monsters: levels, aggression and speed from the Prima guides, in the zones the guides cover (bosses, epic dungeons and Darkness Falls named monsters unchanged).
+- Quests: Bear Skins, Big Paw, Trapper's Joy, Ghoul Hair Belt, Missing Bard and the Berserker's Rasczel's Bane added from the period sources, each with its quest guide; Rhian's Dyes is Tyree's Dyes again (Tyree in Howth).
+- Quests: The Growling Ghost branches as in the period. Help Growler (Growler's Necklace) and he gives you The Growler; slay him instead and Sergeant Alain sends you the long way to the same mace with Growler Mace and Mathien's Metal.
 
 ## 0.2 (2026-11-01)
 
