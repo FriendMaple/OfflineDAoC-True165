@@ -107,12 +107,25 @@ static var _packed := {}                       # gltf path -> PackedScene (null:
 static func pack_copy(gltf_path: String) -> PackedScene:
 	var n := NifScene.new()
 	var out: PackedScene = null
-	if n.load_scene(gltf_path):
+	var loaded := n.load_scene(gltf_path)
+	# an effect with particles: its GPUParticles3D have render-server particles and process materials from the moment
+	# they are made (a mesh gets an instance only in the tree) - packed (pack() reads them back) and freed on the
+	# prefetch worker, they raced the render thread: a player's logs 2026-11-03, "Parameter 'material' is null" x4
+	# bursts (material_casts_shadows / is_animated / ...) right after the particle-only Minstrel speed pulse
+	# (effects164/alb_minmove_pls) was prefetched, and a later 8.9 s main-thread stall. Those are packed and freed on
+	# the main thread (GpuJobs); mesh-only effects stay on the worker.
+	var particles := loaded and not (n.get_meta("nif_extras", {}).get("nif_particles", []) as Array).is_empty()
+	var pack := func() -> PackedScene:
 		for c in n.find_children("*", "", true, false):
 			c.owner = n                            # pack the whole tree
 		var ps := PackedScene.new()
-		out = ps if ps.pack(n) == OK else null
-	n.free()
+		return ps if ps.pack(n) == OK else null
+	if loaded:
+		out = (GpuJobs.run(pack, "effect pack") if particles else pack.call()) as PackedScene
+	if particles:
+		GpuJobs.run(func(): n.free(), "effect free")
+	else:
+		n.free()
 	return out
 
 
