@@ -34,6 +34,33 @@ namespace DOL.GS
             return ConLevels.GetConColor(bot.GetConLevel(mob)) >= ConColor.GREEN;
         }
 
+        /// <summary>
+        /// Whether anyone else in the charmer's group is on this monster: hurt it already, a member other than the
+        /// charmer targets or attacks it, or a group member's pet (a Theurgist's elementals, a bot's charmed pet) was
+        /// sent at it. Such a monster is the group's fight and is never charmed away from it.
+        /// </summary>
+        public static bool GroupIsOnIt(GameBot charmer, HashSet<GameLiving> members, GameNPC mob)
+        {
+            if (mob.HealthPercent < 100)
+                return true;
+            bool Ours(GameLiving l) =>
+                l != null && l != charmer && (members.Contains(l) ||
+                    l is GameNPC { Brain: IControlledBrain cb } && (members.Contains(cb.Owner) || members.Contains(cb.GetPlayerOwner())));
+            if (members.Any(m => m != charmer && m.TargetObject == mob))
+                return true;
+            if (mob.attackComponent?.AttackerTracker?.Attackers.Any(Ours) == true)
+                return true;
+            return mob.GetNPCsInRadius(3000).Any(n => n.TargetObject == mob && Ours(n));
+        }
+
+        /// <summary>A pulsing charm of this caster is running (a Minstrel's charm song, a Mentalist's charm), even
+        /// between a broken charm and its recapture.</summary>
+        public static bool HoldsPulsingCharm(GameLiving caster)
+        {
+            List<ECSPulseEffect> pulses = caster?.effectListComponent?.GetPulseEffects();
+            return pulses != null && pulses.Any(p => p?.SpellHandler?.Spell?.SpellType == eSpellType.Charm);
+        }
+
         /// <summary>No bot tries to charm the same monster again within this time (no charm loops).</summary>
         public const int RetryMilliseconds = 60_000;
         private static readonly System.Runtime.CompilerServices.ConditionalWeakTable<GameNPC, object> Tried = new();
@@ -52,7 +79,8 @@ namespace DOL.GS
                 bot.IsCasting || bot.castingComponent?.HasPendingSkillRequests == true || AutonomousRealmRaid.IsReserved(bot))
                 return false;
             Spell charm = LearnedCharm(bot);
-            if (charm == null || bot.Mana < bot.PowerCost(charm) || bot.GetSkillDisabledDuration(charm) > 0)
+            // a charm song still pulsing (between a break and its recapture) is left to run: casting it again would stop it
+            if (charm == null || bot.Mana < bot.PowerCost(charm) || bot.GetSkillDisabledDuration(charm) > 0 || HoldsPulsingCharm(bot))
                 return false;
             long now = GameLoop.GameLoopTime;
             bool Fresh(GameNPC m) => !Tried.TryGetValue(m, out object last) || now - (long)last >= RetryMilliseconds;
@@ -61,13 +89,15 @@ namespace DOL.GS
             {
                 // A hired companion seeks a charm whenever its group fights (owner 2026-10-30): its own target first,
                 // then any monster fighting the group, the first valid one (at least green, the right kind, in range).
+                // Only an add nobody else is on: never the monster the group is fighting (GitHub #13, 2026-11-03: a
+                // Sorcerer charmed the mob its owner's Theurgist pet had been sent at, and the fight was gone).
                 if (bot.Group == null)
                     return false;
                 var members = bot.Group.GetMembersInTheGroup().ToHashSet();
                 IEnumerable<GameNPC> candidates = (combatTarget is GameNPC own ? new[] { own } : [])
                     .Concat(bot.GetNPCsInRadius((ushort)System.Math.Min(charm.Range > 0 ? charm.Range : 1000, 1500))
                         .Where(n => n.InCombat && n.TargetObject is GameLiving t && members.Contains(t)));
-                mob = candidates.FirstOrDefault(m => Fresh(m) && IsValidTarget(bot, charm, m));
+                mob = candidates.FirstOrDefault(m => Fresh(m) && IsValidTarget(bot, charm, m) && !GroupIsOnIt(bot, members, m));
             }
             else
             {
@@ -78,6 +108,9 @@ namespace DOL.GS
                     return false;
             }
             if (mob == null)
+                return false;
+            // the Minstrel's charm is a song: it needs the instrument in hand (in a fight the bot holds its weapon)
+            if (charm.NeedInstrument && !BotBrain.TryEquipRealInstrument(bot, charm.InstrumentRequirement))
                 return false;
             Tried.AddOrUpdate(mob, now);
             GameObject previous = bot.TargetObject;

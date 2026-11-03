@@ -131,8 +131,7 @@ namespace DOL.GS
             if (actor is GamePlayer player) { LeaderEngaged(player, target); return; }
             // Do not resolve a companion's pet through GetPlayerOwner: that would
             // mistake a bot's pet for a human-initiated override of the tank gate.
-            if (actor is GameNPC { Brain: ControlledMobBrain { Owner: GamePlayer petOwner } } &&
-                petOwner.ControlledBrain?.Body == actor)
+            if (PlayerPetOwner(actor) is GamePlayer petOwner)
             { LeaderEngaged(petOwner, target); return; }
             if (actor is not GameBot tank || tank.Group == null || !attack.IsMeleeAttack ||
                 !States.TryGetValue(tank.Group, out GroupState state)) return;
@@ -179,8 +178,25 @@ namespace DOL.GS
                         ? brain.Body.TargetObject as GameLiving : null);
                 if (ValidEnemy(player, petTarget)) return petTarget;
             }
+            // Field pets the player owns besides the main pet: a Theurgist's elementals, an Animist's turrets
+            // (GitHub #13, 2026-11-03: a Theurgist rooted a mob and sent pets, and the companions never joined).
+            foreach (GameNPC npc in player.GetNPCsInRadius((ushort)BotBrain.GROUP_DEFENSE_ASSIST_RADIUS))
+            {
+                if (npc.IsAlive && PlayerPetOwner(npc) == player && npc.Brain is ControlledMobBrain { IsMainPet: false } &&
+                    (npc.IsAttacking || npc.InCombat) && npc.TargetObject is GameLiving fieldTarget &&
+                    ValidEnemy(player, fieldTarget))
+                    return fieldTarget;
+            }
             return null;
         }
+
+        /// <summary>
+        /// The player whose pet this is: the main pet, or a field pet (Theurgist elementals, Animist turrets: the game
+        /// never makes those the player's ControlledBrain). Never a companion's pet, whose owner is the bot.
+        /// </summary>
+        public static GamePlayer PlayerPetOwner(GameLiving living) =>
+            living is GameNPC { Brain: ControlledMobBrain { Owner: GamePlayer owner } brain } &&
+            (owner.ControlledBrain?.Body == living || !brain.IsMainPet) ? owner : null;
 
         private static void Engage(GamePlayer player, GameLiving target, bool orderHumanPet, bool onlyIdle = false)
         {
@@ -244,6 +260,18 @@ namespace DOL.GS
             if (victim is GameNPC { Brain: IControlledBrain controlled } && controlled.GetLivingOwner() is GameLiving owner)
                 victim = owner;
             return victim == player || player.Group.IsInTheGroup(victim);
+        }
+
+        /// <summary>
+        /// The leader swings at or casts harm on their target, but not a mesmerize, stun or root: the companions' idle
+        /// and follow assist never jumps on a monster the player is putting to sleep or rooting (owner 2026-10-29).
+        /// </summary>
+        public static bool LeaderAttacks(GameLiving leader)
+        {
+            if (leader == null) return false;
+            if (leader.IsAttacking) return true;
+            Spell casting = leader.IsCasting ? leader.castingComponent?.SpellHandler?.Spell : null;
+            return casting?.IsHarmful == true && !IsCrowdControl(casting);
         }
 
         /// <summary>A spell that holds a monster rather than hurts it: mesmerize, stun, root.</summary>

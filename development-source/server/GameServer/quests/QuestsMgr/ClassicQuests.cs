@@ -138,6 +138,39 @@ namespace DOL.GS.Quests
             /// <summary>Each step's experience as a share of the player's current level (quest XP scaled with the
             /// player's level in the period); empty: the quest row's fixed RewardXP. tools/claude-version/fix_quest_xp.py.</summary>
             public List<double> XpShares { get; set; } = new();
+            /// <summary>Quest names that must be in progress for this quest to be offered (a sub-quest: Growler's
+            /// Necklace exists only while The Growling Ghost is being done). Empty: no such condition.</summary>
+            public List<string> OnlyDuring { get; set; } = new();
+            /// <summary>Quest names that, once started or finished, keep this quest from being offered (one branch or
+            /// the other: helping Growler (Growler's Necklace) or killing him (Growler Mace, Mathien's Metal), never both;
+            /// Prima Revised 2002, Warcry 2004, owner 2026-11-03).</summary>
+            public List<string> ExcludedBy { get; set; } = new();
+        }
+
+        /// <summary>The branch rules of a classic quest (<see cref="QuestInfo.OnlyDuring"/>,
+        /// <see cref="QuestInfo.ExcludedBy"/>): whether it may be offered to this player now.</summary>
+        public static bool BranchAllowed(int questId, GamePlayer player)
+        {
+            if (player == null || !_config.Quests.TryGetValue(questId, out QuestInfo info))
+                return true;
+            bool needDuring = info.OnlyDuring is { Count: > 0 };
+            bool hasExclusions = info.ExcludedBy is { Count: > 0 };
+            if (!needDuring && !hasExclusions)
+                return true;
+            var doing = new HashSet<string>(player.QuestList.Keys.Where(q => q != null).Select(q => q.Name),
+                StringComparer.OrdinalIgnoreCase);
+            if (needDuring && !info.OnlyDuring.Any(doing.Contains))
+                return false;
+            if (hasExclusions)
+            {
+                if (info.ExcludedBy.Any(doing.Contains))
+                    return false;
+                var finished = new HashSet<string>(player.GetFinishedQuests().Where(q => q != null).Select(q => q.Name),
+                    StringComparer.OrdinalIgnoreCase);
+                if (info.ExcludedBy.Any(finished.Contains))
+                    return false;
+            }
+            return true;
         }
 
         /// <summary>Whether the player's race may take this classic quest.</summary>
@@ -853,6 +886,7 @@ namespace DOL.GS.Quests
     public class ClassicQuestStep : IDataQuestStep
     {
         public bool Execute(DataQuest dataQuest, GamePlayer player, int step, eStepCheckType stepCheckType) =>
-            stepCheckType != eStepCheckType.Qualification || ClassicQuests.RaceAllowed(dataQuest.ID, player);
+            stepCheckType != eStepCheckType.Qualification ||
+            ClassicQuests.RaceAllowed(dataQuest.ID, player) && ClassicQuests.BranchAllowed(dataQuest.ID, player);
     }
 }

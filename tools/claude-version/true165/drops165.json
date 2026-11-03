@@ -1,5 +1,5 @@
 {
- "source": "True 1.65 drops pass 2 (2026-10-31): Uthgard measured drops (realm-matched) + period Allakhazam Known Loot and item pages; estimates marked in fix/drops/REPORT.md + coin-only sweep (period comments/variants, 2026-10-31) + Uthgard-built items for coin-only monsters + period kill-task items restored to the monsters that dropped them (owner 2026-11-01; killtask_drops_restored.json)",
+ "source": "True 1.65 drops pass 2 (2026-10-31): Uthgard measured drops (realm-matched) + period Allakhazam Known Loot and item pages; estimates marked in fix/drops/REPORT.md + coin-only sweep (period comments/variants, 2026-10-31) + Uthgard-built items for coin-only monsters + period kill-task items restored to the monsters that dropped them (owner 2026-11-01; killtask_drops_restored.json) + Prima Atlas loot (2026-11-02)",
  "min_kills": 20,
  "monsters": {
   "abominable snowman": {
@@ -245,7 +245,7 @@
    ]
   },
   "Acolyte Nascita": {
-   "drop_count": 2,
+   "drop_count": 4,
    "items": [
     [
      "Flute_of_Sacred_Hymns",
@@ -258,6 +258,10 @@
     [
      "Lute_of_Sacred_Hymns",
      2
+    ],
+    [
+     "Underling_Priest_Protector",
+     10
     ]
    ]
   },
@@ -291,11 +295,15 @@
    ]
   },
   "adder": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Adder_Fang",
      46
+    ],
+    [
+     "p165_uth_1274",
+     50
     ]
    ]
   },
@@ -387,11 +395,15 @@
     [
      "SpinedFishSticker",
      5
+    ],
+    [
+     "p165_uth_688",
+     30
     ]
    ]
   },
   "Alfrigg": {
-   "drop_count": 2,
+   "drop_count": 10,
    "items": [
     [
      "Alfriggs_Dwarf-Smasher",
@@ -411,6 +423,26 @@
     ],
     [
      "Mighty_Presence_Shield",
+     7
+    ],
+    [
+     "Drakulv_Militia_Great_Axe",
+     7
+    ],
+    [
+     "Drakulv_Militia_Great_Hammer",
+     7
+    ],
+    [
+     "Drakulv_Militia_Great_Sword",
+     7
+    ],
+    [
+     "Luminous_Emerald_Moonshone_Jerkin",
+     7
+    ],
+    [
+     "Luminous_Emerald_Moonshone_Sleeves",
      7
     ]
    ]
@@ -462,7 +494,7 @@
    ]
   },
   "Amadan": {
-   "drop_count": 2,
+   "drop_count": 6,
    "items": [
     [
      "Copper_Amethyst_Bracelet",
@@ -483,6 +515,10 @@
     [
      "Forgotten_Silver_Jasper_Locket",
      10
+    ],
+    [
+     "Well_Crafted_Lantern",
+     80
     ]
    ]
   },
@@ -2244,7 +2280,7 @@
    ]
   },
   "Arild": {
-   "drop_count": 2,
+   "drop_count": 10,
    "items": [
     [
      "Vest_of_the_Bloodwolf",
@@ -2265,6 +2301,10 @@
     [
      "Shimmering_Gauntlets_of_the_Bloodwolf",
      3
+    ],
+    [
+     "Drakulv_Militia_Hammer",
+     7
     ]
    ]
   },
@@ -2274,11 +2314,15 @@
     [
      "p165_drop_7005",
      61
+    ],
+    [
+     "p165_uth_1359",
+     75
     ]
    ]
   },
   "Arnulv": {
-   "drop_count": 2,
+   "drop_count": 9,
    "items": [
     [
      "Sleeves_of_the_Bloodwolf",
@@ -2295,6 +2339,14 @@
     [
      "Wulfen_Night_Fang",
      4
+    ],
+    [
+     "Drakulv_Crescent_Talisman",
+     7
+    ],
+    [
+     "Drakulv_Militia_Hammer",
+     7
     ]
    ]
   },
@@ -2330,7 +2382,7 @@
    ]
   },
   "ashmonger": {
-   "drop_count": 4,
+   "drop_count": 12,
    "items": [
     [
      "p165_drop_7005",
@@ -2395,6 +2447,14 @@
     [
      "polished_piece_of_obsidian",
      1
+    ],
+    [
+     "p165_uth_1346",
+     80
+    ],
+    [
+     "p165_uth_1364",
+     70
     ]
    ]
   },
@@ -2824,11 +2884,23 @@
    ]
   },
   "badger": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Scythe_of_Smarting",
      10
+    ],
+    [
+     "p165_uth_37",
+     70
+    ],
+    [
+     "p165_uth_38",
+     60
+    ],
+    [
+     "p165_uth_39",
+     50
     ]
    ]
   },
@@ -2990,7 +3062,7 @@
    ]
   },
   "bandit henchman": {
-   "drop_count": 2,
+   "drop_count": 9,
    "items": [
     [
      "Jade",
@@ -3023,11 +3095,15 @@
     [
      "Ring_of_Longevity",
      1
+    ],
+    [
+     "cq_bandit_s_ear",
+     48
     ]
    ]
   },
   "bandit leader": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "Jade",
@@ -3036,11 +3112,15 @@
     [
      "BrightMelodicLute",
      10
+    ],
+    [
+     "cq_bandit_s_ear",
+     48
     ]
    ]
   },
   "bandit lieutenant": {
-   "drop_count": 2,
+   "drop_count": 8,
    "items": [
     [
      "Jade",
@@ -3069,11 +3149,15 @@
     [
      "Ring_of_Longevity",
      1
+    ],
+    [
+     "cq_bandit_s_ear",
+     48
     ]
    ]
   },
   "bandit thaumaturge": {
-   "drop_count": 2,
+   "drop_count": 8,
    "items": [
     [
      "Jade",
@@ -3102,6 +3186,10 @@
     [
      "SignetRing",
      1
+    ],
+    [
+     "cq_bandit_s_ear",
+     48
     ]
    ]
   },
@@ -3119,11 +3207,23 @@
    ]
   },
   "Banghaisgidheach": {
-   "drop_count": 2,
+   "drop_count": 4,
    "items": [
     [
      "Feline's_Tail",
      10
+    ],
+    [
+     "p165_uth_406",
+     75
+    ],
+    [
+     "p165_uth_408",
+     40
+    ],
+    [
+     "p165_uth_456",
+     68
     ]
    ]
   },
@@ -3218,7 +3318,7 @@
    ]
   },
   "bantam spectre": {
-   "drop_count": 1,
+   "drop_count": 6,
    "items": [
     [
      "Spectral_Shroud",
@@ -3239,15 +3339,23 @@
     [
      "p165_drop_2079",
      2
+    ],
+    [
+     "spectral_essence",
+     40
     ]
    ]
   },
   "barca": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Pilfered_Traveler's_Mace",
      3
+    ],
+    [
+     "p165_uth_139",
+     25
     ]
    ]
   },
@@ -3257,6 +3365,10 @@
     [
      "Belt_of_Health",
      15
+    ],
+    [
+     "p165_uth_900",
+     65
     ]
    ]
   },
@@ -3510,11 +3622,19 @@
    ]
   },
   "basilisk": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "AncientBattleBracer",
      2
+    ],
+    [
+     "p165_uth_474",
+     40
+    ],
+    [
+     "p165_uth_487",
+     20
     ]
    ]
   },
@@ -3561,7 +3681,7 @@
    ]
   },
   "bear": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Chrysoberyl",
@@ -3574,6 +3694,10 @@
     [
      "p165_drop_6982",
      3
+    ],
+    [
+     "p165_uth_218",
+     25
     ]
    ]
   },
@@ -3776,7 +3900,7 @@
    ]
   },
   "black bear": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Alloy Long Animal Fang",
@@ -3785,6 +3909,10 @@
     [
      "p165_drop_3446",
      3
+    ],
+    [
+     "p165_uth_2296",
+     50
     ]
    ]
   },
@@ -3932,7 +4060,7 @@
    ]
   },
   "black wraith": {
-   "drop_count": 1,
+   "drop_count": 12,
    "items": [
     [
      "Manifested_Terror_Sleeves",
@@ -3973,6 +4101,10 @@
     [
      "Necklace_of_Combat",
      1
+    ],
+    [
+     "cq_hib_shadowy_gem",
+     30
     ]
    ]
   },
@@ -4041,7 +4173,7 @@
    ]
   },
   "blodfelag dreng": {
-   "drop_count": 1,
+   "drop_count": 7,
    "items": [
     [
      "Blodjeger_Leggings",
@@ -4066,11 +4198,15 @@
     [
      "Bow_of_the_Blodjeger",
      1
+    ],
+    [
+     "p165_uth_1079",
+     40
     ]
    ]
   },
   "blodfelag haxa": {
-   "drop_count": 1,
+   "drop_count": 10,
    "items": [
     [
      "Wolftooth_Studded_Boots",
@@ -4103,6 +4239,14 @@
     [
      "Ring_of_Redhands",
      1
+    ],
+    [
+     "p165_uth_1418",
+     23
+    ],
+    [
+     "p165_uth_1419",
+     23
     ]
    ]
   },
@@ -4120,7 +4264,7 @@
    ]
   },
   "blodfelag livvakt": {
-   "drop_count": 1,
+   "drop_count": 5,
    "items": [
     [
      "Bloddarlig_Helm",
@@ -4133,6 +4277,14 @@
     [
      "Ring_of_Redhands",
      2
+    ],
+    [
+     "p165_uth_1418",
+     23
+    ],
+    [
+     "p165_uth_1419",
+     23
     ]
    ]
   },
@@ -4174,11 +4326,15 @@
    ]
   },
   "blodfelag partisan": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Ring_of_Redhands",
      8
+    ],
+    [
+     "p165_uth_1079",
+     25
     ]
    ]
   },
@@ -4188,11 +4344,15 @@
     [
      "Ring_of_Redhands",
      9
+    ],
+    [
+     "p165_uth_1079",
+     40
     ]
    ]
   },
   "blodfelag svard": {
-   "drop_count": 1,
+   "drop_count": 9,
    "items": [
     [
      "Berolig",
@@ -4225,11 +4385,15 @@
     [
      "Ring_of_Redhands",
      1
+    ],
+    [
+     "p165_uth_1079",
+     50
     ]
    ]
   },
   "blodfelag thralldriver": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Ring_of_Redhands",
@@ -4238,11 +4402,15 @@
     [
      "Blodbror_Jerkin",
      3
+    ],
+    [
+     "p165_uth_1079",
+     40
     ]
    ]
   },
   "blodfelag windcaller": {
-   "drop_count": 1,
+   "drop_count": 7,
    "items": [
     [
      "Ring_of_Redhands",
@@ -4267,11 +4435,15 @@
     [
      "Necklace_of_Solid_Darkness",
      1
+    ],
+    [
+     "p165_uth_1079",
+     60
     ]
    ]
   },
   "blodfelag wolfwarrior": {
-   "drop_count": 1,
+   "drop_count": 8,
    "items": [
     [
      "Wolftooth_Studded_Boots",
@@ -4292,6 +4464,18 @@
     [
      "Pillager's_Gauntlets",
      1
+    ],
+    [
+     "p165_uth_1079",
+     60
+    ],
+    [
+     "p165_uth_1418",
+     23
+    ],
+    [
+     "p165_uth_1419",
+     18
     ]
    ]
   },
@@ -4305,11 +4489,15 @@
    ]
   },
   "bloodthirsty she-wolf": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Necklace_of_the_Wavering_Spirit",
      4
+    ],
+    [
+     "p165_uth_584",
+     27
     ]
    ]
   },
@@ -4378,7 +4566,7 @@
    ]
   },
   "bodachan sabhaill": {
-   "drop_count": 2,
+   "drop_count": 12,
    "items": [
     [
      "Tattered_Woolen_Woven_Pants",
@@ -4451,6 +4639,14 @@
     [
      "Wavy_Piercer",
      1
+    ],
+    [
+     "onyx_gem",
+     75
+    ],
+    [
+     "p165_uth_15",
+     25
     ]
    ]
   },
@@ -4580,7 +4776,7 @@
    ]
   },
   "bogman trapper": {
-   "drop_count": 1,
+   "drop_count": 6,
    "items": [
     [
      "BrightMelodicLute",
@@ -4601,6 +4797,10 @@
     [
      "Ring_of_Longevity",
      1
+    ],
+    [
+     "p165_uth_825",
+     63
     ]
    ]
   },
@@ -4775,11 +4975,15 @@
     [
      "PilferedLeatherLeggings",
      5
+    ],
+    [
+     "p165_uth_688",
+     30
     ]
    ]
   },
   "boulderling": {
-   "drop_count": 2,
+   "drop_count": 12,
    "items": [
     [
      "p165_drop_7004",
@@ -4844,6 +5048,10 @@
     [
      "Stone_Heart_of_the_Earth_Spirit",
      1
+    ],
+    [
+     "p165_uth_118",
+     50
     ]
    ]
   },
@@ -5126,7 +5334,7 @@
    ]
   },
   "broken jotun": {
-   "drop_count": 2,
+   "drop_count": 12,
    "items": [
     [
      "Alexandrite",
@@ -5175,11 +5383,15 @@
     [
      "p165_drop_2296",
      1
+    ],
+    [
+     "p165_uth_4158",
+     20
     ]
    ]
   },
   "brown bear": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "PittedSharpClaw",
@@ -5188,6 +5400,10 @@
     [
      "Werewolf_Tooth_Necklace",
      1
+    ],
+    [
+     "p165_uth_2296",
+     37
     ]
    ]
   },
@@ -5492,7 +5708,7 @@
    ]
   },
   "bullyboy": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Mildewed_Tunic",
@@ -5501,6 +5717,10 @@
     [
      "PilferedLeatherLeggings",
      3
+    ],
+    [
+     "p165_uth_688",
+     30
     ]
    ]
   },
@@ -5606,11 +5826,15 @@
     [
      "Animal_Skin_Shield",
      12
+    ],
+    [
+     "p165_drop_6993",
+     30
     ]
    ]
   },
   "bwgan fisherman": {
-   "drop_count": 2,
+   "drop_count": 10,
    "items": [
     [
      "Bwgan_Fishing_Pole",
@@ -5647,6 +5871,10 @@
     [
      "Spellhurler's_Vest",
      1
+    ],
+    [
+     "p165_drop_6993",
+     30
     ]
    ]
   },
@@ -5827,7 +6055,7 @@
    ]
   },
   "campkeeper": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "torn_wolf_pelt",
@@ -5836,6 +6064,10 @@
     [
      "Imbued_Boots",
      6
+    ],
+    [
+     "p165_uth_39",
+     25
     ]
    ]
   },
@@ -5862,11 +6094,23 @@
    ]
   },
   "Captain Gruff": {
-   "drop_count": 2,
+   "drop_count": 4,
    "items": [
     [
      "Cap_of_the_Wisened_Dead",
      11
+    ],
+    [
+     "p165_uth_1980",
+     65
+    ],
+    [
+     "p165_uth_1981",
+     60
+    ],
+    [
+     "p165_uth_3687",
+     77
     ]
    ]
   },
@@ -5888,7 +6132,7 @@
    ]
   },
   "carrion crawler": {
-   "drop_count": 2,
+   "drop_count": 6,
    "items": [
     [
      "chunk_of_wolf_meat",
@@ -5909,15 +6153,23 @@
     [
      "Pillager's_Gauntlets",
      1
+    ],
+    [
+     "p165_uth_1059",
+     45
     ]
    ]
   },
   "carrion drake": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Pitted_Carrion_Drake_Talon",
      3
+    ],
+    [
+     "Shimmering_Gnawed_Bone",
+     65
     ]
    ]
   },
@@ -5927,6 +6179,10 @@
     [
      "chunk_of_wolf_meat",
      71
+    ],
+    [
+     "p165_uth_1059",
+     70
     ]
    ]
   },
@@ -6857,6 +7113,10 @@
     [
      "p165_drop_6972",
      7
+    ],
+    [
+     "p165_uth_1519",
+     30
     ]
    ]
   },
@@ -6879,6 +7139,14 @@
     [
      "p165_drop_7004",
      100
+    ],
+    [
+     "p165_drop_6979",
+     40
+    ],
+    [
+     "p165_drop_6980",
+     41
     ]
    ]
   },
@@ -6916,7 +7184,7 @@
    ]
   },
   "Charred Skeletal Commander": {
-   "drop_count": 2,
+   "drop_count": 9,
    "items": [
     [
      "Brimstone_Breastplate",
@@ -6937,11 +7205,27 @@
     [
      "Shadowformed_Ring",
      1
+    ],
+    [
+     "p165_uth_2535",
+     70
+    ],
+    [
+     "p165_uth_2536",
+     75
+    ],
+    [
+     "p165_uth_2537",
+     73
+    ],
+    [
+     "p165_uth_3209",
+     65
     ]
    ]
   },
   "charred skeletal warrior": {
-   "drop_count": 1,
+   "drop_count": 6,
    "items": [
     [
      "p165_drop_7005",
@@ -6958,6 +7242,14 @@
     [
      "Charred_Rib_Cage_Shield",
      2
+    ],
+    [
+     "p165_uth_2535",
+     50
+    ],
+    [
+     "p165_uth_2536",
+     70
     ]
    ]
   },
@@ -6992,11 +7284,19 @@
    ]
   },
   "Chieftain Dergal": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "p165_drop_7004",
      30
+    ],
+    [
+     "p165_drop_6992",
+     40
+    ],
+    [
+     "p165_uth_118",
+     80
     ]
    ]
   },
@@ -7185,11 +7485,19 @@
    ]
   },
   "Cleddyf Difwych": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "Cleddyf's_Head",
      20
+    ],
+    [
+     "Jade",
+     70
+    ],
+    [
+     "cq_bandit_s_ear",
+     48
     ]
    ]
   },
@@ -7239,7 +7547,7 @@
    ]
   },
   "cliff dweller hunter": {
-   "drop_count": 1,
+   "drop_count": 10,
    "items": [
     [
      "Furtive_Cliffdweller_Boots",
@@ -7276,6 +7584,10 @@
     [
      "Luminous_Fine_Brocade_Sleeves",
      1
+    ],
+    [
+     "cq_gold_lined_drinking_horn",
+     20
     ]
    ]
   },
@@ -7485,11 +7797,23 @@
    ]
   },
   "Coal": {
-   "drop_count": 2,
+   "drop_count": 4,
    "items": [
     [
      "Impervious_Sleeves",
      15
+    ],
+    [
+     "p165_drop_7005",
+     72
+    ],
+    [
+     "p165_uth_1346",
+     40
+    ],
+    [
+     "p165_uth_1364",
+     70
     ]
    ]
   },
@@ -8066,7 +8390,7 @@
    ]
   },
   "Cornwall hunter": {
-   "drop_count": 2,
+   "drop_count": 12,
    "items": [
     [
      "footed_bodkin_arrows4",
@@ -8223,11 +8547,15 @@
     [
      "p165_drop_3181",
      1
+    ],
+    [
+     "p165_uth_1335",
+     50
     ]
    ]
   },
   "corpan side": {
-   "drop_count": 1,
+   "drop_count": 11,
    "items": [
     [
      "Luminous_Giant_Gutter",
@@ -8268,6 +8596,10 @@
     [
      "Staff_of_Splinters",
      1
+    ],
+    [
+     "cq_changeling_skin",
+     80
     ]
    ]
   },
@@ -8718,11 +9050,19 @@
    ]
   },
   "Cui": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "Lightbound_Ring",
      9
+    ],
+    [
+     "p165_uth_2562",
+     85
+    ],
+    [
+     "p165_uth_3205",
+     60
     ]
    ]
   },
@@ -8910,7 +9250,7 @@
    ]
   },
   "curmudgeon skinner": {
-   "drop_count": 1,
+   "drop_count": 11,
    "items": [
     [
      "Patched_Hide_Leggings",
@@ -8951,6 +9291,10 @@
     [
      "Sleeves_of_Might",
      1
+    ],
+    [
+     "p165_uth_39",
+     25
     ]
    ]
   },
@@ -9659,20 +10003,36 @@
    ]
   },
   "Cyfer Difwych": {
-   "drop_count": 2,
+   "drop_count": 4,
    "items": [
     [
      "GreatIronSword",
      1
+    ],
+    [
+     "Jade",
+     70
+    ],
+    [
+     "cq_bandit_s_ear",
+     48
+    ],
+    [
+     "p165_drop_7004",
+     50
     ]
    ]
   },
   "Cyfwlch Difwych": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Jade",
      40
+    ],
+    [
+     "cq_bandit_s_ear",
+     48
     ]
    ]
   },
@@ -11636,7 +11996,7 @@
    ]
   },
   "dergan fury": {
-   "drop_count": 2,
+   "drop_count": 12,
    "items": [
     [
      "p165_drop_7004",
@@ -11677,11 +12037,19 @@
     [
      "Worn_Dark_Guardian_Boots",
      1
+    ],
+    [
+     "p165_uth_118",
+     80
+    ],
+    [
+     "p165_uth_55",
+     80
     ]
    ]
   },
   "dergan tussler": {
-   "drop_count": 2,
+   "drop_count": 5,
    "items": [
     [
      "Worn_Dark_Guardian_Sword",
@@ -11694,6 +12062,14 @@
     [
      "Worn_Dark_Guardian_Boots",
      1
+    ],
+    [
+     "p165_uth_118",
+     60
+    ],
+    [
+     "p165_uth_55",
+     80
     ]
    ]
   },
@@ -11753,7 +12129,7 @@
    ]
   },
   "devout filidh": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "p165_drop_7004",
@@ -11766,6 +12142,10 @@
     [
      "BrightMelodicLute",
      1
+    ],
+    [
+     "p165_uth_572",
+     5
     ]
    ]
   },
@@ -12393,7 +12773,7 @@
    ]
   },
   "Dorbal": {
-   "drop_count": 2,
+   "drop_count": 6,
    "items": [
     [
      "Flint",
@@ -12410,6 +12790,14 @@
     [
      "Rapier_of_the_Forsaken",
      15
+    ],
+    [
+     "Forgotten_Silver_Jasper_Locket",
+     20
+    ],
+    [
+     "Well_Crafted_Lantern",
+     80
     ]
    ]
   },
@@ -12448,11 +12836,19 @@
    ]
   },
   "dragon ant queen": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Spotted_Larva",
      20
+    ],
+    [
+     "p165_uth_1271",
+     90
+    ],
+    [
+     "p165_uth_1282",
+     95
     ]
    ]
   },
@@ -13176,7 +13572,7 @@
    ]
   },
   "Dread Lord Aryon": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "p165_drop_6969",
@@ -13185,6 +13581,10 @@
     [
      "Skull-embossed_Gauntlets",
      8
+    ],
+    [
+     "p165_drop_6981",
+     30
     ]
    ]
   },
@@ -13264,11 +13664,19 @@
    ]
   },
   "drowned soul": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Oiled_Leather_Belt",
      1
+    ],
+    [
+     "cq_clump_of_seaweed",
+     80
+    ],
+    [
+     "dead_fish",
+     70
     ]
    ]
   },
@@ -13339,7 +13747,7 @@
    ]
   },
   "druid seer": {
-   "drop_count": 1,
+   "drop_count": 7,
    "items": [
     [
      "p165_drop_6972",
@@ -13360,6 +13768,14 @@
     [
      "Silvered_Sleeves_of_the_Resolute",
      3
+    ],
+    [
+     "p165_drop_6971",
+     40
+    ],
+    [
+     "p165_uth_572",
+     6
     ]
    ]
   },
@@ -13422,7 +13838,7 @@
    ]
   },
   "dryad blossom": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Pillager's_Gauntlets",
@@ -13431,11 +13847,15 @@
     [
      "Driftwood_Staff",
      1
+    ],
+    [
+     "p165_uth_4732",
+     50
     ]
    ]
   },
   "dryad greenthumb": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Boar's_Head_Ring",
@@ -13444,11 +13864,15 @@
     [
      "Trollish_Stone_Bracer",
      2
+    ],
+    [
+     "p165_uth_4732",
+     60
     ]
    ]
   },
   "dryad sprig": {
-   "drop_count": 1,
+   "drop_count": 6,
    "items": [
     [
      "Engraved_Bracer",
@@ -13469,11 +13893,15 @@
     [
      "Thickened_Cloth_Sleeves",
      2
+    ],
+    [
+     "p165_uth_893",
+     45
     ]
    ]
   },
   "dryad sprout": {
-   "drop_count": 2,
+   "drop_count": 8,
    "items": [
     [
      "Tattered_Rawhide_Mjuklaedar_Sleeves",
@@ -13502,6 +13930,10 @@
     [
      "Tattered_Rawhide_Mjuklaedar_Leggings",
      4
+    ],
+    [
+     "p165_uth_893",
+     45
     ]
    ]
   },
@@ -13672,11 +14104,15 @@
    ]
   },
   "dungeon chitin": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Flayed_Hagbui_Gloves",
      3
+    ],
+    [
+     "p165_uth_404",
+     22
     ]
    ]
   },
@@ -13793,11 +14229,19 @@
    ]
   },
   "dverge crackler": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "p165_drop_7005",
      60
+    ],
+    [
+     "p165_uth_1359",
+     75
+    ],
+    [
+     "p165_uth_3205",
+     57
     ]
    ]
   },
@@ -13832,7 +14276,7 @@
    ]
   },
   "dverge sparker": {
-   "drop_count": 1,
+   "drop_count": 6,
    "items": [
     [
      "Hearthwood_Branch",
@@ -13853,6 +14297,10 @@
     [
      "Trollish_Stone_Bracer",
      2
+    ],
+    [
+     "p165_drop_7005",
+     55
     ]
    ]
   },
@@ -14340,7 +14788,7 @@
    ]
   },
   "eidolon": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Yellow_Tourmaline",
@@ -14353,6 +14801,10 @@
     [
      "Glistening_War_Spear",
      3
+    ],
+    [
+     "cq_hib_shadowy_gem",
+     31
     ]
    ]
   },
@@ -14630,7 +15082,7 @@
    ]
   },
   "elder beech": {
-   "drop_count": 1,
+   "drop_count": 12,
    "items": [
     [
      "MajesticalRing",
@@ -14687,6 +15139,14 @@
     [
      "Spellhurler's_Vest",
      1
+    ],
+    [
+     "p165_uth_1035",
+     18
+    ],
+    [
+     "p165_uth_1037",
+     48
     ]
    ]
   },
@@ -15181,7 +15641,7 @@
    ]
   },
   "empyrean guardian": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Empyreal_Ranger_Boots",
@@ -15190,6 +15650,10 @@
     [
      "Sentinel's_Ring",
      3
+    ],
+    [
+     "p165_uth_990",
+     18
     ]
    ]
   },
@@ -15751,11 +16215,15 @@
    ]
   },
   "Evocatus praetorii": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Carrion_Feeder_Signal_Collar",
      5
+    ],
+    [
+     "p165_uth_1519",
+     30
     ]
    ]
   },
@@ -15837,7 +16305,7 @@
    ]
   },
   "fading spirit": {
-   "drop_count": 1,
+   "drop_count": 6,
    "items": [
     [
      "FeyJewelry",
@@ -15858,6 +16326,10 @@
     [
      "p165_drop_6992",
      2
+    ],
+    [
+     "p165_uth_118",
+     50
     ]
    ]
   },
@@ -16616,16 +17088,24 @@
    ]
   },
   "Fearan": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "p165_drop_6979",
      40
+    ],
+    [
+     "p165_uth_139",
+     25
+    ],
+    [
+     "p165_uth_141",
+     50
     ]
    ]
   },
   "feccan": {
-   "drop_count": 2,
+   "drop_count": 10,
    "items": [
     [
      "onyx_gem",
@@ -16662,6 +17142,10 @@
     [
      "Woven_Grass_Bracer",
      1
+    ],
+    [
+     "aventurine_gem",
+     20
     ]
    ]
   },
@@ -16894,7 +17378,7 @@
    ]
   },
   "filidh": {
-   "drop_count": 1,
+   "drop_count": 7,
    "items": [
     [
      "p165_drop_7004",
@@ -16919,11 +17403,15 @@
     [
      "ShieldOfUln",
      1
+    ],
+    [
+     "p165_uth_572",
+     5
     ]
    ]
   },
   "filidh sacrificer": {
-   "drop_count": 1,
+   "drop_count": 8,
    "items": [
     [
      "p165_drop_7004",
@@ -16952,6 +17440,10 @@
     [
      "Ring_of_Longevity",
      1
+    ],
+    [
+     "p165_uth_572",
+     5
     ]
    ]
   },
@@ -17006,7 +17498,7 @@
    ]
   },
   "fire ant gatherer": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "Bow_of_Flames",
@@ -17015,11 +17507,15 @@
     [
      "warm_fire_ant_larva",
      6
+    ],
+    [
+     "p165_uth_1358",
+     80
     ]
    ]
   },
   "fire ant scavenger": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Ant_Skull_Helm",
@@ -17028,11 +17524,15 @@
     [
      "Bow_of_Flames",
      2
+    ],
+    [
+     "p165_uth_1358",
+     65
     ]
    ]
   },
   "fire ant worker": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Bow_of_Flames",
@@ -17041,6 +17541,10 @@
     [
      "Mandible_Headed_Axe",
      5
+    ],
+    [
+     "p165_uth_1358",
+     80
     ]
    ]
   },
@@ -17098,7 +17602,7 @@
    ]
   },
   "fire giant guard": {
-   "drop_count": 1,
+   "drop_count": 10,
    "items": [
     [
      "Primordial_Skull_Helm",
@@ -17127,11 +17631,23 @@
     [
      "Shining_Sleeves_of_the_Dauntless",
      1
+    ],
+    [
+     "p165_uth_2532",
+     55
+    ],
+    [
+     "p165_uth_2538",
+     56
+    ],
+    [
+     "p165_uth_3367",
+     75
     ]
    ]
   },
   "fire giant lookout": {
-   "drop_count": 1,
+   "drop_count": 6,
    "items": [
     [
      "Serrated Bone Spear",
@@ -17152,11 +17668,15 @@
     [
      "Svart-alfar_Battlebracer",
      2
+    ],
+    [
+     "p165_uth_2533",
+     60
     ]
    ]
   },
   "fire giant scout": {
-   "drop_count": 1,
+   "drop_count": 8,
    "items": [
     [
      "Hammer_of_the_Wildcrusher",
@@ -17181,15 +17701,31 @@
     [
      "Trollish_Stone_Bracer",
      1
+    ],
+    [
+     "p165_uth_2532",
+     45
+    ],
+    [
+     "p165_uth_2533",
+     67
     ]
    ]
   },
   "fire phantom": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Shining_Ragers_Axe",
      3
+    ],
+    [
+     "p165_uth_2551",
+     65
+    ],
+    [
+     "p165_uth_2562",
+     70
     ]
    ]
   },
@@ -17211,20 +17747,44 @@
    ]
   },
   "fishing bear": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Suspended_Dewdrop",
      15
+    ],
+    [
+     "p165_uth_2433",
+     30
+    ],
+    [
+     "p165_uth_467",
+     68
+    ],
+    [
+     "p165_uth_468",
+     68
     ]
    ]
   },
   "fishing bear cub": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Gem_Embellished_Cloak",
      3
+    ],
+    [
+     "p165_uth_2433",
+     30
+    ],
+    [
+     "p165_uth_467",
+     40
+    ],
+    [
+     "p165_uth_468",
+     40
     ]
    ]
   },
@@ -17238,20 +17798,40 @@
    ]
   },
   "Fjalar": {
-   "drop_count": 2,
+   "drop_count": 5,
    "items": [
     [
      "Bracelet_of_Defense",
      15
+    ],
+    [
+     "p165_drop_6987",
+     60
+    ],
+    [
+     "p165_drop_6989",
+     20
+    ],
+    [
+     "p165_drop_7007",
+     70
+    ],
+    [
+     "p165_uth_506",
+     30
     ]
    ]
   },
   "flame spout": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Lava_Etched_Gloves",
      5
+    ],
+    [
+     "p165_uth_2551",
+     70
     ]
    ]
   },
@@ -17265,7 +17845,7 @@
    ]
   },
   "flaming raukomaz": {
-   "drop_count": 1,
+   "drop_count": 8,
    "items": [
     [
      "Exhumed_Bone_Necklace",
@@ -17290,6 +17870,14 @@
     [
      "p165_drop_447",
      1
+    ],
+    [
+     "p165_uth_2559",
+     80
+    ],
+    [
+     "p165_uth_2566",
+     80
     ]
    ]
   },
@@ -17303,7 +17891,7 @@
    ]
   },
   "fog wraith": {
-   "drop_count": 1,
+   "drop_count": 12,
    "items": [
     [
      "Dreamwalker's_Sleeves",
@@ -17344,6 +17932,14 @@
     [
      "p165_drop_2897",
      1
+    ],
+    [
+     "p165_uth_445",
+     80
+    ],
+    [
+     "p165_uth_447",
+     20
     ]
    ]
   },
@@ -17388,6 +17984,10 @@
     [
      "PittedSharpClaw",
      59
+    ],
+    [
+     "p165_uth_218",
+     60
     ]
    ]
   },
@@ -17401,7 +18001,7 @@
    ]
   },
   "forest chief": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "p165_drop_6980",
@@ -17410,6 +18010,10 @@
     [
      "p165_drop_6992",
      43
+    ],
+    [
+     "p165_uth_572",
+     11
     ]
    ]
   },
@@ -17555,7 +18159,7 @@
    ]
   },
   "forest smuggler": {
-   "drop_count": 2,
+   "drop_count": 6,
    "items": [
     [
      "p165_drop_6981",
@@ -17576,6 +18180,10 @@
     [
      "Ancient_Oak_Bow",
      3
+    ],
+    [
+     "p165_uth_572",
+     11
     ]
    ]
   },
@@ -17627,7 +18235,7 @@
    ]
   },
   "forest tracker": {
-   "drop_count": 2,
+   "drop_count": 9,
    "items": [
     [
      "p165_drop_6981",
@@ -17648,6 +18256,22 @@
     [
      "LightfootBoots",
      4
+    ],
+    [
+     "p165_drop_6980",
+     35
+    ],
+    [
+     "p165_drop_6992",
+     50
+    ],
+    [
+     "p165_uth_118",
+     65
+    ],
+    [
+     "p165_uth_572",
+     11
     ]
    ]
   },
@@ -18448,7 +19072,7 @@
    ]
   },
   "Geirolf": {
-   "drop_count": 2,
+   "drop_count": 10,
    "items": [
     [
      "Wulfen_Crescent_Vest",
@@ -18465,6 +19089,30 @@
     [
      "Emerald_Moonshone_Leggings",
      3
+    ],
+    [
+     "Cloak_of_the_Unseen_Stalker",
+     7
+    ],
+    [
+     "Drakulv_Militia_Great_Axe",
+     7
+    ],
+    [
+     "Drakulv_Militia_Great_Hammer",
+     7
+    ],
+    [
+     "Drakulv_Militia_Great_Sword",
+     7
+    ],
+    [
+     "Emerald Moonshone Gloves",
+     7
+    ],
+    [
+     "Emerald_Moonshone_Helm",
+     7
     ]
    ]
   },
@@ -18643,7 +19291,7 @@
    ]
   },
   "ghastly siabra": {
-   "drop_count": 1,
+   "drop_count": 7,
    "items": [
     [
      "Journeyman_Craftsman_Pendant",
@@ -18652,6 +19300,26 @@
     [
      "Apprentice_Craftsman_Pendant",
      1
+    ],
+    [
+     "p165_drop_6979",
+     80
+    ],
+    [
+     "p165_drop_7004",
+     20
+    ],
+    [
+     "p165_uth_118",
+     80
+    ],
+    [
+     "p165_uth_77",
+     80
+    ],
+    [
+     "p165_uth_78",
+     20
     ]
    ]
   },
@@ -18686,7 +19354,7 @@
    ]
   },
   "ghostly knight": {
-   "drop_count": 2,
+   "drop_count": 7,
    "items": [
     [
      "p165_drop_3499",
@@ -18711,6 +19379,10 @@
     [
      "NetherworldBracelet",
      4
+    ],
+    [
+     "p165_drop_7004",
+     35
     ]
    ]
   },
@@ -18724,7 +19396,7 @@
    ]
   },
   "ghostly siabra": {
-   "drop_count": 1,
+   "drop_count": 12,
    "items": [
     [
      "p165_drop_7004",
@@ -18789,6 +19461,14 @@
     [
      "Sleeves_of_Might",
      1
+    ],
+    [
+     "p165_uth_77",
+     80
+    ],
+    [
+     "p165_uth_78",
+     20
     ]
    ]
   },
@@ -18907,7 +19587,7 @@
    ]
   },
   "ghoul lord": {
-   "drop_count": 1,
+   "drop_count": 12,
    "items": [
     [
      "Ghoul_Knight_Breastplate",
@@ -18952,6 +19632,10 @@
     [
      "Night's_Edge_Pike",
      1
+    ],
+    [
+     "cq_golden_chain",
+     60
     ]
    ]
   },
@@ -19031,11 +19715,15 @@
    ]
   },
   "giant ant": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Cloak_of_Concealment",
      1
+    ],
+    [
+     "cq_giant_ant_mandible",
+     48
     ]
    ]
   },
@@ -19798,7 +20486,7 @@
    ]
   },
   "Glimmer Meldun": {
-   "drop_count": 2,
+   "drop_count": 6,
    "items": [
     [
      "Odyllic Vest",
@@ -19807,6 +20495,22 @@
     [
      "Glimmering_Gem",
      5
+    ],
+    [
+     "Antipodean_Club",
+     7
+    ],
+    [
+     "Odyllic Boots",
+     7
+    ],
+    [
+     "Odyllic Cap",
+     7
+    ],
+    [
+     "entwined_silken_strand",
+     7
     ]
    ]
   },
@@ -20245,7 +20949,7 @@
    ]
   },
   "goblin": {
-   "drop_count": 1,
+   "drop_count": 12,
    "items": [
     [
      "Fire-forged_Leggings",
@@ -20370,6 +21074,10 @@
     [
      "p165_drop_6994",
      1
+    ],
+    [
+     "p165_uth_688",
+     24
     ]
    ]
   },
@@ -20515,7 +21223,7 @@
    ]
   },
   "goblin fisherman": {
-   "drop_count": 2,
+   "drop_count": 10,
    "items": [
     [
      "PittedBronzeDagger",
@@ -20552,6 +21260,10 @@
     [
      "PilferedLeatherLeggings",
      1
+    ],
+    [
+     "p165_uth_33",
+     40
     ]
    ]
   },
@@ -20767,7 +21479,7 @@
    ]
   },
   "goblin scout": {
-   "drop_count": 1,
+   "drop_count": 11,
    "items": [
     [
      "Mildewed_Tunic",
@@ -20808,6 +21520,10 @@
     [
      "SpinedFishSticker",
      1
+    ],
+    [
+     "p165_uth_688",
+     24
     ]
    ]
   },
@@ -20825,7 +21541,7 @@
    ]
   },
   "goblin warrior": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Arm-bone_Scepter",
@@ -20834,6 +21550,10 @@
     [
      "Goblin_Rapier",
      2
+    ],
+    [
+     "p165_uth_118",
+     60
     ]
    ]
   },
@@ -22352,7 +23072,7 @@
    ]
   },
   "grass sheerie": {
-   "drop_count": 2,
+   "drop_count": 5,
    "items": [
     [
      "p165_drop_6979",
@@ -22365,11 +23085,19 @@
     [
      "Fey_Jewel",
      3
+    ],
+    [
+     "p165_uth_139",
+     25
+    ],
+    [
+     "p165_uth_141",
+     50
     ]
    ]
   },
   "grass spirit": {
-   "drop_count": 1,
+   "drop_count": 7,
    "items": [
     [
      "Tattered_Woolen_Cap",
@@ -22390,6 +23118,14 @@
     [
      "Woven_Grass_Bracer",
      1
+    ],
+    [
+     "grass_ring",
+     75
+    ],
+    [
+     "small_copper_ring",
+     23
     ]
    ]
   },
@@ -22550,7 +23286,7 @@
    ]
   },
   "gray spectre": {
-   "drop_count": 1,
+   "drop_count": 7,
    "items": [
     [
      "Spectral_Shroud",
@@ -22575,6 +23311,10 @@
     [
      "Mantle_of_Regalia",
      1
+    ],
+    [
+     "spectral_essence",
+     50
     ]
    ]
   },
@@ -22606,11 +23346,19 @@
    ]
   },
   "great tingler": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Cloak_of_the_Nightwalker",
      5
+    ],
+    [
+     "p165_uth_580",
+     40
+    ],
+    [
+     "p165_uth_581",
+     32
     ]
    ]
   },
@@ -22783,7 +23531,7 @@
    ]
   },
   "greater zephyr": {
-   "drop_count": 1,
+   "drop_count": 12,
    "items": [
     [
      "Chrome_Diopside",
@@ -22848,6 +23596,10 @@
     [
      "Ring_of_Ice",
      1
+    ],
+    [
+     "p165_uth_566",
+     70
     ]
    ]
   },
@@ -23438,6 +24190,10 @@
     [
      "Stolen_Bear_Tooth",
      20
+    ],
+    [
+     "p165_uth_688",
+     30
     ]
    ]
   },
@@ -23463,16 +24219,20 @@
    ]
   },
   "gurite ambusher": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "p165_drop_6980",
      27
+    ],
+    [
+     "p165_uth_55",
+     20
     ]
    ]
   },
   "gurite assailer": {
-   "drop_count": 1,
+   "drop_count": 5,
    "items": [
     [
      "p165_drop_6971",
@@ -23489,6 +24249,10 @@
     [
      "Rogue_Captain_Pendant",
      1
+    ],
+    [
+     "p165_drop_6970",
+     20
     ]
    ]
   },
@@ -23527,11 +24291,19 @@
    ]
   },
   "gurite seeker": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "p165_drop_6971",
      22
+    ],
+    [
+     "p165_uth_146",
+     50
+    ],
+    [
+     "p165_uth_442",
+     35
     ]
    ]
   },
@@ -23708,7 +24480,7 @@
    ]
   },
   "hagbui forge tender": {
-   "drop_count": 2,
+   "drop_count": 4,
    "items": [
     [
      "Forge Tender`s Tunic",
@@ -23721,6 +24493,10 @@
     [
      "Forge_Tender's_Hammer",
      3
+    ],
+    [
+     "p165_uth_3511",
+     30
     ]
    ]
   },
@@ -23948,6 +24724,10 @@
     [
      "Bloodied_Coral_Sword",
      9
+    ],
+    [
+     "p165_uth_3512",
+     30
     ]
    ]
   },
@@ -24123,7 +24903,7 @@
    ]
   },
   "haunt": {
-   "drop_count": 1,
+   "drop_count": 8,
    "items": [
     [
      "Blood_Stained_Bead_Necklace",
@@ -24152,6 +24932,10 @@
     [
      "Wretched_Cloak",
      1
+    ],
+    [
+     "p165_uth_1404",
+     20
     ]
    ]
   },
@@ -24227,7 +25011,7 @@
    ]
   },
   "Hazard": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "Jade",
@@ -24236,6 +25020,10 @@
     [
      "Heart_of_Oak",
      5
+    ],
+    [
+     "p165_uth_55",
+     80
     ]
    ]
   },
@@ -24355,6 +25143,10 @@
     [
      "2_LCoC_Necklace",
      23
+    ],
+    [
+     "2_LRL_Staff",
+     15
     ]
    ]
   },
@@ -24553,6 +25345,10 @@
     [
      "p165_drop_9408",
      20
+    ],
+    [
+     "Luminous_Regal_Lupine_War_Hammer",
+     15
     ]
    ]
   },
@@ -24606,11 +25402,15 @@
    ]
   },
   "highwayman": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Mildewed_Tunic",
      5
+    ],
+    [
+     "p165_uth_688",
+     30
     ]
    ]
   },
@@ -25140,7 +25940,7 @@
    ]
   },
   "howling maiden": {
-   "drop_count": 2,
+   "drop_count": 12,
    "items": [
     [
      "p165_drop_6970",
@@ -25229,6 +26029,10 @@
     [
      "mithril_chain_sleeves",
      1
+    ],
+    [
+     "p165_uth_1519",
+     50
     ]
    ]
   },
@@ -25820,7 +26624,7 @@
    ]
   },
   "Ifor": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "Ifor's_Headband",
@@ -25829,6 +26633,10 @@
     [
      "Islwyn's_Bead_Necklace",
      15
+    ],
+    [
+     "p165_drop_6993",
+     30
     ]
    ]
   },
@@ -26158,7 +26966,7 @@
    ]
   },
   "irewood sapling": {
-   "drop_count": 1,
+   "drop_count": 7,
    "items": [
     [
      "Shadowsilk_Vest",
@@ -26179,6 +26987,14 @@
     [
      "Scythe_of_Driving_Rain",
      1
+    ],
+    [
+     "p165_uth_110",
+     75
+    ],
+    [
+     "p165_uth_111",
+     55
     ]
    ]
   },
@@ -26461,7 +27277,7 @@
    ]
   },
   "Kaq": {
-   "drop_count": 2,
+   "drop_count": 12,
    "items": [
     [
      "p165_drop_2576",
@@ -26506,6 +27322,22 @@
     [
      "shimmering_Dark_Crystalline_Helm",
      4
+    ],
+    [
+     "Polished_Granite_Pin",
+     7
+    ],
+    [
+     "Shimmering_Feather_Light_Granite_Hammer",
+     7
+    ],
+    [
+     "Shimmering_Fiery_Pious_Bludgeoner",
+     7
+    ],
+    [
+     "Shimmering_Polished_Hammer_of_Eldspar",
+     7
     ]
    ]
   },
@@ -26556,7 +27388,7 @@
    ]
   },
   "Keh": {
-   "drop_count": 2,
+   "drop_count": 12,
    "items": [
     [
      "Hauberk_of_the_Stoneharvest",
@@ -26601,6 +27433,18 @@
     [
      "shimmering_Dark_Crystalline_Helm",
      4
+    ],
+    [
+     "Shimmering_Hammer_of_Crushing_Might",
+     7
+    ],
+    [
+     "Shimmering_Sleeves_of_the_Stoneharvest",
+     7
+    ],
+    [
+     "Stonewatch_Bracer",
+     7
     ]
    ]
   },
@@ -27557,7 +28401,7 @@
    ]
   },
   "King Hresvelgr": {
-   "drop_count": 2,
+   "drop_count": 4,
    "items": [
     [
      "Rhodolite",
@@ -27566,6 +28410,14 @@
     [
      "2_NLG_Jewel",
      10
+    ],
+    [
+     "2_SRL_Shield",
+     20
+    ],
+    [
+     "hammer",
+     20
     ]
    ]
   },
@@ -28140,7 +28992,7 @@
    ]
   },
   "koalinth slinker": {
-   "drop_count": 1,
+   "drop_count": 10,
    "items": [
     [
      "Algae_Covered_Coral_Boots",
@@ -28177,6 +29029,10 @@
     [
      "p165_drop_6991",
      1
+    ],
+    [
+     "p165_uth_990",
+     35
     ]
    ]
   },
@@ -28856,11 +29712,19 @@
    ]
   },
   "large boulderling": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "p165_drop_6980",
      70
+    ],
+    [
+     "p165_drop_6979",
+     60
+    ],
+    [
+     "p165_drop_6981",
+     30
     ]
    ]
   },
@@ -29001,7 +29865,7 @@
    ]
   },
   "Lashold": {
-   "drop_count": 2,
+   "drop_count": 4,
    "items": [
     [
      "Lasholds_Remains",
@@ -29010,6 +29874,14 @@
     [
      "Manifested_Terror_Cap",
      15
+    ],
+    [
+     "p165_uth_632",
+     70
+    ],
+    [
+     "p165_uth_633",
+     28
     ]
    ]
   },
@@ -29893,7 +30765,7 @@
    ]
   },
   "little water goblin": {
-   "drop_count": 2,
+   "drop_count": 11,
    "items": [
     [
      "dead_fish",
@@ -29930,6 +30802,14 @@
     [
      "p165_drop_1358",
      1
+    ],
+    [
+     "cq_clump_of_seaweed",
+     70
+    ],
+    [
+     "p165_uth_866",
+     50
     ]
    ]
   },
@@ -30318,6 +31198,10 @@
     [
      "Cerus",
      15
+    ],
+    [
+     "p165_uth_2566",
+     80
     ]
    ]
   },
@@ -30537,7 +31421,7 @@
    ]
   },
   "luch catcher": {
-   "drop_count": 1,
+   "drop_count": 5,
    "items": [
     [
      "Luch_Paw",
@@ -30546,15 +31430,39 @@
     [
      "Piunesean_Fang",
      5
+    ],
+    [
+     "p165_uth_406",
+     69
+    ],
+    [
+     "p165_uth_408",
+     40
+    ],
+    [
+     "p165_uth_456",
+     55
     ]
    ]
   },
   "luch hunter": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Puinesean Fang",
      5
+    ],
+    [
+     "p165_uth_406",
+     75
+    ],
+    [
+     "p165_uth_408",
+     40
+    ],
+    [
+     "p165_uth_456",
+     68
     ]
    ]
   },
@@ -30588,7 +31496,7 @@
    ]
   },
   "lugradan whelp": {
-   "drop_count": 2,
+   "drop_count": 12,
    "items": [
     [
      "Moonstone",
@@ -30661,6 +31569,10 @@
     [
      "ld_sturdy_woven_vest",
      1
+    ],
+    [
+     "aventurine_gem",
+     80
     ]
    ]
   },
@@ -30742,7 +31654,7 @@
    ]
   },
   "luricaduane": {
-   "drop_count": 2,
+   "drop_count": 9,
    "items": [
     [
      "Moonstone",
@@ -30775,6 +31687,10 @@
     [
      "Sturdy_Leather_Belt",
      1
+    ],
+    [
+     "p165_uth_55",
+     42
     ]
    ]
   },
@@ -31967,7 +32883,7 @@
    ]
   },
   "mephitic ghoul": {
-   "drop_count": 4,
+   "drop_count": 12,
    "items": [
     [
      "Hardened_Stone_Axe",
@@ -32012,6 +32928,22 @@
     [
      "melted_ghoul_flesh",
      4
+    ],
+    [
+     "p165_uth_1359",
+     72
+    ],
+    [
+     "p165_uth_2550",
+     72
+    ],
+    [
+     "p165_uth_2551",
+     60
+    ],
+    [
+     "p165_uth_3197",
+     74
     ]
    ]
   },
@@ -32433,7 +33365,7 @@
    ]
   },
   "minor werewolf noble": {
-   "drop_count": 1,
+   "drop_count": 12,
    "items": [
     [
      "Noble_Supple_Boots",
@@ -32466,6 +33398,22 @@
     [
      "Small_Warrior_Figurine",
      1
+    ],
+    [
+     "p165_uth_1619",
+     50
+    ],
+    [
+     "p165_uth_1632",
+     40
+    ],
+    [
+     "p165_uth_1633",
+     50
+    ],
+    [
+     "p165_uth_2024",
+     40
     ]
    ]
   },
@@ -32517,7 +33465,7 @@
    ]
   },
   "mist sheerie": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "Rattling_Sherrie_Beads",
@@ -32526,11 +33474,15 @@
     [
      "Sheeries_Fearsome_Shroud",
      15
+    ],
+    [
+     "p165_drop_6981",
+     75
     ]
    ]
   },
   "mist sprite": {
-   "drop_count": 1,
+   "drop_count": 5,
    "items": [
     [
      "Deathrune_Robes",
@@ -32543,11 +33495,19 @@
     [
      "Singed_Fellwood_Shield",
      1
+    ],
+    [
+     "Jade",
+     20
+    ],
+    [
+     "Moonstone",
+     35
     ]
    ]
   },
   "mist wraith": {
-   "drop_count": 1,
+   "drop_count": 12,
    "items": [
     [
      "Dreamwalker's_Gloves",
@@ -32612,6 +33572,10 @@
     [
      "Wrap_of_Serenity",
      1
+    ],
+    [
+     "p165_uth_445",
+     80
     ]
    ]
   },
@@ -33299,16 +34263,20 @@
    ]
   },
   "moss maiden": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Glimmering_Mantle",
      13
+    ],
+    [
+     "cq_bag_of_moss",
+     82
     ]
    ]
   },
   "moss sheerie": {
-   "drop_count": 1,
+   "drop_count": 7,
    "items": [
     [
      "Mentalist's_Staff_of_Channeling",
@@ -33333,6 +34301,10 @@
     [
      "Mentalist_Staff_of_Channeling",
      1
+    ],
+    [
+     "p165_uth_139",
+     20
     ]
    ]
   },
@@ -34355,7 +35327,7 @@
    ]
   },
   "muryan trickster": {
-   "drop_count": 2,
+   "drop_count": 6,
    "items": [
     [
      "Ruined_Muryan_Cap",
@@ -34372,6 +35344,14 @@
     [
      "Trickster_Robe",
      2
+    ],
+    [
+     "p165_uth_2993",
+     25
+    ],
+    [
+     "p165_uth_3563",
+     23
     ]
    ]
   },
@@ -34418,7 +35398,7 @@
    ]
   },
   "Mystic Ulfwag": {
-   "drop_count": 2,
+   "drop_count": 4,
    "items": [
     [
      "p165_drop_7004",
@@ -34431,15 +35411,31 @@
     [
      "Ring_of_Longevity",
      5
+    ],
+    [
+     "p165_drop_6980",
+     40
     ]
    ]
   },
   "Nagoltooth": {
-   "drop_count": 2,
+   "drop_count": 4,
    "items": [
     [
      "Breath_of_Winter",
      15
+    ],
+    [
+     "p165_uth_4146",
+     72
+    ],
+    [
+     "p165_uth_4147",
+     80
+    ],
+    [
+     "p165_uth_4268",
+     55
     ]
    ]
   },
@@ -34727,15 +35723,31 @@
     [
      "Stone_of_the_Pious",
      15
+    ],
+    [
+     "p165_uth_584",
+     86
     ]
    ]
   },
   "Oldest": {
-   "drop_count": 2,
+   "drop_count": 4,
    "items": [
     [
      "Oldest's_Remains",
      5
+    ],
+    [
+     "p165_uth_2297",
+     35
+    ],
+    [
+     "p165_uth_473",
+     30
+    ],
+    [
+     "p165_uth_487",
+     35
     ]
    ]
   },
@@ -34753,11 +35765,27 @@
    ]
   },
   "ollipheist": {
-   "drop_count": 1,
+   "drop_count": 5,
    "items": [
     [
      "Ollipheist_Eye",
      5
+    ],
+    [
+     "p165_uth_3325",
+     70
+    ],
+    [
+     "p165_uth_3326",
+     42
+    ],
+    [
+     "p165_uth_3327",
+     42
+    ],
+    [
+     "p165_uth_3459",
+     13
     ]
    ]
   },
@@ -35584,7 +36612,7 @@
    ]
   },
   "perfidious pook": {
-   "drop_count": 1,
+   "drop_count": 10,
    "items": [
     [
      "Blazing_Boots",
@@ -35617,6 +36645,14 @@
     [
      "p165_drop_1212",
      1
+    ],
+    [
+     "cq_yellow_quartz",
+     50
+    ],
+    [
+     "p165_uth_1053",
+     85
     ]
    ]
   },
@@ -35810,7 +36846,7 @@
    ]
   },
   "phantom wickerman": {
-   "drop_count": 3,
+   "drop_count": 4,
    "items": [
     [
      "Phantom_Bastard_Sword",
@@ -35823,6 +36859,10 @@
     [
      "darkened_terror_claw",
      4
+    ],
+    [
+     "p165_uth_3314",
+     80
     ]
    ]
   },
@@ -36207,7 +37247,7 @@
    ]
   },
   "plasmatasm": {
-   "drop_count": 2,
+   "drop_count": 7,
    "items": [
     [
      "p165_drop_7005",
@@ -36228,6 +37268,14 @@
     [
      "Shining_Ragers_Axe",
      2
+    ],
+    [
+     "p165_uth_1359",
+     65
+    ],
+    [
+     "p165_uth_2562",
+     60
     ]
    ]
   },
@@ -36269,7 +37317,7 @@
    ]
   },
   "poisonous cave spider": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "2_Flayed_Hagbui_Sleeves",
@@ -36282,6 +37330,10 @@
     [
      "Flayed_Hagbui_Leggings",
      1
+    ],
+    [
+     "p165_uth_404",
+     25
     ]
    ]
   },
@@ -36604,11 +37656,23 @@
    ]
   },
   "priest of Mithra": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Underling_Priest_Protector",
      1
+    ],
+    [
+     "p165_uth_1133",
+     10
+    ],
+    [
+     "p165_uth_1134",
+     10
+    ],
+    [
+     "p165_uth_2034",
+     10
     ]
    ]
   },
@@ -36622,7 +37686,7 @@
    ]
   },
   "primrose": {
-   "drop_count": 1,
+   "drop_count": 12,
    "items": [
     [
      "p165_drop_3698",
@@ -36667,6 +37731,10 @@
     [
      "Imbued_Gloves",
      1
+    ],
+    [
+     "p165_uth_139",
+     20
     ]
    ]
   },
@@ -36891,7 +37959,7 @@
    ]
   },
   "Prugor": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "Vendo_Bone_Ring",
@@ -36900,6 +37968,10 @@
     [
      "Prugor's_Remains",
      5
+    ],
+    [
+     "p165_uth_1610",
+     25
     ]
    ]
   },
@@ -37142,7 +38214,7 @@
    ]
   },
   "pyrotasm": {
-   "drop_count": 1,
+   "drop_count": 9,
    "items": [
     [
      "Yellow_Tourmaline",
@@ -37171,6 +38243,14 @@
     [
      "Enkindled_Vest",
      1
+    ],
+    [
+     "p165_drop_7005",
+     75
+    ],
+    [
+     "p165_uth_1359",
+     60
     ]
    ]
   },
@@ -37735,7 +38815,7 @@
    ]
   },
   "red dwarf bandit": {
-   "drop_count": 1,
+   "drop_count": 5,
    "items": [
     [
      "SignetRing",
@@ -37752,6 +38832,10 @@
     [
      "Raiders_Blade",
      1
+    ],
+    [
+     "p165_uth_688",
+     24
     ]
    ]
   },
@@ -37765,7 +38849,7 @@
    ]
   },
   "red dwarf matron": {
-   "drop_count": 1,
+   "drop_count": 9,
    "items": [
     [
      "Faerie Charm Necklace",
@@ -37798,6 +38882,10 @@
     [
      "PilferedLeatherLeggings",
      1
+    ],
+    [
+     "p165_uth_688",
+     24
     ]
    ]
   },
@@ -37906,7 +38994,7 @@
    ]
   },
   "reincarnate orm": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Giant_Alexandrite_Ring",
@@ -37915,6 +39003,10 @@
     [
      "Reincarnate_Orm_Eye",
      7
+    ],
+    [
+     "p165_uth_7159",
+     10
     ]
    ]
   },
@@ -38271,7 +39363,7 @@
    ]
   },
   "roane maiden": {
-   "drop_count": 1,
+   "drop_count": 7,
    "items": [
     [
      "Selkie_Skin",
@@ -38292,6 +39384,14 @@
     [
      "Sleeves_of_Might",
      1
+    ],
+    [
+     "cq_fish",
+     80
+    ],
+    [
+     "fishing_pole",
+     80
     ]
    ]
   },
@@ -38305,11 +39405,19 @@
    ]
   },
   "rock elemental": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "p165_drop_6979",
      50
+    ],
+    [
+     "p165_drop_6980",
+     60
+    ],
+    [
+     "p165_drop_6981",
+     30
     ]
    ]
   },
@@ -38336,7 +39444,7 @@
    ]
   },
   "rock imp": {
-   "drop_count": 1,
+   "drop_count": 9,
    "items": [
     [
      "FencersRapier",
@@ -38369,6 +39477,10 @@
     [
      "SuppleHideJerkin",
      1
+    ],
+    [
+     "aventurine_gem",
+     30
     ]
    ]
   },
@@ -38589,7 +39701,7 @@
    ]
   },
   "root worm": {
-   "drop_count": 1,
+   "drop_count": 8,
    "items": [
     [
      "Chitenous_Worm_Round",
@@ -38614,11 +39726,19 @@
     [
      "Worm_Tipper",
      1
+    ],
+    [
+     "cq_wormtooth",
+     80
+    ],
+    [
+     "p165_uth_328",
+     62
     ]
    ]
   },
   "rot worm": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Worm_Rot",
@@ -38627,6 +39747,10 @@
     [
      "Tattered_Crab-shell_Cap",
      3
+    ],
+    [
+     "p165_uth_1535",
+     50
     ]
    ]
   },
@@ -39356,7 +40480,7 @@
    ]
   },
   "scrag": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Bright_Preserved_Studded_Vest",
@@ -39365,6 +40489,10 @@
     [
      "Hide_Cloak",
      1
+    ],
+    [
+     "p165_uth_118",
+     40
     ]
    ]
   },
@@ -39555,7 +40683,7 @@
    ]
   },
   "seared skeleton": {
-   "drop_count": 1,
+   "drop_count": 12,
    "items": [
     [
      "Bluntbender_Girdle",
@@ -39644,6 +40772,10 @@
     [
      "p165_drop_447",
      1
+    ],
+    [
+     "p165_uth_2536",
+     65
     ]
    ]
   },
@@ -39666,6 +40798,10 @@
     [
      "Sentry_Incin's_Remains",
      5
+    ],
+    [
+     "p165_drop_7005",
+     70
     ]
    ]
   },
@@ -40045,7 +41181,7 @@
    ]
   },
   "sheevra chieftain": {
-   "drop_count": 2,
+   "drop_count": 6,
    "items": [
     [
      "p165_drop_7004",
@@ -40066,6 +41202,10 @@
     [
      "p165_drop_1636",
      3
+    ],
+    [
+     "p165_uth_118",
+     80
     ]
    ]
   },
@@ -40107,7 +41247,7 @@
    ]
   },
   "sheevra skirmisher": {
-   "drop_count": 1,
+   "drop_count": 6,
    "items": [
     [
      "ld_footman_pendant",
@@ -40124,11 +41264,19 @@
     [
      "Dweomer_Rifter",
      1
+    ],
+    [
+     "p165_uth_118",
+     60
+    ],
+    [
+     "p165_uth_55",
+     80
     ]
    ]
   },
   "sheevra swordsman": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "p165_drop_1636",
@@ -40137,6 +41285,14 @@
     [
      "Mantle_of_Regalia",
      1
+    ],
+    [
+     "p165_uth_77",
+     60
+    ],
+    [
+     "p165_uth_78",
+     80
     ]
    ]
   },
@@ -40641,7 +41797,7 @@
    ]
   },
   "siabra seeker": {
-   "drop_count": 1,
+   "drop_count": 7,
    "items": [
     [
      "p165_drop_6971",
@@ -40658,6 +41814,18 @@
     [
      "Turbid_Waters_Sleeves",
      2
+    ],
+    [
+     "p165_uth_146",
+     50
+    ],
+    [
+     "p165_uth_442",
+     35
+    ],
+    [
+     "p165_uth_444",
+     30
     ]
    ]
   },
@@ -40834,7 +42002,7 @@
    ]
   },
   "sidhe draoi": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Gauntlets_of_Stormrage",
@@ -40843,11 +42011,15 @@
     [
      "Cap_of_the_Wisened_Dead",
      1
+    ],
+    [
+     "p165_uth_1968",
+     65
     ]
    ]
   },
   "sidhe gaoite": {
-   "drop_count": 1,
+   "drop_count": 6,
    "items": [
     [
      "Gloves of Precision",
@@ -40868,6 +42040,10 @@
     [
      "Shining_Sleeves_of_the_Dauntless",
      2
+    ],
+    [
+     "p165_uth_1968",
+     54
     ]
    ]
   },
@@ -40885,7 +42061,7 @@
    ]
   },
   "Siemus Tracksniffer": {
-   "drop_count": 2,
+   "drop_count": 4,
    "items": [
     [
      "p165_drop_7006",
@@ -40898,6 +42074,10 @@
     [
      "Magus_Battlestaff",
      5
+    ],
+    [
+     "p165_drop_6993",
+     30
     ]
    ]
   },
@@ -41030,7 +42210,7 @@
    ]
   },
   "silvermine badger": {
-   "drop_count": 1,
+   "drop_count": 5,
    "items": [
     [
      "Slimed_Bracer",
@@ -41043,6 +42223,14 @@
     [
      "Badger_Pelt_Cloak",
      1
+    ],
+    [
+     "p165_uth_37",
+     52
+    ],
+    [
+     "p165_uth_38",
+     70
     ]
    ]
   },
@@ -41445,7 +42633,7 @@
    ]
   },
   "siog footpad": {
-   "drop_count": 2,
+   "drop_count": 4,
    "items": [
     [
      "p165_drop_6979",
@@ -41458,6 +42646,10 @@
     [
      "Siabrian_Bracer",
      4
+    ],
+    [
+     "p165_drop_6992",
+     20
     ]
    ]
   },
@@ -41471,7 +42663,7 @@
    ]
   },
   "siog seeker": {
-   "drop_count": 1,
+   "drop_count": 12,
    "items": [
     [
      "p165_drop_6971",
@@ -41536,6 +42728,18 @@
     [
      "p165_drop_2654",
      1
+    ],
+    [
+     "p165_uth_146",
+     50
+    ],
+    [
+     "p165_uth_442",
+     35
+    ],
+    [
+     "p165_uth_444",
+     30
     ]
    ]
   },
@@ -41583,7 +42787,7 @@
    ]
   },
   "skeletal centurion": {
-   "drop_count": 2,
+   "drop_count": 12,
    "items": [
     [
      "BandOfPiousMight",
@@ -41672,6 +42876,10 @@
     [
      "p165_drop_6994",
      1
+    ],
+    [
+     "p165_uth_1519",
+     30
     ]
    ]
   },
@@ -42403,7 +43611,7 @@
    ]
   },
   "skogsfru": {
-   "drop_count": 2,
+   "drop_count": 10,
    "items": [
     [
      "p165_drop_6992",
@@ -42440,6 +43648,10 @@
     [
      "Shield_of_the_Forest_Spirit",
      1
+    ],
+    [
+     "p165_uth_118",
+     80
     ]
    ]
   },
@@ -42520,7 +43732,7 @@
    ]
   },
   "slave master bodyguard": {
-   "drop_count": 2,
+   "drop_count": 5,
    "items": [
     [
      "FootmansKiteShield",
@@ -42537,6 +43749,10 @@
     [
      "ScepterOfIntellect",
      1
+    ],
+    [
+     "p165_drop_6980",
+     40
     ]
    ]
   },
@@ -42617,6 +43833,10 @@
     [
      "snake_scales",
      50
+    ],
+    [
+     "snake_meat",
+     50
     ]
    ]
   },
@@ -42630,29 +43850,49 @@
    ]
   },
   "Sloithi": {
-   "drop_count": 2,
+   "drop_count": 4,
    "items": [
     [
      "p165_drop_6979",
      60
+    ],
+    [
+     "p165_drop_7004",
+     50
+    ],
+    [
+     "p165_uth_149",
+     60
+    ],
+    [
+     "p165_uth_55",
+     70
     ]
    ]
   },
   "Slythcur": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Pitted_Carrion_Drake_Talon",
      3
+    ],
+    [
+     "Shimmering_Gnawed_Bone",
+     90
     ]
    ]
   },
   "small bear": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "PittedSharpClaw",
      8
+    ],
+    [
+     "p165_uth_218",
+     25
     ]
    ]
   },
@@ -42930,7 +44170,7 @@
    ]
   },
   "soot harvester": {
-   "drop_count": 1,
+   "drop_count": 11,
    "items": [
     [
      "Frayed_Cloak",
@@ -42967,6 +44207,14 @@
     [
      "Vest_of_the_Shadowed_Earth",
      1
+    ],
+    [
+     "cq_soot_harvester_leg",
+     80
+    ],
+    [
+     "p165_uth_1346",
+     80
     ]
    ]
   },
@@ -43175,7 +44423,7 @@
    ]
   },
   "spectral essence": {
-   "drop_count": 2,
+   "drop_count": 12,
    "items": [
     [
      "Shimmering_Arms_of_the_Baleful_Dead",
@@ -43312,6 +44560,10 @@
     [
      "turquoise_leather_dye",
      1
+    ],
+    [
+     "spectral_essence",
+     25
     ]
    ]
   },
@@ -43349,11 +44601,19 @@
    ]
   },
   "spectral wickerman": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Spectral_Long_Sword",
      8
+    ],
+    [
+     "p165_uth_3460",
+     40
+    ],
+    [
+     "p165_uth_3740",
+     50
     ]
    ]
   },
@@ -43519,7 +44779,7 @@
    ]
   },
   "spindly rock crab": {
-   "drop_count": 1,
+   "drop_count": 6,
    "items": [
     [
      "Firesteel",
@@ -43540,6 +44800,10 @@
     [
      "Pillager's_Gauntlets",
      1
+    ],
+    [
+     "p165_uth_839",
+     50
     ]
    ]
   },
@@ -43688,7 +44952,7 @@
    ]
   },
   "spook": {
-   "drop_count": 1,
+   "drop_count": 7,
    "items": [
     [
      "Treecutter",
@@ -43713,6 +44977,10 @@
     [
      "Ring_of_Surefooting",
      1
+    ],
+    [
+     "p165_uth_1404",
+     20
     ]
    ]
   },
@@ -43726,7 +44994,7 @@
    ]
   },
   "spraggon": {
-   "drop_count": 2,
+   "drop_count": 12,
    "items": [
     [
      "Tattered_Woolen_Woven_Sleeves",
@@ -43803,6 +45071,10 @@
     [
      "Woven_Grass_Bracer",
      1
+    ],
+    [
+     "p165_uth_15",
+     75
     ]
    ]
   },
@@ -45123,11 +46395,27 @@
    ]
   },
   "sulphur crab": {
-   "drop_count": 1,
+   "drop_count": 5,
    "items": [
     [
      "Refined_Silver_Necklace",
      7
+    ],
+    [
+     "p165_uth_4727",
+     80
+    ],
+    [
+     "p165_uth_4728",
+     75
+    ],
+    [
+     "p165_uth_4729",
+     68
+    ],
+    [
+     "p165_uth_4827",
+     55
     ]
    ]
   },
@@ -45524,7 +46812,7 @@
    ]
   },
   "svartalf outcast": {
-   "drop_count": 1,
+   "drop_count": 7,
    "items": [
     [
      "Brendig's_Kneebiter",
@@ -45541,6 +46829,18 @@
     [
      "Necklace_of_Solid_Darkness",
      1
+    ],
+    [
+     "p165_uth_1508",
+     70
+    ],
+    [
+     "p165_uth_1512",
+     75
+    ],
+    [
+     "p165_uth_8432",
+     55
     ]
    ]
   },
@@ -45558,7 +46858,7 @@
    ]
   },
   "svartalf sorcerer": {
-   "drop_count": 1,
+   "drop_count": 7,
    "items": [
     [
      "Svartalf_Padded_Pants",
@@ -45583,6 +46883,10 @@
     [
      "Svartalf_Padded_Sleeves",
      3
+    ],
+    [
+     "p165_uth_4871",
+     75
     ]
    ]
   },
@@ -45816,11 +47120,15 @@
    ]
   },
   "svartalf watcher": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Golden_Swathcutter",
      2
+    ],
+    [
+     "p165_uth_4871",
+     45
     ]
    ]
   },
@@ -45895,11 +47203,15 @@
    ]
   },
   "swamp rat": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Rat Tongue",
      3
+    ],
+    [
+     "cq_rat_tail",
+     50
     ]
    ]
   },
@@ -46447,7 +47759,7 @@
    ]
   },
   "tidal sheerie": {
-   "drop_count": 4,
+   "drop_count": 8,
    "items": [
     [
      "Kelp_Bracelet",
@@ -46468,6 +47780,18 @@
     [
      "sack_of_grain2",
      6
+    ],
+    [
+     "p165_uth_643",
+     70
+    ],
+    [
+     "p165_uth_644",
+     70
+    ],
+    [
+     "p165_uth_645",
+     30
     ]
    ]
   },
@@ -46477,6 +47801,10 @@
     [
      "100 Tingler Arrows",
      15
+    ],
+    [
+     "p165_uth_581",
+     50
     ]
    ]
   },
@@ -46515,7 +47843,7 @@
    ]
   },
   "tomb creeper": {
-   "drop_count": 2,
+   "drop_count": 12,
    "items": [
     [
      "p165_drop_6979",
@@ -46724,6 +48052,10 @@
     [
      "light_green_cloth_dye3",
      1
+    ],
+    [
+     "p165_uth_118",
+     23
     ]
    ]
   },
@@ -46894,7 +48226,7 @@
    ]
   },
   "tomb raider": {
-   "drop_count": 2,
+   "drop_count": 12,
    "items": [
     [
      "p165_drop_6972",
@@ -46979,11 +48311,15 @@
     [
      "Lightbringer",
      1
+    ],
+    [
+     "p165_uth_572",
+     25
     ]
    ]
   },
   "tomb raider digger": {
-   "drop_count": 2,
+   "drop_count": 12,
    "items": [
     [
      "p165_drop_6992",
@@ -47036,11 +48372,15 @@
     [
      "p165_drop_1892",
      1
+    ],
+    [
+     "p165_uth_572",
+     25
     ]
    ]
   },
   "tomb raider scout": {
-   "drop_count": 2,
+   "drop_count": 12,
    "items": [
     [
      "p165_drop_6980",
@@ -47133,6 +48473,10 @@
     [
      "p165_drop_1892",
      1
+    ],
+    [
+     "p165_uth_572",
+     25
     ]
    ]
   },
@@ -48198,7 +49542,7 @@
    ]
   },
   "tomte thug": {
-   "drop_count": 1,
+   "drop_count": 7,
    "items": [
     [
      "Pillager's_Sleeves",
@@ -48223,6 +49567,10 @@
     [
      "p165_drop_1449",
      2
+    ],
+    [
+     "cq_tomte_bracer",
+     30
     ]
    ]
   },
@@ -48574,7 +49922,7 @@
    ]
   },
   "Tradalva": {
-   "drop_count": 2,
+   "drop_count": 5,
    "items": [
     [
      "Gold_Stitched_Boots",
@@ -48591,11 +49939,15 @@
     [
      "Planar_Earring",
      15
+    ],
+    [
+     "p165_uth_4732",
+     60
     ]
    ]
   },
   "Tradande": {
-   "drop_count": 2,
+   "drop_count": 12,
    "items": [
     [
      "Spear_of_the_Elements",
@@ -48640,6 +49992,10 @@
     [
      "Trollish_Stone_Bracer",
      1
+    ],
+    [
+     "p165_uth_1970",
+     71
     ]
    ]
   },
@@ -48827,7 +50183,7 @@
    ]
   },
   "tree spirit": {
-   "drop_count": 1,
+   "drop_count": 10,
    "items": [
     [
      "Leaf_Carved_Staff",
@@ -48860,6 +50216,14 @@
     [
      "Svart-alfar_Battlebracer",
      1
+    ],
+    [
+     "faded_blue_slime",
+     43
+    ],
+    [
+     "p165_uth_1970",
+     66
     ]
    ]
   },
@@ -49132,11 +50496,19 @@
    ]
   },
   "Trolki": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "Red_Bludgeoner",
      15
+    ],
+    [
+     "cq_yellow_quartz",
+     50
+    ],
+    [
+     "p165_uth_1053",
+     85
     ]
    ]
   },
@@ -49253,6 +50625,10 @@
     [
      "Ring_of_Wisdom",
      15
+    ],
+    [
+     "p165_uth_1059",
+     70
     ]
    ]
   },
@@ -49512,7 +50888,7 @@
    ]
   },
   "Ulga": {
-   "drop_count": 2,
+   "drop_count": 9,
    "items": [
     [
      "Silverleaf_Bow",
@@ -49545,6 +50921,10 @@
     [
      "Wolfhead_Totem_Staff",
      1
+    ],
+    [
+     "p165_uth_5221",
+     65
     ]
    ]
   },
@@ -49713,7 +51093,7 @@
    ]
   },
   "undead druid": {
-   "drop_count": 2,
+   "drop_count": 12,
    "items": [
     [
      "p165_drop_7004",
@@ -49782,11 +51162,15 @@
     [
      "p165_drop_6979",
      1
+    ],
+    [
+     "p165_uth_572",
+     6
     ]
    ]
   },
   "undead filidh": {
-   "drop_count": 1,
+   "drop_count": 11,
    "items": [
     [
      "Jade",
@@ -49827,6 +51211,10 @@
     [
      "SpinedFishSticker",
      1
+    ],
+    [
+     "p165_uth_572",
+     6
     ]
    ]
   },
@@ -50754,11 +52142,23 @@
    ]
   },
   "vapor wraith": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Vaporous_Crown",
      3
+    ],
+    [
+     "p165_uth_2559",
+     70
+    ],
+    [
+     "p165_uth_2560",
+     60
+    ],
+    [
+     "p165_uth_2566",
+     80
     ]
    ]
   },
@@ -50906,7 +52306,7 @@
    ]
   },
   "vendo bone-collector": {
-   "drop_count": 2,
+   "drop_count": 12,
    "items": [
     [
      "p165_drop_7004",
@@ -50979,11 +52379,15 @@
     [
      "Vendo_Flesh-flayer",
      1
+    ],
+    [
+     "p165_uth_1610",
+     30
     ]
    ]
   },
   "vendo flayer": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Vendo_Bone_Ring",
@@ -50992,6 +52396,10 @@
     [
      "Vendo_Flesh-flayer",
      1
+    ],
+    [
+     "p165_uth_1610",
+     35
     ]
    ]
   },
@@ -51207,7 +52615,7 @@
    ]
   },
   "vendo shaman": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Vendo_Bone_Ring",
@@ -51216,6 +52624,10 @@
     [
      "Vendo_Flesh-flayer",
      5
+    ],
+    [
+     "p165_uth_1610",
+     25
     ]
    ]
   },
@@ -51273,7 +52685,7 @@
    ]
   },
   "vendo stalker": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Blazing_Gauntlets",
@@ -51282,11 +52694,15 @@
     [
      "Jagged_Bone_Helm",
      2
+    ],
+    [
+     "p165_uth_1610",
+     30
     ]
    ]
   },
   "vendo warrior": {
-   "drop_count": 1,
+   "drop_count": 6,
    "items": [
     [
      "Jagged_Bone_Jerkin",
@@ -51307,6 +52723,10 @@
     [
      "Jagged_Bone_Leggings",
      1
+    ],
+    [
+     "p165_uth_1610",
+     25
     ]
    ]
   },
@@ -51487,11 +52907,23 @@
    ]
   },
   "Vidalf": {
-   "drop_count": 2,
+   "drop_count": 4,
    "items": [
     [
      "Windchimes",
      15
+    ],
+    [
+     "p165_uth_1053",
+     80
+    ],
+    [
+     "p165_uth_1054",
+     85
+    ],
+    [
+     "p165_uth_1504",
+     85
     ]
    ]
   },
@@ -51736,7 +53168,7 @@
    ]
   },
   "Vindvasen": {
-   "drop_count": 2,
+   "drop_count": 6,
    "items": [
     [
      "Svart-alfar_Forged_Sword",
@@ -51757,6 +53189,10 @@
     [
      "Trollish_Stone_Bracer",
      4
+    ],
+    [
+     "p165_uth_4879",
+     70
     ]
    ]
   },
@@ -51943,7 +53379,7 @@
    ]
   },
   "water sprite": {
-   "drop_count": 2,
+   "drop_count": 9,
    "items": [
     [
      "p165_drop_7004",
@@ -51976,6 +53412,10 @@
     [
      "Watery_Ring",
      1
+    ],
+    [
+     "p165_uth_118",
+     70
     ]
    ]
   },
@@ -52129,11 +53569,19 @@
    ]
   },
   "Webweaver": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "Cloak of Webweaver`s Silk",
      12
+    ],
+    [
+     "p165_uth_1579",
+     44
+    ],
+    [
+     "p165_uth_1582",
+     44
     ]
    ]
   },
@@ -53299,6 +54747,10 @@
     [
      "Pristine_Boars_Hide",
      20
+    ],
+    [
+     "p165_uth_215",
+     100
     ]
    ]
   },
@@ -53340,7 +54792,7 @@
    ]
   },
   "wild lucradan": {
-   "drop_count": 1,
+   "drop_count": 11,
    "items": [
     [
      "Mentalist's_Staff_of_Channeling",
@@ -53377,6 +54829,14 @@
     [
      "Imbued_Gloves",
      1
+    ],
+    [
+     "p165_uth_118",
+     80
+    ],
+    [
+     "p165_uth_55",
+     80
     ]
    ]
   },
@@ -53482,7 +54942,7 @@
    ]
   },
   "wind ghoul": {
-   "drop_count": 2,
+   "drop_count": 12,
    "items": [
     [
      "Jade",
@@ -53559,6 +55019,10 @@
     [
      "ld_wellbalanced_great_sword",
      1
+    ],
+    [
+     "aventurine_gem",
+     80
     ]
    ]
   },
@@ -53616,7 +55080,7 @@
    ]
   },
   "wind spirit": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Wind_Wrapped_Staff",
@@ -53629,6 +55093,10 @@
     [
      "Gloves of Precision",
      2
+    ],
+    [
+     "p165_uth_4879",
+     65
     ]
    ]
   },
@@ -53662,7 +55130,7 @@
    ]
   },
   "wind wisp": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Wind_Swept_Pants",
@@ -53671,6 +55139,10 @@
     [
      "Wind_Swept_Vest",
      3
+    ],
+    [
+     "p165_uth_1053",
+     80
     ]
    ]
   },
@@ -53776,6 +55248,10 @@
     [
      "Pestilent_Sickle",
      15
+    ],
+    [
+     "p165_uth_3314",
+     80
     ]
    ]
   },
@@ -53826,7 +55302,7 @@
    ]
   },
   "wolfaur headsman": {
-   "drop_count": 1,
+   "drop_count": 9,
    "items": [
     [
      "p165_drop_2881",
@@ -53859,6 +55335,10 @@
     [
      "Wolftooth_Hauberk",
      1
+    ],
+    [
+     "p165_uth_3461",
+     64
     ]
    ]
   },
@@ -54022,7 +55502,7 @@
    ]
   },
   "wood imp": {
-   "drop_count": 1,
+   "drop_count": 6,
    "items": [
     [
      "Engraved_Bracer",
@@ -54039,11 +55519,19 @@
     [
      "Twisted_Wood",
      1
+    ],
+    [
+     "p165_uth_1409",
+     50
+    ],
+    [
+     "p165_uth_900",
+     40
     ]
    ]
   },
   "wood ogre berserker": {
-   "drop_count": 2,
+   "drop_count": 11,
    "items": [
     [
      "p165_drop_6992",
@@ -54084,11 +55572,15 @@
     [
      "Wormskin_Helm",
      1
+    ],
+    [
+     "p165_uth_572",
+     16
     ]
    ]
   },
   "wood ogre lord": {
-   "drop_count": 2,
+   "drop_count": 7,
    "items": [
     [
      "p165_drop_6979",
@@ -54113,11 +55605,15 @@
     [
      "Wormskin_Helm",
      1
+    ],
+    [
+     "p165_uth_572",
+     16
     ]
    ]
   },
   "wood ogre mystic": {
-   "drop_count": 1,
+   "drop_count": 9,
    "items": [
     [
      "Faded_Sleeves",
@@ -54146,11 +55642,19 @@
     [
      "Shimmering_Etheric_Helm",
      2
+    ],
+    [
+     "p165_uth_118",
+     60
+    ],
+    [
+     "p165_uth_572",
+     12
     ]
    ]
   },
   "wood ogre scourge": {
-   "drop_count": 2,
+   "drop_count": 12,
    "items": [
     [
      "p165_drop_7004",
@@ -54195,11 +55699,15 @@
     [
      "p165_drop_1709",
      1
+    ],
+    [
+     "p165_uth_572",
+     16
     ]
    ]
   },
   "wood ogre seer": {
-   "drop_count": 2,
+   "drop_count": 5,
    "items": [
     [
      "p165_drop_7004",
@@ -54216,6 +55724,10 @@
     [
      "Widower's_Fell_Ring",
      1
+    ],
+    [
+     "p165_uth_572",
+     12
     ]
    ]
   },
@@ -54254,7 +55766,7 @@
    ]
   },
   "wood-eater queen": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "Ring_of_Quickening",
@@ -54267,6 +55779,10 @@
     [
      "vom_khertiks_staff",
      5
+    ],
+    [
+     "p165_uth_5251",
+     25
     ]
    ]
   },
@@ -54334,11 +55850,15 @@
    ]
   },
   "wood-eater young king": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "Huntsman's_Cloak",
      5
+    ],
+    [
+     "p165_uth_5251",
+     70
     ]
    ]
   },
@@ -54700,7 +56220,7 @@
    ]
   },
   "zephyr wraith": {
-   "drop_count": 1,
+   "drop_count": 8,
    "items": [
     [
      "p165_drop_6987",
@@ -54729,6 +56249,10 @@
     [
      "Eluvium_Vest",
      1
+    ],
+    [
+     "p165_uth_445",
+     80
     ]
    ]
   },
@@ -54809,11 +56333,19 @@
    ]
   },
   "arachnid": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Shrunken_Spider_Necklace",
      1
+    ],
+    [
+     "p165_uth_1579",
+     29
+    ],
+    [
+     "p165_uth_1582",
+     29
     ]
    ]
   },
@@ -55224,6 +56756,10 @@
     [
      "badger_cub_fur",
      57
+    ],
+    [
+     "badger_cub_claw",
+     50
     ]
    ]
   },
@@ -55302,7 +56838,7 @@
    ]
   },
   "wrath sprite": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "Spritely_Stiletto",
@@ -55311,6 +56847,10 @@
     [
      "p165_drop_2897",
      1
+    ],
+    [
+     "p165_uth_311",
+     50
     ]
    ]
   },
@@ -55414,6 +56954,10 @@
     [
      "p165_uth_566",
      10
+    ],
+    [
+     "p165_drop_6988",
+     20
     ]
    ]
   },
@@ -56117,7 +57661,7 @@
    ]
   },
   "curmudgeon scout": {
-   "drop_count": 2,
+   "drop_count": 4,
    "items": [
     [
      "p165_uth_149",
@@ -56126,6 +57670,14 @@
     [
      "p165_uth_55",
      36
+    ],
+    [
+     "p165_drop_6970",
+     20
+    ],
+    [
+     "p165_drop_6972",
+     20
     ]
    ]
   },
@@ -56430,11 +57982,15 @@
     [
      "p165_uth_8379",
      48
+    ],
+    [
+     "p165_uth_2560",
+     53
     ]
    ]
   },
   "dverge fire-eater": {
-   "drop_count": 1,
+   "drop_count": 4,
    "items": [
     [
      "p165_uth_2560",
@@ -56443,6 +57999,14 @@
     [
      "p165_uth_4869",
      15
+    ],
+    [
+     "p165_uth_3205",
+     70
+    ],
+    [
+     "p165_uth_8379",
+     45
     ]
    ]
   },
@@ -56456,11 +58020,15 @@
    ]
   },
   "eel": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "p165_uth_5429",
      15
+    ],
+    [
+     "p165_uth_33",
+     30
     ]
    ]
   },
@@ -56491,11 +58059,15 @@
    ]
   },
   "empyrean keeper": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "p165_uth_442",
      30
+    ],
+    [
+     "p165_drop_6994",
+     20
     ]
    ]
   },
@@ -56517,11 +58089,15 @@
    ]
   },
   "empyrean watcher": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "p165_uth_146",
      36
+    ],
+    [
+     "p165_uth_442",
+     25
     ]
    ]
   },
@@ -56709,7 +58285,7 @@
    ]
   },
   "fog phantom": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "p165_uth_3314",
@@ -56718,6 +58294,10 @@
     [
      "cracked_dark_heart",
      3
+    ],
+    [
+     "p165_uth_445",
+     25
     ]
    ]
   },
@@ -56881,7 +58461,7 @@
    ]
   },
   "Furf": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "p165_uth_2253",
@@ -56890,6 +58470,10 @@
     [
      "p165_uth_2247",
      4
+    ],
+    [
+     "p165_uth_2246",
+     83
     ]
    ]
   },
@@ -57391,11 +58975,19 @@
    ]
   },
   "Helminth": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "p165_uth_328",
      79
+    ],
+    [
+     "p165_uth_1576",
+     60
+    ],
+    [
+     "p165_uth_1599",
+     58
     ]
    ]
   },
@@ -57533,6 +59125,10 @@
     [
      "p165_uth_1418",
      15
+    ],
+    [
+     "p165_uth_1419",
+     23
     ]
    ]
   },
@@ -57733,11 +59329,19 @@
    ]
   },
   "magmatasm": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "p165_uth_2566",
      9
+    ],
+    [
+     "p165_uth_2559",
+     70
+    ],
+    [
+     "p165_uth_2560",
+     70
     ]
    ]
   },
@@ -57807,6 +59411,10 @@
     [
      "p165_uth_5308",
      15
+    ],
+    [
+     "p165_uth_584",
+     27
     ]
    ]
   },
@@ -58118,7 +59726,7 @@
    ]
   },
   "pyrophantom": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "p165_uth_2567",
@@ -58127,6 +59735,14 @@
     [
      "p165_uth_7655",
      100
+    ],
+    [
+     "p165_uth_4869",
+     78
+    ],
+    [
+     "p165_uth_8379",
+     66
     ]
    ]
   },
@@ -58213,11 +59829,15 @@
    ]
   },
   "red wolfhound": {
-   "drop_count": 1,
+   "drop_count": 2,
    "items": [
     [
      "p165_uth_1671",
      10
+    ],
+    [
+     "p165_uth_1670",
+     75
     ]
    ]
   },
@@ -58248,7 +59868,7 @@
    ]
   },
   "ridgeback worg": {
-   "drop_count": 1,
+   "drop_count": 3,
    "items": [
     [
      "p165_uth_619",
@@ -58257,6 +59877,10 @@
     [
      "p165_uth_1213",
      6
+    ],
+    [
+     "p165_uth_2981",
+     8
     ]
    ]
   },
@@ -58647,7 +60271,7 @@
    ]
   },
   "Sraoi": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "p165_uth_163",
@@ -58656,6 +60280,10 @@
     [
      "p165_uth_164",
      10
+    ],
+    [
+     "Streaming_Wisp_Husk",
+     30
     ]
    ]
   },
@@ -59219,7 +60847,7 @@
    ]
   },
   "water snake": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "p165_uth_849",
@@ -59228,6 +60856,10 @@
     [
      "p165_uth_859",
      71
+    ],
+    [
+     "p165_uth_33",
+     30
     ]
    ]
   },
@@ -59266,7 +60898,7 @@
    ]
   },
   "werewolf captain": {
-   "drop_count": 2,
+   "drop_count": 3,
    "items": [
     [
      "p165_uth_1980",
@@ -59275,6 +60907,10 @@
     [
      "p165_uth_1981",
      96
+    ],
+    [
+     "p165_uth_3687",
+     77
     ]
    ]
   },
@@ -59558,7 +61194,7 @@
    ]
   },
   "wood rat": {
-   "drop_count": 3,
+   "drop_count": 5,
    "items": [
     [
      "p165_uth_2252",
@@ -59571,6 +61207,14 @@
     [
      "wood_rat_tail",
      7
+    ],
+    [
+     "p165_uth_1624",
+     60
+    ],
+    [
+     "p165_uth_37",
+     80
     ]
    ]
   },
@@ -59756,7 +61400,7 @@
    ]
   },
   "Young Wyrm Lord": {
-   "drop_count": 2,
+   "drop_count": 4,
    "items": [
     [
      "p165_uth_6533",
@@ -59769,6 +61413,10 @@
     [
      "p165_uth_2562",
      42
+    ],
+    [
+     "p165_uth_3200",
+     80
     ]
    ]
   },
@@ -60403,6 +62051,1311 @@
     [
      "bright_illuminated_gem",
      6
+    ]
+   ]
+  },
+  "Aengus Osrithe": {
+   "drop_count": 4,
+   "items": [
+    [
+     "Eluvium_Belt",
+     1
+    ],
+    [
+     "Zephyr_Belt",
+     1
+    ],
+    [
+     "p165_drop_6987",
+     5
+    ],
+    [
+     "p165_uth_445",
+     80
+    ]
+   ]
+  },
+  "Arachneida": {
+   "drop_count": 3,
+   "items": [
+    [
+     "p165_uth_1301",
+     90
+    ],
+    [
+     "p165_uth_1302",
+     80
+    ],
+    [
+     "p165_uth_1303",
+     60
+    ]
+   ]
+  },
+  "Brarn": {
+   "drop_count": 1,
+   "items": [
+    [
+     "cq_gold_lined_drinking_horn",
+     25
+    ]
+   ]
+  },
+  "Brika": {
+   "drop_count": 3,
+   "items": [
+    [
+     "Blunted_Fire_Cat_Tooth",
+     1
+    ],
+    [
+     "Lava_Etched_Gloves",
+     1
+    ],
+    [
+     "Lava_Forged_Coif",
+     1
+    ]
+   ]
+  },
+  "Brimstone": {
+   "drop_count": 3,
+   "items": [
+    [
+     "p165_uth_1357",
+     70
+    ],
+    [
+     "p165_uth_1359",
+     65
+    ],
+    [
+     "p165_uth_3197",
+     70
+    ]
+   ]
+  },
+  "Cirfans": {
+   "drop_count": 1,
+   "items": [
+    [
+     "Long_Drake_Talon",
+     2
+    ]
+   ]
+  },
+  "Cornish frog": {
+   "drop_count": 2,
+   "items": [
+    [
+     "p165_uth_1626",
+     30
+    ],
+    [
+     "p165_uth_1627",
+     70
+    ]
+   ]
+  },
+  "Davnis": {
+   "drop_count": 3,
+   "items": [
+    [
+     "p165_uth_1508",
+     75
+    ],
+    [
+     "p165_uth_1512",
+     85
+    ],
+    [
+     "p165_uth_8432",
+     70
+    ]
+   ]
+  },
+  "Edan": {
+   "drop_count": 2,
+   "items": [
+    [
+     "p165_uth_1670",
+     75
+    ],
+    [
+     "p165_uth_1671",
+     30
+    ]
+   ]
+  },
+  "Elder Fellwood": {
+   "drop_count": 1,
+   "items": [
+    [
+     "p165_uth_2284",
+     7
+    ]
+   ]
+  },
+  "Galar": {
+   "drop_count": 4,
+   "items": [
+    [
+     "p165_drop_6987",
+     60
+    ],
+    [
+     "p165_drop_6989",
+     20
+    ],
+    [
+     "p165_drop_7007",
+     70
+    ],
+    [
+     "p165_uth_506",
+     30
+    ]
+   ]
+  },
+  "Golga": {
+   "drop_count": 4,
+   "items": [
+    [
+     "p165_drop_6979",
+     40
+    ],
+    [
+     "p165_drop_6980",
+     41
+    ],
+    [
+     "p165_drop_6992",
+     60
+    ],
+    [
+     "p165_drop_7004",
+     70
+    ]
+   ]
+  },
+  "Great Worg": {
+   "drop_count": 2,
+   "items": [
+    [
+     "p165_uth_1617",
+     48
+    ],
+    [
+     "p165_uth_2981",
+     8
+    ]
+   ]
+  },
+  "Grizzletooth": {
+   "drop_count": 1,
+   "items": [
+    [
+     "torn_wolf_pelt",
+     100
+    ]
+   ]
+  },
+  "Growling Ghost": {
+   "drop_count": 1,
+   "items": [
+    [
+     "p165_uth_1416",
+     100
+    ]
+   ]
+  },
+  "Guardian Cahal": {
+   "drop_count": 2,
+   "items": [
+    [
+     "Empyreal_Golden_Reaver",
+     1
+    ],
+    [
+     "Soul_Reaver",
+     1
+    ]
+   ]
+  },
+  "Haglion's minion": {
+   "drop_count": 2,
+   "items": [
+    [
+     "Noble_Supple_Boots",
+     1
+    ],
+    [
+     "Noble_Wanderer's_Axe",
+     1
+    ]
+   ]
+  },
+  "Heretical Hermit": {
+   "drop_count": 2,
+   "items": [
+    [
+     "p165_drop_6971",
+     30
+    ],
+    [
+     "p165_drop_6994",
+     1
+    ]
+   ]
+  },
+  "Horse": {
+   "drop_count": 3,
+   "items": [
+    [
+     "p165_uth_2299",
+     75
+    ],
+    [
+     "p165_uth_2300",
+     35
+    ],
+    [
+     "p165_uth_4503",
+     80
+    ]
+   ]
+  },
+  "Hund": {
+   "drop_count": 1,
+   "items": [
+    [
+     "Shimmering_Gnawed_Bone",
+     70
+    ]
+   ]
+  },
+  "Jordande": {
+   "drop_count": 3,
+   "items": [
+    [
+     "p165_uth_1052",
+     75
+    ],
+    [
+     "p165_uth_1503",
+     50
+    ],
+    [
+     "p165_uth_1507",
+     80
+    ]
+   ]
+  },
+  "Keeper Rasa": {
+   "drop_count": 2,
+   "items": [
+    [
+     "p165_drop_6994",
+     20
+    ],
+    [
+     "p165_uth_442",
+     35
+    ]
+   ]
+  },
+  "Krrrck": {
+   "drop_count": 3,
+   "items": [
+    [
+     "p165_uth_1625",
+     75
+    ],
+    [
+     "p165_uth_1626",
+     80
+    ],
+    [
+     "p165_uth_4876",
+     54
+    ]
+   ]
+  },
+  "Lieutenant Grimarth": {
+   "drop_count": 2,
+   "items": [
+    [
+     "Lion_Faced_Shield",
+     1
+    ],
+    [
+     "p165_drop_1625",
+     1
+    ]
+   ]
+  },
+  "Luchtigern": {
+   "drop_count": 4,
+   "items": [
+    [
+     "Puinesean Fang",
+     1
+    ],
+    [
+     "p165_uth_406",
+     55
+    ],
+    [
+     "p165_uth_408",
+     40
+    ],
+    [
+     "p165_uth_456",
+     65
+    ]
+   ]
+  },
+  "Lusmorebane": {
+   "drop_count": 1,
+   "items": [
+    [
+     "p165_drop_6971",
+     15
+    ]
+   ]
+  },
+  "Miner Cucugar": {
+   "drop_count": 3,
+   "items": [
+    [
+     "Siabrian_Gloves",
+     1
+    ],
+    [
+     "p165_uth_118",
+     10
+    ],
+    [
+     "p165_uth_149",
+     10
+    ]
+   ]
+  },
+  "Mithra fanatic": {
+   "drop_count": 1,
+   "items": [
+    [
+     "mortar_and_pestle",
+     10
+    ]
+   ]
+  },
+  "Morana": {
+   "drop_count": 3,
+   "items": [
+    [
+     "Jeweled_Bracer",
+     1
+    ],
+    [
+     "Lashed_Web_Gloves",
+     1
+    ],
+    [
+     "Shining_Ornate_Studded_Vest",
+     1
+    ]
+   ]
+  },
+  "Morra": {
+   "drop_count": 1,
+   "items": [
+    [
+     "p165_uth_843",
+     99
+    ]
+   ]
+  },
+  "Muir": {
+   "drop_count": 2,
+   "items": [
+    [
+     "Coral_Spear",
+     1
+    ],
+    [
+     "p165_drop_6969",
+     20
+    ]
+   ]
+  },
+  "Murgar": {
+   "drop_count": 1,
+   "items": [
+    [
+     "Goatman_Mantle",
+     1
+    ]
+   ]
+  },
+  "Oaken Knight": {
+   "drop_count": 1,
+   "items": [
+    [
+     "p165_uth_1525",
+     50
+    ]
+   ]
+  },
+  "Pellinistra": {
+   "drop_count": 5,
+   "items": [
+    [
+     "Noble_Supple_Jerkin",
+     1
+    ],
+    [
+     "Noble_Wanderer's_Axe",
+     1
+    ],
+    [
+     "p165_uth_1619",
+     50
+    ],
+    [
+     "p165_uth_1632",
+     40
+    ],
+    [
+     "p165_uth_1633",
+     50
+    ]
+   ]
+  },
+  "Piercer": {
+   "drop_count": 6,
+   "items": [
+    [
+     "Blodsnitt",
+     1
+    ],
+    [
+     "Ring_of_Redhands",
+     2
+    ],
+    [
+     "Wolftooth_Studded_Jerkin",
+     1
+    ],
+    [
+     "p165_uth_1079",
+     10
+    ],
+    [
+     "p165_uth_1418",
+     23
+    ],
+    [
+     "p165_uth_1419",
+     23
+    ]
+   ]
+  },
+  "Pikebane": {
+   "drop_count": 3,
+   "items": [
+    [
+     "p165_uth_2433",
+     50
+    ],
+    [
+     "p165_uth_467",
+     70
+    ],
+    [
+     "p165_uth_468",
+     63
+    ]
+   ]
+  },
+  "Priestess of Gashir": {
+   "drop_count": 5,
+   "items": [
+    [
+     "p165_drop_6969",
+     60
+    ],
+    [
+     "p165_drop_6970",
+     40
+    ],
+    [
+     "p165_drop_6971",
+     20
+    ],
+    [
+     "p165_drop_6979",
+     80
+    ],
+    [
+     "p165_drop_6980",
+     75
+    ]
+   ]
+  },
+  "Puj": {
+   "drop_count": 3,
+   "items": [
+    [
+     "p165_uth_1505",
+     70
+    ],
+    [
+     "p165_uth_1506",
+     60
+    ],
+    [
+     "p165_uth_1509",
+     65
+    ]
+   ]
+  },
+  "Rathis": {
+   "drop_count": 3,
+   "items": [
+    [
+     "Vendo_Bone_Ring",
+     3
+    ],
+    [
+     "Vendo_Flesh-flayer",
+     1
+    ],
+    [
+     "p165_uth_1610",
+     30
+    ]
+   ]
+  },
+  "Riv": {
+   "drop_count": 1,
+   "items": [
+    [
+     "p165_uth_839",
+     58
+    ]
+   ]
+  },
+  "Rolling Stone": {
+   "drop_count": 1,
+   "items": [
+    [
+     "p165_drop_7005",
+     5
+    ]
+   ]
+  },
+  "Sacrificer Harish": {
+   "drop_count": 4,
+   "items": [
+    [
+     "p165_drop_6972",
+     40
+    ],
+    [
+     "p165_drop_6993",
+     20
+    ],
+    [
+     "p165_drop_6994",
+     1
+    ],
+    [
+     "p165_uth_572",
+     6
+    ]
+   ]
+  },
+  "Seary": {
+   "drop_count": 2,
+   "items": [
+    [
+     "Coral_Spear",
+     1
+    ],
+    [
+     "p165_drop_6968",
+     20
+    ]
+   ]
+  },
+  "Sir Dillus": {
+   "drop_count": 2,
+   "items": [
+    [
+     "Lion_Faced_Shield",
+     1
+    ],
+    [
+     "p165_drop_1625",
+     1
+    ]
+   ]
+  },
+  "Spirit of Flames": {
+   "drop_count": 2,
+   "items": [
+    [
+     "p165_uth_4869",
+     75
+    ],
+    [
+     "p165_uth_8379",
+     58
+    ]
+   ]
+  },
+  "Strykel": {
+   "drop_count": 2,
+   "items": [
+    [
+     "p165_uth_1359",
+     81
+    ],
+    [
+     "p165_uth_2562",
+     65
+    ]
+   ]
+  },
+  "Svartmoln": {
+   "drop_count": 1,
+   "items": [
+    [
+     "smallmaulerskin",
+     50
+    ]
+   ]
+  },
+  "Tas": {
+   "drop_count": 4,
+   "items": [
+    [
+     "p165_uth_1059",
+     60
+    ],
+    [
+     "p165_uth_1073",
+     60
+    ],
+    [
+     "p165_uth_1074",
+     60
+    ],
+    [
+     "p165_uth_2601",
+     57
+    ]
+   ]
+  },
+  "Tric": {
+   "drop_count": 5,
+   "items": [
+    [
+     "Faerie_Charm",
+     1
+    ],
+    [
+     "Faerie_Drake_Hide",
+     10
+    ],
+    [
+     "Faerie_Drakes_Eye",
+     2
+    ],
+    [
+     "Luminescent_Gloves",
+     1
+    ],
+    [
+     "p165_drop_6971",
+     15
+    ]
+   ]
+  },
+  "Tusker": {
+   "drop_count": 2,
+   "items": [
+    [
+     "p165_uth_1032",
+     55
+    ],
+    [
+     "p165_uth_1401",
+     60
+    ]
+   ]
+  },
+  "Tweedle": {
+   "drop_count": 2,
+   "items": [
+    [
+     "p165_uth_1065",
+     80
+    ],
+    [
+     "p165_uth_893",
+     85
+    ]
+   ]
+  },
+  "Vasa": {
+   "drop_count": 2,
+   "items": [
+    [
+     "p165_uth_907",
+     80
+    ],
+    [
+     "p165_uth_908",
+     60
+    ]
+   ]
+  },
+  "Weldo": {
+   "drop_count": 3,
+   "items": [
+    [
+     "Jade",
+     5
+    ],
+    [
+     "Moonstone",
+     60
+    ],
+    [
+     "aventurine_gem",
+     80
+    ]
+   ]
+  },
+  "Wildtooth": {
+   "drop_count": 1,
+   "items": [
+    [
+     "p165_uth_584",
+     90
+    ]
+   ]
+  },
+  "Wiley": {
+   "drop_count": 3,
+   "items": [
+    [
+     "Jade",
+     80
+    ],
+    [
+     "p165_drop_6980",
+     35
+    ],
+    [
+     "p165_uth_118",
+     60
+    ]
+   ]
+  },
+  "Willen": {
+   "drop_count": 1,
+   "items": [
+    [
+     "p165_uth_1409",
+     65
+    ]
+   ]
+  },
+  "blodfelag captive": {
+   "drop_count": 3,
+   "items": [
+    [
+     "p165_uth_587",
+     70
+    ],
+    [
+     "p165_uth_588",
+     80
+    ],
+    [
+     "p165_uth_589",
+     70
+    ]
+   ]
+  },
+  "bone snapper": {
+   "drop_count": 1,
+   "items": [
+    [
+     "cloak",
+     1
+    ]
+   ]
+  },
+  "breaker roane companion": {
+   "drop_count": 1,
+   "items": [
+    [
+     "Selkie_Skin",
+     1
+    ]
+   ]
+  },
+  "corpse eater": {
+   "drop_count": 1,
+   "items": [
+    [
+     "Decayed_Bone_Ring",
+     2
+    ]
+   ]
+  },
+  "dryad invert": {
+   "drop_count": 1,
+   "items": [
+    [
+     "GrassChoker",
+     2
+    ]
+   ]
+  },
+  "elder sveawolf": {
+   "drop_count": 1,
+   "items": [
+    [
+     "p165_uth_584",
+     46
+    ]
+   ]
+  },
+  "enslaved orm biter": {
+   "drop_count": 4,
+   "items": [
+    [
+     "Giant_Pink_Sapphire_Ring",
+     2
+    ],
+    [
+     "p165_drop_1310",
+     1
+    ],
+    [
+     "p165_uth_7158",
+     20
+    ],
+    [
+     "p165_uth_7159",
+     21
+    ]
+   ]
+  },
+  "enslaved orm runner": {
+   "drop_count": 4,
+   "items": [
+    [
+     "Giant_Pink_Sapphire_Ring",
+     2
+    ],
+    [
+     "p165_drop_1310",
+     1
+    ],
+    [
+     "p165_uth_7158",
+     18
+    ],
+    [
+     "p165_uth_7159",
+     24
+    ]
+   ]
+  },
+  "eriu ambusher": {
+   "drop_count": 2,
+   "items": [
+    [
+     "p165_drop_6980",
+     40
+    ],
+    [
+     "p165_uth_55",
+     20
+    ]
+   ]
+  },
+  "fallen paladin": {
+   "drop_count": 3,
+   "items": [
+    [
+     "p165_uth_1133",
+     36
+    ],
+    [
+     "p165_uth_1134",
+     16
+    ],
+    [
+     "p165_uth_2034",
+     28
+    ]
+   ]
+  },
+  "follower of Loki": {
+   "drop_count": 3,
+   "items": [
+    [
+     "Jade",
+     80
+    ],
+    [
+     "p165_drop_6980",
+     35
+    ],
+    [
+     "p165_uth_118",
+     60
+    ]
+   ]
+  },
+  "forest spider queen": {
+   "drop_count": 2,
+   "items": [
+    [
+     "Forest_Spider_Poison_Sac",
+     5
+    ],
+    [
+     "Shimmering_Fate_Stealer",
+     2
+    ]
+   ]
+  },
+  "grand pooka": {
+   "drop_count": 1,
+   "items": [
+    [
+     "Shimmering_Pooka's_Broken_Horn",
+     2
+    ]
+   ]
+  },
+  "grass snake": {
+   "drop_count": 2,
+   "items": [
+    [
+     "snake_meat",
+     90
+    ],
+    [
+     "snake_scales",
+     30
+    ]
+   ]
+  },
+  "grass viper": {
+   "drop_count": 1,
+   "items": [
+    [
+     "Grass Viper Fang",
+     2
+    ]
+   ]
+  },
+  "gurite lookout": {
+   "drop_count": 2,
+   "items": [
+    [
+     "Cath_Drum",
+     1
+    ],
+    [
+     "Noble_Lord_Pendant",
+     1
+    ]
+   ]
+  },
+  "hobgoblin biter": {
+   "drop_count": 1,
+   "items": [
+    [
+     "Crusty_Old_Bracer",
+     2
+    ]
+   ]
+  },
+  "jotun despot": {
+   "drop_count": 4,
+   "items": [
+    [
+     "Black_Sapphire",
+     15
+    ],
+    [
+     "Shimmering_Shrunken_Orm_Skull",
+     1
+    ],
+    [
+     "p165_drop_6976",
+     20
+    ],
+    [
+     "p165_drop_6978",
+     10
+    ]
+   ]
+  },
+  "jotun overlord": {
+   "drop_count": 4,
+   "items": [
+    [
+     "Black_Sapphire",
+     15
+    ],
+    [
+     "Shimmering_Shrunken_Orm_Skull",
+     1
+    ],
+    [
+     "p165_drop_6976",
+     20
+    ],
+    [
+     "p165_drop_6978",
+     10
+    ]
+   ]
+  },
+  "jotun warchief": {
+   "drop_count": 4,
+   "items": [
+    [
+     "Black_Sapphire",
+     15
+    ],
+    [
+     "Shimmering_Shrunken_Orm_Skull",
+     1
+    ],
+    [
+     "p165_drop_6976",
+     20
+    ],
+    [
+     "p165_drop_6978",
+     10
+    ]
+   ]
+  },
+  "konung's warhound": {
+   "drop_count": 1,
+   "items": [
+    [
+     "p165_uth_631",
+     50
+    ]
+   ]
+  },
+  "large enslaved orm": {
+   "drop_count": 1,
+   "items": [
+    [
+     "p165_drop_3752",
+     1
+    ]
+   ]
+  },
+  "large enslaved orm runner": {
+   "drop_count": 1,
+   "items": [
+    [
+     "Giant_Alexandrite_Ring",
+     2
+    ]
+   ]
+  },
+  "lava monster": {
+   "drop_count": 4,
+   "items": [
+    [
+     "p165_uth_2560",
+     44
+    ],
+    [
+     "p165_uth_2566",
+     70
+    ],
+    [
+     "p165_uth_2567",
+     65
+    ],
+    [
+     "p165_uth_8379",
+     60
+    ]
+   ]
+  },
+  "maghemoth": {
+   "drop_count": 3,
+   "items": [
+    [
+     "p165_uth_2559",
+     80
+    ],
+    [
+     "p165_uth_2566",
+     80
+    ],
+    [
+     "p165_uth_8379",
+     70
+    ]
+   ]
+  },
+  "mithra acolyte": {
+   "drop_count": 1,
+   "items": [
+    [
+     "SignetRing",
+     6
+    ]
+   ]
+  },
+  "plague rat": {
+   "drop_count": 1,
+   "items": [
+    [
+     "cq_rat_tail",
+     50
+    ]
+   ]
+  },
+  "plague rat scout": {
+   "drop_count": 1,
+   "items": [
+    [
+     "cq_rat_tail",
+     50
+    ]
+   ]
+  },
+  "poacher leader": {
+   "drop_count": 3,
+   "items": [
+    [
+     "Moonstone",
+     5
+    ],
+    [
+     "Pitted_Broadsword",
+     1
+    ],
+    [
+     "bastard_sword",
+     1
+    ]
+   ]
+  },
+  "poisonous cave toad": {
+   "drop_count": 1,
+   "items": [
+    [
+     "Dark_Crystalized_Poison_Sac",
+     1
+    ]
+   ]
+  },
+  "shock aqueous slug": {
+   "drop_count": 1,
+   "items": [
+    [
+     "Dark_Crystalized_Poison_Sac",
+     1
+    ]
+   ]
+  },
+  "sinach": {
+   "drop_count": 4,
+   "items": [
+    [
+     "p165_uth_6366",
+     72
+    ],
+    [
+     "p165_uth_6367",
+     78
+    ],
+    [
+     "p165_uth_6368",
+     68
+    ],
+    [
+     "p165_uth_6370",
+     38
+    ]
+   ]
+  },
+  "spiny eel": {
+   "drop_count": 1,
+   "items": [
+    [
+     "p165_uth_33",
+     30
+    ]
+   ]
+  },
+  "summoned spirit": {
+   "drop_count": 2,
+   "items": [
+    [
+     "p165_drop_6979",
+     1
+    ],
+    [
+     "p165_drop_7004",
+     8
+    ]
+   ]
+  },
+  "sylvan goblin chief": {
+   "drop_count": 1,
+   "items": [
+    [
+     "p165_drop_6971",
+     40
+    ]
+   ]
+  },
+  "undead woodcarver": {
+   "drop_count": 1,
+   "items": [
+    [
+     "p165_uth_1404",
+     25
+    ]
+   ]
+  },
+  "wayward curmudgeon": {
+   "drop_count": 3,
+   "items": [
+    [
+     "Hunting_Spear",
+     1
+    ],
+    [
+     "Pelt_Punch",
+     1
+    ],
+    [
+     "Sewn_Cloak_of_Might",
+     1
     ]
    ]
   }

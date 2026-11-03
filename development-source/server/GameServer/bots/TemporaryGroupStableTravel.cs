@@ -220,6 +220,7 @@ public static class TemporaryGroupStableTravel
         if (bot.ObjectState is not GameObject.eObjectState.Active || player?.ObjectState is not GameObject.eObjectState.Active)
             return;
         Vector3 beside = FormationPoint(player, ordinal);
+        bot.WakeRecoveryRest();   // a rest lock kept from before the ride ignored the follow below (audit 2026-11-03)
         bot.MoveTo(player.CurrentRegionID, (int)Math.Round(beside.X), (int)Math.Round(beside.Y), (int)Math.Round(beside.Z), player.Heading);
         if (petStowed && pet.IsAlive && pet.ObjectState is GameObject.eObjectState.Active && bot.ObjectState is GameObject.eObjectState.Active &&
             (pet.CurrentRegionID != bot.CurrentRegionID || !pet.IsWithinRadius(bot, 300)))
@@ -289,6 +290,7 @@ public static class TemporaryGroupStableTravel
                 continue;
 
             bot.EnterPlayerLedGroup(player);
+            bot.WakeRecoveryRest();   // a rest lock kept from before the move ignored the follow (audit 2026-11-03)
             bot.Follow(player, BotManager.FOLLOW_DISTANCE, BotManager.MAX_FOLLOW_DISTANCE);
             if (bot.Brain is BotBrain brain)
                 brain.FSM.SetCurrentState(eFSMStateType.FOLLOW);

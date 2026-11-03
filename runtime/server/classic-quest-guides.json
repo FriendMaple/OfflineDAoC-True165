@@ -2370,7 +2370,11 @@
 "corner of Camelot Hills) He's a bandit found on the road to Castle Savauge. A few bandit camps are located to the right of the road enroute there (basically past Mithra). There are three camps there, each camp has a \"Diwych\" at it cause they're brothers, but only one camp has the right one that you need to kill. Just make sure the name matches, his exact location is: 50043, 12549.",
 "2. Return Neclace to Growler",
 "3. Free his bones (slay him)",
-"Return to Sargeant Alain to finish The Growling Ghost quest."
+"Return to Sargeant Alain to finish The Growling Ghost quest.",
+" ",
+"On this server:",
+"- Growler offers this only while you are doing The Growling Ghost. It rewards The Growler; the skull from his bones still goes to Sergeant Alain.",
+"- Taking it closes the other path (Growler Mace)."
 ]
 },
 "albion|lady judith's circlet": {
@@ -2434,7 +2438,12 @@
 "2. Kill Growler or do what he asks -- \"Growler's Neclace\" Quest",
 "3. Return proof of Growler being removed (his skull)",
 "Reward:",
-"The Growler"
+"The Growler",
+" ",
+"On this server:",
+"- Speak with Growler first: killing him before you have spoken with him does not count.",
+"- Help him (Growler's Necklace, offered by Growler while you do this quest) and he rewards you with The Growler. Or simply slay him and return his skull for experience; Sergeant Alain then offers Growler Mace, the long way to the same weapon.",
+"- Either way his skull goes back to Sergeant Alain to finish this quest."
 ]
 },
 "albion|drakoran watchers": {
@@ -6209,16 +6218,6 @@
 "The second item is a Broken Mirror from a Siabra Enchanter in Lough Derg. I got mine on the Siabra Island East of Tir Na mBeo. Careful, these call for help.",
 "The third item is a Siabra Knife from a Siabra in Silvermine. I found this at a house with Siabra's south of the Bri Leith Entrance on the East side of the lake. This is just across into Silvermine.",
 "Take these items back to Ardagh and she will try to remove the curse and fail. You still get a small reward of cash and xp."
-]
-},
-"hibernia|rhian's dyes": {
-"Name": "Rhian's Dyes",
-"Realm": "Hibernia",
-"Source": "Allakhazam quest page as archived 2004-10-13 (Wayback Machine)",
-"Updated": "Mon Jun 30 13:51:21 2003",
-"Level": 11,
-"Lines": [
-"Talk to Tyree in Howth. He is running low on dyes and needs some components for them. If you could help him he'd appreciate it. He needs a badger scent glance (badgers are along the road south from Mag Mell). He needs the hair from a Wild Lucradan (same area as badgers, two kills will make you KOS with Leprechauns). Finally he needs the eyes from a Large Eirebug. (some are a little south of Howth accross the stone step bridge along the shore). For the first two you get some experience, and 1 silver and some copper. For the third you get some experience and some orange dye worth 50 copper. ( Dye color is most likely random choice of blue, brown or orange.)"
 ]
 },
 "hibernia|keara's enchantment": {
@@ -13636,6 +13635,154 @@
 "Rith says, \"Thir in charge of making rope and nets for tribe. Fishing easy for us, but best rope come from the Cave Lioness [sinew].\"",
 "Rith says,\"Cave Lioness fierce hunters. Very protective of territory. Kill many musslaklan warriors. But you stronger than us. Go now, get us some sinew so we can have stronger nets and rope.\"",
 "Cave Lioness have been found at loc's: 37k 18k and 55k 30k"
+]
+},
+"midgard|rasczel's bane": {
+"Name": "Rasczel's Bane",
+"Realm": "Midgard",
+"Source": "Written from the period sources: Warcry quest 100 (2001-12, 2004-11); Prima Revised (2002)",
+"Updated": "2026-11-03",
+"Level": 11,
+"Lines": [
+"The level 11 quest of the Berserker trainer in Jordheim (Skalds get the same errand as Rasczel's Nose). You must have finished Traveler's Way.",
+"A hobyah bit the nose off the trainer's dog. Find the hobyah leader Rasczel west of Fort Veldon in the Vale of Mularn; the hobyahs come out at night.",
+"Rasczel does not always drop his nose; keep hunting the hobyahs there until you have Rasczel's Nose.",
+"Bring the nose back to your trainer for the Berserker Strength Necklace.",
+" ",
+"Tips from period players:",
+"- Rasczel is immediately west of Fort Veldon, just down the hill, around loc 39222, 10362 (Warcry, 2004).",
+"- He conned yellow to a level 12 (Warcry, 2004): bring a friend if you are just 11."
+]
+},
+"midgard|bear skins": {
+"Name": "Bear Skins",
+"Realm": "Midgard",
+"Source": "Written from the period sources: Warcry quest 187 (2001-12, 2004-10); Prima Revised (2002)",
+"Updated": "2026-11-02",
+"Level": 1,
+"Lines": [
+"Helen in Haggerfel wants the hide of a mauler cub.",
+"Kill a black mauler cub outside Haggerfel and take its small mauler skin.",
+"Return the skin to Helen for a silver piece and a little experience."
+]
+},
+"midgard|big paw": {
+"Name": "Big Paw",
+"Realm": "Midgard",
+"Source": "Written from the period sources: Prima Revised (2002); Warcry quest 354 (2001-12)",
+"Updated": "2026-11-02",
+"Level": 38,
+"Lines": [
+"Finna in Fort Atla (Gotar) tells of Big Paw, a great bear who rules Skona Ravine.",
+"Big Paw roams west of Varulvhamn in Skona Ravine. Slay him to finish the quest.",
+"Reward: the Luminescent Choker."
+]
+},
+"midgard|trapper's joy": {
+"Name": "Trapper's Joy",
+"Realm": "Midgard",
+"Source": "Written from the period sources: Warcry quest 798 (2004-07); Prima Revised (2002)",
+"Updated": "2026-11-02",
+"Level": 3,
+"Lines": [
+"For Seers and Vikings at level 3, after Trapper's Pride. Your trainer in Galplen sends you back to the trapper Wariel.",
+"Wariel gives you a treated pelt to sell.",
+"Take the pelt to Kaiti, next to the dye merchants in Galplen, for three silver and some experience."
+]
+},
+"midgard|ghoul hair belt": {
+"Name": "Ghoul Hair Belt",
+"Realm": "Midgard",
+"Source": "Written from the period sources: Allakhazam quest 22 (archived 2004-10); Prima Revised (2002)",
+"Updated": "2026-11-03",
+"Level": 5,
+"Lines": [
+"Lefur in Audliten can make a magical belt from ghoul hair.",
+"Wayward ghouls walk north of Audliten at night. Kill one for a patch of decayed hair.",
+"Give the hair to Lefur for the Ghoul Hair Belt.",
+" ",
+"Tips from period players:",
+"- Not every ghoul drops hair: players reported about one in two or three (2001).",
+"- Ghouls that con grey to you never drop it, so do this at level 5 or 6 (2001).",
+"- Besides the hill north of Audliten, players found many wayward ghouls on the hill northwest of the Galplen stable (2001-12).",
+"- Lefur makes one belt per character (2001-11)."
+]
+},
+"hibernia|missing bard": {
+"Name": "Missing Bard",
+"Realm": "Hibernia",
+"Source": "Written from the period sources: Allakhazam quest 2044 (archived 2004-10); Prima Revised (2002)",
+"Updated": "2026-11-03",
+"Level": 43,
+"Lines": [
+"Illaliel in Ardagh is worried about the bard O'Rourke. Ask Maire on the north shore by the Connla bridge.",
+"Find O'Rourke in the ollipheist valley of Shannon Estuary (around 21k, 58k).",
+"He lost his flute to Arracht, a named ollipheist that wanders that valley. Slay Arracht and take the flute.",
+"Give the flute to Maire in Connla, then return to Illaliel in Ardagh and tell her O'Rourke is fine.",
+"Champions receive the Imbedded Greatsword.",
+" ",
+"Tips from period players:",
+"- Illaliel offers it from level 43: players of 39 to 42 were turned away, a 43 got it (2004)."
+]
+},
+"hibernia|tyree's dyes": {
+"Name": "Tyree's Dyes",
+"Realm": "Hibernia",
+"Source": "Written from the period sources: Allakhazam quest 74 (updated 2003-06, archived 2004-10); Warcry quest 140 (2004-07); Prima Revised (2002)",
+"Updated": "2026-11-03",
+"Level": 11,
+"Lines": [
+"Tyree in Howth is running low on dyes and needs three components.",
+"A badger scent gland and the hair of a wild lucradan: both along the road south of Mag Mell.",
+"The eyes of a large eirebug: south of Howth across the stepping stones along the shore.",
+"Bring the components back to Tyree in Howth.",
+" ",
+"Tips from period players:",
+"- The stepping stones: follow the river in front of the Howth gates south until you see about eight stones in the water; that is the 'bridge' (Warcry, 2004).",
+"- Tyree offers the quest when you speak with him or sell him loot (Warcry, 2004)."
+]
+},
+"albion|growler mace": {
+"Name": "Growler Mace",
+"Realm": "Albion",
+"Source": "Written from the period sources: Allakhazam quest 135 player notes (2001-11 to 2003-12, archived 2004-09), Allakhazam quest 2580; Prima Revised (2002)",
+"Updated": "2026-11-03",
+"Level": 13,
+"Lines": [
+"For Fighters and Clerics of level 13 who finished The Growling Ghost by slaying Growler instead of helping him. Not offered if you took Growler's Necklace: the two paths both end with the same mace, The Growler.",
+"1. Sergeant Alain, south of the Camelot Hills bridge, wants the shipment of etched rods. Kill the bandit Cyfwlch Difwych at his camp on the road to Castle Sauvage (around 50043, 12549) for it.",
+"2. Take the rods to Beria, apprentice smith, in West Downs (Salisbury Plains). Mind her full name: she is listed as 'Beria, apprentice smith'.",
+"3. Beria sends her work on to Contyth, Apprentice Smith, in Humberton (Black Mountains South).",
+"4. Contyth sends you to his father Mathien at Snowdonia Station (Black Mountains North). Mathien stands by the bind stone, at the side of the building.",
+"5. Mathien needs metal first: accept Mathien's Metal from him and finish it (slay Erick Redbeard, then speak to Mathien).",
+"6. Then he wants a hunk of ore to finish the mace. The ghost miners walk the hill northwest of Snowdonia Station, below Swanton Keep; not every miner has ore.",
+"7. Bring the ore to Mathien.",
+"8. Mathien sends you to the Guards' Armorer in Swanton Keep, north of Snowdonia Station.",
+"9. Return to Mathien for the Growler mace.",
+" ",
+"Tips from period players:",
+"- 'Killing Growler gets you a tedious 11 step quest' (2002-01): set aside an evening.",
+"- Cyfwlch has look-alike brothers at the other bandit camps on that road (Cefwlch, Dlyfwlch...). Only the exact name counts (2002).",
+"- Cyfwlch conned blue at level 13 and brought two friends, a bandit thaumaturge and a bandit (later walkthrough).",
+"- In the period the ghost miners came out only at night; here they stand on that hill all day.",
+"- A level 13 player earned about three to four bubbles of experience over the whole quest (later walkthrough)."
+]
+},
+"albion|mathien's metal": {
+"Name": "Mathien's Metal",
+"Realm": "Albion",
+"Source": "Written from the period sources: Allakhazam quest 135 player notes (2001-11, 2001-12, 2002-01, archived 2004-09); Prima Revised (2002)",
+"Updated": "2026-11-03",
+"Level": 13,
+"Lines": [
+"Mathien at Snowdonia Station offers this while you do Growler Mace, after The Growling Ghost.",
+"1. The trader Erick Redbeard stands with a camp of red dwarf matrons in the vale due west of Snowdonia Station, around 27041, 40323. Slay him.",
+"2. Return to Mathien at Snowdonia Station. Growler Mace then continues with him.",
+" ",
+"Tips from period players:",
+"- Way there: due west of Snowdonia Station there is a rise with a ridge running west, a deep vale on the left and a wide shallow hollow on the right. Erick is in the vale on the left; you can usually see him from the ridge (2001-12).",
+"- A red dwarf matron is linked to Erick, and both conned yellow at level 13: pull carefully (later walkthrough).",
+"- In the period Erick and the matrons spawned only at night (6 PM game time, 2002-01); here they are there all day."
 ]
 }
 }

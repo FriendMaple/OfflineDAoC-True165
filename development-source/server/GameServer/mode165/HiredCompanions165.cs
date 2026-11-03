@@ -179,7 +179,7 @@ namespace DOL.GS
 
         // ---- summon, dismiss, release, revive
 
-        public static string Summon(GamePlayer player, int row, bool firstTime = false)
+        public static string Summon(GamePlayer player, int row, bool firstTime = false, bool revived = false)
         {
             OfflineHiredCompanionRecord hired = RosterOf(player).FirstOrDefault(h => h.Row == row);
             if (hired == null)
@@ -214,7 +214,8 @@ namespace DOL.GS
                 bot.SetLookModel((ushort)hired.LookModel);
                 bot.Size = GameBot.SizeForHeight(hired.Height);   // its chosen height, as a player of that height (owner 2026-10-31)
                 bot.SynchronizePositionForLoginValidation();
-                if (firstTime)
+                // a revive (its body had faded) brings it back whole, like a raise of a body still lying there
+                if (firstTime || revived)
                 {
                     // its level 2-5 points stay unspent: the player places them in the spec screen (owner rule)
                     bot.Health = bot.MaxHealth;
@@ -527,11 +528,11 @@ namespace DOL.GS
             if (record.IsAlive)
                 return $"{record.Name} is alive.";
             record.IsAlive = true;
-            record.Health = 0;   // full on the next summon
+            record.Health = 0;   // full on the summon below (revived: it came back on 1 health before, audit 2026-11-03)
             record.Dirty = true; // its properties don't mark it changed; without this the save wrote nothing
             GameServer.Database.SaveObject(record);
             // straight back into the party (owner 2026-10-30: the inn is only for hiring and retrieving dismissed ones)
-            string problem = Summon(player, row);
+            string problem = Summon(player, row, revived: true);
             return problem == null ? null : $"{record.Name} lives again. {problem}";
         }
 

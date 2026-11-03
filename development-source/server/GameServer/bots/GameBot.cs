@@ -287,8 +287,11 @@ namespace DOL.GS
 
         // Bot buffs retain their real point budget, but not the human 20-effect cap.
         // Check before queuing a cast so exhausted buffers can move/rest instead of retrying.
+        // True 1.65 Mode also holds bots to the 20 concentration spells limit (SpellHandler.CheckBeginCast): the AI must
+        // see it too, or it queues the same refused buff every 1.75 s (audit 2026-11-03)
         public bool CanAffordConcentration(Spell spell) => spell != null &&
-            (spell.Concentration == 0 || spell.Concentration <= Concentration);
+            (spell.Concentration == 0 || spell.Concentration <= Concentration &&
+             !(Classic165Mode.IsOn && effectListComponent.GetConcentrationEffects().Count >= DOL.GS.Spells.SpellHandler.MAX_CONC_SPELLS));
 
         public override int Endurance
         {
@@ -2920,7 +2923,9 @@ namespace DOL.GS
 
         public void WakeTemporaryCompanionRest()
         {
-            if (IsTemporaryGroupHelper)
+            // hired companions too (audit 2026-11-03): /pull, an attack order or a pull wait left them seated and
+            // frozen, ignoring follow and attack, until the first blow landed
+            if (IsTemporaryGroupHelper || HiredCompanions165.IsHired(this))
                 WakeRecoveryRest();
         }
 
@@ -2988,6 +2993,10 @@ namespace DOL.GS
             // A cast reveals the caster: a companion hidden with its player casts only heals until a fight starts.
             if (spell?.IsHealing != true && CompanionStealth.SuppressesCasting(this)) { LogCompanionCast165(spell, "hidden"); return false; }
             if (AutonomousGroupFormationFollow.DeferBuff(this, spell)) { LogCompanionCast165(spell, "formation"); return false; }
+            // True 1.65: a pulsing charm (the Minstrel's charm song, the Mentalist's charm) holds the pet only while it
+            // pulses. Any other pulsing spell or song, or the charm cast again (that stops the song), ends it, and the
+            // freed pet turns on its charmer. Keep it up, as a player does (GitHub #13, owner 2026-11-03).
+            if (Classic165Mode.IsOn && spell?.Pulse != 0 && Charm165.HoldsPulsingCharm(this)) { LogCompanionCast165(spell, "keeping-charm"); return false; }
             // Final boundary as well as selection filtering: no rank of the
             // disabled shield can keep a Cabalist/Enchanter bot channeling.
             // The pet focus shield is cast only by its own decision (BotBrain.TryStartPetFocusShield), never by upkeep.

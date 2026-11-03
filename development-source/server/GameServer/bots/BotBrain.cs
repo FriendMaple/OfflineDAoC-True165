@@ -502,6 +502,10 @@ namespace DOL.AI.Brain
             if (living is GameNPC { Brain: ControlledMobBrain { Owner: GameLiving owner } } &&
                 owner is GamePlayer or GameBot && owner.ControlledBrain?.Body == living)
                 return owner;
+            // A player's field pets too (Theurgist elementals, Animist turrets: GitHub #13): a monster fighting them
+            // is fighting the player's group.
+            if (PlayerLedPullCoordinator.PlayerPetOwner(living) is GamePlayer fieldOwner)
+                return fieldOwner;
             return living;
         }
 
@@ -1388,6 +1392,9 @@ namespace DOL.AI.Brain
             if (BotBody?.IsTemporaryGroupHelper == true &&
                 (BotBody.TryReturnTemporaryCompanionToLeader() || TryResurrectCompanionOwner()))
                 return;
+            // True 1.65 Mode: a hired healer raises its dead player first, as a /spawn helper does
+            if (HiredCompanions165.IsHired(BotBody) && TryResurrectCompanionOwner())
+                return;
             // True 1.65 Mode: a hired companion left far behind comes back to its player (owner 2026-10-30)
             if (HiredCompanions165.TryRecallToOwner(BotBody) || HiredCompanions165.TryUnstick(BotBody))
                 return;
@@ -2104,7 +2111,8 @@ namespace DOL.AI.Brain
             if (bot == null || !bot.IsAlive || bot.IsOnStableMasterRoute || bot.InCombat || HasAggro ||
                 bot.IsAttacking || bot.IsCasting || bot.IsStunned || bot.IsMezzed || bot.IsSilenced ||
                 bot.castingComponent?.HasPendingSkillRequests == true ||
-                GameLoop.GameLoopTime < _nextMaintenanceBuffTick)
+                GameLoop.GameLoopTime < _nextMaintenanceBuffTick ||
+                HasResurrectionDuty())   // a corpse in range is raised before any re-buff (as songs and chants already do)
                 return false;
 
             bool autonomousPetUpkeep = bot.CharacterClass != null &&
@@ -2373,6 +2381,14 @@ namespace DOL.AI.Brain
             {
                 StopTwistedSong();
                 SwitchToUsableMeleeWeapon();
+                _nextSongTwistTick = GameLoop.GameLoopTime + 1_000;
+                return false;
+            }
+
+            // True 1.65: a Minstrel holding a pet keeps its charm song up and plays nothing else (another song ends
+            // the charm and the pet turns on it: GitHub #13, owner 2026-11-03).
+            if (Classic165Mode.IsOn && Charm165.HoldsPulsingCharm(bot))
+            {
                 _nextSongTwistTick = GameLoop.GameLoopTime + 1_000;
                 return false;
             }
@@ -2925,7 +2941,7 @@ namespace DOL.AI.Brain
                         && !BotPartyRoles.IsSupport(_brain.BotBody)
                         && PlayerLedPullCoordinator.Available(_brain.BotBody, leader)
                         && _brain.Body.IsWithinRadius(ownerTarget, GROUP_DEFENSE_ASSIST_RADIUS)
-                        && (leader.IsAttacking || (leader.IsCasting && leader.castingComponent?.SpellHandler?.Spell?.IsHarmful == true))
+                        && PlayerLedPullCoordinator.LeaderAttacks(leader)
                         && _brain.CanAggroTarget(ownerTarget))
                     {
                         _brain.AddToAggroList(ownerTarget, 1);
@@ -2980,7 +2996,7 @@ namespace DOL.AI.Brain
                 }
 
                 // Check if owner is in combat or attacking something
-                if (leader.IsAttacking || (leader.IsCasting && leader.castingComponent?.SpellHandler?.Spell?.IsHarmful == true))
+                if (PlayerLedPullCoordinator.LeaderAttacks(leader))
                 {
                     // Try to get owner's target
                     if (leader.TargetObject is GameLiving ownerTarget
@@ -5399,8 +5415,11 @@ namespace DOL.AI.Brain
         private bool TryResurrectCompanionOwner()
         {
             GameBot bot = BotBody;
-            if (bot?.IsTemporaryGroupHelper != true) return false;
-            GamePlayer owner = bot.Owner;
+            // hired companions too (audit 2026-11-03): their player has no BotManager Owner, so they raised only a
+            // corpse already in range, after re-buffing the group, and never sat for the power to do it
+            bool hired = HiredCompanions165.IsHired(bot);
+            if (bot?.IsTemporaryGroupHelper != true && !hired) return false;
+            GamePlayer owner = hired ? bot.CompanionPlayer : bot.Owner;
             Spell resurrection = bot.ResurrectionSpell;
             if (owner == null || owner.IsAlive || resurrection == null || owner.ObjectState != GameObject.eObjectState.Active ||
                 owner.CurrentRegionID != bot.CurrentRegionID ||
@@ -5421,7 +5440,8 @@ namespace DOL.AI.Brain
             int requiredPower = Math.Max(bot.PowerCost(resurrection), handler.PowerCost(owner));
             if (bot.Mana < requiredPower)
             {
-                bot.BeginTemporaryCompanionRest();
+                if (hired) bot.BeginRecoveryRest();
+                else bot.BeginTemporaryCompanionRest();
                 return true;
             }
             if (owner.TempProperties.GetProperty<GameLiving>("RESURRECT_CASTER") != null)

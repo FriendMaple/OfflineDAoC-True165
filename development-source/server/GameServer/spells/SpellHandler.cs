@@ -31,7 +31,7 @@ namespace DOL.GS.Spells
 		private const double MIN_LOWER_VARIANCE_BOUND = 0.208;
 
 		// Maximum number of Concentration spells that a single caster is allowed to cast.
-		private const int MAX_CONC_SPELLS = 20;
+		public const int MAX_CONC_SPELLS = 20;
 		private const int PULSING_SPELL_END_OF_CAST_MESSAGE_INTERVAL = 2000;
 
 		public virtual string ShortDescription => Spell.Description;
@@ -1042,8 +1042,7 @@ namespace DOL.GS.Spells
 			if (PlayerLedPullCoordinator.IsCrowdControl(Spell)) return;
 			if (Caster is GamePlayer player)
 				PlayerLedPullCoordinator.LeaderEngaged(player, Target);
-			else if (Caster is GameNPC { Brain: ControlledMobBrain { Owner: GamePlayer owner } } &&
-				owner.ControlledBrain?.Body == Caster)
+			else if (PlayerLedPullCoordinator.PlayerPetOwner(Caster) is GamePlayer owner)
 				PlayerLedPullCoordinator.LeaderEngaged(owner, Target, fromPet: true);
 		}
 

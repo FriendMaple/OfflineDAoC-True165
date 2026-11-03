@@ -457,7 +457,10 @@ namespace DOL.GS.Spells
             // True 1.65 Mode: a real monster, in combat too, under the 1.65 rules (Charm165)
             if (Classic165Mode.IsOn)
                 return (casterBot.ControlledBrain == null || casterBot.ControlledBrain == charmMob.Brain) &&
-                       Charm165.IsValidTarget(casterBot, Spell, charmMob) ||
+                       Charm165.IsValidTarget(casterBot, Spell, charmMob) &&
+                       // the group got on it during the cast (GitHub #13): the charm fizzles, the fight stays the group's
+                       !(casterBot.Group != null && HiredCompanions165.IsHired(casterBot) &&
+                         Charm165.GroupIsOnIt(casterBot, new HashSet<GameLiving>(casterBot.Group.GetMembersInTheGroup()), charmMob)) ||
                        charmMob.Brain is IControlledBrain own && own.Owner == casterBot;
             if (casterBot.ControlledBrain != null && casterBot.ControlledBrain != charmMob.Brain)
                 return false;
