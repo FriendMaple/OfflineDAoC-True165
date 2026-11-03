@@ -34,7 +34,9 @@ namespace DOL.GS
             [(BotSiegeKind.Ram, 1), (BotSiegeKind.Catapult, 300), (BotSiegeKind.Trebuchet, 600)];
 
         private sealed record Recipe(string ProductId, int Level, long MaterialCost);
-        private static readonly ConcurrentDictionary<eCraftingSkill, Recipe[]> Recipes = new();
+        // per craft AND realm: an Albion crafter made Midgard leather and listed it on the Albion exchange, where nobody could
+        // wear it (owner 2026-11-03: "bots across all crafting can only make gear from their faction")
+        private static readonly ConcurrentDictionary<(eCraftingSkill, eRealm), Recipe[]> Recipes = new();
         private static readonly ConcurrentDictionary<long, long> NextCraft = new();
 
         /// <summary>A gamebot's craft, given once (fresh bots at creation; older bots the first time they work).</summary>
@@ -90,7 +92,7 @@ namespace DOL.GS
 
         private static void CraftRecipe(GameBot bot, OfflineWorldBotRecord record, eCraftingSkill craft)
         {
-            Recipe[] all = Recipes.GetOrAdd(craft, LoadRecipes);
+            Recipe[] all = Recipes.GetOrAdd((craft, bot.Realm), key => LoadRecipes(key.Item1, key.Item2));
             int skill = Math.Max(1, record.CraftLevel);
             // the hardest recipe it can just make (players craft at the edge of their skill)
             // a new crafter starts on the line's easiest recipes: weapon, armour and tailoring begin at 15, beyond skill 1 + 10,
@@ -175,11 +177,15 @@ namespace DOL.GS
         }
 
         /// <summary>The recipes of a craft with their material cost (each ingredient's template price x count).</summary>
-        private static Recipe[] LoadRecipes(eCraftingSkill craft)
+        // Only recipes whose product is of the crafter's realm or of none (a player of that realm crafts only those).
+        private static Recipe[] LoadRecipes(eCraftingSkill craft, eRealm realm)
         {
             var list = new List<Recipe>();
             foreach (DbCraftedItem crafted in DOLDB<DbCraftedItem>.SelectObjects(DB.Column("CraftingSkillType").IsEqualTo((int)craft)))
             {
+                DbItemTemplate product = GameServer.Database.FindObjectByKey<DbItemTemplate>(crafted.Id_nb);
+                if (product == null || product.Realm != 0 && product.Realm != (int)realm)
+                    continue;
                 long cost = 0;
                 foreach (DbCraftedXItem part in DOLDB<DbCraftedXItem>.SelectObjects(DB.Column("CraftedItemId_nb").IsEqualTo(crafted.Id_nb)))
                 {
