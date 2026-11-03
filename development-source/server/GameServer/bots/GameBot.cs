@@ -64,12 +64,21 @@ namespace DOL.GS
         /// player's, never a world bot with goals). The companion follow, buff, song, stealth and PvP rules apply to both
         /// (owner 2026-10-31: hired Shamans and Bards buffed instead of following a walking player and got stuck).
         /// </summary>
-        public bool IsPlayerCompanion => IsTemporaryGroupHelper && !IsAutonomousWorldBot || HiredCompanions165.IsHired(this);
+        public bool IsPlayerCompanion => IsTemporaryGroupHelper && !IsAutonomousWorldBot || HiredCompanions165.IsHired(this) ||
+                                         IsInvitedGamebot165;
+
+        /// <summary>True 1.65 Mode: a gamebot of the world a player invited into their group (not hired). While it is in
+        /// that player's group it works for the player like a companion: heals their pet, stays near, holds its heals
+        /// in a fight, rides along (owner 2026-11-03). A group led by a gamebot is not affected; the hired companions'
+        /// own rules (level cap, inn, roster, bag) stay theirs.</summary>
+        public bool IsInvitedGamebot165 => Classic165Mode.IsOn && IsAutonomousWorldBot && !IsTemporaryGroupHelper &&
+                                           IsPlayerLedGroup && !HiredCompanions165.IsHired(this);
 
         /// <summary>The player a companion works for: a /spawn helper's owner, or a True 1.65 hired companion's player
         /// (hired companions are persistent bots with no Owner; owner 2026-10-31: a hired Cleric never healed its
         /// Necromancer's pet or held still in combat because those behaviours only knew /spawn helpers).</summary>
-        public GamePlayer CompanionPlayer => IsTemporaryGroupHelper ? Owner : HiredCompanions165.IsHired(this) ? PlayerGroupLeader : null;
+        public GamePlayer CompanionPlayer => IsTemporaryGroupHelper ? Owner :
+            HiredCompanions165.IsHired(this) || IsInvitedGamebot165 ? PlayerGroupLeader : null;
         public bool IsEndgameCompanion => TemporaryCompanionBalance.IsEndgame(IsTemporaryGroupHelper, Level);
         private bool _endgameCompanionEquipped;
         public bool SuppressLootAndProgress => IsTemporaryGroupHelper;
@@ -1269,6 +1278,18 @@ namespace DOL.GS
                     _deathRecoveryTimer = null;
                 return hiredNext;
             }
+            // True 1.65 Mode: a gamebot its player invited waits for a raise as a hired companion does (owner
+            // 2026-11-03), five minutes, in the player's group, even through a wipe (the player may release and come
+            // back to raise it). Then it leaves the group and releases as an ordinary gamebot, back to its own routes.
+            if (IsInvitedGamebot165)
+            {
+                if (deadFor < HiredCompanions165.BodyFadeMilliseconds)
+                    return 3000;
+                GamePlayer formerLeader = PlayerGroupLeader;
+                Group?.RemoveMember(this);
+                formerLeader?.Out.SendMessage($"{Name} waited too long for a raise and has left your group.",
+                    eChatType.CT_Group, eChatLoc.CL_SystemWindow);
+            }
             AutonomousBotGroupCoordinator.PveCorpseDisposition groupDisposition =
                 AutonomousBotGroupCoordinator.PveCorpseRecovery(this);
             if (groupDisposition == AutonomousBotGroupCoordinator.PveCorpseDisposition.HoldForResurrection)
@@ -2298,9 +2319,6 @@ namespace DOL.GS
 
         public override void SortSpells()
         {
-            if (Spells.Count < 1)
-                return;
-
             InstantHarmfulSpells?.Clear();
             HarmfulSpells?.Clear();
             InstantHealSpells?.Clear();
@@ -2326,6 +2344,9 @@ namespace DOL.GS
             CurePoison = null;
             CurePoisonGroup = null;
             ResurrectionSpell = null;
+            // no spells (a respec that left none): everything above is cleared, nothing old stays castable
+            if (Spells == null || Spells.Count < 1)
+                return;
 
             foreach (Spell spell in Spells)
             {
@@ -2861,6 +2882,10 @@ namespace DOL.GS
         {
             if (IsTemporaryGroupHelper)
                 CompleteStableMasterRoute();
+            // a gamebot put away for its player's ride and then let go comes back into view where it was put away
+            // (owner 2026-11-03); a hired companion is parked at the inn by OnLeftPlayerGroup below
+            if (StowedForRide && !HiredCompanions165.IsHired(this))
+                TemporaryGroupStableTravel.ReleaseStowed(this);
             PlayerGroupLeader = null;
             if (Brain is BotBrain brain)
                 brain.RebindAssistedPlayer();
@@ -2984,6 +3009,9 @@ namespace DOL.GS
             return true;
         }
 
+        /// <summary>The partner song of a Minstrel's charm twist while it is being requested (see CastSpell).</summary>
+        internal Spell CharmTwistSong;
+
         // Wake only when an actual affordable spell is requested, not during
         // spell selection. Mobile song maintenance remains compatible with
         // out-of-combat logical recovery.
@@ -2995,8 +3023,9 @@ namespace DOL.GS
             if (AutonomousGroupFormationFollow.DeferBuff(this, spell)) { LogCompanionCast165(spell, "formation"); return false; }
             // True 1.65: a pulsing charm (the Minstrel's charm song, the Mentalist's charm) holds the pet only while it
             // pulses. Any other pulsing spell or song, or the charm cast again (that stops the song), ends it, and the
-            // freed pet turns on its charmer. Keep it up, as a player does (GitHub #13, owner 2026-11-03).
-            if (Classic165Mode.IsOn && spell?.Pulse != 0 && Charm165.HoldsPulsingCharm(this)) { LogCompanionCast165(spell, "keeping-charm"); return false; }
+            // freed pet turns on its charmer. Only the Minstrel's own timed twist (BotBrain.TryTwistWithCharm) plays
+            // another song meanwhile (GitHub #13, owner 2026-11-03).
+            if (Classic165Mode.IsOn && spell != CharmTwistSong && Charm165.PulseWouldLosePet(this, spell)) { LogCompanionCast165(spell, "keeping-charm"); return false; }
             // Final boundary as well as selection filtering: no rank of the
             // disabled shield can keep a Cabalist/Enchanter bot channeling.
             // The pet focus shield is cast only by its own decision (BotBrain.TryStartPetFocusShield), never by upkeep.
@@ -4403,8 +4432,13 @@ namespace DOL.GS
                 ? TemporaryCompanionBalance.HighestRanks(spells, Level, SkillBase.GetSpellByID)
                 : GetHighestLevelSpells(spells);
 
-            if (highestSpellLevels.Count > 0)
-                Spells = highestSpellLevels;
+            // always the new list, even an empty one: after a respec a player has only the spells its specs still give
+            // (owner 2026-11-03: a respecced hybrid kept casting chants it no longer had); not while nothing is loaded
+            if (dict == null)
+                return;
+            Spells = highestSpellLevels;
+            if (highestSpellLevels.Count == 0)
+                SortSpells();
         }
 
         private void SetHybridSpells()
@@ -4421,8 +4455,12 @@ namespace DOL.GS
                     spells.Add(spell);
             }
 
-            if (spells.Count > 0)
-                Spells = spells;
+            // always the new list, even an empty one (a respec: see SetCasterSpells); not while nothing is loaded
+            if (usableSkills.Count == 0)
+                return;
+            Spells = spells;
+            if (spells.Count == 0)
+                SortSpells();
         }
 
         public List<Spell> GetHighestLevelSpells(List<Spell> spells)

@@ -42,7 +42,9 @@ namespace DOL.GS
                              spell.Target == eSpellTarget.GROUP ? 2 : 16))
                 {
                     if (pet.IsAlive && pet.ObjectState == GameObject.eObjectState.Active &&
-                        pet.CurrentRegionID == caster.CurrentRegionID && pet.Realm == caster.Realm &&
+                        // a charmed pet keeps its monster realm (None) but is the group's: it gets buffs too (owner
+                        // 2026-11-03: pets should get the optional buffs a healer has the concentration for)
+                        pet.CurrentRegionID == caster.CurrentRegionID && (pet.Realm == caster.Realm || pet.Realm == eRealm.None) &&
                         caster.IsWithinRadius(pet, range))
                         yield return pet;
                 }

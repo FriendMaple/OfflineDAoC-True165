@@ -23,6 +23,36 @@ namespace DOL.AI.Brain
                 spell.SpellType is not eSpellType.UnbreakableSpeedDecrease and not eSpellType.PreventFlight;
         }
 
+        /// <summary>
+        /// A player's group leaves a mesmerized or rooted monster alone even when nothing else is left, as long as it is
+        /// not fighting anyone (a rooted caster still nuking is a fight): the player held it, and the companions engage
+        /// it the moment the hold ends or breaks early (owner 2026-11-03). A gamebot group still finishes held adds
+        /// once the rest is dead.
+        /// </summary>
+        private bool LeavesHeldForPlayer(GameLiving living) =>
+            BotBody?.IsPlayerLedGroup == true && IsBreakablyControlled(living) &&
+            !(living.IsAttacking || living.IsCasting && living.castingComponent?.SpellHandler?.Spell?.IsHarmful == true);
+
+        /// <summary>
+        /// A held (mesmerized or rooted) monster on this bot's aggro list is still near, and so is its player: the fight
+        /// is not over. A player who walks off ends the wait (the companions follow; the monster rejoins the fight by
+        /// group defense when its hold ends).
+        /// </summary>
+        internal bool WaitsOnHeldEnemy()
+        {
+            GameBot bot = BotBody;
+            if (bot == null || AggroList.IsEmpty || bot.PlayerGroupLeader is GamePlayer leader &&
+                (!leader.IsAlive || leader.CurrentRegion != bot.CurrentRegion || !bot.IsWithinRadius(leader, 650)))
+                return false;
+            foreach (GameLiving living in AggroList.Keys)
+            {
+                if (living is { IsAlive: true } && IsBreakablyControlled(living) && !ShouldBeRemovedFromAggroList(living) &&
+                    bot.IsWithinRadius(living, GROUP_DEFENSE_ASSIST_RADIUS))
+                    return true;
+            }
+            return false;
+        }
+
         /// <summary>Pure rule: a controlled target is passed over only while an uncontrolled one is in the fight.</summary>
         public static bool PassOverControlled(bool controlled, bool uncontrolledAvailable) => controlled && uncontrolledAvailable;
 

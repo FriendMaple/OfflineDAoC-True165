@@ -95,6 +95,9 @@ namespace DOL.GS
             return int.MaxValue;
         }
 
+        /// <summary>Below this a member is an emergency for the heal order (the healers' own emergency line).</summary>
+        public const int EmergencyHealthPercent = 40;
+
         public static bool PreferHealingTarget(GameBot healer, GameLiving candidate, GameLiving current)
         {
             if (candidate == null)
@@ -103,6 +106,15 @@ namespace DOL.GS
                 return true;
             int candidatePriority = HealingPriority(healer, candidate);
             int currentPriority = HealingPriority(healer, current);
+            // An emergency (under 40%) comes first, the lowest first: a companion tank at 15% is healed before the
+            // player at 64% (owner 2026-11-03). Otherwise the player, then pets, then companions.
+            bool candidateEmergency = candidate.HealthPercent < EmergencyHealthPercent;
+            bool currentEmergency = current.HealthPercent < EmergencyHealthPercent;
+            if (candidateEmergency != currentEmergency)
+                return candidateEmergency;
+            if (candidateEmergency)
+                return candidate.HealthPercent < current.HealthPercent ||
+                       candidate.HealthPercent == current.HealthPercent && candidatePriority < currentPriority;
             return candidatePriority < currentPriority ||
                    candidatePriority == currentPriority && candidate.HealthPercent < current.HealthPercent;
         }

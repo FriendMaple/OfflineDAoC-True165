@@ -61,6 +61,38 @@ namespace DOL.GS
             return pulses != null && pulses.Any(p => p?.SpellHandler?.Spell?.SpellType == eSpellType.Charm);
         }
 
+        /// <summary>
+        /// The pet this caster holds with a pulsing charm (song or spell), the charm spell that holds it, and how long
+        /// the hold lasts without another pulse (each pulse renews it; a song switched away from leaves it running out).
+        /// </summary>
+        public static GameNPC PulsingCharmPet(GameLiving caster, out Spell charm, out long holdLeftMs)
+        {
+            charm = null;
+            holdLeftMs = 0;
+            if (caster?.ControlledBrain?.Body is not GameNPC pet || !pet.IsAlive)
+                return null;
+            ECSGameSpellEffect hold = EffectListService.GetSpellEffectOnTarget(pet, eEffect.Charm, eSpellType.Charm);
+            if (hold == null || hold.IsEnding || hold.SpellHandler?.Caster != caster || hold.SpellHandler.Spell is not { Pulse: not 0 } spell)
+                return null;
+            charm = spell;
+            holdLeftMs = System.Math.Max(0, hold.ExpireTick - GameLoop.GameLoopTime);
+            return pet;
+        }
+
+        /// <summary>
+        /// Whether this pulsing spell would cost the caster its charmed pet: while the charm pulses, any other pulsing
+        /// spell or song ends it, and casting the charm again stops it; between a twisted song and the renewed charm,
+        /// only the charm itself may start. The one partner song of a deliberate twist is let through by its caller.
+        /// </summary>
+        public static bool PulseWouldLosePet(GameLiving caster, Spell spell)
+        {
+            if (spell == null || spell.Pulse == 0)
+                return false;
+            if (HoldsPulsingCharm(caster))
+                return true;
+            return spell.SpellType != eSpellType.Charm && PulsingCharmPet(caster, out _, out _) != null;
+        }
+
         /// <summary>No bot tries to charm the same monster again within this time (no charm loops).</summary>
         public const int RetryMilliseconds = 60_000;
         private static readonly System.Runtime.CompilerServices.ConditionalWeakTable<GameNPC, object> Tried = new();

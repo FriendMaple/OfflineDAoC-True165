@@ -21,7 +21,8 @@ namespace DOL.GS
             isBot && temporaryHelper && !autonomous && hasPlayerOwner;
 
         public static bool IsCompanion(GameLiving living) =>
-            living is GameBot bot && IsCompanion(true, bot.IsPlayerCompanion, false, bot.CompanionPlayer != null);
+            // a gamebot the player invited is still a gamebot here (owner rule: gamebots never count)
+            living is GameBot bot && IsCompanion(true, bot.IsPlayerCompanion && !bot.IsInvitedGamebot165, false, bot.CompanionPlayer != null);
 
         /// <summary>Members that make a mob bring more friends: players, and companions when enabled.</summary>
         public static bool Counts(GameLiving member) =>

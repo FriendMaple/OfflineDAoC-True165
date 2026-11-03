@@ -125,7 +125,7 @@ public static class TemporaryGroupStableTravel
         DateTime started = DateTime.UtcNow;
         GameBot[] companions = player.Group.GetMembersInTheGroup()
             .OfType<GameBot>()
-            .Where(bot => (bot.IsTemporaryGroupHelper || HiredCompanions165.IsHired(bot)) &&
+            .Where(bot => (bot.IsTemporaryGroupHelper || HiredCompanions165.IsHired(bot) || bot.IsInvitedGamebot165) &&
                           bot.IsAlive && bot.ObjectState is GameObject.eObjectState.Active &&
                           bot.Group == player.Group && bot.PlayerGroupLeader == player)
             .ToArray();
@@ -207,6 +207,21 @@ public static class TemporaryGroupStableTravel
             petBrain.Disengage();
     }
 
+    /// <summary>A gamebot put away for a ride and let go before it ended (it left the player's group): it and its pet
+    /// come back into view where they were put away (the ride's monitor then leaves them alone).</summary>
+    public static void ReleaseStowed(GameBot bot)
+    {
+        GameNPC pet = bot?.ControlledBrain?.Body;
+        foreach (GameNPC shown in new[] { bot, pet })
+        {
+            if (shown == null || !shown.StowedForRide)
+                continue;
+            shown.StowedForRide = false;
+            if (shown.ObjectState == GameObject.eObjectState.Active)
+                ClientService.CreateObjectForPlayers(shown);
+        }
+    }
+
     /// <summary>Brings a stowed companion (and its pet) back beside the player.</summary>
     private static void Unstow(GameBot bot, GamePlayer player, int ordinal)
     {
@@ -263,9 +278,10 @@ public static class TemporaryGroupStableTravel
             // zone point back down lands about 3000 from him, where the raid is still fighting).
             if (bot.CurrentRegionID == player.CurrentRegionID && bot.InCombat && bot.IsWithinRadius(player, 4000))
                 continue;
-            // A player's hired companions go along too (owner 2026-11-01); a persistent gamebot in the group never does.
+            // A player's hired companions go along too (owner 2026-11-01), and so do gamebots the player invited into
+            // the group (owner 2026-11-03: they stayed behind at zone points); a gamebot-led group never moves.
             bool hired = HiredCompanions165.IsHired(bot);
-            bool companion = IsTransferCohesionCompanion(bot.IsTemporaryGroupHelper, hired);
+            bool companion = IsTransferCohesionCompanion(bot.IsTemporaryGroupHelper, hired || bot.IsInvitedGamebot165);
             bool needsRelocation = ShouldRelocateForOwnerTransfer(
                     hasConfirmedTransfer,
                     companion,

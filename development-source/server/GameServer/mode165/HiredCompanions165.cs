@@ -48,6 +48,9 @@ namespace DOL.GS
         private static readonly ConcurrentDictionary<long, OfflineHiredCompanionRecord> Hired = new();
         private static readonly ConcurrentDictionary<long, GameBot> Live = new();
         private static readonly ConcurrentDictionary<long, byte> Dismissing = new();
+        /// <summary>Companions that just left their player's group, waiting for the deferred park: KeepWithOwner must
+        /// not invite them back in that gap ("X joins your group" after a kick, audit 2026-11-03).</summary>
+        private static readonly ConcurrentDictionary<long, byte> Leaving = new();
 
         /// <summary>Hire cost by slot (copper): free, then about two hours of coin at the level the slot opens (owner to
         /// confirm in testing): 20 s, 60 s, 2 g, 6 g, 15 g, 30 g.</summary>
@@ -357,6 +360,8 @@ namespace DOL.GS
             if (!Classic165Mode.IsOn || bot == null || !bot.IsAlive || bot.IsPlayerLedGroup ||
                 !Hired.TryGetValue(bot.DatabaseID, out OfflineHiredCompanionRecord hired))
                 return false;
+            if (Leaving.ContainsKey(bot.DatabaseID))
+                return true;   // on its way to the inn (or parked offline): never invited back in that moment
             GamePlayer owner = OwnerOnline(hired);
             if (owner == null || !hired.WithOwner)
                 return true;
@@ -546,12 +551,20 @@ namespace DOL.GS
                 return;
             // Logging out breaks the group up before the quit event: a companion whose owner is gone (or going) is
             // parked to come back at the next login, not sent to wait at the inn (tested in the new client, 2026-10-30).
+            Leaving[hired.BotId] = 0;
             NpcService.Instance.Post<OfflineHiredCompanionRecord>(h =>
             {
-                GamePlayer owner = ClientService.Instance.GetPlayerByExactName(h.OwnerName);
-                bool ownerPlaying = owner != null && owner.ObjectState == GameObject.eObjectState.Active &&
-                                    owner.Client?.ClientState == GameClient.eClientState.Playing;
-                Park(h, keepWithOwner: !ownerPlaying);
+                try
+                {
+                    GamePlayer owner = ClientService.Instance.GetPlayerByExactName(h.OwnerName);
+                    bool ownerPlaying = owner != null && owner.ObjectState == GameObject.eObjectState.Active &&
+                                        owner.Client?.ClientState == GameClient.eClientState.Playing;
+                    Park(h, keepWithOwner: !ownerPlaying);
+                }
+                finally
+                {
+                    Leaving.TryRemove(h.BotId, out _);
+                }
             }, hired);
         }
 

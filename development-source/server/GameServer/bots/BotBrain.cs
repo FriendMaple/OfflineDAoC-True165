@@ -341,7 +341,7 @@ namespace DOL.AI.Brain
                     continue;
 
                 if (PassOverControlled(IsBreakablyControlled(living), uncontrolledAvailable) ||
-                    living == leaderHeld)
+                    living == leaderHeld || LeavesHeldForPlayer(living))
                     continue;
 
                 if (Body.TargetObject == living)
@@ -1325,6 +1325,8 @@ namespace DOL.AI.Brain
             if (AutonomousStuckWatchdog.Observe(BotBody))
                 return;
 
+            // a Minstrel's charm twist: the charm goes back on the pet before anything else takes the turn
+            TryRenewTwistedCharm();
             FaceMeleeTarget();
 
             // put away for its player's horse ride: nothing to do until it is back at the player's side. Checked on every
@@ -1393,7 +1395,7 @@ namespace DOL.AI.Brain
                 (BotBody.TryReturnTemporaryCompanionToLeader() || TryResurrectCompanionOwner()))
                 return;
             // True 1.65 Mode: a hired healer raises its dead player first, as a /spawn helper does
-            if (HiredCompanions165.IsHired(BotBody) && TryResurrectCompanionOwner())
+            if ((HiredCompanions165.IsHired(BotBody) || BotBody?.IsInvitedGamebot165 == true) && TryResurrectCompanionOwner())
                 return;
             // True 1.65 Mode: a hired companion left far behind comes back to its player (owner 2026-10-30)
             if (HiredCompanions165.TryRecallToOwner(BotBody) || HiredCompanions165.TryUnstick(BotBody))
@@ -2385,11 +2387,14 @@ namespace DOL.AI.Brain
                 return false;
             }
 
-            // True 1.65: a Minstrel holding a pet keeps its charm song up and plays nothing else (another song ends
-            // the charm and the pet turns on it: GitHub #13, owner 2026-11-03).
-            if (Classic165Mode.IsOn && Charm165.HoldsPulsingCharm(bot))
+            // True 1.65: a Minstrel holding a pet twists its charm song with ONE other song, as a player does (owner
+            // 2026-11-03): see TryTwistWithCharm. Between the partner song and the renewed charm, TryRenewTwistedCharm
+            // owns the turn; a charm song still pulsing with no pet (waiting to recapture) is left alone.
+            long charmHoldLeft = 0;
+            bool managingCharm = Classic165Mode.IsOn && Charm165.PulsingCharmPet(bot, out _, out charmHoldLeft) != null;
+            if (Classic165Mode.IsOn && (managingCharm ? !Charm165.HoldsPulsingCharm(bot) : Charm165.HoldsPulsingCharm(bot)))
             {
-                _nextSongTwistTick = GameLoop.GameLoopTime + 1_000;
+                _nextSongTwistTick = GameLoop.GameLoopTime + (managingCharm ? 250 : 1_000);
                 return false;
             }
 
@@ -2442,6 +2447,8 @@ namespace DOL.AI.Brain
                 audience.Any(member => Short(member, m => m.EndurancePercent < 85)),
                 songsByType.Keys, activeType);
             Spell song = wanted is { } type ? songsByType[type] : null;
+            if (managingCharm)
+                return TryTwistWithCharm(bot, song, charmHoldLeft);
             if (song == null || song.ID == _activeTwistedSongId)
             {
                 _nextSongTwistTick = now + (song == null ? 4_000 : 1_000);
@@ -2491,6 +2498,96 @@ namespace DOL.AI.Brain
             // Cast selectors still see the pending/active request and cannot
             // enqueue another spell; follow/route decisions may run alongside it.
             return cast && !immediateCombat && !BotSongTwistPolicy.IsMobileSong(bot, song);
+        }
+
+        /// <summary>Renew the partner song when this much of it is left beyond its own cast time (it lands just
+        /// before the old one runs out: no constant switching, no gap).</summary>
+        private const int CharmTwistRenewLeadMilliseconds = 500;
+        /// <summary>The charm's hold on the pet must outlast the partner song's cast by this much before switching.</summary>
+        private const int CharmTwistReturnMarginMilliseconds = 2_500;
+        private long _nextCharmRenewTick;
+        private long _nextCharmTwistAllowed;
+
+        /// <summary>How long the bot's own effect of this song has left (0: none).</summary>
+        private long OwnSongRemainingMilliseconds(Spell song) =>
+            Body.effectListComponent.GetSpellEffects(EffectHelper.GetEffectFromSpell(song))
+                .Where(effect => (effect.IsActive || effect.IsStarting) && !effect.IsEnding &&
+                                 effect.SpellHandler?.Spell.SpellType == song.SpellType)
+                .Select(effect => effect.Duration == 0 ? long.MaxValue : Math.Max(0, effect.ExpireTick - GameLoop.GameLoopTime))
+                .DefaultIfEmpty(0).Max();
+
+        /// <summary>
+        /// True 1.65 Mode, a Minstrel holding a charmed pet (owner 2026-11-03): the charm song comes before every other
+        /// song. Only while traveling is it twisted, with speed, on the move (no stopping): speed is played only when
+        /// its effect is about to run out and only while the charm's hold outlasts the switch; TryRenewTwistedCharm
+        /// then plays the charm again at once. Idle or fighting: the charm alone. Speed gets its drum from the bag.
+        /// </summary>
+        private bool TryTwistWithCharm(GameBot bot, Spell song, long charmHoldLeft)
+        {
+            long now = GameLoop.GameLoopTime;
+            if (song?.SpellType != eSpellType.SpeedEnhancement)
+            {
+                _nextSongTwistTick = now + 1_000;
+                return false;
+            }
+            int castTime = Math.Max(0, song.CastTime);
+            // its own speed only: speed never lands on a member in combat, riding or hidden, and waiting on them made it
+            // switch every think (review 2026-11-03); and never sooner than the song's own duration allows
+            long left = OwnSongRemainingMilliseconds(song);
+            long renewAt = castTime + CharmTwistRenewLeadMilliseconds;
+            if (now < _nextCharmTwistAllowed)
+            {
+                _nextSongTwistTick = Math.Min(_nextCharmTwistAllowed, now + 1_000);
+                return false;
+            }
+            if (left > renewAt)
+            {
+                _nextSongTwistTick = now + Math.Clamp(left - renewAt, 250, 1_000);
+                return false;
+            }
+            if (charmHoldLeft < castTime + CharmTwistReturnMarginMilliseconds ||
+                bot.Mana < bot.PowerCost(song) || bot.GetSkillDisabledDuration(song) > 0)
+            {
+                _nextSongTwistTick = now + 250;   // the next charm pulse renews the hold
+                return false;
+            }
+            if (song.NeedInstrument && !TryEquipRealInstrument(bot, song.InstrumentRequirement))
+            {
+                _nextSongTwistTick = now + 5_000;
+                return false;
+            }
+            GameObject previousTarget = bot.TargetObject;
+            bot.TargetObject = FindMissingMaintenanceTarget(song) ?? bot;
+            bot.CharmTwistSong = song;
+            bool cast;
+            try { cast = bot.CastSpell(song, m_mobSpellLine, false); }
+            finally { bot.CharmTwistSong = null; bot.TargetObject = previousTarget; }
+            if (cast)
+                _nextCharmTwistAllowed = now + Math.Max(castTime + 1_000, song.Duration - renewAt);
+            _nextSongTwistTick = now + (cast ? 250 : 1_000);
+            return cast && !BotSongTwistPolicy.IsMobileSong(bot, song);
+        }
+
+        /// <summary>
+        /// The other half of the Minstrel's charm twist: once the partner song has started (it ended the charm song),
+        /// the charm is played again on the pet at once, before its hold runs out. In or out of a fight.
+        /// </summary>
+        private void TryRenewTwistedCharm()
+        {
+            GameBot bot = BotBody;
+            if (!Classic165Mode.IsOn || bot == null || !bot.IsAlive || !IsClassicSongClass(bot) || Charm165.HoldsPulsingCharm(bot) ||
+                bot.StowedForRide || bot.IsOnStableMasterRoute ||
+                Charm165.PulsingCharmPet(bot, out Spell charm, out _) is not GameNPC pet || bot.Mana < bot.PowerCost(charm) ||
+                bot.IsCasting || bot.castingComponent?.HasPendingSkillRequests == true ||
+                bot.IsStunned || bot.IsMezzed || bot.IsSilenced || GameLoop.GameLoopTime < _nextCharmRenewTick)
+                return;
+            _nextCharmRenewTick = GameLoop.GameLoopTime + 400;
+            if (charm.NeedInstrument && !TryEquipRealInstrument(bot, charm.InstrumentRequirement))
+                return;
+            GameObject previousTarget = bot.TargetObject;
+            bot.TargetObject = pet;
+            try { bot.CastSpell(charm, m_mobSpellLine, false); }
+            finally { bot.TargetObject = previousTarget; }
         }
 
         // A member whose stats can't be read (not fully in the world yet) counts as short of nothing.
@@ -2949,7 +3046,11 @@ namespace DOL.AI.Brain
                         return;
                     }
 
-                    if (!_brain.Body.IsWithinRadius(leader, 650))
+                    // True 1.65 Mode: a bot in a player's group goes back to following (and buffing) the moment its
+                    // player is alive again, not once the player is 650 away (owner 2026-11-03: after a raise they
+                    // stood idle). /bot stay (normal mode's /spawn helpers) still holds position until 650.
+                    if (!_brain.Body.IsWithinRadius(leader, 650) ||
+                        Classic165Mode.IsOn && _brain.BotBody?.IsPlayerLedGroup == true)
                     {
                         _brain.FSM.SetCurrentState(eFSMStateType.FOLLOW);
                         return;
@@ -3125,7 +3226,12 @@ namespace DOL.AI.Brain
                     return;
                 }
 
-                if (_brain.ActiveOrderedPullTarget == null &&
+                // A mesmerized or rooted monster still near is not the end of the fight: wait for its hold to end or
+                // break early, then engage it, instead of forgetting it after six quiet seconds (owner 2026-11-03).
+                bool waitingOnHeld = _brain.WaitsOnHeldEnemy();
+                if (waitingOnHeld)
+                    _aggroEndTime = GameLoop.GameLoopTime + LEAVE_WHEN_OUT_OF_COMBAT_FOR;
+                if (_brain.ActiveOrderedPullTarget == null && !waitingOnHeld &&
                     (!_brain.HasAggro || (!_brain.HasCommittedDungeonPull &&
                         !_brain.Body.InCombatInLast(LEAVE_WHEN_OUT_OF_COMBAT_FOR) && GameServiceUtils.ShouldTick(_aggroEndTime))))
                 {
@@ -3431,8 +3537,12 @@ namespace DOL.AI.Brain
                         // persistent Scout/Hunter/Ranger holds bow range even
                         // when its target closes inside nominal melee distance.
                         // Proximity alone must not restart a valid draw.
+                        // Gamebot and hired archers fight like a player (owner 2026-11-03): a monster that reaches
+                        // them and is on them gets the melee weapon before its first blow; one busy with someone
+                        // else is still shot at.
                         bool targetForcesMelee = distance <= Body.MeleeAttackRange &&
-                                                 !BotRangedCombat.UsesAutonomousBowPositioning(BotBody) ||
+                                                 (!BotRangedCombat.UsesAutonomousBowPositioning(BotBody) ||
+                                                  livingTarget.TargetObject == Body) ||
                                                  ArcherMeleeFallbackActive;
 
                         bool useRanged = BotRangedCombat.ShouldUseRangedWeapon(
@@ -3491,6 +3601,9 @@ namespace DOL.AI.Brain
             }
             else
             {
+                // nothing left to fight but a held monster (owner 2026-11-03): stop swinging at it, wait for the hold
+                if (Body.IsAttacking)
+                    Body.StopAttack();
                 TryEnterStealthWhileIdle();
             }
         }
@@ -4927,6 +5040,22 @@ namespace DOL.AI.Brain
                 ? spell.EffectGroup == existing.EffectGroup
                 : spell.SpellType == existing.SpellType);
 
+        private static readonly System.Runtime.CompilerServices.ConditionalWeakTable<GameLiving, Dictionary<int, long>> StrongerBuffTries = new();
+
+        /// <summary>One try every 30 s per target and spell to put a stronger buff over a weaker one.</summary>
+        private static bool TakeStrongerBuffTry(GameLiving target, Spell spell)
+        {
+            Dictionary<int, long> tries = StrongerBuffTries.GetValue(target, _ => new());
+            long now = GameLoop.GameLoopTime;
+            lock (tries)
+            {
+                if (tries.TryGetValue(spell.ID, out long next) && now < next)
+                    return false;
+                tries[spell.ID] = now + 30_000;
+                return true;
+            }
+        }
+
         public bool LivingHasEffect(GameLiving target, Spell spell)
         {
             if (target == null)
@@ -4983,6 +5112,25 @@ namespace DOL.AI.Brain
             if (spellEffect == eEffect.DamageOverTime)
                 return target.effectListComponent.GetSpellEffects(spellEffect)
                     .Any(effect => effect?.SpellHandler?.Spell is Spell existing && DotsConflict(spell, existing));
+
+            // A beneficial buff is "already there" only when what is there is at least as strong: a weaker potion,
+            // charge or lower rank from someone else no longer blocks the bot's own better buff (owner 2026-11-03).
+            // The effect list keeps the better one and disables the weaker, so the next pass sees this one and stops.
+            // Strength as the server weighs it (value x the caster's effectiveness); a concentration buff never
+            // contests another concentration buff (the server refuses it, or ends a player's own), and one try per
+            // target and spell every 30 s at most, so a refused buff can't loop (review 2026-11-03).
+            if (!spell.IsHarmful && spell.Value > 0 && EffectListService.GetEffectOnTarget(target, spellEffect) != null)
+            {
+                double ours = spell.Value * Math.Max(0.01, Body.Effectiveness);
+                List<ECSGameEffect> present = target.effectListComponent.GetEffects(spellEffect);
+                bool asStrong = present.Any(effect => effect is not ECSGameSpellEffect spellEffectPresent ||
+                    spellEffectPresent.SpellHandler?.Spell is not Spell existing || existing.ID == spell.ID ||
+                    spell.IsConcentration && spellEffectPresent.IsConcentrationEffect() ||
+                    existing.Value * Math.Max(0.01, spellEffectPresent.Effectiveness) >= ours);
+                if (asStrong || !TakeStrongerBuffTry(target, spell))
+                    return true;
+                return HasImmunityEffect(EffectHelper.GetImmunityEffectFromSpell(spell)) || HasImmunityEffect(EffectHelper.GetNpcImmunityEffectFromSpell(spell));
+            }
 
             return EffectListService.GetEffectOnTarget(target, spellEffect) != null || HasImmunityEffect(EffectHelper.GetImmunityEffectFromSpell(spell)) || HasImmunityEffect(EffectHelper.GetNpcImmunityEffectFromSpell(spell));
 
@@ -5166,7 +5314,12 @@ namespace DOL.AI.Brain
                     InSupportReach(assistedPlayer))
                 {
                     bool playerNeedsHealing = assistedPlayer.HealthPercent < 65 || (IsHealer && assistedPlayer.HealthPercent < 80);
-                    if (playerNeedsHealing)
+                    // ...unless someone else is an emergency and worse off (owner 2026-11-03: a tank at 15% before the
+                    // player at 64%)
+                    bool worseEmergency = spellTarget != null && spellTarget != assistedPlayer &&
+                        spellTarget.HealthPercent < TemporaryCompanionPetHealing.EmergencyHealthPercent &&
+                        spellTarget.HealthPercent < assistedPlayer.HealthPercent;
+                    if (playerNeedsHealing && !worseEmergency)
                         spellTarget = assistedPlayer;
                 }
 
@@ -5417,7 +5570,7 @@ namespace DOL.AI.Brain
             GameBot bot = BotBody;
             // hired companions too (audit 2026-11-03): their player has no BotManager Owner, so they raised only a
             // corpse already in range, after re-buffing the group, and never sat for the power to do it
-            bool hired = HiredCompanions165.IsHired(bot);
+            bool hired = HiredCompanions165.IsHired(bot) || bot?.IsInvitedGamebot165 == true;   // or a gamebot its player invited
             if (bot?.IsTemporaryGroupHelper != true && !hired) return false;
             GamePlayer owner = hired ? bot.CompanionPlayer : bot.Owner;
             Spell resurrection = bot.ResurrectionSpell;
