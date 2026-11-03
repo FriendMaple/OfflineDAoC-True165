@@ -389,6 +389,13 @@ func write_bot_report(from: Vector3) -> String:
 
 func _model_info(model: int) -> Dictionary:
 	var info: Dictionary = models.get(str(model), {})
+	if info.is_empty():
+		# a player-race look the table has no row for (259 classic looks: Sylvan 702 / 850 / 852 / 855 / 856, Valkyn,
+		# Frostalf, Shar, Half Ogre ...) is that race's figure, not the objects.csv item with the same number (GitHub
+		# issue #9: a Sylvan companion on look 12 drawn as the Alb Thorn Bow, 852; female look 12 a coffin mace, 856)
+		var pre := ClassicFigure.race_of_look(model)
+		if pre != "":
+			return _race_info(pre)
 	if info.is_empty() and not WeaponModels.info(model).is_empty():
 		# the server's siege weapons (GameSiegeRam / Catapult / Trebuchet / Ballista / Cauldron - NPCs whose model is an
 		# objects.csv row, the client's Heavy Siege Ram 2602, Ranged Catapult 2598, Mounted Trebuchet 2606 ...): drawn
@@ -402,6 +409,24 @@ func _model_info(model: int) -> Dictionary:
 				info["race"] = "%s_%s" % [RACE_WORDS[w], "f" if nm.contains("female") else "m"]
 				break
 	return info
+
+
+var _race_infos := {}
+
+
+## A race's monsters.json fields (strides, sound set, scale) from another look of the same race, for a look model
+## without a row of its own.
+func _race_info(prefix: String) -> Dictionary:
+	if not _race_infos.has(prefix):
+		var base := {}
+		for id in models:
+			var e = models[id]
+			if e is Dictionary and String((e as Dictionary).get("race", "")) == prefix:
+				base = (e as Dictionary).duplicate()
+				break
+		base["race"] = prefix
+		_race_infos[prefix] = base
+	return _race_infos[prefix]
 
 
 ## True 1.65 Mode: the hire window's preview companion (op 6's object id). The server stands one in the world for the

@@ -106,6 +106,21 @@ static func look_model(meta: Dictionary, look: Dictionary) -> int:
 	return 0
 
 
+## The race prefix ("syl_m" ...) whose classic figure has this look model, "" for none - every race's figure.json
+## looks, read once. (GitHub issue #9: a companion whose look model has no monsters.json row - Sylvan look 12 = 852 -
+## was taken for an objects.csv item by that number and drawn as the Alb Thorn Bow.)
+static var _look_race := {}
+
+
+static func race_of_look(model: int) -> String:
+	if _look_race.is_empty():
+		_look_race[-1] = ""                                   # (read once, even when nothing is built)
+		for prefix in DirAccess.get_directories_at(CLASSIC_ROOT):
+			for id in (meta_of(prefix).get("looks", {}) as Dictionary):
+				_look_race[int(id)] = prefix
+	return String(_look_race.get(model, ""))
+
+
 ## The classic figure.json of a race prefix ({} if not built).
 static func meta_of(prefix: String) -> Dictionary:
 	var d = JSON.parse_string(FileAccess.get_file_as_string("%s/%s/figure.json" % [CLASSIC_ROOT, prefix]))

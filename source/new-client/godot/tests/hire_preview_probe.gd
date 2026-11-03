@@ -18,7 +18,7 @@ func _ready() -> void:
 		v.ui.root.add_child(w)
 		w.build()
 	var net = w.net
-	var cases := [["celt_m", 9, 0, 535], ["celt_f", 9, 1, 310], ["sylvan_m", 15, 0, 700], ["sylvan_f", 15, 1, 714]]
+	var cases := [["celt_m", 9, 0, 535], ["sylvan_m12", 15, 0, 852], ["sylvan_f12", 15, 1, 856], ["sylvan_m11", 15, 0, 851]]
 	for c in cases:
 		net.hire = {"race": c[1], "gender": c[2], "class": 40, "face": 0, "faces": 7, "hair": 0, "hairs": 1,
 				"hair_color": 0, "model": c[3], "cost": 100, "enabled": true, "height": 2, "colors": 0}

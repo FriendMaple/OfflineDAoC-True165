@@ -17,6 +17,7 @@ hold). Its changelog has the history of everything this version inherits.
 - Quickbars: dropping a skill or spell you are holding onto a filled quickbar slot puts the one that was there on your pointer, as in the 1.64 client, instead of deleting it ([#6](https://github.com/shadowofze/OfflineDAoC-True165/issues/6)).
 - Chat: the combat chat window no longer disappears when you click its top-right corner; that corner resizes it, as on the main chat window and in the 1.64 client ([#8](https://github.com/shadowofze/OfflineDAoC-True165/issues/8)). Hide or show either chat window in Options > Windows.
 - Groups: a dead companion or group member stays shown as dead (no health) in the group window when the window is redrawn, instead of coming back at full health ([#10](https://github.com/shadowofze/OfflineDAoC-True165/issues/10)).
+- Characters: companions and gamebots with some player looks no longer appear as an item - a Sylvan on look 12 was drawn as a bow (male) or a mace (female), and other looks of Sylvans, Valkyn, Frostalf, Shar, Half Ogres and more could show as armor pieces, shields or weapons ([#9](https://github.com/shadowofze/OfflineDAoC-True165/issues/9)).
 
 ## 0.2 (2026-11-01)
 
