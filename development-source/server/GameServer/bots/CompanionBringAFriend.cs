@@ -13,7 +13,7 @@ namespace DOL.GS
     public static class CompanionBringAFriend
     {
         [ServerProperty("pve", "baf_companion_bots_count",
-            "Do a player's companion bots (/spawn and /raid helpers) trigger Bring A Friend and count toward it like extra players in the group? Gamebots never do.", true)]
+            "Do a player's companion bots (/spawn and /raid helpers, hired companions, gamebots the player invited) trigger Bring A Friend and count toward it like extra players in the group? Gamebot-led groups never do.", true)]
         public static bool Enabled = true;
 
         /// <summary>Pure rule: a companion is a temporary helper bot owned by a player, never a gamebot.</summary>
@@ -21,8 +21,9 @@ namespace DOL.GS
             isBot && temporaryHelper && !autonomous && hasPlayerOwner;
 
         public static bool IsCompanion(GameLiving living) =>
-            // a gamebot the player invited is still a gamebot here (owner rule: gamebots never count)
-            living is GameBot bot && IsCompanion(true, bot.IsPlayerCompanion && !bot.IsInvitedGamebot165, false, bot.CompanionPlayer != null);
+            // a gamebot the player invited counts as the extra group member it is (owner 2026-11-03: more group
+            // members, more Bring A Friend adds); a gamebot-led group still never does
+            living is GameBot bot && IsCompanion(true, bot.IsPlayerCompanion, false, bot.CompanionPlayer != null);
 
         /// <summary>Members that make a mob bring more friends: players, and companions when enabled.</summary>
         public static bool Counts(GameLiving member) =>
