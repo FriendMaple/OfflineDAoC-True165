@@ -49,6 +49,17 @@ func build() -> void:
 	nxt.pressed.connect(func(): show_page(page + 1))
 	add_child(nxt)
 	_build_coins()
+	# the account vault keeper's two pages (its [first] / [second]): the bar buttons where the coin strip is
+	_acct = Control.new()
+	_acct.position = Vector2(4, 402)
+	_acct.size = Vector2(216, 22)
+	_acct.visible = false
+	add_child(_acct)
+	for k in 2:
+		var b := UiArt.button("First page" if k == 0 else "Second page", Vector2(104, 18), 9)
+		b.position = Vector2(2 + k * 110, 2)
+		b.pressed.connect(func(): Server.account_vault_show(k))
+		_acct.add_child(b)
 	PlayerData.inventory_changed.connect(refresh)
 	PlayerData.changed.connect(refresh)
 
@@ -122,12 +133,22 @@ func _ask_amount(deposit: bool) -> void:
 
 ## The server's vault (Server.vault_open): which slots - your vault 110-149 or an account vault page 150-249. The coin
 ## strip is the offline vault's (the server's vaults hold items only).
+var _acct: Control
+
+
+func hide_window() -> void:
+	Server.account_vault_open = false
+	super.hide_window()
+
+
 func open_range(title: String, first: int, count: int) -> void:
 	first_slot = first
 	slot_count = count
 	page = 0
 	if _coins:
 		_coins.get_parent().visible = false
+	if _acct:
+		_acct.visible = title.begins_with("ACCOUNT VAULT")
 	open_for(title)
 
 

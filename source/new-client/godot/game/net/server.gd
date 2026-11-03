@@ -714,6 +714,9 @@ func _on_world_inner(kind: String, d: Dictionary) -> void:
 					_quiet_delves -= 1                       # a GM's debug line for a hover's request (the old client
 					return                                   # asked only on a right-click, where it still shows)
 				_exchange_text(String(d.get("text", "")))
+				if String(d.get("text", "")).contains("of your Account Vault"):
+					account_vault_at = Time.get_ticks_msec()          # (the keeper's greeting: page one comes next)
+					account_vault_page = 0
 			if not playing:
 				_backlog.append([kind, d])
 				return
@@ -1533,12 +1536,30 @@ const VAULT_COUNT := 40
 const ACCOUNT_VAULT_COUNT := 100
 var container_mode := ""                 # "account" while an account vault page is open, else the listing chest's
 var house_vault_at := 0                  # when you last right-clicked a house vault (ServerWorld): its window 4 is one
+# True 1.65 Mode account vault keepers (owner 2026-11-03, a QoL exception: Virsha / Janash / Giorny in the capitals,
+# AccountVaultKeeper.cs): their greeting ("... of your Account Vault.") or a page whisper comes just before the
+# HouseVault window (4) with the page's 100 slots (150-249); account_vault_page 0 = [first], 1 = [second]
+var account_vault_at := 0
+var account_vault_page := 0
+var account_vault_open := false          # its window is up (VaultWindow): moves in and out (slots 150+) are its own
+const ACCOUNT_VAULT_MS := 30000
+
+
+func account_vault_recent() -> bool:
+	return account_vault_at > 0 and Time.get_ticks_msec() - account_vault_at < ACCOUNT_VAULT_MS
+
+
+## A page of the account vault: the keeper's [first] / [second] whispered (it answers with that page's window).
+func account_vault_show(page: int) -> void:
+	account_vault_page = clampi(page, 0, 1)
+	account_vault_at = Time.get_ticks_msec()
+	command("/whisper " + ("second" if account_vault_page == 1 else "first"))
 
 
 func on_inventory(d: Dictionary) -> void:
 	# True 1.65 Mode: the companion gear window the server fills for the original client (its HouseVault window, slots
 	# 150 and up - plan 17h; there are no houses in 1.65): our own companion window draws it from op 7, so not shown
-	if world_mode == "1.65" and Time.get_ticks_msec() - CompanionNet.asked_gear_at < 600000 			and not (int(d.window) == 4 and Time.get_ticks_msec() - house_vault_at < 5000):
+	if world_mode == "1.65" and not account_vault_open and Time.get_ticks_msec() - CompanionNet.asked_gear_at < 600000 			and not (int(d.window) == 4 and (Time.get_ticks_msec() - house_vault_at < 5000 or account_vault_recent())):
 		if int(d.window) == 4:
 			return
 		var keep: Array = (d.get("items", []) as Array).filter(func(it): return int(it.slot) < 150)
@@ -1559,6 +1580,7 @@ func on_inventory(d: Dictionary) -> void:
 	elif int(d.window) == 4:                              # an account vault page opens
 		_clear_slots(CHEST_FIRST, CHEST_LAST)
 		container_mode = "account"
+		account_vault_open = account_vault_recent()
 	# the chest's slots come in plain updates too (a move in or out, the rest of a long list)
 	var mine := []
 	var chest := []
@@ -1587,6 +1609,8 @@ func on_inventory(d: Dictionary) -> void:
 func _house_window_title() -> String:
 	var v: Node = viewer()
 	var n = v.get("_interact_npc") if v else null
+	if account_vault_recent():
+		return "ACCOUNT VAULT - %s PAGE" % ("SECOND" if account_vault_page == 1 else "FIRST")
 	if world_mode != "1.65" and is_instance_valid(n) and n is Node and n.get("spawn") is Dictionary 			and String(n.spawn.get("name", "")).to_lower().contains("account"):
 		return "ACCOUNT VAULT"
 	return "HOUSE VAULT"

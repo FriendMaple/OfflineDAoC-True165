@@ -92,8 +92,7 @@ func build() -> void:
 	_log.bbcode_enabled = true
 	_log.add_theme_font_override("normal_font", UiArt.font(false))
 	_log.add_theme_font_override("bold_font", UiArt.font(true))
-	_log.add_theme_font_size_override("normal_font_size", 10)
-	_log.add_theme_font_size_override("bold_font_size", 10)
+	_apply_text_size()
 	_log.add_theme_color_override("default_color", UiArt.CREAM)
 	_log.mouse_filter = Control.MOUSE_FILTER_PASS
 	UiArt.themed(_log)
@@ -139,6 +138,35 @@ func set_types(t: Array) -> void:
 	cfg.load(UiArt.settings_path)
 	cfg.set_value("chat_" + window_id, "types", types)
 	cfg.save(UiArt.settings_path)
+
+
+## The 1.64 client's chat font: Small Chat Font / Normal Chat Font (its Configure Game menu; a player report 2026-11-03:
+## "setting text size isn't showing" - there was no such setting). Saved in settings [interface] chat_small.
+const TEXT_NORMAL := 10
+const TEXT_SMALL := 8
+
+
+static func small_text() -> bool:
+	var cfg := ConfigFile.new()
+	cfg.load(UiArt.settings_path)
+	return bool(cfg.get_value("interface", "chat_small", false))
+
+
+func _apply_text_size() -> void:
+	var px := TEXT_SMALL if small_text() else TEXT_NORMAL
+	_log.add_theme_font_size_override("normal_font_size", px)
+	_log.add_theme_font_size_override("bold_font_size", px)
+
+
+## Every chat box at the size the option says (Options > CHAT).
+static func set_small_text(on: bool, tree: SceneTree) -> void:
+	var cfg := ConfigFile.new()
+	cfg.load(UiArt.settings_path)
+	cfg.set_value("interface", "chat_small", on)
+	cfg.save(UiArt.settings_path)
+	for w in tree.get_nodes_in_group("classic_windows"):
+		if w is ChatWindow and (w as ChatWindow)._log:
+			(w as ChatWindow)._apply_text_size()
 
 
 func typing() -> bool:

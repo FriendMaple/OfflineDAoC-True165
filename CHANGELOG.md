@@ -42,6 +42,10 @@ hold). Its changelog has the history of everything this version inherits.
 - Quests: The Growling Ghost branches as in the period. Help Growler (Growler's Necklace) and he gives you The Growler; slay him instead and Sergeant Alain sends you the long way to the same mace with Growler Mace and Mathien's Metal.
 - Performance: fewer stutters when many fading or colour-changing spell effects play at once (each copy of such an effect no longer waits on the renderer), and the skills and spells pages no longer log an error on every skill update after they are rebuilt (both from a player's logs).
 - Stability: a freeze that could hang the game for good when spell effects with particles (the Minstrel speed song's pulse among them) loaded in the background is fixed; those effects are now prepared on the main thread (from a player's logs: a 9-second stall, then no response).
+- World: the Abermenai battleground has its ground textures again (its whole map was flat white).
+- Horses: on stable routes that turn sharply (more than 90 degrees, such as North Tir na Nog to Druim Ligen) the horse turns with the route instead of sliding sideways for most of the ride.
+- Chat: SMALL CHAT TEXT in Options > Chat, the 1.64 client's small chat font (UI SCALE in Options > Interface still makes all text bigger). Window transparency stays one setting for every window, as the 1.64 client kept it.
+- Account vault: the account vault keepers open the vault window in the 1.64 style, with FIRST PAGE and SECOND PAGE buttons for the vault's two pages.
 
 ## 0.2 (2026-11-01)
 

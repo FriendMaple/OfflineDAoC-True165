@@ -749,6 +749,7 @@ func _move(d: Dictionary) -> void:
 		st.pos = st.pos.lerp(p, 0.5)                            # close: ease into the server's place
 	if not seated and not (ridden and String(st.info.get("figure", "")).to_lower() in FLIER_FIGURES):
 		_ground(st)
+	mv["heading"] = Server.yaw_of(int(d.heading))             # (the server's own facing: _move_ridden's turns)
 	if not ridden or float(d.speed) == 0.0:
 		st.yaw = Server.yaw_of(int(d.heading))
 	# (a ridden steed on the move is turned by _move_ridden alone: pulling it toward the update's heading, which may be
@@ -1118,6 +1119,13 @@ func _move_ridden(s: NpcState, mv: Dictionary, step: float, delta: float) -> voi
 		var ahead := Vector3(sin(s.yaw), 0.0, cos(s.yaw))
 		if to.length() > step and to.normalized().dot(ahead) > 0.0:
 			aim = atan2(to.x, to.z)                            # still ahead: steer for it
+		elif to.length() > step and mv.has("heading"):
+			# behind: an overshoot (the server still faces the old leg - left alone), or a real turn of more than 90
+			# degrees, the server already facing the next point (owner 2026-11-03: N Tir na Nog -> Druim Ligen turns
+			# 119 degrees and the horse slid ~55k units sideways facing east; 27 routes turn over 90 degrees)
+			var srv := Vector3(sin(float(mv.heading)), 0.0, cos(float(mv.heading)))
+			if to.normalized().dot(srv) > 0.5:
+				aim = atan2(to.x, to.z)
 	s.yaw = lerp_angle(s.yaw, aim, minf(1.0, delta * 6.0))
 	# the gap to the server's place (_move keeps it): the part along its way is paced off (step + up to 1 s of it per
 	# second, never below 0 or above 1.5 steps), the part to the side eased in

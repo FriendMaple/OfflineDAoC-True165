@@ -543,6 +543,9 @@ func _chat() -> void:
 	_hint("TWO SEPARATE BOXES: COMBAT (ON TOP) AND CHAT (BELOW, WITH THE TYPING LINE). EACH MOVES AND RESIZES ON ITS OWN. CHOOSE WHAT EACH BOX SHOWS.")
 	if ui == null or ui.chat == null or ui.chat_combat == null:
 		return
+	# the 1.64 client's Small Chat Font / Normal Chat Font (a player report: no text size setting)
+	_row("SMALL CHAT TEXT", _toggle(ChatWindow.small_text(), func(v: bool): ChatWindow.set_small_text(v, get_tree())))
+	_hint("OFF: THE NORMAL CHAT FONT. ON: THE SMALL ONE, MORE LINES IN THE SAME BOX (THE 1.64 CLIENT'S TWO CHAT FONTS). UI SCALE (INTERFACE) MAKES ALL TEXT BIGGER.")
 	var head := HBoxContainer.new()
 	var hl := UiArt.label("MESSAGES", 9, UiArt.GOLD_HI)
 	hl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
