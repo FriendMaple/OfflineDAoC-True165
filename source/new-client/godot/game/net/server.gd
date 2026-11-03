@@ -783,11 +783,20 @@ func _on_world_inner(kind: String, d: Dictionary) -> void:
 			PlayerData.changed.emit()
 		"group":                                          # the group window: the others (you are one of them)
 			group_members = d.members
+			# the window's list has no health: a member's last bars / effects / status carry over by its object id
+			# (GitHub issue #10: a dead companion drew at full health after the list came again - joins, leaves, a
+			# level-up resend it - since a dead member sends no further GroupMemberUpdate)
+			var was := {}
+			for g in PlayerData.group:
+				was[int(g.get("oid", 0))] = g
 			PlayerData.group = []
 			for m in group_members:
 				if int(m.oid) != me_oid:
+					var old: Dictionary = was.get(int(m.oid), {})
 					PlayerData.group.append({"name": String(m.name), "class_name": String(m.class_name),
-							"level": int(m.level), "hp": 1.0, "power": 1.0, "end": 1.0, "effects": [], "oid": int(m.oid)})
+							"level": int(m.level), "hp": float(old.get("hp", 1.0)), "power": float(old.get("power", 1.0)),
+							"end": float(old.get("end", 1.0)), "effects": old.get("effects", []),
+							"status": int(old.get("status", 0)), "oid": int(m.oid)})
 			PlayerData.group_changed.emit()
 		"group_update":
 			for u in d.list:
@@ -806,7 +815,10 @@ func _on_world_inner(kind: String, d: Dictionary) -> void:
 								fx.append({"icon": int(ic[0]), "border": int(ic[1]), "name": "", "fx": int(icon)})
 							g["effects"] = fx
 						else:
-							g["hp"] = float(u.hp) / 100.0
+							# status (PacketLib1125.WriteGroupMemberUpdate): 0x01 dead, 0x02 mezzed, 0x04 diseased,
+							# 0x08 poisoned, 0x10 linkdead, 0x20 in another region
+							g["status"] = int(u.get("status", 0))
+							g["hp"] = 0.0 if int(g.status) & 0x01 else float(u.hp) / 100.0
 							g["power"] = float(u.power) / 100.0
 							g["end"] = float(u.end) / 100.0
 			PlayerData.group_changed.emit()
