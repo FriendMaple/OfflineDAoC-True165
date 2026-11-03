@@ -65,6 +65,21 @@ def main():
         with open(p, 'w', encoding='utf-8') as f:
             json.dump(rules, f, ensure_ascii=False, indent=1)
             f.write('\n')
+    # the Prima build's record of its drops says moonstone_gem too, so check_prima165.py checks the drop that is there
+    rp = os.path.join(HERE, 'prima165_report.json')
+    if os.path.exists(rp):
+        rep = json.load(open(rp, encoding='utf-8'))
+        n = 0
+        for drop in rep.get('drops', []):
+            if 'Moonstone' in drop.get('added', []):
+                drop['added'] = [GEM if i == 'Moonstone' else i for i in drop['added']]
+                n += 1
+            if 'Moonstone' in drop.get('chances', {}):
+                drop['chances'][GEM] = drop['chances'].pop('Moonstone')
+        if n:
+            with open(rp, 'w', encoding='utf-8') as f:
+                json.dump(rep, f, ensure_ascii=False, indent=1)   # its own format: no final newline
+        print(f'prima165_report drops remapped: {n}')
     print(f'moonstone drops remapped: {changed} (both copies together)')
 
 if __name__ == '__main__':

@@ -12648,7 +12648,7 @@
    "Step": 192,
    "X": 749628,
    "Y": 788259,
-   "Z": 5199,
+   "Z": 4706,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -12659,7 +12659,7 @@
    "Step": 193,
    "X": 750468,
    "Y": 787427,
-   "Z": 5217,
+   "Z": 4706,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -12670,7 +12670,7 @@
    "Step": 194,
    "X": 750483,
    "Y": 787412,
-   "Z": 5210,
+   "Z": 4706,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -22482,7 +22482,7 @@
    "Step": 111,
    "X": 749599,
    "Y": 788247,
-   "Z": 5195,
+   "Z": 4706,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -22493,7 +22493,7 @@
    "Step": 112,
    "X": 749614,
    "Y": 788234,
-   "Z": 5203,
+   "Z": 4706,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -31964,7 +31964,7 @@
    "Step": 216,
    "X": 750500,
    "Y": 787424,
-   "Z": 5208,
+   "Z": 4706,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -31975,7 +31975,7 @@
    "Step": 217,
    "X": 750486,
    "Y": 787438,
-   "Z": 5218,
+   "Z": 4706,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -31986,7 +31986,7 @@
    "Step": 218,
    "X": 749651,
    "Y": 788274,
-   "Z": 5201,
+   "Z": 4706,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -42348,7 +42348,7 @@
    "Step": 85,
    "X": 313756,
    "Y": 637288,
-   "Z": 5154,
+   "Z": 4878,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -42359,7 +42359,7 @@
    "Step": 86,
    "X": 313762,
    "Y": 637307,
-   "Z": 5154,
+   "Z": 4878,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -52741,9 +52741,9 @@
    "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-193",
    "PathID": "HR_DruimCain_DruimLigen",
    "Step": 193,
-   "X": 333595,
-   "Y": 447882,
-   "Z": 4957,
+   "X": 333606,
+   "Y": 447865,
+   "Z": 4937,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -52752,105 +52752,6 @@
    "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-194",
    "PathID": "HR_DruimCain_DruimLigen",
    "Step": 194,
-   "X": 333763,
-   "Y": 447830,
-   "Z": 4879,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-195",
-   "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 195,
-   "X": 333920,
-   "Y": 447795,
-   "Z": 4927,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-196",
-   "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 196,
-   "X": 333999,
-   "Y": 447778,
-   "Z": 4952,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-197",
-   "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 197,
-   "X": 334097,
-   "Y": 447756,
-   "Z": 5388,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-198",
-   "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 198,
-   "X": 335886,
-   "Y": 447362,
-   "Z": 5390,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-199",
-   "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 199,
-   "X": 335965,
-   "Y": 447345,
-   "Z": 4951,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-200",
-   "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 200,
-   "X": 335984,
-   "Y": 447340,
-   "Z": 4952,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-201",
-   "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 201,
-   "X": 336240,
-   "Y": 447284,
-   "Z": 4867,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-202",
-   "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 202,
-   "X": 336437,
-   "Y": 447241,
-   "Z": 4914,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-203",
-   "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 203,
    "X": 336476,
    "Y": 447232,
    "Z": 4965,
@@ -52859,9 +52760,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-204",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-195",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 204,
+   "Step": 195,
    "X": 337938,
    "Y": 446271,
    "Z": 5052,
@@ -52870,9 +52771,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-205",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-196",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 205,
+   "Step": 196,
    "X": 338227,
    "Y": 446081,
    "Z": 5062,
@@ -52881,9 +52782,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-206",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-197",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 206,
+   "Step": 197,
    "X": 338399,
    "Y": 445744,
    "Z": 5076,
@@ -52892,9 +52793,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-207",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-198",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 207,
+   "Step": 198,
    "X": 338657,
    "Y": 445200,
    "Z": 5092,
@@ -52903,9 +52804,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-208",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-199",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 208,
+   "Step": 199,
    "X": 338932,
    "Y": 444620,
    "Z": 5099,
@@ -52914,9 +52815,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-209",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-200",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 209,
+   "Step": 200,
    "X": 340223,
    "Y": 441902,
    "Z": 5141,
@@ -52925,9 +52826,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-210",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-201",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 210,
+   "Step": 201,
    "X": 340636,
    "Y": 441032,
    "Z": 5173,
@@ -52936,9 +52837,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-211",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-202",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 211,
+   "Step": 202,
    "X": 340655,
    "Y": 440956,
    "Z": 5179,
@@ -52947,9 +52848,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-212",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-203",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 212,
+   "Step": 203,
    "X": 340659,
    "Y": 440836,
    "Z": 5182,
@@ -52958,9 +52859,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-213",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-204",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 213,
+   "Step": 204,
    "X": 340712,
    "Y": 439514,
    "Z": 5140,
@@ -52969,9 +52870,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-214",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-205",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 214,
+   "Step": 205,
    "X": 340731,
    "Y": 439034,
    "Z": 5186,
@@ -52980,9 +52881,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-215",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-206",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 215,
+   "Step": 206,
    "X": 340816,
    "Y": 436911,
    "Z": 5208,
@@ -52991,9 +52892,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-216",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-207",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 216,
+   "Step": 207,
    "X": 340845,
    "Y": 436190,
    "Z": 5206,
@@ -53002,9 +52903,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-217",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-208",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 217,
+   "Step": 208,
    "X": 340849,
    "Y": 436090,
    "Z": 5203,
@@ -53013,9 +52914,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-218",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-209",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 218,
+   "Step": 209,
    "X": 340756,
    "Y": 435435,
    "Z": 5187,
@@ -53024,9 +52925,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-219",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-210",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 219,
+   "Step": 210,
    "X": 340657,
    "Y": 434760,
    "Z": 5199,
@@ -53035,9 +52936,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-220",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-211",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 220,
+   "Step": 211,
    "X": 340557,
    "Y": 434085,
    "Z": 5185,
@@ -53046,9 +52947,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-221",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-212",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 221,
+   "Step": 212,
    "X": 340305,
    "Y": 432378,
    "Z": 5171,
@@ -53057,9 +52958,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-222",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-213",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 222,
+   "Step": 213,
    "X": 340200,
    "Y": 431664,
    "Z": 5175,
@@ -53068,9 +52969,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-223",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-214",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 223,
+   "Step": 214,
    "X": 340065,
    "Y": 430751,
    "Z": 5168,
@@ -53079,9 +52980,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-224",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-215",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 224,
+   "Step": 215,
    "X": 339936,
    "Y": 429877,
    "Z": 5149,
@@ -53090,9 +52991,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-225",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-216",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 225,
+   "Step": 216,
    "X": 339711,
    "Y": 428349,
    "Z": 5103,
@@ -53101,9 +53002,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-226",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-217",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 226,
+   "Step": 217,
    "X": 339243,
    "Y": 427482,
    "Z": 5124,
@@ -53112,9 +53013,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-227",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-218",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 227,
+   "Step": 218,
    "X": 338701,
    "Y": 426493,
    "Z": 5172,
@@ -53123,9 +53024,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-228",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-219",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 228,
+   "Step": 219,
    "X": 338604,
    "Y": 426317,
    "Z": 5172,
@@ -53134,9 +53035,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-229",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-220",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 229,
+   "Step": 220,
    "X": 338420,
    "Y": 425981,
    "Z": 5189,
@@ -53145,9 +53046,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-230",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-221",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 230,
+   "Step": 221,
    "X": 338159,
    "Y": 425505,
    "Z": 5182,
@@ -53156,9 +53057,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-231",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-222",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 231,
+   "Step": 222,
    "X": 337868,
    "Y": 424975,
    "Z": 5179,
@@ -53167,9 +53068,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-232",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-223",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 232,
+   "Step": 223,
    "X": 337772,
    "Y": 424799,
    "Z": 5165,
@@ -53178,9 +53079,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-233",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-224",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 233,
+   "Step": 224,
    "X": 337578,
    "Y": 424446,
    "Z": 5202,
@@ -53189,9 +53090,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-234",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-225",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 234,
+   "Step": 225,
    "X": 337103,
    "Y": 423580,
    "Z": 5202,
@@ -53200,9 +53101,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-235",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-226",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 235,
+   "Step": 226,
    "X": 336861,
    "Y": 423139,
    "Z": 5197,
@@ -53211,9 +53112,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-236",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-227",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 236,
+   "Step": 227,
    "X": 336803,
    "Y": 423090,
    "Z": 5198,
@@ -53222,9 +53123,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-237",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-228",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 237,
+   "Step": 228,
    "X": 335628,
    "Y": 422679,
    "Z": 5232,
@@ -53233,9 +53134,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-238",
+   "PathPoints_ID": "p165floor-HR_DruimCain_DruimLigen-229",
    "PathID": "HR_DruimCain_DruimLigen",
-   "Step": 238,
+   "Step": 229,
    "X": 335608,
    "Y": 422672,
    "Z": 5224,
@@ -55218,7 +55119,7 @@
    "Step": 180,
    "X": 314653,
    "Y": 640006,
-   "Z": 5154,
+   "Z": 4880,
    "MaxSpeed": 1750,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -55229,7 +55130,7 @@
    "Step": 181,
    "X": 314647,
    "Y": 639987,
-   "Z": 5154,
+   "Z": 4879,
    "MaxSpeed": 1750,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -55273,7 +55174,7 @@
    "Step": 185,
    "X": 314186,
    "Y": 638598,
-   "Z": 5392,
+   "Z": 4878,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -55284,7 +55185,7 @@
    "Step": 186,
    "X": 314180,
    "Y": 638579,
-   "Z": 5266,
+   "Z": 4878,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -55295,7 +55196,7 @@
    "Step": 187,
    "X": 313734,
    "Y": 637293,
-   "Z": 5154,
+   "Z": 4878,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -68803,7 +68704,7 @@
    "Step": 218,
    "X": 334088,
    "Y": 447745,
-   "Z": 5390,
+   "Z": 4951,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -68814,7 +68715,7 @@
    "Step": 219,
    "X": 335881,
    "Y": 447376,
-   "Z": 5388,
+   "Z": 4950,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -91661,7 +91562,7 @@
    "Step": 251,
    "X": 750491,
    "Y": 787439,
-   "Z": 5218,
+   "Z": 4706,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -91672,7 +91573,7 @@
    "Step": 252,
    "X": 749642,
    "Y": 788265,
-   "Z": 5202,
+   "Z": 4706,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -118072,7 +117973,7 @@
    "Step": 130,
    "X": 749661,
    "Y": 788277,
-   "Z": 5203,
+   "Z": 4706,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -118083,7 +117984,7 @@
    "Step": 131,
    "X": 749676,
    "Y": 788263,
-   "Z": 5196,
+   "Z": 4706,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -127519,9 +127420,9 @@
    "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-46",
    "PathID": "HR_TirNaNog_DruimLigen",
    "Step": 46,
-   "X": 333542,
-   "Y": 447908,
-   "Z": 4974,
+   "X": 333554,
+   "Y": 447892,
+   "Z": 4959,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -127530,9 +127431,9 @@
    "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-47",
    "PathID": "HR_TirNaNog_DruimLigen",
    "Step": 47,
-   "X": 333593,
-   "Y": 447883,
-   "Z": 4958,
+   "X": 336526,
+   "Y": 447225,
+   "Z": 4928,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -127541,116 +127442,6 @@
    "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-48",
    "PathID": "HR_TirNaNog_DruimLigen",
    "Step": 48,
-   "X": 333789,
-   "Y": 447839,
-   "Z": 4879,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-49",
-   "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 49,
-   "X": 333921,
-   "Y": 447809,
-   "Z": 4926,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-50",
-   "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 50,
-   "X": 333984,
-   "Y": 447795,
-   "Z": 4947,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-51",
-   "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 51,
-   "X": 334023,
-   "Y": 447787,
-   "Z": 4951,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-52",
-   "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 52,
-   "X": 334101,
-   "Y": 447769,
-   "Z": 5385,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-53",
-   "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 53,
-   "X": 335881,
-   "Y": 447370,
-   "Z": 5389,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-54",
-   "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 54,
-   "X": 335979,
-   "Y": 447348,
-   "Z": 4952,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-55",
-   "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 55,
-   "X": 336000,
-   "Y": 447343,
-   "Z": 4949,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-56",
-   "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 56,
-   "X": 336252,
-   "Y": 447286,
-   "Z": 4870,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-57",
-   "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 57,
-   "X": 336506,
-   "Y": 447230,
-   "Z": 4934,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-58",
-   "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 58,
    "X": 336625,
    "Y": 447158,
    "Z": 4970,
@@ -127659,9 +127450,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-59",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-49",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 59,
+   "Step": 49,
    "X": 336659,
    "Y": 447135,
    "Z": 4974,
@@ -127670,9 +127461,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-60",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-50",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 60,
+   "Step": 50,
    "X": 337952,
    "Y": 446263,
    "Z": 5053,
@@ -127681,9 +127472,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-61",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-51",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 61,
+   "Step": 51,
    "X": 338317,
    "Y": 446016,
    "Z": 5066,
@@ -127692,9 +127483,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-62",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-52",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 62,
+   "Step": 52,
    "X": 338367,
    "Y": 445958,
    "Z": 5073,
@@ -127703,9 +127494,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-63",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-53",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 63,
+   "Step": 53,
    "X": 338745,
    "Y": 445157,
    "Z": 5096,
@@ -127714,9 +127505,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-64",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-54",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 64,
+   "Step": 54,
    "X": 338985,
    "Y": 444648,
    "Z": 5103,
@@ -127725,9 +127516,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-65",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-55",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 65,
+   "Step": 55,
    "X": 340222,
    "Y": 442029,
    "Z": 5141,
@@ -127736,9 +127527,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-66",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-56",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 66,
+   "Step": 56,
    "X": 340754,
    "Y": 440901,
    "Z": 5198,
@@ -127747,9 +127538,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-67",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-57",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 67,
+   "Step": 57,
    "X": 340771,
    "Y": 440805,
    "Z": 5199,
@@ -127758,9 +127549,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-68",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-58",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 68,
+   "Step": 58,
    "X": 340781,
    "Y": 439543,
    "Z": 5149,
@@ -127769,9 +127560,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-69",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-59",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 69,
+   "Step": 59,
    "X": 340785,
    "Y": 439022,
    "Z": 5190,
@@ -127780,9 +127571,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-70",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-60",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 70,
+   "Step": 60,
    "X": 340795,
    "Y": 437780,
    "Z": 5201,
@@ -127791,9 +127582,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-71",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-61",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 71,
+   "Step": 61,
    "X": 340802,
    "Y": 436899,
    "Z": 5204,
@@ -127802,9 +127593,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-72",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-62",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 72,
+   "Step": 62,
    "X": 340814,
    "Y": 435376,
    "Z": 5200,
@@ -127813,9 +127604,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-73",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-63",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 73,
+   "Step": 63,
    "X": 340816,
    "Y": 435076,
    "Z": 5191,
@@ -127824,9 +127615,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-74",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-64",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 74,
+   "Step": 64,
    "X": 340749,
    "Y": 434700,
    "Z": 5220,
@@ -127835,9 +127626,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-75",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-65",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 75,
+   "Step": 65,
    "X": 340630,
    "Y": 434068,
    "Z": 5203,
@@ -127846,9 +127637,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-76",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-66",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 76,
+   "Step": 66,
    "X": 340309,
    "Y": 432369,
    "Z": 5171,
@@ -127857,9 +127648,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-77",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-67",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 77,
+   "Step": 67,
    "X": 340212,
    "Y": 431855,
    "Z": 5172,
@@ -127868,9 +127659,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-78",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-68",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 78,
+   "Step": 68,
    "X": 340011,
    "Y": 430788,
    "Z": 5155,
@@ -127879,9 +127670,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-79",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-69",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 79,
+   "Step": 69,
    "X": 339594,
    "Y": 428575,
    "Z": 5092,
@@ -127890,9 +127681,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-80",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-70",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 80,
+   "Step": 70,
    "X": 339418,
    "Y": 427647,
    "Z": 5112,
@@ -127901,9 +127692,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-81",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-71",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 81,
+   "Step": 71,
    "X": 339299,
    "Y": 427416,
    "Z": 5136,
@@ -127912,9 +127703,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-82",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-72",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 82,
+   "Step": 72,
    "X": 338483,
    "Y": 425935,
    "Z": 5192,
@@ -127923,9 +127714,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-83",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-73",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 83,
+   "Step": 73,
    "X": 338173,
    "Y": 425371,
    "Z": 5188,
@@ -127934,9 +127725,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-84",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-74",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 84,
+   "Step": 74,
    "X": 337921,
    "Y": 424913,
    "Z": 5190,
@@ -127945,9 +127736,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-85",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-75",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 85,
+   "Step": 75,
    "X": 337843,
    "Y": 424772,
    "Z": 5182,
@@ -127956,9 +127747,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-86",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-76",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 86,
+   "Step": 76,
    "X": 337649,
    "Y": 424419,
    "Z": 5207,
@@ -127967,9 +127758,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-87",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-77",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 87,
+   "Step": 77,
    "X": 337008,
    "Y": 423256,
    "Z": 5198,
@@ -127978,9 +127769,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-88",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-78",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 88,
+   "Step": 78,
    "X": 336952,
    "Y": 423206,
    "Z": 5198,
@@ -127989,9 +127780,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-89",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-79",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 89,
+   "Step": 79,
    "X": 335639,
    "Y": 422689,
    "Z": 5232,
@@ -128000,9 +127791,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-90",
+   "PathPoints_ID": "p165floor-HR_TirNaNog_DruimLigen-80",
    "PathID": "HR_TirNaNog_DruimLigen",
-   "Step": 90,
+   "Step": 80,
    "X": 335602,
    "Y": 422674,
    "Z": 5224,
@@ -133604,7 +133395,7 @@
    "Step": 241,
    "X": 313811,
    "Y": 637271,
-   "Z": 5155,
+   "Z": 4878,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -133615,7 +133406,7 @@
    "Step": 242,
    "X": 313817,
    "Y": 637291,
-   "Z": 5155,
+   "Z": 4878,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -138895,7 +138686,7 @@
    "Step": 120,
    "X": 749619,
    "Y": 788250,
-   "Z": 5200,
+   "Z": 4706,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -138906,7 +138697,7 @@
    "Step": 121,
    "X": 750457,
    "Y": 787418,
-   "Z": 5217,
+   "Z": 4706,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -138917,7 +138708,7 @@
    "Step": 122,
    "X": 750471,
    "Y": 787404,
-   "Z": 5212,
+   "Z": 4706,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -155406,7 +155197,7 @@
    "Step": 146,
    "X": 750486,
    "Y": 787430,
-   "Z": 5216,
+   "Z": 4706,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -155417,7 +155208,7 @@
    "Step": 147,
    "X": 749645,
    "Y": 788265,
-   "Z": 5202,
+   "Z": 4706,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -171455,7 +171246,7 @@
    "Step": 276,
    "X": 749657,
    "Y": 788284,
-   "Z": 5199,
+   "Z": 4706,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -171466,7 +171257,7 @@
    "Step": 277,
    "X": 749672,
    "Y": 788270,
-   "Z": 5205,
+   "Z": 4706,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -202607,7 +202398,7 @@
    "Step": 249,
    "X": 749660,
    "Y": 788269,
-   "Z": 5206,
+   "Z": 4706,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -202618,7 +202409,7 @@
    "Step": 250,
    "X": 749646,
    "Y": 788284,
-   "Z": 5196,
+   "Z": 4706,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -214597,7 +214388,7 @@
    "Step": 231,
    "X": 313784,
    "Y": 637270,
-   "Z": 5154,
+   "Z": 4878,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -214608,7 +214399,7 @@
    "Step": 232,
    "X": 314249,
    "Y": 638555,
-   "Z": 5266,
+   "Z": 4878,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -214619,7 +214410,7 @@
    "Step": 233,
    "X": 314256,
    "Y": 638574,
-   "Z": 5424,
+   "Z": 4878,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -223815,7 +223606,7 @@
    "Step": 80,
    "X": 334087,
    "Y": 447706,
-   "Z": 5383,
+   "Z": 4950,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -223859,7 +223650,7 @@
    "Step": 84,
    "X": 335870,
    "Y": 447313,
-   "Z": 5378,
+   "Z": 4950,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -227357,7 +227148,7 @@
    "Step": 188,
    "X": 749653,
    "Y": 788268,
-   "Z": 5204,
+   "Z": 4706,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -233429,7 +233220,7 @@
    "Step": 10,
    "X": 313768,
    "Y": 637282,
-   "Z": 5154,
+   "Z": 4878,
    "MaxSpeed": 450,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -233440,7 +233231,7 @@
    "Step": 11,
    "X": 314234,
    "Y": 638563,
-   "Z": 5266,
+   "Z": 4878,
    "MaxSpeed": 450,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -233451,7 +233242,7 @@
    "Step": 12,
    "X": 314241,
    "Y": 638582,
-   "Z": 5431,
+   "Z": 4878,
    "MaxSpeed": 450,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -235495,9 +235286,9 @@
    "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-42",
    "PathID": "HS_DruimLigen_Connla",
    "Step": 42,
-   "X": 335891,
-   "Y": 447356,
-   "Z": 4950,
+   "X": 335871,
+   "Y": 447364,
+   "Z": 4940,
    "MaxSpeed": 330,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -235506,39 +235297,6 @@
    "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-43",
    "PathID": "HS_DruimLigen_Connla",
    "Step": 43,
-   "X": 335831,
-   "Y": 447373,
-   "Z": 4949,
-   "MaxSpeed": 330,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-44",
-   "PathID": "HS_DruimLigen_Connla",
-   "Step": 44,
-   "X": 334100,
-   "Y": 447756,
-   "Z": 5388,
-   "MaxSpeed": 330,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-45",
-   "PathID": "HS_DruimLigen_Connla",
-   "Step": 45,
-   "X": 334002,
-   "Y": 447778,
-   "Z": 4951,
-   "MaxSpeed": 330,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-46",
-   "PathID": "HS_DruimLigen_Connla",
-   "Step": 46,
    "X": 333922,
    "Y": 447796,
    "Z": 4932,
@@ -235547,9 +235305,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-47",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-44",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 47,
+   "Step": 44,
    "X": 333766,
    "Y": 447844,
    "Z": 4877,
@@ -235558,9 +235316,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-48",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-45",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 48,
+   "Step": 45,
    "X": 333649,
    "Y": 447879,
    "Z": 4929,
@@ -235569,9 +235327,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-49",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-46",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 49,
+   "Step": 46,
    "X": 333630,
    "Y": 447885,
    "Z": 4939,
@@ -235580,9 +235338,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-50",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-47",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 50,
+   "Step": 47,
    "X": 333570,
    "Y": 447901,
    "Z": 4966,
@@ -235591,9 +235349,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-51",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-48",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 51,
+   "Step": 48,
    "X": 333311,
    "Y": 447969,
    "Z": 5038,
@@ -235602,9 +235360,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-52",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-49",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 52,
+   "Step": 49,
    "X": 333076,
    "Y": 448179,
    "Z": 5054,
@@ -235613,9 +235371,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-53",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-50",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 53,
+   "Step": 50,
    "X": 332628,
    "Y": 449912,
    "Z": 5068,
@@ -235624,9 +235382,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-54",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-51",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 54,
+   "Step": 51,
    "X": 332721,
    "Y": 451724,
    "Z": 5073,
@@ -235635,9 +235393,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-55",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-52",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 55,
+   "Step": 52,
    "X": 332813,
    "Y": 451928,
    "Z": 5077,
@@ -235646,9 +235404,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-56",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-53",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 56,
+   "Step": 53,
    "X": 333194,
    "Y": 452702,
    "Z": 5073,
@@ -235657,9 +235415,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-57",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-54",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 57,
+   "Step": 54,
    "X": 333312,
    "Y": 452942,
    "Z": 5069,
@@ -235668,9 +235426,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-58",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-55",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 58,
+   "Step": 55,
    "X": 333729,
    "Y": 453789,
    "Z": 5083,
@@ -235679,9 +235437,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-59",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-56",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 59,
+   "Step": 56,
    "X": 334031,
    "Y": 454401,
    "Z": 5081,
@@ -235690,9 +235448,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-60",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-57",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 60,
+   "Step": 57,
    "X": 334217,
    "Y": 454779,
    "Z": 5050,
@@ -235701,9 +235459,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-61",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-58",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 61,
+   "Step": 58,
    "X": 334527,
    "Y": 455410,
    "Z": 5009,
@@ -235712,9 +235470,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-62",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-59",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 62,
+   "Step": 59,
    "X": 335689,
    "Y": 457769,
    "Z": 5021,
@@ -235723,9 +235481,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-63",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-60",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 63,
+   "Step": 60,
    "X": 336170,
    "Y": 458761,
    "Z": 5043,
@@ -235734,9 +235492,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-64",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-61",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 64,
+   "Step": 61,
    "X": 336888,
    "Y": 460241,
    "Z": 5098,
@@ -235745,9 +235503,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-65",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-62",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 65,
+   "Step": 62,
    "X": 336923,
    "Y": 460313,
    "Z": 5098,
@@ -235756,9 +235514,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-66",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-63",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 66,
+   "Step": 63,
    "X": 337750,
    "Y": 462694,
    "Z": 5148,
@@ -235767,9 +235525,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-67",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-64",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 67,
+   "Step": 64,
    "X": 337832,
    "Y": 462943,
    "Z": 5161,
@@ -235778,9 +235536,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-68",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-65",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 68,
+   "Step": 65,
    "X": 338114,
    "Y": 463804,
    "Z": 5187,
@@ -235789,9 +235547,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-69",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-66",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 69,
+   "Step": 66,
    "X": 338164,
    "Y": 464018,
    "Z": 5195,
@@ -235800,9 +235558,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-70",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-67",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 70,
+   "Step": 67,
    "X": 338412,
    "Y": 465152,
    "Z": 5214,
@@ -235811,9 +235569,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-71",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-68",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 71,
+   "Step": 68,
    "X": 338604,
    "Y": 466032,
    "Z": 5211,
@@ -235822,9 +235580,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-72",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-69",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 72,
+   "Step": 69,
    "X": 338678,
    "Y": 467326,
    "Z": 5211,
@@ -235833,9 +235591,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-73",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-70",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 73,
+   "Step": 70,
    "X": 338694,
    "Y": 467844,
    "Z": 5211,
@@ -235844,9 +235602,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-74",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-71",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 74,
+   "Step": 71,
    "X": 338717,
    "Y": 470217,
    "Z": 5213,
@@ -235855,11 +235613,44 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-72",
+   "PathID": "HS_DruimLigen_Connla",
+   "Step": 72,
+   "X": 339335,
+   "Y": 471949,
+   "Z": 5211,
+   "MaxSpeed": 1000,
+   "WaitTime": 0,
+   "LastTimeRowUpdated": "2026-10-31 12:00:00"
+  },
+  {
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-73",
+   "PathID": "HS_DruimLigen_Connla",
+   "Step": 73,
+   "X": 339518,
+   "Y": 472412,
+   "Z": 5211,
+   "MaxSpeed": 1000,
+   "WaitTime": 0,
+   "LastTimeRowUpdated": "2026-10-31 12:00:00"
+  },
+  {
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-74",
+   "PathID": "HS_DruimLigen_Connla",
+   "Step": 74,
+   "X": 339981,
+   "Y": 473496,
+   "Z": 5211,
+   "MaxSpeed": 1000,
+   "WaitTime": 0,
+   "LastTimeRowUpdated": "2026-10-31 12:00:00"
+  },
+  {
    "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-75",
    "PathID": "HS_DruimLigen_Connla",
    "Step": 75,
-   "X": 339335,
-   "Y": 471949,
+   "X": 340596,
+   "Y": 474509,
    "Z": 5211,
    "MaxSpeed": 1000,
    "WaitTime": 0,
@@ -235869,8 +235660,8 @@
    "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-76",
    "PathID": "HS_DruimLigen_Connla",
    "Step": 76,
-   "X": 339518,
-   "Y": 472412,
+   "X": 341771,
+   "Y": 476772,
    "Z": 5211,
    "MaxSpeed": 1000,
    "WaitTime": 0,
@@ -235880,8 +235671,8 @@
    "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-77",
    "PathID": "HS_DruimLigen_Connla",
    "Step": 77,
-   "X": 339981,
-   "Y": 473496,
+   "X": 341950,
+   "Y": 477254,
    "Z": 5211,
    "MaxSpeed": 1000,
    "WaitTime": 0,
@@ -235891,8 +235682,8 @@
    "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-78",
    "PathID": "HS_DruimLigen_Connla",
    "Step": 78,
-   "X": 340596,
-   "Y": 474509,
+   "X": 343609,
+   "Y": 481878,
    "Z": 5211,
    "MaxSpeed": 1000,
    "WaitTime": 0,
@@ -235902,8 +235693,8 @@
    "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-79",
    "PathID": "HS_DruimLigen_Connla",
    "Step": 79,
-   "X": 341771,
-   "Y": 476772,
+   "X": 343648,
+   "Y": 482379,
    "Z": 5211,
    "MaxSpeed": 1000,
    "WaitTime": 0,
@@ -235913,8 +235704,8 @@
    "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-80",
    "PathID": "HS_DruimLigen_Connla",
    "Step": 80,
-   "X": 341950,
-   "Y": 477254,
+   "X": 343702,
+   "Y": 483067,
    "Z": 5211,
    "MaxSpeed": 1000,
    "WaitTime": 0,
@@ -235924,8 +235715,8 @@
    "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-81",
    "PathID": "HS_DruimLigen_Connla",
    "Step": 81,
-   "X": 343609,
-   "Y": 481878,
+   "X": 343771,
+   "Y": 483576,
    "Z": 5211,
    "MaxSpeed": 1000,
    "WaitTime": 0,
@@ -235935,9 +235726,9 @@
    "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-82",
    "PathID": "HS_DruimLigen_Connla",
    "Step": 82,
-   "X": 343648,
-   "Y": 482379,
-   "Z": 5211,
+   "X": 344280,
+   "Y": 486141,
+   "Z": 5273,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -235946,9 +235737,9 @@
    "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-83",
    "PathID": "HS_DruimLigen_Connla",
    "Step": 83,
-   "X": 343702,
-   "Y": 483067,
-   "Z": 5211,
+   "X": 344405,
+   "Y": 486771,
+   "Z": 5250,
    "MaxSpeed": 1000,
    "WaitTime": 0,
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
@@ -235957,8 +235748,8 @@
    "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-84",
    "PathID": "HS_DruimLigen_Connla",
    "Step": 84,
-   "X": 343771,
-   "Y": 483576,
+   "X": 344585,
+   "Y": 487677,
    "Z": 5211,
    "MaxSpeed": 1000,
    "WaitTime": 0,
@@ -235968,39 +235759,6 @@
    "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-85",
    "PathID": "HS_DruimLigen_Connla",
    "Step": 85,
-   "X": 344280,
-   "Y": 486141,
-   "Z": 5273,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-86",
-   "PathID": "HS_DruimLigen_Connla",
-   "Step": 86,
-   "X": 344405,
-   "Y": 486771,
-   "Z": 5250,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-87",
-   "PathID": "HS_DruimLigen_Connla",
-   "Step": 87,
-   "X": 344585,
-   "Y": 487677,
-   "Z": 5211,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-88",
-   "PathID": "HS_DruimLigen_Connla",
-   "Step": 88,
    "X": 344811,
    "Y": 488850,
    "Z": 5211,
@@ -236009,9 +235767,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-89",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-86",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 89,
+   "Step": 86,
    "X": 344966,
    "Y": 489908,
    "Z": 5212,
@@ -236020,9 +235778,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-90",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-87",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 90,
+   "Step": 87,
    "X": 345238,
    "Y": 491784,
    "Z": 5202,
@@ -236031,9 +235789,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-91",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-88",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 91,
+   "Step": 88,
    "X": 345345,
    "Y": 492522,
    "Z": 5189,
@@ -236042,9 +235800,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-92",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-89",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 92,
+   "Step": 89,
    "X": 345342,
    "Y": 493024,
    "Z": 5195,
@@ -236053,9 +235811,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-93",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-90",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 93,
+   "Step": 90,
    "X": 345341,
    "Y": 493085,
    "Z": 5198,
@@ -236064,9 +235822,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-94",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-91",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 94,
+   "Step": 91,
    "X": 345331,
    "Y": 493849,
    "Z": 5188,
@@ -236075,9 +235833,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-95",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-92",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 95,
+   "Step": 92,
    "X": 345285,
    "Y": 497587,
    "Z": 5131,
@@ -236086,9 +235844,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-96",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-93",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 96,
+   "Step": 93,
    "X": 345281,
    "Y": 497889,
    "Z": 5122,
@@ -236097,9 +235855,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-97",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-94",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 97,
+   "Step": 94,
    "X": 345290,
    "Y": 498158,
    "Z": 5114,
@@ -236108,9 +235866,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-98",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-95",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 98,
+   "Step": 95,
    "X": 345298,
    "Y": 498386,
    "Z": 5101,
@@ -236119,9 +235877,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-99",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-96",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 99,
+   "Step": 96,
    "X": 345328,
    "Y": 498550,
    "Z": 5088,
@@ -236130,9 +235888,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-100",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-97",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 100,
+   "Step": 97,
    "X": 346052,
    "Y": 501923,
    "Z": 4912,
@@ -236141,9 +235899,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-101",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-98",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 101,
+   "Step": 98,
    "X": 346432,
    "Y": 503699,
    "Z": 4899,
@@ -236152,9 +235910,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-102",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-99",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 102,
+   "Step": 99,
    "X": 346518,
    "Y": 503836,
    "Z": 4898,
@@ -236163,9 +235921,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-103",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-100",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 103,
+   "Step": 100,
    "X": 347642,
    "Y": 505434,
    "Z": 4939,
@@ -236174,9 +235932,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-104",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-101",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 104,
+   "Step": 101,
    "X": 348454,
    "Y": 506587,
    "Z": 4986,
@@ -236185,9 +235943,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-105",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-102",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 105,
+   "Step": 102,
    "X": 348906,
    "Y": 507230,
    "Z": 4997,
@@ -236196,9 +235954,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-106",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-103",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 106,
+   "Step": 103,
    "X": 349671,
    "Y": 507865,
    "Z": 4998,
@@ -236207,9 +235965,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-107",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-104",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 107,
+   "Step": 104,
    "X": 350263,
    "Y": 508434,
    "Z": 4978,
@@ -236218,9 +235976,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-108",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-105",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 108,
+   "Step": 105,
    "X": 350768,
    "Y": 509430,
    "Z": 4962,
@@ -236229,9 +235987,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-109",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-106",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 109,
+   "Step": 106,
    "X": 351277,
    "Y": 510448,
    "Z": 4931,
@@ -236240,9 +235998,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-110",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-107",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 110,
+   "Step": 107,
    "X": 351322,
    "Y": 510539,
    "Z": 4924,
@@ -236251,9 +236009,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-111",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-108",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 111,
+   "Step": 108,
    "X": 351934,
    "Y": 511741,
    "Z": 4902,
@@ -236262,9 +236020,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-112",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-109",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 112,
+   "Step": 109,
    "X": 352273,
    "Y": 512489,
    "Z": 4907,
@@ -236273,9 +236031,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-113",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-110",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 113,
+   "Step": 110,
    "X": 353307,
    "Y": 514926,
    "Z": 5041,
@@ -236284,9 +236042,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-114",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-111",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 114,
+   "Step": 111,
    "X": 353311,
    "Y": 515109,
    "Z": 5052,
@@ -236295,9 +236053,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-115",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-112",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 115,
+   "Step": 112,
    "X": 353288,
    "Y": 516009,
    "Z": 5080,
@@ -236306,9 +236064,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-116",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-113",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 116,
+   "Step": 113,
    "X": 353280,
    "Y": 516295,
    "Z": 5083,
@@ -236317,11 +236075,44 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-114",
+   "PathID": "HS_DruimLigen_Connla",
+   "Step": 114,
+   "X": 353276,
+   "Y": 516438,
+   "Z": 5080,
+   "MaxSpeed": 1000,
+   "WaitTime": 0,
+   "LastTimeRowUpdated": "2026-10-31 12:00:00"
+  },
+  {
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-115",
+   "PathID": "HS_DruimLigen_Connla",
+   "Step": 115,
+   "X": 353248,
+   "Y": 517277,
+   "Z": 5074,
+   "MaxSpeed": 1000,
+   "WaitTime": 0,
+   "LastTimeRowUpdated": "2026-10-31 12:00:00"
+  },
+  {
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-116",
+   "PathID": "HS_DruimLigen_Connla",
+   "Step": 116,
+   "X": 353224,
+   "Y": 517460,
+   "Z": 5079,
+   "MaxSpeed": 1000,
+   "WaitTime": 0,
+   "LastTimeRowUpdated": "2026-10-31 12:00:00"
+  },
+  {
    "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-117",
    "PathID": "HS_DruimLigen_Connla",
    "Step": 117,
-   "X": 353276,
-   "Y": 516438,
+   "X": 353202,
+   "Y": 517602,
    "Z": 5080,
    "MaxSpeed": 1000,
    "WaitTime": 0,
@@ -236331,39 +236122,6 @@
    "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-118",
    "PathID": "HS_DruimLigen_Connla",
    "Step": 118,
-   "X": 353248,
-   "Y": 517277,
-   "Z": 5074,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-119",
-   "PathID": "HS_DruimLigen_Connla",
-   "Step": 119,
-   "X": 353224,
-   "Y": 517460,
-   "Z": 5079,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-120",
-   "PathID": "HS_DruimLigen_Connla",
-   "Step": 120,
-   "X": 353202,
-   "Y": 517602,
-   "Z": 5080,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-121",
-   "PathID": "HS_DruimLigen_Connla",
-   "Step": 121,
    "X": 353167,
    "Y": 517739,
    "Z": 5091,
@@ -236372,9 +236130,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-122",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-119",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 122,
+   "Step": 119,
    "X": 353009,
    "Y": 518324,
    "Z": 5102,
@@ -236383,9 +236141,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-123",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-120",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 123,
+   "Step": 120,
    "X": 352830,
    "Y": 518986,
    "Z": 5096,
@@ -236394,9 +236152,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-124",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-121",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 124,
+   "Step": 121,
    "X": 352503,
    "Y": 520195,
    "Z": 5078,
@@ -236405,9 +236163,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-125",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-122",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 125,
+   "Step": 122,
    "X": 352292,
    "Y": 520974,
    "Z": 5062,
@@ -236416,9 +236174,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-126",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-123",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 126,
+   "Step": 123,
    "X": 352244,
    "Y": 521150,
    "Z": 5051,
@@ -236427,9 +236185,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-127",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-124",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 127,
+   "Step": 124,
    "X": 352208,
    "Y": 521244,
    "Z": 5052,
@@ -236438,9 +236196,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-128",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-125",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 128,
+   "Step": 125,
    "X": 351916,
    "Y": 521952,
    "Z": 5030,
@@ -236449,9 +236207,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-129",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-126",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 129,
+   "Step": 126,
    "X": 351763,
    "Y": 522325,
    "Z": 5006,
@@ -236460,9 +236218,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-130",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-127",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 130,
+   "Step": 127,
    "X": 351747,
    "Y": 522363,
    "Z": 5001,
@@ -236471,9 +236229,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-131",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-128",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 131,
+   "Step": 128,
    "X": 351328,
    "Y": 523312,
    "Z": 4930,
@@ -236482,9 +236240,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-132",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-129",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 132,
+   "Step": 129,
    "X": 349412,
    "Y": 526434,
    "Z": 5043,
@@ -236493,9 +236251,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-133",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-130",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 133,
+   "Step": 130,
    "X": 349070,
    "Y": 527027,
    "Z": 5069,
@@ -236504,9 +236262,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-134",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-131",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 134,
+   "Step": 131,
    "X": 348818,
    "Y": 527463,
    "Z": 5097,
@@ -236515,9 +236273,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-135",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-132",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 135,
+   "Step": 132,
    "X": 348152,
    "Y": 528612,
    "Z": 5140,
@@ -236526,9 +236284,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-136",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-133",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 136,
+   "Step": 133,
    "X": 347033,
    "Y": 530546,
    "Z": 5198,
@@ -236537,9 +236295,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-137",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-134",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 137,
+   "Step": 134,
    "X": 346278,
    "Y": 531634,
    "Z": 5247,
@@ -236548,9 +236306,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-138",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-135",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 138,
+   "Step": 135,
    "X": 346116,
    "Y": 531888,
    "Z": 5262,
@@ -236559,9 +236317,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-139",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-136",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 139,
+   "Step": 136,
    "X": 345665,
    "Y": 532599,
    "Z": 5293,
@@ -236570,9 +236328,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-140",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-137",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 140,
+   "Step": 137,
    "X": 345595,
    "Y": 532787,
    "Z": 5301,
@@ -236581,9 +236339,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-141",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-138",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 141,
+   "Step": 138,
    "X": 345316,
    "Y": 533671,
    "Z": 5306,
@@ -236592,9 +236350,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-142",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-139",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 142,
+   "Step": 139,
    "X": 345049,
    "Y": 534517,
    "Z": 5304,
@@ -236603,9 +236361,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-143",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-140",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 143,
+   "Step": 140,
    "X": 344746,
    "Y": 535479,
    "Z": 5290,
@@ -236614,9 +236372,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-144",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-141",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 144,
+   "Step": 141,
    "X": 344521,
    "Y": 535936,
    "Z": 5290,
@@ -236625,9 +236383,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-145",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-142",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 145,
+   "Step": 142,
    "X": 344296,
    "Y": 536546,
    "Z": 5283,
@@ -236636,9 +236394,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-146",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-143",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 146,
+   "Step": 143,
    "X": 344289,
    "Y": 536566,
    "Z": 5282,
@@ -236647,9 +236405,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-147",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-144",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 147,
+   "Step": 144,
    "X": 343806,
    "Y": 538012,
    "Z": 5317,
@@ -236658,9 +236416,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-148",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-145",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 148,
+   "Step": 145,
    "X": 343710,
    "Y": 538300,
    "Z": 5311,
@@ -236669,9 +236427,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-149",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-146",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 149,
+   "Step": 146,
    "X": 343658,
    "Y": 539288,
    "Z": 5294,
@@ -236680,9 +236438,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-150",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-147",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 150,
+   "Step": 147,
    "X": 343642,
    "Y": 539651,
    "Z": 5265,
@@ -236691,9 +236449,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-151",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-148",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 151,
+   "Step": 148,
    "X": 343542,
    "Y": 541810,
    "Z": 5213,
@@ -236702,9 +236460,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-152",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-149",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 152,
+   "Step": 149,
    "X": 343536,
    "Y": 542468,
    "Z": 5211,
@@ -236713,9 +236471,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-153",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-150",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 153,
+   "Step": 150,
    "X": 343627,
    "Y": 543208,
    "Z": 5319,
@@ -236724,9 +236482,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-154",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-151",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 154,
+   "Step": 151,
    "X": 343647,
    "Y": 543368,
    "Z": 5380,
@@ -236735,9 +236493,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-155",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-152",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 155,
+   "Step": 152,
    "X": 343737,
    "Y": 544089,
    "Z": 5566,
@@ -236746,9 +236504,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-156",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-153",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 156,
+   "Step": 153,
    "X": 343826,
    "Y": 544789,
    "Z": 5693,
@@ -236757,9 +236515,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-157",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-154",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 157,
+   "Step": 154,
    "X": 343903,
    "Y": 545001,
    "Z": 5738,
@@ -236768,9 +236526,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-158",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-155",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 158,
+   "Step": 155,
    "X": 343918,
    "Y": 545039,
    "Z": 5742,
@@ -236779,9 +236537,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-159",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-156",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 159,
+   "Step": 156,
    "X": 344159,
    "Y": 545651,
    "Z": 5760,
@@ -236790,9 +236548,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-160",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-157",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 160,
+   "Step": 157,
    "X": 344174,
    "Y": 545690,
    "Z": 5759,
@@ -236801,9 +236559,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-161",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-158",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 161,
+   "Step": 158,
    "X": 344505,
    "Y": 546532,
    "Z": 5602,
@@ -236812,9 +236570,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-162",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-159",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 162,
+   "Step": 159,
    "X": 344520,
    "Y": 546570,
    "Z": 5594,
@@ -236823,9 +236581,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-163",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-160",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 163,
+   "Step": 160,
    "X": 344678,
    "Y": 546973,
    "Z": 5469,
@@ -236834,9 +236592,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-164",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-161",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 164,
+   "Step": 161,
    "X": 344758,
    "Y": 547120,
    "Z": 5442,
@@ -236845,9 +236603,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-165",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-162",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 165,
+   "Step": 162,
    "X": 344867,
    "Y": 547312,
    "Z": 5409,
@@ -236856,9 +236614,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-166",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-163",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 166,
+   "Step": 163,
    "X": 345066,
    "Y": 547659,
    "Z": 5292,
@@ -236867,9 +236625,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-167",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-164",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 167,
+   "Step": 164,
    "X": 345325,
    "Y": 548111,
    "Z": 5259,
@@ -236878,9 +236636,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-168",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-165",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 168,
+   "Step": 165,
    "X": 346249,
    "Y": 549728,
    "Z": 5211,
@@ -236889,9 +236647,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-169",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-166",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 169,
+   "Step": 166,
    "X": 346600,
    "Y": 550198,
    "Z": 5213,
@@ -236900,9 +236658,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-170",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-167",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 170,
+   "Step": 167,
    "X": 346954,
    "Y": 550668,
    "Z": 5201,
@@ -236911,9 +236669,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-171",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-168",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 171,
+   "Step": 168,
    "X": 347196,
    "Y": 550965,
    "Z": 5200,
@@ -236922,9 +236680,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-172",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-169",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 172,
+   "Step": 169,
    "X": 347591,
    "Y": 551448,
    "Z": 5176,
@@ -236933,9 +236691,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-173",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-170",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 173,
+   "Step": 170,
    "X": 347812,
    "Y": 551720,
    "Z": 5171,
@@ -236944,9 +236702,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-174",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-171",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 174,
+   "Step": 171,
    "X": 347942,
    "Y": 551880,
    "Z": 5155,
@@ -236955,9 +236713,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-175",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-172",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 175,
+   "Step": 172,
    "X": 348461,
    "Y": 552520,
    "Z": 5050,
@@ -236966,9 +236724,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-176",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-173",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 176,
+   "Step": 173,
    "X": 349867,
    "Y": 554250,
    "Z": 5129,
@@ -236977,9 +236735,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-177",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-174",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 177,
+   "Step": 174,
    "X": 350007,
    "Y": 554424,
    "Z": 5131,
@@ -236988,9 +236746,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-178",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-175",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 178,
+   "Step": 175,
    "X": 350066,
    "Y": 554505,
    "Z": 5135,
@@ -236999,9 +236757,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-179",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-176",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 179,
+   "Step": 176,
    "X": 350387,
    "Y": 554970,
    "Z": 5144,
@@ -237010,9 +236768,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-180",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-177",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 180,
+   "Step": 177,
    "X": 350858,
    "Y": 555650,
    "Z": 5140,
@@ -237021,9 +236779,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-181",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-178",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 181,
+   "Step": 178,
    "X": 351056,
    "Y": 555914,
    "Z": 5141,
@@ -237032,9 +236790,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-182",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-179",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 182,
+   "Step": 179,
    "X": 351176,
    "Y": 556081,
    "Z": 5154,
@@ -237043,9 +236801,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-183",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-180",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 183,
+   "Step": 180,
    "X": 351345,
    "Y": 556315,
    "Z": 5150,
@@ -237054,9 +236812,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-184",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-181",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 184,
+   "Step": 181,
    "X": 351461,
    "Y": 556550,
    "Z": 5190,
@@ -237065,9 +236823,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-185",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-182",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 185,
+   "Step": 182,
    "X": 351478,
    "Y": 556586,
    "Z": 5191,
@@ -237076,9 +236834,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-186",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-183",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 186,
+   "Step": 183,
    "X": 351913,
    "Y": 557496,
    "Z": 5112,
@@ -237087,9 +236845,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-187",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-184",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 187,
+   "Step": 184,
    "X": 351943,
    "Y": 557611,
    "Z": 5116,
@@ -237098,9 +236856,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-188",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-185",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 188,
+   "Step": 185,
    "X": 351950,
    "Y": 557650,
    "Z": 5115,
@@ -237109,9 +236867,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-189",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-186",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 189,
+   "Step": 186,
    "X": 352307,
    "Y": 559802,
    "Z": 4892,
@@ -237120,9 +236878,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-190",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-187",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 190,
+   "Step": 187,
    "X": 352412,
    "Y": 560616,
    "Z": 4873,
@@ -237131,9 +236889,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-191",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-188",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 191,
+   "Step": 188,
    "X": 352434,
    "Y": 560950,
    "Z": 4883,
@@ -237142,9 +236900,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-192",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-189",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 192,
+   "Step": 189,
    "X": 352386,
    "Y": 562282,
    "Z": 4990,
@@ -237153,9 +236911,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-193",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-190",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 193,
+   "Step": 190,
    "X": 352192,
    "Y": 562920,
    "Z": 5051,
@@ -237164,9 +236922,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-194",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-191",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 194,
+   "Step": 191,
    "X": 352120,
    "Y": 563152,
    "Z": 5068,
@@ -237175,9 +236933,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-195",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-192",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 195,
+   "Step": 192,
    "X": 351938,
    "Y": 563732,
    "Z": 5097,
@@ -237186,9 +236944,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-196",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-193",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 196,
+   "Step": 193,
    "X": 351781,
    "Y": 564235,
    "Z": 5097,
@@ -237197,9 +236955,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-197",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-194",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 197,
+   "Step": 194,
    "X": 351563,
    "Y": 564931,
    "Z": 5086,
@@ -237208,9 +236966,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-198",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-195",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 198,
+   "Step": 195,
    "X": 351496,
    "Y": 565144,
    "Z": 5079,
@@ -237219,9 +236977,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-199",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-196",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 199,
+   "Step": 196,
    "X": 351260,
    "Y": 565400,
    "Z": 5074,
@@ -237230,9 +236988,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-200",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-197",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 200,
+   "Step": 197,
    "X": 351044,
    "Y": 565621,
    "Z": 5065,
@@ -237241,9 +236999,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-201",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-198",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 201,
+   "Step": 198,
    "X": 350707,
    "Y": 565854,
    "Z": 5061,
@@ -237252,9 +237010,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-202",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-199",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 202,
+   "Step": 199,
    "X": 350653,
    "Y": 565890,
    "Z": 5056,
@@ -237263,9 +237021,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-203",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-200",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 203,
+   "Step": 200,
    "X": 345925,
    "Y": 566726,
    "Z": 5038,
@@ -237274,9 +237032,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-204",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-201",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 204,
+   "Step": 201,
    "X": 345905,
    "Y": 566730,
    "Z": 5037,
@@ -237285,9 +237043,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-205",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-202",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 205,
+   "Step": 202,
    "X": 345845,
    "Y": 566742,
    "Z": 5040,
@@ -237296,9 +237054,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-206",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-203",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 206,
+   "Step": 203,
    "X": 345258,
    "Y": 566874,
    "Z": 4976,
@@ -237307,9 +237065,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-207",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-204",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 207,
+   "Step": 204,
    "X": 344826,
    "Y": 567046,
    "Z": 4998,
@@ -237318,9 +237076,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-208",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-205",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 208,
+   "Step": 205,
    "X": 344038,
    "Y": 567364,
    "Z": 5038,
@@ -237329,9 +237087,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-209",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-206",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 209,
+   "Step": 206,
    "X": 343026,
    "Y": 567774,
    "Z": 5062,
@@ -237340,9 +237098,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-210",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-207",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 210,
+   "Step": 207,
    "X": 342500,
    "Y": 567986,
    "Z": 5057,
@@ -237351,9 +237109,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-211",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-208",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 211,
+   "Step": 208,
    "X": 341150,
    "Y": 568987,
    "Z": 5080,
@@ -237362,9 +237120,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-212",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-209",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 212,
+   "Step": 209,
    "X": 340643,
    "Y": 569897,
    "Z": 5087,
@@ -237373,9 +237131,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-213",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-210",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 213,
+   "Step": 210,
    "X": 340516,
    "Y": 570130,
    "Z": 5083,
@@ -237384,9 +237142,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-214",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-211",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 214,
+   "Step": 211,
    "X": 340518,
    "Y": 570388,
    "Z": 5076,
@@ -237395,9 +237153,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-215",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-212",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 215,
+   "Step": 212,
    "X": 340659,
    "Y": 573134,
    "Z": 4907,
@@ -237406,9 +237164,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-216",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-213",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 216,
+   "Step": 213,
    "X": 340807,
    "Y": 574106,
    "Z": 4918,
@@ -237417,9 +237175,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-217",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-214",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 217,
+   "Step": 214,
    "X": 340842,
    "Y": 574325,
    "Z": 4935,
@@ -237428,9 +237186,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-218",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-215",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 218,
+   "Step": 215,
    "X": 341068,
    "Y": 575720,
    "Z": 5026,
@@ -237439,9 +237197,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-219",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-216",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 219,
+   "Step": 216,
    "X": 341378,
    "Y": 577633,
    "Z": 5111,
@@ -237450,9 +237208,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-220",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-217",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 220,
+   "Step": 217,
    "X": 341414,
    "Y": 577852,
    "Z": 5115,
@@ -237461,9 +237219,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-221",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-218",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 221,
+   "Step": 218,
    "X": 341467,
    "Y": 578025,
    "Z": 5126,
@@ -237472,9 +237230,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-222",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-219",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 222,
+   "Step": 219,
    "X": 341794,
    "Y": 579018,
    "Z": 5146,
@@ -237483,9 +237241,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-223",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-220",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 223,
+   "Step": 220,
    "X": 341876,
    "Y": 579266,
    "Z": 5146,
@@ -237494,9 +237252,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-224",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-221",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 224,
+   "Step": 221,
    "X": 342284,
    "Y": 580545,
    "Z": 5168,
@@ -237505,9 +237263,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-225",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-222",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 225,
+   "Step": 222,
    "X": 342686,
    "Y": 581805,
    "Z": 5181,
@@ -237516,9 +237274,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-226",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-223",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 226,
+   "Step": 223,
    "X": 342917,
    "Y": 582949,
    "Z": 5198,
@@ -237527,9 +237285,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-227",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-224",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 227,
+   "Step": 224,
    "X": 342952,
    "Y": 583065,
    "Z": 5203,
@@ -237538,9 +237296,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-228",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-225",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 228,
+   "Step": 225,
    "X": 343414,
    "Y": 584396,
    "Z": 5204,
@@ -237549,9 +237307,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-229",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-226",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 229,
+   "Step": 226,
    "X": 343520,
    "Y": 584720,
    "Z": 5211,
@@ -237560,9 +237318,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-230",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-227",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 230,
+   "Step": 227,
    "X": 343867,
    "Y": 585789,
    "Z": 5211,
@@ -237571,9 +237329,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-231",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-228",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 231,
+   "Step": 228,
    "X": 344330,
    "Y": 589461,
    "Z": 5195,
@@ -237582,9 +237340,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-232",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-229",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 232,
+   "Step": 229,
    "X": 344328,
    "Y": 589622,
    "Z": 5207,
@@ -237593,9 +237351,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-233",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-230",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 233,
+   "Step": 230,
    "X": 344239,
    "Y": 590616,
    "Z": 5347,
@@ -237604,9 +237362,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-234",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-231",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 234,
+   "Step": 231,
    "X": 344143,
    "Y": 590862,
    "Z": 5393,
@@ -237615,9 +237373,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-235",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-232",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 235,
+   "Step": 232,
    "X": 344048,
    "Y": 591087,
    "Z": 5430,
@@ -237626,9 +237384,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-236",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-233",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 236,
+   "Step": 233,
    "X": 343907,
    "Y": 591424,
    "Z": 5458,
@@ -237637,9 +237395,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-237",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-234",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 237,
+   "Step": 234,
    "X": 343844,
    "Y": 591574,
    "Z": 5466,
@@ -237648,9 +237406,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-238",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-235",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 238,
+   "Step": 235,
    "X": 343625,
    "Y": 592099,
    "Z": 5472,
@@ -237659,9 +237417,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-239",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-236",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 239,
+   "Step": 236,
    "X": 343303,
    "Y": 592868,
    "Z": 5467,
@@ -237670,9 +237428,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-240",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-237",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 240,
+   "Step": 237,
    "X": 343110,
    "Y": 593190,
    "Z": 5467,
@@ -237681,9 +237439,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-241",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-238",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 241,
+   "Step": 238,
    "X": 342454,
    "Y": 594363,
    "Z": 5471,
@@ -237692,9 +237450,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-242",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-239",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 242,
+   "Step": 239,
    "X": 342393,
    "Y": 594495,
    "Z": 5476,
@@ -237703,9 +237461,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-243",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-240",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 243,
+   "Step": 240,
    "X": 342248,
    "Y": 594818,
    "Z": 5458,
@@ -237714,9 +237472,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-244",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-241",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 244,
+   "Step": 241,
    "X": 342075,
    "Y": 595459,
    "Z": 5413,
@@ -237725,9 +237483,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-245",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-242",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 245,
+   "Step": 242,
    "X": 341477,
    "Y": 597734,
    "Z": 5261,
@@ -237736,9 +237494,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-246",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-243",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 246,
+   "Step": 243,
    "X": 340728,
    "Y": 599388,
    "Z": 5225,
@@ -237747,9 +237505,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-247",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-244",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 247,
+   "Step": 244,
    "X": 339315,
    "Y": 600284,
    "Z": 5208,
@@ -237758,9 +237516,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-248",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-245",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 248,
+   "Step": 245,
    "X": 337827,
    "Y": 601351,
    "Z": 5241,
@@ -237769,9 +237527,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-249",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-246",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 249,
+   "Step": 246,
    "X": 337810,
    "Y": 601363,
    "Z": 5241,
@@ -237780,9 +237538,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-250",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-247",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 250,
+   "Step": 247,
    "X": 336477,
    "Y": 601766,
    "Z": 5283,
@@ -237791,9 +237549,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-251",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-248",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 251,
+   "Step": 248,
    "X": 336032,
    "Y": 601898,
    "Z": 5286,
@@ -237802,9 +237560,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-252",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-249",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 252,
+   "Step": 249,
    "X": 335540,
    "Y": 602050,
    "Z": 5314,
@@ -237813,9 +237571,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-253",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-250",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 253,
+   "Step": 250,
    "X": 334832,
    "Y": 602282,
    "Z": 5528,
@@ -237824,9 +237582,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-254",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-251",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 254,
+   "Step": 251,
    "X": 334279,
    "Y": 602464,
    "Z": 5656,
@@ -237835,9 +237593,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-255",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-252",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 255,
+   "Step": 252,
    "X": 334240,
    "Y": 602476,
    "Z": 5669,
@@ -237846,9 +237604,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-256",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-253",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 256,
+   "Step": 253,
    "X": 333830,
    "Y": 602578,
    "Z": 5739,
@@ -237857,9 +237615,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-257",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-254",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 257,
+   "Step": 254,
    "X": 333310,
    "Y": 602634,
    "Z": 5739,
@@ -237868,9 +237626,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-258",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-255",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 258,
+   "Step": 255,
    "X": 333050,
    "Y": 602660,
    "Z": 5702,
@@ -237879,9 +237637,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-259",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-256",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 259,
+   "Step": 256,
    "X": 332970,
    "Y": 602669,
    "Z": 5684,
@@ -237890,9 +237648,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-260",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-257",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 260,
+   "Step": 257,
    "X": 332491,
    "Y": 602718,
    "Z": 5543,
@@ -237901,9 +237659,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-261",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-258",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 261,
+   "Step": 258,
    "X": 331493,
    "Y": 602821,
    "Z": 5498,
@@ -237912,9 +237670,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-262",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-259",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 262,
+   "Step": 259,
    "X": 331054,
    "Y": 602865,
    "Z": 5444,
@@ -237923,9 +237681,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-263",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-260",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 263,
+   "Step": 260,
    "X": 330974,
    "Y": 602873,
    "Z": 5427,
@@ -237934,9 +237692,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-264",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-261",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 264,
+   "Step": 261,
    "X": 330894,
    "Y": 602882,
    "Z": 5404,
@@ -237945,9 +237703,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-265",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-262",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 265,
+   "Step": 262,
    "X": 330834,
    "Y": 602888,
    "Z": 5384,
@@ -237956,9 +237714,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-266",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-263",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 266,
+   "Step": 263,
    "X": 330184,
    "Y": 602998,
    "Z": 5192,
@@ -237967,9 +237725,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-267",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-264",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 267,
+   "Step": 264,
    "X": 329428,
    "Y": 603128,
    "Z": 5095,
@@ -237978,9 +237736,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-268",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-265",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 268,
+   "Step": 265,
    "X": 329218,
    "Y": 603164,
    "Z": 5115,
@@ -237989,9 +237747,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-269",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-266",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 269,
+   "Step": 266,
    "X": 329071,
    "Y": 603190,
    "Z": 5109,
@@ -238000,9 +237758,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-270",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-267",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 270,
+   "Step": 267,
    "X": 328910,
    "Y": 603390,
    "Z": 5117,
@@ -238011,9 +237769,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-271",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-268",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 271,
+   "Step": 268,
    "X": 327986,
    "Y": 604684,
    "Z": 5161,
@@ -238022,9 +237780,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-272",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-269",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 272,
+   "Step": 269,
    "X": 327228,
    "Y": 606203,
    "Z": 5117,
@@ -238033,9 +237791,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-273",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-270",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 273,
+   "Step": 270,
    "X": 326982,
    "Y": 606695,
    "Z": 5120,
@@ -238044,9 +237802,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-274",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-271",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 274,
+   "Step": 271,
    "X": 326581,
    "Y": 607498,
    "Z": 5168,
@@ -238055,9 +237813,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-275",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-272",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 275,
+   "Step": 272,
    "X": 326454,
    "Y": 607752,
    "Z": 5172,
@@ -238066,9 +237824,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-276",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-273",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 276,
+   "Step": 273,
    "X": 325414,
    "Y": 609834,
    "Z": 5183,
@@ -238077,9 +237835,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-277",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-274",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 277,
+   "Step": 274,
    "X": 324922,
    "Y": 610820,
    "Z": 5391,
@@ -238088,9 +237846,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-278",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-275",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 278,
+   "Step": 275,
    "X": 324822,
    "Y": 611020,
    "Z": 5389,
@@ -238099,9 +237857,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-279",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-276",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 279,
+   "Step": 276,
    "X": 324518,
    "Y": 611618,
    "Z": 5487,
@@ -238110,9 +237868,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-280",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-277",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 280,
+   "Step": 277,
    "X": 324099,
    "Y": 612374,
    "Z": 5611,
@@ -238121,9 +237879,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-281",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-278",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 281,
+   "Step": 278,
    "X": 323982,
    "Y": 612584,
    "Z": 5641,
@@ -238132,9 +237890,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-282",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-279",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 282,
+   "Step": 279,
    "X": 323826,
    "Y": 612865,
    "Z": 5785,
@@ -238143,9 +237901,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-283",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-280",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 283,
+   "Step": 280,
    "X": 323690,
    "Y": 613110,
    "Z": 5864,
@@ -238154,9 +237912,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-284",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-281",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 284,
+   "Step": 281,
    "X": 323573,
    "Y": 613321,
    "Z": 5892,
@@ -238165,9 +237923,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-285",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-282",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 285,
+   "Step": 282,
    "X": 323388,
    "Y": 613654,
    "Z": 6058,
@@ -238176,9 +237934,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-286",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-283",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 286,
+   "Step": 283,
    "X": 323261,
    "Y": 613882,
    "Z": 6150,
@@ -238187,9 +237945,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-287",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-284",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 287,
+   "Step": 284,
    "X": 322988,
    "Y": 614374,
    "Z": 6310,
@@ -238198,9 +237956,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-288",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-285",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 288,
+   "Step": 285,
    "X": 322949,
    "Y": 614444,
    "Z": 6327,
@@ -238209,9 +237967,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-289",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-286",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 289,
+   "Step": 286,
    "X": 322696,
    "Y": 614900,
    "Z": 6471,
@@ -238220,9 +237978,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-290",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-287",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 290,
+   "Step": 287,
    "X": 322676,
    "Y": 614935,
    "Z": 6478,
@@ -238231,9 +237989,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-291",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-288",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 291,
+   "Step": 288,
    "X": 322472,
    "Y": 615304,
    "Z": 6500,
@@ -238242,9 +238000,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-292",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-289",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 292,
+   "Step": 289,
    "X": 322369,
    "Y": 615411,
    "Z": 6514,
@@ -238253,9 +238011,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-293",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-290",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 293,
+   "Step": 290,
    "X": 322338,
    "Y": 615441,
    "Z": 6514,
@@ -238264,9 +238022,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-294",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-291",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 294,
+   "Step": 291,
    "X": 322106,
    "Y": 615665,
    "Z": 6484,
@@ -238275,9 +238033,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-295",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-292",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 295,
+   "Step": 292,
    "X": 322030,
    "Y": 615736,
    "Z": 6473,
@@ -238286,9 +238044,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-296",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-293",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 296,
+   "Step": 293,
    "X": 321543,
    "Y": 616187,
    "Z": 6373,
@@ -238297,9 +238055,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-297",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-294",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 297,
+   "Step": 294,
    "X": 321177,
    "Y": 616526,
    "Z": 6234,
@@ -238308,9 +238066,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-298",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-295",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 298,
+   "Step": 295,
    "X": 320644,
    "Y": 617019,
    "Z": 6186,
@@ -238319,9 +238077,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-299",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-296",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 299,
+   "Step": 296,
    "X": 320509,
    "Y": 617108,
    "Z": 6214,
@@ -238330,9 +238088,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-300",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-297",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 300,
+   "Step": 297,
    "X": 319257,
    "Y": 617893,
    "Z": 5991,
@@ -238341,9 +238099,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-301",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-298",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 301,
+   "Step": 298,
    "X": 318266,
    "Y": 619262,
    "Z": 6143,
@@ -238352,9 +238110,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-302",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-299",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 302,
+   "Step": 299,
    "X": 318213,
    "Y": 619424,
    "Z": 6163,
@@ -238363,9 +238121,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-303",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-300",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 303,
+   "Step": 300,
    "X": 318188,
    "Y": 619529,
    "Z": 6173,
@@ -238374,9 +238132,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-304",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-301",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 304,
+   "Step": 301,
    "X": 318141,
    "Y": 619738,
    "Z": 6185,
@@ -238385,9 +238143,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-305",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-302",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 305,
+   "Step": 302,
    "X": 318127,
    "Y": 619801,
    "Z": 6186,
@@ -238396,9 +238154,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-306",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-303",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 306,
+   "Step": 303,
    "X": 318075,
    "Y": 620032,
    "Z": 6161,
@@ -238407,9 +238165,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-307",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-304",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 307,
+   "Step": 304,
    "X": 318009,
    "Y": 620325,
    "Z": 6113,
@@ -238418,9 +238176,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-308",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-305",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 308,
+   "Step": 305,
    "X": 317957,
    "Y": 620555,
    "Z": 6049,
@@ -238429,9 +238187,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-309",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-306",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 309,
+   "Step": 306,
    "X": 317978,
    "Y": 620776,
    "Z": 5989,
@@ -238440,9 +238198,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-310",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-307",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 310,
+   "Step": 307,
    "X": 318011,
    "Y": 621035,
    "Z": 5907,
@@ -238451,9 +238209,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-311",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-308",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 311,
+   "Step": 308,
    "X": 318044,
    "Y": 621295,
    "Z": 5813,
@@ -238462,9 +238220,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-312",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-309",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 312,
+   "Step": 309,
    "X": 318198,
    "Y": 622493,
    "Z": 5357,
@@ -238473,9 +238231,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-313",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-310",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 313,
+   "Step": 310,
    "X": 318334,
    "Y": 623551,
    "Z": 5094,
@@ -238484,9 +238242,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-314",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-311",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 314,
+   "Step": 311,
    "X": 318623,
    "Y": 624495,
    "Z": 4985,
@@ -238495,9 +238253,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-315",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-312",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 315,
+   "Step": 312,
    "X": 319116,
    "Y": 626155,
    "Z": 4866,
@@ -238506,9 +238264,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-316",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-313",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 316,
+   "Step": 313,
    "X": 319730,
    "Y": 628222,
    "Z": 4867,
@@ -238517,9 +238275,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-317",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-314",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 317,
+   "Step": 314,
    "X": 319737,
    "Y": 628976,
    "Z": 4870,
@@ -238528,9 +238286,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-318",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-315",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 318,
+   "Step": 315,
    "X": 319740,
    "Y": 629732,
    "Z": 4859,
@@ -238539,9 +238297,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-319",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-316",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 319,
+   "Step": 316,
    "X": 319630,
    "Y": 631190,
    "Z": 4868,
@@ -238550,9 +238308,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-320",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-317",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 320,
+   "Step": 317,
    "X": 319058,
    "Y": 631784,
    "Z": 4926,
@@ -238561,9 +238319,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-321",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-318",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 321,
+   "Step": 318,
    "X": 318659,
    "Y": 632186,
    "Z": 4945,
@@ -238572,9 +238330,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-322",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-319",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 322,
+   "Step": 319,
    "X": 318259,
    "Y": 632590,
    "Z": 4960,
@@ -238583,9 +238341,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-323",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-320",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 323,
+   "Step": 320,
    "X": 317967,
    "Y": 632883,
    "Z": 4957,
@@ -238594,9 +238352,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-324",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-321",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 324,
+   "Step": 321,
    "X": 317544,
    "Y": 633308,
    "Z": 4930,
@@ -238605,9 +238363,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-325",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-322",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 325,
+   "Step": 322,
    "X": 317497,
    "Y": 633348,
    "Z": 4930,
@@ -238616,9 +238374,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-326",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-323",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 326,
+   "Step": 323,
    "X": 317232,
    "Y": 633547,
    "Z": 4915,
@@ -238627,9 +238385,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-327",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-324",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 327,
+   "Step": 324,
    "X": 316884,
    "Y": 633808,
    "Z": 4884,
@@ -238638,9 +238396,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-328",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-325",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 328,
+   "Step": 325,
    "X": 313599,
    "Y": 636229,
    "Z": 4859,
@@ -238649,9 +238407,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-329",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-326",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 329,
+   "Step": 326,
    "X": 312390,
    "Y": 636786,
    "Z": 4861,
@@ -238660,9 +238418,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-330",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-327",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 330,
+   "Step": 327,
    "X": 311297,
    "Y": 637265,
    "Z": 4866,
@@ -238671,9 +238429,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-331",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-328",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 331,
+   "Step": 328,
    "X": 310870,
    "Y": 637452,
    "Z": 4858,
@@ -238682,9 +238440,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-332",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-329",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 332,
+   "Step": 329,
    "X": 310352,
    "Y": 637612,
    "Z": 4874,
@@ -238693,9 +238451,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-333",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-330",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 333,
+   "Step": 330,
    "X": 310083,
    "Y": 637694,
    "Z": 4872,
@@ -238704,9 +238462,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-334",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-331",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 334,
+   "Step": 331,
    "X": 308007,
    "Y": 638324,
    "Z": 4895,
@@ -238715,9 +238473,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-335",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-332",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 335,
+   "Step": 332,
    "X": 307545,
    "Y": 638464,
    "Z": 4883,
@@ -238726,9 +238484,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-336",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-333",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 336,
+   "Step": 333,
    "X": 307370,
    "Y": 638528,
    "Z": 4879,
@@ -238737,9 +238495,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-337",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-334",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 337,
+   "Step": 334,
    "X": 307199,
    "Y": 638593,
    "Z": 4880,
@@ -238748,11 +238506,44 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-335",
+   "PathID": "HS_DruimLigen_Connla",
+   "Step": 335,
+   "X": 304095,
+   "Y": 639769,
+   "Z": 4859,
+   "MaxSpeed": 1000,
+   "WaitTime": 0,
+   "LastTimeRowUpdated": "2026-10-31 12:00:00"
+  },
+  {
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-336",
+   "PathID": "HS_DruimLigen_Connla",
+   "Step": 336,
+   "X": 302310,
+   "Y": 640246,
+   "Z": 4859,
+   "MaxSpeed": 1000,
+   "WaitTime": 0,
+   "LastTimeRowUpdated": "2026-10-31 12:00:00"
+  },
+  {
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-337",
+   "PathID": "HS_DruimLigen_Connla",
+   "Step": 337,
+   "X": 301666,
+   "Y": 640430,
+   "Z": 4859,
+   "MaxSpeed": 1000,
+   "WaitTime": 0,
+   "LastTimeRowUpdated": "2026-10-31 12:00:00"
+  },
+  {
    "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-338",
    "PathID": "HS_DruimLigen_Connla",
    "Step": 338,
-   "X": 304095,
-   "Y": 639769,
+   "X": 298907,
+   "Y": 641364,
    "Z": 4859,
    "MaxSpeed": 1000,
    "WaitTime": 0,
@@ -238762,39 +238553,6 @@
    "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-339",
    "PathID": "HS_DruimLigen_Connla",
    "Step": 339,
-   "X": 302310,
-   "Y": 640246,
-   "Z": 4859,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-340",
-   "PathID": "HS_DruimLigen_Connla",
-   "Step": 340,
-   "X": 301666,
-   "Y": 640430,
-   "Z": 4859,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-341",
-   "PathID": "HS_DruimLigen_Connla",
-   "Step": 341,
-   "X": 298907,
-   "Y": 641364,
-   "Z": 4859,
-   "MaxSpeed": 1000,
-   "WaitTime": 0,
-   "LastTimeRowUpdated": "2026-10-31 12:00:00"
-  },
-  {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-342",
-   "PathID": "HS_DruimLigen_Connla",
-   "Step": 342,
    "X": 298094,
    "Y": 641134,
    "Z": 4859,
@@ -238803,9 +238561,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-343",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-340",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 343,
+   "Step": 340,
    "X": 296656,
    "Y": 640730,
    "Z": 4859,
@@ -238814,9 +238572,9 @@
    "LastTimeRowUpdated": "2026-10-31 12:00:00"
   },
   {
-   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-344",
+   "PathPoints_ID": "p165floor-HS_DruimLigen_Connla-341",
    "PathID": "HS_DruimLigen_Connla",
-   "Step": 344,
+   "Step": 341,
    "X": 296637,
    "Y": 640725,
    "Z": 4848,

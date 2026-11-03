@@ -18634,15 +18634,15 @@
    "monster_key": "Weldo",
    "added": [
     "Jade",
-    "Moonstone",
+    "moonstone_gem",
     "aventurine_gem"
    ],
    "created": true,
    "old_drop_count": 1,
    "chances": {
     "Jade": 5,
-    "Moonstone": 60,
-    "aventurine_gem": 80
+    "aventurine_gem": 80,
+    "moonstone_gem": 60
    }
   },
   {
@@ -20418,13 +20418,13 @@
    "monster_key": "mist sprite",
    "added": [
     "Jade",
-    "Moonstone"
+    "moonstone_gem"
    ],
    "created": false,
    "old_drop_count": 1,
    "chances": {
     "Jade": 20,
-    "Moonstone": 35
+    "moonstone_gem": 35
    }
   },
   {
@@ -20563,16 +20563,16 @@
   {
    "monster_key": "poacher leader",
    "added": [
-    "Moonstone",
+    "moonstone_gem",
     "Pitted_Broadsword",
     "bastard_sword"
    ],
    "created": true,
    "old_drop_count": 1,
    "chances": {
-    "Moonstone": 5,
     "Pitted_Broadsword": 1,
-    "bastard_sword": 1
+    "bastard_sword": 1,
+    "moonstone_gem": 5
    }
   },
   {

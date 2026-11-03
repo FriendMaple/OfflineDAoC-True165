@@ -1,0 +1,1930 @@
+{
+ "fixed": [
+  {
+   "item": "bastard_sword3",
+   "name": "bastard sword",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 450,
+   "twin": "bastard_sword",
+   "dps_af": [
+    27,
+    27
+   ],
+   "spd_abs": [
+    41,
+    41
+   ]
+  },
+  {
+   "item": "broadsword3",
+   "name": "broadsword",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 275,
+   "twin": "broadsword",
+   "dps_af": [
+    21,
+    21
+   ],
+   "spd_abs": [
+    31,
+    31
+   ]
+  },
+  {
+   "item": "carbide_heater_shield3",
+   "name": "carbide heater shield",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 100800,
+   "twin": "carbide_heater_shield",
+   "dps_af": [
+    87,
+    87
+   ],
+   "spd_abs": [
+    0,
+    30
+   ]
+  },
+  {
+   "item": "carbide_kite_shield3",
+   "name": "carbide kite shield",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 72000,
+   "twin": "carbide_kite_shield",
+   "dps_af": [
+    87,
+    87
+   ],
+   "spd_abs": [
+    0,
+    40
+   ]
+  },
+  {
+   "item": "carbide_round_shield3",
+   "name": "carbide round shield",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 57600,
+   "twin": "carbide_round_shield",
+   "dps_af": [
+    87,
+    87
+   ],
+   "spd_abs": [
+    0,
+    50
+   ]
+  },
+  {
+   "item": "carbide_tower_shield3",
+   "name": "carbide tower shield",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 86400,
+   "twin": "carbide_tower_shield",
+   "dps_af": [
+    87,
+    87
+   ],
+   "spd_abs": [
+    0,
+    30
+   ]
+  },
+  {
+   "item": "club3",
+   "name": "club",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 150,
+   "twin": "club",
+   "dps_af": [
+    15,
+    15
+   ],
+   "spd_abs": [
+    28,
+    28
+   ]
+  },
+  {
+   "item": "cobalt_heater_shield3",
+   "name": "cobalt heater shield",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 50400,
+   "twin": "cobalt_heater_shield",
+   "dps_af": [
+    72,
+    72
+   ],
+   "spd_abs": [
+    0,
+    30
+   ]
+  },
+  {
+   "item": "cobalt_kite_shield3",
+   "name": "cobalt kite shield",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 36000,
+   "twin": "cobalt_kite_shield",
+   "dps_af": [
+    72,
+    72
+   ],
+   "spd_abs": [
+    0,
+    40
+   ]
+  },
+  {
+   "item": "cobalt_long_sword3",
+   "name": "cobalt long sword",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 216000,
+   "twin": "cobalt_long_sword",
+   "dps_af": [
+    84,
+    84
+   ],
+   "spd_abs": [
+    35,
+    35
+   ]
+  },
+  {
+   "item": "cobalt_round_shield3",
+   "name": "cobalt round shield",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 28800,
+   "twin": "cobalt_round_shield",
+   "dps_af": [
+    72,
+    72
+   ],
+   "spd_abs": [
+    0,
+    50
+   ]
+  },
+  {
+   "item": "cobalt_tower_shield3",
+   "name": "cobalt tower shield",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 43200,
+   "twin": "cobalt_tower_shield",
+   "dps_af": [
+    72,
+    72
+   ],
+   "spd_abs": [
+    0,
+    30
+   ]
+  },
+  {
+   "item": "dolomite_heater_shield3",
+   "name": "dolomite heater shield",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 16800,
+   "twin": "dolomite_heater_shield",
+   "dps_af": [
+    57,
+    57
+   ],
+   "spd_abs": [
+    0,
+    30
+   ]
+  },
+  {
+   "item": "dolomite_kite_shield3",
+   "name": "dolomite kite shield",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 12000,
+   "twin": "dolomite_kite_shield",
+   "dps_af": [
+    57,
+    57
+   ],
+   "spd_abs": [
+    0,
+    40
+   ]
+  },
+  {
+   "item": "dolomite_long_sword3",
+   "name": "dolomite long sword",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 72000,
+   "twin": "dolomite_long_sword",
+   "dps_af": [
+    69,
+    69
+   ],
+   "spd_abs": [
+    35,
+    35
+   ]
+  },
+  {
+   "item": "dolomite_round_shield3",
+   "name": "dolomite round shield",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 9600,
+   "twin": "dolomite_round_shield",
+   "dps_af": [
+    57,
+    57
+   ],
+   "spd_abs": [
+    0,
+    50
+   ]
+  },
+  {
+   "item": "dolomite_tower_shield3",
+   "name": "dolomite tower shield",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 14400,
+   "twin": "dolomite_tower_shield",
+   "dps_af": [
+    57,
+    57
+   ],
+   "spd_abs": [
+    0,
+    30
+   ]
+  },
+  {
+   "item": "elm_animist_staff_of_Mysticism3",
+   "name": "elm Animist Staff of Mysticism",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 4000,
+   "twin": "elm_Animist_Staff_of_Mysticism",
+   "dps_af": [
+    30,
+    30
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "elm_animist_staff_of_arboreal_path3",
+   "name": "elm Animist Staff of Arboreal Path",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 4000,
+   "twin": "elm_Animist_Staff_of_Arboreal_Path",
+   "dps_af": [
+    30,
+    30
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "elm_animist_staff_of_creeping_path3",
+   "name": "elm Animist Staff of Creeping Path",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 4000,
+   "twin": "elm_Animist_Staff_of_Creeping_Path",
+   "dps_af": [
+    30,
+    30
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "elm_animist_staff_of_verdant_path3",
+   "name": "elm Animist Staff of Verdant Path",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 4000,
+   "twin": "elm_Animist_Staff_of_Verdant_Path",
+   "dps_af": [
+    30,
+    30
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "elm_eldritch_staff_of_light3",
+   "name": "elm Eldritch Staff of Light",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 4000,
+   "twin": "elm_Eldritch_Staff_of_Light",
+   "dps_af": [
+    30,
+    30
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "elm_eldritch_staff_of_magic3",
+   "name": "elm Eldritch Staff of Magic",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 4000,
+   "twin": "elm_Eldritch_Staff_of_Magic",
+   "dps_af": [
+    30,
+    30
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "elm_eldritch_staff_of_mana3",
+   "name": "elm Eldritch Staff of Mana",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 4000,
+   "twin": "elm_Eldritch_Staff_of_Mana",
+   "dps_af": [
+    30,
+    30
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "elm_eldritch_staff_of_void3",
+   "name": "elm Eldritch Staff of Void",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 4000,
+   "twin": "elm_Eldritch_Staff_of_Void",
+   "dps_af": [
+    30,
+    30
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "elm_enchanter_staff_of_enchantments3",
+   "name": "elm Enchanter Staff of Enchantments",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 4000,
+   "twin": "elm_Enchanter_Staff_of_Enchantments",
+   "dps_af": [
+    30,
+    30
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "elm_enchanter_staff_of_light3",
+   "name": "elm Enchanter Staff of Light",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 4000,
+   "twin": "elm_Enchanter_Staff_of_Light",
+   "dps_af": [
+    30,
+    30
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "elm_enchanter_staff_of_magic3",
+   "name": "elm Enchanter Staff of Magic",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 4000,
+   "twin": "elm_Enchanter_Staff_of_Magic",
+   "dps_af": [
+    30,
+    30
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "elm_enchanter_staff_of_mana3",
+   "name": "elm Enchanter Staff of Mana",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 4000,
+   "twin": "elm_Enchanter_Staff_of_Mana",
+   "dps_af": [
+    30,
+    30
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "elm_mentalist_staff_of_light3",
+   "name": "elm Mentalist Staff of Light",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 4000,
+   "twin": "elm_Mentalist_Staff_of_Light",
+   "dps_af": [
+    30,
+    30
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "elm_mentalist_staff_of_magic3",
+   "name": "elm Mentalist Staff of Magic",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 4000,
+   "twin": "elm_Mentalist_Staff_of_Magic",
+   "dps_af": [
+    30,
+    30
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "falcata3",
+   "name": "falcata",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 225,
+   "twin": "falcata",
+   "dps_af": [
+    18,
+    18
+   ],
+   "spd_abs": [
+    27,
+    27
+   ]
+  },
+  {
+   "item": "ferrite_heater_shield3",
+   "name": "ferrite heater shield",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 1400,
+   "twin": "ferrite_heater_shield",
+   "dps_af": [
+    27,
+    27
+   ],
+   "spd_abs": [
+    0,
+    30
+   ]
+  },
+  {
+   "item": "ferrite_kite_shield3",
+   "name": "ferrite kite shield",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 1000,
+   "twin": "ferrite_kite_shield",
+   "dps_af": [
+    27,
+    27
+   ],
+   "spd_abs": [
+    0,
+    40
+   ]
+  },
+  {
+   "item": "ferrite_long_sword3",
+   "name": "ferrite long sword",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 6000,
+   "twin": "ferrite_long_sword",
+   "dps_af": [
+    39,
+    39
+   ],
+   "spd_abs": [
+    35,
+    35
+   ]
+  },
+  {
+   "item": "ferrite_round_shield3",
+   "name": "ferrite round shield",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 800,
+   "twin": "ferrite_round_shield",
+   "dps_af": [
+    27,
+    27
+   ],
+   "spd_abs": [
+    0,
+    50
+   ]
+  },
+  {
+   "item": "ferrite_tower_shield3",
+   "name": "ferrite tower shield",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 1200,
+   "twin": "ferrite_tower_shield",
+   "dps_af": [
+    27,
+    27
+   ],
+   "spd_abs": [
+    0,
+    30
+   ]
+  },
+  {
+   "item": "great_hammer3",
+   "name": "great hammer",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 475,
+   "twin": "great_hammer",
+   "dps_af": [
+    24,
+    24
+   ],
+   "spd_abs": [
+    53,
+    53
+   ]
+  },
+  {
+   "item": "great_sword3",
+   "name": "great sword",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 525,
+   "twin": "great_sword",
+   "dps_af": [
+    27,
+    27
+   ],
+   "spd_abs": [
+    52,
+    52
+   ]
+  },
+  {
+   "item": "hammer3",
+   "name": "hammer",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 325,
+   "twin": "hammer",
+   "dps_af": [
+    24,
+    24
+   ],
+   "spd_abs": [
+    38,
+    38
+   ]
+  },
+  {
+   "item": "heartwood_animist_staff_of_arboreal_path3",
+   "name": "heartwood Animist Staff of Arboreal Path",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 144000,
+   "twin": "heartwood_Animist_Staff_of_Arboreal_Path",
+   "dps_af": [
+    75,
+    75
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "heartwood_animist_staff_of_creeping_path3",
+   "name": "heartwood Animist Staff of Creeping Path",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 144000,
+   "twin": "heartwood_Animist_Staff_of_Creeping_Path",
+   "dps_af": [
+    75,
+    75
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "heartwood_animist_staff_of_mysticism3",
+   "name": "heartwood Animist Staff of Mysticism",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 144000,
+   "twin": "heartwood_Animist_Staff_of_Mysticism",
+   "dps_af": [
+    75,
+    75
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "heartwood_animist_staff_of_verdant_path3",
+   "name": "heartwood Animist Staff of Verdant Path",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 144000,
+   "twin": "heartwood_Animist_Staff_of_Verdant_Path",
+   "dps_af": [
+    75,
+    75
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "heartwood_eldritch_staff_of_light3",
+   "name": "heartwood Eldritch Staff of Light",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 144000,
+   "twin": "heartwood_Eldritch_Staff_of_Light",
+   "dps_af": [
+    75,
+    75
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "heartwood_eldritch_staff_of_magic3",
+   "name": "heartwood Eldritch Staff of Magic",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 144000,
+   "twin": "heartwood_Eldritch_Staff_of_Magic",
+   "dps_af": [
+    75,
+    75
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "heartwood_eldritch_staff_of_mana3",
+   "name": "heartwood Eldritch Staff of Mana",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 144000,
+   "twin": "heartwood_Eldritch_Staff_of_Mana",
+   "dps_af": [
+    75,
+    75
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "heartwood_eldritch_staff_of_void3",
+   "name": "heartwood Eldritch Staff of Void",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 144000,
+   "twin": "heartwood_Eldritch_Staff_of_Void",
+   "dps_af": [
+    75,
+    75
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "heartwood_enchanter_staff_of_enchantments3",
+   "name": "heartwood Enchanter Staff of Enchantments",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 144000,
+   "twin": "heartwood_Enchanter_Staff_of_Enchantments",
+   "dps_af": [
+    75,
+    75
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "heartwood_enchanter_staff_of_light3",
+   "name": "heartwood Enchanter Staff of Light",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 144000,
+   "twin": "heartwood_Enchanter_Staff_of_Light",
+   "dps_af": [
+    75,
+    75
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "heartwood_enchanter_staff_of_magic3",
+   "name": "heartwood Enchanter Staff of Magic",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 144000,
+   "twin": "heartwood_Enchanter_Staff_of_Magic",
+   "dps_af": [
+    75,
+    75
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "heartwood_enchanter_staff_of_mana3",
+   "name": "heartwood Enchanter Staff of Mana",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 144000,
+   "twin": "heartwood_Enchanter_Staff_of_Mana",
+   "dps_af": [
+    75,
+    75
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "heartwood_mentalist_staff_of_light3",
+   "name": "heartwood Mentalist Staff of Light",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 144000,
+   "twin": "heartwood_Mentalist_Staff_of_Light",
+   "dps_af": [
+    75,
+    75
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "heartwood_mentalist_staff_of_magic3",
+   "name": "heartwood Mentalist Staff of Magic",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 144000,
+   "twin": "heartwood_Mentalist_Staff_of_Magic",
+   "dps_af": [
+    75,
+    75
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "heartwood_mentalist_staff_of_mana3",
+   "name": "heartwood Mentalist Staff of Mana",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 144000,
+   "twin": "heartwood_Mentalist_Staff_of_Mana",
+   "dps_af": [
+    75,
+    75
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "heartwood_mentalist_staff_of_mentalism3",
+   "name": "heartwood Mentalist Staff of Mentalism",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 144000,
+   "twin": "heartwood_Mentalist_Staff_of_Mentalism",
+   "dps_af": [
+    75,
+    75
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "heater_shield3",
+   "name": "heater shield",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 87,
+   "twin": "heater_shield",
+   "dps_af": [
+    165,
+    165
+   ],
+   "spd_abs": [
+    0,
+    30
+   ]
+  },
+  {
+   "item": "ironwood_animist_staff_of_arboreal_path3",
+   "name": "ironwood Animist Staff of Arboreal Path",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 48000,
+   "twin": "ironwood_Animist_Staff_of_Arboreal_Path",
+   "dps_af": [
+    60,
+    60
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "ironwood_animist_staff_of_creeping_path3",
+   "name": "ironwood Animist Staff of Creeping Path",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 48000,
+   "twin": "ironwood_Animist_Staff_of_Creeping_Path",
+   "dps_af": [
+    60,
+    60
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "ironwood_animist_staff_of_mysticism3",
+   "name": "ironwood Animist Staff of Mysticism",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 48000,
+   "twin": "ironwood_Animist_Staff_of_Mysticism",
+   "dps_af": [
+    60,
+    60
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "ironwood_animist_staff_of_verdant_path3",
+   "name": "ironwood Animist Staff of Verdant Path",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 48000,
+   "twin": "ironwood_Animist_Staff_of_Verdant_Path",
+   "dps_af": [
+    60,
+    60
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "ironwood_eldritch_staff_of_light3",
+   "name": "ironwood Eldritch Staff of Light",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 48000,
+   "twin": "ironwood_Eldritch_Staff_of_Light",
+   "dps_af": [
+    60,
+    60
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "ironwood_eldritch_staff_of_magic3",
+   "name": "ironwood Eldritch Staff of Magic",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 48000,
+   "twin": "ironwood_Eldritch_Staff_of_Magic",
+   "dps_af": [
+    60,
+    60
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "ironwood_eldritch_staff_of_mana3",
+   "name": "ironwood Eldritch Staff of Mana",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 48000,
+   "twin": "ironwood_Eldritch_Staff_of_Mana",
+   "dps_af": [
+    60,
+    60
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "ironwood_eldritch_staff_of_void3",
+   "name": "ironwood Eldritch Staff of Void",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 48000,
+   "twin": "ironwood_Eldritch_Staff_of_Void",
+   "dps_af": [
+    60,
+    60
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "ironwood_enchanter_staff_of_enchantments3",
+   "name": "ironwood Enchanter Staff of Enchantments",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 48000,
+   "twin": "ironwood_Enchanter_Staff_of_Enchantments",
+   "dps_af": [
+    60,
+    60
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "ironwood_enchanter_staff_of_light3",
+   "name": "ironwood Enchanter Staff of Light",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 48000,
+   "twin": "ironwood_Enchanter_Staff_of_Light",
+   "dps_af": [
+    60,
+    60
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "ironwood_enchanter_staff_of_magic3",
+   "name": "ironwood Enchanter Staff of Magic",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 48000,
+   "twin": "ironwood_Enchanter_Staff_of_Magic",
+   "dps_af": [
+    60,
+    60
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "ironwood_enchanter_staff_of_mana3",
+   "name": "ironwood Enchanter Staff of Mana",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 48000,
+   "twin": "ironwood_Enchanter_Staff_of_Mana",
+   "dps_af": [
+    60,
+    60
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "ironwood_mentalist_staff_of_light3",
+   "name": "ironwood Mentalist Staff of Light",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 48000,
+   "twin": "ironwood_Mentalist_Staff_of_Light",
+   "dps_af": [
+    60,
+    60
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "ironwood_mentalist_staff_of_magic3",
+   "name": "ironwood Mentalist Staff of Magic",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 48000,
+   "twin": "ironwood_Mentalist_Staff_of_Magic",
+   "dps_af": [
+    60,
+    60
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "ironwood_mentalist_staff_of_mana3",
+   "name": "ironwood Mentalist Staff of Mana",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 48000,
+   "twin": "ironwood_Mentalist_Staff_of_Mana",
+   "dps_af": [
+    60,
+    60
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "ironwood_mentalist_staff_of_mentalism3",
+   "name": "ironwood Mentalist Staff of Mentalism",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 48000,
+   "twin": "ironwood_Mentalist_Staff_of_Mentalism",
+   "dps_af": [
+    60,
+    60
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "kite_shield3",
+   "name": "kite shield",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 62,
+   "twin": "kite_shield",
+   "dps_af": [
+    165,
+    165
+   ],
+   "spd_abs": [
+    0,
+    40
+   ]
+  },
+  {
+   "item": "long_sword3",
+   "name": "long sword",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 375,
+   "twin": "long_sword",
+   "dps_af": [
+    24,
+    24
+   ],
+   "spd_abs": [
+    35,
+    35
+   ]
+  },
+  {
+   "item": "mace3",
+   "name": "mace",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 225,
+   "twin": "mace",
+   "dps_af": [
+    18,
+    18
+   ],
+   "spd_abs": [
+    32,
+    32
+   ]
+  },
+  {
+   "item": "oaken_animist_staff_of_arboreal_path3",
+   "name": "oaken Animist Staff of Arboreal Path",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 16000,
+   "twin": "oaken_Animist_Staff_of_Arboreal_Path",
+   "dps_af": [
+    45,
+    45
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "oaken_animist_staff_of_creeping_path3",
+   "name": "oaken Animist Staff of Creeping Path",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 16000,
+   "twin": "oaken_Animist_Staff_of_Creeping_Path",
+   "dps_af": [
+    45,
+    45
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "oaken_animist_staff_of_mysticism3",
+   "name": "oaken Animist Staff of Mysticism",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 16000,
+   "twin": "oaken_Animist_Staff_of_Mysticism",
+   "dps_af": [
+    45,
+    45
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "oaken_animist_staff_of_verdant_path3",
+   "name": "oaken Animist Staff of Verdant Path",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 16000,
+   "twin": "oaken_Animist_Staff_of_Verdant_Path",
+   "dps_af": [
+    45,
+    45
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "oaken_eldritch_staff_of_light3",
+   "name": "oaken Eldritch Staff of Light",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 16000,
+   "twin": "oaken_Eldritch_Staff_of_Light",
+   "dps_af": [
+    45,
+    45
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "oaken_eldritch_staff_of_magic3",
+   "name": "oaken Eldritch Staff of Magic",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 16000,
+   "twin": "oaken_Eldritch_Staff_of_Magic",
+   "dps_af": [
+    45,
+    45
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "oaken_eldritch_staff_of_mana3",
+   "name": "oaken Eldritch Staff of Mana",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 16000,
+   "twin": "oaken_Eldritch_Staff_of_Mana",
+   "dps_af": [
+    45,
+    45
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "oaken_eldritch_staff_of_void3",
+   "name": "oaken Eldritch Staff of Void",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 16000,
+   "twin": "oaken_Eldritch_Staff_of_Void",
+   "dps_af": [
+    45,
+    45
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "oaken_enchanter_staff_of_enchantments3",
+   "name": "oaken Enchanter Staff of Enchantments",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 16000,
+   "twin": "oaken_Enchanter_Staff_of_Enchantments",
+   "dps_af": [
+    45,
+    45
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "oaken_enchanter_staff_of_light3",
+   "name": "oaken Enchanter Staff of Light",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 16000,
+   "twin": "oaken_Enchanter_Staff_of_Light",
+   "dps_af": [
+    45,
+    45
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "oaken_enchanter_staff_of_magic3",
+   "name": "oaken Enchanter Staff of Magic",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 16000,
+   "twin": "oaken_Enchanter_Staff_of_Magic",
+   "dps_af": [
+    45,
+    45
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "oaken_enchanter_staff_of_mana3",
+   "name": "oaken Enchanter Staff of Mana",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 16000,
+   "twin": "oaken_Enchanter_Staff_of_Mana",
+   "dps_af": [
+    45,
+    45
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "oaken_mentalist_staff_of_light3",
+   "name": "oaken Mentalist Staff of Light",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 16000,
+   "twin": "oaken_Mentalist_Staff_of_Light",
+   "dps_af": [
+    45,
+    45
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "oaken_mentalist_staff_of_magic3",
+   "name": "oaken Mentalist Staff of Magic",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 16000,
+   "twin": "oaken_Mentalist_Staff_of_Magic",
+   "dps_af": [
+    45,
+    45
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "oaken_mentalist_staff_of_mana3",
+   "name": "oaken Mentalist Staff of Mana",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 16000,
+   "twin": "oaken_Mentalist_Staff_of_Mana",
+   "dps_af": [
+    45,
+    45
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "oaken_mentalist_staff_of_mentalism3",
+   "name": "oaken Mentalist Staff of Mentalism",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 16000,
+   "twin": "oaken_Mentalist_Staff_of_Mentalism",
+   "dps_af": [
+    45,
+    45
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "quartz_heater_shield3",
+   "name": "quartz heater shield",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 5600,
+   "twin": "quartz_heater_shield",
+   "dps_af": [
+    42,
+    42
+   ],
+   "spd_abs": [
+    0,
+    30
+   ]
+  },
+  {
+   "item": "quartz_kite_shield3",
+   "name": "quartz kite shield",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 4000,
+   "twin": "quartz_kite_shield",
+   "dps_af": [
+    42,
+    42
+   ],
+   "spd_abs": [
+    0,
+    40
+   ]
+  },
+  {
+   "item": "quartz_long_sword3",
+   "name": "quartz long sword",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 24000,
+   "twin": "quartz_long_sword",
+   "dps_af": [
+    54,
+    54
+   ],
+   "spd_abs": [
+    35,
+    35
+   ]
+  },
+  {
+   "item": "quartz_round_shield3",
+   "name": "quartz round shield",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 3200,
+   "twin": "quartz_round_shield",
+   "dps_af": [
+    42,
+    42
+   ],
+   "spd_abs": [
+    0,
+    50
+   ]
+  },
+  {
+   "item": "quartz_tower_shield3",
+   "name": "quartz tower shield",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 4800,
+   "twin": "quartz_tower_shield",
+   "dps_af": [
+    42,
+    42
+   ],
+   "spd_abs": [
+    0,
+    30
+   ]
+  },
+  {
+   "item": "round_shield3",
+   "name": "round shield",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 50,
+   "twin": "round_shield",
+   "dps_af": [
+    165,
+    165
+   ],
+   "spd_abs": [
+    0,
+    50
+   ]
+  },
+  {
+   "item": "runewood_animist_staff_of_arboreal_path3",
+   "name": "runewood Animist Staff of Arboreal Path",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 288000,
+   "twin": "runewood_Animist_Staff_of_Arboreal_Path",
+   "dps_af": [
+    90,
+    90
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "runewood_animist_staff_of_creeping_path3",
+   "name": "runewood Animist Staff of Creeping Path",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 288000,
+   "twin": "runewood_Animist_Staff_of_Creeping_Path",
+   "dps_af": [
+    90,
+    90
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "runewood_animist_staff_of_mysticism3",
+   "name": "runewood Animist Staff of Mysticism",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 288000,
+   "twin": "runewood_Animist_Staff_of_Mysticism",
+   "dps_af": [
+    90,
+    90
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "runewood_animist_staff_of_verdant_path3",
+   "name": "runewood Animist Staff of Verdant Path",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 288000,
+   "twin": "runewood_Animist_Staff_of_Verdant_Path",
+   "dps_af": [
+    90,
+    90
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "runewood_eldritch_staff_of_light3",
+   "name": "runewood Eldritch Staff of Light",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 288000,
+   "twin": "runewood_Eldritch_Staff_of_Light",
+   "dps_af": [
+    90,
+    90
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "runewood_eldritch_staff_of_magic3",
+   "name": "runewood Eldritch Staff of Magic",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 288000,
+   "twin": "runewood_Eldritch_Staff_of_Magic",
+   "dps_af": [
+    90,
+    90
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "runewood_eldritch_staff_of_mana3",
+   "name": "runewood Eldritch Staff of Mana",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 288000,
+   "twin": "runewood_Eldritch_Staff_of_Mana",
+   "dps_af": [
+    90,
+    90
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "runewood_eldritch_staff_of_void3",
+   "name": "runewood Eldritch Staff of Void",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 288000,
+   "twin": "runewood_Eldritch_Staff_of_Void",
+   "dps_af": [
+    90,
+    90
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "runewood_enchanter_staff_of_enchantments3",
+   "name": "runewood Enchanter Staff of Enchantments",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 288000,
+   "twin": "runewood_Enchanter_Staff_of_Enchantments",
+   "dps_af": [
+    90,
+    90
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "runewood_enchanter_staff_of_light3",
+   "name": "runewood Enchanter Staff of Light",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 288000,
+   "twin": "runewood_Enchanter_Staff_of_Light",
+   "dps_af": [
+    90,
+    90
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "runewood_enchanter_staff_of_magic3",
+   "name": "runewood Enchanter Staff of Magic",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 288000,
+   "twin": "runewood_Enchanter_Staff_of_Magic",
+   "dps_af": [
+    90,
+    90
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "runewood_enchanter_staff_of_mana3",
+   "name": "runewood Enchanter Staff of Mana",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 288000,
+   "twin": "runewood_Enchanter_Staff_of_Mana",
+   "dps_af": [
+    90,
+    90
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "runewood_mentalist_staff_of_light3",
+   "name": "runewood Mentalist Staff of Light",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 288000,
+   "twin": "runewood_Mentalist_Staff_of_Light",
+   "dps_af": [
+    90,
+    90
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "runewood_mentalist_staff_of_magic3",
+   "name": "runewood Mentalist Staff of Magic",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 288000,
+   "twin": "runewood_Mentalist_Staff_of_Magic",
+   "dps_af": [
+    90,
+    90
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "runewood_mentalist_staff_of_mana3",
+   "name": "runewood Mentalist Staff of Mana",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 288000,
+   "twin": "runewood_Mentalist_Staff_of_Mana",
+   "dps_af": [
+    90,
+    90
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "runewood_mentalist_staff_of_mentalism3",
+   "name": "runewood Mentalist Staff of Mentalism",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 288000,
+   "twin": "runewood_Mentalist_Staff_of_Mentalism",
+   "dps_af": [
+    90,
+    90
+   ],
+   "spd_abs": [
+    44,
+    44
+   ]
+  },
+  {
+   "item": "short_sword3",
+   "name": "short sword",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 150,
+   "twin": "short_sword",
+   "dps_af": [
+    15,
+    15
+   ],
+   "spd_abs": [
+    24,
+    24
+   ]
+  },
+  {
+   "item": "spiked_club3",
+   "name": "spiked club",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 275,
+   "twin": "spiked_club",
+   "dps_af": [
+    21,
+    21
+   ],
+   "spd_abs": [
+    35,
+    35
+   ]
+  },
+  {
+   "item": "spiked_mace3",
+   "name": "spiked mace",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 425,
+   "twin": "spiked_mace",
+   "dps_af": [
+    27,
+    27
+   ],
+   "spd_abs": [
+    42,
+    42
+   ]
+  },
+  {
+   "item": "tower_shield3",
+   "name": "tower shield",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 75,
+   "twin": "tower_shield",
+   "dps_af": [
+    165,
+    165
+   ],
+   "spd_abs": [
+    0,
+    30
+   ]
+  },
+  {
+   "item": "two-hand_spiked_mace3",
+   "name": "two-hand spiked mace",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 450,
+   "twin": "two-hand_spiked_mace",
+   "dps_af": [
+    21,
+    21
+   ],
+   "spd_abs": [
+    50,
+    50
+   ]
+  },
+  {
+   "item": "two-handed_sword3",
+   "name": "two-handed sword",
+   "from_realm": 2,
+   "realm": 3,
+   "price": 275,
+   "twin": "two-handed_sword",
+   "dps_af": [
+    15,
+    15
+   ],
+   "spd_abs": [
+    46,
+    46
+   ]
+  }
+ ],
+ "skipped": [
+  {
+   "item": "rowan_round_shield",
+   "why": "no twin of the merchant realm"
+  }
+ ]
+}

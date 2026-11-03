@@ -37,7 +37,6 @@
    "DOL.GS.GameHastener": "town hastener (patch 1.70)",
    "DOL.GS.Keeps.FrontierHastener": "frontier hastener (New Frontiers)",
    "DOL.GS.Scripts.AtlasTrainer": "Atlas master trainer",
-   "DOL.GS.AccountVaultKeeper": "account vault (later than 1.65)",
    "DOL.GS.MarketExplorer": "market explorer (2004)",
    "DOL.GS.EffectNPC": "freeshard cosmetic NPC",
    "DOL.GS.ItemModel": "freeshard reskin NPC",
@@ -211,12 +210,6 @@
     "reason": "True 1.65 horse routes follow the floor: the original points of the re-pointed routes (add-routefloor165.json has them, with the floor added)"
    },
    {
-    "table": "PathPoints",
-    "key": "PathPoints_ID",
-    "where": "PathPoints_ID LIKE 'p165floor-%' AND (((PathID = 'HR_Ardagh_Connla' AND Step > 134) OR (PathID = 'HR_Ardagh_TirUrphost' AND Step > 168) OR (PathID = 'HR_Ardee_TirUrphost' AND Step > 93) OR (PathID = 'HR_Audliten_GnaFaste' AND Step > 201) OR (PathID = 'HR_Brynach_DruimCain' AND Step > 40) OR (PathID = 'HR_CaerUlfwych_SnowdoniaFortress' AND Step > 663) OR (PathID = 'HR_CampStation_CamelotEast' AND Step > 355) OR (PathID = 'HR_CampStation_GronyrsFarm' AND Step > 315) OR (PathID = 'HR_CastleSauvage_SnowdoniaFortress' AND Step > 448) OR (PathID = 'HR_CastleSauvage_WestCornwall' AND Step > 535) OR (PathID = 'HR_Connla_DruimLigen' AND Step > 258) OR (PathID = 'HR_Connla_InnisCarthaig' AND Step > 170) OR (PathID = 'HR_DruimCain_DruimLigen' AND Step > 238) OR (PathID = 'HR_FortVeldon_WestSkona' AND Step > 524) OR (PathID = 'HR_Galplen_Nalliten' AND Step > 93) OR (PathID = 'HR_GnaFaste_Audliten' AND Step > 198) OR (PathID = 'HR_InnisCarthaig_ParthananFarm' AND Step > 401) OR (PathID = 'HR_MagMell_Howth' AND Step > 110) OR (PathID = 'HR_Nalliten_Galplen' AND Step > 93) OR (PathID = 'HR_ParthananFarm_Ardagh' AND Step > 119) OR (PathID = 'HR_ParthananFarm_InnisCarthaig' AND Step > 394) OR (PathID = 'HR_SnowdoniaFortress_CaerUlfwych' AND Step > 663) OR (PathID = 'HR_SnowdoniaStation_CamelotEast' AND Step > 274) OR (PathID = 'HR_TirNaNog_Brynach' AND Step > 153) OR (PathID = 'HR_TirNaNog_DruimLigen' AND Step > 90) OR (PathID = 'HR_TirUrphost_Ardee' AND Step > 88) OR (PathID = 'HR_VindsaulFaste_Vasudheim' AND Step > 93) OR (PathID = 'HR_WesternCornwall_CastleSauvage' AND Step > 526) OR (PathID = 'HS_AdribardsRetreat_CastleSauvage' AND Step > 369) OR (PathID = 'HS_AdribardsRetreat_WestDowns' AND Step > 230) OR (PathID = 'HS_Ardee_ParthenonFarm' AND Step > 86) OR (PathID = 'HS_Audliten_Mularn' AND Step > 196) OR (PathID = 'HS_Brynach_CursedForest' AND Step > 72) OR (PathID = 'HS_Brynach_TirNaNogNord' AND Step > 228) OR (PathID = 'HS_CaerUlfwych_CornwallStation' AND Step > 215) OR (PathID = 'HS_CaerWitrin_WesternCornwall' AND Step > 128) OR (PathID = 'HS_CamelotNoth_NobsFarm' AND Step > 174) OR (PathID = 'HS_CastleSauvage_AdribardsRetreat' AND Step > 384) OR (PathID = 'HS_CastleSauvage_Ludlow' AND Step > 123) OR (PathID = 'HS_CornwallStation_CaerUlfwych' AND Step > 83) OR (PathID = 'HS_Cotswold_CampacorentinStation' AND Step > 344) OR (PathID = 'HS_Cotswold_SnowdoniaStation' AND Step > 273) OR (PathID = 'HS_CursedForest_Brynach' AND Step > 72) OR (PathID = 'HS_DruimCain_TirnamBeo' AND Step > 191) OR (PathID = 'HS_DruimLigen_Connla' AND Step > 344) OR (PathID = 'HS_FortAtla_Galplen' AND Step > 145) OR (PathID = 'HS_FortAtla_Mularn' AND Step > 345) OR (PathID = 'HS_Galplen_FortAtla' AND Step > 111) OR (PathID = 'HS_Galplen_GnaFaste' AND Step > 46) OR (PathID = 'HS_Galplen_Vasudheim' AND Step > 346) OR (PathID = 'HS_GnaFaste_FortVeldon' AND Step > 647) OR (PathID = 'HS_GnaFaste_Galplen' AND Step > 75) OR (PathID = 'HS_GnaFaste_Huginfel' AND Step > 203) OR (PathID = 'HS_GnaFaste_Raumarik' AND Step > 240) OR (PathID = 'HS_GnaFaste_WestSkona' AND Step > 178) OR (PathID = 'HS_GronyrsFarm_CampacorentinStation' AND Step > 325) OR (PathID = 'HS_Haggerfel_Vasudheim' AND Step > 124) OR (PathID = 'HS_Howth_InnisCarthaig' AND Step > 235) OR (PathID = 'HS_Howth_MagMell' AND Step > 161) OR (PathID = 'HS_Huginfel_GnaFaste' AND Step > 187) OR (PathID = 'HS_Huginfel_Raumarik' AND Step > 89) OR (PathID = 'HS_Huginfel_SvasudFaste' AND Step > 178) OR (PathID = 'HS_Huginfel_Vasudheim' AND Step > 105) OR (PathID = 'HS_Humberton_SnowdoniaFortress' AND Step > 336) OR (PathID = 'HS_InnisCarthaig_Culraid' AND Step > 80) OR (PathID = 'HS_InnisCarthaig_TirnamBeo' AND Step > 346) OR (PathID = 'HS_LlynBarfog_SnowdoniaStation' AND Step > 247) OR (PathID = 'HS_Ludlow_CastleSauvage' AND Step > 125) OR (PathID = 'HS_MagMell_ParthenonFarm' AND Step > 59) OR (PathID = 'HS_Mularn_Audliten' AND Step > 161) OR (PathID = 'HS_Mularn_FortAtla' AND Step > 319) OR (PathID = 'HS_Mularn_Nalliten' AND Step > 399) OR (PathID = 'HS_Mularn_SvasudFaste' AND Step > 103) OR (PathID = 'HS_Nalliten_Mularn' AND Step > 349) OR (PathID = 'HS_Nalliten_VindsaulFaste' AND Step > 283) OR (PathID = 'HS_NobsFarm_CamelotNoth' AND Step > 157) OR (PathID = 'HS_ParthenonFarm_DruimCain' AND Step > 128) OR (PathID = 'HS_Raumarik_GnaFaste' AND Step > 232) OR (PathID = 'HS_Raumarik_Huginfel' AND Step > 86) OR (PathID = 'HS_SnowdoniaFortress_Humberton' AND Step > 332) OR (PathID = 'HS_SnowdoniaStation_LlynBarfog' AND Step > 234) OR (PathID = 'HS_SvasudFaste_Huginfel' AND Step > 202) OR (PathID = 'HS_SvasudFaste_Mularn' AND Step > 111) OR (PathID = 'HS_SvasudFaste_VindsaulFaste' AND Step > 175) OR (PathID = 'HS_TirNaNogNord_InnisCarthaig' AND Step > 424) OR (PathID = 'HS_TirUrphost_Ardagh' AND Step > 183) OR (PathID = 'HS_TirnamBeo_DruimLigen' AND Step > 121) OR (PathID = 'HS_Vasudheim_Galplen' AND Step > 405) OR (PathID = 'HS_Vasudheim_Haggerfel' AND Step > 151) OR (PathID = 'HS_Vasudheim_Huginfel' AND Step > 117) OR (PathID = 'HS_Vasudheim_VindsaulFaste' AND Step > 93) OR (PathID = 'HS_VindsaulFaste_Nalliten' AND Step > 271) OR (PathID = 'HS_VindsaulFaste_SvasudFaste' AND Step > 183) OR (PathID = 'HS_WestDowns_AdribardsRetreat' AND Step > 238) OR (PathID = 'HS_WestSkona_GnaFaste' AND Step > 102) OR (PathID = 'HS_WesternCornwall_CaerWitrin' AND Step > 128) OR (PathID = 'ticket_to_ConnlaMulgraighy' AND Step > 145) OR (PathID = 'ticket_to_CulraidAelerogh' AND Step > 156) OR (PathID = 'ticket_to_Innis_CarthaigMulgraighy' AND Step > 69)) OR PathID NOT IN ('HR_Ardagh_Connla','HR_Ardagh_TirUrphost','HR_Ardee_TirUrphost','HR_Audliten_GnaFaste','HR_Brynach_DruimCain','HR_CaerUlfwych_SnowdoniaFortress','HR_CampStation_CamelotEast','HR_CampStation_GronyrsFarm','HR_CastleSauvage_SnowdoniaFortress','HR_CastleSauvage_WestCornwall','HR_Connla_DruimLigen','HR_Connla_InnisCarthaig','HR_DruimCain_DruimLigen','HR_FortVeldon_WestSkona','HR_Galplen_Nalliten','HR_GnaFaste_Audliten','HR_InnisCarthaig_ParthananFarm','HR_MagMell_Howth','HR_Nalliten_Galplen','HR_ParthananFarm_Ardagh','HR_ParthananFarm_InnisCarthaig','HR_SnowdoniaFortress_CaerUlfwych','HR_SnowdoniaStation_CamelotEast','HR_TirNaNog_Brynach','HR_TirNaNog_DruimLigen','HR_TirUrphost_Ardee','HR_VindsaulFaste_Vasudheim','HR_WesternCornwall_CastleSauvage','HS_AdribardsRetreat_CastleSauvage','HS_AdribardsRetreat_WestDowns','HS_Ardee_ParthenonFarm','HS_Audliten_Mularn','HS_Brynach_CursedForest','HS_Brynach_TirNaNogNord','HS_CaerUlfwych_CornwallStation','HS_CaerWitrin_WesternCornwall','HS_CamelotNoth_NobsFarm','HS_CastleSauvage_AdribardsRetreat','HS_CastleSauvage_Ludlow','HS_CornwallStation_CaerUlfwych','HS_Cotswold_CampacorentinStation','HS_Cotswold_SnowdoniaStation','HS_CursedForest_Brynach','HS_DruimCain_TirnamBeo','HS_DruimLigen_Connla','HS_FortAtla_Galplen','HS_FortAtla_Mularn','HS_Galplen_FortAtla','HS_Galplen_GnaFaste','HS_Galplen_Vasudheim','HS_GnaFaste_FortVeldon','HS_GnaFaste_Galplen','HS_GnaFaste_Huginfel','HS_GnaFaste_Raumarik','HS_GnaFaste_WestSkona','HS_GronyrsFarm_CampacorentinStation','HS_Haggerfel_Vasudheim','HS_Howth_InnisCarthaig','HS_Howth_MagMell','HS_Huginfel_GnaFaste','HS_Huginfel_Raumarik','HS_Huginfel_SvasudFaste','HS_Huginfel_Vasudheim','HS_Humberton_SnowdoniaFortress','HS_InnisCarthaig_Culraid','HS_InnisCarthaig_TirnamBeo','HS_LlynBarfog_SnowdoniaStation','HS_Ludlow_CastleSauvage','HS_MagMell_ParthenonFarm','HS_Mularn_Audliten','HS_Mularn_FortAtla','HS_Mularn_Nalliten','HS_Mularn_SvasudFaste','HS_Nalliten_Mularn','HS_Nalliten_VindsaulFaste','HS_NobsFarm_CamelotNoth','HS_ParthenonFarm_DruimCain','HS_Raumarik_GnaFaste','HS_Raumarik_Huginfel','HS_SnowdoniaFortress_Humberton','HS_SnowdoniaStation_LlynBarfog','HS_SvasudFaste_Huginfel','HS_SvasudFaste_Mularn','HS_SvasudFaste_VindsaulFaste','HS_TirNaNogNord_InnisCarthaig','HS_TirUrphost_Ardagh','HS_TirnamBeo_DruimLigen','HS_Vasudheim_Galplen','HS_Vasudheim_Haggerfel','HS_Vasudheim_Huginfel','HS_Vasudheim_VindsaulFaste','HS_VindsaulFaste_Nalliten','HS_VindsaulFaste_SvasudFaste','HS_WestDowns_AdribardsRetreat','HS_WestSkona_GnaFaste','HS_WesternCornwall_CaerWitrin','ticket_to_ConnlaMulgraighy','ticket_to_CulraidAelerogh','ticket_to_Innis_CarthaigMulgraighy'))",
-    "reason": "True 1.65 horse routes: route-floor points past a refined route's end (refine_routefloor165.py: the refined routes have fewer points)"
-   },
-   {
     "table": "DBHouse",
     "key": "HouseNumber",
     "where": "HouseNumber IN (261,262,263,264,265,266,267,268,269,270,521,522,523,524,525,526,527,528,529,530,531,532,533,534,535,536,537,538,539,540,541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,558,559,560,561,562,563,564,565,566,567,568,569,570,721,722,723,724,725,726,727,728,729,730,731,732,733,734,735,736,737,738,739,740,741,742,743,744,745,746,747,748,749,750,751,752,753,754,755,756,757,758,759,760,841,842,843,844,845,846,847,848,849,850,851,852,853,854,855,856,857,858,859,860,861,862,863,864,865,866,867,868,869,870,871,872,873,874,875,876,877,878,879,880,881,882,883,884,885,886,887,888,889,890,891,892,893,894,895,896,897,898,899,900,901,902,903,904,905,906,907,908,909,910,911,912,913,914,915,916,917,918,919,920,921,922,923,924,925,926,927,928,929,930,931,932,933,934,935,936,937,938,939,940,961,962,963,964,965,966,967,968,969,970,971,972,973,974,975,976,977,978,979,980,981,982,983,984,985,986,987,988,989,990,991,992,993,994,995,996,997,998,999,1000,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,1020,1021,1022,1023,1024,1025,1026,1027,1028,1029,1030,1031,1032,1033,1034,1035,1036,1037,1038,1039,1040,1041,1042,1043,1044,1045,1046,1047,1048,1049,1050,1051,1052,1053,1054,1055,1056,1057,1058,1059,1060,1061,1062,1063,1064,1065,1066,1067,1068,1069,1070,1111,1112,1113,1114,1115,1116,1117,1118,1119,1120,1121,1122,1123,1124,1125,1126,1127,1128,1129,1130,1131,1132,1133,1134,1135,1136,1137,1138,1139,1140,1141,1142,1143,1144,1145,1146,1147,1148,1149,1150,1151,1152,1153,1154,1155,1156,1157,1158,1159,1160,1161,1162,1163,1164,1165,1166,1167,1168,1169,1170,1171,1172,1173,1174,1175,1176,1177,1178,1179,1180,1181,1182,1183,1184,1185,1186,1187,1188,1189,1190,1191,1192,1193,1194,1195,1196,1197,1198,1199,1200,1201,1202,1203,1204,1205,1206,1207,1208,1209,1210,1211,1212,1213,1214,1215,1216,1217,1218,1219,1220,1221,1222,1223,1224,1225,1226,1227,1228,1229,1230,1231,1232,1233,1234,1235,1236,1237,1238,1239,1240,1241,1242,1243,1244,1245,1246,1247,1248,1249,1250,1251,1252,1253,1254,1255,1256,1257,1258,1259,1260,1261,1262,1263,1264,1265,1266,1267,1268,1269,1270,1271,1272,1273,1274,1275,1276,1277,1278,1279,1280,1281,1282,1283,1284,1285,1286,1287,1288,1289,1290,1291,1292,1293,1294,1295,1296,1297,1298,1299,1300,1301,1302,1303,1304,1305,1306,1307,1308,1309,1310,1311,1312,1313,1314,1315,1316,1317,1318,1319,1320,1321,1322,1323,1324,1325,1326,1327,1328,1329,1330,1331,1332,1333,1334,1335,1336,1337,1338,1339,1340,1341,1342,1343,1344,1345,1346,1347,1348,1349,1350,1351,1352,1353,1354,1355,1356,1357,1358,1359,1360,1361,1362,1363,1364,1365,1366,1367,1368,1369,1370,1371,1372,1373,1374,1375,1376,1377,1378,1379,1380,1381,1382,1383,1384,1385,1386,1387,1388,1389,1390,1391,1392,1393,1394,1395,1396,1397,1398,1399,1400,1401,1402,1403,1404,1405,1406,1407,1408,1409,1410,1411,1412,1413,1414,1415,1416,1417,1418,1419,1420,1421,1422,1423,1424,1425,1426,1427,1428,1429,1430,1431,1432,1433,1434,1435,1436,1437,1438,1439,1440,1441,1442,1443,1444,1445,1446,1447,1448,1449,1450,1451,1452,1453,1454,1455,1456,1457,1458,1459,1460,1461,1462,1463,1464,1465,1466,1467,1468,1469,1470,1471,1472,1473,1474,1475,1476,1477,1478,1479,1480,1481,1482,1483,1484,1485,1486,1487,1488,1489,1490,1491,1492,1493,1494,1495,1496,1497,1498,1499,1500,1501,1502,1503,1504,1505,1506,1507,1508,1509,1510,1511,1512,1513,1514,1515,1516,1517,1518,1519,1520,1521,1522,1523,1524,1525,1526,1527,1528,1529,1530,1531,1532,1533,1534,1535,1536,1537,1538,1539,1540,1541,1542,1543,1544,1545,1546,1547,1548,1549,1550,1551,1552,1553,1554,1555,1556,1557,1558,1559,1560,1561,1562,1563,1564,1565,1566,1567,1568,1569,1570,1571,1572,1573,1574,1575,1576,1577,1578,1579,1580,1581,1582,1583,1584,1585,1586,1587,1588,1589,1590,1591,1592,1593,1594,1595,1596,1597,1598,1599,1600,1601,1602,1603,1604,1605,1606,1607,1608,1609,1610,1611,1612,1613,1614,1615,1616,1617,1618,1619,1620,1621,1622,1623,1624,1625,1626,1627,1628,1629,1630,1631,1632,1633,1634,1635,1636,1637,1638,1639,1640,1641,1642,1643,1644,1645,1646,1647,1648,1649,1650,1651,1652,1653,1654,1655,1656,1657,1658,1659,1660,1661,1662,1663,1664,1665,1666,1667,1668,1669,1670,1671,1672,1673,1674,1675,1676,1677,1678,1679,1680,1681,1682,1683,1684,1685,1686,1687,1688,1689,1690,1691,1692,1693,1694,1695,1696,1697,1698,1699,1700,1701,1702,1703,1704,1705,1706,1707,1708,1709,1710,1711,1712,1713,1714,1715,1716,1717,1718,1719,1720,1721,1722,1723,1724,1725,1726,1727,1728,1729,1730,1731,1732,1733,1734,1735,1736,1737,1738,1739,1740,1741,1742,1743,1744,1745,1746,1747,1748,1749,1750,1751,1752,1753,1754,1755,1756,1757,1758,1759,1760,1761,1762,1763,1764,1765,1766,1767,1768,1769,1770,1771,1772,1773,1774,1775,1776,1777,1778,1779,1780,1781,1782,1783,1784,1785,1786,1787,1788,1789,1790,1791,1792,1793,1794,1795,1796,1797,1798,1799,1800,2551,2552,2553,2554,2555,2556,2557,2558,2559,2560,2561,2562,2563,2564,2565,2566,2567,2568,2569,2570,2571,2572,2573,2574,2575,2576,2577,2578,2579,2580,2581,2582,2583,2584,2585,2586,2587,2588,2589,2590,2591,2592,2593,2594,2595,2596,2597,2598,2599,2600,2601,2602,2603,2604,2605,2606,2607,2608,2609,2610,2691,2692,2693,2694,2695,2696,2697,2698,2699,2700,2701,2702,2703,2704,2705,2706,2707,2708,2709,2710,2711,2712,2713,2714,2715,2716,2717,2718,2719,2720,2801,2802,2803,2804,2805,2806,2807,2808,2809,2810,2811,2812,2813,2814,2815,2816,2817,2818,2819,2820,2821,2822,2823,2824,2825,2826,2827,2828,2829,2830,2831,2832,2833,2834,2835,2836,2837,2838,2839,2840,2841,2842,2843,2844,2845,2846,2847,2848,2849,2850,2851,2852,2853,2854,2855,2856,2857,2858,2859,2860,2861,2862,2863,2864,2865,2866,2867,2868,2869,2870,2871,2872,2873,2874,2875,2876,2877,2878,2879,2880,2881,2882,2883,2884,2885,2886,2887,2888,2889,2890,2891,2892,2893,2894,2895,2896,2897,2898,2899,2900,2981,2982,2983,2984,2985,2986,2987,2988,2989,2990,2991,2992,2993,2994,2995,2996,2997,2998,2999,3000,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033,3034,3035,3036,3037,3038,3039,3040,3041,3042,3043,3044,3045,3046,3047,3048,3049,3050,3051,3052,3053,3054,3055,3056,3057,3058,3059,3060,3061,3062,3063,3064,3065,3066,3067,3068,3069,3070,3081,3082,3083,3084,3085,3086,3087,3088,3089,3090,3091,3092,3093,3094,3095,3096,3097,3098,3099,3100,3101,3102,3103,3104,3105,3106,3107,3108,3109,3110,3111,3112,3113,3114,3115,3116,3117,3118,3119,3120,3121,3122,3123,3124,3125,3126,3127,3128,3129,3130,3131,3132,3133,3134,3135,3136,3137,3138,3139,3140,3141,3142,3143,3144,3145,3146,3147,3148,3149,3150,3151,3152,3153,3154,3155,3156,3157,3158,3159,3160,3161,3162,3163,3164,3165,3166,3167,3168,3169,3170,3171,3172,3173,3174,3175,3176,3177,3178,3179,3180,3181,3182,3183,3184,3185,3186,3187,3188,3189,3190,3191,3192,3193,3194,3195,3196,3197,3198,3199,3200,3201,3202,3203,3204,3205,3206,3207,3208,3209,3210,3211,3212,3213,3214,3215,3216,3217,3218,3219,3220,3221,3222,3223,3224,3225,3226,3227,3228,3229,3230,3231,3232,3233,3234,3235,3236,3237,3238,3239,3240,3241,3242,3243,3244,3245,3246,3247,3248,3249,3250,3251,3252,3253,3254,3255,3256,3257,3258,3259,3260,3261,3262,3263,3264,3265,3266,3267,3268,3269,3270,3271,3272,3273,3274,3275,3276,3277,3278,3279,3280,3281,3282,3283,3284,3285,3286,3287,3288,3289,3290,3291,3292,3293,3294,3295,3296,3297,3298,3299,3300,3301,3302,3303,3304,3305,3306,3307,3308,3309,3310,3311,3312,3313,3314,3315,3316,3317,3318,3319,3320,3321,3322,3323,3324,3325,3326,3327,3328,3329,3330,3331,3332,3333,3334,3335,3336,3337,3338,3339,3340,3341,3342,3343,3344,3345,3346,3347,3348,3349,3350,3351,3352,3353,3354,3355,3356,3357,3358,3359,3360,3361,3362,3363,3364,3365,3366,3367,3368,3369,3370,3371,3372,3373,3374,3375,3376,3377,3378,3379,3380,3381,3382,3383,3384,3385,3386,3387,3388,3389,3390,3391,3392,3393,3394,3395,3396,3397,3398,3399,3400,3401,3402,3403,3404,3405,3406,3407,3408,3409,3410,3411,3412,3413,3414,3415,3416,3417,3418,3419,3420,3421,3422,3423,3424,3425,3426,3427,3428,3429,3430,3431,3432,3433,3434,3435,3436,3437,3438,3439,3440,3441,3442,3443,3444,3445,3446,3447,3448,3449,3450,3451,3452,3453,3454,3455,3456,3457,3458,3459,3460,3461,3462,3463,3464,3465,3466,3467,3468,3469,3470,3471,3472,3473,3474,3475,3476,3477,3478,3479,3480,3481,3482,3483,3484,3485,3486,3487,3488,3489,3490,3491,3492,3493,3494,3495,3496,3497,3498,3499,3500,3501,3502,3503,3504,3505,3506,3507,3508,3509,3510,3511,3512,3513,3514,3515,3516,3517,3518,3519,3520,3521,3522,3523,3524,3525,3526,3527,3528,3529,3530,3531,3532,3533,3534,3535,3536,3537,3538,3539,3540,3541,3542,3543,3544,3545,3546,3547,3548,3549,3550,3551,3552,3553,3554,3555,3556,3557,3558,3559,3560,3561,3562,3563,3564,3565,3566,3567,3568,3569,3570,3571,3572,3573,3574,3575,3576,3577,3578,3579,3580,3581,3582,3583,3584,3585,3586,3587,3588,3589,3590,3591,3592,3593,3594,3595,3596,3597,3598,3599,3600,3601,3602,3603,3604,3605,3606,3607,3608,3609,3610,3611,3612,3613,3614,3615,3616,3617,3618,3619,3620,3621,3622,3623,3624,3625,3626,3627,3628,3629,3630,3631,3632,3633,3634,3635,3636,3637,3638,3639,3640,3641,3642,3643,3644,3645,3646,3647,3648,3649,3650,3651,3652,3653,3654,3655,3656,3657,3658,3659,3660,3661,3662,3663,3664,3665,3666,3667,3668,3669,3670,3671,3672,3673,3674,3675,3676,3677,3678,3679,3680,3681,3682,3683,3684,3685,3686,3687,3688,3689,3690,3691,3692,3693,3694,3695,3696,3697,3698,3699,3700,3701,3702,3703,3704,3705,3706,3707,3708,3709,3710,3711,3712,3713,3714,3715,3716,3717,3718,3719,3720,3721,3722,3723,3724,3725,3726,3727,3728,3729,3730,3731,3732,3733,3734,3735,3736,3737,3738,3739,3740,3741,3742,3743,3744,3745,3746,3747,3748,3749,3750,3751,3752,3753,3754,3755,3756,3757,3758,3759,3760,3761,3762,3763,3764,3765,3766,3767,3768,3769,3770,3771,3772,3773,3774,3775,3776,3777,3778,3779,3780,3781,3782,3783,3784,3785,3786,3787,3788,3789,3790,3791,3792,3793,3794,3795,3796,3797,3798,3799,3800,4421,4422,4423,4424,4425,4426,4427,4428,4429,4430,4591,4592,4593,4594,4595,4596,4597,4598,4599,4600,4601,4602,4603,4604,4605,4606,4607,4608,4609,4610,4611,4612,4613,4614,4615,4616,4617,4618,4619,4620,4621,4622,4623,4624,4625,4626,4627,4628,4629,4630,4631,4632,4633,4634,4635,4636,4637,4638,4639,4640,4741,4742,4743,4744,4745,4746,4747,4748,4749,4750,4751,4752,4753,4754,4755,4756,4757,4758,4759,4760,4761,4762,4763,4764,4765,4766,4767,4768,4769,4770,4771,4772,4773,4774,4775,4776,4777,4778,4779,4780,4781,4782,4783,4784,4785,4786,4787,4788,4789,4790,4791,4792,4793,4794,4795,4796,4797,4798,4799,4800,4871,4872,4873,4874,4875,4876,4877,4878,4879,4880,4881,4882,4883,4884,4885,4886,4887,4888,4889,4890,4891,4892,4893,4894,4895,4896,4897,4898,4899,4900,4901,4902,4903,4904,4905,4906,4907,4908,4909,4910,4911,4912,4913,4914,4915,4916,4917,4918,4919,4920,4921,4922,4923,4924,4925,4926,4927,4928,4929,4930,4931,4932,4933,4934,4935,4936,4937,4938,4939,4940,4941,4942,4943,4944,4945,4946,4947,4948,4949,4950,4951,4952,4953,4954,4955,4956,4957,4958,4959,4960,4961,4962,4963,4964,4965,4966,4967,4968,4969,4970,4971,4972,4973,4974,4975,4976,4977,4978,4979,4980,5031,5032,5033,5034,5035,5036,5037,5038,5039,5040,5041,5042,5043,5044,5045,5046,5047,5048,5049,5050,5051,5052,5053,5054,5055,5056,5057,5058,5059,5060,5061,5062,5063,5064,5065,5066,5067,5068,5069,5070,5071,5072,5073,5074,5075,5076,5077,5078,5079,5080,5081,5082,5083,5084,5085,5086,5087,5088,5089,5090,5091,5092,5093,5094,5095,5096,5097,5098,5099,5100,5101,5102,5103,5104,5105,5106,5107,5108,5109,5110,5111,5112,5113,5114,5115,5116,5117,5118,5119,5120,5121,5122,5123,5124,5125,5126,5127,5128,5129,5130,5131,5132,5133,5134,5135,5136,5137,5138,5139,5140,5141,5142,5143,5144,5145,5146,5147,5148,5149,5150,5151,5152,5153,5154,5155,5156,5157,5158,5159,5160,5161,5162,5163,5164,5165,5166,5167,5168,5169,5170,5171,5172,5173,5174,5175,5176,5177,5178,5179,5180,5181,5182,5183,5184,5185,5186,5187,5188,5189,5190,5191,5192,5193,5194,5195,5196,5197,5198,5199,5200,5201,5202,5203,5204,5205,5206,5207,5208,5209,5210,5211,5212,5213,5214,5215,5216,5217,5218,5219,5220,5221,5222,5223,5224,5225,5226,5227,5228,5229,5230,5231,5232,5233,5234,5235,5236,5237,5238,5239,5240,5241,5242,5243,5244,5245,5246,5247,5248,5249,5250,5251,5252,5253,5254,5255,5256,5257,5258,5259,5260,5261,5262,5263,5264,5265,5266,5267,5268,5269,5270,5271,5272,5273,5274,5275,5276,5277,5278,5279,5280,5281,5282,5283,5284,5285,5286,5287,5288,5289,5290,5291,5292,5293,5294,5295,5296,5297,5298,5299,5300,5301,5302,5303,5304,5305,5306,5307,5308,5309,5310,5311,5312,5313,5314,5315,5316,5317,5318,5319,5320,5321,5322,5323,5324,5325,5326,5327,5328,5329,5330,5331,5332,5333,5334,5335,5336,5337,5338,5339,5340,5341,5342,5343,5344,5345,5346,5347,5348,5349,5350,5351,5352,5353,5354,5355,5356,5357,5358,5359,5360,5361,5362,5363,5364,5365,5366,5367,5368,5369,5370,5371,5372,5373,5374,5375,5376,5377,5378,5379,5380,5381,5382,5383,5384,5385,5386,5387,5388,5389,5390,5391,5392,5393,5394,5395,5396,5397,5398,5399,5400,5401,5402,5403,5404,5405,5406,5407,5408,5409,5410,5411,5412,5413,5414,5415,5416,5417,5418,5419,5420,5421,5422,5423,5424,5425,5426,5427,5428,5429,5430,5431,5432,5433,5434,5435,5436,5437,5438,5439,5440,5441,5442,5443,5444,5445,5446,5447,5448,5449,5450,5451,5452,5453,5454,5455,5456,5457,5458,5459,5460,5461,5462,5463,5464,5465,5466,5467,5468,5469,5470,5471,5472,5473,5474,5475,5476,5477,5478,5479,5480,5481,5482,5483,5484,5485,5486,5487,5488,5489,5490,5491,5492,5493,5494,5495,5496,5497,5498,5499,5500,5501,5502,5503,5504,5505,5506,5507,5508,5509,5510,5511,5512,5513,5514,5515,5516,5517,5518,5519,5520,5521,5522,5523,5524,5525,5526,5527,5528,5529,5530,5531,5532,5533,5534,5535,5536,5537,5538,5539,5540,5541,5542,5543,5544,5545,5546,5547,5548,5549,5550,5551,5552,5553,5554,5555,5556,5557,5558,5559,5560,5561,5562,5563,5564,5565,5566,5567,5568,5569,5570,5571,5572,5573,5574,5575,5576,5577,5578,5579,5580,5581,5582,5583,5584,5585,5586,5587,5588,5589,5590,5591,5592,5593,5594,5595,5596,5597,5598,5599,5600,5601,5602,5603,5604,5605,5606,5607,5608,5609,5610,5611,5612,5613,5614,5615,5616,5617,5618,5619,5620,5621,5622,5623,5624,5625,5626,5627,5628,5629,5630,5631,5632,5633,5634,5635,5636,5637,5638,5639,5640,5641,5642,5643,5644,5645,5646,5647,5648,5649,5650,5651,5652,5653,5654,5655,5656,5657,5658,5659,5660,5661,5662,5663,5664,5665,5666,5667,5668,5669,5670,5671,5672,5673,5674,5675,5676,5677,5678,5679,5680,5681,5682,5683,5684,5685,5686,5687,5688,5689,5690,5691,5692,5693,5694,5695,5696,5697,5698,5699,5700,5701,5702,5703,5704,5705,5706,5707,5708,5709,5710,5711,5712,5713,5714,5715,5716,5717,5718,5719,5720,5721,5722,5723,5724,5725,5726,5727,5728,5729,5730,5731,5732,5733,5734,5735,5736,5737,5738,5739,5740,5741,5742,5743,5744,5745,5746,5747,5748,5749,5750,5751,5752,5753,5754,5755,5756,5757,5758,5759,5760,5761,5762,5763,5764,5765,5766,5767,5768,5769,5770,5771,5772,5773,5774,5775,5776,5777,5778,5779,5780,5781,5782,5783,5784,5785,5786,5787,5788,5789,5790,5791,5792,5793,5794,5795,5796,5797,5798,5799,5800)",
@@ -251,6 +244,18 @@
     "key": "WorldObject_ID",
     "where": "WorldObject_ID IN ('cd5009bf-43e9-4782-9712-753fb38f329c','f2affdc0-092f-4919-a7ad-f620b47a4a27')",
     "reason": "True 1.65: floating Camelot Hills banners (owner 2026-11-02): two Albion banners (model 464) on New Frontiers-era towers the 1.64 client never had, hanging 29-39 m over nothing"
+   },
+   {
+    "table": "Mob",
+    "key": "Mob_ID",
+    "where": "ClassType = 'DOL.GS.AccountVaultKeeper' AND Region NOT IN (10, 101, 201)",
+    "reason": "True 1.65 account vault: only the three capitals have one (owner 2026-11-03); the others (Castle Sauvage, Atlantis, New Frontiers, event zones, tutorial) stay out"
+   },
+   {
+    "table": "PathPoints",
+    "key": "PathPoints_ID",
+    "where": "PathPoints_ID LIKE 'p165floor-%' AND (((PathID = 'HR_Ardagh_Connla' AND Step > 134) OR (PathID = 'HR_Ardagh_TirUrphost' AND Step > 168) OR (PathID = 'HR_Ardee_TirUrphost' AND Step > 93) OR (PathID = 'HR_Audliten_GnaFaste' AND Step > 201) OR (PathID = 'HR_Brynach_DruimCain' AND Step > 40) OR (PathID = 'HR_CaerUlfwych_SnowdoniaFortress' AND Step > 663) OR (PathID = 'HR_CampStation_CamelotEast' AND Step > 355) OR (PathID = 'HR_CampStation_GronyrsFarm' AND Step > 315) OR (PathID = 'HR_CastleSauvage_SnowdoniaFortress' AND Step > 448) OR (PathID = 'HR_CastleSauvage_WestCornwall' AND Step > 535) OR (PathID = 'HR_Connla_DruimLigen' AND Step > 258) OR (PathID = 'HR_Connla_InnisCarthaig' AND Step > 170) OR (PathID = 'HR_DruimCain_DruimLigen' AND Step > 229) OR (PathID = 'HR_FortVeldon_WestSkona' AND Step > 524) OR (PathID = 'HR_Galplen_Nalliten' AND Step > 93) OR (PathID = 'HR_GnaFaste_Audliten' AND Step > 198) OR (PathID = 'HR_InnisCarthaig_ParthananFarm' AND Step > 401) OR (PathID = 'HR_MagMell_Howth' AND Step > 110) OR (PathID = 'HR_Nalliten_Galplen' AND Step > 93) OR (PathID = 'HR_ParthananFarm_Ardagh' AND Step > 119) OR (PathID = 'HR_ParthananFarm_InnisCarthaig' AND Step > 394) OR (PathID = 'HR_SnowdoniaFortress_CaerUlfwych' AND Step > 663) OR (PathID = 'HR_SnowdoniaStation_CamelotEast' AND Step > 274) OR (PathID = 'HR_TirNaNog_Brynach' AND Step > 153) OR (PathID = 'HR_TirNaNog_DruimLigen' AND Step > 80) OR (PathID = 'HR_TirUrphost_Ardee' AND Step > 88) OR (PathID = 'HR_VindsaulFaste_Vasudheim' AND Step > 93) OR (PathID = 'HR_WesternCornwall_CastleSauvage' AND Step > 526) OR (PathID = 'HS_AdribardsRetreat_CastleSauvage' AND Step > 369) OR (PathID = 'HS_AdribardsRetreat_WestDowns' AND Step > 230) OR (PathID = 'HS_Ardee_ParthenonFarm' AND Step > 86) OR (PathID = 'HS_Audliten_Mularn' AND Step > 196) OR (PathID = 'HS_Brynach_CursedForest' AND Step > 72) OR (PathID = 'HS_Brynach_TirNaNogNord' AND Step > 228) OR (PathID = 'HS_CaerUlfwych_CornwallStation' AND Step > 215) OR (PathID = 'HS_CaerWitrin_WesternCornwall' AND Step > 128) OR (PathID = 'HS_CamelotNoth_NobsFarm' AND Step > 174) OR (PathID = 'HS_CastleSauvage_AdribardsRetreat' AND Step > 384) OR (PathID = 'HS_CastleSauvage_Ludlow' AND Step > 123) OR (PathID = 'HS_CornwallStation_CaerUlfwych' AND Step > 83) OR (PathID = 'HS_Cotswold_CampacorentinStation' AND Step > 344) OR (PathID = 'HS_Cotswold_SnowdoniaStation' AND Step > 273) OR (PathID = 'HS_CursedForest_Brynach' AND Step > 72) OR (PathID = 'HS_DruimCain_TirnamBeo' AND Step > 191) OR (PathID = 'HS_DruimLigen_Connla' AND Step > 341) OR (PathID = 'HS_FortAtla_Galplen' AND Step > 145) OR (PathID = 'HS_FortAtla_Mularn' AND Step > 345) OR (PathID = 'HS_Galplen_FortAtla' AND Step > 111) OR (PathID = 'HS_Galplen_GnaFaste' AND Step > 46) OR (PathID = 'HS_Galplen_Vasudheim' AND Step > 346) OR (PathID = 'HS_GnaFaste_FortVeldon' AND Step > 647) OR (PathID = 'HS_GnaFaste_Galplen' AND Step > 75) OR (PathID = 'HS_GnaFaste_Huginfel' AND Step > 203) OR (PathID = 'HS_GnaFaste_Raumarik' AND Step > 240) OR (PathID = 'HS_GnaFaste_WestSkona' AND Step > 178) OR (PathID = 'HS_GronyrsFarm_CampacorentinStation' AND Step > 325) OR (PathID = 'HS_Haggerfel_Vasudheim' AND Step > 124) OR (PathID = 'HS_Howth_InnisCarthaig' AND Step > 235) OR (PathID = 'HS_Howth_MagMell' AND Step > 161) OR (PathID = 'HS_Huginfel_GnaFaste' AND Step > 187) OR (PathID = 'HS_Huginfel_Raumarik' AND Step > 89) OR (PathID = 'HS_Huginfel_SvasudFaste' AND Step > 178) OR (PathID = 'HS_Huginfel_Vasudheim' AND Step > 105) OR (PathID = 'HS_Humberton_SnowdoniaFortress' AND Step > 336) OR (PathID = 'HS_InnisCarthaig_Culraid' AND Step > 80) OR (PathID = 'HS_InnisCarthaig_TirnamBeo' AND Step > 346) OR (PathID = 'HS_LlynBarfog_SnowdoniaStation' AND Step > 247) OR (PathID = 'HS_Ludlow_CastleSauvage' AND Step > 125) OR (PathID = 'HS_MagMell_ParthenonFarm' AND Step > 59) OR (PathID = 'HS_Mularn_Audliten' AND Step > 161) OR (PathID = 'HS_Mularn_FortAtla' AND Step > 319) OR (PathID = 'HS_Mularn_Nalliten' AND Step > 399) OR (PathID = 'HS_Mularn_SvasudFaste' AND Step > 103) OR (PathID = 'HS_Nalliten_Mularn' AND Step > 349) OR (PathID = 'HS_Nalliten_VindsaulFaste' AND Step > 283) OR (PathID = 'HS_NobsFarm_CamelotNoth' AND Step > 157) OR (PathID = 'HS_ParthenonFarm_DruimCain' AND Step > 128) OR (PathID = 'HS_Raumarik_GnaFaste' AND Step > 232) OR (PathID = 'HS_Raumarik_Huginfel' AND Step > 86) OR (PathID = 'HS_SnowdoniaFortress_Humberton' AND Step > 332) OR (PathID = 'HS_SnowdoniaStation_LlynBarfog' AND Step > 234) OR (PathID = 'HS_SvasudFaste_Huginfel' AND Step > 202) OR (PathID = 'HS_SvasudFaste_Mularn' AND Step > 111) OR (PathID = 'HS_SvasudFaste_VindsaulFaste' AND Step > 175) OR (PathID = 'HS_TirNaNogNord_InnisCarthaig' AND Step > 424) OR (PathID = 'HS_TirUrphost_Ardagh' AND Step > 183) OR (PathID = 'HS_TirnamBeo_DruimLigen' AND Step > 121) OR (PathID = 'HS_Vasudheim_Galplen' AND Step > 405) OR (PathID = 'HS_Vasudheim_Haggerfel' AND Step > 151) OR (PathID = 'HS_Vasudheim_Huginfel' AND Step > 117) OR (PathID = 'HS_Vasudheim_VindsaulFaste' AND Step > 93) OR (PathID = 'HS_VindsaulFaste_Nalliten' AND Step > 271) OR (PathID = 'HS_VindsaulFaste_SvasudFaste' AND Step > 183) OR (PathID = 'HS_WestDowns_AdribardsRetreat' AND Step > 238) OR (PathID = 'HS_WestSkona_GnaFaste' AND Step > 102) OR (PathID = 'HS_WesternCornwall_CaerWitrin' AND Step > 128) OR (PathID = 'ticket_to_ConnlaMulgraighy' AND Step > 145) OR (PathID = 'ticket_to_CulraidAelerogh' AND Step > 156) OR (PathID = 'ticket_to_Innis_CarthaigMulgraighy' AND Step > 69)) OR PathID NOT IN ('HR_Ardagh_Connla','HR_Ardagh_TirUrphost','HR_Ardee_TirUrphost','HR_Audliten_GnaFaste','HR_Brynach_DruimCain','HR_CaerUlfwych_SnowdoniaFortress','HR_CampStation_CamelotEast','HR_CampStation_GronyrsFarm','HR_CastleSauvage_SnowdoniaFortress','HR_CastleSauvage_WestCornwall','HR_Connla_DruimLigen','HR_Connla_InnisCarthaig','HR_DruimCain_DruimLigen','HR_FortVeldon_WestSkona','HR_Galplen_Nalliten','HR_GnaFaste_Audliten','HR_InnisCarthaig_ParthananFarm','HR_MagMell_Howth','HR_Nalliten_Galplen','HR_ParthananFarm_Ardagh','HR_ParthananFarm_InnisCarthaig','HR_SnowdoniaFortress_CaerUlfwych','HR_SnowdoniaStation_CamelotEast','HR_TirNaNog_Brynach','HR_TirNaNog_DruimLigen','HR_TirUrphost_Ardee','HR_VindsaulFaste_Vasudheim','HR_WesternCornwall_CastleSauvage','HS_AdribardsRetreat_CastleSauvage','HS_AdribardsRetreat_WestDowns','HS_Ardee_ParthenonFarm','HS_Audliten_Mularn','HS_Brynach_CursedForest','HS_Brynach_TirNaNogNord','HS_CaerUlfwych_CornwallStation','HS_CaerWitrin_WesternCornwall','HS_CamelotNoth_NobsFarm','HS_CastleSauvage_AdribardsRetreat','HS_CastleSauvage_Ludlow','HS_CornwallStation_CaerUlfwych','HS_Cotswold_CampacorentinStation','HS_Cotswold_SnowdoniaStation','HS_CursedForest_Brynach','HS_DruimCain_TirnamBeo','HS_DruimLigen_Connla','HS_FortAtla_Galplen','HS_FortAtla_Mularn','HS_Galplen_FortAtla','HS_Galplen_GnaFaste','HS_Galplen_Vasudheim','HS_GnaFaste_FortVeldon','HS_GnaFaste_Galplen','HS_GnaFaste_Huginfel','HS_GnaFaste_Raumarik','HS_GnaFaste_WestSkona','HS_GronyrsFarm_CampacorentinStation','HS_Haggerfel_Vasudheim','HS_Howth_InnisCarthaig','HS_Howth_MagMell','HS_Huginfel_GnaFaste','HS_Huginfel_Raumarik','HS_Huginfel_SvasudFaste','HS_Huginfel_Vasudheim','HS_Humberton_SnowdoniaFortress','HS_InnisCarthaig_Culraid','HS_InnisCarthaig_TirnamBeo','HS_LlynBarfog_SnowdoniaStation','HS_Ludlow_CastleSauvage','HS_MagMell_ParthenonFarm','HS_Mularn_Audliten','HS_Mularn_FortAtla','HS_Mularn_Nalliten','HS_Mularn_SvasudFaste','HS_Nalliten_Mularn','HS_Nalliten_VindsaulFaste','HS_NobsFarm_CamelotNoth','HS_ParthenonFarm_DruimCain','HS_Raumarik_GnaFaste','HS_Raumarik_Huginfel','HS_SnowdoniaFortress_Humberton','HS_SnowdoniaStation_LlynBarfog','HS_SvasudFaste_Huginfel','HS_SvasudFaste_Mularn','HS_SvasudFaste_VindsaulFaste','HS_TirNaNogNord_InnisCarthaig','HS_TirUrphost_Ardagh','HS_TirnamBeo_DruimLigen','HS_Vasudheim_Galplen','HS_Vasudheim_Haggerfel','HS_Vasudheim_Huginfel','HS_Vasudheim_VindsaulFaste','HS_VindsaulFaste_Nalliten','HS_VindsaulFaste_SvasudFaste','HS_WestDowns_AdribardsRetreat','HS_WestSkona_GnaFaste','HS_WesternCornwall_CaerWitrin','ticket_to_ConnlaMulgraighy','ticket_to_CulraidAelerogh','ticket_to_Innis_CarthaigMulgraighy'))",
+    "reason": "True 1.65 horse routes: route-floor points past a refined route's end (refine_routefloor165.py: the refined routes have fewer points)"
    }
   ]
  },
@@ -40255,6 +40260,486 @@
   {
    "sql": "UPDATE DataQuest SET Name = 'The Growling Ghost', StartType = 0, StartName = 'Sergeant Alain', StartRegionID = 1, Description = 'A [growling] ghost haunts the plains. Speak with Growler, and see that he is put to rest.', AcceptText = 'growling', StepType = '4|0|3', TargetName = 'Growler;1|Growler;1|Sergeant Alain;1', StepItemTemplates = '||cq_growler_s_skull', SourceName = '', CollectItemTemplate = '||cq_growler_s_skull', AdvanceText = '||', SourceText = '||', TargetText = '||', StepText = 'Speak with Growler at the edge of Campacorentin Forest. He will ask a favour of you (Growler''s Necklace); you may help him or not.|Put Growler to rest: slay him and take his skull.|Return Growler''s skull to Sergeant Alain on the south side of the Camelot Hills bridge.', MinLevel = 13, MaxLevel = 50, MaxCount = 1, RewardMoney = '0|0|0', RewardXP = '0|0|88000', QuestDependency = '', AllowedClasses = '14|6', FinishText = '', ClassType = 'DOL.GS.Quests.ClassicQuestStep', FinalRewardItemTemplates = '', LastTimeRowUpdated = '2026-11-02 21:00:00' WHERE ID = 20216",
    "reason": "True 1.65 Prima quest: The Growling Ghost, the help-or-slay branches of Growler (Warcry quest 65 2001-12: Reward Experience, Subquest Reward The Growler; Allakhazam 135 notes 2001-11 to 2002-04; Prima 2002)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 450, DPS_AF = 27, SPD_ABS = 41 WHERE Id_nb = 'bastard_sword3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: bastard sword (bastard_sword3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin bastard_sword"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 275, DPS_AF = 21, SPD_ABS = 31 WHERE Id_nb = 'broadsword3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: broadsword (broadsword3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin broadsword"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 100800, DPS_AF = 87, SPD_ABS = 30 WHERE Id_nb = 'carbide_heater_shield3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: carbide heater shield (carbide_heater_shield3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin carbide_heater_shield"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 72000, DPS_AF = 87, SPD_ABS = 40 WHERE Id_nb = 'carbide_kite_shield3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: carbide kite shield (carbide_kite_shield3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin carbide_kite_shield"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 57600, DPS_AF = 87, SPD_ABS = 50 WHERE Id_nb = 'carbide_round_shield3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: carbide round shield (carbide_round_shield3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin carbide_round_shield"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 86400, DPS_AF = 87, SPD_ABS = 30 WHERE Id_nb = 'carbide_tower_shield3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: carbide tower shield (carbide_tower_shield3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin carbide_tower_shield"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 150, DPS_AF = 15, SPD_ABS = 28 WHERE Id_nb = 'club3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: club (club3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin club"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 50400, DPS_AF = 72, SPD_ABS = 30 WHERE Id_nb = 'cobalt_heater_shield3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: cobalt heater shield (cobalt_heater_shield3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin cobalt_heater_shield"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 36000, DPS_AF = 72, SPD_ABS = 40 WHERE Id_nb = 'cobalt_kite_shield3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: cobalt kite shield (cobalt_kite_shield3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin cobalt_kite_shield"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 216000, DPS_AF = 84, SPD_ABS = 35 WHERE Id_nb = 'cobalt_long_sword3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: cobalt long sword (cobalt_long_sword3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin cobalt_long_sword"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 28800, DPS_AF = 72, SPD_ABS = 50 WHERE Id_nb = 'cobalt_round_shield3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: cobalt round shield (cobalt_round_shield3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin cobalt_round_shield"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 43200, DPS_AF = 72, SPD_ABS = 30 WHERE Id_nb = 'cobalt_tower_shield3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: cobalt tower shield (cobalt_tower_shield3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin cobalt_tower_shield"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 16800, DPS_AF = 57, SPD_ABS = 30 WHERE Id_nb = 'dolomite_heater_shield3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: dolomite heater shield (dolomite_heater_shield3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin dolomite_heater_shield"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 12000, DPS_AF = 57, SPD_ABS = 40 WHERE Id_nb = 'dolomite_kite_shield3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: dolomite kite shield (dolomite_kite_shield3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin dolomite_kite_shield"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 72000, DPS_AF = 69, SPD_ABS = 35 WHERE Id_nb = 'dolomite_long_sword3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: dolomite long sword (dolomite_long_sword3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin dolomite_long_sword"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 9600, DPS_AF = 57, SPD_ABS = 50 WHERE Id_nb = 'dolomite_round_shield3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: dolomite round shield (dolomite_round_shield3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin dolomite_round_shield"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 14400, DPS_AF = 57, SPD_ABS = 30 WHERE Id_nb = 'dolomite_tower_shield3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: dolomite tower shield (dolomite_tower_shield3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin dolomite_tower_shield"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 4000, DPS_AF = 30, SPD_ABS = 44 WHERE Id_nb = 'elm_animist_staff_of_Mysticism3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: elm Animist Staff of Mysticism (elm_animist_staff_of_Mysticism3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin elm_Animist_Staff_of_Mysticism"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 4000, DPS_AF = 30, SPD_ABS = 44 WHERE Id_nb = 'elm_animist_staff_of_arboreal_path3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: elm Animist Staff of Arboreal Path (elm_animist_staff_of_arboreal_path3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin elm_Animist_Staff_of_Arboreal_Path"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 4000, DPS_AF = 30, SPD_ABS = 44 WHERE Id_nb = 'elm_animist_staff_of_creeping_path3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: elm Animist Staff of Creeping Path (elm_animist_staff_of_creeping_path3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin elm_Animist_Staff_of_Creeping_Path"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 4000, DPS_AF = 30, SPD_ABS = 44 WHERE Id_nb = 'elm_animist_staff_of_verdant_path3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: elm Animist Staff of Verdant Path (elm_animist_staff_of_verdant_path3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin elm_Animist_Staff_of_Verdant_Path"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 4000, DPS_AF = 30, SPD_ABS = 44 WHERE Id_nb = 'elm_eldritch_staff_of_light3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: elm Eldritch Staff of Light (elm_eldritch_staff_of_light3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin elm_Eldritch_Staff_of_Light"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 4000, DPS_AF = 30, SPD_ABS = 44 WHERE Id_nb = 'elm_eldritch_staff_of_magic3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: elm Eldritch Staff of Magic (elm_eldritch_staff_of_magic3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin elm_Eldritch_Staff_of_Magic"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 4000, DPS_AF = 30, SPD_ABS = 44 WHERE Id_nb = 'elm_eldritch_staff_of_mana3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: elm Eldritch Staff of Mana (elm_eldritch_staff_of_mana3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin elm_Eldritch_Staff_of_Mana"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 4000, DPS_AF = 30, SPD_ABS = 44 WHERE Id_nb = 'elm_eldritch_staff_of_void3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: elm Eldritch Staff of Void (elm_eldritch_staff_of_void3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin elm_Eldritch_Staff_of_Void"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 4000, DPS_AF = 30, SPD_ABS = 44 WHERE Id_nb = 'elm_enchanter_staff_of_enchantments3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: elm Enchanter Staff of Enchantments (elm_enchanter_staff_of_enchantments3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin elm_Enchanter_Staff_of_Enchantments"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 4000, DPS_AF = 30, SPD_ABS = 44 WHERE Id_nb = 'elm_enchanter_staff_of_light3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: elm Enchanter Staff of Light (elm_enchanter_staff_of_light3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin elm_Enchanter_Staff_of_Light"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 4000, DPS_AF = 30, SPD_ABS = 44 WHERE Id_nb = 'elm_enchanter_staff_of_magic3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: elm Enchanter Staff of Magic (elm_enchanter_staff_of_magic3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin elm_Enchanter_Staff_of_Magic"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 4000, DPS_AF = 30, SPD_ABS = 44 WHERE Id_nb = 'elm_enchanter_staff_of_mana3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: elm Enchanter Staff of Mana (elm_enchanter_staff_of_mana3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin elm_Enchanter_Staff_of_Mana"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 4000, DPS_AF = 30, SPD_ABS = 44 WHERE Id_nb = 'elm_mentalist_staff_of_light3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: elm Mentalist Staff of Light (elm_mentalist_staff_of_light3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin elm_Mentalist_Staff_of_Light"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 4000, DPS_AF = 30, SPD_ABS = 44 WHERE Id_nb = 'elm_mentalist_staff_of_magic3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: elm Mentalist Staff of Magic (elm_mentalist_staff_of_magic3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin elm_Mentalist_Staff_of_Magic"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 225, DPS_AF = 18, SPD_ABS = 27 WHERE Id_nb = 'falcata3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: falcata (falcata3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin falcata"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 1400, DPS_AF = 27, SPD_ABS = 30 WHERE Id_nb = 'ferrite_heater_shield3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: ferrite heater shield (ferrite_heater_shield3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin ferrite_heater_shield"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 1000, DPS_AF = 27, SPD_ABS = 40 WHERE Id_nb = 'ferrite_kite_shield3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: ferrite kite shield (ferrite_kite_shield3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin ferrite_kite_shield"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 6000, DPS_AF = 39, SPD_ABS = 35 WHERE Id_nb = 'ferrite_long_sword3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: ferrite long sword (ferrite_long_sword3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin ferrite_long_sword"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 800, DPS_AF = 27, SPD_ABS = 50 WHERE Id_nb = 'ferrite_round_shield3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: ferrite round shield (ferrite_round_shield3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin ferrite_round_shield"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 1200, DPS_AF = 27, SPD_ABS = 30 WHERE Id_nb = 'ferrite_tower_shield3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: ferrite tower shield (ferrite_tower_shield3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin ferrite_tower_shield"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 475, DPS_AF = 24, SPD_ABS = 53 WHERE Id_nb = 'great_hammer3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: great hammer (great_hammer3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin great_hammer"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 525, DPS_AF = 27, SPD_ABS = 52 WHERE Id_nb = 'great_sword3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: great sword (great_sword3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin great_sword"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 325, DPS_AF = 24, SPD_ABS = 38 WHERE Id_nb = 'hammer3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: hammer (hammer3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin hammer"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 144000, DPS_AF = 75, SPD_ABS = 44 WHERE Id_nb = 'heartwood_animist_staff_of_arboreal_path3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: heartwood Animist Staff of Arboreal Path (heartwood_animist_staff_of_arboreal_path3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin heartwood_Animist_Staff_of_Arboreal_Path"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 144000, DPS_AF = 75, SPD_ABS = 44 WHERE Id_nb = 'heartwood_animist_staff_of_creeping_path3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: heartwood Animist Staff of Creeping Path (heartwood_animist_staff_of_creeping_path3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin heartwood_Animist_Staff_of_Creeping_Path"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 144000, DPS_AF = 75, SPD_ABS = 44 WHERE Id_nb = 'heartwood_animist_staff_of_mysticism3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: heartwood Animist Staff of Mysticism (heartwood_animist_staff_of_mysticism3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin heartwood_Animist_Staff_of_Mysticism"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 144000, DPS_AF = 75, SPD_ABS = 44 WHERE Id_nb = 'heartwood_animist_staff_of_verdant_path3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: heartwood Animist Staff of Verdant Path (heartwood_animist_staff_of_verdant_path3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin heartwood_Animist_Staff_of_Verdant_Path"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 144000, DPS_AF = 75, SPD_ABS = 44 WHERE Id_nb = 'heartwood_eldritch_staff_of_light3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: heartwood Eldritch Staff of Light (heartwood_eldritch_staff_of_light3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin heartwood_Eldritch_Staff_of_Light"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 144000, DPS_AF = 75, SPD_ABS = 44 WHERE Id_nb = 'heartwood_eldritch_staff_of_magic3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: heartwood Eldritch Staff of Magic (heartwood_eldritch_staff_of_magic3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin heartwood_Eldritch_Staff_of_Magic"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 144000, DPS_AF = 75, SPD_ABS = 44 WHERE Id_nb = 'heartwood_eldritch_staff_of_mana3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: heartwood Eldritch Staff of Mana (heartwood_eldritch_staff_of_mana3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin heartwood_Eldritch_Staff_of_Mana"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 144000, DPS_AF = 75, SPD_ABS = 44 WHERE Id_nb = 'heartwood_eldritch_staff_of_void3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: heartwood Eldritch Staff of Void (heartwood_eldritch_staff_of_void3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin heartwood_Eldritch_Staff_of_Void"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 144000, DPS_AF = 75, SPD_ABS = 44 WHERE Id_nb = 'heartwood_enchanter_staff_of_enchantments3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: heartwood Enchanter Staff of Enchantments (heartwood_enchanter_staff_of_enchantments3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin heartwood_Enchanter_Staff_of_Enchantments"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 144000, DPS_AF = 75, SPD_ABS = 44 WHERE Id_nb = 'heartwood_enchanter_staff_of_light3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: heartwood Enchanter Staff of Light (heartwood_enchanter_staff_of_light3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin heartwood_Enchanter_Staff_of_Light"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 144000, DPS_AF = 75, SPD_ABS = 44 WHERE Id_nb = 'heartwood_enchanter_staff_of_magic3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: heartwood Enchanter Staff of Magic (heartwood_enchanter_staff_of_magic3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin heartwood_Enchanter_Staff_of_Magic"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 144000, DPS_AF = 75, SPD_ABS = 44 WHERE Id_nb = 'heartwood_enchanter_staff_of_mana3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: heartwood Enchanter Staff of Mana (heartwood_enchanter_staff_of_mana3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin heartwood_Enchanter_Staff_of_Mana"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 144000, DPS_AF = 75, SPD_ABS = 44 WHERE Id_nb = 'heartwood_mentalist_staff_of_light3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: heartwood Mentalist Staff of Light (heartwood_mentalist_staff_of_light3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin heartwood_Mentalist_Staff_of_Light"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 144000, DPS_AF = 75, SPD_ABS = 44 WHERE Id_nb = 'heartwood_mentalist_staff_of_magic3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: heartwood Mentalist Staff of Magic (heartwood_mentalist_staff_of_magic3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin heartwood_Mentalist_Staff_of_Magic"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 144000, DPS_AF = 75, SPD_ABS = 44 WHERE Id_nb = 'heartwood_mentalist_staff_of_mana3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: heartwood Mentalist Staff of Mana (heartwood_mentalist_staff_of_mana3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin heartwood_Mentalist_Staff_of_Mana"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 144000, DPS_AF = 75, SPD_ABS = 44 WHERE Id_nb = 'heartwood_mentalist_staff_of_mentalism3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: heartwood Mentalist Staff of Mentalism (heartwood_mentalist_staff_of_mentalism3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin heartwood_Mentalist_Staff_of_Mentalism"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 87, DPS_AF = 165, SPD_ABS = 30 WHERE Id_nb = 'heater_shield3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: heater shield (heater_shield3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin heater_shield"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 48000, DPS_AF = 60, SPD_ABS = 44 WHERE Id_nb = 'ironwood_animist_staff_of_arboreal_path3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: ironwood Animist Staff of Arboreal Path (ironwood_animist_staff_of_arboreal_path3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin ironwood_Animist_Staff_of_Arboreal_Path"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 48000, DPS_AF = 60, SPD_ABS = 44 WHERE Id_nb = 'ironwood_animist_staff_of_creeping_path3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: ironwood Animist Staff of Creeping Path (ironwood_animist_staff_of_creeping_path3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin ironwood_Animist_Staff_of_Creeping_Path"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 48000, DPS_AF = 60, SPD_ABS = 44 WHERE Id_nb = 'ironwood_animist_staff_of_mysticism3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: ironwood Animist Staff of Mysticism (ironwood_animist_staff_of_mysticism3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin ironwood_Animist_Staff_of_Mysticism"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 48000, DPS_AF = 60, SPD_ABS = 44 WHERE Id_nb = 'ironwood_animist_staff_of_verdant_path3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: ironwood Animist Staff of Verdant Path (ironwood_animist_staff_of_verdant_path3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin ironwood_Animist_Staff_of_Verdant_Path"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 48000, DPS_AF = 60, SPD_ABS = 44 WHERE Id_nb = 'ironwood_eldritch_staff_of_light3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: ironwood Eldritch Staff of Light (ironwood_eldritch_staff_of_light3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin ironwood_Eldritch_Staff_of_Light"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 48000, DPS_AF = 60, SPD_ABS = 44 WHERE Id_nb = 'ironwood_eldritch_staff_of_magic3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: ironwood Eldritch Staff of Magic (ironwood_eldritch_staff_of_magic3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin ironwood_Eldritch_Staff_of_Magic"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 48000, DPS_AF = 60, SPD_ABS = 44 WHERE Id_nb = 'ironwood_eldritch_staff_of_mana3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: ironwood Eldritch Staff of Mana (ironwood_eldritch_staff_of_mana3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin ironwood_Eldritch_Staff_of_Mana"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 48000, DPS_AF = 60, SPD_ABS = 44 WHERE Id_nb = 'ironwood_eldritch_staff_of_void3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: ironwood Eldritch Staff of Void (ironwood_eldritch_staff_of_void3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin ironwood_Eldritch_Staff_of_Void"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 48000, DPS_AF = 60, SPD_ABS = 44 WHERE Id_nb = 'ironwood_enchanter_staff_of_enchantments3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: ironwood Enchanter Staff of Enchantments (ironwood_enchanter_staff_of_enchantments3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin ironwood_Enchanter_Staff_of_Enchantments"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 48000, DPS_AF = 60, SPD_ABS = 44 WHERE Id_nb = 'ironwood_enchanter_staff_of_light3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: ironwood Enchanter Staff of Light (ironwood_enchanter_staff_of_light3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin ironwood_Enchanter_Staff_of_Light"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 48000, DPS_AF = 60, SPD_ABS = 44 WHERE Id_nb = 'ironwood_enchanter_staff_of_magic3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: ironwood Enchanter Staff of Magic (ironwood_enchanter_staff_of_magic3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin ironwood_Enchanter_Staff_of_Magic"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 48000, DPS_AF = 60, SPD_ABS = 44 WHERE Id_nb = 'ironwood_enchanter_staff_of_mana3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: ironwood Enchanter Staff of Mana (ironwood_enchanter_staff_of_mana3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin ironwood_Enchanter_Staff_of_Mana"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 48000, DPS_AF = 60, SPD_ABS = 44 WHERE Id_nb = 'ironwood_mentalist_staff_of_light3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: ironwood Mentalist Staff of Light (ironwood_mentalist_staff_of_light3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin ironwood_Mentalist_Staff_of_Light"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 48000, DPS_AF = 60, SPD_ABS = 44 WHERE Id_nb = 'ironwood_mentalist_staff_of_magic3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: ironwood Mentalist Staff of Magic (ironwood_mentalist_staff_of_magic3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin ironwood_Mentalist_Staff_of_Magic"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 48000, DPS_AF = 60, SPD_ABS = 44 WHERE Id_nb = 'ironwood_mentalist_staff_of_mana3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: ironwood Mentalist Staff of Mana (ironwood_mentalist_staff_of_mana3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin ironwood_Mentalist_Staff_of_Mana"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 48000, DPS_AF = 60, SPD_ABS = 44 WHERE Id_nb = 'ironwood_mentalist_staff_of_mentalism3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: ironwood Mentalist Staff of Mentalism (ironwood_mentalist_staff_of_mentalism3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin ironwood_Mentalist_Staff_of_Mentalism"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 62, DPS_AF = 165, SPD_ABS = 40 WHERE Id_nb = 'kite_shield3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: kite shield (kite_shield3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin kite_shield"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 375, DPS_AF = 24, SPD_ABS = 35 WHERE Id_nb = 'long_sword3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: long sword (long_sword3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin long_sword"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 225, DPS_AF = 18, SPD_ABS = 32 WHERE Id_nb = 'mace3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: mace (mace3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin mace"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 16000, DPS_AF = 45, SPD_ABS = 44 WHERE Id_nb = 'oaken_animist_staff_of_arboreal_path3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: oaken Animist Staff of Arboreal Path (oaken_animist_staff_of_arboreal_path3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin oaken_Animist_Staff_of_Arboreal_Path"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 16000, DPS_AF = 45, SPD_ABS = 44 WHERE Id_nb = 'oaken_animist_staff_of_creeping_path3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: oaken Animist Staff of Creeping Path (oaken_animist_staff_of_creeping_path3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin oaken_Animist_Staff_of_Creeping_Path"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 16000, DPS_AF = 45, SPD_ABS = 44 WHERE Id_nb = 'oaken_animist_staff_of_mysticism3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: oaken Animist Staff of Mysticism (oaken_animist_staff_of_mysticism3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin oaken_Animist_Staff_of_Mysticism"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 16000, DPS_AF = 45, SPD_ABS = 44 WHERE Id_nb = 'oaken_animist_staff_of_verdant_path3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: oaken Animist Staff of Verdant Path (oaken_animist_staff_of_verdant_path3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin oaken_Animist_Staff_of_Verdant_Path"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 16000, DPS_AF = 45, SPD_ABS = 44 WHERE Id_nb = 'oaken_eldritch_staff_of_light3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: oaken Eldritch Staff of Light (oaken_eldritch_staff_of_light3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin oaken_Eldritch_Staff_of_Light"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 16000, DPS_AF = 45, SPD_ABS = 44 WHERE Id_nb = 'oaken_eldritch_staff_of_magic3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: oaken Eldritch Staff of Magic (oaken_eldritch_staff_of_magic3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin oaken_Eldritch_Staff_of_Magic"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 16000, DPS_AF = 45, SPD_ABS = 44 WHERE Id_nb = 'oaken_eldritch_staff_of_mana3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: oaken Eldritch Staff of Mana (oaken_eldritch_staff_of_mana3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin oaken_Eldritch_Staff_of_Mana"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 16000, DPS_AF = 45, SPD_ABS = 44 WHERE Id_nb = 'oaken_eldritch_staff_of_void3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: oaken Eldritch Staff of Void (oaken_eldritch_staff_of_void3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin oaken_Eldritch_Staff_of_Void"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 16000, DPS_AF = 45, SPD_ABS = 44 WHERE Id_nb = 'oaken_enchanter_staff_of_enchantments3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: oaken Enchanter Staff of Enchantments (oaken_enchanter_staff_of_enchantments3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin oaken_Enchanter_Staff_of_Enchantments"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 16000, DPS_AF = 45, SPD_ABS = 44 WHERE Id_nb = 'oaken_enchanter_staff_of_light3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: oaken Enchanter Staff of Light (oaken_enchanter_staff_of_light3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin oaken_Enchanter_Staff_of_Light"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 16000, DPS_AF = 45, SPD_ABS = 44 WHERE Id_nb = 'oaken_enchanter_staff_of_magic3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: oaken Enchanter Staff of Magic (oaken_enchanter_staff_of_magic3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin oaken_Enchanter_Staff_of_Magic"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 16000, DPS_AF = 45, SPD_ABS = 44 WHERE Id_nb = 'oaken_enchanter_staff_of_mana3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: oaken Enchanter Staff of Mana (oaken_enchanter_staff_of_mana3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin oaken_Enchanter_Staff_of_Mana"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 16000, DPS_AF = 45, SPD_ABS = 44 WHERE Id_nb = 'oaken_mentalist_staff_of_light3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: oaken Mentalist Staff of Light (oaken_mentalist_staff_of_light3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin oaken_Mentalist_Staff_of_Light"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 16000, DPS_AF = 45, SPD_ABS = 44 WHERE Id_nb = 'oaken_mentalist_staff_of_magic3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: oaken Mentalist Staff of Magic (oaken_mentalist_staff_of_magic3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin oaken_Mentalist_Staff_of_Magic"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 16000, DPS_AF = 45, SPD_ABS = 44 WHERE Id_nb = 'oaken_mentalist_staff_of_mana3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: oaken Mentalist Staff of Mana (oaken_mentalist_staff_of_mana3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin oaken_Mentalist_Staff_of_Mana"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 16000, DPS_AF = 45, SPD_ABS = 44 WHERE Id_nb = 'oaken_mentalist_staff_of_mentalism3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: oaken Mentalist Staff of Mentalism (oaken_mentalist_staff_of_mentalism3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin oaken_Mentalist_Staff_of_Mentalism"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 5600, DPS_AF = 42, SPD_ABS = 30 WHERE Id_nb = 'quartz_heater_shield3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: quartz heater shield (quartz_heater_shield3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin quartz_heater_shield"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 4000, DPS_AF = 42, SPD_ABS = 40 WHERE Id_nb = 'quartz_kite_shield3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: quartz kite shield (quartz_kite_shield3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin quartz_kite_shield"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 24000, DPS_AF = 54, SPD_ABS = 35 WHERE Id_nb = 'quartz_long_sword3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: quartz long sword (quartz_long_sword3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin quartz_long_sword"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 3200, DPS_AF = 42, SPD_ABS = 50 WHERE Id_nb = 'quartz_round_shield3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: quartz round shield (quartz_round_shield3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin quartz_round_shield"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 4800, DPS_AF = 42, SPD_ABS = 30 WHERE Id_nb = 'quartz_tower_shield3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: quartz tower shield (quartz_tower_shield3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin quartz_tower_shield"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 50, DPS_AF = 165, SPD_ABS = 50 WHERE Id_nb = 'round_shield3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: round shield (round_shield3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin round_shield"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 288000, DPS_AF = 90, SPD_ABS = 44 WHERE Id_nb = 'runewood_animist_staff_of_arboreal_path3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: runewood Animist Staff of Arboreal Path (runewood_animist_staff_of_arboreal_path3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin runewood_Animist_Staff_of_Arboreal_Path"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 288000, DPS_AF = 90, SPD_ABS = 44 WHERE Id_nb = 'runewood_animist_staff_of_creeping_path3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: runewood Animist Staff of Creeping Path (runewood_animist_staff_of_creeping_path3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin runewood_Animist_Staff_of_Creeping_Path"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 288000, DPS_AF = 90, SPD_ABS = 44 WHERE Id_nb = 'runewood_animist_staff_of_mysticism3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: runewood Animist Staff of Mysticism (runewood_animist_staff_of_mysticism3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin runewood_Animist_Staff_of_Mysticism"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 288000, DPS_AF = 90, SPD_ABS = 44 WHERE Id_nb = 'runewood_animist_staff_of_verdant_path3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: runewood Animist Staff of Verdant Path (runewood_animist_staff_of_verdant_path3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin runewood_Animist_Staff_of_Verdant_Path"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 288000, DPS_AF = 90, SPD_ABS = 44 WHERE Id_nb = 'runewood_eldritch_staff_of_light3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: runewood Eldritch Staff of Light (runewood_eldritch_staff_of_light3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin runewood_Eldritch_Staff_of_Light"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 288000, DPS_AF = 90, SPD_ABS = 44 WHERE Id_nb = 'runewood_eldritch_staff_of_magic3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: runewood Eldritch Staff of Magic (runewood_eldritch_staff_of_magic3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin runewood_Eldritch_Staff_of_Magic"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 288000, DPS_AF = 90, SPD_ABS = 44 WHERE Id_nb = 'runewood_eldritch_staff_of_mana3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: runewood Eldritch Staff of Mana (runewood_eldritch_staff_of_mana3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin runewood_Eldritch_Staff_of_Mana"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 288000, DPS_AF = 90, SPD_ABS = 44 WHERE Id_nb = 'runewood_eldritch_staff_of_void3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: runewood Eldritch Staff of Void (runewood_eldritch_staff_of_void3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin runewood_Eldritch_Staff_of_Void"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 288000, DPS_AF = 90, SPD_ABS = 44 WHERE Id_nb = 'runewood_enchanter_staff_of_enchantments3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: runewood Enchanter Staff of Enchantments (runewood_enchanter_staff_of_enchantments3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin runewood_Enchanter_Staff_of_Enchantments"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 288000, DPS_AF = 90, SPD_ABS = 44 WHERE Id_nb = 'runewood_enchanter_staff_of_light3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: runewood Enchanter Staff of Light (runewood_enchanter_staff_of_light3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin runewood_Enchanter_Staff_of_Light"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 288000, DPS_AF = 90, SPD_ABS = 44 WHERE Id_nb = 'runewood_enchanter_staff_of_magic3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: runewood Enchanter Staff of Magic (runewood_enchanter_staff_of_magic3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin runewood_Enchanter_Staff_of_Magic"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 288000, DPS_AF = 90, SPD_ABS = 44 WHERE Id_nb = 'runewood_enchanter_staff_of_mana3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: runewood Enchanter Staff of Mana (runewood_enchanter_staff_of_mana3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin runewood_Enchanter_Staff_of_Mana"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 288000, DPS_AF = 90, SPD_ABS = 44 WHERE Id_nb = 'runewood_mentalist_staff_of_light3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: runewood Mentalist Staff of Light (runewood_mentalist_staff_of_light3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin runewood_Mentalist_Staff_of_Light"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 288000, DPS_AF = 90, SPD_ABS = 44 WHERE Id_nb = 'runewood_mentalist_staff_of_magic3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: runewood Mentalist Staff of Magic (runewood_mentalist_staff_of_magic3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin runewood_Mentalist_Staff_of_Magic"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 288000, DPS_AF = 90, SPD_ABS = 44 WHERE Id_nb = 'runewood_mentalist_staff_of_mana3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: runewood Mentalist Staff of Mana (runewood_mentalist_staff_of_mana3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin runewood_Mentalist_Staff_of_Mana"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 288000, DPS_AF = 90, SPD_ABS = 44 WHERE Id_nb = 'runewood_mentalist_staff_of_mentalism3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: runewood Mentalist Staff of Mentalism (runewood_mentalist_staff_of_mentalism3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin runewood_Mentalist_Staff_of_Mentalism"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 150, DPS_AF = 15, SPD_ABS = 24 WHERE Id_nb = 'short_sword3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: short sword (short_sword3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin short_sword"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 275, DPS_AF = 21, SPD_ABS = 35 WHERE Id_nb = 'spiked_club3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: spiked club (spiked_club3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin spiked_club"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 425, DPS_AF = 27, SPD_ABS = 42 WHERE Id_nb = 'spiked_mace3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: spiked mace (spiked_mace3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin spiked_mace"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 75, DPS_AF = 165, SPD_ABS = 30 WHERE Id_nb = 'tower_shield3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: tower shield (tower_shield3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin tower_shield"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 450, DPS_AF = 21, SPD_ABS = 50 WHERE Id_nb = 'two-hand_spiked_mace3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: two-hand spiked mace (two-hand_spiked_mace3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin two-hand_spiked_mace"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET Realm = 3, Price = 275, DPS_AF = 15, SPD_ABS = 46 WHERE Id_nb = 'two-handed_sword3' AND Realm = 2 AND Price = 30",
+   "reason": "True 1.65 merchant item: two-handed sword (two-handed_sword3) sold by realm 3 merchants had realm 2 and 30 copper; as its twin two-handed_sword"
   },
   {
    "sql": "UPDATE ItemTemplate SET IsDropable = 1, IsIndestructible = 0, Price = 30 WHERE Id_nb = 'Moonstone'",
