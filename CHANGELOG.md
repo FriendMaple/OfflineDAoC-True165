@@ -49,6 +49,7 @@ hold). Its changelog has the history of everything this version inherits.
 - Merchants: the Hibernian staff, weapon and shield merchants (Tir na Nog's weapon merchant among them) no longer sell caster staffs, blades, blunts and shields for 30 copper that you can't equip ("not of this realm"): those 120 items have their realm and price back.
 - Account vaults: an account vault keeper in each capital (Camelot, Jordheim, Tir na Nog) lets your characters of one realm share items. Each realm has its own vault. This is a convenience addition that 1.65 did not have.
 - Horse routes: horses no longer ride under the bridge near Druim Ligen or jump onto the bridge towers on the routes over the Druim Ligen, Innis Carthaig and Midgard river bridges.
+- Experience: the camp bonus tops out at the period values, 30% in normal zones and 50% in dungeons, underwater and every RvR zone (the frontier zones and the battlegrounds), as before patch 1.71. It was 55% outdoors and 66% in dungeons.
 
 ## 0.2 (2026-11-01)
 

@@ -1588,7 +1588,7 @@ namespace DOL.GS.ServerRules
                 // 1.49 http://news-daoc.goa.com/view_patchnote_archive.php?id_article=2478
                 // "Camp bonuses have been substantially upped in dungeons. Now camp bonuses in dungeons are, on average, 20% higher than outside camp bonuses."
                 // Average outside max camp bonus is somewhere between 50 and 60%.
-                double fullCampBonus = killedNpc.CurrentZone.IsDungeon ? Properties.MAX_DUNGEON_CAMP_BONUS : Properties.MAX_CAMP_BONUS;
+                double fullCampBonus = FullCampBonus(killedNpc);
                 double campBonusPerc;
 
                 if (GameLoop.GameLoopTime - killedNpc.SpawnTick > 1800000) // Spawn of this NPC was more than 30 minutes ago -> full camp bonus.
@@ -1823,9 +1823,7 @@ namespace DOL.GS.ServerRules
             if (baseXpReward <= 0)
                 return;
 
-            double fullCampBonus = killedNpc.CurrentZone.IsDungeon
-                ? Properties.MAX_DUNGEON_CAMP_BONUS
-                : Properties.MAX_CAMP_BONUS;
+            double fullCampBonus = FullCampBonus(killedNpc);
             double campBonusPercent;
             if (GameLoop.GameLoopTime - killedNpc.SpawnTick > 1800000)
             {
@@ -2204,6 +2202,25 @@ namespace DOL.GS.ServerRules
                 playerToAward.Out.SendMessage($"{killedPlayer.Name} has been killed recently and is worth no experience!", eChatType.CT_Important, eChatLoc.CL_SystemWindow);
             }
         }
+
+        /// <summary>
+        /// The full camp bonus of a kill (players and bots alike). True 1.65 Mode uses the period caps (owner 2026-11-03): the
+        /// live values "for the last two and a half years" before patch 1.71 (Sanya Thomas Q&A, Warcry news 27948,
+        /// 2004-08-24): 30% over base in normal zones, 50% in dungeon, underwater and frontier zones; every RvR zone (the
+        /// frontier zones and the battlegrounds) takes the frontier value. Normal mode keeps the server properties.
+        /// </summary>
+        public static double FullCampBonus(GameNPC killedNpc)
+        {
+            Zone zone = killedNpc?.CurrentZone;
+            if (!Classic165Mode.IsOn)
+                return zone?.IsDungeon == true ? Properties.MAX_DUNGEON_CAMP_BONUS : Properties.MAX_CAMP_BONUS;
+            bool fifty = zone?.IsDungeon == true || zone?.IsRvR == true || killedNpc.CurrentRegion?.IsRvR == true ||
+                         killedNpc.IsUnderwater;
+            return fifty ? PeriodCampBonusSpecial : PeriodCampBonusNormal;
+        }
+
+        public const double PeriodCampBonusNormal = 0.30;
+        public const double PeriodCampBonusSpecial = 0.50;
 
         private static long CalculateOutpostExperienceBonus(GamePlayer playerToAward, long baseXpReward)
         {
