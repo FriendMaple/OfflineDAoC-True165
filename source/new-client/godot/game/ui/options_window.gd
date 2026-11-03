@@ -444,6 +444,16 @@ func _controls() -> void:
 				if not v:
 					ui.player.call("set_mouse_look", false)))
 		_hint("ON: THE MOUSE LOOK TOGGLE KEY (RIGHT MOUSE, AS THE ORIGINAL - A RIGHT CLICK ON OPEN GROUND) HIDES THE CURSOR AND THE MOUSE TURNS YOU; PRESS IT AGAIN OR ESC TO GET THE CURSOR BACK. OFF: RIGHT CLICK ONLY STEERS AND USES THINGS.")
+	# the 1.64 camera (owner 2026-11-03, a player report): ON = the camera swings back behind you as you move (ours as
+	# before); OFF = as the 1.64 client, a camera you turned with the mouse or the Pan Camera key stays there until
+	# Camera Reset
+	_row("CAMERA FOLLOW", _toggle(bool(settings.get_value("player", "camera_follow", true)),
+			func(v: bool):
+		_save("player", "camera_follow", v)
+		if ui and ui.player:
+			ui.player.set("camera_follow", v)
+			ui.player.call("reset_camera")))
+	_hint("ON: THE CAMERA SWINGS BACK BEHIND YOU AS YOU MOVE. OFF (AS THE 1.64 CLIENT): TURN THE CAMERA WITH THE LEFT MOUSE BUTTON OR THE PAN CAMERA KEY AND IT STAYS THERE AS YOU RUN, UNTIL CAMERA RESET. CAMERA TOGGLE SWITCHES FIRST PERSON.")
 	_heading("KEY CONFIGURATION")
 	# shared by every character unless this one has its own (the WoW-style override, off by default)
 	if not pregame:                                    # (no character yet on the character select screen)

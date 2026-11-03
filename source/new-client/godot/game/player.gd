@@ -95,8 +95,8 @@ var _action_left := 0.0
 var _gear: Array = []                   # weapon holders on the attach bones
 var char_yaw := 0.0                    # where the character faces; forward = -Z rotated by this
 var cam_yaw := 0.0                     # camera heading (differs from char_yaw while orbiting with the left mouse)
-var cam_pitch := -0.22
-var cam_distance := 5.5
+var cam_pitch := CAM_PITCH_DEFAULT
+var cam_distance := CAM_DISTANCE
 var swimming := false
 var climbing := false                    # on a ladder (state 7)
 var _climb_vy := 0.0
@@ -117,6 +117,17 @@ var force_clip := ""                   # tests: hold one animation regardless of
 var movement_mode := "modern"          # "modern" or "classic" (Esc menu)
 var input_enabled := true              # false while a menu is open
 var mouse_sensitivity := 1.0           # Options: CONTROLS
+# The 1.64 client's camera (owner 2026-11-03, a player report: "pan ... and not have it recenter on the character as
+# you run until you hit the camera reset keybind"): game.dll keeps the camera's angle around you (user.dat
+# cameracircleangle) and only Reset Camera (0x42b6ea) zeroes it; the Pan Camera key turns that angle instead of you
+# (0x4275f8 with 0x8827b4 set). camera_follow (Options > CONTROLS): true = ours as before, the camera swings back
+# behind you as you move; false = the 1.64 way. first_person: user.dat cameramode 0 (Camera Toggle). Saved in
+# settings [camera], as the client's user.dat kept cameradistance / cameracircletilt / cameracircleangle / cameramode.
+var camera_follow := true
+var first_person := false
+var _cam_offset := 0.0                  # the camera's angle around you (cam_yaw - char_yaw) while it does not follow
+const CAM_DISTANCE := 5.5              # the default zoom (Camera Reset puts it back, as 0x42b6ea's 240 units)
+const CAM_PITCH_DEFAULT := -0.22
 var invert_mouse := false
 var _lmb_world := false                # mouse buttons pressed on the world (not on an interface window)
 var _rmb_world := false
@@ -176,6 +187,11 @@ func _ready() -> void:
 	mouse_sensitivity = float(cfg.get_value("player", "mouse_sensitivity", 1.0))
 	invert_mouse = bool(cfg.get_value("player", "invert_mouse", false))
 	mouse_look_allowed = bool(cfg.get_value("player", "mouse_look_toggle", false))
+	camera_follow = bool(cfg.get_value("player", "camera_follow", true))
+	cam_distance = clampf(float(cfg.get_value("camera", "distance", CAM_DISTANCE)), CAM_MIN, CAM_MAX)
+	cam_pitch = clampf(float(cfg.get_value("camera", "pitch", CAM_PITCH_DEFAULT)), -CAM_PITCH, CAM_PITCH)
+	_cam_offset = float(cfg.get_value("camera", "angle", 0.0)) if not camera_follow else 0.0
+	first_person = bool(cfg.get_value("camera", "first_person", false))
 	_register_torch.call_deferred()
 
 	_pivot = Node3D.new()
@@ -202,6 +218,7 @@ func set_model(path: String) -> void:
 		return
 	_model = doc.generate_scene(state) as Node3D
 	add_child(_model)
+	_model.visible = not first_person
 	var meta_path := path.get_basename() + ".json"
 	if FileAccess.file_exists(meta_path):
 		var meta: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(meta_path))
@@ -243,6 +260,7 @@ func set_figure(c: Dictionary) -> void:
 		return
 	fig.apply(c.get("look", {}))
 	_model = fig
+	_model.visible = not first_person               # (first person: your own figure hidden)
 	_anim = fig.anim
 	_set_loops()
 	_strides = fig.meta.get("strides_units", {})
@@ -283,7 +301,7 @@ func morph(info: Dictionary) -> void:
 		_unmorphed = {}
 		_morph_casts = {}
 		if _model:
-			_model.visible = true
+			_model.visible = not first_person
 	var path := String(info.get("gltf", ""))
 	if path == "" or _model == null:
 		_apply_model_yaw()
@@ -302,6 +320,7 @@ func morph(info: Dictionary) -> void:
 	m.scale *= float(info.get("scale", 1.0))
 	m.position.y += Npc.figure_look(m, info, get_instance_id())   # skin alpha + hover (the shade floats, see-through)
 	add_child(m)
+	m.visible = not first_person
 	_morph = m
 	_model = m
 	var players := m.find_children("*", "AnimationPlayer", true, false)
@@ -702,16 +721,48 @@ func stop_track(quiet := false) -> void:
 	track_target = null
 
 
-## Camera Reset (owner 2026-11-02: the key did nothing - no code read it): the camera swings back behind you at the
-## default pitch, as the client's Camera Reset key; the zoom stays.
+## Camera Reset (owner 2026-11-02: the key did nothing - no code read it): the camera back behind you, level and at
+## the default zoom, as game.dll's Reset Camera (0x42b6ea: angle and tilt 0, distance 240, height 10).
 func reset_camera() -> void:
 	cam_yaw = char_yaw
-	cam_pitch = -0.22
+	cam_pitch = CAM_PITCH_DEFAULT
+	_cam_offset = 0.0
+	cam_distance = CAM_DISTANCE
+
+
+## First person (the 1.64 client's camera mode 0, user.dat cameramode): the camera at your eyes, your own figure
+## hidden; Camera Toggle switches it, zooming out leaves it.
+func set_first_person(on: bool) -> void:
+	first_person = on
+	if _model and _morph == null:
+		_model.visible = not on
+	if _morph:
+		_morph.visible = not on
+
+
+func _cam_target() -> float:
+	return 0.0 if first_person else cam_distance
+
+
+## The camera as you left it, for next time (the client's user.dat [main] camera keys).
+func save_camera() -> void:
+	var cfg := ConfigFile.new()
+	cfg.load("user://settings.cfg")
+	cfg.set_value("camera", "distance", cam_distance)
+	cfg.set_value("camera", "pitch", cam_pitch)
+	cfg.set_value("camera", "angle", _cam_offset)
+	cfg.set_value("camera", "first_person", first_person)
+	cfg.save("user://settings.cfg")
+
+
+func _exit_tree() -> void:
+	if camera:
+		save_camera()
 
 
 func face(yaw_radians: float) -> void:
 	char_yaw = yaw_radians
-	cam_yaw = yaw_radians
+	cam_yaw = yaw_radians + (0.0 if camera_follow else _cam_offset)
 	_body_offset = 0.0
 	_apply_model_yaw()
 
@@ -776,6 +827,9 @@ func _unhandled_input(event: InputEvent) -> void:
 			cam_pitch = clampf(cam_pitch - dy * 0.004, -CAM_PITCH, CAM_PITCH)
 		if (rmb or (mouse_look and not lmb)) and not no_turn:
 			char_yaw = cam_yaw                          # steering: the character follows the camera
+			_cam_offset = 0.0
+		elif lmb and not camera_follow:
+			_cam_offset = wrapf(cam_yaw - char_yaw, -PI, PI)   # (the 1.64 camera: the panned angle stays)
 	elif event is InputEventMouseButton:
 		if event.button_index in [MOUSE_BUTTON_LEFT, MOUSE_BUTTON_RIGHT]:
 			# hide the cursor while dragging, as WoW does, and put it back where the drag began (capturing the mouse
@@ -788,12 +842,16 @@ func _unhandled_input(event: InputEvent) -> void:
 				get_viewport().warp_mouse(_cursor_at)
 			if event.pressed and event.button_index == MOUSE_BUTTON_RIGHT and not no_turn:
 				char_yaw = cam_yaw                      # right-click snaps the character to the camera heading
+				_cam_offset = 0.0
 		elif event.button_index in [MOUSE_BUTTON_WHEEL_UP, MOUSE_BUTTON_WHEEL_DOWN] and _over_window():
 			pass                                        # the wheel over a window scrolls it, never the camera
 		elif event.pressed and event.button_index == MOUSE_BUTTON_WHEEL_UP:
 			cam_distance = maxf(CAM_MIN, cam_distance * 0.88)
 		elif event.pressed and event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-			cam_distance = minf(CAM_MAX_FREE if free_camera else CAM_MAX, cam_distance / 0.88)
+			if first_person:
+				set_first_person(false)                 # (zooming out leaves first person)
+			else:
+				cam_distance = minf(CAM_MAX_FREE if free_camera else CAM_MAX, cam_distance / 0.88)
 	if (event is InputEventKey or event is InputEventMouseButton) and event.is_pressed() and not event.is_echo():
 		# the client's bindable actions (Keybinds: keyboard.dat presets, rebindable incl. mouse buttons)
 		if Keybinds.pressed(event, "run_lock"):
@@ -814,6 +872,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			autorun = false
 		elif Keybinds.pressed(event, "camera_reset"):
 			reset_camera()
+		elif Keybinds.pressed(event, "camera_toggle"):
+			set_first_person(not first_person)
 
 
 func _unshifted(event: InputEventKey) -> InputEventKey:
@@ -877,7 +937,7 @@ func _physics_step(delta: float) -> void:
 			_anim.get_animation(clip).loop_mode = Animation.LOOP_LINEAR
 			_anim.play(clip, 0.2)
 		_pivot.rotation = Vector3(cam_pitch, cam_yaw, 0.0)
-		_arm.spring_length = lerpf(_arm.spring_length, cam_distance, minf(1.0, delta * 10.0))
+		_arm.spring_length = lerpf(_arm.spring_length, _cam_target(), minf(1.0, delta * 10.0))
 		return
 	if dead:
 		autorun = false
@@ -915,13 +975,23 @@ func _physics_step(delta: float) -> void:
 		_fly(delta, ahead, strafe, turn)
 		return
 
+	var pan := _act("pan_camera")
+	if pan:                                           # Pan Camera held: the turn keys turn the camera around you
+		cam_yaw += turn * TURN_RATE * delta
+		turn = 0.0
+		if not camera_follow:
+			_cam_offset = wrapf(cam_yaw - char_yaw, -PI, PI)
 	if not no_turn:
 		char_yaw += turn * TURN_RATE * delta
 	var moving := absf(ahead) > 0.0 or absf(strafe) > 0.0
-	if not lmb and (moving or absf(turn) > 0.0):
-		cam_yaw = lerp_angle(cam_yaw, char_yaw, minf(1.0, delta * 8.0))   # camera swings back behind
-	if not rmb and not lmb and absf(turn) > 0.0:
-		cam_yaw = char_yaw
+	if not camera_follow:
+		if not lmb and not pan:
+			cam_yaw = char_yaw + _cam_offset              # the 1.64 camera: where you put it, until Camera Reset
+	elif not pan:
+		if not lmb and (moving or absf(turn) > 0.0):
+			cam_yaw = lerp_angle(cam_yaw, char_yaw, minf(1.0, delta * 8.0))   # camera swings back behind
+		if not rmb and not lmb and absf(turn) > 0.0:
+			cam_yaw = char_yaw
 
 	var local := Vector3(strafe, 0.0, -ahead)
 	if local.length() > 1.0:
@@ -965,7 +1035,7 @@ func _physics_step(delta: float) -> void:
 		_air_time = 0.0
 		_animate(ahead, strafe, speed, delta)
 		_pivot.rotation = Vector3(cam_pitch, cam_yaw, 0.0)
-		_arm.spring_length = lerpf(_arm.spring_length, cam_distance, minf(1.0, delta * 10.0))
+		_arm.spring_length = lerpf(_arm.spring_length, _cam_target(), minf(1.0, delta * 10.0))
 		return
 	if swimming:
 		velocity.x = wish.x
@@ -994,7 +1064,7 @@ func _physics_step(delta: float) -> void:
 
 	_animate(ahead, strafe, speed, delta)
 	_pivot.rotation = Vector3(cam_pitch, cam_yaw, 0.0)
-	_arm.spring_length = lerpf(_arm.spring_length, cam_distance, minf(1.0, delta * 10.0))
+	_arm.spring_length = lerpf(_arm.spring_length, _cam_target(), minf(1.0, delta * 10.0))
 
 
 func _animate(ahead: float, strafe: float, speed: float, delta: float) -> void:
@@ -1205,5 +1275,5 @@ func _fly(delta: float, ahead: float, strafe: float, turn: float) -> void:
 	velocity = Vector3.ZERO
 	_apply_model_yaw()
 	_pivot.rotation = Vector3(cam_pitch, cam_yaw, 0.0)
-	_arm.spring_length = lerpf(_arm.spring_length, cam_distance, minf(1.0, delta * 10.0))
+	_arm.spring_length = lerpf(_arm.spring_length, _cam_target(), minf(1.0, delta * 10.0))
 	_play(force_clip if force_clip != "" else "idle")
