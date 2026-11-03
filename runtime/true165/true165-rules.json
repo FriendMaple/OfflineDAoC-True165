@@ -40255,6 +40255,10 @@
   {
    "sql": "UPDATE DataQuest SET Name = 'The Growling Ghost', StartType = 0, StartName = 'Sergeant Alain', StartRegionID = 1, Description = 'A [growling] ghost haunts the plains. Speak with Growler, and see that he is put to rest.', AcceptText = 'growling', StepType = '4|0|3', TargetName = 'Growler;1|Growler;1|Sergeant Alain;1', StepItemTemplates = '||cq_growler_s_skull', SourceName = '', CollectItemTemplate = '||cq_growler_s_skull', AdvanceText = '||', SourceText = '||', TargetText = '||', StepText = 'Speak with Growler at the edge of Campacorentin Forest. He will ask a favour of you (Growler''s Necklace); you may help him or not.|Put Growler to rest: slay him and take his skull.|Return Growler''s skull to Sergeant Alain on the south side of the Camelot Hills bridge.', MinLevel = 13, MaxLevel = 50, MaxCount = 1, RewardMoney = '0|0|0', RewardXP = '0|0|88000', QuestDependency = '', AllowedClasses = '14|6', FinishText = '', ClassType = 'DOL.GS.Quests.ClassicQuestStep', FinalRewardItemTemplates = '', LastTimeRowUpdated = '2026-11-02 21:00:00' WHERE ID = 20216",
    "reason": "True 1.65 Prima quest: The Growling Ghost, the help-or-slay branches of Growler (Warcry quest 65 2001-12: Reward Experience, Subquest Reward The Growler; Allakhazam 135 notes 2001-11 to 2002-04; Prima 2002)"
+  },
+  {
+   "sql": "UPDATE ItemTemplate SET IsDropable = 1, IsIndestructible = 0, Price = 30 WHERE Id_nb = 'Moonstone'",
+   "reason": "True 1.65 moonstone: the epic quest Moonstone can be dropped, destroyed and sold to a merchant for 30 copper (the value of the moonstone gem), by players and bots: bots of worlds that still carry the wrong drops sell them off (owner 2026-11-03)"
   }
  ]
 }

@@ -1209,11 +1209,25 @@ namespace DOL.AI.Brain
             AutonomousFormation.Offset formation = ambientWander
                 ? AutonomousFormation.ForIdleWander(BotBody.Name, tightInterior, (int)(GameLoop.GameLoopTime / IDLE_WANDER_CYCLE_MS))
                 : AutonomousFormation.For(BotBody.Name, tightInterior);
-            double radians = formation.AngleDegrees * Math.PI / 180d;
-            var destination = new Point3D(
-                leader.X + (int)Math.Round(Math.Cos(radians) * formation.Distance),
-                leader.Y + (int)Math.Round(Math.Sin(radians) * formation.Distance),
-                leader.Z);
+            // Behind and beside the player, turned with the player's facing (owner 2026-11-03: a companion stood in
+            // front of its standing player; the spot used to be a fixed compass direction). Each group slot has its own
+            // place in the rear half (behind, the rear diagonals, the flanks); idle wander drifts around it.
+            int slot = Math.Max(0, Body.GroupIndex - 1) % RearFormationDegrees.Length;
+            int drift = ambientWander ? formation.AngleDegrees - AutonomousFormation.For(BotBody.Name, tightInterior).AngleDegrees : 0;
+            int relative = RearFormationDegrees[slot] + drift;
+            ushort slotHeading = (ushort)((leader.Heading + relative * 4096 / 360 + 4096 * 2) & 0xFFF);
+            Point2D spot = leader.GetPointFromHeading(slotHeading, formation.Distance);
+            var destination = new Point3D(spot.X, spot.Y, leader.Z);
+            // A standing player who only turns does not send the group walking around: a companion already behind or
+            // beside its player, at about its distance, stays; one left in front of the player (a run-past, a fight)
+            // walks back round behind.
+            if (!ambientWander && !leader.IsMoving && !leader.IsObjectInFront(Body, 120, 0) &&
+                Body.IsWithinRadius(leader, formation.Distance + 80) && !Body.IsWithinRadius(leader, 30))
+            {
+                if (!Body.IsMoving)
+                    _ambientWanderMovement = false;
+                return;
+            }
             if (companionTravel && !ambientWander && leader.CurrentZone != null)
             {
                 Vector3 floor = CompanionFollowPolicy.FormationDestination(BotBody, new(destination.X, destination.Y, destination.Z));
@@ -1236,6 +1250,9 @@ namespace DOL.AI.Brain
             else if (!Body.IsMoving)
                 _ambientWanderMovement = false;
         }
+
+        /// <summary>Formation places around a player, in degrees from the player's facing (180 = straight behind).</summary>
+        private static readonly int[] RearFormationDegrees = [180, 140, 220, 110, 250, 160, 200];
 
         private void MaybeIdleRoleplay()
         {

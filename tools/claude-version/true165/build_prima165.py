@@ -217,6 +217,8 @@ def drop_fixes(c, report):
     for idn, name, realm in c.execute('select Id_nb, Name, Realm from ItemTemplate'):
         items[n(name)].append((idn, realm))
     def pick_item(name, realm):
+        if n(name) == n('moonstone'):
+            return 'moonstone_gem'   # the period loot gem, not the epic quest item (build_moonstone165.py)
         cands = items.get(n(name), [])
         if not cands:
             return None

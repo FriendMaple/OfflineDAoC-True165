@@ -758,7 +758,8 @@ namespace DOL.GS;
                            item.OwnerLot == 0 && item.SlotPosition >= (int)eInventorySlot.FirstBackpack &&
                            item.SlotPosition <= (int)eInventorySlot.LastBackpack &&
                            !operationalLoadout.Contains(item) &&
-                           !TryGetEquipmentUpgrade(bot, item, out _))
+                           !TryGetEquipmentUpgrade(bot, item, out _) &&
+                           (!Classic165Mode.IsOn || HasRealUse(item)))
             .Select(item => new ListingCandidate(item, RecommendListingPrice(item)))
             .Where(candidate => candidate.PriceCopper >= Math.Max(50, candidate.Item.Level * candidate.Item.Level * 4))
             .OrderByDescending(candidate => candidate.PriceCopper)
@@ -801,9 +802,69 @@ namespace DOL.GS;
                 return true;
             // If the bot's single listing slot is occupied, unwanted gear can
             // still be sold normally. Never vendor an equippable upgrade.
-            return canList && item.IsTradable &&
+            // True 1.65 Mode: only an item with a real use is kept for the Realm Exchange; vendor trash is sold
+            return canList && item.IsTradable && (!Classic165Mode.IsOn || HasRealUse(item)) &&
                 RecommendListingPrice(item) >= Math.Max(50, item.Level * item.Level * 4);
         }
+
+        /// <summary>
+        /// True 1.65 Mode (owner 2026-11-03): what a bot may put on the Realm Exchange - only items with a real use, never
+        /// vendor trash (monster parts, loot gems and plain no-bonus drops are sold to a merchant instead): crafted
+        /// items (armour, weapons, potions...), equipment with magic bonuses, a proc or charges, crafting and salvage
+        /// materials (anything a recipe uses), tradable quest items, dyes and enamels, potions, poisons, ammunition,
+        /// spellcraft gems, alchemy tinctures, siege equipment and supplies, and housing items.
+        /// </summary>
+        public static bool HasRealUse(DbInventoryItem item)
+        {
+            if (item == null)
+                return false;
+            eObjectType type = (eObjectType)item.Object_Type;
+            if (item.IsCrafted)
+                return true;
+            bool magic = item.Bonus1 != 0 || item.Bonus2 != 0 || item.Bonus3 != 0 || item.Bonus4 != 0 || item.Bonus5 != 0 ||
+                         item.Bonus6 != 0 || item.Bonus7 != 0 || item.Bonus8 != 0 || item.Bonus9 != 0 || item.Bonus10 != 0 ||
+                         item.ExtraBonus != 0;
+            bool gear = type is >= eObjectType.GenericWeapon and <= eObjectType._LastWeapon or
+                >= eObjectType._FirstArmor and <= eObjectType._LastArmor or eObjectType.Magical or eObjectType.Shield or
+                eObjectType.Instrument;
+            if (gear && magic)
+                return true;
+            if (item.SpellID != 0 || item.SpellID1 != 0 || item.ProcSpellID != 0 || item.ProcSpellID1 != 0 || item.PoisonSpellID != 0)
+                return true;
+            if (type is eObjectType.Poison or eObjectType.Arrow or eObjectType.Bolt or eObjectType.AlchemyTincture or
+                    eObjectType.SpellcraftGem or >= eObjectType._FirstHouse and <= eObjectType._LastHouse or
+                    >= eObjectType.SiegeBalista and <= eObjectType.SiegeTrebuchet ||
+                BotSiegeRuntime.IsSupply(item.Id_nb))
+                return true;
+            string name = (item.Name ?? string.Empty).ToLowerInvariant();
+            string id = (item.Id_nb ?? string.Empty).ToLowerInvariant();
+            if (name.Contains("dye") || name.Contains("enamel") || id.Contains("_dye") || id.Contains("enamel"))
+                return true;
+            return !string.IsNullOrEmpty(item.Id_nb) && RealUseIds.Value.Contains(item.Id_nb);
+        }
+
+        /// <summary>Crafting materials (every recipe ingredient, salvage results included) and the items a quest asks
+        /// for, from the database once.</summary>
+        private static readonly Lazy<HashSet<string>> RealUseIds = new(() =>
+        {
+            var ids = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            try
+            {
+                foreach (DbCraftedXItem part in GameServer.Database.SelectAllObjects<DbCraftedXItem>())
+                    if (!string.IsNullOrEmpty(part.IngredientId_nb))
+                        ids.Add(part.IngredientId_nb);
+                foreach (DbDataQuest quest in GameServer.Database.SelectAllObjects<DbDataQuest>())
+                    foreach (string list in new[] { quest.StepItemTemplates, quest.CollectItemTemplate })
+                        foreach (string entry in (list ?? string.Empty).Split('|', StringSplitOptions.RemoveEmptyEntries))
+                            if (entry.Split(';')[0].Trim() is { Length: > 0 } questItem)
+                                ids.Add(questItem);
+            }
+            catch (Exception)
+            {
+                // no database (tests): no materials or quest items known
+            }
+            return ids;
+        }, LazyThreadSafetyMode.ExecutionAndPublication);
 
         /// <summary>
         /// Performs the same appraisal and range checks as a real merchant, removes the exact

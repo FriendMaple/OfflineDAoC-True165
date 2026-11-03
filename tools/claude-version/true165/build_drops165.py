@@ -80,6 +80,8 @@ def main():
         add = []
         for k, (n, label) in rates.items():
             cands = items.get(k)
+            if k == 'moonstone':
+                cands = [('moonstone_gem', 1, 0)]   # the period loot gem, not the epic quest item (build_moonstone165.py)
             if not cands:
                 missing[label] += 1
                 continue
