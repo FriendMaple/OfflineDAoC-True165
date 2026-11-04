@@ -37,6 +37,9 @@ var _picked := -1
 var _stance_buttons := {}
 var _dismiss: Button
 var _refresh_left := 0.0
+var _doll: CompanionDoll            # the companion's paper doll on the Gear page
+var _bag_cells: Array = []          # its bag slots, laid out like inventory rows
+var _gear_sig_prev := ""            # worn-gear signature, to re-dress the doll only when it changes
 
 
 func build() -> void:
@@ -106,6 +109,14 @@ func refresh() -> void:
 	_dismiss.visible = state == "with"
 	for b in _slots:
 		(b as CompSlot).refresh()
+	for c in _bag_cells:
+		(c as BagSlot).refresh()
+	# re-dress the paper doll only when its worn gear actually changes
+	var sig := _gear_sig(s)
+	if sig != _gear_sig_prev:
+		_gear_sig_prev = sig
+		if _doll and is_instance_valid(_doll):
+			_doll.redraw(s)
 	_refresh_training(s)
 	_refresh_tactics(s)
 	var stance := String(Companions.info(rec).get("stance", "aggressive"))
@@ -121,37 +132,63 @@ func _process(delta: float) -> void:
 		if s and _status:
 			var lo := CombatRules.xp_for_level(s.level)
 			var hi := CombatRules.xp_for_level(s.level + 1)
-			_status.text = "HEALTH %d / %d    POWER %d / %d    ENDURANCE %d    EXPERIENCE %d%%" % [s.hp, s.max_hp, s.power_pts,
-					s.max_power, s.end_pts, int(100.0 * (s.xp - lo) / maxf(1.0, hi - lo))]
+		_status.text = "HEALTH %d / %d    POWER %d / %d    ENDURANCE %d    EXPERIENCE %d%%" % [s.hp, s.max_hp, s.power_pts,
+				s.max_power, s.end_pts, int(100.0 * (s.xp - lo) / maxf(1.0, hi - lo))]
+
+
+## A cheap signature of the companion's worn gear, so the paper doll is re-dressed only when it changes.
+func _gear_sig(s: CharacterState) -> String:
+	var parts := []
+	for k in CharacterState.EQUIP_SLOTS:
+		if int(k) == 37:
+			continue
+		var e := s.item_at(k)
+		parts.append(str(e.get("id", "")) if not e.is_empty() else "-")
+	return "|".join(parts)
 
 
 # --- gear -------------------------------------------------------------------------------------------------------
-
 func _build_gear(page: Control) -> void:
-	CompanionUi.text(page, "WORN", Vector2(14, 0), Vector2(100, 12), 8, UiArt.GOLD)
-	var slots := CharacterState.EQUIP_SLOTS.filter(func(x): return int(x) != 37)   # (the 3 x 6 grid: no mythical)
+	CompanionUi.text(page, "WORN", Vector2(14.0, 0.0), Vector2(100.0, 12.0), 8, UiArt.GOLD)
+	# the companion on its paper doll: the figure wearing its worn gear, like the player's doll on the right panel
+	var doll := CompanionDoll.new()
+	doll.position = Vector2(174.0, 14.0)
+	doll.size = Vector2(102.0, 128.0)
+	doll.sheet = _sheet()
+	doll.build()
+	page.add_child(doll)
+	_doll = doll
+	# worn equipment slots in two columns around the doll (the 3 x 6 grid, no mythical slot)
+	var slots := CharacterState.EQUIP_SLOTS.filter(func(x): return int(x) != 37)
 	for i in slots.size():
 		var col := i / 6
 		var row := i % 6
+		var bx := 14.0 if col == 0 else 284.0
 		var b := CompSlot.new()
 		b.window = self
 		b.slot = int(slots[i])
-		b.position = Vector2(14 + col * 140, 14 + row * (BOX + 6))
+		b.position = Vector2(bx, 14.0 + row * (BOX + 6.0))
 		b.size = Vector2(BOX, BOX)
 		page.add_child(b)
 		_slots.append(b)
-		CompanionUi.text(page, String(CharacterState.SLOT_NAMES.get(int(slots[i]), "")), b.position + Vector2(BOX + 4, 5), Vector2(110, 12), 7, CompanionUi.DIM)
-	CompanionUi.text(page, "BAG (WEIGHTLESS)", Vector2(14, 188), Vector2(160, 12), 8, UiArt.GOLD)
+		var nx := 38.0 if col == 0 else 308.0
+		var nw := 130.0 if col == 0 else 134.0
+		CompanionUi.text(page, String(CharacterState.SLOT_NAMES.get(int(slots[i]), "")),
+			Vector2(nx, 14.0 + row * (BOX + 6.0) + 5.0), Vector2(nw, 12.0), 7, CompanionUi.DIM)
+	# its bag: ten weightless slots, laid out like inventory rows below the doll
+	CompanionUi.text(page, "ITS BAG", Vector2(14.0, 166.0), Vector2(120.0, 12.0), 8, UiArt.GOLD)
 	for i in Companions.BAG_SLOTS:
-		var b := CompSlot.new()
-		b.window = self
-		b.slot = Companions.BAG_FIRST + i
-		b.position = Vector2(14 + i * (BOX + 4), 202)
-		b.size = Vector2(BOX, BOX)
-		page.add_child(b)
-		_slots.append(b)
-	CompanionUi.text(page, "Drag items from your backpack onto a slot to hand them over; double-click one of its items to take it back.",
-			Vector2(14, 228), Vector2(SIZE.x - 28, 20), 7, CompanionUi.DIM, true)
+		var row := i / 5
+		var col := i % 5
+		var cell := BagSlot.new()
+		cell.window = self
+		cell.slot = Companions.BAG_FIRST + i
+		cell.position = Vector2(14.0 + col * 86.0, 180.0 + row * 26.0)
+		cell.size = Vector2(86.0, 24.0)
+		cell.sheet = _sheet()
+		cell.refresh()
+		page.add_child(cell)
+		_bag_cells.append(cell)
 
 
 class CompSlot extends Control:
@@ -197,6 +234,163 @@ class CompSlot extends Control:
 		prev.texture = _icon.texture
 		prev.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		prev.size = Vector2(28, 28) * get_global_transform().get_scale()
+		set_drag_preview(prev)
+		return {"kind": "comp_item", "slot": slot, "comp": window.id}
+
+	func _can_drop_data(_p: Vector2, data: Variant) -> bool:
+		return InventorySheet.is_item(data) or (data is Dictionary and String(data.get("kind", "")) == "comp_item" and int(data.comp) == window.id)
+
+	func _drop_data(_p: Vector2, data: Variant) -> void:
+		if InventorySheet.is_item(data):
+			window.companions.give_item(window.id, int(data.slot), slot)
+		else:
+			window.companions.move_item(window.id, int(data.slot), slot)
+		window.refresh()
+
+	func _gui_input(event: InputEvent) -> void:
+		if event is InputEventMouseButton and event.pressed and (event.double_click or event.button_index == MOUSE_BUTTON_RIGHT):
+			window.companions.take_item(window.id, slot)
+			window.refresh()
+			accept_event()
+
+
+class CompanionDoll extends Control:
+	## A companion's paper doll: its figure wearing its worn gear, like the player's doll on the right panel.
+	var _vp: SubViewport
+	var _view: TextureRect
+	var _pivot: Node3D
+	var _figure: Fig3Figure
+	var sheet
+	var _gear: Array = []
+
+	func build() -> void:
+		mouse_filter = Control.MOUSE_FILTER_STOP
+		_vp = SubViewport.new()
+		_vp.size = Vector2i(size * 4.0)
+		_vp.own_world_3d = true
+		_vp.transparent_bg = true
+		_vp.msaa_3d = Viewport.MSAA_4X
+		_vp.render_target_update_mode = SubViewport.UPDATE_WHEN_VISIBLE
+		add_child(_vp)
+		var view := TextureRect.new()
+		view.texture = _vp.get_texture()
+		view.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		view.stretch_mode = TextureRect.STRETCH_SCALE
+		view.set_anchors_preset(Control.PRESET_FULL_RECT)
+		view.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		add_child(view)
+		var env := WorldEnvironment.new()
+		env.environment = Environment.new()
+		env.environment.background_mode = Environment.BG_CLEAR_COLOR
+		env.environment.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
+		env.environment.ambient_light_color = Color(0.55, 0.55, 0.6)
+		_vp.add_child(env)
+		var sun := DirectionalLight3D.new()
+		sun.rotation_degrees = Vector3(-35, 25, 0)
+		sun.light_energy = 1.1
+		_vp.add_child(sun)
+		var cam := Camera3D.new()
+		cam.fov = 30
+		cam.keep_aspect = Camera3D.KEEP_HEIGHT
+		cam.position = Vector3(0, 0.95, 4.2)
+		_vp.add_child(cam)
+		cam.look_at(Vector3(0, 0.92, 0))
+		_pivot = Node3D.new()
+		_vp.add_child(_pivot)
+		var c := sheet.character if sheet and sheet.character is Dictionary else {}
+		var prefix := String(c.get("prefix", ""))
+		if prefix != "":
+			var f := Fig3Figure.make()
+			_pivot.add_child(f)
+			if f.load_figure(prefix):
+				f.apply(c.get("look", {}) if c.get("look") is Dictionary else {})
+				_figure = f
+				_dress()
+		_pivot.rotation.y = deg_to_rad(15)
+		_fit.call_deferred()
+
+	const FIT_HEIGHT := 1.85
+
+	## Dress the figure from the companion's worn armour and weapons (Player.dress, the same as the player's doll).
+	func _dress() -> void:
+		if _figure == null or not is_instance_valid(_figure) or not sheet:
+			return
+		for g in _gear:
+			if is_instance_valid(g):
+				g.queue_free()
+		_gear = Player.dress(_figure, sheet.item_at, sheet.active_weapon, false, true,
+				sheet.character.get("gear", {}) if sheet.character is Dictionary else {})
+
+	## Scale the figure so its height always fills the doll arch the same, whatever the race or size.
+	func _fit() -> void:
+		if not is_inside_tree():
+			return
+		await get_tree().process_frame
+		_pivot.scale = Vector3.ONE
+		var lo := INF
+		var hi := -INF
+		for mi in _pivot.find_children("*", "MeshInstance3D", true, false):
+			var m := mi as MeshInstance3D
+			if not m.is_visible_in_tree() or m.mesh == null:
+				continue
+			var box: AABB = _pivot.global_transform.affine_inverse() * m.global_transform * m.get_aabb()
+			lo = minf(lo, box.position.y)
+			hi = maxf(hi, box.end.y)
+		if hi > lo:
+			var k := FIT_HEIGHT / (hi - lo)
+			_pivot.scale = Vector3.ONE * k
+			_pivot.position.y = -lo * k
+
+	## Re-dress from a (possibly new) sheet and re-fit the figure.
+	func redraw(s) -> void:
+		sheet = s
+		_dress()
+		_fit.call_deferred()
+
+
+class BagSlot extends Control:
+	## One bag slot in the paper-doll gear tab: icon + name, drag to hand over / move, double-click to take back.
+	var window: CompanionWindow
+	var slot := 0
+	var sheet
+	var _icon: TextureRect
+	var _name: Label
+
+	func _init() -> void:
+		mouse_filter = Control.MOUSE_FILTER_STOP
+		_icon = TextureRect.new()
+		_icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		_icon.stretch_mode = TextureRect.STRETCH_SCALE
+		_icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		_icon.position = Vector2(2.0, 2.0)
+		_icon.size = Vector2(20.0, 20.0)
+		add_child(_icon)
+		_name = UiArt.label("", 7, UiArt.CREAM)
+		_name.position = Vector2(24.0, 2.0)
+		_name.size = Vector2(60.0, 12.0)
+		_name.clip_text = true
+		_name.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		add_child(_name)
+
+	func refresh() -> void:
+		var s := window._sheet()
+		var it := s.item_at(slot) if s else {}
+		_icon.texture = ItemDb.icon(int(it.get("icon", 0))) if not it.is_empty() else null
+		_name.text = String(it.get("name", "")).to_upper() if not it.is_empty() else ""
+		tooltip_text = String(it.get("name", "")).to_upper()
+
+	func _make_custom_tooltip(_t: String) -> Object:
+		var s := window._sheet()
+		return ItemTooltip.make(s.item_at(slot)) if s and not s.item_at(slot).is_empty() else null
+
+	func _get_drag_data(_p: Vector2) -> Variant:
+		var s := window._sheet()
+		if s == null or s.entry(slot).is_empty():
+			return null
+		var prev := TextureRect.new()
+		prev.texture = _icon.texture
+		prev.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		prev.size = Vector2(28.0, 28.0) * get_global_transform().get_scale()
 		set_drag_preview(prev)
 		return {"kind": "comp_item", "slot": slot, "comp": window.id}
 
