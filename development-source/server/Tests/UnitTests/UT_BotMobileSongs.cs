@@ -1108,8 +1108,8 @@ namespace DOL.UnitTests
 
         [TestCase(true, false, true, true, eSpellType.SpeedEnhancement)]
         [TestCase(true, true, true, true, eSpellType.Bladeturn)]
-        [TestCase(false, false, true, true, eSpellType.Bladeturn)]
-        [TestCase(false, false, false, true, eSpellType.DamageAdd)]
+        [TestCase(false, false, true, true, eSpellType.SpeedEnhancement)]
+        [TestCase(false, false, false, true, eSpellType.SpeedEnhancement)]
         [TestCase(false, true, true, false, eSpellType.DamageAdd)]
         public void WardenUsesOneSituationalAnchor(bool moving, bool combat, bool grouped, bool pbt, eSpellType expected) =>
             Assert.That(BotSongTwistPolicy.WardenAnchor(moving, combat, grouped, pbt), Is.EqualTo(expected));
