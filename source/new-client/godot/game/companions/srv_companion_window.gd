@@ -356,13 +356,80 @@ class GearSlot extends Control:
 	var window: SrvCompanionWindow
 	var slot := 0
 	var item := {}
-	var _hi := false
-	var _hover := false
+	var _icon: TextureRect
+	var _rim: Panel
+	var _name: Label
+	var _cond: Label
+
+	func _init() -> void:
+		mouse_filter = Control.MOUSE_FILTER_STOP
+		# drag-target highlight border (like InventorySheet.EquipSlot._rim)
+		_rim = Panel.new()
+		var s := StyleBoxFlat.new()
+		s.bg_color = Color(0, 0, 0, 0)
+		s.border_color = UiArt.GOLD
+		s.set_border_width_all(1.0)
+		_rim.add_theme_stylebox_override("panel", s)
+		_rim.set_anchors_preset(Control.PRESET_FULL_RECT)
+		_rim.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		_rim.visible = false
+		add_child(_rim)
+		# item icon, always shown; hover shows the tooltip only (like EquipSlot)
+		_icon = TextureRect.new()
+		_icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		_icon.stretch_mode = TextureRect.STRETCH_SCALE
+		_icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		add_child(_icon)
+		# item name / condition labels. Bag slots (40-49) show these always; worn
+		# slots keep them empty so hover shows the tooltip only (like EquipSlot).
+		_name = UiArt.label("", 7, UiArt.CREAM)
+		_name.clip_text = true
+		_name.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		add_child(_name)
+		_cond = UiArt.label("", 7, CompanionUi.DIM)
+		_cond.clip_text = true
+		_cond.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		add_child(_cond)
 
 	func _ready() -> void:
-		mouse_filter = Control.MOUSE_FILTER_STOP
 		if size.x <= 0.0:
 			size = custom_minimum_size
+		refresh()
+
+	## Sync the persistent icon + (bag-only) name/condition labels with the item.
+	func refresh() -> void:
+		if item.is_empty():
+			_icon.texture = null
+			_name.text = ""
+			_cond.text = ""
+			tooltip_text = String(CompanionNet.SLOT_NAMES.get(slot, "BAG %d" % (slot - SrvCompanionWindow.BAG_FIRST + 1))).to_upper()
+			queue_redraw()
+			return
+		var ic := Server.item_icon(int(item.model))
+		_icon.texture = ItemDb.icon(ic if ic > 0 else int(item.icon))
+		_icon.position = Vector2(2, 2)
+		_icon.size = Vector2(size.y - 4, size.y - 4)
+		var is_bag := slot >= BAG_FIRST
+		if is_bag:
+			var name_text := String(CompanionNet.SLOT_NAMES.get(slot, "BAG %d" % (slot - SrvCompanionWindow.BAG_FIRST + 1)))
+			_name.text = String(item.name)
+			_name.position = Vector2(size.y + 2, 2)
+			_name.size = Vector2(size.x - size.y - 4, 12)
+			var cond := int(item.condition)
+			var count := int(item.get("count", 0))
+			var stack := int(item.object_type) in STACKABLE or count > 1
+			var second := ("%s  x%d" % [name_text, count]) if stack and count > 0 else "%s  %d%%" % [name_text, cond]
+			_cond.text = second
+			_cond.position = Vector2(size.y + 2, 15)
+			_cond.size = Vector2(size.x - size.y - 4, 12)
+			_cond.add_theme_color_override("font_color", CompanionUi.RED if stack and count > 0 and count <= 5 else CompanionUi.DIM)
+			tooltip_text = String(item.name).to_upper()
+		else:
+			# worn slot: icon only; hover reveals the tooltip (like EquipSlot)
+			_name.text = ""
+			_cond.text = ""
+			tooltip_text = String(item.name).to_upper()
+		queue_redraw()
 
 	func _gui_input(event: InputEvent) -> void:
 		if event is InputEventMouseButton and event.pressed:
@@ -375,75 +442,32 @@ class GearSlot extends Control:
 
 	func _notification(what: int) -> void:
 		match what:
-			NOTIFICATION_MOUSE_ENTER:
-				_hover = true
-				queue_redraw()
 			NOTIFICATION_MOUSE_EXIT:
-				_hover = false
-				queue_redraw()
+				refresh()
 			NOTIFICATION_DRAG_END:
-				if _hi:
-					_hi = false
-					queue_redraw()
+				_rim.visible = false
+				refresh()
 
 	func _draw() -> void:
-		# clear previous children (hover redraws re-add them)
-		for c in get_children():
-			c.queue_free()
 		draw_rect(Rect2(Vector2.ZERO, size), Color(0.05, 0.045, 0.04, 0.9))
-		draw_rect(Rect2(Vector2.ZERO, size), UiArt.GOLD if _hi else UiArt.GOLD.darkened(0.55), false, 1.0)
-		if item.is_empty():
-			return   # slot name appears below the box (from _build_gear), not inside it
-		var name_text := String(CompanionNet.SLOT_NAMES.get(slot, "BAG %d" % (slot - SrvCompanionWindow.BAG_FIRST + 1)))
-		var icon := TextureRect.new()
-		var ic := Server.item_icon(int(item.model))
-		icon.texture = ItemDb.icon(ic if ic > 0 else int(item.icon))
-		icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-		icon.stretch_mode = TextureRect.STRETCH_SCALE
-		icon.position = Vector2(2, 2)
-		icon.size = Vector2(size.y - 4, size.y - 4)
-		icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		add_child(icon)
-		var is_bag := slot >= BAG_FIRST   # bag slots (40-49) show info always; worn slots only on hover
-		if not item.is_empty() and (is_bag or _hover):
-			var cond := int(item.condition)
-			var nm := CompanionUi.text(self, String(item.name), Vector2(size.y + 2, 2),
-					Vector2(size.x - size.y - 4, 12), 7,
-					CompanionUi.RED if cond < 70 else UiArt.CREAM)
-			nm.clip_text = true
-			var count := int(item.get("count", 0))
-			var stack := int(item.object_type) in STACKABLE or count > 1
-			var second := ("%s  x%d" % [name_text, count]) if stack and count > 0 else "%s  %d%%" % [name_text, cond]
-			CompanionUi.text(self, second, Vector2(size.y + 2, 15), Vector2(size.x - size.y - 4, 12), 7,
-					CompanionUi.RED if stack and count > 0 and count <= 5 else CompanionUi.DIM)
+		draw_rect(Rect2(Vector2.ZERO, size), UiArt.GOLD if _rim.visible else UiArt.GOLD.darkened(0.55), false, 1.0)
 
-	## Hover popup drawn above every other menu element.
+	## Hover popup: the mini delve box, drawn above other menus (like EquipSlot).
 	func _make_custom_tooltip(_for_text: String) -> Object:
 		var tip := ItemTooltip.make(item) if not item.is_empty() else null
 		if tip == null and not item.is_empty():
 			# non-gear items (potions, arrows, poisons): ItemTooltip.make returns null,
 			# so build a simple name-only tooltip so hover still shows above everything
 			tip = ItemTooltip.text_box(String(item.name).to_upper(), [])
-		if tip:
-			tip.z_index = 1000
-			_tip_z(tip, 1000)
 		return tip
-
-	func _tip_z(node: Node, z: int) -> void:
-		for c in node.get_children():
-			c.z_index = z
-			_tip_z(c, z)
 
 	func _can_drop_data(_p: Vector2, data: Variant) -> bool:
 		var ok := InventorySheet.is_item(data) and int(data.slot) >= 40 and int(data.slot) <= 79
-		if _hi != ok:
-			_hi = ok
-			queue_redraw()
+		_rim.visible = ok
 		return ok
 
 	func _drop_data(_p: Vector2, data: Variant) -> void:
-		_hi = false
-		queue_redraw()
+		_rim.visible = false
 		window.equip_from(int(data.slot), slot, not item.is_empty())
 
 	## Dragged out onto your backpack (owner 2026-10-30: "i cant drag off weapons and bag items, i can only right click"):
