@@ -391,29 +391,75 @@ class MapView extends Control:
 			return (u - mr.position - Vector2(float(r[0]), float(r[1]))) / Vector2(float(r[2]), float(r[3]))
 		return (u - mr.position) / mr.size
 
-	## Realm maps: each zone square with quests for you gets a yellow dot and their number (green / orange when only
-	## turn-ins / quests in progress are there).
-	func _draw_region_counts() -> void:
-		var w := window
-		for q in w._region(int(w.shown.id)).get("zones", []):
-			var ms: Array = w.zone_quest_marks(int(q.zone))
-			if ms.is_empty():
-				continue
-			var avail := ms.filter(func(m): return String(m.kind) == "!").size()
-			var turn := ms.filter(func(m): return String(m.kind) == "?").size()
-			var col := Color(1.0, 0.85, 0.15) if avail > 0 else (Color(0.3, 1.0, 0.35) if turn > 0 else Color(1.0, 0.55, 0.1))
-			var n := avail if avail > 0 else (turn if turn > 0 else ms.size())
-			var at := Vector2(float(q.left) + float(q.width) - 5.0, float(q.top) + 5.0) / 256.0 * size
-			draw_circle(at, 6.5, Color(0.08, 0.05, 0.0))
-			draw_circle(at, 5.5, col)
+	## The map's quest marks as small gold-rimmed medallions in the interface's own gold and stone (owner 2026-11-05:
+	## "clarify the markers ... make them premium and fit the game's theme"; the old client could only borrow the red
+	## relic marker): a dark rim, a gold ring, the face in its colour with a soft highlight, and its sign - a gold "!" a
+	## quest you can take, a steel-silver "?" its turn-in, crimson with a gold heart an objective, bronze a quest of that NPC
+	## you are on, violet your /task. No green: the realm's bots are the green dots.
+	## kind -> [face colour, sign ("" none), the legend's words, sign colour]
+	const MARK_STYLE := {
+		"!": [Color(0.96, 0.76, 0.22), "!", "QUEST", Color(0.22, 0.12, 0.02)],
+		"?": [Color(0.74, 0.77, 0.82), "?", "TURN IN", Color(0.12, 0.1, 0.08)],
+		"step": [Color(0.72, 0.1, 0.09), "", "OBJECTIVE", Color(1.0, 0.82, 0.35)],
+		"o": [Color(0.72, 0.44, 0.2), "", "IN PROGRESS", Color(0.3, 0.16, 0.04)],
+		"task": [Color(0.55, 0.3, 0.8), "", "TASK", Color(0.98, 0.9, 1.0)],
+	}
+	const MARK_R := 5.5
+	var _drawn_marks: Array = []                # [map spot, kind] of the marks drawn now (their hover text)
+
+	func _draw_mark(at: Vector2, kind: String, r := MARK_R) -> void:
+		var st: Array = MARK_STYLE.get(kind, MARK_STYLE["step"])
+		draw_circle(at + Vector2(0.6, 0.9), r + 1.6, Color(0, 0, 0, 0.45))         # its shadow on the map
+		draw_circle(at, r + 1.5, Color(0.1, 0.06, 0.02))                           # the dark rim
+		draw_circle(at, r + 0.8, Color(0.86, 0.67, 0.3))                           # the gold ring
+		draw_circle(at, r, Color(0.36, 0.25, 0.1))                                 # (its inner edge)
+		draw_circle(at, r - 0.6, st[0])                                            # the face
+		draw_circle(at + Vector2(-r * 0.28, -r * 0.32), r * 0.38, Color(1, 1, 1, 0.22))   # a soft highlight
+		var sign: String = st[1]
+		if sign != "":
 			var f := UiArt.font(true)
-			var txt := str(n)
-			var tw := f.get_string_size(txt, HORIZONTAL_ALIGNMENT_LEFT, -1, 9).x
-			draw_string(f, at + Vector2(-tw * 0.5, 3.5), txt, HORIZONTAL_ALIGNMENT_LEFT, -1, 9, Color(0.1, 0.06, 0.0))
+			var fs := int(round(r * 2.3))
+			var tw := f.get_string_size(sign, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x
+			var base := at + Vector2(-tw * 0.5, r * 0.78)
+			draw_string_outline(f, base, sign, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, 2, Color(1, 1, 1, 0.35))
+			draw_string(f, base, sign, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, st[3])
+		else:
+			draw_circle(at, r * 0.36, st[3])                                       # a heart in the sign's colour
+
+	## What the marks on this map are: a strip along its foot in the windows' dark stone, one medallion and its word
+	## for each kind shown.
+	func _draw_legend(kinds: Dictionary) -> void:
+		var f := UiArt.font(true)
+		var fs := 8
+		var order := ["QUEST", "TURN IN", "OBJECTIVE", "IN PROGRESS", "TASK"]
+		var items := order.filter(func(k): return kinds.has(k))
+		var w_total := 6.0
+		for k in items:
+			w_total += 12.0 + f.get_string_size(k, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x + 8.0
+		var box := Rect2(Vector2(4, size.y - 17), Vector2(w_total, 13))
+		draw_rect(box, Color(0.06, 0.05, 0.04, 0.82))
+		draw_rect(box, Color(0.55, 0.42, 0.2, 0.9), false, 1.0)
+		var x := box.position.x + 9.0
+		for k in items:
+			_draw_mark(Vector2(x, box.position.y + 6.5), String(kinds[k]), 3.6)
+			draw_string(f, Vector2(x + 7.0, box.position.y + 10.0), k, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, UiArt.CREAM)
+			x += 12.0 + f.get_string_size(k, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x + 8.0
+
+	## The mark under the pointer, its words (the hover text), else "".
+	func mark_words_at(p: Vector2) -> String:
+		for d in _drawn_marks:
+			if (d[0] as Vector2).distance_to(p) <= MARK_R + 1.5:
+				return {"!": "QUEST AVAILABLE", "?": "TURN IN HERE", "step": "QUEST OBJECTIVE", "o": "A QUEST YOU ARE ON",
+						"task": "YOUR TASK"}.get(String(d[1]), "")
+		return ""
 
 	func _gui_input(event: InputEvent) -> void:
 		var w := window
 		if String(w.shown.get("kind", "")) != "region":
+			if event is InputEventMouseMotion:                   # a mark's meaning on hover
+				var words := mark_words_at(event.position)
+				if words != tooltip_text:
+					tooltip_text = words
 			return
 		if event is InputEventMouseMotion:
 			var z := _zone_under(event.position)
@@ -522,21 +568,21 @@ class MapView extends Control:
 			var sq := w.region_square(int(w.shown.id), _hover)
 			draw_rect(Rect2(sq.position / 256.0 * size, sq.size / 256.0 * size), Color(1.0, 0.85, 0.3), false, 1.5)
 		draw_rect(Rect2(Vector2.ZERO, size), Color(0.45, 0.42, 0.35), false, 1.0)
-		if String(w.shown.get("kind", "")) == "region":
-			_draw_region_counts()
-		else:
+		_drawn_marks.clear()
+		# (the realm map shows no quest marks - owner 2026-11-05: "remove quest markers from the realm map"; click a
+		# zone to see its quests and objectives, wherever you are)
+		if String(w.shown.get("kind", "")) != "region":
+			var kinds := {}
 			for m in w.zone_quest_marks(int(w.shown.id)):   # quest marks for the shown zone, wherever you are
 				var f := _mark_frac((m.at as Vector2) / 0.025)
 				var mp := f * size
 				if f.x < 0 or not Rect2(Vector2.ZERO, size).has_point(mp):
 					continue
-				# quest marks in the ground circles' colours: available yellow, turn-in green, in progress orange;
-				# classic step markers / the emissary's hunt in red
-				var col: Color = {"!": Color(1.0, 0.85, 0.15), "?": Color(0.3, 1.0, 0.35), "o": Color(1.0, 0.55, 0.1),
-						"task": Color(0.8, 0.35, 1.0)}.get(
-						String(m.kind), Color(0.95, 0.2, 0.15))
-				draw_circle(mp, 3.5, Color(0.08, 0.05, 0.0))
-				draw_circle(mp, 2.5, col)
+				_draw_mark(mp, String(m.kind))
+				_drawn_marks.append([mp, String(m.kind)])
+				kinds[MARK_STYLE.get(String(m.kind), MARK_STYLE["step"])[2]] = String(m.kind)
+			if not kinds.is_empty():
+				_draw_legend(kinds)
 			# your realm's gamebots and companions in this zone as green dots (bot plan phase 3, owner: also in
 			# dungeons; enemy bots never; Options > BOTS > REALM BOTS ON MAP)
 			if int(w.shown.get("id", -1)) == w.current_zone:
