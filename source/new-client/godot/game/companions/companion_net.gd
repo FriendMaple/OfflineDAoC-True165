@@ -32,6 +32,11 @@ var previews := {}                               # row -> {line: [ {level, kind,
 var _preview_new := {}
 var stats := {}                                  # row -> op 10's numbers
 var ras := {}                                    # row -> [ {...} ] (op 11)
+## The companion's choices (op 14, reset day C17 / S33, agreed with the server chat): row -> [ {kind, slot, chosen,
+## names, used, cap} ] - kind 1 charm, 2 pet (Cabalist / Enchanter), 3 sub-pet (Bonedancer, slot 1-3, used / cap the
+## x/75), 4 song or chant (slot 1 in combat, 2 out of combat, 3 travelling, 4 Twist "No"/"Yes"); kind 0xFF ends a list.
+var options := {}
+var _options_new := {}
 static var asked_gear_at := -100000              # (the server's HouseVault gear window for the original client: ignored)
 # the Horn of Rallying (ops 20 - 23): its title, realm, the PvE events it can start and the last sound attempt's result
 var horn := {"title": "", "realm": 0, "rows": [], "message": "", "at": 0}
@@ -157,6 +162,25 @@ func handle(body: PackedByteArray) -> void:
 				stats[row]["base"] = base
 			if body.size() >= 81:
 				stats[row]["base_af"] = _u16(body, 79)
+		14:
+			var row := int(body[4])
+			if body[5] == 0xFF:
+				options[row] = _options_new.get(row, [])
+				_options_new.erase(row)
+			else:
+				var names := []
+				var at := 13
+				for k in int(body[8]):
+					var end := at
+					while end < body.size() and body[end] != 0:
+						end += 1
+					names.append(body.slice(at, end).get_string_from_ascii())
+					at = end + 1
+				if not _options_new.has(row):
+					_options_new[row] = []
+				(_options_new[row] as Array).append({"kind": body[5], "slot": body[6], "chosen": body[7], "names": names,
+						"used": _u16(body, 9), "cap": _u16(body, 11)})
+				return                                       # (the window redraws at the end of the list)
 		11:
 			var row := int(body[4])
 			if not ras.has(row) or (ras[row] as Array).size() != int(body[6]):

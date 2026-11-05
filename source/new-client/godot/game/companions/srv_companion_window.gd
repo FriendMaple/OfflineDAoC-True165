@@ -7,6 +7,9 @@ extends ClassicWindow
 ##   TRAIN  its spec lines, points, the next level's cost and what each level gives (op 8 / 9): TRAIN, and RESPEC (free)
 ##   STATS  level and XP bubbles, its stats, health / power / endurance, armour, resists, money, realm points (op 10)
 ##   REALM  its realm rank and abilities (op 11): BUY the next level
+##   PETS / SONGS  (only for a companion with such choices - op 14, reset day C17): charm on / off, the Cabalist's /
+##          Enchanter's pet, the Bonedancer's three sub-pets (x/75), the songs or chants it uses in combat, out of
+##          combat and travelling, Twist
 ## Nothing here decides: every button is a /companionui command and the server answers with fresh messages.
 
 const SIZE := Vector2(470, 330)
@@ -40,8 +43,9 @@ var _ra_list: VBoxContainer
 func build() -> void:
 	closable = true
 	_title = CompanionUi.frame(self, "companion_manage", SIZE, Vector2(200, 80), "COMPANION")
-	_tabs = CompanionUi.tabs(self, ["Gear", "Train", "Stats", "Realm abilities"], Vector2(12, 20), SIZE.x - 24, show_page)
-	for i in 4:
+	_tabs = CompanionUi.tabs(self, ["Gear", "Train", "Stats", "Realm abilities", "Pets / Songs"], Vector2(12, 20),
+			SIZE.x - 24, show_page)
+	for i in 5:
 		var page := Control.new()
 		page.position = Vector2(0, 40)
 		page.size = Vector2(SIZE.x, SIZE.y - 60)
@@ -52,6 +56,8 @@ func build() -> void:
 	_build_spec(_pages[1])
 	_build_stats(_pages[2])
 	_build_realm(_pages[3])
+	_build_options(_pages[4])
+	_layout_tabs()
 	_problem = CompanionUi.text(self, "", Vector2(14, SIZE.y - 18), Vector2(SIZE.x - 28, 12), 8, CompanionUi.RED)
 	net.changed.connect(refresh)
 
@@ -77,6 +83,19 @@ func show_page(i: int) -> void:
 	refresh()
 
 
+## The PETS / SONGS tab only for a companion that has such choices: the other four share the row when it has none.
+func _layout_tabs() -> void:
+	var n := 5 if not (net.options.get(row, []) as Array).is_empty() else 4
+	var w := (SIZE.x - 24 - (n - 1) * 3.0) / n
+	for i in _tabs.size():
+		var b := _tabs[i] as Button
+		b.visible = i < n
+		b.size = Vector2(w, 15)
+		b.position = Vector2(12 + i * (w + 3.0), 20)
+	if n == 4 and _page == 4:
+		show_page(0)
+
+
 ## The GEAR tab asks again every few seconds while it is open: the server sends a stack's count (arrows, poisons, thrown
 ## weapons) only when the gear is sent, and the companion uses them up as it fights.
 const GEAR_POLL_S := 5.0
@@ -100,11 +119,13 @@ func refresh() -> void:
 	var st: Dictionary = net.stats.get(row, {})
 	_title.text = ("%s - LEVEL %d" % [nm, int(st.level)] if not st.is_empty() else nm).to_upper() if nm != "" else "COMPANION"
 	_problem.text = String(net.texts.get(8, ""))
+	_layout_tabs()
 	match _page:
 		0: _refresh_gear()
 		1: _refresh_spec()
 		2: _refresh_stats()
 		3: _refresh_realm()
+		4: _refresh_options()
 
 
 static func _scroll_list(parent: Control, pos: Vector2, size: Vector2) -> VBoxContainer:
@@ -450,6 +471,73 @@ func _refresh_stats() -> void:
 		var x := 2.0 + (i % 5) * 88.0
 		var y := 168.0 + (i / 5) * 14.0
 		CompanionUi.text(_stats_box, "%s %d%%" % [resists[i], int(st.resists[i])], Vector2(x, y), Vector2(86, 12), 8)
+
+
+# --- pets / songs ---------------------------------------------------------------------------------------------
+
+var _options_box: Control
+const SONG_SLOTS := {1: "IN COMBAT", 2: "OUT OF COMBAT", 3: "TRAVELLING", 4: "TWIST"}
+
+
+func _build_options(page: Control) -> void:
+	_options_box = Control.new()
+	_options_box.position = Vector2(12, 0)
+	_options_box.size = Vector2(SIZE.x - 24, 250)
+	page.add_child(_options_box)
+
+
+## One row a choice (op 14): its caption and the server's choices - two-way ones (charm, Twist) as buttons, the others
+## a drop-down list; picking one is the agreed /companionui verb and the server sends the rows again.
+func _refresh_options() -> void:
+	_clear(_options_box)
+	var rows: Array = net.options.get(row, [])
+	if rows.is_empty():
+		CompanionUi.text(_options_box, "NO CHOICES FOR THIS COMPANION", Vector2(2, 2), Vector2(300, 12), 8, CompanionUi.DIM)
+		return
+	var y := 0.0
+	var shown_cap := false
+	for o in rows:
+		var kind := int(o.kind)
+		var slot := int(o.slot)
+		var names: Array = o.names
+		var caption := ""
+		match kind:
+			1: caption = "CHARM"
+			2: caption = "PET"
+			3: caption = "SUB-PET %d" % slot
+			4: caption = "SONG / CHANT - " + String(SONG_SLOTS.get(slot, str(slot))) if slot != 4 else "TWIST SONGS"
+		if kind == 3 and not shown_cap and int(o.cap) > 0:
+			shown_cap = true                                  # the Bonedancer's sub-pet points, once: x / 75
+			CompanionUi.text(_options_box, "SUB-PETS %d / %d" % [int(o.used), int(o.cap)], Vector2(2, y), Vector2(300, 12),
+					9, UiArt.GOLD_HI)
+			y += 16.0
+		CompanionUi.text(_options_box, caption, Vector2(2, y + 2), Vector2(170, 12), 8, UiArt.GOLD)
+		var pick := func(i: int): _choose(kind, slot, i, names)
+		if names.size() == 2 and (kind == 1 or (kind == 4 and slot == 4)):   # (on / off ones)
+			for i in 2:
+				var b := CompanionUi.button(_options_box, String(names[i]), Vector2(176 + i * 84, y), Vector2(80, 16),
+						pick.bind(i), 8)
+				b.toggle_mode = true
+				b.set_pressed_no_signal(i == int(o.chosen))
+		else:
+			var ob := ExchangeWindow._choice(names)
+			ob.position = Vector2(176, y)
+			ExchangeWindow._fix_size(ob, Vector2(250, 18))
+			if int(o.chosen) < names.size():
+				ob.select(int(o.chosen))
+			ob.item_selected.connect(pick)
+			_options_box.add_child(ob)
+		y += 22.0
+
+
+func _choose(kind: int, slot: int, i: int, names: Array) -> void:
+	match kind:
+		1:
+			var on := String(names[i]).to_lower() in ["on", "yes"] if i < names.size() else false
+			net.command("charm %d %s" % [row, "on" if on else "off"])
+		2: net.command("pet %d %d" % [row, i])
+		3: net.command("subpet %d %d %d" % [row, slot, i])
+		4: net.command("song %d %d %d" % [row, slot, i])
 
 
 # --- realm abilities ------------------------------------------------------------------------------------------
