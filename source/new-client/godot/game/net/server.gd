@@ -1306,7 +1306,7 @@ var map_markers := {}                    # marker id -> Vector4(region, x, y, z)
 func bot_dots() -> PackedVector3Array:
 	var out := PackedVector3Array()
 	for id in map_markers:
-		if int(id) < TURNIN_MARKERS:
+		if int(id) < GIVER_MARKERS:
 			var p := _marker_here(map_markers[id])
 			if p != Vector3.INF:
 				out.append(p)
@@ -1321,15 +1321,24 @@ const QUEST_MARKERS := 0xFFFE0000
 ## 0xFFFD0001 the traveler's inn's innkeeper ("The Traveler's Inn"), 0xFFFD0002 its Horn Handler ("The Horn of
 ## Rallying") - green, as a turn-in; sent per player while the quest is open, removed at the turn-in.
 const TURNIN_MARKERS := 0xFFFD0000
+## The quest givers with a quest for you, the whole realm (server S40, reset day C18, 2026-11-05 - owner: "if I swap to
+## shannon estuary map while im in lough derg i can see if there are any quests there for me to grab"): 0xFFFC0001.. one
+## per NPC showing you "quest available", every region (a dungeon's on its own map); sent at login, changes every 30 s.
+const GIVER_MARKERS := 0xFFFC0000
+
+
+## A quest marker's kind on the map: "step" (red), "?" (a turn-in, green), "!" (a quest for you, yellow).
+static func _marker_kind(id: int) -> String:
+	return "step" if id >= QUEST_MARKERS else ("?" if id >= TURNIN_MARKERS else "!")
 
 
 func quest_map_marks() -> Array:
 	var out := []
 	for id in map_markers:
-		if int(id) >= TURNIN_MARKERS:
+		if int(id) >= GIVER_MARKERS:
 			var p := _marker_here(map_markers[id])
 			if p != Vector3.INF:
-				out.append({"at": Vector2(p.x, p.z), "kind": "step" if int(id) >= QUEST_MARKERS else "?"})
+				out.append({"at": Vector2(p.x, p.z), "kind": _marker_kind(int(id))})
 	return out
 
 
@@ -1340,10 +1349,10 @@ func quest_map_marks_in(zid: int) -> Array:
 	var region := int(zone_info(zid).get("region", -1))
 	for id in map_markers:
 		var v: Vector4 = map_markers[id]
-		if int(id) < TURNIN_MARKERS or int(v.x) != region or zone_at(region, v.y, v.z) != zid:
+		if int(id) < GIVER_MARKERS or int(v.x) != region or zone_at(region, v.y, v.z) != zid:
 			continue
 		var p := to_local(zid, v.y, v.z, v.w)
-		out.append({"at": Vector2(p.x, p.z), "kind": "step" if int(id) >= QUEST_MARKERS else "?"})
+		out.append({"at": Vector2(p.x, p.z), "kind": _marker_kind(int(id))})
 	return out
 
 

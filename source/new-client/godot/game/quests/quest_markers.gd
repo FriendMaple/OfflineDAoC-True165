@@ -145,7 +145,19 @@ func _server_rebuild() -> void:
 				_marked[st] = k
 				marks.append({"at": Vector2(st.pos.x, st.pos.z), "kind": MAP_KIND[k]})
 	if viewer and viewer.ui and viewer.ui.map_window:
-		viewer.ui.map_window.marks = marks + Server.quest_map_marks()
+		# the server's markers too (turn-ins, steps, the realm's quest givers - S40): a giver drawn here already from its
+		# NPC in view is not marked twice
+		var extra := []
+		for m in Server.quest_map_marks():
+			var twin := false
+			if String(m.kind) == "!":
+				for o in marks:
+					if String(o.kind) == "!" and (o.at as Vector2).distance_to(m.at) < 3.0:
+						twin = true
+						break
+			if not twin:
+				extra.append(m)
+		viewer.ui.map_window.marks = marks + extra
 	_sync_decals()
 
 

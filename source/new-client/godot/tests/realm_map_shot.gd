@@ -36,8 +36,9 @@ func _ready() -> void:
 		for k in n + 1:
 			Server.map_markers[Server.TURNIN_MARKERS + n * 10 + k] = Vector4(reg, cx + k * 2000.0, cy, 0)
 		Server.map_markers[Server.QUEST_MARKERS + n] = Vector4(reg, cx, cy + 3000.0, 0)
-		print("[map] put marks in zone %s (region %d) at %d,%d -> zone_at %d, marks %d" % [str(q.zone), reg, cx, cy,
-				Server.zone_at(reg, cx, cy), Server.quest_map_marks_in(int(q.zone)).size()])
+		if n % 2 == 0:                                       # quest givers with a quest for you (S40): yellow "!"
+			for k in 2 + n:
+				Server.map_markers[Server.GIVER_MARKERS + 1 + n * 10 + k] = Vector4(reg, cx - 4000.0 + k * 1500.0, cy - 6000.0, 0)
 		n += 1
 	m._show({"kind": "region", "id": int(rid)}, true)
 	await get_tree().create_timer(1.0).timeout
@@ -46,8 +47,11 @@ func _ready() -> void:
 	for q in (regions[rid] as Dictionary).get("zones", []):
 		var ms: Array = m.zone_quest_marks(int(q.zone))
 		if ms.size() > 0:
-			print("[map] zone %d %s: %d quest marks" % [int(q.zone), String(m._zone(int(q.zone)).get("name", "")), ms.size()])
-		if ms.size() > most:
+			var kinds := {}
+			for mk in ms:
+				kinds[mk.kind] = int(kinds.get(mk.kind, 0)) + 1
+			print("[map] zone %d %s: %d quest marks %s" % [int(q.zone), String(m._zone(int(q.zone)).get("name", "")), ms.size(), kinds])
+		if ms.filter(func(x): return x.kind == "!").size() > 0 and ms.size() > most:
 			most = ms.size()
 			best = int(q.zone)
 	var out := String(v.args.get("out", "user://"))
