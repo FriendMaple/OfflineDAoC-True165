@@ -57,7 +57,9 @@ Agreed between the client and server chats.
   [9..10] used u16, [11..12] cap u16 (the Bonedancer's x / 75), [13..] the choice names, each zero-ended. A closing op 14
   with kind 0xFF ends the list. Song slots: 1 in combat, 2 out of combat, 3 travelling (Paladin chants 1-2).
   Verbs: `charm <row> on|off`, `pet <row> <i>`, `subpet <row> <slot> <i>`, `song <row> <slot> <i>`; a refusal comes as
-  op 3 text slot 8. New client: the companion window's PETS / SONGS tab (shown only when the rows exist).
+  op 3 text slot 8. New client: the companion window's AI OPTIONS tab (shown only when the rows exist; any
+  later AI choice is a kind 5 and up: its first name is the row's caption, the rest its choices (two: buttons,
+  more: a list), picked with `option <row> <kind> <slot> <i>` - no new client code).
 - op 15, the Realm Exchange chest page's time left: [4] count, then 3 bytes each - the listing's place 0-99, minutes
   left (u16); 0 not offered, 0xFFFF no limit. Sent when the chest opens or changes page, after a price and after a
   duration whisper. Broker whispers: `sort <name|level|quality|price> <asc|desc>`, `duration <place 0-99> <12|24|48>`.

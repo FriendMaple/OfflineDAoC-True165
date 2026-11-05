@@ -1,5 +1,5 @@
 extends Node
-## Offline check (reset day C17, 2026-11-05, the client side of S33): the companion window's PETS / SONGS tab from op 14
+## Offline check (reset day C17, 2026-11-05, the client side of S33): the companion window's AI OPTIONS tab from op 14
 ## rows - shown only for a companion with choices; a Bonedancer's sub-pets with the x/75 count, a minstrel's songs per
 ## slot and Twist; picking sends the agreed /companionui verb. A stand-in client, made-up rows, a shot to --out.
 ##   --skip-login --zone=N --world-mode=1.65 --probe=companion_options_probe --out=<dir>
@@ -40,9 +40,9 @@ func _ready() -> void:
 	await get_tree().process_frame
 	var hidden_without: bool = not (w._tabs[4] as Button).visible
 	# row 0: a Bonedancer (sub-pets), row 1: a minstrel (songs + Twist)
-	for m in [_op14(0, 3, 1, 1, ["Automatic", "Swordsman", "Archer", "Healer"], 30, 75),
-			_op14(0, 3, 2, 0, ["Automatic", "Swordsman", "Archer", "Healer"], 30, 75),
-			_op14(0, 3, 3, 2, ["Automatic", "Swordsman", "Archer", "Healer"], 30, 75),
+	for m in [_op14(0, 3, 1, 1, ["Automatic", "None", "Bone Guard (10)", "Boneknitter (10)", "Bone Archer (10)"], 30, 75),
+			_op14(0, 3, 2, 0, ["Automatic", "None", "Bone Guard (10)", "Boneknitter (10)", "Bone Archer (10)"], 30, 75),
+			_op14(0, 3, 3, 2, ["Automatic", "None", "Bone Guard (10)", "Boneknitter (10)", "Bone Archer (10)"], 30, 75),
 			[0, 0x48, 1, 14, 0, 0xFF],
 			_op14(1, 4, 1, 0, ["Automatic", "Battle Song", "Power Song"]),
 			_op14(1, 4, 2, 1, ["Automatic", "Battle Song", "Power Song"]),
@@ -50,6 +50,7 @@ func _ready() -> void:
 			_op14(1, 1, 0, 1, ["Off", "On"]),
 			[0, 0x48, 1, 14, 1, 0xFF],
 			_op14(2, 2, 0, 0, ["Automatic", "Matter Simulacrum", "Spirit Simulacrum", "Body Simulacrum"]),
+			_op14(2, 5, 1, 1, ["Pull with", "Automatic", "Root", "Bolt"]),     # (a later AI choice: kind 5, generic)
 			[0, 0x48, 1, 14, 2, 0xFF]]:
 		net.handle(PackedByteArray(m))
 	await get_tree().process_frame
@@ -83,7 +84,7 @@ func _ready() -> void:
 			caps.append((c as Label).text)
 		if c is OptionButton:
 			lists.append(c)
-	(lists[2] as OptionButton).item_selected.emit(3)                   # sub-pet 3: Healer
+	(lists[2] as OptionButton).item_selected.emit(3)                   # sub-pet 3: Boneknitter
 	print("[opts] bonedancer: %s, lists %d, sent %s" % [caps, lists.size(), fake.commands])
 	ok = ok and caps == ["SUB-PETS 30 / 75"] and lists.size() == 3 and fake.commands.has("&companionui subpet 0 3 3")
 	await get_tree().create_timer(0.3).timeout
@@ -97,10 +98,19 @@ func _ready() -> void:
 	# a Cabalist's pet choice, its list open
 	w.open_row(2, 4)
 	await get_tree().process_frame
-	var pet_list: OptionButton = null
+	var opt_lists := []
+	var gen_caption := false
 	for c in w._options_box.get_children():
 		if c is OptionButton:
-			pet_list = c
+			opt_lists.append(c)
+		if c is Label and (c as Label).text == "PULL WITH":
+			gen_caption = true
+	var pet_list: OptionButton = opt_lists[0]
+	var generic: OptionButton = opt_lists[1]
+	fake.commands.clear()
+	generic.item_selected.emit(2)
+	print("[opts] a later AI choice: caption %s, sent %s" % [gen_caption, fake.commands])
+	ok = ok and gen_caption and fake.commands == ["&companionui option 2 5 1 2"]
 	pet_list.show_popup()
 	await get_tree().create_timer(0.4).timeout
 	await RenderingServer.frame_post_draw
