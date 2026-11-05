@@ -735,9 +735,10 @@ func _move(d: Dictionary) -> void:
 	var seated := _riders.has(int(d.oid)) and st.ride_clip != ""
 	if seated:
 		pass
-	elif st.pos.distance_to(p) > snap or float(d.speed) == 0.0:
-		st.pos = p
+	elif st.pos.distance_to(p) > (snap if not _close_friend(int(d.oid)) else FRIEND_SNAP_M):
+		st.pos = p                                              # really lost: there at once
 		mv["err"] = Vector3.ZERO
+		mv["ease"] = Vector3.ZERO
 	elif ridden:
 		# a ridden steed is never stepped back toward the server's place (server chat 2026-11-01: the route horse moved
 		# at 45-75% of its packet speed on dense route points and stalled ~1.5 s now and then - the 25% lerp jumped it
@@ -747,7 +748,12 @@ func _move(d: Dictionary) -> void:
 		err.y = 0.0
 		mv["err"] = err
 	else:
-		st.pos = st.pos.lerp(p, 0.5)                            # close: ease into the server's place
+		# close: eased into the server's place over a moment (_physics_body), not jumped half the way at each update
+		# nor put there when it stops (reset day C13, 2026-11-05: in lag the updates come in bursts and companions
+		# snapped onto you)
+		var e := p - st.pos
+		e.y = 0.0
+		mv["ease"] = e
 	if not seated and not (ridden and String(st.info.get("figure", "")).to_lower() in FLIER_FIGURES):
 		_ground(st)
 	mv["heading"] = Server.yaw_of(int(d.heading))             # (the server's own facing: _move_ridden's turns)
@@ -1058,6 +1064,40 @@ func _drop_stale(delta: float) -> void:
 		housing.cull(me.x, me.y)
 
 
+## The server's place reached over a moment (reset day C13): EASE_RATE of the gap a second (about 90% in 0.4 s).
+## Further off than SNAP_M (FRIEND_SNAP_M for your companions, pet and group) it is put there at once.
+const EASE_RATE := 6.0
+const FRIEND_SNAP_M := 25.0
+
+
+func _close_friend(oid: int) -> bool:
+	if oid == 0:
+		return false
+	if oid == pet_oid:
+		return true
+	for m in Server.group_members:
+		if int(m.get("oid", 0)) == oid:
+			return true
+	return _companion_hair_of(oid) >= 0
+
+
+## The rest of an update's gap walked off (true while it is still more than a step away).
+func _ease(s: NpcState, mv: Dictionary, delta: float) -> bool:
+	var e: Vector3 = mv.get("ease", Vector3.ZERO)
+	if e == Vector3.ZERO:
+		return false
+	if e.length() < 0.01:
+		s.pos += e
+		mv["ease"] = Vector3.ZERO
+		_ground(s)
+		return false
+	var part := e * (1.0 - exp(-EASE_RATE * delta))
+	s.pos += part
+	mv["ease"] = e - part
+	_ground(s)
+	return e.length() > 0.3
+
+
 func _physics_body(delta: float) -> void:
 	_drop_stale(delta)
 	_sweep_gathers()
@@ -1070,7 +1110,12 @@ func _physics_body(delta: float) -> void:
 			continue
 		if s.ride_clip != "":
 			continue                                            # riding: the steed carries it (_seat_riders)
+		var easing := _ease(s, mv, delta)
 		if speed <= 0.0:
+			if easing:                                          # (still walking the last of the way to its place)
+				s.mode = NpcState.Mode.WALK
+				s.running = false
+				continue
 			s.mode = NpcState.Mode.FIGHT if int(mv.target) != 0 or now_ms < s.combat_until else NpcState.Mode.IDLE
 			s.running = false
 			s.fighting = int(mv.target) != 0 or now_ms < s.combat_until
