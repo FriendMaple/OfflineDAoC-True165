@@ -312,6 +312,13 @@ func set_detail_strength(v: float) -> void:
 
 # ---------------------------------------------------------------- water
 
+## Zones whose water bodies lie side by side: there a body's shore border stays off the other bodies' water (reset
+## day C10, 2026-11-05: Avalon Marsh - four marsh bodies at 40.5 m beside four lake bodies at 39.6 m; each body's
+## one-cell border spread over its neighbours, two see-through sheets stacking into dark squares, a marsh sheet 0.9 m
+## over the lake making steps).
+const WATER_SEPARATE_ZONES := [9]
+
+
 func _build_water() -> void:
 	var n := water_mask.get_width()
 	var step := float(info.size_m) / n
@@ -322,6 +329,10 @@ func _build_water() -> void:
 	for z in n:
 		for x in n:
 			ids[z * n + x] = roundi(water_mask.get_pixel(x, z).r * 255.0)
+	var body_ids := {}
+	for body in info.water:
+		body_ids[int(body.id)] = true
+	var separate := int(info.get("id", -1)) in WATER_SEPARATE_ZONES
 	for body in info.water:
 		var id := int(body.id)
 		var level := float(body.height)
@@ -336,6 +347,8 @@ func _build_water() -> void:
 					_water_quad(st, x * step, z * step, step, level)
 					quads += 1
 					continue
+				if separate and body_ids.has(int(ids[z * n + x])):
+					continue                                     # (another body's water: its own surface is there)
 				# a one-cell border round the body's cells, so the surface meets the shore under the terrain
 				var near := false
 				for dz in range(-1, 2):
