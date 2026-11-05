@@ -328,8 +328,9 @@ func refresh() -> void:
 		_action2.disabled = _action.disabled
 	else:
 		_page_label.text = "SLOTS %d-%d" % [_lpage * ROWS + 1, _lpage * ROWS + ROWS]
-		_chest_label.text = "CHEST PAGE %d" % (Server.listing_page + 1)
-		_status.text = "%d ITEMS LISTED ON THIS CHEST PAGE" % Server.listings.size()
+		# the chest page's count against its 100 slots (reset day C16, 2026-11-05)
+		_chest_label.text = "CHEST PAGE %d  -  %d/100" % [Server.listing_page + 1, Server.listings.size()]
+		_status.text = "%d OF 100 SLOTS USED ON THIS CHEST PAGE" % Server.listings.size()
 		_action.disabled = not Server.listings.has(selected)
 		_action2.disabled = _action.disabled
 	if _ask_price >= 0 and Server.listings.has(_ask_price):
@@ -379,6 +380,14 @@ func search() -> void:
 	Server.market_items = []
 	Server.exchange_search(f, 0)
 	refresh()
+
+
+## BROWSE searching for an item's name, every other filter cleared (the price box's SEARCH SIMILAR).
+func search_similar(item_name: String) -> void:
+	_clear_filters()
+	_name.text = item_name.left(_name.max_length)
+	show_tab("browse")
+	search()
 
 
 func _clear_filters() -> void:
@@ -506,11 +515,19 @@ func ask_price(slot: int) -> void:
 			Server.set_listing_price(slot, c)
 		shade.queue_free()
 	var yes := UiArt.button("LIST IT", Vector2(110, 24), 11)
-	yes.position = Vector2(box.size.x * 0.5 - 120, 120)
+	yes.position = Vector2(box.size.x * 0.5 - 175, 120)
 	yes.pressed.connect(done.bind(true))
 	box.add_child(yes)
+	# SEARCH SIMILAR (reset day C16, 2026-11-05): what the same item sells for - the box closes (the listing waits in
+	# the chest at SET PRICE) and BROWSE searches its name
+	var similar := UiArt.button("SEARCH SIMILAR", Vector2(120, 24), 10)
+	similar.position = Vector2(box.size.x * 0.5 - 60, 120)
+	similar.pressed.connect(func():
+		shade.queue_free()
+		search_similar(String(it.get("name", ""))))
+	box.add_child(similar)
 	var no := UiArt.button("CANCEL", Vector2(110, 24), 11)
-	no.position = Vector2(box.size.x * 0.5 + 10, 120)
+	no.position = Vector2(box.size.x * 0.5 + 65, 120)
 	no.pressed.connect(done.bind(false))
 	box.add_child(no)
 	for k in fields:                                       # Enter in any box lists it
