@@ -817,6 +817,9 @@ func _set_health(st: NpcState, pct: int) -> void:
 					String(mv0.get("last_upd", "none"))])
 		st.mode = NpcState.Mode.DEAD
 		st.corpse_left = 1e9                                    # the body stays until the server removes it
+		var mvd: Dictionary = _mover.get(st, {})
+		mvd["dead_at"] = Time.get_ticks_msec()                  # (... or DEAD_BODY_MS: _drop_stale)
+		_mover[st] = mvd
 		_interrupt(int(st.spawn.get("oid", 0)), false)          # its cast's hand glows go with it (no fizzle)
 		var mv: Dictionary = _mover.get(st, {})
 		if bool(mv.get("flying", false)):                       # a flier's body comes down to the ground (owner
@@ -1017,6 +1020,7 @@ func _death(oid: int) -> void:
 ## RemoveObject then (ClientService.UpdateNpcs). The old client dropped what wasn't updated any more; so does this:
 ## no word of it for STALE_MS and it goes.
 const STALE_MS := 15000
+const DEAD_BODY_MS := 45000                    # a dead monster's body at most this long (reset day C9: 30-60 s)
 var _stale_check := 0.0
 
 
@@ -1033,12 +1037,22 @@ func _drop_stale(delta: float) -> void:
 	_stale_check = 2.0
 	var now := Time.get_ticks_msec()
 	var gone := []
+	var bodies := []
 	for oid in by_oid:
 		var st: NpcState = by_oid[oid]
 		if st.alive and now - st.seen_at > STALE_MS and int(oid) != pet_oid:
 			gone.append(int(oid))
+		elif not st.alive and int(oid) != pet_oid:
+			# a body the server's removal never reached us for (reset day C9, 2026-11-05: an untargetable dead wolf
+			# lay in Avalon Marsh for good): a monster's body goes DEAD_BODY_MS after its death; a character's (a
+			# gamebot or companion waiting for a rez - the server keeps sending those) once the server stops
+			var died := int(_mover.get(st, {}).get("dead_at", now))
+			if (not st.info.has("race") and now - died > DEAD_BODY_MS) or now - st.seen_at > STALE_MS:
+				bodies.append(int(oid))
 	for oid in gone:
 		_remove(oid, true, 1, "no word from the server for %d s (stale drop)" % (STALE_MS / 1000))
+	for oid in bodies:
+		_remove(oid, false, 0, "a dead body kept past its time (body drop)")    # (sinks into the ground and goes)
 	if housing and player:                                  # the houses the server stopped sending (it never removes
 		var me: Vector3 = Server.to_region(_current_zone(), player.global_position)   # one leaving range)
 		housing.cull(me.x, me.y)
