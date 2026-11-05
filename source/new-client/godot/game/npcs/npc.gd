@@ -764,13 +764,23 @@ func tick(delta: float, cam: Camera3D) -> void:
 	prof_us += Time.get_ticks_usec() - tp0
 
 
+const STEP_DRAW_MAX := 64.0 * 0.025              # (the client's step-up reach: anything higher is drawn at once)
+
+
 func _process_view(delta: float, cam: Camera3D) -> void:
 	if state == null:
 		return
 	# only on change: setting a transform (even to the same value) pushes new transforms to every child - ~34 mesh
 	# parts, the skeleton, the labels, the click shape - and 265 standing NPCs did that every frame (crowd_probe)
 	if position != state.pos:
-		position = state.pos
+		# a step up or down (stairs, a ledge) is drawn over a moment instead of at once (reset day C12, 2026-11-05:
+		# NPCs jerked up and down stairs as you did); its real height (state.pos) is unchanged. A bigger jump - a
+		# teleport, a fall - is drawn at once.
+		var to := state.pos
+		var dy := to.y - position.y
+		if absf(dy) > 0.002 and absf(dy) < STEP_DRAW_MAX:
+			to.y = position.y + dy * (1.0 - exp(-Player.STEP_EASE * delta))
+		position = to
 	if rotation.y != state.yaw:
 		rotation.y = state.yaw
 	if not AnimLod.threaded:                          # (threaded: sync_pick shows / hides it - main thread only)

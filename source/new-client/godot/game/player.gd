@@ -936,6 +936,7 @@ func _physics_step(delta: float) -> void:
 		if _anim and _anim.has_animation(clip) and _anim.current_animation != clip:
 			_anim.get_animation(clip).loop_mode = Animation.LOOP_LINEAR
 			_anim.play(clip, 0.2)
+		_ease_step(delta)
 		_pivot.rotation = Vector3(cam_pitch, cam_yaw, 0.0)
 		_arm.spring_length = lerpf(_arm.spring_length, _cam_target(), minf(1.0, delta * 10.0))
 		return
@@ -1034,6 +1035,7 @@ func _physics_step(delta: float) -> void:
 			_stop_climbing()                              # over the top: stepped off onto the floor
 		_air_time = 0.0
 		_animate(ahead, strafe, speed, delta)
+		_ease_step(delta)
 		_pivot.rotation = Vector3(cam_pitch, cam_yaw, 0.0)
 		_arm.spring_length = lerpf(_arm.spring_length, _cam_target(), minf(1.0, delta * 10.0))
 		return
@@ -1063,6 +1065,7 @@ func _physics_step(delta: float) -> void:
 		global_position.y = _ground_h(global_position.x, global_position.z) + 0.5   # fell through: recover
 
 	_animate(ahead, strafe, speed, delta)
+	_ease_step(delta)
 	_pivot.rotation = Vector3(cam_pitch, cam_yaw, 0.0)
 	_arm.spring_length = lerpf(_arm.spring_length, _cam_target(), minf(1.0, delta * 10.0))
 
@@ -1150,6 +1153,31 @@ func set_torch(on: bool) -> void:
 
 ## The client's order (see PICK_LIFT): vertical integrate, floor pick at the new spot (lift onto anything within the
 ## pick range), slide along walls at that height, then stand on a floor within 1 unit or fall.
+## Stairs (reset day C12, 2026-11-05: "character and camera jerk up and down"; the old client chat's answer Q2: going
+## up the client lifts you at once onto any floor within 64 units, going down there is no snap - you step off and
+## gravity drops you). Your real height still moves step by step, as before - climbing, the server's position and
+## the ground rules are untouched - but what you see, the model and the camera, follows it over a moment (_step_vis,
+## the drawn height minus the real one, eased back to 0): up a step it rises after you, down a step it settles onto
+## it the way the client's short drop looks. (Falling at gravity down the steps was tried: on steep stairs it fell
+## behind, floated over the steps and turned the next step into a fall.)
+var _step_vis := 0.0
+var _step_applied := 0.0
+var _step_model: Node3D
+const STEP_EASE := 10.0                   # how fast the drawn height catches up after a step up (per second)
+
+
+func _ease_step(delta: float) -> void:
+	_step_vis = 0.0 if absf(_step_vis) < 0.002 else _step_vis * exp(-STEP_EASE * delta)
+	if _model != _step_model:                         # (a model built since: its own height, nothing applied yet)
+		_step_model = _model
+		_step_applied = 0.0
+	if _model and is_instance_valid(_model):
+		_model.position.y += _step_vis - _step_applied
+	_step_applied = _step_vis
+	if _pivot:
+		_pivot.position.y = 1.55 + _step_vis
+
+
 func _client_move(delta: float) -> void:
 	var feet_before := global_position.y
 	var vy := velocity.y
@@ -1167,6 +1195,9 @@ func _client_move(delta: float) -> void:
 		var lead_y := _floor_below(Vector3(lead.x, y, lead.z), feet_before)
 		if lead_y > y and lead_y - y <= COLLIDER_LIFT:
 			y = lead_y
+	var lifted := y - (feet_before + vy * delta)
+	if grounded and lifted > 0.001 and not on_ladder:
+		_step_vis = maxf(_step_vis - lifted, -PICK_LIFT)  # (up a step: drawn where you were, catching up)
 	global_position.y = y
 	velocity = Vector3(velocity.x, 0.0, velocity.z)
 	move_and_slide()                                    # 3. walls only, horizontal
@@ -1178,7 +1209,13 @@ func _client_move(delta: float) -> void:
 	if climbing and vy >= 0.0:
 		grounded = false                                # on the ladder: held by it, not standing
 	elif was_grounded and vy <= 0.0 and not swimming and global_position.y - floor_y <= FALL_HEIGHT + 0.025:
-		global_position.y = floor_y                     # walking down: stay on the ground (not a fall in the client)
+		# walking down: still on the ground (not a fall in the client); the real height is on the step at once, the
+		# drawn one eases down onto it (falling at gravity fell behind steep stairs - 0.40 m risers - and turned the
+		# next step into a fall, floating well over the steps)
+		var drop := global_position.y - floor_y
+		if drop > 0.001:
+			_step_vis = minf(_step_vis + drop, PICK_LIFT)
+		global_position.y = floor_y
 		grounded = true
 		velocity.y = 0.0
 		_last_footing = global_position
