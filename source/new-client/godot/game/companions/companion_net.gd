@@ -32,6 +32,11 @@ var previews := {}                               # row -> {line: [ {level, kind,
 var _preview_new := {}
 var stats := {}                                  # row -> op 10's numbers
 var ras := {}                                    # row -> [ {...} ] (op 11)
+## The companion's choices (op 14, reset day C17 / S33, agreed with the server chat): row -> [ {kind, slot, chosen,
+## names, used, cap} ] - kind 1 charm, 2 pet (Cabalist / Enchanter), 3 sub-pet (Bonedancer, slot 1-3, used / cap the
+## x/75), 4 song or chant (slot 1 in combat, 2 out of combat, 3 travelling, 4 Twist "No"/"Yes"); kind 0xFF ends a list.
+var options := {}
+var _options_new := {}
 static var asked_gear_at := -100000              # (the server's HouseVault gear window for the original client: ignored)
 # the Horn of Rallying (ops 20 - 23): its title, realm, the PvE events it can start and the last sound attempt's result
 var horn := {"title": "", "realm": 0, "rows": [], "message": "", "at": 0}
@@ -60,6 +65,9 @@ func handle(body: PackedByteArray) -> void:
 	var op := body[3]
 	if op >= 20 and op <= 23:
 		_horn(op, body)
+		return
+	if op == 15:                                         # the Realm Exchange chest page's time left (server S38)
+		Server.listing_times(body)
 		return
 	match op:
 		1:
@@ -100,6 +108,7 @@ func handle(body: PackedByteArray) -> void:
 			if body[5] == 0xFF:
 				gear[row] = _gear_new.get(row, {})
 				_gear_new.erase(row)
+				Server.forget_details("cg:%d:" % row)          # (its items' delves asked again: they may have changed)
 			else:
 				if not _gear_new.has(row):
 					_gear_new[row] = {}
@@ -147,6 +156,34 @@ func handle(body: PackedByteArray) -> void:
 					"max_health": _u32(body, 28), "power": _u32(body, 32), "max_power": _u32(body, 36),
 					"endurance": _u16(body, 40), "max_endurance": _u16(body, 42), "af": _u16(body, 44),
 					"absorb": body[46], "resists": res, "money": _u32(body, 57), "rp": _u16(body, 61)}
+			# the 8 stats unbuffed [63..78] and the armour factor's [79..80] (reset day C15, agreed with the server
+			# chat): a stat above them is buffed, below debuffed
+			if body.size() >= 79:
+				var base := []
+				for i in 8:
+					base.append(_u16(body, 63 + i * 2))
+				stats[row]["base"] = base
+			if body.size() >= 81:
+				stats[row]["base_af"] = _u16(body, 79)
+		14:
+			var row := int(body[4])
+			if body[5] == 0xFF:
+				options[row] = _options_new.get(row, [])
+				_options_new.erase(row)
+			else:
+				var names := []
+				var at := 13
+				for k in int(body[8]):
+					var end := at
+					while end < body.size() and body[end] != 0:
+						end += 1
+					names.append(body.slice(at, end).get_string_from_ascii())
+					at = end + 1
+				if not _options_new.has(row):
+					_options_new[row] = []
+				(_options_new[row] as Array).append({"kind": body[5], "slot": body[6], "chosen": body[7], "names": names,
+						"used": _u16(body, 9), "cap": _u16(body, 11)})
+				return                                       # (the window redraws at the end of the list)
 		11:
 			var row := int(body[4])
 			if not ras.has(row) or (ras[row] as Array).size() != int(body[6]):

@@ -24,7 +24,29 @@ static func _dev_mode() -> bool:
 	return false
 
 
+## Mute when the game is not the focused window (reset day C6, 2026-11-05; Options > AUDIO, on by default): the whole
+## sound (the Master bus) goes quiet while you are in another window and comes back when you return.
+static var mute_unfocused := true
+
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_APPLICATION_FOCUS_OUT:
+		if mute_unfocused:
+			AudioServer.set_bus_mute(0, true)
+	elif what == NOTIFICATION_APPLICATION_FOCUS_IN:
+		AudioServer.set_bus_mute(0, false)
+
+
+static func set_mute_unfocused(on: bool) -> void:
+	mute_unfocused = on
+	if not on:
+		AudioServer.set_bus_mute(0, false)
+
+
 func _ready() -> void:
+	var mcfg := ConfigFile.new()
+	if mcfg.load("user://settings.cfg") == OK:
+		mute_unfocused = bool(mcfg.get_value("audio", "mute_unfocused", true))
 	for a in OS.get_cmdline_user_args():
 		if a.trim_prefix("--").split("=")[0] in TEST_FLAGS:
 			return

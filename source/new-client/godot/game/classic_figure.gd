@@ -305,8 +305,11 @@ func _apply_armor() -> void:
 				slot = "body"
 			if slot == "helm":
 				continue
-			if slot == "lbody" and bool(flags.get("kilt", false)) and lb != 3:
-				continue                                # a kilted race keeps its plaid, but under a robe
+			# a kilted race's kilt takes the worn CHEST item's lower-body skin (a leather tunic: a leather kilt), as the
+			# client (reset day C20, 2026-11-05, the old client chat's Q3 - Virsha and Wystan wore a grey cloth kilt
+			# whatever their tunic); the race's own plaid only with no chest item. Another piece's (leggings) never.
+			if slot == "lbody" and bool(flags.get("kilt", false)) and lb != 3 and int(m.get("body", 0)) <= 0:
+				continue
 			tex[slot] = String(skins[k])
 			tint[slot] = e[1]
 	# the hood: a hooded cloak (Cloak# 2), or /hood over any cloak (the server's hood flag) - Cloak2 and head 5

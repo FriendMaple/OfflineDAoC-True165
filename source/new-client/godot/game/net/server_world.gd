@@ -527,7 +527,8 @@ func _add_npc(d: Dictionary) -> void:
 	states.append(st)
 	by_oid[oid] = st
 	st.seen_at = Time.get_ticks_msec()
-	_mover[st] = {"speed": float(int(d.speed)), "dest": null, "target": 0, "flying": (flags & 0x20) != 0, "sy": p.y}
+	_mover[st] = {"speed": float(int(d.speed)), "dest": null, "target": 0, "flying": (flags & 0x20) != 0, "sy": p.y,
+			"fresh": true}                                      # (its first health: a body sent dead lies down at once)
 	_ground(st)
 	_unpark(oid, st)
 
@@ -734,9 +735,10 @@ func _move(d: Dictionary) -> void:
 	var seated := _riders.has(int(d.oid)) and st.ride_clip != ""
 	if seated:
 		pass
-	elif st.pos.distance_to(p) > snap or float(d.speed) == 0.0:
-		st.pos = p
+	elif st.pos.distance_to(p) > (snap if not _close_friend(int(d.oid)) else FRIEND_SNAP_M):
+		st.pos = p                                              # really lost: there at once
 		mv["err"] = Vector3.ZERO
+		mv["ease"] = Vector3.ZERO
 	elif ridden:
 		# a ridden steed is never stepped back toward the server's place (server chat 2026-11-01: the route horse moved
 		# at 45-75% of its packet speed on dense route points and stalled ~1.5 s now and then - the 25% lerp jumped it
@@ -746,7 +748,12 @@ func _move(d: Dictionary) -> void:
 		err.y = 0.0
 		mv["err"] = err
 	else:
-		st.pos = st.pos.lerp(p, 0.5)                            # close: ease into the server's place
+		# close: eased into the server's place over a moment (_physics_body), not jumped half the way at each update
+		# nor put there when it stops (reset day C13, 2026-11-05: in lag the updates come in bursts and companions
+		# snapped onto you)
+		var e := p - st.pos
+		e.y = 0.0
+		mv["ease"] = e
 	if not seated and not (ridden and String(st.info.get("figure", "")).to_lower() in FLIER_FIGURES):
 		_ground(st)
 	mv["heading"] = Server.yaw_of(int(d.heading))             # (the server's own facing: _move_ridden's turns)
@@ -801,6 +808,9 @@ func _death_log(text: String) -> void:
 
 func _set_health(st: NpcState, pct: int) -> void:
 	var was := st.alive
+	var fresh := bool(_mover.get(st, {}).get("fresh", false))  # (reset day C7: the first update of one just sent)
+	if fresh:
+		_mover[st].erase("fresh")
 	st.health = pct / 100.0
 	st.alive = pct > 0
 	if was and not st.alive:
@@ -813,13 +823,16 @@ func _set_health(st: NpcState, pct: int) -> void:
 					String(mv0.get("last_upd", "none"))])
 		st.mode = NpcState.Mode.DEAD
 		st.corpse_left = 1e9                                    # the body stays until the server removes it
+		var mvd: Dictionary = _mover.get(st, {})
+		mvd["dead_at"] = Time.get_ticks_msec()                  # (... or DEAD_BODY_MS: _drop_stale)
+		_mover[st] = mvd
 		_interrupt(int(st.spawn.get("oid", 0)), false)          # its cast's hand glows go with it (no fizzle)
 		var mv: Dictionary = _mover.get(st, {})
 		if bool(mv.get("flying", false)):                       # a flier's body comes down to the ground (owner
 			mv["flying"] = false                                 # 2026-10-16: dead fliers hung in the air)
 			_ground(st)
 		if st.view:
-			(st.view as Npc).play_death(true)
+			(st.view as Npc).play_death(not fresh, fresh)       # (sent already dead: no death replayed, no cry)
 	elif not was and st.alive:
 		st.mode = NpcState.Mode.IDLE
 
@@ -950,7 +963,9 @@ func _equip(d: Dictionary) -> void:
 		return
 	if st:
 		st.spawn["weapon_slots"] = ws
-	if st and st.view:                                          # dressed again with the new gear
+	if st and st.view and is_instance_valid(st.view) and st.view is Npc and (st.view as Npc).redress():
+		return                                                  # (dressed again in place: no blink - reset day C14)
+	if st and st.view:                                          # built again with the new gear
 		if st.view == target:
 			target = null
 		active.erase(st.index)
@@ -1013,6 +1028,7 @@ func _death(oid: int) -> void:
 ## RemoveObject then (ClientService.UpdateNpcs). The old client dropped what wasn't updated any more; so does this:
 ## no word of it for STALE_MS and it goes.
 const STALE_MS := 15000
+const DEAD_BODY_MS := 45000                    # a dead monster's body at most this long (reset day C9: 30-60 s)
 var _stale_check := 0.0
 
 
@@ -1029,15 +1045,59 @@ func _drop_stale(delta: float) -> void:
 	_stale_check = 2.0
 	var now := Time.get_ticks_msec()
 	var gone := []
+	var bodies := []
 	for oid in by_oid:
 		var st: NpcState = by_oid[oid]
 		if st.alive and now - st.seen_at > STALE_MS and int(oid) != pet_oid:
 			gone.append(int(oid))
+		elif not st.alive and int(oid) != pet_oid:
+			# a body the server's removal never reached us for (reset day C9, 2026-11-05: an untargetable dead wolf
+			# lay in Avalon Marsh for good): a monster's body goes DEAD_BODY_MS after its death; a character's (a
+			# gamebot or companion waiting for a rez - the server keeps sending those) once the server stops
+			var died := int(_mover.get(st, {}).get("dead_at", now))
+			if (not st.info.has("race") and now - died > DEAD_BODY_MS) or now - st.seen_at > STALE_MS:
+				bodies.append(int(oid))
 	for oid in gone:
 		_remove(oid, true, 1, "no word from the server for %d s (stale drop)" % (STALE_MS / 1000))
+	for oid in bodies:
+		_remove(oid, false, 0, "a dead body kept past its time (body drop)")    # (sinks into the ground and goes)
 	if housing and player:                                  # the houses the server stopped sending (it never removes
 		var me: Vector3 = Server.to_region(_current_zone(), player.global_position)   # one leaving range)
 		housing.cull(me.x, me.y)
+
+
+## The server's place reached over a moment (reset day C13): EASE_RATE of the gap a second (about 90% in 0.4 s).
+## Further off than SNAP_M (FRIEND_SNAP_M for your companions, pet and group) it is put there at once.
+const EASE_RATE := 6.0
+const FRIEND_SNAP_M := 25.0
+
+
+func _close_friend(oid: int) -> bool:
+	if oid == 0:
+		return false
+	if oid == pet_oid:
+		return true
+	for m in Server.group_members:
+		if int(m.get("oid", 0)) == oid:
+			return true
+	return _companion_hair_of(oid) >= 0
+
+
+## The rest of an update's gap walked off (true while it is still more than a step away).
+func _ease(s: NpcState, mv: Dictionary, delta: float) -> bool:
+	var e: Vector3 = mv.get("ease", Vector3.ZERO)
+	if e == Vector3.ZERO:
+		return false
+	if e.length() < 0.01:
+		s.pos += e
+		mv["ease"] = Vector3.ZERO
+		_ground(s)
+		return false
+	var part := e * (1.0 - exp(-EASE_RATE * delta))
+	s.pos += part
+	mv["ease"] = e - part
+	_ground(s)
+	return e.length() > 0.3
 
 
 func _physics_body(delta: float) -> void:
@@ -1052,7 +1112,12 @@ func _physics_body(delta: float) -> void:
 			continue
 		if s.ride_clip != "":
 			continue                                            # riding: the steed carries it (_seat_riders)
+		var easing := _ease(s, mv, delta)
 		if speed <= 0.0:
+			if easing:                                          # (still walking the last of the way to its place)
+				s.mode = NpcState.Mode.WALK
+				s.running = false
+				continue
 			s.mode = NpcState.Mode.FIGHT if int(mv.target) != 0 or now_ms < s.combat_until else NpcState.Mode.IDLE
 			s.running = false
 			s.fighting = int(mv.target) != 0 or now_ms < s.combat_until
@@ -2148,6 +2213,51 @@ func consider_target() -> void:
 		Server.client.call("Target", int(target.spawn.get("oid", 0)), 0x8000 | 0x6000)
 	elif target_object != 0:
 		Server.client.call("Target", target_object, 0x8000 | 0x6000)
+
+
+## Loot lying on the ground - what a right click prefers and the Pick Up Loot key takes: any ground object but a
+## gravestone, a relic, a usable object (horn, house vault / market items) or a house marker.
+func _is_loot(h: Node3D) -> bool:
+	if h == null or not is_instance_valid(h):
+		return false
+	var model := int(h.get_meta("model", 0))
+	var nm := String(h.get_meta("name", ""))
+	return not (nm.contains("'s Grave") or model in RELIC_MODELS or model in USE_MODELS or model in HOUSE_USE_MODELS
+			or is_horn(nm))
+
+
+## A right click over loot (reset day C8, 2026-11-05, a small 1.65 QoL exception: "Right-click always picks NPCs
+## before loot, and NPC click boxes are big"): true when the pointer is on a loot bag / an item on the ground - it is
+## then picked up before any NPC under the same spot.
+func loot_under(cam: Camera3D, screen_pos: Vector2) -> bool:
+	var from := cam.project_ray_origin(screen_pos)
+	var q := PhysicsRayQueryParameters3D.create(from, from + cam.project_ray_normal(screen_pos) * 60.0, OBJECT_PICK)
+	var hit := get_world_3d().direct_space_state.intersect_ray(q)
+	return not hit.is_empty() and hit.collider.has_meta("server_object") 			and _is_loot(objects.get(int(hit.collider.get_meta("server_object"))))
+
+
+const PICKUP_RANGE := 256 * 0.025               # the server's Get Item reach (PlayerPickUpRequestHandler: 256 units)
+
+
+## The Pick Up Loot key (reset day C8, 2026-11-05 - a 1.65 QoL exception, not in 1.64, which had only Nearest Loot +
+## Get Item): the nearest loot within the server's pick-up reach targeted and picked up - one item a press, so it can
+## be pressed again for the next. No autoloot.
+func pick_up_nearest_loot() -> void:
+	var best := 0
+	var best_d := PICKUP_RANGE
+	for oid in objects:
+		var h: Node3D = objects[oid]
+		if not _is_loot(h):
+			continue
+		var d := h.global_position.distance_to(player.global_position)
+		if d <= best_d:
+			best = int(oid)
+			best_d = d
+	if best == 0:
+		PlayerData.message.emit("No loot in reach.", "system")
+		return
+	_target_ground(best)
+	get_object()
 
 
 ## The Get Item key: the targeted ground object picked up - the server picks up what you have targeted

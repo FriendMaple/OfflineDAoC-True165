@@ -50,6 +50,7 @@ func set_combat_border(on: bool) -> void:
 		(_status.frame as TextureRect).texture = UiArt.tex("rightbotcomb" if on else "rightbot")
 var _target_name: Label
 var _target_bar: TextureRect
+var _target_bg: TextureRect
 var _target_pct: Label
 var _jewels: Array = []
 var _jewels_lit := -1
@@ -179,6 +180,8 @@ func _build() -> void:
 	# owner 2026-10-10 (from the 1.65 client): health red, endurance GREEN above power. Power is YELLOW (owner,
 	# bot plan phase 1: "purple ... should be yellow"): the client's bluefull is a purple-blue (avg 87, 49, 226) and
 	# game.dll never names it - its interface list loads yellowfull (0x54f6d8)
+	# the health bar's dark red trough (redbg), as the target, group and pet windows have (reset day C1, 2026-11-05)
+	_bar(st, "redbg", Rect2(30, 19.5, 90, 6))
 	for spec in [["health", "redfull", Rect2(30, 19.5, 90, 6)], ["endurance", "greenfull", Rect2(30, 31, 90, 6)],
 			["power", "yellowfull", Rect2(30, 40.5, 90, 6)]]:
 		_status_bars[spec[0]] = [_bar(st, spec[1], spec[2]), spec[2].size.x]
@@ -223,6 +226,8 @@ func _build() -> void:
 	_target_pct.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_target_pct.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	st.add_child(_target_pct)
+	_target_bg = _bar(st, "redbg", Rect2(22, 82.5, 98, 6))
+	_target_bg.visible = false
 	_target_bar = _bar(st, "redfull", Rect2(22, 82.5, 98, 6))
 	_target_bar.visible = false
 	PlayerData.target_changed.connect(_refresh_target)
@@ -1744,11 +1749,17 @@ func show_lines(title: String, lines: Array) -> void:
 ## (the server's /stables pages, owner 2026-10-15: "cut off in the box") scrolls inside it, and a resize by hand
 ## keeps the scroll.
 func _fit_info(w: ClassicWindow, body: RichTextLabel, width := INFO_W) -> void:
-	(w.get_node("Title") as Label).size.x = width - 27
+	# the title is measured too: a long item name widens the window (reset day C2, 2026-11-05: "HAMMER OF THE OTHERW...")
+	var title := w.get_node("Title") as Label
+	var tw := title.get_theme_font("font").get_string_size(title.text, HORIZONTAL_ALIGNMENT_LEFT, -1,
+			title.get_theme_font_size("font_size")).x
+	width = clampf(maxf(width, ceilf(tw) + 27 + 4), w.min_size.x, w.max_size.x)
+	title.size.x = width - 27
 	body.size = Vector2(width - 27, 20)
 	body.fit_content = true
 	body.scroll_active = false
 	w.show_window()
+	_info_beside(w, width)
 	await get_tree().process_frame                        # the text's height, then the window fits around it
 	var full := body.position.y + body.get_content_height() + 8 + 33
 	var room := (w.get_parent_area_size().y - w.position.y) / maxf(w.scale.y, 0.01) - 8.0
@@ -1758,6 +1769,25 @@ func _fit_info(w: ClassicWindow, body: RichTextLabel, width := INFO_W) -> void:
 		return
 	w.set_window_size(Vector2(width, cap))
 	_info_scroll(w, body)
+
+
+## The information window kept off the Realm Exchange (reset day C3, 2026-11-05: a right-clicked result's stats opened
+## over the exchange's page buttons): if they would overlap, it opens beside the exchange - right of it, else left.
+func _info_beside(w: ClassicWindow, width: float) -> void:
+	if exchange == null or not exchange.visible:
+		return
+	var ex := Rect2(exchange.position, exchange.size * exchange.scale)
+	var me := Rect2(w.position, Vector2(width, maxf(w.size.y, 150.0)) * w.scale)
+	if not ex.intersects(me):
+		return
+	var area := w.get_parent_area_size()
+	if ex.end.x + me.size.x <= area.x:
+		w.position = Vector2(ex.end.x, ex.position.y)
+	elif ex.position.x - me.size.x >= 0.0:
+		w.position = Vector2(ex.position.x - me.size.x, ex.position.y)
+	else:
+		return                                          # (no room either side: the click-to-front still works)
+	w.save_position()
 
 
 func _info_scroll(w: ClassicWindow, body: RichTextLabel) -> void:
@@ -1857,6 +1887,7 @@ func _set_sheet(tab: String) -> void:
 		_tab_hover[i].texture = UiArt.region(skin, Rect2(TAB_X[i], 32 + 3, TAB_W[i], 24))
 		_tab_lit[i].visible = TABS[i] == tab and not _collapsed
 	for c in _sheet_body.get_children():
+		_sheet_body.remove_child(c)                        # (out at once: a rebuilt page's "member_0" ... keep their names)
 		c.queue_free()
 	match tab:
 		"character": CharacterSheet.build(_sheet_body)
@@ -1887,6 +1918,7 @@ func _refresh_target() -> void:
 	_target_name.text = String(t.get("name", "")).to_upper()
 	_target_name.add_theme_color_override("font_color", t.get("con_color", UiArt.CREAM))
 	_target_bar.visible = not t.is_empty()
+	_target_bg.visible = _target_bar.visible
 	_target_bar.size.x = 98.0 * clampf(float(t.get("health", 1.0)), 0.0, 1.0)
 	_target_pct.text = "" if t.is_empty() else "%d" % roundi(100.0 * float(t.get("health", 1.0)))
 
@@ -1989,6 +2021,11 @@ func _process_inner(_delta: float) -> void:
 		else:
 			var t := Time.get_time_dict_from_system()
 			_clock.text = "%02d:%02d" % [t.hour, t.minute]
+
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed 			and (event.button_index == MOUSE_BUTTON_LEFT or event.button_index == MOUSE_BUTTON_RIGHT):
+		ClassicWindow.raise_clicked(get_viewport())        # (reset day C3: a click brings its window to the front)
 
 
 func _unhandled_input(event: InputEvent) -> void:

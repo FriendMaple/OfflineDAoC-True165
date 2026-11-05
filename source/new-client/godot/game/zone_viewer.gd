@@ -793,7 +793,9 @@ func _input(event: InputEvent) -> void:
 				player.set_mouse_look(false)                     # Mouse Look Toggle: the second right click
 			elif _rclick_moved < 6.0 and get_viewport().gui_get_hovered_control() == null:
 				var hit := true
-				var rn: Npc = npcs.pick(player.camera, _rclick_from)
+				# loot under the pointer comes before an NPC there (reset day C8: NPC click boxes are big)
+				var loot_first: bool = npcs is ServerWorld and (npcs as ServerWorld).loot_under(player.camera, _rclick_from)
+				var rn: Npc = null if loot_first else npcs.pick(player.camera, _rclick_from)
 				if Input.is_key_pressed(KEY_SHIFT) and npcs is ServerWorld 						and (npcs as ServerWorld).house_shift_click(player.camera, _rclick_from):
 					pass                                         # housing: options / turning a decoration
 				elif rn:
@@ -816,6 +818,8 @@ func _input(event: InputEvent) -> void:
 		_rclick_moved += event.relative.length() if _rclick_down else 0.0
 	elif Keybinds.pressed(event, "attack_mode") and not player._ui_typing():
 		_toggle_attack()
+	elif Keybinds.pressed(event, "pickup_loot") and npcs is ServerWorld and not player._ui_typing():
+		(npcs as ServerWorld).pick_up_nearest_loot()            # Pick Up Loot (Shift+G, a QoL exception): one bag a press
 	elif Keybinds.pressed(event, "get_item") and npcs is ServerWorld and not player._ui_typing():
 		(npcs as ServerWorld).get_object()                      # Get Item (G): pick up the targeted ground object
 	elif Keybinds.pressed(event, "target_loot") and npcs is ServerWorld and not player._ui_typing():

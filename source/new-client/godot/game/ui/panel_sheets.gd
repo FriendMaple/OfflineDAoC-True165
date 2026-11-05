@@ -388,6 +388,17 @@ static func _group(parent: Control) -> void:
 		hpn.size = Vector2(70, 10)
 		hpn.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		row.add_child(hpn)
+		# the endurance line between health and power, the power line's size (reset day C5, 2026-11-05: the server
+		# sends each member's endurance; the page drew only health and power)
+		var en := TextureRect.new()
+		en.name = "End"
+		en.texture = UiArt.tex("greenfull")                # endurance is green, as on the status window
+		en.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		en.stretch_mode = TextureRect.STRETCH_SCALE
+		en.position = Vector2(6, 20.5)
+		en.size = Vector2(70, 3)
+		en.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		row.add_child(en)
 		var pw := TextureRect.new()
 		pw.name = "Pow"
 		pw.texture = UiArt.tex("yellowfull")                # power is yellow (see GameUi's status bars)
@@ -440,6 +451,7 @@ static func update_group(parent: Control) -> void:
 		(row.get_node("Class") as Label).text = "%s %d" % [String(m.get("class_name", "")).to_upper(), int(m.get("level", 1))]
 		(row.get_node("Hp") as Control).size.x = 70.0 * clampf(float(m.get("hp", 0.0)), 0.0, 1.0)
 		(row.get_node("HpText") as Label).text = str(int(m.get("hp_pts", roundi(float(m.get("hp", 0.0)) * 100.0))))
+		(row.get_node("End") as Control).size.x = 70.0 * clampf(float(m.get("end", 1.0)), 0.0, 1.0)
 		(row.get_node("Pow") as Control).size.x = 70.0 * clampf(float(m.get("power", 0.0)), 0.0, 1.0)
 		var fx := row.get_node("Effects") as GridContainer
 		var effs: Array = m.get("effects", [])

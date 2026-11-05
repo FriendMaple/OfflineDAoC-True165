@@ -417,6 +417,11 @@ func _audio() -> void:
 		_row(v[1], _slider(_volume(String(v[0])), 0, 100, 1, func(x: float):
 			_save("audio", String(v[0]).to_lower(), x)
 			_apply_volumes()))
+	# reset day C6 (2026-11-05): quiet while another window has the focus
+	_row("MUTE WHEN NOT FOCUSED", _toggle(BootSettings.mute_unfocused, func(on: bool):
+		_save("audio", "mute_unfocused", on)
+		BootSettings.set_mute_unfocused(on)))
+	_hint("ON: THE GAME GOES QUIET WHILE YOU ARE IN ANOTHER WINDOW AND THE SOUND COMES BACK WHEN YOU RETURN.")
 
 
 func _controls() -> void:
@@ -519,6 +524,18 @@ func _interface() -> void:
 	_row("UI SCALE", scale_slider)
 	_hint("THE INTERFACE KEEPS ITS SIZE ON SCREEN AT ANY RESOLUTION; UI SCALE MAKES ALL OF IT BIGGER OR SMALLER.")
 	# the 1.64 client's "Alpha: N%" (game.dll Options, saved [Panels] Alpha): the windows' see-through-ness
+	# the quest marks on the maps (owner 2026-11-05: the map's only; the circles under NPCs stay)
+	_row("QUEST MARKERS ON MAP", _toggle(MapWindow.show_quest_marks, func(on: bool):
+		_save("interface", "map_quest_marks", on)
+		if ui and ui.map_window:
+			ui.map_window.set_quest_marks(on)))
+	_hint("ON: QUESTS YOU CAN TAKE, TURN-INS AND OBJECTIVES ARE MARKED ON THE MAPS. THE CIRCLES UNDER NPCS IN THE WORLD STAY EITHER WAY.")
+	# the key to the map's marks under the map (owner 2026-11-05)
+	_row("MAP LEGEND", _toggle(MapWindow.show_legend, func(on: bool):
+		_save("interface", "map_legend", on)
+		if ui and ui.map_window:
+			ui.map_window.set_legend(on)))
+	_hint("ON: THE KEY TO THE QUEST MARKS (QUEST, TURN IN, OBJECTIVE, IN PROGRESS, TASK) UNDER THE MAP.")
 	_row("ALPHA", _slider(ClassicWindow.interface_alpha() * 100.0, 10, 100, 5, func(x: float):
 		_save("interface", "alpha", x)
 		ClassicWindow.set_interface_alpha(x, get_tree())))

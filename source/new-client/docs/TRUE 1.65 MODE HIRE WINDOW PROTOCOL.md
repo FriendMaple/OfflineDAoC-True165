@@ -43,3 +43,26 @@ race/sex's figure). The FACE and HAIR rows are replaced by one LOOK row:
 - Text slot 4 = "Look n of N"; slot 5 unused (empty). Numbers [8] look index, [9] look count; [10] / [11] 0.
 - face+/face-/hair+/hair- may stay as aliases of look+/look-.
 New client: SrvHireWindow shows RACE / CLASS / GENDER / LOOK (+ NEW LOOK); figure.json "looks" holds every such row.
+
+## 2026-11-05: delves, base stats, companion choices, exchange time left, quest givers (reset day C15-C18)
+
+Agreed between the client and server chats.
+- `/companionui delve <row> item <slot>` and `/companionui delve <row> style <line> <level>`: the server answers each with
+  an ordinary DetailWindow (SendCustomTextWindow: the player's own item / style delve lines), always - an empty window
+  when there is nothing. The client keeps it for the gear / style hover box.
+- op 10 grows to 81 bytes: [63..78] the 8 stats unbuffed (u16, the order of [8..23]), [79..80] the base armour factor.
+  The client colours a stat green above its base, red below.
+- op 14, a companion's choices, one message a row, sent after every companion window fill and after any choice verb:
+  [4] row, [5] kind (1 charm, 2 pet, 3 sub-pet, 4 song / chant), [6] slot, [7] chosen index, [8] number of choices,
+  [9..10] used u16, [11..12] cap u16 (the Bonedancer's x / 75), [13..] the choice names, each zero-ended. A closing op 14
+  with kind 0xFF ends the list. Song slots: 1 in combat, 2 out of combat, 3 travelling (Paladin chants 1-2).
+  Verbs: `charm <row> on|off`, `pet <row> <i>`, `subpet <row> <slot> <i>`, `song <row> <slot> <i>`; a refusal comes as
+  op 3 text slot 8. New client: the companion window's AI OPTIONS tab (shown only when the rows exist; any
+  later AI choice is a kind 5 and up: its first name is the row's caption, the rest its choices (two: buttons,
+  more: a list), picked with `option <row> <kind> <slot> <i>` - no new client code).
+- op 15, the Realm Exchange chest page's time left: [4] count, then 3 bytes each - the listing's place 0-99, minutes
+  left (u16); 0 not offered, 0xFFFF no limit. Sent when the chest opens or changes page, after a price and after a
+  duration whisper. Broker whispers: `sort <name|level|quality|price> <asc|desc>`, `duration <place 0-99> <12|24|48>`.
+- Quest givers, the whole realm: map markers (the relic-marker packet) with ids 0xFFFC0001..0xFFFCFFFF, one per NPC
+  showing the player "quest available"; sent at login, changes every 30 s. The client draws them as the gold "!" on
+  every zone map (turn-ins 0xFFFD...., objectives 0xFFFE.... as before).

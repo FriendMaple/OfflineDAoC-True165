@@ -1199,6 +1199,24 @@ func prefetch_detail(key: Variant, object_type: int, object_id: int, caption := 
 var _quiet_delves := 0                   # hover requests whose GM debug line ("Delve objectType=...") is still to come
 
 
+## A delve the server answers to a command with an ordinary DetailWindow, kept under `key` for a hover box like an
+## item's own (reset day C15, 2026-11-05: a companion's gear and styles - "/companionui delve <row> item <slot>" /
+## "... style <line> <level>", always answered by the server).
+func prefetch_command(key: String, cmd: String) -> void:
+	if client == null or _item_lines.has(key):
+		return
+	for q in _detail_queue:
+		if q.key != null and typeof(q.key) == TYPE_STRING and q.key == key:
+			return
+	_detail_queue.append({"key": key, "at": Time.get_ticks_msec(), "caption": ""})
+	command(cmd)
+
+
+## What a key's kept delves start with forgotten (a companion's gear changed: "cg:<row>:").
+func forget_details(prefix: String) -> void:
+	_forget_details(prefix)
+
+
 func _forget_details(prefix: String) -> void:
 	for k in _item_lines.keys():
 		if k is String and (k as String).begins_with(prefix):
@@ -1288,7 +1306,7 @@ var map_markers := {}                    # marker id -> Vector4(region, x, y, z)
 func bot_dots() -> PackedVector3Array:
 	var out := PackedVector3Array()
 	for id in map_markers:
-		if int(id) < TURNIN_MARKERS:
+		if int(id) < GIVER_MARKERS:
 			var p := _marker_here(map_markers[id])
 			if p != Vector3.INF:
 				out.append(p)
@@ -1303,15 +1321,24 @@ const QUEST_MARKERS := 0xFFFE0000
 ## 0xFFFD0001 the traveler's inn's innkeeper ("The Traveler's Inn"), 0xFFFD0002 its Horn Handler ("The Horn of
 ## Rallying") - green, as a turn-in; sent per player while the quest is open, removed at the turn-in.
 const TURNIN_MARKERS := 0xFFFD0000
+## The quest givers with a quest for you, the whole realm (server S40, reset day C18, 2026-11-05 - owner: "if I swap to
+## shannon estuary map while im in lough derg i can see if there are any quests there for me to grab"): 0xFFFC0001.. one
+## per NPC showing you "quest available", every region (a dungeon's on its own map); sent at login, changes every 30 s.
+const GIVER_MARKERS := 0xFFFC0000
+
+
+## A quest marker's kind on the map: "step" (red), "?" (a turn-in, green), "!" (a quest for you, yellow).
+static func _marker_kind(id: int) -> String:
+	return "step" if id >= QUEST_MARKERS else ("?" if id >= TURNIN_MARKERS else "!")
 
 
 func quest_map_marks() -> Array:
 	var out := []
 	for id in map_markers:
-		if int(id) >= TURNIN_MARKERS:
+		if int(id) >= GIVER_MARKERS:
 			var p := _marker_here(map_markers[id])
 			if p != Vector3.INF:
-				out.append({"at": Vector2(p.x, p.z), "kind": "step" if int(id) >= QUEST_MARKERS else "?"})
+				out.append({"at": Vector2(p.x, p.z), "kind": _marker_kind(int(id))})
 	return out
 
 
@@ -1322,10 +1349,10 @@ func quest_map_marks_in(zid: int) -> Array:
 	var region := int(zone_info(zid).get("region", -1))
 	for id in map_markers:
 		var v: Vector4 = map_markers[id]
-		if int(id) < TURNIN_MARKERS or int(v.x) != region or zone_at(region, v.y, v.z) != zid:
+		if int(id) < GIVER_MARKERS or int(v.x) != region or zone_at(region, v.y, v.z) != zid:
 			continue
 		var p := to_local(zid, v.y, v.z, v.w)
-		out.append({"at": Vector2(p.x, p.z), "kind": "step" if int(id) >= QUEST_MARKERS else "?"})
+		out.append({"at": Vector2(p.x, p.z), "kind": _marker_kind(int(id))})
 	return out
 
 
@@ -1482,7 +1509,12 @@ func use_entry(id: String, player: Node3D, zone_id: int, target_in_view: bool) -
 	elif parts.size() >= 4 and parts[1] == "spell":
 		client.call("UseSpell", r.x, r.y, r.z, speed, heading, target_in_view, int(parts[3]), int(parts[2]))
 	elif parts.size() == 2:
-		client.call("UseSlot", r.x, r.y, r.z, speed, heading, target_in_view, int(parts[1]), 1)
+		# a weapon / instrument you wear (10 right hand, 11 left hand, 12 two-handed, 13 ranged / instrument) is a click
+		# (type 0), as the client sends it: the server readies that weapon set only on a click - with "use" (1) it only
+		# said "You attempt to use ..." (reset day C11, 2026-11-05: a minstrel's quickbar weapon / instrument never
+		# switched). Other items stay a use.
+		var slot := int(parts[1])
+		client.call("UseSlot", r.x, r.y, r.z, speed, heading, target_in_view, slot, 0 if slot >= 10 and slot <= 13 else 1)
 	else:
 		return false
 	return true
@@ -1685,6 +1717,33 @@ var market_pages := 0                             # the last page's number (the 
 var market_count := -1                            # "Realm Exchange returned N real listing(s)." (page 0), -1 unknown
 var market_search := {}                           # the filters of the last search (MarketSearch), for the pages
 var listings := {}                                # chest slot -> runtime ItemDb id "srvc:<slot>"
+## Each listing's time left (server S38 / reset day C16, 2026-11-05: the owner's 12, 24 and 48 hours): chest slot ->
+## minutes; 0 not offered (stored, or run out unsold), NO_LIMIT priced before listings had a time. The companion
+## messages' op 15 with the chest page shown: [4] count, then 3 bytes each - its place 0-99, minutes (u16).
+var listing_minutes := {}
+const NO_LIMIT := 0xFFFF
+
+
+func listing_times(body: PackedByteArray) -> void:
+	listing_minutes = {}
+	for i in int(body[4]) if body.size() > 4 else 0:
+		var at := 5 + i * 3
+		if at + 2 >= body.size():
+			break
+		listing_minutes[CHEST_FIRST + int(body[at])] = body[at + 1] | (body[at + 2] << 8)
+	exchange_changed.emit()
+
+
+## A listing's time left as the list shows it: "47H", "35M", "-" (not offered), "" (no limit / not known).
+func listing_time_text(slot: int) -> String:
+	if not listing_minutes.has(slot):
+		return ""
+	var m := int(listing_minutes[slot])
+	if m == NO_LIMIT:
+		return ""
+	if m <= 0:
+		return "-"
+	return "%dH" % ceili(m / 60.0) if m >= 60 else "%dM" % m
 var listing_page := 0                             # the chest's page on the server (100 slots each)
 var proceeds := -1                                # sale proceeds waiting (copper; the greeting's amount), -1 unknown
 var _prices := {}                                 # "<character>|<page>|<slot>|<name>" -> copper priced from here

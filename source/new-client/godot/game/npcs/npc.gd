@@ -61,6 +61,7 @@ var _phase := 0
 ## the model, gear and plates stay; what it shows follows the new state from the next tick.
 func rebind(st: NpcState) -> void:
 	state = st
+	_died = false
 	spawn = st.spawn
 	info = st.info
 	position = st.pos
@@ -404,6 +405,38 @@ func _dress(f: Fig3Figure) -> void:
 	_weapon_root = f
 	_weapon_slots = by_slot
 	_hang_weapons(state != null and state.fighting)
+
+
+## The server's new gear (EquipmentUpdate) put on the model in place - armour, helm, cloak and weapons - as the 1.65
+## client re-dresses a figure without a blink (reset day C14, 2026-11-05: a minstrel companion blinked out as combat
+## started; the old client chat's Q5). False when this view can't (a ghost / hidden look laid over every part when
+## it was built, or no model): it is then built again as before.
+func redress() -> bool:
+	if model == null or not is_instance_valid(model) or (int(spawn.get("flags", 0)) & FLAG_GHOST) 			or (state and state.stealth_look):
+		return false
+	var rows: Array = manager.data.get("equipment", {}).get(String(spawn.get("equipment", "")), [])
+	if model is Fig3Figure:
+		var f := model as Fig3Figure
+		if rows.is_empty():                                  # (everything taken off)
+			f.set_armor({}, {})
+			f.set_helm(0)
+			_weapon_slots = {}
+			_hang_weapons(_weapons_drawn)
+		else:
+			_dress(f)
+	elif info.has("gltf"):
+		_weapon_slots = {}
+		_hang_weapons(false)                                 # (the old weapons off)
+		_hold_weapons(model)
+	else:
+		return false
+	for g in model.find_children("*", "GeometryInstance3D", true, false):
+		(g as GeometryInstance3D).layers = 2                 # (as _build_model: the quest circles lie under them)
+	for w in _weapon_nodes:
+		if is_instance_valid(w):
+			for g in (w as Node).find_children("*", "GeometryInstance3D", true, false):
+				(g as GeometryInstance3D).layers = 2
+	return true
 
 
 ## The GHOST flag's look (a spiritmaster's spirit pets, ghostly NPCs): see-through, with a subtle white glow over it
@@ -763,13 +796,23 @@ func tick(delta: float, cam: Camera3D) -> void:
 	prof_us += Time.get_ticks_usec() - tp0
 
 
+const STEP_DRAW_MAX := 64.0 * 0.025              # (the client's step-up reach: anything higher is drawn at once)
+
+
 func _process_view(delta: float, cam: Camera3D) -> void:
 	if state == null:
 		return
 	# only on change: setting a transform (even to the same value) pushes new transforms to every child - ~34 mesh
 	# parts, the skeleton, the labels, the click shape - and 265 standing NPCs did that every frame (crowd_probe)
 	if position != state.pos:
-		position = state.pos
+		# a step up or down (stairs, a ledge) is drawn over a moment instead of at once (reset day C12, 2026-11-05:
+		# NPCs jerked up and down stairs as you did); its real height (state.pos) is unchanged. A bigger jump - a
+		# teleport, a fall - is drawn at once.
+		var to := state.pos
+		var dy := to.y - position.y
+		if absf(dy) > 0.002 and absf(dy) < STEP_DRAW_MAX:
+			to.y = position.y + dy * (1.0 - exp(-Player.STEP_EASE * delta))
+		position = to
 	if rotation.y != state.yaw:
 		rotation.y = state.yaw
 	if not AnimLod.threaded:                          # (threaded: sync_pick shows / hides it - main thread only)
@@ -790,6 +833,8 @@ func _process_view(delta: float, cam: Camera3D) -> void:
 		_cast_left -= delta
 		if _cast_left < -CAST_GRACE:                     # the spell's effect never came (out of view): stop holding
 			casting_spell = false
+	if _died and state and state.alive:
+		_died = false                                 # (revived: it can die again)
 	if anim == null or _action_left > 0.0:
 		return
 	if casting_spell:                                 # the cast's loop, held until the spell lands (cast_end)
@@ -833,6 +878,8 @@ func _process_view(delta: float, cam: Camera3D) -> void:
 			NpcState.Mode.FIGHT:
 				clip = _stance_clip("combat_idle") if anim.has_animation("combat_idle") else "idle"
 			NpcState.Mode.DEAD:
+				if not _died:
+					play_death(false, true)                # (a view that came up dead lies down at once)
 				return                                     # play_death() holds the last frame
 		if swim:
 			clip = "swim"                                  # swimming, still or moving (as you: Player)
@@ -1036,10 +1083,19 @@ func flinch() -> void:
 var _hover := 0.0                                         # its float height (monsters.csv), metres
 var _hover_node: Node3D                                    # what was lifted by it (the model, or a wisp's effect)
 var _fell := false
+var _died := false                                         # the death played (or lies at its last frame)
 
 
-func play_death(vocal := false) -> void:
-	if vocal and sounds and _shown_mode != int(NpcState.Mode.DEAD):
+## at_end: lie at the death's last frame at once - a body the server sent already dead (reset day C7, 2026-11-05: a
+## right-clicked loot bag / a body re-sent replayed the whole death). A body already down never dies again.
+func play_death(vocal := false, at_end := false) -> void:
+	if _died:
+		_shown_mode = int(NpcState.Mode.DEAD)
+		casting_spell = false
+		_bow_hold = false
+		return
+	_died = true
+	if vocal and not at_end and sounds and _shown_mode != int(NpcState.Mode.DEAD):
 		sounds.event("die")
 	_action_left = 0.0
 	_shown_mode = int(NpcState.Mode.DEAD)
@@ -1048,7 +1104,9 @@ func play_death(vocal := false) -> void:
 	casting_spell = false
 	_bow_hold = false
 	if anim and anim.has_animation("death"):
-		anim.play("death", 0.1)
+		anim.play("death", 0.0 if at_end else 0.1)
+		if at_end:
+			anim.seek(anim.current_animation_length, true)
 	# a hovering monster's body drops to the ground as it dies - bodies lie on the ground to be looted (owner
 	# 2026-10-16: a dead forest skrat hung in the air, then floated down and was gone)
 	if _hover > 0.0 and not _fell and is_instance_valid(_hover_node):

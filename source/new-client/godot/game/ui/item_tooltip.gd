@@ -42,11 +42,11 @@ static func make(it: Dictionary) -> Control:
 	return box
 
 
-## An item's name in a list (backpack, vault, merchant): in its con colour to you while the row is highlighted
-## (hovered or selected), as the original client (owner 2026-11-02: "items should show their current con to the player
-## in their names when highlighted"); an item without a level (0) keeps the plain text colour.
-static func name_color(it: Dictionary, highlighted: bool) -> Color:
-	if not highlighted or it.is_empty() or int(it.get("level", 0)) <= 0:
+## An item's name in a list (backpack, vault, merchant): always in its con colour to you (reset day C4, 2026-11-05:
+## "all names white" - the Nov 2 version coloured it only while the row was highlighted); an item without a level (0)
+## keeps the plain text colour. (`highlighted` is no longer used.)
+static func name_color(it: Dictionary, _highlighted: bool) -> Color:
+	if it.is_empty() or int(it.get("level", 0)) <= 0:
 		return UiArt.CREAM
 	return con_color(int(it.get("level", 0)), PlayerData.level)
 

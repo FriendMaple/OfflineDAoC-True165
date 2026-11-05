@@ -23,6 +23,15 @@ var _pick: OptionButton
 var _follow_btn: Button
 var _entries: Array = []                  # dropdown index -> shown dict ({} = header)
 var _tex := {}
+var _legend: LegendStrip
+## The key to the map's marks under the map (owner 2026-11-05: "move the legend below the actual map and add an option
+## in settings to hide it" - Options > INTERFACE > MAP LEGEND, saved [interface] map_legend, on by default).
+static var show_legend := true
+## Quest marks on the maps at all (owner 2026-11-05: "add an option to disable quest markers" - the map ones only, the
+## circles under NPCs in the world stay): Options > INTERFACE > QUEST MARKERS ON MAP, saved [interface] map_quest_marks.
+## Off: no marks and no legend.
+static var show_quest_marks := true
+const LEGEND_H := 15.0
 
 
 func build() -> void:
@@ -45,6 +54,12 @@ func build() -> void:
 	_view = MapView.new()
 	_view.window = self
 	add_child(_view)
+	var cfg := ConfigFile.new()
+	cfg.load(UiArt.settings_path)
+	show_legend = bool(cfg.get_value("interface", "map_legend", true))
+	show_quest_marks = bool(cfg.get_value("interface", "map_quest_marks", true))
+	_legend = LegendStrip.new()
+	add_child(_legend)
 	_fill_dropdown()
 	_layout()
 	resized.connect(_layout)
@@ -55,7 +70,8 @@ func _layout() -> void:
 	if _view == null:
 		return
 	var w := size.x - 27.0
-	var h := size.y - TOP - 8.0 - 33.0 + 21.0
+	var legend := show_legend and show_quest_marks
+	var h := size.y - TOP - 8.0 - 33.0 + 21.0 - (LEGEND_H + 2.0 if legend else 0.0)
 	var side := maxf(64.0, minf(w, h))
 	_title.position = Vector2(12, 3)                       # in the frame's top band (was a gap above it)
 	_title.size = Vector2(size.x - 24.0, 16)
@@ -64,6 +80,51 @@ func _layout() -> void:
 	_follow_btn.position = Vector2(size.x - 22.0 - 58.0, 21)  # clear of the frame's right edge
 	_view.position = Vector2(12 + (w - side) * 0.5, TOP)
 	_view.size = Vector2(side, side)
+	_legend.visible = legend
+	_legend.position = Vector2(_view.position.x, TOP + side + 2.0)
+	_legend.size = Vector2(side, LEGEND_H)
+	_legend.queue_redraw()
+
+
+## Options > INTERFACE > MAP LEGEND: the key under the map shown or not (the map grows into its room).
+func set_legend(on: bool) -> void:
+	show_legend = on
+	_layout()
+
+
+## Options > INTERFACE > QUEST MARKERS ON MAP: the quest marks (and with them the legend) shown on the maps or not.
+func set_quest_marks(on: bool) -> void:
+	show_quest_marks = on
+	_layout()
+	if _view:
+		_view.queue_redraw()
+
+
+## The key to the map's marks, under the map in the windows' dark stone: each kind's medallion and its word.
+class LegendStrip extends Control:
+	const ITEMS := [["!", "QUEST"], ["?", "TURN IN"], ["step", "OBJECTIVE"], ["o", "IN PROGRESS"], ["task", "TASK"]]
+
+	func _init() -> void:
+		mouse_filter = Control.MOUSE_FILTER_IGNORE
+
+	func _draw() -> void:
+		draw_rect(Rect2(Vector2.ZERO, size), Color(0.06, 0.05, 0.04, 0.9))
+		draw_rect(Rect2(Vector2.ZERO, size), Color(0.55, 0.42, 0.2, 0.9), false, 1.0)
+		var f := UiArt.font(true)
+		var fs := 8
+		var widths := []
+		var total := 0.0
+		for it in ITEMS:
+			var tw := f.get_string_size(String(it[1]), HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x
+			widths.append(tw)
+			total += 9.0 + tw
+		var gap := maxf(4.0, (size.x - 8.0 - total) / maxf(1.0, ITEMS.size() - 1.0))
+		var x := 4.0 + 3.5
+		for i in ITEMS.size():
+			MapView.draw_mark(self, Vector2(x, size.y * 0.5), String(ITEMS[i][0]), 2.8)
+			draw_string(f, Vector2(x + 5.5, size.y * 0.5 + 3.0), String(ITEMS[i][1]), HORIZONTAL_ALIGNMENT_LEFT, -1, fs,
+					UiArt.CREAM)
+			x += 9.0 + float(widths[i]) + gap
 
 
 ## The zone the player is in now (zone_viewer at every zone load).
@@ -391,29 +452,56 @@ class MapView extends Control:
 			return (u - mr.position - Vector2(float(r[0]), float(r[1]))) / Vector2(float(r[2]), float(r[3]))
 		return (u - mr.position) / mr.size
 
-	## Realm maps: each zone square with quests for you gets a yellow dot and their number (green / orange when only
-	## turn-ins / quests in progress are there).
-	func _draw_region_counts() -> void:
-		var w := window
-		for q in w._region(int(w.shown.id)).get("zones", []):
-			var ms: Array = w.zone_quest_marks(int(q.zone))
-			if ms.is_empty():
-				continue
-			var avail := ms.filter(func(m): return String(m.kind) == "!").size()
-			var turn := ms.filter(func(m): return String(m.kind) == "?").size()
-			var col := Color(1.0, 0.85, 0.15) if avail > 0 else (Color(0.3, 1.0, 0.35) if turn > 0 else Color(1.0, 0.55, 0.1))
-			var n := avail if avail > 0 else (turn if turn > 0 else ms.size())
-			var at := Vector2(float(q.left) + float(q.width) - 5.0, float(q.top) + 5.0) / 256.0 * size
-			draw_circle(at, 6.5, Color(0.08, 0.05, 0.0))
-			draw_circle(at, 5.5, col)
+	## The map's quest marks as small gold-rimmed medallions in the interface's own gold and stone (owner 2026-11-05:
+	## "clarify the markers ... make them premium and fit the game's theme"; the old client could only borrow the red
+	## relic marker): a dark rim, a gold ring, the face in its colour with a soft highlight, and its sign - a gold "!" a
+	## quest you can take, a steel-silver "?" its turn-in, crimson with a gold heart an objective, bronze a quest of that NPC
+	## you are on, violet your /task. No green: the realm's bots are the green dots.
+	## kind -> [face colour, sign ("" none), the legend's words, sign colour]
+	const MARK_STYLE := {
+		"!": [Color(0.96, 0.76, 0.22), "!", "QUEST", Color(0.22, 0.12, 0.02)],
+		"?": [Color(0.74, 0.77, 0.82), "?", "TURN IN", Color(0.12, 0.1, 0.08)],
+		"step": [Color(0.72, 0.1, 0.09), "", "OBJECTIVE", Color(1.0, 0.82, 0.35)],
+		"o": [Color(0.72, 0.44, 0.2), "", "IN PROGRESS", Color(0.3, 0.16, 0.04)],
+		"task": [Color(0.55, 0.3, 0.8), "", "TASK", Color(0.98, 0.9, 1.0)],
+	}
+	const MARK_R := 2.8                         # (owner 2026-11-05: half the first size)
+	var _drawn_marks: Array = []                # [map spot, kind] of the marks drawn now (their hover text)
+
+	static func draw_mark(ci: CanvasItem, at: Vector2, kind: String, r := MARK_R) -> void:
+		var st: Array = MARK_STYLE.get(kind, MARK_STYLE["step"])
+		ci.draw_circle(at + Vector2(r * 0.11, r * 0.16), r * 1.29, Color(0, 0, 0, 0.45))   # its shadow on the map
+		ci.draw_circle(at, r * 1.27, Color(0.1, 0.06, 0.02))                          # the dark rim
+		ci.draw_circle(at, r * 1.15, Color(0.86, 0.67, 0.3))                          # the gold ring
+		ci.draw_circle(at, r, Color(0.36, 0.25, 0.1))                                 # (its inner edge)
+		ci.draw_circle(at, r * 0.89, st[0])                                           # the face
+		ci.draw_circle(at + Vector2(-r * 0.28, -r * 0.32), r * 0.38, Color(1, 1, 1, 0.22))   # a soft highlight
+		var sign: String = st[1]
+		if sign != "":
 			var f := UiArt.font(true)
-			var txt := str(n)
-			var tw := f.get_string_size(txt, HORIZONTAL_ALIGNMENT_LEFT, -1, 9).x
-			draw_string(f, at + Vector2(-tw * 0.5, 3.5), txt, HORIZONTAL_ALIGNMENT_LEFT, -1, 9, Color(0.1, 0.06, 0.0))
+			var fs := int(round(r * 2.3))
+			var tw := f.get_string_size(sign, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x
+			var base := at + Vector2(-tw * 0.5, r * 0.78)
+			ci.draw_string_outline(f, base, sign, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, 1, Color(1, 1, 1, 0.35))
+			ci.draw_string(f, base, sign, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, st[3])
+		else:
+			ci.draw_circle(at, r * 0.36, st[3])                                       # a heart in the sign's colour
+
+	## The mark under the pointer, its words (the hover text), else "".
+	func mark_words_at(p: Vector2) -> String:
+		for d in _drawn_marks:
+			if (d[0] as Vector2).distance_to(p) <= MARK_R + 2.0:     # (a little more than the mark: easy to hover)
+				return {"!": "QUEST AVAILABLE", "?": "TURN IN HERE", "step": "QUEST OBJECTIVE", "o": "A QUEST YOU ARE ON",
+						"task": "YOUR TASK"}.get(String(d[1]), "")
+		return ""
 
 	func _gui_input(event: InputEvent) -> void:
 		var w := window
 		if String(w.shown.get("kind", "")) != "region":
+			if event is InputEventMouseMotion:                   # a mark's meaning on hover
+				var words := mark_words_at(event.position)
+				if words != tooltip_text:
+					tooltip_text = words
 			return
 		if event is InputEventMouseMotion:
 			var z := _zone_under(event.position)
@@ -522,21 +610,17 @@ class MapView extends Control:
 			var sq := w.region_square(int(w.shown.id), _hover)
 			draw_rect(Rect2(sq.position / 256.0 * size, sq.size / 256.0 * size), Color(1.0, 0.85, 0.3), false, 1.5)
 		draw_rect(Rect2(Vector2.ZERO, size), Color(0.45, 0.42, 0.35), false, 1.0)
-		if String(w.shown.get("kind", "")) == "region":
-			_draw_region_counts()
-		else:
-			for m in w.zone_quest_marks(int(w.shown.id)):   # quest marks for the shown zone, wherever you are
+		_drawn_marks.clear()
+		# (the realm map shows no quest marks - owner 2026-11-05: "remove quest markers from the realm map"; click a
+		# zone to see its quests and objectives, wherever you are)
+		if String(w.shown.get("kind", "")) != "region":
+			for m in (w.zone_quest_marks(int(w.shown.id)) if MapWindow.show_quest_marks else []):   # quest marks for the shown zone, wherever you are
 				var f := _mark_frac((m.at as Vector2) / 0.025)
 				var mp := f * size
 				if f.x < 0 or not Rect2(Vector2.ZERO, size).has_point(mp):
 					continue
-				# quest marks in the ground circles' colours: available yellow, turn-in green, in progress orange;
-				# classic step markers / the emissary's hunt in red
-				var col: Color = {"!": Color(1.0, 0.85, 0.15), "?": Color(0.3, 1.0, 0.35), "o": Color(1.0, 0.55, 0.1),
-						"task": Color(0.8, 0.35, 1.0)}.get(
-						String(m.kind), Color(0.95, 0.2, 0.15))
-				draw_circle(mp, 3.5, Color(0.08, 0.05, 0.0))
-				draw_circle(mp, 2.5, col)
+				draw_mark(self, mp, String(m.kind))
+				_drawn_marks.append([mp, String(m.kind)])
 			# your realm's gamebots and companions in this zone as green dots (bot plan phase 3, owner: also in
 			# dungeons; enemy bots never; Options > BOTS > REALM BOTS ON MAP)
 			if int(w.shown.get("id", -1)) == w.current_zone:
