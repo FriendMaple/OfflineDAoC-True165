@@ -23,6 +23,11 @@ var _pick: OptionButton
 var _follow_btn: Button
 var _entries: Array = []                  # dropdown index -> shown dict ({} = header)
 var _tex := {}
+var _legend: LegendStrip
+## The key to the map's marks under the map (owner 2026-11-05: "move the legend below the actual map and add an option
+## in settings to hide it" - Options > INTERFACE > MAP LEGEND, saved [interface] map_legend, on by default).
+static var show_legend := true
+const LEGEND_H := 15.0
 
 
 func build() -> void:
@@ -45,6 +50,11 @@ func build() -> void:
 	_view = MapView.new()
 	_view.window = self
 	add_child(_view)
+	var cfg := ConfigFile.new()
+	cfg.load(UiArt.settings_path)
+	show_legend = bool(cfg.get_value("interface", "map_legend", true))
+	_legend = LegendStrip.new()
+	add_child(_legend)
 	_fill_dropdown()
 	_layout()
 	resized.connect(_layout)
@@ -55,7 +65,7 @@ func _layout() -> void:
 	if _view == null:
 		return
 	var w := size.x - 27.0
-	var h := size.y - TOP - 8.0 - 33.0 + 21.0
+	var h := size.y - TOP - 8.0 - 33.0 + 21.0 - (LEGEND_H + 2.0 if show_legend else 0.0)
 	var side := maxf(64.0, minf(w, h))
 	_title.position = Vector2(12, 3)                       # in the frame's top band (was a gap above it)
 	_title.size = Vector2(size.x - 24.0, 16)
@@ -64,6 +74,43 @@ func _layout() -> void:
 	_follow_btn.position = Vector2(size.x - 22.0 - 58.0, 21)  # clear of the frame's right edge
 	_view.position = Vector2(12 + (w - side) * 0.5, TOP)
 	_view.size = Vector2(side, side)
+	_legend.visible = show_legend
+	_legend.position = Vector2(_view.position.x, TOP + side + 2.0)
+	_legend.size = Vector2(side, LEGEND_H)
+	_legend.queue_redraw()
+
+
+## Options > INTERFACE > MAP LEGEND: the key under the map shown or not (the map grows into its room).
+func set_legend(on: bool) -> void:
+	show_legend = on
+	_layout()
+
+
+## The key to the map's marks, under the map in the windows' dark stone: each kind's medallion and its word.
+class LegendStrip extends Control:
+	const ITEMS := [["!", "QUEST"], ["?", "TURN IN"], ["step", "OBJECTIVE"], ["o", "IN PROGRESS"], ["task", "TASK"]]
+
+	func _init() -> void:
+		mouse_filter = Control.MOUSE_FILTER_IGNORE
+
+	func _draw() -> void:
+		draw_rect(Rect2(Vector2.ZERO, size), Color(0.06, 0.05, 0.04, 0.9))
+		draw_rect(Rect2(Vector2.ZERO, size), Color(0.55, 0.42, 0.2, 0.9), false, 1.0)
+		var f := UiArt.font(true)
+		var fs := 8
+		var widths := []
+		var total := 0.0
+		for it in ITEMS:
+			var tw := f.get_string_size(String(it[1]), HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x
+			widths.append(tw)
+			total += 9.0 + tw
+		var gap := maxf(4.0, (size.x - 8.0 - total) / maxf(1.0, ITEMS.size() - 1.0))
+		var x := 4.0 + 3.5
+		for i in ITEMS.size():
+			MapView.draw_mark(self, Vector2(x, size.y * 0.5), String(ITEMS[i][0]), 2.8)
+			draw_string(f, Vector2(x + 5.5, size.y * 0.5 + 3.0), String(ITEMS[i][1]), HORIZONTAL_ALIGNMENT_LEFT, -1, fs,
+					UiArt.CREAM)
+			x += 9.0 + float(widths[i]) + gap
 
 
 ## The zone the player is in now (zone_viewer at every zone load).
@@ -407,43 +454,24 @@ class MapView extends Control:
 	const MARK_R := 2.8                         # (owner 2026-11-05: half the first size)
 	var _drawn_marks: Array = []                # [map spot, kind] of the marks drawn now (their hover text)
 
-	func _draw_mark(at: Vector2, kind: String, r := MARK_R) -> void:
+	static func draw_mark(ci: CanvasItem, at: Vector2, kind: String, r := MARK_R) -> void:
 		var st: Array = MARK_STYLE.get(kind, MARK_STYLE["step"])
-		draw_circle(at + Vector2(r * 0.11, r * 0.16), r * 1.29, Color(0, 0, 0, 0.45))   # its shadow on the map
-		draw_circle(at, r * 1.27, Color(0.1, 0.06, 0.02))                          # the dark rim
-		draw_circle(at, r * 1.15, Color(0.86, 0.67, 0.3))                          # the gold ring
-		draw_circle(at, r, Color(0.36, 0.25, 0.1))                                 # (its inner edge)
-		draw_circle(at, r * 0.89, st[0])                                           # the face
-		draw_circle(at + Vector2(-r * 0.28, -r * 0.32), r * 0.38, Color(1, 1, 1, 0.22))   # a soft highlight
+		ci.draw_circle(at + Vector2(r * 0.11, r * 0.16), r * 1.29, Color(0, 0, 0, 0.45))   # its shadow on the map
+		ci.draw_circle(at, r * 1.27, Color(0.1, 0.06, 0.02))                          # the dark rim
+		ci.draw_circle(at, r * 1.15, Color(0.86, 0.67, 0.3))                          # the gold ring
+		ci.draw_circle(at, r, Color(0.36, 0.25, 0.1))                                 # (its inner edge)
+		ci.draw_circle(at, r * 0.89, st[0])                                           # the face
+		ci.draw_circle(at + Vector2(-r * 0.28, -r * 0.32), r * 0.38, Color(1, 1, 1, 0.22))   # a soft highlight
 		var sign: String = st[1]
 		if sign != "":
 			var f := UiArt.font(true)
 			var fs := int(round(r * 2.3))
 			var tw := f.get_string_size(sign, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x
 			var base := at + Vector2(-tw * 0.5, r * 0.78)
-			draw_string_outline(f, base, sign, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, 1, Color(1, 1, 1, 0.35))
-			draw_string(f, base, sign, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, st[3])
+			ci.draw_string_outline(f, base, sign, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, 1, Color(1, 1, 1, 0.35))
+			ci.draw_string(f, base, sign, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, st[3])
 		else:
-			draw_circle(at, r * 0.36, st[3])                                       # a heart in the sign's colour
-
-	## What the marks on this map are: a strip along its foot in the windows' dark stone, one medallion and its word
-	## for each kind shown.
-	func _draw_legend(kinds: Dictionary) -> void:
-		var f := UiArt.font(true)
-		var fs := 8
-		var order := ["QUEST", "TURN IN", "OBJECTIVE", "IN PROGRESS", "TASK"]
-		var items := order.filter(func(k): return kinds.has(k))
-		var w_total := 6.0
-		for k in items:
-			w_total += 12.0 + f.get_string_size(k, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x + 8.0
-		var box := Rect2(Vector2(4, size.y - 17), Vector2(w_total, 13))
-		draw_rect(box, Color(0.06, 0.05, 0.04, 0.82))
-		draw_rect(box, Color(0.55, 0.42, 0.2, 0.9), false, 1.0)
-		var x := box.position.x + 9.0
-		for k in items:
-			_draw_mark(Vector2(x, box.position.y + 6.5), String(kinds[k]), 3.0)
-			draw_string(f, Vector2(x + 7.0, box.position.y + 10.0), k, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, UiArt.CREAM)
-			x += 12.0 + f.get_string_size(k, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x + 8.0
+			ci.draw_circle(at, r * 0.36, st[3])                                       # a heart in the sign's colour
 
 	## The mark under the pointer, its words (the hover text), else "".
 	func mark_words_at(p: Vector2) -> String:
@@ -572,17 +600,13 @@ class MapView extends Control:
 		# (the realm map shows no quest marks - owner 2026-11-05: "remove quest markers from the realm map"; click a
 		# zone to see its quests and objectives, wherever you are)
 		if String(w.shown.get("kind", "")) != "region":
-			var kinds := {}
 			for m in w.zone_quest_marks(int(w.shown.id)):   # quest marks for the shown zone, wherever you are
 				var f := _mark_frac((m.at as Vector2) / 0.025)
 				var mp := f * size
 				if f.x < 0 or not Rect2(Vector2.ZERO, size).has_point(mp):
 					continue
-				_draw_mark(mp, String(m.kind))
+				draw_mark(self, mp, String(m.kind))
 				_drawn_marks.append([mp, String(m.kind)])
-				kinds[MARK_STYLE.get(String(m.kind), MARK_STYLE["step"])[2]] = String(m.kind)
-			if not kinds.is_empty():
-				_draw_legend(kinds)
 			# your realm's gamebots and companions in this zone as green dots (bot plan phase 3, owner: also in
 			# dungeons; enemy bots never; Options > BOTS > REALM BOTS ON MAP)
 			if int(w.shown.get("id", -1)) == w.current_zone:

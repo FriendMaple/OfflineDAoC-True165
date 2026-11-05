@@ -524,6 +524,12 @@ func _interface() -> void:
 	_row("UI SCALE", scale_slider)
 	_hint("THE INTERFACE KEEPS ITS SIZE ON SCREEN AT ANY RESOLUTION; UI SCALE MAKES ALL OF IT BIGGER OR SMALLER.")
 	# the 1.64 client's "Alpha: N%" (game.dll Options, saved [Panels] Alpha): the windows' see-through-ness
+	# the key to the map's marks under the map (owner 2026-11-05)
+	_row("MAP LEGEND", _toggle(MapWindow.show_legend, func(on: bool):
+		_save("interface", "map_legend", on)
+		if ui and ui.map_window:
+			ui.map_window.set_legend(on)))
+	_hint("ON: THE KEY TO THE QUEST MARKS (QUEST, TURN IN, OBJECTIVE, IN PROGRESS, TASK) UNDER THE MAP.")
 	_row("ALPHA", _slider(ClassicWindow.interface_alpha() * 100.0, 10, 100, 5, func(x: float):
 		_save("interface", "alpha", x)
 		ClassicWindow.set_interface_alpha(x, get_tree())))

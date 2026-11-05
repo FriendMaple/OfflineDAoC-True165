@@ -62,6 +62,11 @@ func _ready() -> void:
 		await get_tree().create_timer(1.0).timeout
 		await RenderingServer.frame_post_draw
 		get_viewport().get_texture().get_image().save_png(out + "/zone_map_quests.png")
+		m.set_legend(false)                                   # Options > MAP LEGEND off: the map takes its room
+		await get_tree().create_timer(0.5).timeout
+		await RenderingServer.frame_post_draw
+		get_viewport().get_texture().get_image().save_png(out + "/zone_map_legend_off.png")
+		m.set_legend(true)
 	Server.active = was_active
 	Server.map_markers.clear()
 	get_tree().quit()
