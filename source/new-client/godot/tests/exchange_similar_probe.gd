@@ -81,7 +81,25 @@ func _ready() -> void:
 			(b as Button).pressed.emit()
 	print("[similar] after LIST IT at 24 hours: ", fake.commands)
 	ok = ok and fake.commands.has("&whisper duration 3 24")
+	# the time left (op 15): slot 3 has 47 h 10 min, slot 4 ran out (0), slot 5 has 35 min
+	Server.listings = {slot: "srvc:%d" % slot, slot + 1: "srvc:%d" % slot, slot + 2: "srvc:%d" % slot}
+	var b := PackedByteArray([0, 0x48, 1, 15, 3, 3, 0, 0, 4, 0, 0, 5, 35, 0])
+	b.encode_u16(6, 47 * 60 + 10)
+	var cn := CompanionNet.new()
+	add_child(cn)
+	cn.handle(b)
+	ex.show_tab("listings")
+	await get_tree().process_frame
+	var times := []
+	var prices := []
+	for i in 3:
+		var r = ex._rows[3 + i]
+		times.append(r._quality.text)
+		prices.append(r._price.text)
+	print("[similar] time left %s, prices %s, header '%s'" % [times, prices, ex._header_quality.text])
+	ok = ok and times == ["48H", "-", "35M"] and prices[1] == "NOT FOR SALE" and ex._header_quality.text == "LEFT"
 	Server.client = was
 	Server.listings = {}
+	Server.listing_minutes = {}
 	print("[similar] RESULT ", "PASS" if ok else "FAIL")
 	get_tree().quit()

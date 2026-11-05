@@ -56,6 +56,7 @@ var _page_label: Label
 var _action: Button
 var _action2: Button
 var _header_price: Label
+var _header_quality: Label                         # QUA on BROWSE, LEFT (each listing's time left) on MY LISTINGS
 # the filters
 var _name: LineEdit
 var _slot: OptionButton
@@ -163,6 +164,8 @@ func _build_list() -> void:
 		add_child(h)
 		if String(c[0]) == "PRICE":
 			_header_price = h
+		if String(c[0]) == "QUA":
+			_header_quality = h
 		# BROWSE sorts by a header clicked - again the other way (reset day C16, 2026-11-05): the broker sorts the
 		# whole search ("sort <key> <asc|desc>", kept for you), an arrow beside the header shows the way
 		var key: String = keys[String(c[0])]
@@ -345,6 +348,7 @@ func show_tab(which: String) -> void:
 	_browse.visible = which == "browse"
 	_listings.visible = which == "listings"
 	_header_price.text = "PRICE" if which == "browse" else "YOUR PRICE"
+	_header_quality.text = "QUA" if which == "browse" else "LEFT"
 	_action.text = "BUY" if which == "browse" else "SET PRICE"
 	_action2.text = "INFO" if which == "browse" else "TAKE BACK"
 	refresh()
@@ -815,12 +819,17 @@ class ExRow extends Control:
 		_level.text = str(lvl) if lvl > 0 else ""
 		_level.add_theme_color_override("font_color", ItemTooltip.con_color(lvl, PlayerData.level))
 		_quality.text = ("%d%%" % int(it.quality)) if int(it.get("quality", 0)) > 0 else ""
+		if window.tab != "browse" and id != "":
+			# MY LISTINGS: its time left there instead (reset day C16 / S38: "47H", "35M", "-" not offered)
+			_quality.text = Server.listing_time_text(window.chest_slot(index))
 		if it.is_empty():
 			_price.text = ""
 		elif window.tab == "browse":
 			_price.text = ExchangeWindow.money_short(int(it.get("price", 0)))
 		else:
 			var p := Server.listing_price(window.chest_slot(index))
+			if int(Server.listing_minutes.get(window.chest_slot(index), -1)) == 0:
+				p = 0                                    # (run out unsold: the broker keeps it at no price)
 			_price.text = "SET PRICE" if p < 0 else ("NOT FOR SALE" if p == 0 else ExchangeWindow.money_short(p))
 		_price.add_theme_color_override("font_color", UiArt.GOLD_HI if window.tab == "browse" or _price.text != "SET PRICE" else UiArt.DIM)
 		_hi.visible = id != "" and window.selected == window.key_at(index)

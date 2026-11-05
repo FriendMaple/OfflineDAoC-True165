@@ -66,6 +66,9 @@ func handle(body: PackedByteArray) -> void:
 	if op >= 20 and op <= 23:
 		_horn(op, body)
 		return
+	if op == 15:                                         # the Realm Exchange chest page's time left (server S38)
+		Server.listing_times(body)
+		return
 	match op:
 		1:
 			mode = body[4]
