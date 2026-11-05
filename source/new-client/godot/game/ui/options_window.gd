@@ -524,6 +524,12 @@ func _interface() -> void:
 	_row("UI SCALE", scale_slider)
 	_hint("THE INTERFACE KEEPS ITS SIZE ON SCREEN AT ANY RESOLUTION; UI SCALE MAKES ALL OF IT BIGGER OR SMALLER.")
 	# the 1.64 client's "Alpha: N%" (game.dll Options, saved [Panels] Alpha): the windows' see-through-ness
+	# the quest marks on the maps (owner 2026-11-05: the map's only; the circles under NPCs stay)
+	_row("QUEST MARKERS ON MAP", _toggle(MapWindow.show_quest_marks, func(on: bool):
+		_save("interface", "map_quest_marks", on)
+		if ui and ui.map_window:
+			ui.map_window.set_quest_marks(on)))
+	_hint("ON: QUESTS YOU CAN TAKE, TURN-INS AND OBJECTIVES ARE MARKED ON THE MAPS. THE CIRCLES UNDER NPCS IN THE WORLD STAY EITHER WAY.")
 	# the key to the map's marks under the map (owner 2026-11-05)
 	_row("MAP LEGEND", _toggle(MapWindow.show_legend, func(on: bool):
 		_save("interface", "map_legend", on)

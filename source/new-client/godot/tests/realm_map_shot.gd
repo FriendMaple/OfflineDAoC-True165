@@ -67,6 +67,14 @@ func _ready() -> void:
 		await RenderingServer.frame_post_draw
 		get_viewport().get_texture().get_image().save_png(out + "/zone_map_legend_off.png")
 		m.set_legend(true)
+		var before: int = m._view._drawn_marks.size()
+		m.set_quest_marks(false)                              # Options > QUEST MARKERS ON MAP off
+		await get_tree().process_frame
+		await RenderingServer.frame_post_draw
+		print("[map] quest marks on: %d drawn; off: %d drawn, legend shown %s" % [before, m._view._drawn_marks.size(),
+				m._legend.visible])
+		print("[map] RESULT ", "PASS" if before > 0 and m._view._drawn_marks.is_empty() and not m._legend.visible else "FAIL")
+		m.set_quest_marks(true)
 	Server.active = was_active
 	Server.map_markers.clear()
 	get_tree().quit()

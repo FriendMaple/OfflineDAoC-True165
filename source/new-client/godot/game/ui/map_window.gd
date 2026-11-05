@@ -27,6 +27,10 @@ var _legend: LegendStrip
 ## The key to the map's marks under the map (owner 2026-11-05: "move the legend below the actual map and add an option
 ## in settings to hide it" - Options > INTERFACE > MAP LEGEND, saved [interface] map_legend, on by default).
 static var show_legend := true
+## Quest marks on the maps at all (owner 2026-11-05: "add an option to disable quest markers" - the map ones only, the
+## circles under NPCs in the world stay): Options > INTERFACE > QUEST MARKERS ON MAP, saved [interface] map_quest_marks.
+## Off: no marks and no legend.
+static var show_quest_marks := true
 const LEGEND_H := 15.0
 
 
@@ -53,6 +57,7 @@ func build() -> void:
 	var cfg := ConfigFile.new()
 	cfg.load(UiArt.settings_path)
 	show_legend = bool(cfg.get_value("interface", "map_legend", true))
+	show_quest_marks = bool(cfg.get_value("interface", "map_quest_marks", true))
 	_legend = LegendStrip.new()
 	add_child(_legend)
 	_fill_dropdown()
@@ -65,7 +70,8 @@ func _layout() -> void:
 	if _view == null:
 		return
 	var w := size.x - 27.0
-	var h := size.y - TOP - 8.0 - 33.0 + 21.0 - (LEGEND_H + 2.0 if show_legend else 0.0)
+	var legend := show_legend and show_quest_marks
+	var h := size.y - TOP - 8.0 - 33.0 + 21.0 - (LEGEND_H + 2.0 if legend else 0.0)
 	var side := maxf(64.0, minf(w, h))
 	_title.position = Vector2(12, 3)                       # in the frame's top band (was a gap above it)
 	_title.size = Vector2(size.x - 24.0, 16)
@@ -74,7 +80,7 @@ func _layout() -> void:
 	_follow_btn.position = Vector2(size.x - 22.0 - 58.0, 21)  # clear of the frame's right edge
 	_view.position = Vector2(12 + (w - side) * 0.5, TOP)
 	_view.size = Vector2(side, side)
-	_legend.visible = show_legend
+	_legend.visible = legend
 	_legend.position = Vector2(_view.position.x, TOP + side + 2.0)
 	_legend.size = Vector2(side, LEGEND_H)
 	_legend.queue_redraw()
@@ -84,6 +90,14 @@ func _layout() -> void:
 func set_legend(on: bool) -> void:
 	show_legend = on
 	_layout()
+
+
+## Options > INTERFACE > QUEST MARKERS ON MAP: the quest marks (and with them the legend) shown on the maps or not.
+func set_quest_marks(on: bool) -> void:
+	show_quest_marks = on
+	_layout()
+	if _view:
+		_view.queue_redraw()
 
 
 ## The key to the map's marks, under the map in the windows' dark stone: each kind's medallion and its word.
@@ -600,7 +614,7 @@ class MapView extends Control:
 		# (the realm map shows no quest marks - owner 2026-11-05: "remove quest markers from the realm map"; click a
 		# zone to see its quests and objectives, wherever you are)
 		if String(w.shown.get("kind", "")) != "region":
-			for m in w.zone_quest_marks(int(w.shown.id)):   # quest marks for the shown zone, wherever you are
+			for m in (w.zone_quest_marks(int(w.shown.id)) if MapWindow.show_quest_marks else []):   # quest marks for the shown zone, wherever you are
 				var f := _mark_frac((m.at as Vector2) / 0.025)
 				var mp := f * size
 				if f.x < 0 or not Rect2(Vector2.ZERO, size).has_point(mp):
