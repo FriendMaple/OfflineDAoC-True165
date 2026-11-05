@@ -47,7 +47,7 @@ func build() -> void:
 	_title = CompanionUi.frame(self, "companion", SIZE, Vector2(220, 80), "COMPANION")
 	_status = CompanionUi.text(self, "", Vector2(14, 17), Vector2(SIZE.x - 28, 12), 8, UiArt.GOLD)
 	_status.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_tabs = CompanionUi.tabs(self, ["Gear", "Training", "Tactics", "Stance"], Vector2(12, 31), SIZE.x - 24, show_page)
+	_tabs = CompanionUi.tabs(self, ["Equipment", "Training", "Tactics", "Stance"], Vector2(12, 31), SIZE.x - 24, show_page)
 	for i in 4:
 		var page := Control.new()
 		page.position = Vector2(0, 50)
@@ -129,9 +129,11 @@ func _process(delta: float) -> void:
 	if _refresh_left <= 0.0 and visible:
 		_refresh_left = 1.0
 		var s := _sheet()
+		var lo := 0
+		var hi := 1
 		if s and _status:
-			var lo := CombatRules.xp_for_level(s.level)
-			var hi := CombatRules.xp_for_level(s.level + 1)
+			lo = CombatRules.xp_for_level(s.level)
+			hi = CombatRules.xp_for_level(s.level + 1)
 		_status.text = "HEALTH %d / %d    POWER %d / %d    ENDURANCE %d    EXPERIENCE %d%%" % [s.hp, s.max_hp, s.power_pts,
 				s.max_power, s.end_pts, int(100.0 * (s.xp - lo) / maxf(1.0, hi - lo))]
 
@@ -153,8 +155,7 @@ func _build_gear(page: Control) -> void:
 	# the companion on its paper doll: the figure wearing its worn gear, like the player's doll on the right panel
 	var doll := CompanionDoll.new()
 	doll.position = Vector2(174.0, 14.0)
-	doll.size = Vector2(102.0, 128.0)
-	doll.sheet = _sheet()
+	doll.size = Vector2(128.0, 160.0)
 	doll.build()
 	page.add_child(doll)
 	_doll = doll
@@ -167,14 +168,16 @@ func _build_gear(page: Control) -> void:
 		var b := CompSlot.new()
 		b.window = self
 		b.slot = int(slots[i])
-		b.position = Vector2(bx, 14.0 + row * (BOX + 6.0))
+		var box_y := 14.0 + row * (BOX + 6.0)
+		b.position = Vector2(bx, box_y)
 		b.size = Vector2(BOX, BOX)
 		page.add_child(b)
 		_slots.append(b)
-		var nx := 38.0 if col == 0 else 308.0
-		var nw := 130.0 if col == 0 else 134.0
-		CompanionUi.text(page, String(CharacterState.SLOT_NAMES.get(int(slots[i]), "")),
-			Vector2(nx, 14.0 + row * (BOX + 6.0) + 5.0), Vector2(nw, 12.0), 7, CompanionUi.DIM)
+		var nx := bx + BOX / 2.0 - 24.0
+		var nw := 48.0
+		var slot_name := CompanionUi.text(page, String(CharacterState.SLOT_NAMES.get(int(slots[i]), "")),
+			Vector2(nx, box_y + BOX + 8.0), Vector2(nw, 12.0), 7, CompanionUi.DIM)
+		slot_name.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	# its bag: ten weightless slots, laid out like inventory rows below the doll
 	CompanionUi.text(page, "ITS BAG", Vector2(14.0, 166.0), Vector2(120.0, 12.0), 8, UiArt.GOLD)
 	for i in Companions.BAG_SLOTS:
@@ -263,6 +266,8 @@ class CompanionDoll extends Control:
 	var sheet
 	var _gear: Array = []
 
+	const FIT_HEIGHT := 3.0
+
 	func build() -> void:
 		mouse_filter = Control.MOUSE_FILTER_STOP
 		_vp = SubViewport.new()
@@ -297,27 +302,37 @@ class CompanionDoll extends Control:
 		cam.look_at(Vector3(0, 0.92, 0))
 		_pivot = Node3D.new()
 		_vp.add_child(_pivot)
-		var c := sheet.character if sheet and sheet.character is Dictionary else {}
-		var prefix := String(c.get("prefix", ""))
-		if prefix != "":
-			var f := Fig3Figure.make()
-			_pivot.add_child(f)
-			if f.load_figure(prefix):
-				f.apply(c.get("look", {}) if c.get("look") is Dictionary else {})
-				_figure = f
-				_dress()
 		_pivot.rotation.y = deg_to_rad(15)
+		# the figure is loaded in redraw() once the companion sheet is known (build() runs before companions exist)
+
+	## Load the companion's figure from its sheet and dress it. Called once the sheet is known (from open_for/refresh).
+	func redraw(s) -> void:
+		sheet = s
+		# clear any previous figure and its worn gear
+		if _figure and is_instance_valid(_figure):
+			_figure.queue_free()
+			_figure = null
+		for g in _gear:
+			if is_instance_valid(g):
+				g.queue_free()
+		_gear.clear()
+		var c: Dictionary = sheet.character if sheet and sheet.character is Dictionary else {}
+		var prefix := String(c.get("prefix", ""))
+		if prefix == "":
+			prefix = "cel_m"                              # default figure so the paperdoll always shows something
+		var f := Fig3Figure.make()
+		_pivot.add_child(f)
+		if f.load_figure(prefix):
+			f.apply(c.get("look", {}) if c.get("look") is Dictionary else {})
+			_figure = f
+			_dress()
 		_fit.call_deferred()
 
-	const FIT_HEIGHT := 1.85
 
 	## Dress the figure from the companion's worn armour and weapons (Player.dress, the same as the player's doll).
 	func _dress() -> void:
 		if _figure == null or not is_instance_valid(_figure) or not sheet:
 			return
-		for g in _gear:
-			if is_instance_valid(g):
-				g.queue_free()
 		_gear = Player.dress(_figure, sheet.item_at, sheet.active_weapon, false, true,
 				sheet.character.get("gear", {}) if sheet.character is Dictionary else {})
 
@@ -341,11 +356,6 @@ class CompanionDoll extends Control:
 			_pivot.scale = Vector3.ONE * k
 			_pivot.position.y = -lo * k
 
-	## Re-dress from a (possibly new) sheet and re-fit the figure.
-	func redraw(s) -> void:
-		sheet = s
-		_dress()
-		_fit.call_deferred()
 
 
 class BagSlot extends Control:
@@ -365,18 +375,20 @@ class BagSlot extends Control:
 		_icon.position = Vector2(2.0, 2.0)
 		_icon.size = Vector2(20.0, 20.0)
 		add_child(_icon)
-		_name = UiArt.label("", 7, UiArt.CREAM)
-		_name.position = Vector2(24.0, 2.0)
-		_name.size = Vector2(60.0, 12.0)
-		_name.clip_text = true
+		_name = UiArt.label("", 9, UiArt.GOLD_HI)
+		_name.position = Vector2(2.0, 22.0)
+		_name.size = Vector2(82.0, 12.0)
 		_name.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		add_child(_name)
 
 	func refresh() -> void:
 		var s := window._sheet()
 		var it := s.item_at(slot) if s else {}
+		_icon.position = Vector2(2.0, 2.0)
+		_icon.size = Vector2(20.0, 20.0)
 		_icon.texture = ItemDb.icon(int(it.get("icon", 0))) if not it.is_empty() else null
 		_name.text = String(it.get("name", "")).to_upper() if not it.is_empty() else ""
+		_name.modulate = UiArt.GOLD_HI if not it.is_empty() else CompanionUi.DIM
 		tooltip_text = String(it.get("name", "")).to_upper()
 
 	func _make_custom_tooltip(_t: String) -> Object:

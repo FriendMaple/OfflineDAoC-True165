@@ -9,7 +9,7 @@ extends ClassicWindow
 ##   REALM  its realm rank and abilities (op 11): BUY the next level
 ## Nothing here decides: every button is a /companionui command and the server answers with fresh messages.
 
-const SIZE := Vector2(470, 330)
+const SIZE := Vector2(470, 345)
 const DOLL := [[21, 29, 26], [25, 28, 22], [32, 27, 23], [33, 34, 24], [35, 36, -1], [10, 11, 12], [13, -1, -1]]
 
 var net: CompanionNet
@@ -20,7 +20,12 @@ var _pages: Array = []
 var _page := 0
 var _problem: Label
 # gear
-var _doll: Control
+var _doll_vp: SubViewport
+var _doll_view: TextureRect
+var _doll_fig: Node3D             # the pivot Node3D holding the Fig3Figure
+var _doll_figure: Fig3Figure      # the figure itself, for turning
+var _turn := false                # dragging the doll turns it
+var _gear_cells: Array = []
 var _bag: VBoxContainer
 var _bag_title: Label
 const BAG_SLOTS := 10
@@ -91,6 +96,19 @@ func _process(delta: float) -> void:
 	if _gear_poll >= GEAR_POLL_S:
 		_gear_poll = 0.0
 		net.command("gear %d" % row)
+	# turn the paperdoll while dragging it
+	if _turn and _doll_figure:
+		_doll_figure.rotation.y += delta * 1.0
+
+
+func _gui_input(event: InputEvent) -> void:
+	# let ClassicWindow handle close (top-right cross) and drag (top band / move handle)
+	super._gui_input(event)
+	# turn the paperdoll while dragging it on the doll area
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		_turn = event.pressed
+	elif event is InputEventMouseMotion and _turn:
+		_doll_fig.rotation.y += event.relative.x * 0.02
 
 
 func refresh() -> void:
@@ -132,51 +150,174 @@ static func _clear(c: Control) -> void:
 func _build_gear(page: Control) -> void:
 	CompanionUi.text(page, "WORN - DRAG FROM YOUR BACKPACK TO EQUIP, RIGHT-CLICK TO TAKE BACK", Vector2(14, 0),
 			Vector2(300, 12), 7, CompanionUi.DIM)
-	_doll = Control.new()
-	_doll.position = Vector2(12, 14)
-	_doll.size = Vector2(300, 230)
-	_doll.mouse_filter = Control.MOUSE_FILTER_PASS
-	page.add_child(_doll)
+	# paperdoll figure centered between left ring (slot 35) and right ring (slot 36),
+	# like inventory_sheet.gd's middle column
+	_doll_vp = SubViewport.new()
+	_doll_vp.size = Vector2i(100, 140)
+	_doll_vp.own_world_3d = true
+	_doll_vp.transparent_bg = true
+	_doll_vp.msaa_3d = Viewport.MSAA_4X
+	_doll_vp.render_target_update_mode = SubViewport.UPDATE_WHEN_VISIBLE
+	page.add_child(_doll_vp)
+	_doll_view = TextureRect.new()
+	_doll_view.texture = _doll_vp.get_texture()
+	_doll_view.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	_doll_view.stretch_mode = TextureRect.STRETCH_SCALE
+	_doll_view.position = Vector2(161.5, 80.5)
+	_doll_view.size = Vector2(100, 140)
+	_doll_view.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	page.add_child(_doll_view)
+	var env := WorldEnvironment.new()
+	env.environment = Environment.new()
+	env.environment.background_mode = Environment.BG_CLEAR_COLOR
+	env.environment.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
+	env.environment.ambient_light_color = Color(0.55, 0.55, 0.6)
+	_doll_vp.add_child(env)
+	var sun := DirectionalLight3D.new()
+	sun.rotation_degrees = Vector3(-35, 25, 0)
+	sun.light_energy = 1.1
+	_doll_vp.add_child(sun)
+	var cam := Camera3D.new()
+	cam.fov = 30
+	cam.keep_aspect = Camera3D.KEEP_HEIGHT
+	cam.position = Vector3(0, 0.95, 4.2)
+	_doll_vp.add_child(cam)
+	cam.look_at(Vector3(0, 0.92, 0))
+	_doll_fig = Node3D.new()
+	_doll_vp.add_child(_doll_fig)
+	_doll_fig.rotation.y = deg_to_rad(15)
+	_dress_doll()
+	_doll_vp.call_deferred("set_render_target_update_mode", SubViewport.UPDATE_ALWAYS)
+	# repair button under the left hand / two-hand slots
+	CompanionUi.button(page, "Repair", Vector2(161, 280), Vector2(100, 16), func(): net.command("repair %d" % row), 9)
 	# its bag: 10 slots, no weight limit (owner 2026-10-30, as the server built it) - drag an item onto the list to put it
 	# in, right-click one to take it back
 	_bag_title = CompanionUi.text(page, "ITS BAG", Vector2(318, 0), Vector2(140, 12), 8, UiArt.GOLD)
-	var drop := BagDrop.new()                         # (the list's parent: a drop anywhere on it lands here)
-	drop.window = self
-	drop.position = Vector2(318, 14)
-	drop.size = Vector2(140, 206)
-	page.add_child(drop)
-	_bag = _scroll_list(drop, Vector2.ZERO, Vector2(140, 206))
-	CompanionUi.button(page, "Repair", Vector2(318, 226), Vector2(140, 16), func(): net.command("repair %d" % row), 9)
+	_bag = VBoxContainer.new()
+	_bag.position = Vector2(318, 14)
+	_bag.size = Vector2(140, 206)
+	page.add_child(_bag)
 
+
+func _dress_doll() -> void:
+	# companion appearance: from the roster (world right-click) or the hire page (innkeeper/healer).
+	# fall back to a default figure so the paperdoll always shows something.
+	var hire_data: Dictionary = net.roster.get(row, {})
+	if hire_data.is_empty():
+		hire_data = net.hire
+	# clear any previous figure
+	for c in _doll_fig.get_children():
+		c.queue_free()
+	# build the figure prefix from race/gender; default to cel_m when no hire data is available yet
+	var race_id := int(hire_data.get("race", 0))
+	var race_info: Array = Server.RACES.get(race_id, [])
+	var prefix := "cel_m"
+	if race_info.size() >= 2:
+		prefix = "%s_%s" % [String(race_info[1]), "f" if int(hire_data.get("gender", 0)) == 1 else "m"]
+	var f := Fig3Figure.make()
+	_doll_fig.add_child(f)
+	_doll_figure = f
+	var look := {"model": int(hire_data.get("model", 0))} if Fig3Figure.classic() else \
+		{"face": int(hire_data.get("face", 0)), "hair": int(hire_data.get("hair", 0)), "hair_color": int(hire_data.get("hair_color", 0))}
+	if Fig3Figure.classic():
+		look["height"] = int(hire_data.get("height", 2))
+	if f.load_figure(prefix):
+		f.apply(look)
+		# dress from worn gear
+		var gear: Dictionary = net.gear.get(row, {})
+		Player.dress(f, func(s): return gear.get(s, {}), "", false, true, gear)
+	call_deferred("_fit_doll")
+
+func _fit_doll() -> void:
+	if not is_inside_tree() or _doll_fig == null:
+		return
+	await get_tree().process_frame
+	_doll_fig.scale = Vector3.ONE
+	var lo := INF
+	var hi := -INF
+	for mi in _doll_fig.find_children("*", "MeshInstance3D", true, false):
+		var m := mi as MeshInstance3D
+		if not m.is_visible_in_tree() or m.mesh == null:
+			continue
+		var box: AABB = _doll_fig.global_transform.affine_inverse() * m.global_transform * m.get_aabb()
+		lo = minf(lo, box.position.y)
+		hi = maxf(hi, box.end.y)
+	if hi > lo:
+		var k := 1.75 / (hi - lo)
+		_doll_fig.scale = Vector3.ONE * k
+		_doll_fig.position.y = -lo * k
 
 func _refresh_gear() -> void:
-	_clear(_doll)
+	# re-dress the paperdoll when worn gear changes
+	_dress_doll()
+	# clear old gear slot cells
+	for c in _gear_cells:
+		if c and is_instance_valid(c):
+			c.queue_free()
+	_gear_cells.clear()
+	# equipment slots at inventory_sheet.gd's SLOTS positions (all slots shown, empty ones as placeholders)
 	var items: Dictionary = net.gear.get(row, {})
-	for y in DOLL.size():
-		for x in 3:
-			var s := int(DOLL[y][x])
-			if s < 0:
-				continue
-			var cell := GearSlot.new()
-			cell.window = self
-			cell.slot = s
-			cell.item = items.get(s, {})
-			cell.position = Vector2(x * 100.0, y * 32.0)
-			cell.size = Vector2(96, 30)
-			_doll.add_child(cell)
+	var pg: Control = _pages[0]
+	var SLOTS := {
+		25: Rect2(7, 36, 31, 31), 21: Rect2(155, 36, 31, 31),
+		29: Rect2(41, 36, 15, 15), 26: Rect2(137, 36, 15, 15),
+		28: Rect2(7, 75, 31, 31), 22: Rect2(155, 75, 31, 31),
+		24: Rect2(7, 116, 15, 15), 32: Rect2(171, 116, 15, 15),
+		35: Rect2(7, 143, 15, 15), 36: Rect2(171, 143, 15, 15),
+		33: Rect2(7, 170, 15, 15), 34: Rect2(171, 170, 15, 15),
+		27: Rect2(7, 196, 31, 31), 23: Rect2(155, 196, 31, 31),
+		10: Rect2(14, 239, 31, 31), 11: Rect2(58, 239, 31, 31),
+		12: Rect2(102, 239, 31, 31), 13: Rect2(146, 239, 31, 31)
+	}
+	for slot_id in SLOTS.keys():
+		var r: Rect2 = SLOTS[slot_id]
+		var cell := GearSlot.new()
+		cell.window = self
+		cell.slot = slot_id
+		cell.item = items.get(slot_id, {})
+		cell.position = Vector2(115.0 + r.position.x, 0.0 + r.position.y)
+		cell.size = Vector2(r.size.x, r.size.y)
+		pg.add_child(cell)
+		_gear_cells.append(cell)
+		# slot caption centered below the box (like inventory_sheet.gd's painted labels beside each slot)
+		var label_w: float
+		var label_x: float
+		var label_align: HorizontalAlignment
+		if slot_id in [10, 11, 12, 13]:          # weapons: wider label so "R HAND" / "L HAND" don't collide
+			label_w = 44.0
+			label_x = 115.0 + r.position.x + r.size.x / 2.0 - label_w / 2.0
+			label_align = HORIZONTAL_ALIGNMENT_CENTER
+		elif slot_id in [21, 22, 23]:			# Helm Hands and Feet
+			label_w = r.size.x
+			label_x = 115.0 + r.position.x
+			label_align = HORIZONTAL_ALIGNMENT_CENTER
+		elif r.position.x >= 137:                 # right column: right-align so text stays within cell width
+			label_w = 44.0                        # wider than the cell: text extends leftward into empty page space
+			label_x = 115.0 + r.position.x + r.size.x - label_w   # right edge of label = right edge of cell
+			label_align = HORIZONTAL_ALIGNMENT_RIGHT
+		else:
+			label_w = r.size.x
+			label_x = 115.0 + r.position.x
+			label_align = HORIZONTAL_ALIGNMENT_CENTER
+		var label_y := r.position.y + r.size.y + 2.0
+		var slabel := CompanionUi.text(pg, String(CompanionNet.SLOT_NAMES.get(slot_id, "")),
+				Vector2(label_x, label_y), Vector2(label_w, 12), 7, CompanionUi.DIM)
+		slabel.horizontal_alignment = label_align
 	# the bag: its 10 slots (the companion's backpack 40 - 49, server protocol, 2026-10-30), each a drop target
-	_clear(_bag)
+	if _bag:
+		_clear(_bag)
 	var used := 0
 	for s in range(BAG_FIRST, BAG_FIRST + BAG_SLOTS):
 		var cell := GearSlot.new()
 		cell.window = self
 		cell.slot = s
 		cell.item = items.get(s, {})
-		cell.custom_minimum_size = Vector2(124, 30)
+		cell.custom_minimum_size = Vector2(120, 22)
+		cell.size = Vector2(120, 22)
 		_bag.add_child(cell)
 		if items.has(s):
 			used += 1
-	_bag_title.text = "ITS BAG (%d / %d)" % [used, BAG_SLOTS]
+	_bag_title.text = "BAG (%d / %d)" % [used, BAG_SLOTS]
 
 
 ## An item from your backpack onto one of its slots: a bag slot (or the bag, -1) puts it in the bag - "bag", which takes
@@ -216,41 +357,82 @@ class GearSlot extends Control:
 	var slot := 0
 	var item := {}
 	var _hi := false
+	var _hover := false
 
 	func _ready() -> void:
 		mouse_filter = Control.MOUSE_FILTER_STOP
 		if size.x <= 0.0:
 			size = custom_minimum_size
+
+	func _gui_input(event: InputEvent) -> void:
+		if event is InputEventMouseButton and event.pressed:
+			if item.is_empty():
+				return
+			var mb := event as InputEventMouseButton
+			if mb.button_index == MOUSE_BUTTON_RIGHT or (mb.button_index == MOUSE_BUTTON_LEFT and mb.double_click):
+				window.unequip(slot)
+				accept_event()
+
+	func _notification(what: int) -> void:
+		match what:
+			NOTIFICATION_MOUSE_ENTER:
+				_hover = true
+				queue_redraw()
+			NOTIFICATION_MOUSE_EXIT:
+				_hover = false
+				queue_redraw()
+			NOTIFICATION_DRAG_END:
+				if _hi:
+					_hi = false
+					queue_redraw()
+
+	func _draw() -> void:
+		# clear previous children (hover redraws re-add them)
+		for c in get_children():
+			c.queue_free()
+		draw_rect(Rect2(Vector2.ZERO, size), Color(0.05, 0.045, 0.04, 0.9))
+		draw_rect(Rect2(Vector2.ZERO, size), UiArt.GOLD if _hi else UiArt.GOLD.darkened(0.55), false, 1.0)
+		if item.is_empty():
+			return   # slot name appears below the box (from _build_gear), not inside it
 		var name_text := String(CompanionNet.SLOT_NAMES.get(slot, "BAG %d" % (slot - SrvCompanionWindow.BAG_FIRST + 1)))
-		if not item.is_empty():
-			var icon := TextureRect.new()
-			# its icon by its model (objects.csv: Server.item_icon) - op 7's [14..15] is the item's extension, not an icon
-			var ic := Server.item_icon(int(item.model))
-			icon.texture = ItemDb.icon(ic if ic > 0 else int(item.icon))
-			icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-			icon.position = Vector2(2, 2)
-			icon.size = Vector2(26, 26)
-			icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
-			add_child(icon)
+		var icon := TextureRect.new()
+		var ic := Server.item_icon(int(item.model))
+		icon.texture = ItemDb.icon(ic if ic > 0 else int(item.icon))
+		icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		icon.stretch_mode = TextureRect.STRETCH_SCALE
+		icon.position = Vector2(2, 2)
+		icon.size = Vector2(size.y - 4, size.y - 4)
+		icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		add_child(icon)
+		var is_bag := slot >= BAG_FIRST   # bag slots (40-49) show info always; worn slots only on hover
+		if not item.is_empty() and (is_bag or _hover):
 			var cond := int(item.condition)
-			var nm := CompanionUi.text(self, String(item.name), Vector2(30, 2), Vector2(size.x - 32, 12), 7,
+			var nm := CompanionUi.text(self, String(item.name), Vector2(size.y + 2, 2),
+					Vector2(size.x - size.y - 4, 12), 7,
 					CompanionUi.RED if cond < 70 else UiArt.CREAM)
 			nm.clip_text = true
-			# how many are left of a stack - arrows, bolts, thrown weapons, poisons (owner 2026-10-30: "how am i suppose to see
-			# how much ammo/poison/throwing weapons that my companion bots have left"); else the condition
 			var count := int(item.get("count", 0))
 			var stack := int(item.object_type) in STACKABLE or count > 1
 			var second := ("%s  x%d" % [name_text, count]) if stack and count > 0 else "%s  %d%%" % [name_text, cond]
-			CompanionUi.text(self, second, Vector2(30, 15), Vector2(size.x - 32, 12), 7,
+			CompanionUi.text(self, second, Vector2(size.y + 2, 15), Vector2(size.x - size.y - 4, 12), 7,
 					CompanionUi.RED if stack and count > 0 and count <= 5 else CompanionUi.DIM)
-			tooltip_text = "%s\nLEVEL %d  QUALITY %d%%  CONDITION %d%%" % [String(item.name).to_upper(), int(item.level),
-					int(item.quality), cond] + (("\n%d LEFT" % count) if stack and count > 0 else "")
-		else:
-			CompanionUi.text(self, name_text, Vector2(4, 9), Vector2(size.x - 6, 12), 7, CompanionUi.DIM)
 
-	func _draw() -> void:
-		draw_rect(Rect2(Vector2.ZERO, size), Color(0.05, 0.045, 0.04, 0.9))
-		draw_rect(Rect2(Vector2.ZERO, size), UiArt.GOLD if _hi else UiArt.GOLD.darkened(0.55), false, 1.0)
+	## Hover popup drawn above every other menu element.
+	func _make_custom_tooltip(_for_text: String) -> Object:
+		var tip := ItemTooltip.make(item) if not item.is_empty() else null
+		if tip == null and not item.is_empty():
+			# non-gear items (potions, arrows, poisons): ItemTooltip.make returns null,
+			# so build a simple name-only tooltip so hover still shows above everything
+			tip = ItemTooltip.text_box(String(item.name).to_upper(), [])
+		if tip:
+			tip.z_index = 1000
+			_tip_z(tip, 1000)
+		return tip
+
+	func _tip_z(node: Node, z: int) -> void:
+		for c in node.get_children():
+			c.z_index = z
+			_tip_z(c, z)
 
 	func _can_drop_data(_p: Vector2, data: Variant) -> bool:
 		var ok := InventorySheet.is_item(data) and int(data.slot) >= 40 and int(data.slot) <= 79
@@ -264,11 +446,6 @@ class GearSlot extends Control:
 		queue_redraw()
 		window.equip_from(int(data.slot), slot, not item.is_empty())
 
-	func _notification(what: int) -> void:
-		if (what == NOTIFICATION_MOUSE_EXIT or what == NOTIFICATION_DRAG_END) and _hi:
-			_hi = false
-			queue_redraw()
-
 	## Dragged out onto your backpack (owner 2026-10-30: "i cant drag off weapons and bag items, i can only right click"):
 	## the backpack takes it with the server's "unequip" - right-click / double-click still do the same.
 	func _get_drag_data(_p: Vector2) -> Variant:
@@ -281,14 +458,6 @@ class GearSlot extends Control:
 		prev.size = Vector2(32, 32) * get_global_transform().get_scale()
 		set_drag_preview(prev)
 		return {"kind": "companion_item", "slot": slot, "name": String(item.name), "take": window.unequip.bind(slot)}
-
-	func _gui_input(event: InputEvent) -> void:
-		if item.is_empty() or not event is InputEventMouseButton or not event.pressed:
-			return
-		var mb := event as InputEventMouseButton
-		if mb.button_index == MOUSE_BUTTON_RIGHT or (mb.button_index == MOUSE_BUTTON_LEFT and mb.double_click):
-			window.unequip(slot)
-			accept_event()
 
 
 # --- spec -----------------------------------------------------------------------------------------------------

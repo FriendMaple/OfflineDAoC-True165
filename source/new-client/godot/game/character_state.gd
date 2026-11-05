@@ -22,9 +22,9 @@ const SACK := 8
 const FIRST_VAULT := 110                 # the old server's vault slots (eInventorySlot FirstVault .. LastVault)
 const VAULT_SLOTS := 40
 const EQUIP_SLOTS := [10, 11, 12, 13, 21, 22, 23, 24, 25, 26, 27, 28, 29, 32, 33, 34, 35, 36, 37]
-const SLOT_NAMES := {10: "Right Hand", 11: "Left Hand", 12: "Two Handed", 13: "Ranged", 21: "Helm", 22: "Hands",
+const SLOT_NAMES := {10: "Right Hand", 11: "Left Hand", 12: "2-hand", 13: "Ranged", 21: "Helm", 22: "Hands",
 		23: "Feet", 24: "Jewelry", 25: "Torso", 26: "Cloak", 27: "Legs", 28: "Sleeves", 29: "Neck", 32: "Waist",
-		33: "Left Wrist", 34: "Right Wrist", 35: "Left Ring", 36: "Right Ring", 37: ""}
+		33: "L Wrist", 34: "R Wrist", 35: "L Ring", 36: "R Ring", 37: ""}
 const SHIELD := 42
 const BASE_CLASS_CAP := 5                # owner: a base class stops at 5 until it joins an advanced guild
 const MAX_END := 100
