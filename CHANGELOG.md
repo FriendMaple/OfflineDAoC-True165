@@ -51,6 +51,23 @@ hold). Its changelog has the history of everything this version inherits.
 - Horse routes: horses no longer ride under the bridge near Druim Ligen or jump onto the bridge towers on the routes over the Druim Ligen, Innis Carthaig and Midgard river bridges.
 - Experience: the camp bonus tops out at the period values, 30% in normal zones and 50% in dungeons, underwater and every RvR zone (the frontier zones and the battlegrounds), as before patch 1.71. It was 55% outdoors and 66% in dungeons.
 - Crafting: bot crafters make only their own realm's items, so the Realm Exchange no longer offers armor or weapons from another realm that nobody in your realm can wear.
+- Interface: the status window's health bars have the dark red background the other windows' bars have; the information window widens to fit a long item name instead of cutting it off.
+- Interface: a click anywhere on a window brings it to the front, and an item's information opens beside the Realm Exchange instead of over its page buttons (they seemed to stop working after a right-click).
+- Interface: item names in the backpack, vault and merchant lists always show in their con colour to you, not only when highlighted.
+- Groups: the group window shows each member's endurance between health and power.
+- Sound: new option MUTE WHEN NOT FOCUSED (Options > Audio, on by default) - the game goes quiet while you are in another window.
+- NPC dialogue: the words you can answer with show bold and in [brackets], as in the 1.64 client, and long ones are never dropped (Kaere's "[Will you gather the components ...]" in Protecting Anniogel was missing).
+- Monsters: a body no longer plays its death again when you right-click its loot or it is sent again, and a body whose removal never arrived (an untargetable dead wolf in Avalon Marsh) sinks away after 45 seconds.
+- Looting (a small quality-of-life addition, not in 1.64): a right click on a loot bag or an item on the ground picks it up even when a monster's body or an NPC stands on the same spot, and the new Pick Up Loot key (Shift+G) takes the nearest loot within reach, one item a press, without pointing at it or targeting it. No autoloot.
+- World: Avalon Marsh's water no longer shows dark squares and steps where its pools meet.
+- Quickbars: a weapon or instrument on a quickbar switches to it again (a Minstrel's instrument and weapon), as in the 1.64 client.
+- Movement: going up and down stairs, your character, the camera and NPCs glide over the steps instead of jerking up and down; climbing itself is unchanged.
+- Companions: companions ease into their place when the server corrects them in lag, instead of jumping onto you; a companion or gamebot changing its gear (a Minstrel drawing a weapon as combat starts) no longer blinks out and back.
+- Characters: a Highlander's kilt takes the look of the chest armour worn (a leather tunic, a leather kilt), as in the 1.64 client; the grey cloth kilt only without chest armour.
+- Companions: hovering a companion's gear shows the item's full information, as for your own items, and hovering a style shows its endurance cost, threat and the rest; its stats show green when buffed and red when debuffed (needs the next server update).
+- Companions: a PETS / SONGS tab in the companion window for companions with choices - charm on or off, the Cabalist's and Enchanter's pet, the Bonedancer's three sub-pets (with the 75-point limit), and the songs or chants it uses in combat, out of combat and travelling (needs the next server update).
+- Realm Exchange: click a column header to sort by name, level, quality or price (again for the other way); choose how long a listing runs (12, 24 or 48 hours) and see each listing's time left (these three need the next server update); SEARCH SIMILAR in the price box shows what the same item sells for; the chest page shows how many of its 100 slots are used.
+- Maps: every zone map of your realm shows the quests you can take there (gold "!"), their turn-ins (silver "?") and your objectives (crimson), wherever you are - open another zone's map to see its quests (the quests you can take need the next server update). The marks are small gold-rimmed medallions; a legend under the map names them (Options > Interface > MAP LEGEND hides it), and hovering a mark says what it is. The realm map itself shows no marks.
 
 ## 0.2 (2026-11-01)
 

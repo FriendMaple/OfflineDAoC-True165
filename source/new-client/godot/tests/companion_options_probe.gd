@@ -47,8 +47,10 @@ func _ready() -> void:
 			_op14(1, 4, 1, 0, ["Automatic", "Battle Song", "Power Song"]),
 			_op14(1, 4, 2, 1, ["Automatic", "Battle Song", "Power Song"]),
 			_op14(1, 4, 3, 0, ["Automatic", "Speed Song"]),
-			_op14(1, 4, 4, 0, ["No", "Yes"]),
-			[0, 0x48, 1, 14, 1, 0xFF]]:
+			_op14(1, 1, 0, 1, ["Off", "On"]),
+			[0, 0x48, 1, 14, 1, 0xFF],
+			_op14(2, 2, 0, 0, ["Automatic", "Matter Simulacrum", "Spirit Simulacrum", "Body Simulacrum"]),
+			[0, 0x48, 1, 14, 2, 0xFF]]:
 		net.handle(PackedByteArray(m))
 	await get_tree().process_frame
 	var shown_with: bool = (w._tabs[4] as Button).visible
@@ -62,11 +64,11 @@ func _ready() -> void:
 			lists.append(c)
 		elif c is Button:
 			buttons.append(c)
-	(buttons[1] as Button).pressed.emit()                              # Twist: "Yes"
+	(buttons[0] as Button).pressed.emit()                              # charm: "Off"
 	(lists[0] as OptionButton).item_selected.emit(2)                   # in combat: Power Song
 	print("[opts] tab hidden without choices %s, shown with %s; rows %d lists %d buttons %d; sent %s" % [hidden_without,
 			shown_with, (net.options.get(1, []) as Array).size(), lists.size(), buttons.size(), fake.commands])
-	var ok: bool = hidden_without and shown_with and fake.commands == ["&companionui song 1 4 1", "&companionui song 1 1 2"]
+	var ok: bool = hidden_without and shown_with and fake.commands == ["&companionui charm 1 off", "&companionui song 1 1 2"]
 	await get_tree().create_timer(0.3).timeout
 	await RenderingServer.frame_post_draw
 	get_viewport().get_texture().get_image().save_png(String(v.args.get("out", "user://")) + "/companion_options_songs.png")
@@ -87,6 +89,23 @@ func _ready() -> void:
 	await get_tree().create_timer(0.3).timeout
 	await RenderingServer.frame_post_draw
 	get_viewport().get_texture().get_image().save_png(String(v.args.get("out", "user://")) + "/companion_options_bd.png")
+	(lists[0] as OptionButton).show_popup()                           # (its choices open, for the owner's shot)
+	await get_tree().create_timer(0.4).timeout
+	await RenderingServer.frame_post_draw
+	get_viewport().get_texture().get_image().save_png(String(v.args.get("out", "user://")) + "/companion_options_bd_open.png")
+	(lists[0] as OptionButton).get_popup().hide()
+	# a Cabalist's pet choice, its list open
+	w.open_row(2, 4)
+	await get_tree().process_frame
+	var pet_list: OptionButton = null
+	for c in w._options_box.get_children():
+		if c is OptionButton:
+			pet_list = c
+	pet_list.show_popup()
+	await get_tree().create_timer(0.4).timeout
+	await RenderingServer.frame_post_draw
+	get_viewport().get_texture().get_image().save_png(String(v.args.get("out", "user://")) + "/companion_options_pet_open.png")
+	pet_list.get_popup().hide()
 	Server.client = was
 	print("[opts] RESULT ", "PASS" if ok else "FAIL")
 	get_tree().quit()
