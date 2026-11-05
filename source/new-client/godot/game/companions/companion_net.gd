@@ -100,6 +100,7 @@ func handle(body: PackedByteArray) -> void:
 			if body[5] == 0xFF:
 				gear[row] = _gear_new.get(row, {})
 				_gear_new.erase(row)
+				Server.forget_details("cg:%d:" % row)          # (its items' delves asked again: they may have changed)
 			else:
 				if not _gear_new.has(row):
 					_gear_new[row] = {}
@@ -147,6 +148,15 @@ func handle(body: PackedByteArray) -> void:
 					"max_health": _u32(body, 28), "power": _u32(body, 32), "max_power": _u32(body, 36),
 					"endurance": _u16(body, 40), "max_endurance": _u16(body, 42), "af": _u16(body, 44),
 					"absorb": body[46], "resists": res, "money": _u32(body, 57), "rp": _u16(body, 61)}
+			# the 8 stats unbuffed [63..78] and the armour factor's [79..80] (reset day C15, agreed with the server
+			# chat): a stat above them is buffed, below debuffed
+			if body.size() >= 79:
+				var base := []
+				for i in 8:
+					base.append(_u16(body, 63 + i * 2))
+				stats[row]["base"] = base
+			if body.size() >= 81:
+				stats[row]["base_af"] = _u16(body, 79)
 		11:
 			var row := int(body[4])
 			if not ras.has(row) or (ras[row] as Array).size() != int(body[6]):

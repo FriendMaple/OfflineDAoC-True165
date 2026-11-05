@@ -245,6 +245,7 @@ class GearSlot extends Control:
 					CompanionUi.RED if stack and count > 0 and count <= 5 else CompanionUi.DIM)
 			tooltip_text = "%s\nLEVEL %d  QUALITY %d%%  CONDITION %d%%" % [String(item.name).to_upper(), int(item.level),
 					int(item.quality), cond] + (("\n%d LEFT" % count) if stack and count > 0 else "")
+			_summary = tooltip_text
 		else:
 			CompanionUi.text(self, name_text, Vector2(4, 9), Vector2(size.x - 6, 12), 7, CompanionUi.DIM)
 
@@ -265,9 +266,24 @@ class GearSlot extends Control:
 		window.equip_from(int(data.slot), slot, not item.is_empty())
 
 	func _notification(what: int) -> void:
+		if what == NOTIFICATION_MOUSE_ENTER and not item.is_empty():
+			Server.prefetch_command(_key(), "/companionui delve %d item %d" % [window.row, slot])
 		if (what == NOTIFICATION_MOUSE_EXIT or what == NOTIFICATION_DRAG_END) and _hi:
 			_hi = false
 			queue_redraw()
+
+	var _summary := ""
+
+	func _key() -> String:
+		return "cg:%d:%d" % [window.row, slot]
+
+	## The item's full delve as the server writes it for your own items (reset day C15, 2026-11-05: the hover showed
+	## only level / quality / condition), in your items' hover box; the summary until it is here.
+	func _make_custom_tooltip(_for_text: String) -> Object:
+		var d := Server.item_lines(_key())
+		if d.is_empty() or (d.get("lines", []) as Array).is_empty():
+			return null
+		return ItemTooltip.text_box(String(d.get("caption", item.get("name", ""))), d.lines)
 
 	## Dragged out onto your backpack (owner 2026-10-30: "i cant drag off weapons and bag items, i can only right click"):
 	## the backpack takes it with the server's "unequip" - right-click / double-click still do the same.
@@ -354,10 +370,15 @@ func _skill_tip(l: Label, e: Dictionary) -> void:
 	if kind == "":
 		return
 	var id := ClassDb.find(kind, String(e.name), int(e.get("icon", -1)))
-	if id == "":
+	if id == "" and kind != "style":
 		return
 	var box := SkillTipLabel.new()
-	box.entry = {"kind": kind, "id": id if kind == "ability" else int(id), "name": String(e.name)}
+	box.entry = {"kind": kind, "id": (id if kind == "ability" else int(id)) if id != "" else "", "name": String(e.name)}
+	if kind == "style":
+		# a style's own delve from the server - endurance cost, threat, opening, to-hit ... (reset day C15: the class
+		# data's lines had neither cost nor threat); the class data's until it is here
+		box.server_key = "cs:%d:%d:%d" % [row, _preview_line, int(e.level)]
+		box.server_cmd = "/companionui delve %d style %d %d" % [row, _preview_line, int(e.level)]
 	box.tooltip_text = String(e.name)                      # (any text: Godot asks _make_custom_tooltip only then)
 	box.mouse_filter = Control.MOUSE_FILTER_STOP
 	box.size = l.size
@@ -367,12 +388,27 @@ func _skill_tip(l: Label, e: Dictionary) -> void:
 
 class SkillTipLabel extends Control:
 	var entry := {}
+	var server_key := ""
+	var server_cmd := ""
+
+	func _notification(what: int) -> void:
+		if what == NOTIFICATION_MOUSE_ENTER and server_key != "":
+			Server.prefetch_command(server_key, server_cmd)
 
 	func _make_custom_tooltip(_for_text: String) -> Object:
+		if server_key != "":
+			var d := Server.item_lines(server_key)
+			if not (d.get("lines", []) as Array).is_empty():
+				return ItemTooltip.text_box(String(d.get("caption", entry.name)), d.lines)
+		if str(entry.get("id", "")) == "":
+			return null
 		return ItemTooltip.text_box(String(entry.name), SkillInfo.lines(entry))
 
 
 # --- stats ----------------------------------------------------------------------------------------------------
+
+const BUFFED := Color(0.45, 0.9, 0.35)                     # a buffed stat's green
+
 
 func _build_stats(page: Control) -> void:
 	_stats_box = Control.new()
@@ -390,16 +426,24 @@ func _refresh_stats() -> void:
 	CompanionUi.text(_stats_box, "LEVEL %d  -  %s" % [int(st.level), net.row_class_line(row)], Vector2(2, 0), Vector2(300, 12), 9, UiArt.GOLD_HI)
 	_stats_box.add_child(SrvHireWindow.XpBubbles.make(int(st.xp), Vector2(2, 16), Vector2(200, 8)))
 	var names := ["STRENGTH", "CONSTITUTION", "DEXTERITY", "QUICKNESS", "INTELLIGENCE", "PIETY", "EMPATHY", "CHARISMA"]
+	# buffed green, debuffed red against the unbuffed values (reset day C15, 2026-11-05; the server's op 10 [63..80])
+	var base: Array = st.get("base", [])
 	for i in 8:
 		CompanionUi.text(_stats_box, names[i], Vector2(2, 32 + i * 14), Vector2(100, 12), 8, UiArt.GOLD)
-		CompanionUi.text(_stats_box, str(int(st.stats[i])), Vector2(104, 32 + i * 14), Vector2(40, 12), 8)
+		var col := UiArt.CREAM
+		if base.size() == 8:
+			col = BUFFED if int(st.stats[i]) > int(base[i]) else (CompanionUi.RED if int(st.stats[i]) < int(base[i]) else UiArt.CREAM)
+		CompanionUi.text(_stats_box, str(int(st.stats[i])), Vector2(104, 32 + i * 14), Vector2(40, 12), 8, col)
 	var right := [["HEALTH", "%d / %d" % [int(st.health), int(st.max_health)]], ["POWER", "%d / %d" % [int(st.power), int(st.max_power)]],
 			["ENDURANCE", "%d / %d" % [int(st.endurance), int(st.max_endurance)]], ["ARMOR FACTOR", str(int(st.af))],
 			["ABSORB", "%d%%" % int(st.absorb)], ["MONEY", PlayerData.money_string(int(st.money)).to_upper()],
 			["REALM POINTS", "%d" % (int(st.rp) * 1000)]]
 	for i in right.size():
 		CompanionUi.text(_stats_box, String(right[i][0]), Vector2(170, 32 + i * 14), Vector2(100, 12), 8, UiArt.GOLD)
-		CompanionUi.text(_stats_box, String(right[i][1]), Vector2(272, 32 + i * 14), Vector2(170, 12), 8)
+		var col := UiArt.CREAM
+		if String(right[i][0]) == "ARMOR FACTOR" and st.has("base_af"):
+			col = BUFFED if int(st.af) > int(st.base_af) else (CompanionUi.RED if int(st.af) < int(st.base_af) else UiArt.CREAM)
+		CompanionUi.text(_stats_box, String(right[i][1]), Vector2(272, 32 + i * 14), Vector2(170, 12), 8, col)
 	var resists := ["CRUSH", "SLASH", "THRUST", "HEAT", "COLD", "MATTER", "BODY", "SPIRIT", "ENERGY"]
 	CompanionUi.text(_stats_box, "RESISTS", Vector2(2, 152), Vector2(100, 12), 9, UiArt.GOLD_HI)
 	for i in 9:
