@@ -70,6 +70,42 @@ var _bonus: OptionButton
 var _bonus_pick: OptionButton
 var _bonus_amount: LineEdit
 var _chest_label: Label
+var _arrows := {}                                  # sort key -> its SortArrow by the header
+var sort_key := ""                                 # BROWSE's sort ("" the broker's own order)
+var sort_asc := true
+var duration_hours := 48                           # a new listing's time (the broker's 12 / 24 / 48 hours)
+
+
+## A header clicked: that column sorts the search (lowest first; clicked again, highest first) - the broker is told
+## and the search runs again from its first page.
+func sort_by(key: String) -> void:
+	sort_asc = (not sort_asc) if key == sort_key else true
+	sort_key = key
+	for k in _arrows:
+		var a: SortArrow = _arrows[k]
+		a.visible = k == sort_key
+		a.up = sort_asc
+		a.queue_redraw()
+	Server.command("/whisper sort %s %s" % [key, "asc" if sort_asc else "desc"])
+	if not Server.market_search.is_empty():
+		selected = -1
+		Server.market_items = []
+		Server.exchange_search(Server.market_search, 0)
+		refresh()
+
+
+## The little sort arrow beside a header (the fonts have no arrow glyph): a gold triangle, point up or down.
+class SortArrow extends Control:
+	var up := true
+
+	func _init() -> void:
+		mouse_filter = Control.MOUSE_FILTER_IGNORE
+
+	func _draw() -> void:
+		var w := size.x
+		var h := size.y
+		var pts := PackedVector2Array([Vector2(0, h), Vector2(w, h), Vector2(w * 0.5, 0)]) if up 				else PackedVector2Array([Vector2(0, 0), Vector2(w, 0), Vector2(w * 0.5, h)])
+		draw_colored_polygon(pts, UiArt.GOLD_HI)
 
 
 func build() -> void:
@@ -118,6 +154,7 @@ func _build_list() -> void:
 	add_child(_panel(Rect2(LIST_X - 4, LIST_Y - 26, SIZE.x - LIST_X - 6, ROWS * ROW_H + 32)))
 	var cols := [["ITEM", C_NAME, HORIZONTAL_ALIGNMENT_LEFT], ["LVL", C_LEVEL, HORIZONTAL_ALIGNMENT_RIGHT],
 			["QUA", C_QUALITY, HORIZONTAL_ALIGNMENT_RIGHT], ["PRICE", C_PRICE, HORIZONTAL_ALIGNMENT_RIGHT]]
+	var keys := {"ITEM": "name", "LVL": "level", "QUA": "quality", "PRICE": "price"}
 	for c in cols:
 		var h := UiArt.label(String(c[0]), CAPTION, UiArt.GOLD)
 		h.position = Vector2(LIST_X + float(c[1][0]), LIST_Y - 21)
@@ -126,6 +163,23 @@ func _build_list() -> void:
 		add_child(h)
 		if String(c[0]) == "PRICE":
 			_header_price = h
+		# BROWSE sorts by a header clicked - again the other way (reset day C16, 2026-11-05): the broker sorts the
+		# whole search ("sort <key> <asc|desc>", kept for you), an arrow beside the header shows the way
+		var key: String = keys[String(c[0])]
+		h.mouse_filter = Control.MOUSE_FILTER_STOP
+		h.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		h.tooltip_text = "SORT BY " + String(c[0])
+		h.gui_input.connect(func(e: InputEvent):
+			if e is InputEventMouseButton and e.pressed and e.button_index == MOUSE_BUTTON_LEFT and tab == "browse":
+				sort_by(key))
+		var arrow := SortArrow.new()
+		arrow.size = Vector2(8, 8)
+		# (after the header's text: ITEM is left-aligned, the others end at their column's right edge)
+		var after := 30.0 if c[2] == HORIZONTAL_ALIGNMENT_LEFT else float(c[1][1]) + 2.0
+		arrow.position = Vector2(LIST_X + float(c[1][0]) + after, LIST_Y - 18)
+		arrow.visible = false
+		add_child(arrow)
+		_arrows[key] = arrow
 	for i in ROWS:
 		var r := ExRow.new()
 		r.window = self
@@ -472,7 +526,7 @@ func ask_price(slot: int) -> void:
 	shade.mouse_filter = Control.MOUSE_FILTER_STOP
 	get_parent().add_child(shade)
 	var box := Control.new()
-	box.size = Vector2(420, 168)
+	box.size = Vector2(420, 182)
 	box.position = ((get_parent().size - box.size) * 0.5).floor()
 	shade.add_child(box)
 	box.add_child(_granite(box.size))
@@ -503,8 +557,25 @@ func ask_price(slot: int) -> void:
 		box.add_child(l)
 		fields[k[0]] = f
 		x += 96.0
+	# how long it is listed (reset day C16 / S38, 2026-11-05 - the owner's 12, 24 and 48 hours; the broker's
+	# "duration <chest slot> <hours>" after the price)
+	var hours_buttons := []
+	for k in 3:
+		var hrs: int = [12, 24, 48][k]
+		var hb := UiArt.button("%d HOURS" % hrs, Vector2(80, 18), 9)
+		hb.toggle_mode = true
+		hb.set_pressed_no_signal(hrs == duration_hours)
+		hb.position = Vector2(box.size.x * 0.5 - 125 + k * 85, 92)
+		hours_buttons.append(hb)
+		box.add_child(hb)
+	for k in 3:
+		var hrs: int = [12, 24, 48][k]
+		(hours_buttons[k] as Button).pressed.connect(func():
+			duration_hours = hrs
+			for j in 3:
+				(hours_buttons[j] as Button).set_pressed_no_signal(j == k))
 	var note := UiArt.label("A PRICE OF 0 KEEPS IT IN THE CHEST, NOT FOR SALE", CAPTION, UiArt.DIM)
-	note.position = Vector2(0, 94)
+	note.position = Vector2(0, 112)
 	note.size = Vector2(box.size.x, 14)
 	note.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	box.add_child(note)
@@ -513,21 +584,23 @@ func ask_price(slot: int) -> void:
 			var c := _value(fields.copper, 0) + _value(fields.silver, 0) * 100 + _value(fields.gold, 0) * 10000 \
 					+ _value(fields.platinum, 0) * 10000000
 			Server.set_listing_price(slot, c)
+			if c > 0:
+				Server.command("/whisper duration %d %d" % [slot - Server.CHEST_FIRST, duration_hours])
 		shade.queue_free()
 	var yes := UiArt.button("LIST IT", Vector2(110, 24), 11)
-	yes.position = Vector2(box.size.x * 0.5 - 175, 120)
+	yes.position = Vector2(box.size.x * 0.5 - 175, 134)
 	yes.pressed.connect(done.bind(true))
 	box.add_child(yes)
 	# SEARCH SIMILAR (reset day C16, 2026-11-05): what the same item sells for - the box closes (the listing waits in
 	# the chest at SET PRICE) and BROWSE searches its name
 	var similar := UiArt.button("SEARCH SIMILAR", Vector2(120, 24), 10)
-	similar.position = Vector2(box.size.x * 0.5 - 60, 120)
+	similar.position = Vector2(box.size.x * 0.5 - 60, 134)
 	similar.pressed.connect(func():
 		shade.queue_free()
 		search_similar(String(it.get("name", ""))))
 	box.add_child(similar)
 	var no := UiArt.button("CANCEL", Vector2(110, 24), 11)
-	no.position = Vector2(box.size.x * 0.5 + 65, 120)
+	no.position = Vector2(box.size.x * 0.5 + 65, 134)
 	no.pressed.connect(done.bind(false))
 	box.add_child(no)
 	for k in fields:                                       # Enter in any box lists it
