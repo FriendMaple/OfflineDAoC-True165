@@ -2154,6 +2154,51 @@ func consider_target() -> void:
 		Server.client.call("Target", target_object, 0x8000 | 0x6000)
 
 
+## Loot lying on the ground - what a right click prefers and the Pick Up Loot key takes: any ground object but a
+## gravestone, a relic, a usable object (horn, house vault / market items) or a house marker.
+func _is_loot(h: Node3D) -> bool:
+	if h == null or not is_instance_valid(h):
+		return false
+	var model := int(h.get_meta("model", 0))
+	var nm := String(h.get_meta("name", ""))
+	return not (nm.contains("'s Grave") or model in RELIC_MODELS or model in USE_MODELS or model in HOUSE_USE_MODELS
+			or is_horn(nm))
+
+
+## A right click over loot (reset day C8, 2026-11-05, a small 1.65 QoL exception: "Right-click always picks NPCs
+## before loot, and NPC click boxes are big"): true when the pointer is on a loot bag / an item on the ground - it is
+## then picked up before any NPC under the same spot.
+func loot_under(cam: Camera3D, screen_pos: Vector2) -> bool:
+	var from := cam.project_ray_origin(screen_pos)
+	var q := PhysicsRayQueryParameters3D.create(from, from + cam.project_ray_normal(screen_pos) * 60.0, OBJECT_PICK)
+	var hit := get_world_3d().direct_space_state.intersect_ray(q)
+	return not hit.is_empty() and hit.collider.has_meta("server_object") 			and _is_loot(objects.get(int(hit.collider.get_meta("server_object"))))
+
+
+const PICKUP_RANGE := 256 * 0.025               # the server's Get Item reach (PlayerPickUpRequestHandler: 256 units)
+
+
+## The Pick Up Loot key (reset day C8, 2026-11-05 - a 1.65 QoL exception, not in 1.64, which had only Nearest Loot +
+## Get Item): the nearest loot within the server's pick-up reach targeted and picked up - one item a press, so it can
+## be pressed again for the next. No autoloot.
+func pick_up_nearest_loot() -> void:
+	var best := 0
+	var best_d := PICKUP_RANGE
+	for oid in objects:
+		var h: Node3D = objects[oid]
+		if not _is_loot(h):
+			continue
+		var d := h.global_position.distance_to(player.global_position)
+		if d <= best_d:
+			best = int(oid)
+			best_d = d
+	if best == 0:
+		PlayerData.message.emit("No loot in reach.", "system")
+		return
+	_target_ground(best)
+	get_object()
+
+
 ## The Get Item key: the targeted ground object picked up - the server picks up what you have targeted
 ## (PlayerPickUpRequestHandler) and answers itself (too far, can't get that). A relic is taken with a use
 ## (GameRelic.Interact -> TryPickup: carried to your realm's pad), not picked up (owner 2026-10-14: relic raids).
