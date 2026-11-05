@@ -1482,7 +1482,12 @@ func use_entry(id: String, player: Node3D, zone_id: int, target_in_view: bool) -
 	elif parts.size() >= 4 and parts[1] == "spell":
 		client.call("UseSpell", r.x, r.y, r.z, speed, heading, target_in_view, int(parts[3]), int(parts[2]))
 	elif parts.size() == 2:
-		client.call("UseSlot", r.x, r.y, r.z, speed, heading, target_in_view, int(parts[1]), 1)
+		# a weapon / instrument you wear (10 right hand, 11 left hand, 12 two-handed, 13 ranged / instrument) is a click
+		# (type 0), as the client sends it: the server readies that weapon set only on a click - with "use" (1) it only
+		# said "You attempt to use ..." (reset day C11, 2026-11-05: a minstrel's quickbar weapon / instrument never
+		# switched). Other items stay a use.
+		var slot := int(parts[1])
+		client.call("UseSlot", r.x, r.y, r.z, speed, heading, target_in_view, slot, 0 if slot >= 10 and slot <= 13 else 1)
 	else:
 		return false
 	return true
