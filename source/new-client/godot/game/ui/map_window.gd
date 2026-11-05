@@ -404,16 +404,16 @@ class MapView extends Control:
 		"o": [Color(0.72, 0.44, 0.2), "", "IN PROGRESS", Color(0.3, 0.16, 0.04)],
 		"task": [Color(0.55, 0.3, 0.8), "", "TASK", Color(0.98, 0.9, 1.0)],
 	}
-	const MARK_R := 5.5
+	const MARK_R := 2.8                         # (owner 2026-11-05: half the first size)
 	var _drawn_marks: Array = []                # [map spot, kind] of the marks drawn now (their hover text)
 
 	func _draw_mark(at: Vector2, kind: String, r := MARK_R) -> void:
 		var st: Array = MARK_STYLE.get(kind, MARK_STYLE["step"])
-		draw_circle(at + Vector2(0.6, 0.9), r + 1.6, Color(0, 0, 0, 0.45))         # its shadow on the map
-		draw_circle(at, r + 1.5, Color(0.1, 0.06, 0.02))                           # the dark rim
-		draw_circle(at, r + 0.8, Color(0.86, 0.67, 0.3))                           # the gold ring
+		draw_circle(at + Vector2(r * 0.11, r * 0.16), r * 1.29, Color(0, 0, 0, 0.45))   # its shadow on the map
+		draw_circle(at, r * 1.27, Color(0.1, 0.06, 0.02))                          # the dark rim
+		draw_circle(at, r * 1.15, Color(0.86, 0.67, 0.3))                          # the gold ring
 		draw_circle(at, r, Color(0.36, 0.25, 0.1))                                 # (its inner edge)
-		draw_circle(at, r - 0.6, st[0])                                            # the face
+		draw_circle(at, r * 0.89, st[0])                                           # the face
 		draw_circle(at + Vector2(-r * 0.28, -r * 0.32), r * 0.38, Color(1, 1, 1, 0.22))   # a soft highlight
 		var sign: String = st[1]
 		if sign != "":
@@ -421,7 +421,7 @@ class MapView extends Control:
 			var fs := int(round(r * 2.3))
 			var tw := f.get_string_size(sign, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x
 			var base := at + Vector2(-tw * 0.5, r * 0.78)
-			draw_string_outline(f, base, sign, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, 2, Color(1, 1, 1, 0.35))
+			draw_string_outline(f, base, sign, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, 1, Color(1, 1, 1, 0.35))
 			draw_string(f, base, sign, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, st[3])
 		else:
 			draw_circle(at, r * 0.36, st[3])                                       # a heart in the sign's colour
@@ -441,14 +441,14 @@ class MapView extends Control:
 		draw_rect(box, Color(0.55, 0.42, 0.2, 0.9), false, 1.0)
 		var x := box.position.x + 9.0
 		for k in items:
-			_draw_mark(Vector2(x, box.position.y + 6.5), String(kinds[k]), 3.6)
+			_draw_mark(Vector2(x, box.position.y + 6.5), String(kinds[k]), 3.0)
 			draw_string(f, Vector2(x + 7.0, box.position.y + 10.0), k, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, UiArt.CREAM)
 			x += 12.0 + f.get_string_size(k, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x + 8.0
 
 	## The mark under the pointer, its words (the hover text), else "".
 	func mark_words_at(p: Vector2) -> String:
 		for d in _drawn_marks:
-			if (d[0] as Vector2).distance_to(p) <= MARK_R + 1.5:
+			if (d[0] as Vector2).distance_to(p) <= MARK_R + 2.0:     # (a little more than the mark: easy to hover)
 				return {"!": "QUEST AVAILABLE", "?": "TURN IN HERE", "step": "QUEST OBJECTIVE", "o": "A QUEST YOU ARE ON",
 						"task": "YOUR TASK"}.get(String(d[1]), "")
 		return ""
