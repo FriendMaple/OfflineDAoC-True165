@@ -61,6 +61,7 @@ var _phase := 0
 ## the model, gear and plates stay; what it shows follows the new state from the next tick.
 func rebind(st: NpcState) -> void:
 	state = st
+	_died = false
 	spawn = st.spawn
 	info = st.info
 	position = st.pos
@@ -790,6 +791,8 @@ func _process_view(delta: float, cam: Camera3D) -> void:
 		_cast_left -= delta
 		if _cast_left < -CAST_GRACE:                     # the spell's effect never came (out of view): stop holding
 			casting_spell = false
+	if _died and state and state.alive:
+		_died = false                                 # (revived: it can die again)
 	if anim == null or _action_left > 0.0:
 		return
 	if casting_spell:                                 # the cast's loop, held until the spell lands (cast_end)
@@ -833,6 +836,8 @@ func _process_view(delta: float, cam: Camera3D) -> void:
 			NpcState.Mode.FIGHT:
 				clip = _stance_clip("combat_idle") if anim.has_animation("combat_idle") else "idle"
 			NpcState.Mode.DEAD:
+				if not _died:
+					play_death(false, true)                # (a view that came up dead lies down at once)
 				return                                     # play_death() holds the last frame
 		if swim:
 			clip = "swim"                                  # swimming, still or moving (as you: Player)
@@ -1036,10 +1041,19 @@ func flinch() -> void:
 var _hover := 0.0                                         # its float height (monsters.csv), metres
 var _hover_node: Node3D                                    # what was lifted by it (the model, or a wisp's effect)
 var _fell := false
+var _died := false                                         # the death played (or lies at its last frame)
 
 
-func play_death(vocal := false) -> void:
-	if vocal and sounds and _shown_mode != int(NpcState.Mode.DEAD):
+## at_end: lie at the death's last frame at once - a body the server sent already dead (reset day C7, 2026-11-05: a
+## right-clicked loot bag / a body re-sent replayed the whole death). A body already down never dies again.
+func play_death(vocal := false, at_end := false) -> void:
+	if _died:
+		_shown_mode = int(NpcState.Mode.DEAD)
+		casting_spell = false
+		_bow_hold = false
+		return
+	_died = true
+	if vocal and not at_end and sounds and _shown_mode != int(NpcState.Mode.DEAD):
 		sounds.event("die")
 	_action_left = 0.0
 	_shown_mode = int(NpcState.Mode.DEAD)
@@ -1048,7 +1062,9 @@ func play_death(vocal := false) -> void:
 	casting_spell = false
 	_bow_hold = false
 	if anim and anim.has_animation("death"):
-		anim.play("death", 0.1)
+		anim.play("death", 0.0 if at_end else 0.1)
+		if at_end:
+			anim.seek(anim.current_animation_length, true)
 	# a hovering monster's body drops to the ground as it dies - bodies lie on the ground to be looted (owner
 	# 2026-10-16: a dead forest skrat hung in the air, then floated down and was gone)
 	if _hover > 0.0 and not _fell and is_instance_valid(_hover_node):

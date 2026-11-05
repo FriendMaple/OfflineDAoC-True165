@@ -527,7 +527,8 @@ func _add_npc(d: Dictionary) -> void:
 	states.append(st)
 	by_oid[oid] = st
 	st.seen_at = Time.get_ticks_msec()
-	_mover[st] = {"speed": float(int(d.speed)), "dest": null, "target": 0, "flying": (flags & 0x20) != 0, "sy": p.y}
+	_mover[st] = {"speed": float(int(d.speed)), "dest": null, "target": 0, "flying": (flags & 0x20) != 0, "sy": p.y,
+			"fresh": true}                                      # (its first health: a body sent dead lies down at once)
 	_ground(st)
 	_unpark(oid, st)
 
@@ -801,6 +802,9 @@ func _death_log(text: String) -> void:
 
 func _set_health(st: NpcState, pct: int) -> void:
 	var was := st.alive
+	var fresh := bool(_mover.get(st, {}).get("fresh", false))  # (reset day C7: the first update of one just sent)
+	if fresh:
+		_mover[st].erase("fresh")
 	st.health = pct / 100.0
 	st.alive = pct > 0
 	if was and not st.alive:
@@ -819,7 +823,7 @@ func _set_health(st: NpcState, pct: int) -> void:
 			mv["flying"] = false                                 # 2026-10-16: dead fliers hung in the air)
 			_ground(st)
 		if st.view:
-			(st.view as Npc).play_death(true)
+			(st.view as Npc).play_death(not fresh, fresh)       # (sent already dead: no death replayed, no cry)
 	elif not was and st.alive:
 		st.mode = NpcState.Mode.IDLE
 
