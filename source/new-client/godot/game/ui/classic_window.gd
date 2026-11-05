@@ -222,6 +222,18 @@ func _edge_at(p: Vector2) -> String:
 	return "top" if top else ("right" if right else "")
 
 
+## A click anywhere on a window - its buttons and lists too - brings it to the front (reset day C3, 2026-11-05: the
+## information window opened over the Realm Exchange's page buttons and a click on the exchange left it underneath).
+## GameUI calls this for every mouse press: the window under the pointer, if any, is raised.
+static func raise_clicked(viewport: Viewport) -> void:
+	var c: Node = viewport.gui_get_hovered_control()
+	while c and not (c is ClassicWindow):
+		c = c.get_parent()
+	var w := c as ClassicWindow
+	if w and w.visible and w.get_parent() and w.get_index() < w.get_parent().get_child_count() - 1:
+		w.move_to_front.call_deferred()
+
+
 func _gui_input(event: InputEvent) -> void:
 	# the 1.64 help: "You can also adjust the transparency of any interface window by right-clicking on it with the
 	# mouse. A panel will be displayed with two arrows that allow you to adjust the alpha" (a player report: chat alpha)
