@@ -14,9 +14,9 @@ signal horn_opened                               # op 20: the Horn of Rallying's
 signal horn_closed                               # op 22
 signal horn_changed                              # op 21 rows / op 23 message
 
-const SLOT_NAMES := {10: "RIGHT HAND", 11: "LEFT HAND", 12: "TWO HANDED", 13: "RANGED", 21: "HEAD", 22: "HANDS",
-		23: "FEET", 24: "JEWEL", 25: "TORSO", 26: "CLOAK", 27: "LEGS", 28: "ARMS", 29: "NECK", 32: "BELT",
-		33: "LEFT WRIST", 34: "RIGHT WRIST", 35: "LEFT RING", 36: "RIGHT RING"}
+const SLOT_NAMES := {10: "R HAND", 11: "L HAND", 12: "2-HAND", 13: "RANGED", 		21: "HELM", 22: "HANDS",
+		23: "FEET", 24: "JEWEL", 25: "TORSO", 26: "CLOAK", 27: "LEGS", 28: "ARMS", 		29: "NECK", 32: "WAIST",
+		33: "L WRIST", 34: "R WRIST", 35: "L RING", 36: "R RING"}
 
 var mode := 0                                    # 0 innkeeper, 1 healer
 var slots := {"used": 0, "open": 0, "total": 7, "next": 0}
