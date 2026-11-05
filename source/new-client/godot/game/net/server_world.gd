@@ -963,7 +963,9 @@ func _equip(d: Dictionary) -> void:
 		return
 	if st:
 		st.spawn["weapon_slots"] = ws
-	if st and st.view:                                          # dressed again with the new gear
+	if st and st.view and is_instance_valid(st.view) and st.view is Npc and (st.view as Npc).redress():
+		return                                                  # (dressed again in place: no blink - reset day C14)
+	if st and st.view:                                          # built again with the new gear
 		if st.view == target:
 			target = null
 		active.erase(st.index)

@@ -407,6 +407,38 @@ func _dress(f: Fig3Figure) -> void:
 	_hang_weapons(state != null and state.fighting)
 
 
+## The server's new gear (EquipmentUpdate) put on the model in place - armour, helm, cloak and weapons - as the 1.65
+## client re-dresses a figure without a blink (reset day C14, 2026-11-05: a minstrel companion blinked out as combat
+## started; the old client chat's Q5). False when this view can't (a ghost / hidden look laid over every part when
+## it was built, or no model): it is then built again as before.
+func redress() -> bool:
+	if model == null or not is_instance_valid(model) or (int(spawn.get("flags", 0)) & FLAG_GHOST) 			or (state and state.stealth_look):
+		return false
+	var rows: Array = manager.data.get("equipment", {}).get(String(spawn.get("equipment", "")), [])
+	if model is Fig3Figure:
+		var f := model as Fig3Figure
+		if rows.is_empty():                                  # (everything taken off)
+			f.set_armor({}, {})
+			f.set_helm(0)
+			_weapon_slots = {}
+			_hang_weapons(_weapons_drawn)
+		else:
+			_dress(f)
+	elif info.has("gltf"):
+		_weapon_slots = {}
+		_hang_weapons(false)                                 # (the old weapons off)
+		_hold_weapons(model)
+	else:
+		return false
+	for g in model.find_children("*", "GeometryInstance3D", true, false):
+		(g as GeometryInstance3D).layers = 2                 # (as _build_model: the quest circles lie under them)
+	for w in _weapon_nodes:
+		if is_instance_valid(w):
+			for g in (w as Node).find_children("*", "GeometryInstance3D", true, false):
+				(g as GeometryInstance3D).layers = 2
+	return true
+
+
 ## The GHOST flag's look (a spiritmaster's spirit pets, ghostly NPCs): see-through, with a subtle white glow over it
 ## (ghost_glow.gdshader) - not a plain grey half-transparency (owner 2026-10-14).
 static var _ghost_glow: ShaderMaterial
