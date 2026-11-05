@@ -417,6 +417,11 @@ func _audio() -> void:
 		_row(v[1], _slider(_volume(String(v[0])), 0, 100, 1, func(x: float):
 			_save("audio", String(v[0]).to_lower(), x)
 			_apply_volumes()))
+	# reset day C6 (2026-11-05): quiet while another window has the focus
+	_row("MUTE WHEN NOT FOCUSED", _toggle(BootSettings.mute_unfocused, func(on: bool):
+		_save("audio", "mute_unfocused", on)
+		BootSettings.set_mute_unfocused(on)))
+	_hint("ON: THE GAME GOES QUIET WHILE YOU ARE IN ANOTHER WINDOW AND THE SOUND COMES BACK WHEN YOU RETURN.")
 
 
 func _controls() -> void:
