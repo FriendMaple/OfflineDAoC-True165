@@ -1887,6 +1887,7 @@ func _set_sheet(tab: String) -> void:
 		_tab_hover[i].texture = UiArt.region(skin, Rect2(TAB_X[i], 32 + 3, TAB_W[i], 24))
 		_tab_lit[i].visible = TABS[i] == tab and not _collapsed
 	for c in _sheet_body.get_children():
+		_sheet_body.remove_child(c)                        # (out at once: a rebuilt page's "member_0" ... keep their names)
 		c.queue_free()
 	match tab:
 		"character": CharacterSheet.build(_sheet_body)
